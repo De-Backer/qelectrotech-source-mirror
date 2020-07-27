@@ -29,19 +29,26 @@
 	@param database_path Path of the SQLite database to open.
 	@param parent Parent QObject
 */
-ElementsCollectionCache::ElementsCollectionCache(const QString &database_path, QObject *parent) :
+ElementsCollectionCache::ElementsCollectionCache(const QString &database_path,
+						 QObject *parent) :
 	QObject(parent),
 	locale_("en"),
 	pixmap_storage_format_("PNG")
 {
 	// initialize the cache SQLite database
 	static int cache_instances = 0;
-	QString connection_name = QString("ElementsCollectionCache-%1").arg(cache_instances++);
+	QString connection_name = QString("ElementsCollectionCache-%1").arg(
+				cache_instances++);
 	cache_db_ = QSqlDatabase::addDatabase("QSQLITE", connection_name);
 	cache_db_.setDatabaseName(database_path);
 
 	if (!cache_db_.open())
-		qDebug() << "Unable to open the SQLite database " << database_path << " as " << connection_name << ": " << cache_db_.lastError();
+		qDebug() << "Unable to open the SQLite database "
+			 << database_path
+			 << " as "
+			 << connection_name
+			 << ": "
+			 << cache_db_.lastError();
 	else
 	{
 		cache_db_.exec("PRAGMA temp_store = MEMORY");
@@ -50,29 +57,8 @@ ElementsCollectionCache::ElementsCollectionCache(const QString &database_path, Q
 		cache_db_.exec("PRAGMA cache_size = 16384");
 		cache_db_.exec("PRAGMA locking_mode = EXCLUSIVE");
 		cache_db_.exec("PRAGMA synchronous = OFF");
-
-		//TODO This code remove old table with mtime for create table with uuid, created at version 0,5
-		//see to remove this code at version 0,6 or 0,7 when all users will table with uuid.
-#pragma message("@TODO remove this code for qet 0.6 or later")
-		QSqlQuery table_name(cache_db_);
-		if (table_name.exec("PRAGMA table_info(names)"))
-		{
-			if (table_name.seek(2))
-			{
-				QString str = table_name.value(1).toString();
-				table_name.finish();
-				if (str == "mtime")
-				{
-					QSqlQuery error;
-					error = cache_db_.exec("DROP TABLE names");
-					error = cache_db_.exec("DROP TABLE pixmaps");
-				}
-			}
-			else
-				table_name.finish();
-		}
-
-			//@TODO the tables could already exist, handle that case.
+#pragma message("@TODO the tables could already exist, handle that case.")
+		//@TODO the tables could already exist, handle that case.
 		cache_db_.exec("CREATE TABLE names"
 					   "("
 					   "path VARCHAR(512) NOT NULL,"
@@ -89,7 +75,7 @@ ElementsCollectionCache::ElementsCollectionCache(const QString &database_path, Q
 					   "pixmap BLOB, PRIMARY KEY(path),"
 					   "FOREIGN KEY(path) REFERENCES names (path) ON DELETE CASCADE);");
 
-			// prepare queries
+		// prepare queries
 		select_name_   = new QSqlQuery(cache_db_);
 		select_pixmap_ = new QSqlQuery(cache_db_);
 		insert_name_   = new QSqlQuery(cache_db_);
