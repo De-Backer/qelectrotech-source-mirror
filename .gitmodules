@@ -4,3 +4,6 @@
 [submodule "SingleApplication"]
 	path = SingleApplication
 	url = https://github.com/itay-grudev/SingleApplication.git
+[submodule "QtAutoUpdater"]
+	path = QtAutoUpdater
+	url = https://github.com/Skycoder42/QtAutoUpdater.git
