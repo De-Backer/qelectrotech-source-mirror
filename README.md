@@ -1,5 +1,12 @@
 ![](logo.png)
 
+#### note: Test of git submodule's
+run
+
+`git submodule init
+git submodule update`
+to fetch
+
 
 # QElectroTech
 
