@@ -1,0 +1,145 @@
+.TH "ElementsMover" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementsMover
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementsmover\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsMover\fP ()"
+.br
+.RI "\fBElementsMover::ElementsMover\fP Constructor\&. "
+.ti -1c
+.RI "virtual \fB~ElementsMover\fP ()"
+.br
+.RI "\fBElementsMover::~ElementsMover\fP Destructor\&. "
+.ti -1c
+.RI "bool \fBisReady\fP () const"
+.br
+.RI "\fBElementsMover::isReady\fP\&. "
+.ti -1c
+.RI "int \fBbeginMovement\fP (\fBDiagram\fP *, QGraphicsItem *=nullptr)"
+.br
+.RI "\fBElementsMover::beginMovement\fP Start a new movement\&. "
+.ti -1c
+.RI "void \fBcontinueMovement\fP (const QPointF &)"
+.br
+.RI "\fBElementsMover::continueMovement\fP Add a move to the current movement\&. "
+.ti -1c
+.RI "void \fBendMovement\fP ()"
+.br
+.RI "\fBElementsMover::endMovement\fP Ended the current movement by creating an undo added to the undostack of the diagram\&. If there is only one element moved, we try to auto-connect new conductor from this element and other possible element\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsMover\fP (const \fBElementsMover\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBmovement_running_\fP"
+.br
+.ti -1c
+.RI "QPointF \fBcurrent_movement_\fP"
+.br
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram_\fP"
+.br
+.ti -1c
+.RI "QGraphicsItem * \fBm_movement_driver\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContent\fP \fBm_moved_content\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class manages the interactive movement of different items (elements, conductors, text items etc\&.\&.\&.) on a particular diagram\&.
+.PP
+A movement work in 3 steps: 1: beginMovement -> init a new movement 2: continueMovement -> continue the curent movement 3: endMovement -> finish the curent movement
+.PP
+A movement in progress must finish befor start a new movement\&. We can know if element mover is ready for a new movement by calling \fBisReady()\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementsMover::ElementsMover ()"
+
+.PP
+\fBElementsMover::ElementsMover\fP Constructor\&. 
+.SS "ElementsMover::~ElementsMover ()\fC [virtual]\fP"
+
+.PP
+\fBElementsMover::~ElementsMover\fP Destructor\&. 
+.SS "ElementsMover::ElementsMover (const \fBElementsMover\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int ElementsMover::beginMovement (\fBDiagram\fP * diagram, QGraphicsItem * driver_item = \fCnullptr\fP)"
+
+.PP
+\fBElementsMover::beginMovement\fP Start a new movement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP diagram where the movement is applied 
+.br
+\fIdriver_item\fP item moved by mouse and don't be moved by \fBElement\fP mover 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the numbers of items to be moved or -1 if movement can't be init\&. 
+.RE
+.PP
+
+.SS "void ElementsMover::continueMovement (const QPointF & movement)"
+
+.PP
+\fBElementsMover::continueMovement\fP Add a move to the current movement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImovement\fP movement to applied 
+.RE
+.PP
+
+.SS "void ElementsMover::endMovement ()"
+
+.PP
+\fBElementsMover::endMovement\fP Ended the current movement by creating an undo added to the undostack of the diagram\&. If there is only one element moved, we try to auto-connect new conductor from this element and other possible element\&. 
+.SS "bool ElementsMover::isReady () const"
+
+.PP
+\fBElementsMover::isReady\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if this element mover is ready to be used\&. A element mover is ready when the previous managed movement is finish\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QPointF ElementsMover::current_movement_\fC [private]\fP"
+
+.SS "\fBDiagram\fP* ElementsMover::diagram_\fC [private]\fP"
+
+.SS "\fBDiagramContent\fP ElementsMover::m_moved_content\fC [private]\fP"
+
+.SS "QGraphicsItem* ElementsMover::m_movement_driver\fC [private]\fP"
+
+.SS "bool ElementsMover::movement_running_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

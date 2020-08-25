@@ -1,0 +1,125 @@
+.TH "ConfigDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConfigDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBapplyConf\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddPage\fP (\fBConfigPage\fP *)"
+.br
+.ti -1c
+.RI "void \fBsetCurrentPage\fP (const int index)"
+.br
+.RI "\fBConfigDialog::setCurrentPage\fP Set the current index to index\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigDialog\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ConfigDialog\fP () override"
+.br
+.RI "Destructeur\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBConfigPage\fP * > \fBpages\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigDialog\fP (const \fBConfigDialog\fP &)"
+.br
+.ti -1c
+.RI "void \fBbuildPagesList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddPageToList\fP (\fBConfigPage\fP *)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QListWidget * \fBpages_list\fP"
+.br
+.ti -1c
+.RI "QStackedWidget * \fBpages_widget\fP"
+.br
+.ti -1c
+.RI "QDialogButtonBox * \fBbuttons\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents the configuration dialog for QElectroTech\&. It displays 'configuration pages', each page having to provide an icon and a title\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConfigDialog::ConfigDialog (QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP QWidget parent 
+.RE
+.PP
+
+.SS "ConfigDialog::~ConfigDialog ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "ConfigDialog::ConfigDialog (const \fBConfigDialog\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ConfigDialog::addPage (\fBConfigPage\fP * page)\fC [slot]\fP"
+Ajoute une page au dialogue de configuration 
+.SS "void ConfigDialog::addPageToList (\fBConfigPage\fP * page)\fC [private]\fP"
+Add the \fIpage\fP \fBConfigPage\fP to this configuration dialog\&. 
+.SS "void ConfigDialog::applyConf ()\fC [slot]\fP"
+Applique la configuration de toutes les pages 
+.SS "void ConfigDialog::buildPagesList ()\fC [private]\fP"
+Construit la liste des pages sur la gauche 
+.SS "void ConfigDialog::setCurrentPage (const int index)\fC [slot]\fP"
+
+.PP
+\fBConfigDialog::setCurrentPage\fP Set the current index to index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QDialogButtonBox* ConfigDialog::buttons\fC [private]\fP"
+
+.SS "QList<\fBConfigPage\fP *> ConfigDialog::pages"
+
+.SS "QListWidget* ConfigDialog::pages_list\fC [private]\fP"
+
+.SS "QStackedWidget* ConfigDialog::pages_widget\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

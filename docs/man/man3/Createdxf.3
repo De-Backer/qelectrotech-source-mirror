@@ -1,0 +1,237 @@
+.TH "Createdxf" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Createdxf
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <createdxf\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCreatedxf\fP ()"
+.br
+.ti -1c
+.RI "\fB~Createdxf\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdxfBegin\fP (const QString &)"
+.br
+.ti -1c
+.RI "static void \fBdxfEnd\fP (const QString &)"
+.br
+.ti -1c
+.RI "static void \fBdrawCircle\fP (const QString &, double, double, double, int)"
+.br
+.ti -1c
+.RI "static void \fBdrawArc\fP (const QString &, double x, double y, double rad, double startAngle, double endAngle, int color)"
+.br
+.RI "\fBCreatedxf::drawArc\fP draw arc in dx format\&. "
+.ti -1c
+.RI "static void \fBdrawDonut\fP (QString, double, double, double, int)"
+.br
+.ti -1c
+.RI "static void \fBdrawArcEllipse\fP (const QString &file_path, qreal x, qreal y, qreal w, qreal h, qreal startAngle, qreal spanAngle, qreal hotspot_x, qreal hotspot_y, qreal rotation_angle, const int &colorcode)"
+.br
+.ti -1c
+.RI "static void \fBdrawEllipse\fP (const QString &filepath, const QRectF &rect, const int &colorcode)"
+.br
+.RI "\fBCreatedxf::drawEllipse\fP Conveniance function for draw ellipse\&. "
+.ti -1c
+.RI "static void \fBdrawRectangle\fP (const QString &filepath, double, double, double, double, const int &colorcode)"
+.br
+.ti -1c
+.RI "static void \fBdrawRectangle\fP (const QString &filepath, const QRectF &rect, const int &colorcode)"
+.br
+.RI "\fBCreatedxf::drawRectangle\fP Conveniance function for draw rectangle\&. "
+.ti -1c
+.RI "static void \fBdrawLine\fP (const QString &filapath, double, double, double, double, const int &clorcode)"
+.br
+.ti -1c
+.RI "static void \fBdrawLine\fP (const QString &filepath, const QLineF &line, const int &colorcode)"
+.br
+.RI "\fBCreatedxf::drawLine\fP Conveniance function to draw line\&. "
+.ti -1c
+.RI "static void \fBdrawText\fP (const QString &, const QString &, double, double, double, double, int)"
+.br
+.RI "\fBCreatedxf::drawText\fP draw simple text in dxf format without any alignment specified\&. "
+.ti -1c
+.RI "static void \fBdrawTextAligned\fP (const QString &fileName, const QString &text, double x, double y, double height, double rotation, double oblique, int hAlign, int vAlign, double xAlign, double \fBxScale\fP, int colour, bool leftAlign=false, float scale=0)"
+.br
+.ti -1c
+.RI "static int \fBgetcolorCode\fP (const long red, const long green, const long blue)"
+.br
+.RI "\fBCreatedxf::getcolorCode\fP This function returns the ACI color which is the 'nearest' color to the color defined by the red, green and blue (RGB) values passed in argument\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static long \fBRGBcodeTable\fP []"
+.br
+.ti -1c
+.RI "static const double \fBsheetWidth\fP = 4000"
+.br
+.ti -1c
+.RI "static const double \fBsheetHeight\fP = 2700"
+.br
+.ti -1c
+.RI "static double \fBxScale\fP = 1"
+.br
+.ti -1c
+.RI "static double \fByScale\fP = 1"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Createdxf::Createdxf ()"
+
+.SS "Createdxf::~Createdxf ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Createdxf::drawArc (const QString & fileName, double x, double y, double rad, double startAngle, double endAngle, int color)\fC [static]\fP"
+
+.PP
+\fBCreatedxf::drawArc\fP draw arc in dx format\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileName\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIrad\fP 
+.br
+\fIstartAngle\fP 
+.br
+\fIendAngle\fP 
+.br
+\fIcolor\fP 
+.RE
+.PP
+
+.SS "void Createdxf::drawArcEllipse (const QString & file_path, qreal x, qreal y, qreal w, qreal h, qreal startAngle, qreal spanAngle, qreal hotspot_x, qreal hotspot_y, qreal rotation_angle, const int & colorcode)\fC [static]\fP"
+
+.SS "void Createdxf::drawCircle (const QString & fileName, double radius, double x, double y, int colour)\fC [static]\fP"
+
+.SS "static void Createdxf::drawDonut (QString, double, double, double, int)\fC [static]\fP"
+
+.SS "void Createdxf::drawEllipse (const QString & filepath, const QRectF & rect, const int & colorcode)\fC [static]\fP"
+
+.PP
+\fBCreatedxf::drawEllipse\fP Conveniance function for draw ellipse\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP 
+.br
+\fIrect\fP 
+.br
+\fIcolorcode\fP 
+.RE
+.PP
+
+.SS "void Createdxf::drawLine (const QString & filapath, double x1, double y1, double x2, double y2, const int & clorcode)\fC [static]\fP"
+
+.SS "void Createdxf::drawLine (const QString & filepath, const QLineF & line, const int & colorcode)\fC [static]\fP"
+
+.PP
+\fBCreatedxf::drawLine\fP Conveniance function to draw line\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP 
+.br
+\fIline\fP 
+.br
+\fIcolorcode\fP 
+.RE
+.PP
+
+.SS "void Createdxf::drawRectangle (const QString & filepath, const QRectF & rect, const int & colorcode)\fC [static]\fP"
+
+.PP
+\fBCreatedxf::drawRectangle\fP Conveniance function for draw rectangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP 
+.br
+\fIrect\fP 
+.br
+\fIcolorcode\fP 
+.RE
+.PP
+
+.SS "void Createdxf::drawRectangle (const QString & filepath, double x1, double y1, double width, double height, const int & colorcode)\fC [static]\fP"
+
+.SS "void Createdxf::drawText (const QString & fileName, const QString & text, double x, double y, double height, double rotation, int colour)\fC [static]\fP"
+
+.PP
+\fBCreatedxf::drawText\fP draw simple text in dxf format without any alignment specified\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileName\fP 
+.br
+\fItext\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIheight\fP 
+.br
+\fIrotation\fP 
+.br
+\fIcolour\fP 
+.RE
+.PP
+
+.SS "void Createdxf::drawTextAligned (const QString & fileName, const QString & text, double x, double y, double height, double rotation, double oblique, int hAlign, int vAlign, double xAlign, double xScale, int colour, bool leftAlign = \fCfalse\fP, float scale = \fC0\fP)\fC [static]\fP"
+
+.SS "void Createdxf::dxfBegin (const QString & fileName)\fC [static]\fP"
+
+.SS "void Createdxf::dxfEnd (const QString & fileName)\fC [static]\fP"
+
+.SS "int Createdxf::getcolorCode (const long red, const long green, const long blue)\fC [static]\fP"
+
+.PP
+\fBCreatedxf::getcolorCode\fP This function returns the ACI color which is the 'nearest' color to the color defined by the red, green and blue (RGB) values passed in argument\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIred\fP 
+.br
+\fIgreen\fP 
+.br
+\fIblue\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "long Createdxf::RGBcodeTable\fC [static]\fP"
+
+.SS "const double Createdxf::sheetHeight = 2700\fC [static]\fP"
+
+.SS "const double Createdxf::sheetWidth = 4000\fC [static]\fP"
+
+.SS "double Createdxf::xScale = 1\fC [static]\fP"
+
+.SS "double Createdxf::yScale = 1\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

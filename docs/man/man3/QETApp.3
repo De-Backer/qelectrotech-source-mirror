@@ -1,0 +1,1735 @@
+.TH "QETApp" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETApp \- The \fBQETApp\fP class This class represents the QElectroTech application\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetapp\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsystray\fP (QSystemTrayIcon::ActivationReason)"
+.br
+.RI "\fBQETApp::systray\fP Manages QSystemTrayIcon related events\&. "
+.ti -1c
+.RI "void \fBreduceEveryEditor\fP ()"
+.br
+.RI "\fBQETApp::reduceEveryEditor\fP Minimizes all application windows in the systray\&. "
+.ti -1c
+.RI "void \fBrestoreEveryEditor\fP ()"
+.br
+.RI "\fBQETApp::restoreEveryEditor\fP Restores all application windows in the systray\&. "
+.ti -1c
+.RI "void \fBreduceDiagramEditors\fP ()"
+.br
+.RI "\fBQETApp::reduceDiagramEditors\fP Minimize all schema editors in the systray\&. "
+.ti -1c
+.RI "void \fBrestoreDiagramEditors\fP ()"
+.br
+.RI "\fBQETApp::restoreDiagramEditors\fP Restore all schema editors in the systray\&. "
+.ti -1c
+.RI "void \fBreduceElementEditors\fP ()"
+.br
+.RI "\fBQETApp::reduceElementEditors\fP Minimize all element editors in systray\&. "
+.ti -1c
+.RI "void \fBrestoreElementEditors\fP ()"
+.br
+.RI "\fBQETApp::restoreElementEditors\fP Restore all element editors in the systray\&. "
+.ti -1c
+.RI "void \fBreduceTitleBlockTemplateEditors\fP ()"
+.br
+.RI "\fBQETApp::reduceTitleBlockTemplateEditors\fP Reduce all known template editors\&. "
+.ti -1c
+.RI "void \fBrestoreTitleBlockTemplateEditors\fP ()"
+.br
+.RI "\fBQETApp::restoreTitleBlockTemplateEditors\fP Restore all known template editors\&. "
+.ti -1c
+.RI "void \fBnewDiagramEditor\fP ()"
+.br
+.RI "\fBQETApp::newDiagramEditor\fP launches a new schema editor\&. "
+.ti -1c
+.RI "void \fBnewElementEditor\fP ()"
+.br
+.RI "\fBQETApp::newElementEditor\fP launches a new element editor\&. "
+.ti -1c
+.RI "bool \fBcloseEveryEditor\fP ()"
+.br
+.RI "\fBQETApp::closeEveryEditor\fP Close all editors\&. "
+.ti -1c
+.RI "void \fBsetMainWindowVisible\fP (QMainWindow *, bool)"
+.br
+.RI "\fBQETApp::setMainWindowVisible\fP Show or hide a window (schema editors / element editors) "
+.ti -1c
+.RI "void \fBinvertMainWindowVisibility\fP (QWidget *)"
+.br
+.RI "\fBQETApp::invertMainWindowVisibility\fP Display a window (schema editors / element editors) if this is hidden or hides it if it is displayed\&. "
+.ti -1c
+.RI "void \fBuseSystemPalette\fP (bool)"
+.br
+.RI "\fBQETApp::useSystemPalette\fP Change the application palette\&. "
+.ti -1c
+.RI "void \fBquitQET\fP ()"
+.br
+.RI "\fBQETApp::quitQET\fP Request the closing of all windows; if the user accepts them, the application quits\&. "
+.ti -1c
+.RI "void \fBcheckRemainingWindows\fP ()"
+.br
+.RI "\fBQETApp::checkRemainingWindows\fP Check if there are any windows (hidden or not) and exit if there are no more\&. "
+.ti -1c
+.RI "void \fBopenFiles\fP (const \fBQETArguments\fP &)"
+.br
+.RI "\fBQETApp::openFiles\fP Open files passed as arguments\&. "
+.ti -1c
+.RI "void \fBopenProjectFiles\fP (const QStringList &)"
+.br
+.RI "\fBQETApp::openProjectFiles\fP Opens a list of files\&. Files are opened in the first visible schematic editor\&. Otherwise, the first existing schema editor becomes visible and is uses\&. If there is no schematic editor open, a new one is created and uses\&. "
+.ti -1c
+.RI "void \fBopenElementFiles\fP (const QStringList &)"
+.br
+.RI "\fBQETApp::openElementFiles\fP Open the elements files passed in parameter\&. If an element is already open, the window which edits it is activated\&. "
+.ti -1c
+.RI "void \fBopenElementLocations\fP (const QList< \fBElementsLocation\fP > &)"
+.br
+.RI "\fBQETApp::openElementLocations\fP Open the elements whose location is passed in parameter\&. If an element is already open, the window which is edited is active\&. "
+.ti -1c
+.RI "void \fBopenTitleBlockTemplate\fP (const \fBTitleBlockTemplateLocation\fP &, bool=false)"
+.br
+.RI "\fBQETApp::openTitleBlockTemplate\fP Launch a new title block template editor to edit the given template\&. "
+.ti -1c
+.RI "void \fBopenTitleBlockTemplate\fP (const QString &)"
+.br
+.RI "\fBQETApp::openTitleBlockTemplate\fP Launch a new title block template editor to edit the given template\&. "
+.ti -1c
+.RI "void \fBopenTitleBlockTemplateFiles\fP (const QStringList &)"
+.br
+.RI "\fBQETApp::openTitleBlockTemplateFiles\fP Open provided title block template files\&. If a title block template is already opened, the adequate window is activated\&. "
+.ti -1c
+.RI "void \fBconfigureQET\fP ()"
+.br
+.RI "\fBQETApp::configureQET\fP Allows the user to configure \fBQET\fP by launching an appropriate dialog\&. "
+.ti -1c
+.RI "void \fBaboutQET\fP ()"
+.br
+.RI "\fBQETApp::aboutQET\fP Open the dialog about qet\&. "
+.ti -1c
+.RI "void \fBreceiveMessage\fP (int instanceId, QByteArray message)"
+.br
+.RI "\fBQETApp::receiveMessage\fP openFiles from message\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETApp\fP ()"
+.br
+.RI "\fBQETApp::QETApp\fP\&. "
+.ti -1c
+.RI "\fB~QETApp\fP () override"
+.br
+.RI "\fBQETApp::~QETApp\fP\&. "
+.ti -1c
+.RI "void \fBsetLanguage\fP (const QString &)"
+.br
+.RI "\fBQETApp::setLanguage\fP Change the language used by the application\&. "
+.ti -1c
+.RI "void \fBswitchLayout\fP (Qt::LayoutDirection)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBQETApp\fP * \fBinstance\fP ()"
+.br
+.RI "\fBQETApp::instance\fP\&. "
+.ti -1c
+.RI "static QString \fBlangFromSetting\fP ()"
+.br
+.RI "\fBQETApp::langFromSetting\fP\&. "
+.ti -1c
+.RI "static void \fBprintHelp\fP ()"
+.br
+.RI "\fBQETApp::printHelp\fP Display help and usage on standard output\&. "
+.ti -1c
+.RI "static void \fBprintVersion\fP ()"
+.br
+.RI "\fBQETApp::printVersion\fP Print version to standard output\&. "
+.ti -1c
+.RI "static void \fBprintLicense\fP ()"
+.br
+.RI "\fBQETApp::printLicense\fP Display license on standard output\&. "
+.ti -1c
+.RI "static \fBElementsCollectionCache\fP * \fBcollectionCache\fP ()"
+.br
+.RI "\fBQETApp::collectionCache\fP\&. "
+.ti -1c
+.RI "static QStringList \fBelementInfoKeys\fP ()"
+.br
+.RI "\fBQETApp::elementInfoKeys\fP\&. "
+.ti -1c
+.RI "static QString \fBelementTranslatedInfoKey\fP (const QString &)"
+.br
+.RI "ElementsProperties::translatedInfo Return the translated information key given by info If info don't match, return an empty string\&. "
+.ti -1c
+.RI "static QString \fBelementInfoToVar\fP (const QString &info)"
+.br
+.RI "\fBQETApp::elementInfoToVar\fP\&. "
+.ti -1c
+.RI "static QStringList \fBconductorInfoKeys\fP ()"
+.br
+.RI "\fBQETApp::conductorInfoKeys\fP\&. "
+.ti -1c
+.RI "static QString \fBconductorTranslatedInfoKey\fP (const QString &key)"
+.br
+.RI "\fBQETApp::conductorTranslatedInfoKey\fP\&. "
+.ti -1c
+.RI "static QStringList \fBdiagramInfoKeys\fP ()"
+.br
+.RI "\fBQETApp::diagramInfoKeys\fP\&. "
+.ti -1c
+.RI "static QString \fBdiagramTranslatedInfoKey\fP (const QString &key)"
+.br
+.RI "\fBQETApp::diagramTranslatedInfoKey\fP\&. "
+.ti -1c
+.RI "static \fBTitleBlockTemplatesFilesCollection\fP * \fBcommonTitleBlockTemplatesCollection\fP ()"
+.br
+.RI "\fBQETApp::commonTitleBlockTemplatesCollection\fP\&. "
+.ti -1c
+.RI "static \fBTitleBlockTemplatesFilesCollection\fP * \fBcustomTitleBlockTemplatesCollection\fP ()"
+.br
+.RI "\fBQETApp::customTitleBlockTemplatesCollection\fP\&. "
+.ti -1c
+.RI "static QList< \fBTitleBlockTemplatesCollection\fP * > \fBavailableTitleBlockTemplatesCollections\fP ()"
+.br
+.RI "\fBQETApp::availableTitleBlockTemplatesCollections\fP\&. "
+.ti -1c
+.RI "static \fBTitleBlockTemplatesCollection\fP * \fBtitleBlockTemplatesCollection\fP (const QString &)"
+.br
+.RI "\fBQETApp::titleBlockTemplatesCollection\fP\&. "
+.ti -1c
+.RI "static QString \fBcommonElementsDir\fP ()"
+.br
+.RI "\fBQETApp::commonElementsDir\fP\&. "
+.ti -1c
+.RI "static QString \fBcustomElementsDir\fP ()"
+.br
+.RI "\fBQETApp::customElementsDir\fP\&. "
+.ti -1c
+.RI "static QString \fBcommonElementsDirN\fP ()"
+.br
+.RI "\fBQETApp::commonElementsDirN\fP like QString \fBQETApp::commonElementsDir\fP but without '/' at the end\&. "
+.ti -1c
+.RI "static QString \fBcustomElementsDirN\fP ()"
+.br
+.RI "\fBQETApp::customElementsDirN\fP like QString \fBQETApp::customElementsDir\fP but without '/' at the end\&. "
+.ti -1c
+.RI "static void \fBresetUserElementsDir\fP ()"
+.br
+.RI "\fBQETApp::resetUserElementsDir\fP Reset the path of the user common and custom elements dir\&. Use this function when the user path (common and/or custom) change\&. "
+.ti -1c
+.RI "static QString \fBcommonTitleBlockTemplatesDir\fP ()"
+.br
+.RI "\fBQETApp::commonTitleBlockTemplatesDir\fP\&. "
+.ti -1c
+.RI "static QString \fBcustomTitleBlockTemplatesDir\fP ()"
+.br
+.RI "\fBQETApp::customTitleBlockTemplatesDir\fP\&. "
+.ti -1c
+.RI "static bool \fBregisterProject\fP (\fBQETProject\fP *)"
+.br
+.RI "\fBQETApp::registerProject\fP\&. "
+.ti -1c
+.RI "static bool \fBunregisterProject\fP (\fBQETProject\fP *)"
+.br
+.RI "\fBQETApp::unregisterProject\fP Cancel the recording of the project project\&. "
+.ti -1c
+.RI "static QMap< uint, \fBQETProject\fP * > \fBregisteredProjects\fP ()"
+.br
+.RI "\fBQETApp::registeredProjects\fP\&. "
+.ti -1c
+.RI "static \fBQETProject\fP * \fBproject\fP (const uint &)"
+.br
+.RI "\fBQETApp::project\fP\&. "
+.ti -1c
+.RI "static int \fBprojectId\fP (const \fBQETProject\fP *)"
+.br
+.RI "\fBQETApp::projectId\fP\&. "
+.ti -1c
+.RI "static QString \fBconfigDir\fP ()"
+.br
+.RI "\fBQETApp::configDir\fP Return the \fBQET\fP configuration folder, i\&.e\&. the path to the folder in which \fBQET\fP will read configuration and customization information specific to the current user\&. This file is generally C:\\Documents And Settings\\user\\Application Data\\ qet on Windows and ~/\&.qet under UNIX-like systems\&. "
+.ti -1c
+.RI "static QString \fBlanguagesPath\fP ()"
+.br
+.RI "\fBQETApp::languagesPath\fP\&. "
+.ti -1c
+.RI "static QString \fBrealPath\fP (const QString &)"
+.br
+.RI "\fBQETApp::realPath\fP Allows you to know the absolute path of the * \&.elmt file corresponding to a symbolic path (of the type custom: // tools_pervers / sado_maso / contact_bizarre) "
+.ti -1c
+.RI "static QString \fBsymbolicPath\fP (const QString &)"
+.br
+.RI "\fBQETApp::symbolicPath\fP Build the symbolic path (of the type custom: // tools_pervers / sado_maso / contact_bizarre) corresponding to a file\&. "
+.ti -1c
+.RI "static QStringList \fBhandledFileExtensions\fP ()"
+.br
+.RI "\fBQETApp::handledFileExtensions\fP\&. "
+.ti -1c
+.RI "static QStringList \fBhandledFiles\fP (const QList< QUrl > &)"
+.br
+.RI "\fBQETApp::handledFiles\fP\&. "
+.ti -1c
+.RI "static \fBRecentFiles\fP * \fBprojectsRecentFiles\fP ()"
+.br
+.RI "\fBQETApp::projectsRecentFiles\fP\&. "
+.ti -1c
+.RI "static \fBRecentFiles\fP * \fBelementsRecentFiles\fP ()"
+.br
+.RI "\fBQETApp::elementsRecentFiles\fP\&. "
+.ti -1c
+.RI "static void \fBoverrideLangDir\fP (const QString &)"
+.br
+.RI "\fBQETApp::overrideLangDir\fP Redefines the path of the folder containing the language files\&. "
+.ti -1c
+.RI "static QFont \fBdiagramTextsFont\fP (qreal=\-1\&.0)"
+.br
+.RI "\fBQETApp::diagramTextsFont\fP The font to use By default the font is 'sans Serif' and size 9\&. "
+.ti -1c
+.RI "static QFont \fBdiagramTextsItemFont\fP (qreal=\-1\&.0)"
+.br
+.RI "\fBQETApp::diagramTextsItemFont\fP the font for to use in independent text item\&. "
+.ti -1c
+.RI "static QFont \fBdynamicTextsItemFont\fP (qreal=\-1\&.0)"
+.br
+.RI "QETApp::dynamicTextsFont the default font of dynamic element text item\&. "
+.ti -1c
+.RI "static QFont \fBindiTextsItemFont\fP (qreal=\-1\&.0)"
+.br
+.RI "\fBQETApp::indiTextsItemFont\fP The default font to use for independent text item\&. "
+.ti -1c
+.RI "static \fBQETDiagramEditor\fP * \fBdiagramEditorForFile\fP (const QString &)"
+.br
+.RI "\fBQETApp::diagramEditorForFile\fP\&. "
+.ti -1c
+.RI "static \fBQETDiagramEditor\fP * \fBdiagramEditorAncestorOf\fP (const QWidget *child)"
+.br
+.RI "\fBQETApp::diagramEditorAncestorOf\fP\&. "
+.ti -1c
+.RI "static QList< \fBQETDiagramEditor\fP * > \fBdiagramEditors\fP ()"
+.br
+.RI "\fBQETApp::diagramEditors\fP\&. "
+.ti -1c
+.RI "static QList< \fBQETElementEditor\fP * > \fBelementEditors\fP ()"
+.br
+.RI "\fBQETApp::elementEditors\fP\&. "
+.ti -1c
+.RI "static QList< \fBQETElementEditor\fP * > \fBelementEditors\fP (\fBQETProject\fP *)"
+.br
+.RI "\fBQETApp::elementEditors\fP\&. "
+.ti -1c
+.RI "static QList< \fBQETTitleBlockTemplateEditor\fP * > \fBtitleBlockTemplateEditors\fP ()"
+.br
+.RI "\fBQETApp::titleBlockTemplateEditors\fP\&. "
+.ti -1c
+.RI "static QList< \fBQETTitleBlockTemplateEditor\fP * > \fBtitleBlockTemplateEditors\fP (\fBQETProject\fP *)"
+.br
+.RI "\fBQETApp::titleBlockTemplateEditors\fP\&. "
+.ti -1c
+.RI "static \fBQTextOrientationSpinBoxWidget\fP * \fBcreateTextOrientationSpinBoxWidget\fP ()"
+.br
+.RI "\fBQETApp::createTextOrientationSpinBoxWidget\fP Instantiates a \fBQTextOrientationSpinBoxWidget\fP and configures: "
+.ti -1c
+.RI "static \fBTitleBlockTemplate\fP * \fBdefaultTitleBlockTemplate\fP ()"
+.br
+.RI "\fBQETApp::defaultTitleBlockTemplate\fP\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBlang_dir\fP = QString()"
+.br
+.RI "lang_dir Directory containing localization files\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETApp\fP (const \fBQETApp\fP &)"
+.br
+.ti -1c
+.RI "template<class T > QList< T * > \fBdetectWindows\fP () const"
+.br
+.ti -1c
+.RI "template<class T > void \fBsetMainWindowsVisible\fP (bool)"
+.br
+.ti -1c
+.RI "QList< QWidget * > \fBfloatingToolbarsAndDocksForMainWindow\fP (QMainWindow *) const"
+.br
+.RI "\fBQETApp::floatingToolbarsAndDocksForMainWindow\fP\&. "
+.ti -1c
+.RI "void \fBparseArguments\fP ()"
+.br
+.RI "\fBQETApp::parseArguments\fP Parse the following arguments: "
+.ti -1c
+.RI "void \fBinitSplashScreen\fP ()"
+.br
+.RI "\fBQETApp::initSplashScreen\fP Initializes the splash screen if and only if the execution is interactive\&. Otherwise, the splash_screen_ attribute is 0\&. "
+.ti -1c
+.RI "void \fBsetSplashScreenStep\fP (const QString &=QString())"
+.br
+.RI "\fBQETApp::setSplashScreenStep\fP Changes the text of the splash screen and takes events into account\&. If the application is running non-interactively, this method does nothing\&. "
+.ti -1c
+.RI "void \fBinitLanguage\fP ()"
+.br
+.RI "\fBQETApp::initLanguage\fP Determine and apply the language to use for the application\&. "
+.ti -1c
+.RI "void \fBinitStyle\fP ()"
+.br
+.RI "\fBQETApp::initStyle\fP Setup the gui style\&. "
+.ti -1c
+.RI "void \fBinitConfiguration\fP ()"
+.br
+.RI "\fBQETApp::initConfiguration\fP Reads and takes into account the configuration of the application\&. This method will create, if necessary: "
+.ti -1c
+.RI "void \fBinitSystemTray\fP ()"
+.br
+.RI "\fBQETApp::initSystemTray\fP Build the icon in the systray and its menu\&. "
+.ti -1c
+.RI "void \fBbuildSystemTrayMenu\fP ()"
+.br
+.RI "\fBQETApp::buildSystemTrayMenu\fP builds the icon menu in the systray\&. "
+.ti -1c
+.RI "void \fBcheckBackupFiles\fP ()"
+.br
+.RI "\fBQETApp::checkBackupFiles\fP Check for backup files\&. If backup was found, open a dialog and ask user what to do\&. "
+.ti -1c
+.RI "void \fBfetchWindowStats\fP (const QList< \fBQETDiagramEditor\fP * > &, const QList< \fBQETElementEditor\fP * > &, const QList< \fBQETTitleBlockTemplateEditor\fP * > &)"
+.br
+.RI "\fBQETApp::fetchWindowStats\fP Updates the booleans concerning the state of the windows\&. "
+.ti -1c
+.RI "template<class T > void \fBaddWindowsListToMenu\fP (QMenu *, const QList< T * > &)"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBprojectIdFromString\fP (const QString &)"
+.br
+.RI "\fBQETApp::projectIdFromString\fP\&. "
+.ti -1c
+.RI "static \fBQETProject\fP * \fBprojectFromString\fP (const QString &)"
+.br
+.RI "\fBQETApp::projectFromString\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QTranslator \fBqtTranslator\fP"
+.br
+.ti -1c
+.RI "QTranslator \fBqetTranslator\fP"
+.br
+.ti -1c
+.RI "QSystemTrayIcon * \fBm_qsti\fP"
+.br
+.ti -1c
+.RI "QSplashScreen * \fBm_splash_screen\fP"
+.br
+.ti -1c
+.RI "QMenu * \fBmenu_systray\fP"
+.br
+.ti -1c
+.RI "QAction * \fBquitter_qet\fP"
+.br
+.ti -1c
+.RI "QAction * \fBreduce_appli\fP"
+.br
+.ti -1c
+.RI "QAction * \fBrestore_appli\fP"
+.br
+.ti -1c
+.RI "QAction * \fBreduce_diagrams\fP"
+.br
+.ti -1c
+.RI "QAction * \fBrestore_diagrams\fP"
+.br
+.ti -1c
+.RI "QAction * \fBreduce_elements\fP"
+.br
+.ti -1c
+.RI "QAction * \fBrestore_elements\fP"
+.br
+.ti -1c
+.RI "QAction * \fBreduce_templates\fP"
+.br
+.ti -1c
+.RI "QAction * \fBrestore_templates\fP"
+.br
+.ti -1c
+.RI "QAction * \fBnew_diagram\fP"
+.br
+.ti -1c
+.RI "QAction * \fBnew_element\fP"
+.br
+.ti -1c
+.RI "QHash< QMainWindow *, QByteArray > \fBwindow_geometries\fP"
+.br
+.ti -1c
+.RI "QHash< QMainWindow *, QByteArray > \fBwindow_states\fP"
+.br
+.ti -1c
+.RI "bool \fBevery_editor_reduced\fP"
+.br
+.ti -1c
+.RI "bool \fBevery_diagram_reduced\fP"
+.br
+.ti -1c
+.RI "bool \fBevery_diagram_visible\fP"
+.br
+.ti -1c
+.RI "bool \fBevery_element_reduced\fP"
+.br
+.ti -1c
+.RI "bool \fBevery_element_visible\fP"
+.br
+.ti -1c
+.RI "bool \fBevery_template_reduced\fP"
+.br
+.ti -1c
+.RI "bool \fBevery_template_visible\fP"
+.br
+.ti -1c
+.RI "QSignalMapper \fBsignal_map\fP"
+.br
+.ti -1c
+.RI "\fBQETArguments\fP \fBqet_arguments_\fP"
+.br
+.RI "Comand-line arguments parser\&. "
+.ti -1c
+.RI "bool \fBnon_interactive_execution_\fP"
+.br
+.RI "non_interactive_execution_ Whether the application will end without any user interaction "
+.ti -1c
+.RI "QPalette \fBinitial_palette_\fP"
+.br
+.RI "System color palette\&. "
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBQETApp\fP * \fBm_qetapp\fP = nullptr"
+.br
+.ti -1c
+.RI "static \fBTitleBlockTemplatesFilesCollection\fP * \fBm_common_tbt_collection\fP"
+.br
+.ti -1c
+.RI "static \fBTitleBlockTemplatesFilesCollection\fP * \fBm_custom_tbt_collection\fP"
+.br
+.ti -1c
+.RI "static \fBElementsCollectionCache\fP * \fBcollections_cache_\fP = nullptr"
+.br
+.ti -1c
+.RI "static QMap< uint, \fBQETProject\fP * > \fBregistered_projects_\fP = QMap<uint, \fBQETProject\fP *>()"
+.br
+.ti -1c
+.RI "static uint \fBnext_project_id\fP = 0"
+.br
+.ti -1c
+.RI "static \fBRecentFiles\fP * \fBm_projects_recent_files\fP = nullptr"
+.br
+.ti -1c
+.RI "static \fBRecentFiles\fP * \fBm_elements_recent_files\fP = nullptr"
+.br
+.ti -1c
+.RI "static \fBTitleBlockTemplate\fP * \fBdefault_titleblock_template_\fP = nullptr"
+.br
+.ti -1c
+.RI "static QString \fBm_user_common_elements_dir\fP = QString()"
+.br
+.ti -1c
+.RI "static QString \fBm_user_custom_elements_dir\fP = QString()"
+.br
+.ti -1c
+.RI "static QString \fBm_user_custom_tbt_dir\fP = QString()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBQETApp\fP class This class represents the QElectroTech application\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QETApp::QETApp ()"
+
+.PP
+\fBQETApp::QETApp\fP\&. 
+.SS "QETApp::~QETApp ()\fC [override]\fP"
+
+.PP
+\fBQETApp::~QETApp\fP\&. 
+.SS "QETApp::QETApp (const \fBQETApp\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QETApp::aboutQET ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::aboutQET\fP Open the dialog about qet\&. 
+.SS "template<class T > void QETApp::addWindowsListToMenu (QMenu * menu, const QList< T * > & windows)\fC [private]\fP"
+Add a list of \fIwindows\fP to \fImenu\fP\&. This template function assumes it will be given a QList of pointers to objects inheriting the QMainWindow class\&. T the class inheriting QMainWindow 
+.PP
+\fBParameters\fP
+.RS 4
+\fImenu\fP the menu windows will be added to 
+.br
+\fIwindows\fP A list of top-level windows\&. 
+.RE
+.PP
+
+.SS "QList< \fBTitleBlockTemplatesCollection\fP * > QETApp::availableTitleBlockTemplatesCollections ()\fC [static]\fP"
+
+.PP
+\fBQETApp::availableTitleBlockTemplatesCollections\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of all available title block tempaltes collections, beginning with the common and custom ones, plus the projects-embedded ones\&. 
+.RE
+.PP
+
+.SS "void QETApp::buildSystemTrayMenu ()\fC [private]\fP"
+
+.PP
+\fBQETApp::buildSystemTrayMenu\fP builds the icon menu in the systray\&. 
+.SS "void QETApp::checkBackupFiles ()\fC [private]\fP"
+
+.PP
+\fBQETApp::checkBackupFiles\fP Check for backup files\&. If backup was found, open a dialog and ask user what to do\&. 
+.SS "void QETApp::checkRemainingWindows ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::checkRemainingWindows\fP Check if there are any windows (hidden or not) and exit if there are no more\&. 
+.SS "bool QETApp::closeEveryEditor ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::closeEveryEditor\fP Close all editors\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the user has accepted all closures, false otherwise 
+.RE
+.PP
+
+.SS "\fBElementsCollectionCache\fP * QETApp::collectionCache ()\fC [static]\fP"
+
+.PP
+\fBQETApp::collectionCache\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the collection cache provided by the application itself\&. 
+.RE
+.PP
+
+.SS "QString QETApp::commonElementsDir ()\fC [static]\fP"
+
+.PP
+\fBQETApp::commonElementsDir\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the dir path of the common elements collection\&. 
+.RE
+.PP
+
+.SS "QString QETApp::commonElementsDirN ()\fC [static]\fP"
+
+.PP
+\fBQETApp::commonElementsDirN\fP like QString \fBQETApp::commonElementsDir\fP but without '/' at the end\&. 
+.PP
+\fBReturns\fP
+.RS 4
+QString path 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplatesFilesCollection\fP * QETApp::commonTitleBlockTemplatesCollection ()\fC [static]\fP"
+
+.PP
+\fBQETApp::commonTitleBlockTemplatesCollection\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the common title block templates collection, i\&.e\&. the one provided by QElecrotTech 
+.RE
+.PP
+
+.SS "QString QETApp::commonTitleBlockTemplatesDir ()\fC [static]\fP"
+
+.PP
+\fBQETApp::commonTitleBlockTemplatesDir\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the path of the directory containing the common title block templates collection\&. 
+.RE
+.PP
+
+.SS "QStringList QETApp::conductorInfoKeys ()\fC [static]\fP"
+
+.PP
+\fBQETApp::conductorInfoKeys\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the conductor information keys 
+.RE
+.PP
+
+.SS "QString QETApp::conductorTranslatedInfoKey (const QString & key)\fC [static]\fP"
+
+.PP
+\fBQETApp::conductorTranslatedInfoKey\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the translated information key given by key If key don't match, return an empty string 
+.RE
+.PP
+
+.SS "QString QETApp::configDir ()\fC [static]\fP"
+
+.PP
+\fBQETApp::configDir\fP Return the \fBQET\fP configuration folder, i\&.e\&. the path to the folder in which \fBQET\fP will read configuration and customization information specific to the current user\&. This file is generally C:\\Documents And Settings\\user\\Application Data\\ qet on Windows and ~/\&.qet under UNIX-like systems\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The path of the QElectroTech configuration folder 
+.RE
+.PP
+
+.SS "void QETApp::configureQET ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::configureQET\fP Allows the user to configure \fBQET\fP by launching an appropriate dialog\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBConfigDialog\fP 
+.RE
+.PP
+
+.SS "\fBQTextOrientationSpinBoxWidget\fP * QETApp::createTextOrientationSpinBoxWidget ()\fC [static]\fP"
+
+.PP
+\fBQETApp::createTextOrientationSpinBoxWidget\fP Instantiates a \fBQTextOrientationSpinBoxWidget\fP and configures: 
+.IP "\(bu" 2
+his font
+.IP "\(bu" 2
+his strings 
+.PP
+\fBNote\fP
+.RS 4
+that the deletion of the widget thus allocated is the responsibility of the caller\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBQTextOrientationSpinBoxWidget\fP 
+.RE
+.PP
+
+.PP
+
+.SS "QString QETApp::customElementsDir ()\fC [static]\fP"
+
+.PP
+\fBQETApp::customElementsDir\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the dir path of user elements collection ened by a '/' separator 
+.RE
+.PP
+
+.SS "QString QETApp::customElementsDirN ()\fC [static]\fP"
+
+.PP
+\fBQETApp::customElementsDirN\fP like QString \fBQETApp::customElementsDir\fP but without '/' at the end\&. 
+.PP
+\fBReturns\fP
+.RS 4
+QString path 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplatesFilesCollection\fP * QETApp::customTitleBlockTemplatesCollection ()\fC [static]\fP"
+
+.PP
+\fBQETApp::customTitleBlockTemplatesCollection\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the custom title block templates collection, i\&.e\&. the one managed by the end user 
+.RE
+.PP
+
+.SS "QString QETApp::customTitleBlockTemplatesDir ()\fC [static]\fP"
+
+.PP
+\fBQETApp::customTitleBlockTemplatesDir\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the path of the directory containing the custom title block templates collection\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplate\fP * QETApp::defaultTitleBlockTemplate ()\fC [static]\fP"
+
+.PP
+\fBQETApp::defaultTitleBlockTemplate\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the default titleblock template for diagrams 
+.RE
+.PP
+
+.SS "template<class T > QList< T * > QETApp::detectWindows\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIT\fP a class inheriting QMainWindow 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the list of windows of type T 
+.RE
+.PP
+
+.SS "\fBQETDiagramEditor\fP * QETApp::diagramEditorAncestorOf (const QWidget * child)\fC [static]\fP"
+
+.PP
+\fBQETApp::diagramEditorAncestorOf\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchild\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the parent \fBQETDiagramEditor\fP (or grandparent and so on to any level) of the given child\&. If not return nullptr; 
+.RE
+.PP
+
+.SS "\fBQETDiagramEditor\fP * QETApp::diagramEditorForFile (const QString & filepath)\fC [static]\fP"
+
+.PP
+\fBQETApp::diagramEditorForFile\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP : A file path 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+if filepath is an empty string, this method returns 0\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the \fBQETDiagramEditor\fP editing the filepath file, or 0 if this file is not edited by the application\&. 
+.RE
+.PP
+
+.SS "QList< \fBQETDiagramEditor\fP * > QETApp::diagramEditors ()\fC [static]\fP"
+
+.PP
+\fBQETApp::diagramEditors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+schema editors 
+.RE
+.PP
+
+.SS "QStringList QETApp::diagramInfoKeys ()\fC [static]\fP"
+
+.PP
+\fBQETApp::diagramInfoKeys\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the diagram default default information keys 
+.RE
+.PP
+
+.SS "QFont QETApp::diagramTextsFont (qreal size = \fC\-1\&.0\fP)\fC [static]\fP"
+
+.PP
+\fBQETApp::diagramTextsFont\fP The font to use By default the font is 'sans Serif' and size 9\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP : the size of font 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the font to use 
+.RE
+.PP
+
+.SS "QFont QETApp::diagramTextsItemFont (qreal size = \fC\-1\&.0\fP)\fC [static]\fP"
+
+.PP
+\fBQETApp::diagramTextsItemFont\fP the font for to use in independent text item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP of font 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QString QETApp::diagramTranslatedInfoKey (const QString & key)\fC [static]\fP"
+
+.PP
+\fBQETApp::diagramTranslatedInfoKey\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the translated information key given by key If key don't match, return an empty string 
+.RE
+.PP
+
+.SS "QFont QETApp::dynamicTextsItemFont (qreal size = \fC\-1\&.0\fP)\fC [static]\fP"
+
+.PP
+QETApp::dynamicTextsFont the default font of dynamic element text item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+dynamic text font with PointSizeF(size) 
+.RE
+.PP
+
+.SS "QList< \fBQETElementEditor\fP * > QETApp::elementEditors ()\fC [static]\fP"
+
+.PP
+\fBQETApp::elementEditors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+element editors 
+.RE
+.PP
+
+.SS "QList< \fBQETElementEditor\fP * > QETApp::elementEditors (\fBQETProject\fP * project)\fC [static]\fP"
+
+.PP
+\fBQETApp::elementEditors\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : a project 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+element editors editing an element belonging to the \fBQETProject\fP project 
+.RE
+.PP
+
+.SS "QStringList QETApp::elementInfoKeys ()\fC [static]\fP"
+
+.PP
+\fBQETApp::elementInfoKeys\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+all available key for describe an element 
+.RE
+.PP
+
+.SS "QString QETApp::elementInfoToVar (const QString & info)\fC [static]\fP"
+
+.PP
+\fBQETApp::elementInfoToVar\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+var in form %{my-var} corresponding to the info, if there is not available var for the given info the returned var is %{void} 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBQETApp::elementInfoKeys\fP for list 
+.RE
+.PP
+
+.SS "\fBRecentFiles\fP * QETApp::elementsRecentFiles ()\fC [static]\fP"
+
+.PP
+\fBQETApp::elementsRecentFiles\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The list of recent files for the elements 
+.RE
+.PP
+
+.SS "QString QETApp::elementTranslatedInfoKey (const QString & info)\fC [static]\fP"
+
+.PP
+ElementsProperties::translatedInfo Return the translated information key given by info If info don't match, return an empty string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo\fP the key to be translated 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void QETApp::fetchWindowStats (const QList< \fBQETDiagramEditor\fP * > & diagrams, const QList< \fBQETElementEditor\fP * > & elements, const QList< \fBQETTitleBlockTemplateEditor\fP * > & tbtemplates)\fC [private]\fP"
+
+.PP
+\fBQETApp::fetchWindowStats\fP Updates the booleans concerning the state of the windows\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagrams\fP : QList<QETDiagramEditor *> 
+.br
+\fIelements\fP : QList<QETElementEditor *> 
+.br
+\fItbtemplates\fP : QList<QETTitleBlockTemplateEditor *> 
+.RE
+.PP
+
+.SS "QList< QWidget * > QETApp::floatingToolbarsAndDocksForMainWindow (QMainWindow * window) const\fC [private]\fP"
+
+.PP
+\fBQETApp::floatingToolbarsAndDocksForMainWindow\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP : window where you have to find the toolbars and floating dock 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the window's toolbars and floating dock 
+.RE
+.PP
+
+.SS "QStringList QETApp::handledFileExtensions ()\fC [static]\fP"
+
+.PP
+\fBQETApp::handledFileExtensions\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of file extensions QElectroTech is able to open and supposed to handle\&. Note they are provided with no leading point\&. 
+.RE
+.PP
+
+.SS "QStringList QETApp::handledFiles (const QList< QUrl > & urls)\fC [static]\fP"
+
+.PP
+\fBQETApp::handledFiles\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIurls\fP : URLs list 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the list of filepaths QElectroTech is able to open\&. 
+.RE
+.PP
+
+.SS "QFont QETApp::indiTextsItemFont (qreal size = \fC\-1\&.0\fP)\fC [static]\fP"
+
+.PP
+\fBQETApp::indiTextsItemFont\fP The default font to use for independent text item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+independent text font with PointSizeF(size) 
+.RE
+.PP
+
+.SS "void QETApp::initConfiguration ()\fC [private]\fP"
+
+.PP
+\fBQETApp::initConfiguration\fP Reads and takes into account the configuration of the application\&. This method will create, if necessary: 
+.IP "\(bu" 2
+the configuration folder
+.IP "\(bu" 2
+the folder of the personal collection
+.IP "\(bu" 2
+the directory for custom title blocks 
+.PP
+
+.SS "void QETApp::initLanguage ()\fC [private]\fP"
+
+.PP
+\fBQETApp::initLanguage\fP Determine and apply the language to use for the application\&. 
+.SS "void QETApp::initSplashScreen ()\fC [private]\fP"
+
+.PP
+\fBQETApp::initSplashScreen\fP Initializes the splash screen if and only if the execution is interactive\&. Otherwise, the splash_screen_ attribute is 0\&. 
+.SS "void QETApp::initStyle ()\fC [private]\fP"
+
+.PP
+\fBQETApp::initStyle\fP Setup the gui style\&. 
+.SS "void QETApp::initSystemTray ()\fC [private]\fP"
+
+.PP
+\fBQETApp::initSystemTray\fP Build the icon in the systray and its menu\&. 
+.SS "\fBQETApp\fP * QETApp::instance ()\fC [static]\fP"
+
+.PP
+\fBQETApp::instance\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the instance of the \fBQETApp\fP 
+.RE
+.PP
+
+.SS "void QETApp::invertMainWindowVisibility (QWidget * window)\fC [slot]\fP"
+
+.PP
+\fBQETApp::invertMainWindowVisibility\fP Display a window (schema editors / element editors) if this is hidden or hides it if it is displayed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP : window to show / hide 
+.RE
+.PP
+
+.SS "QString QETApp::langFromSetting ()\fC [static]\fP"
+
+.PP
+\fBQETApp::langFromSetting\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the langage found in setting file if nothing was found return the system local\&. 
+.RE
+.PP
+
+.SS "QString QETApp::languagesPath ()\fC [static]\fP"
+
+.PP
+\fBQETApp::languagesPath\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The path of the folder containing the language files 
+.RE
+.PP
+
+.SS "void QETApp::newDiagramEditor ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::newDiagramEditor\fP launches a new schema editor\&. 
+.SS "void QETApp::newElementEditor ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::newElementEditor\fP launches a new element editor\&. 
+.SS "void QETApp::openElementFiles (const QStringList & files_list)\fC [slot]\fP"
+
+.PP
+\fBQETApp::openElementFiles\fP Open the elements files passed in parameter\&. If an element is already open, the window which edits it is activated\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfiles_list\fP : Files to open 
+.RE
+.PP
+
+.SS "void QETApp::openElementLocations (const QList< \fBElementsLocation\fP > & locations_list)\fC [slot]\fP"
+
+.PP
+\fBQETApp::openElementLocations\fP Open the elements whose location is passed in parameter\&. If an element is already open, the window which is edited is active\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocations_list\fP : Locations to open 
+.RE
+.PP
+
+.SS "void QETApp::openFiles (const \fBQETArguments\fP & args)\fC [slot]\fP"
+
+.PP
+\fBQETApp::openFiles\fP Open files passed as arguments\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargs\fP : Object containing arguments; the files 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBopenProjectFiles\fP \fBopenElementFiles\fP 
+.RE
+.PP
+
+.SS "void QETApp::openProjectFiles (const QStringList & files_list)\fC [slot]\fP"
+
+.PP
+\fBQETApp::openProjectFiles\fP Opens a list of files\&. Files are opened in the first visible schematic editor\&. Otherwise, the first existing schema editor becomes visible and is uses\&. If there is no schematic editor open, a new one is created and uses\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfiles_list\fP : Files to open 
+.RE
+.PP
+
+.SS "void QETApp::openTitleBlockTemplate (const QString & filepath)\fC [slot]\fP"
+
+.PP
+\fBQETApp::openTitleBlockTemplate\fP Launch a new title block template editor to edit the given template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP Path of the \&.titleblock file to be opened 
+.RE
+.PP
+
+.SS "void QETApp::openTitleBlockTemplate (const \fBTitleBlockTemplateLocation\fP & location, bool duplicate = \fCfalse\fP)\fC [slot]\fP"
+
+.PP
+\fBQETApp::openTitleBlockTemplate\fP Launch a new title block template editor to edit the given template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP location of the title block template to be edited
+.br
+\fIduplicate\fP if true, the template is opened for duplication, which means the user will be prompter for a new template name\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBQETTitleBlockTemplateEditor::setOpenForDuplication()\fP 
+.RE
+.PP
+
+.SS "void QETApp::openTitleBlockTemplateFiles (const QStringList & files_list)\fC [slot]\fP"
+
+.PP
+\fBQETApp::openTitleBlockTemplateFiles\fP Open provided title block template files\&. If a title block template is already opened, the adequate window is activated\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfiles_list\fP Files to be opened 
+.RE
+.PP
+
+.SS "void QETApp::overrideLangDir (const QString & new_ld)\fC [static]\fP"
+
+.PP
+\fBQETApp::overrideLangDir\fP Redefines the path of the folder containing the language files\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_ld\fP : New path of the folder containing the language files 
+.RE
+.PP
+
+.SS "void QETApp::parseArguments ()\fC [private]\fP"
+
+.PP
+\fBQETApp::parseArguments\fP Parse the following arguments: 
+.IP "\(bu" 2
+--common-elements-dir=
+.IP "\(bu" 2
+--config-dir
+.IP "\(bu" 2
+--help
+.IP "\(bu" 2
+--version
+.IP "\(bu" 2
+-v
+.IP "\(bu" 2
+--license
+.PP
+.PP
+The other arguments are normally file paths\&. If they exist, they are just stored in the arguments_files_ attribute\&. Otherwise, they are stored in the arguments_options_ attribute\&. 
+.SS "void QETApp::printHelp ()\fC [static]\fP"
+
+.PP
+\fBQETApp::printHelp\fP Display help and usage on standard output\&. 
+.SS "void QETApp::printLicense ()\fC [static]\fP"
+
+.PP
+\fBQETApp::printLicense\fP Display license on standard output\&. 
+.SS "void QETApp::printVersion ()\fC [static]\fP"
+
+.PP
+\fBQETApp::printVersion\fP Print version to standard output\&. 
+.SS "\fBQETProject\fP * QETApp::project (const uint & id)\fC [static]\fP"
+
+.PP
+\fBQETApp::project\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP : Id of the desired project 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the project corresponds to the id passed in parameter 
+.RE
+.PP
+
+.SS "\fBQETProject\fP * QETApp::projectFromString (const QString & url)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBQETApp::projectFromString\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIurl\fP The location of a collection item (title block template, element, category, \&.\&.\&.)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the project mentionned in the URL, or 0 if none could be found\&. 
+.RE
+.PP
+
+.SS "int QETApp::projectId (const \fBQETProject\fP * project)\fC [static]\fP"
+
+.PP
+\fBQETApp::projectId\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : Project whose id we want to retrieve 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the project id as a parameter if it is saved, -1 otherwise 
+.RE
+.PP
+
+.SS "int QETApp::projectIdFromString (const QString & url)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBQETApp::projectIdFromString\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIurl\fP The location of a collection item (title block template, element, category, \&.\&.\&.)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the id of the project mentionned in the URL, or -1 if none could be found\&. 
+.RE
+.PP
+
+.SS "\fBRecentFiles\fP * QETApp::projectsRecentFiles ()\fC [static]\fP"
+
+.PP
+\fBQETApp::projectsRecentFiles\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The list of recent files for projects 
+.RE
+.PP
+
+.SS "void QETApp::quitQET ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::quitQET\fP Request the closing of all windows; if the user accepts them, the application quits\&. 
+.SS "QString QETApp::realPath (const QString & sym_path)\fC [static]\fP"
+
+.PP
+\fBQETApp::realPath\fP Allows you to know the absolute path of the * \&.elmt file corresponding to a symbolic path (of the type custom: // tools_pervers / sado_maso / contact_bizarre) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsym_path\fP Character string representing the absolute path of the file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An empty string in case of error or the absolute path of the * \&.elmt file\&. 
+.RE
+.PP
+
+.SS "void QETApp::receiveMessage (int instanceId, QByteArray message)\fC [slot]\fP"
+
+.PP
+\fBQETApp::receiveMessage\fP openFiles from message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinstanceId\fP Q_UNUSED 
+.br
+\fImessage\fP 
+.RE
+.PP
+
+.SS "void QETApp::reduceDiagramEditors ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::reduceDiagramEditors\fP Minimize all schema editors in the systray\&. 
+.SS "void QETApp::reduceElementEditors ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::reduceElementEditors\fP Minimize all element editors in systray\&. 
+.SS "void QETApp::reduceEveryEditor ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::reduceEveryEditor\fP Minimizes all application windows in the systray\&. 
+.SS "void QETApp::reduceTitleBlockTemplateEditors ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::reduceTitleBlockTemplateEditors\fP Reduce all known template editors\&. 
+.SS "QMap< uint, \fBQETProject\fP * > QETApp::registeredProjects ()\fC [static]\fP"
+
+.PP
+\fBQETApp::registeredProjects\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of projects with their associated ids 
+.RE
+.PP
+
+.SS "bool QETApp::registerProject (\fBQETProject\fP * project)\fC [static]\fP"
+
+.PP
+\fBQETApp::registerProject\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : Project to register with the application 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the project could be saved, false otherwise Failure to save a project usually means that it is already saved\&. 
+.RE
+.PP
+
+.SS "void QETApp::resetUserElementsDir ()\fC [static]\fP"
+
+.PP
+\fBQETApp::resetUserElementsDir\fP Reset the path of the user common and custom elements dir\&. Use this function when the user path (common and/or custom) change\&. 
+.SS "void QETApp::restoreDiagramEditors ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::restoreDiagramEditors\fP Restore all schema editors in the systray\&. 
+.SS "void QETApp::restoreElementEditors ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::restoreElementEditors\fP Restore all element editors in the systray\&. 
+.SS "void QETApp::restoreEveryEditor ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::restoreEveryEditor\fP Restores all application windows in the systray\&. 
+.SS "void QETApp::restoreTitleBlockTemplateEditors ()\fC [slot]\fP"
+
+.PP
+\fBQETApp::restoreTitleBlockTemplateEditors\fP Restore all known template editors\&. 
+.SS "void QETApp::setLanguage (const QString & desired_language)"
+
+.PP
+\fBQETApp::setLanguage\fP Change the language used by the application\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdesired_language\fP : wanted language 
+.RE
+.PP
+
+.SS "template<class T > void QETApp::setMainWindowsVisible (bool visible)\fC [private]\fP"
+T a class inheriting QMainWindow 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvisible\fP whether detected main windows should be visible 
+.RE
+.PP
+
+.SS "void QETApp::setMainWindowVisible (QMainWindow * window, bool visible)\fC [slot]\fP"
+
+.PP
+\fBQETApp::setMainWindowVisible\fP Show or hide a window (schema editors / element editors) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP : window to show / hide 
+.br
+\fIvisible\fP : true to display the window, false otherwise 
+.RE
+.PP
+
+.SS "void QETApp::setSplashScreenStep (const QString & message = \fCQString()\fP)\fC [private]\fP"
+
+.PP
+\fBQETApp::setSplashScreenStep\fP Changes the text of the splash screen and takes events into account\&. If the application is running non-interactively, this method does nothing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImessage\fP : the text of the splash screen 
+.RE
+.PP
+
+.SS "void QETApp::switchLayout (Qt::LayoutDirection direction)"
+Switches the application to the provided layout\&. 
+.SS "QString QETApp::symbolicPath (const QString & real_path)\fC [static]\fP"
+
+.PP
+\fBQETApp::symbolicPath\fP Build the symbolic path (of the type custom: // tools_pervers / sado_maso / contact_bizarre) corresponding to a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreal_path\fP : Character string representing the symbolic path of the file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An empty string in case of error or the path symbolic designating the element\&. 
+.RE
+.PP
+
+.SS "void QETApp::systray (QSystemTrayIcon::ActivationReason reason)\fC [slot]\fP"
+
+.PP
+\fBQETApp::systray\fP Manages QSystemTrayIcon related events\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreason\fP : reason an integer representing the event on the systray 
+.RE
+.PP
+
+.SS "QList< \fBQETTitleBlockTemplateEditor\fP * > QETApp::titleBlockTemplateEditors ()\fC [static]\fP"
+
+.PP
+\fBQETApp::titleBlockTemplateEditors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the title block template editors 
+.RE
+.PP
+
+.SS "QList< \fBQETTitleBlockTemplateEditor\fP * > QETApp::titleBlockTemplateEditors (\fBQETProject\fP * project)\fC [static]\fP"
+
+.PP
+\fBQETApp::titleBlockTemplateEditors\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Opened project object\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the list of title block template editors which are currently editing a template embedded within \fIproject\fP\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplatesCollection\fP * QETApp::titleBlockTemplatesCollection (const QString & protocol)\fC [static]\fP"
+
+.PP
+\fBQETApp::titleBlockTemplatesCollection\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprotocol\fP Protocol string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the templates collection matching the provided protocol, or 0 if none could be found 
+.RE
+.PP
+
+.SS "bool QETApp::unregisterProject (\fBQETProject\fP * project)\fC [static]\fP"
+
+.PP
+\fBQETApp::unregisterProject\fP Cancel the recording of the project project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : Project to be unregistered 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the cancellation was successful, false otherwise The failure of this method usually means that the project was not saved\&. 
+.RE
+.PP
+
+.SS "void QETApp::useSystemPalette (bool use)\fC [slot]\fP"
+
+.PP
+\fBQETApp::useSystemPalette\fP Change the application palette\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIuse\fP : true to use the system colors, false to use those of the current theme 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElementsCollectionCache\fP * QETApp::collections_cache_ = nullptr\fC [static]\fP, \fC [private]\fP"
+
+.SS "\fBTitleBlockTemplate\fP * QETApp::default_titleblock_template_ = nullptr\fC [static]\fP, \fC [private]\fP"
+
+.SS "bool QETApp::every_diagram_reduced\fC [private]\fP"
+
+.SS "bool QETApp::every_diagram_visible\fC [private]\fP"
+
+.SS "bool QETApp::every_editor_reduced\fC [private]\fP"
+
+.SS "bool QETApp::every_element_reduced\fC [private]\fP"
+
+.SS "bool QETApp::every_element_visible\fC [private]\fP"
+
+.SS "bool QETApp::every_template_reduced\fC [private]\fP"
+
+.SS "bool QETApp::every_template_visible\fC [private]\fP"
+
+.SS "QPalette QETApp::initial_palette_\fC [private]\fP"
+
+.PP
+System color palette\&. 
+.SS "QString QETApp::lang_dir = QString()\fC [static]\fP"
+
+.PP
+lang_dir Directory containing localization files\&. 
+.SS "\fBTitleBlockTemplatesFilesCollection\fP * QETApp::m_common_tbt_collection\fC [static]\fP, \fC [private]\fP"
+
+.SS "\fBTitleBlockTemplatesFilesCollection\fP * QETApp::m_custom_tbt_collection\fC [static]\fP, \fC [private]\fP"
+
+.SS "\fBRecentFiles\fP * QETApp::m_elements_recent_files = nullptr\fC [static]\fP, \fC [private]\fP"
+
+.SS "\fBRecentFiles\fP * QETApp::m_projects_recent_files = nullptr\fC [static]\fP, \fC [private]\fP"
+
+.SS "\fBQETApp\fP * QETApp::m_qetapp = nullptr\fC [static]\fP, \fC [private]\fP"
+
+.SS "QSystemTrayIcon* QETApp::m_qsti\fC [private]\fP"
+
+.SS "QSplashScreen* QETApp::m_splash_screen\fC [private]\fP"
+
+.SS "QString QETApp::m_user_common_elements_dir = QString()\fC [static]\fP, \fC [private]\fP"
+
+.SS "QString QETApp::m_user_custom_elements_dir = QString()\fC [static]\fP, \fC [private]\fP"
+
+.SS "QString QETApp::m_user_custom_tbt_dir = QString()\fC [static]\fP, \fC [private]\fP"
+
+.SS "QMenu* QETApp::menu_systray\fC [private]\fP"
+
+.SS "QAction* QETApp::new_diagram\fC [private]\fP"
+
+.SS "QAction* QETApp::new_element\fC [private]\fP"
+
+.SS "uint QETApp::next_project_id = 0\fC [static]\fP, \fC [private]\fP"
+
+.SS "bool QETApp::non_interactive_execution_\fC [private]\fP"
+
+.PP
+non_interactive_execution_ Whether the application will end without any user interaction 
+.SS "\fBQETArguments\fP QETApp::qet_arguments_\fC [private]\fP"
+
+.PP
+Comand-line arguments parser\&. 
+.SS "QTranslator QETApp::qetTranslator\fC [private]\fP"
+
+.SS "QTranslator QETApp::qtTranslator\fC [private]\fP"
+
+.SS "QAction* QETApp::quitter_qet\fC [private]\fP"
+
+.SS "QAction* QETApp::reduce_appli\fC [private]\fP"
+
+.SS "QAction* QETApp::reduce_diagrams\fC [private]\fP"
+
+.SS "QAction* QETApp::reduce_elements\fC [private]\fP"
+
+.SS "QAction* QETApp::reduce_templates\fC [private]\fP"
+
+.SS "QMap< uint, \fBQETProject\fP * > QETApp::registered_projects_ = QMap<uint, \fBQETProject\fP *>()\fC [static]\fP, \fC [private]\fP"
+
+.SS "QAction* QETApp::restore_appli\fC [private]\fP"
+
+.SS "QAction* QETApp::restore_diagrams\fC [private]\fP"
+
+.SS "QAction* QETApp::restore_elements\fC [private]\fP"
+
+.SS "QAction* QETApp::restore_templates\fC [private]\fP"
+
+.SS "QSignalMapper QETApp::signal_map\fC [private]\fP"
+
+.SS "QHash<QMainWindow *, QByteArray> QETApp::window_geometries\fC [private]\fP"
+
+.SS "QHash<QMainWindow *, QByteArray> QETApp::window_states\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

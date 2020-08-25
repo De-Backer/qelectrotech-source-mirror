@@ -1,0 +1,350 @@
+.TH "FileElementCollectionItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FileElementCollectionItem \- The \fBFileElementCollectionItem\fP class This class specialise \fBElementCollectionItem\fP for manage a collection in a file system\&. They represente a directory or an element\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fileelementcollectionitem\&.h>\fP
+.PP
+Inherits \fBElementCollectionItem\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType+2 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFileElementCollectionItem\fP ()"
+.br
+.RI "\fBFileElementCollectionItem::FileElementCollectionItem\fP Constructor\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "bool \fBsetRootPath\fP (const QString &path, bool set_data=true, bool hide_element=false)"
+.br
+.RI "\fBFileElementCollectionItem::setRootPath\fP Set path has root path for this file item\&. Use this function only to set the beginning of a file collection\&. "
+.ti -1c
+.RI "QString \fBfileSystemPath\fP () const"
+.br
+.RI "\fBFileElementCollectionItem::fileSystemPath\fP\&. "
+.ti -1c
+.RI "QString \fBdirPath\fP () const"
+.br
+.RI "\fBFileElementCollectionItem::dirPath\fP\&. "
+.ti -1c
+.RI "bool \fBisDir\fP () const override"
+.br
+.RI "\fBFileElementCollectionItem::isDir\fP\&. "
+.ti -1c
+.RI "bool \fBisElement\fP () const override"
+.br
+.RI "\fBFileElementCollectionItem::isElement\fP\&. "
+.ti -1c
+.RI "QString \fBlocalName\fP () override"
+.br
+.RI "\fBFileElementCollectionItem::localName\fP\&. "
+.ti -1c
+.RI "QString \fBlocalName\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "\fBFileElementCollectionItem::localName\fP Surcharged method, unlike the default method, avoid to create an elementLocation and so, gain time\&. "
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.RI "\fBFileElementCollectionItem::name\fP\&. "
+.ti -1c
+.RI "QString \fBcollectionPath\fP () const override"
+.br
+.RI "\fBFileElementCollectionItem::collectionPath\fP\&. "
+.ti -1c
+.RI "bool \fBisCollectionRoot\fP () const override"
+.br
+.RI "\fBFileElementCollectionItem::isCollectionRoot\fP\&. "
+.ti -1c
+.RI "bool \fBisCommonCollection\fP () const"
+.br
+.RI "\fBFileElementCollectionItem::isCommonCollection\fP\&. "
+.ti -1c
+.RI "bool \fBisCustomCollection\fP () const"
+.br
+.RI "\fBFileElementCollectionItem::isCustomCollection\fP\&. "
+.ti -1c
+.RI "void \fBaddChildAtPath\fP (const QString &collection_name) override"
+.br
+.RI "\fBFileElementCollectionItem::addChildAtPath\fP Ask to this item item to add a child with collection name collection_name\&. "
+.ti -1c
+.RI "void \fBsetUpData\fP () override"
+.br
+.RI "\fBFileElementCollectionItem::setUpData\fP SetUp the data of this item\&. "
+.ti -1c
+.RI "void \fBsetUpIcon\fP () override"
+.br
+.RI "\fBFileElementCollectionItem::setUpIcon\fP SetUp the icon of this item\&. Because icon use several memory, we use this method for setup icon instead setUpData\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetPathName\fP (const QString &path_name, bool set_data=true, bool hide_element=false)"
+.br
+.RI "\fBFileElementCollectionItem::setPathName\fP Set the name of this item in the file system path\&. This item must have a parent, because they should be a child item of another\&. For create a new file collection see setRootPath\&. "
+.ti -1c
+.RI "void \fBpopulate\fP (bool set_data=true, bool hide_element=false)"
+.br
+.RI "\fBFileElementCollectionItem::populate\fP Create the childs of this item\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBm_path\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBFileElementCollectionItem\fP class This class specialise \fBElementCollectionItem\fP for manage a collection in a file system\&. They represente a directory or an element\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "FileElementCollectionItem::FileElementCollectionItem ()"
+
+.PP
+\fBFileElementCollectionItem::FileElementCollectionItem\fP Constructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void FileElementCollectionItem::addChildAtPath (const QString & collection_name)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFileElementCollectionItem::addChildAtPath\fP Ask to this item item to add a child with collection name collection_name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection_name\fP 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "QString FileElementCollectionItem::collectionPath () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFileElementCollectionItem::collectionPath\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The path of this item relative to the collection\&. 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "QString FileElementCollectionItem::dirPath () const"
+
+.PP
+\fBFileElementCollectionItem::dirPath\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the dir path of this item (if this item is a dir return the path, if item is an element return the path of the parent directory) 
+.RE
+.PP
+
+.SS "QString FileElementCollectionItem::fileSystemPath () const"
+
+.PP
+\fBFileElementCollectionItem::fileSystemPath\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the file system path of this item 
+.RE
+.PP
+
+.SS "bool FileElementCollectionItem::isCollectionRoot () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFileElementCollectionItem::isCollectionRoot\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this item represent the root of collection 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "bool FileElementCollectionItem::isCommonCollection () const"
+
+.PP
+\fBFileElementCollectionItem::isCommonCollection\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if this item represent the common collection 
+.RE
+.PP
+
+.SS "bool FileElementCollectionItem::isCustomCollection () const"
+
+.PP
+\fBFileElementCollectionItem::isCustomCollection\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if this item represent the custom collection 
+.RE
+.PP
+
+.SS "bool FileElementCollectionItem::isDir () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFileElementCollectionItem::isDir\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this item represent a directory 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "bool FileElementCollectionItem::isElement () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFileElementCollectionItem::isElement\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this item represent an element 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "QString FileElementCollectionItem::localName ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFileElementCollectionItem::localName\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the located name of this item 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "QString FileElementCollectionItem::localName (const \fBElementsLocation\fP & location)"
+
+.PP
+\fBFileElementCollectionItem::localName\fP Surcharged method, unlike the default method, avoid to create an elementLocation and so, gain time\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QString FileElementCollectionItem::name () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFileElementCollectionItem::name\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The collection name of this item 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "void FileElementCollectionItem::populate (bool set_data = \fCtrue\fP, bool hide_element = \fCfalse\fP)\fC [private]\fP"
+
+.PP
+\fBFileElementCollectionItem::populate\fP Create the childs of this item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIset_data\fP : if true, call setUpData for every child of this item 
+.br
+\fIhide_element\fP 
+.RE
+.PP
+
+.SS "void FileElementCollectionItem::setPathName (const QString & path_name, bool set_data = \fCtrue\fP, bool hide_element = \fCfalse\fP)\fC [private]\fP"
+
+.PP
+\fBFileElementCollectionItem::setPathName\fP Set the name of this item in the file system path\&. This item must have a parent, because they should be a child item of another\&. For create a new file collection see setRootPath\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath_name\fP 
+.br
+\fIset_data\fP 
+.br
+\fIhide_element\fP 
+.RE
+.PP
+
+.SS "bool FileElementCollectionItem::setRootPath (const QString & path, bool set_data = \fCtrue\fP, bool hide_element = \fCfalse\fP)"
+
+.PP
+\fBFileElementCollectionItem::setRootPath\fP Set path has root path for this file item\&. Use this function only to set the beginning of a file collection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.br
+\fIset_data\fP 
+.br
+\fIhide_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if path exist\&. 
+.RE
+.PP
+
+.SS "void FileElementCollectionItem::setUpData ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFileElementCollectionItem::setUpData\fP SetUp the data of this item\&. 
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "void FileElementCollectionItem::setUpIcon ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBFileElementCollectionItem::setUpIcon\fP SetUp the icon of this item\&. Because icon use several memory, we use this method for setup icon instead setUpData\&. 
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "int FileElementCollectionItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString FileElementCollectionItem::m_path\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

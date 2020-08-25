@@ -1,0 +1,28 @@
+<map id="AutoNumberingDockWidget::on_m_folio_cb_activated" name="AutoNumberingDockWidget::on_m_folio_cb_activated">
+<area shape="rect" id="node1" title="AutoNumberingDockWidget::on_m_folio_cb_activated Set new folio AutoNum." alt="" coords="5,261,189,302"/>
+<area shape="rect" id="node2" href="$d5/d18/class_auto_numbering_dock_widget.html#a496dca678562c2d82457ba004a738307" title="AutoNumberingDockWidget::folioAutoNumChanged Add new or remove folio auto num from combobox." alt="" coords="237,166,421,207"/>
+<area shape="rect" id="node15" href="$d3/d1a/class_title_block_properties.html#afa0748ad3b0823415f14e7a0121bd239" title=" " alt="" coords="259,261,399,302"/>
+<area shape="rect" id="node16" href="$d6/dc5/class_q_e_t_project.html#afea50bbbdc153019c19949c5acc1cc8b" title="QETProject::setDefaultTitleBlockProperties Specify the title block to be used at the creation of a ne..." alt="" coords="238,387,421,429"/>
+<area shape="rect" id="node3" href="$d6/dc5/class_q_e_t_project.html#ab4d93c106722f84fe71e0492f76968e6" title="QETProject::folioAutoNum." alt="" coords="475,115,651,141"/>
+<area shape="rect" id="node4" href="$d5/d18/class_auto_numbering_dock_widget.html#a84b3643d763aa6fb4dae63a187ff8ffe" title="AutoNumberingDockWidget::setActive Set current used autonumberings." alt="" coords="471,166,655,207"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#a7d9dac1371b6cde3a1929981e7dcf9a7" title="Diagram::conductorsAutonumName." alt="" coords="713,5,943,32"/>
+<area shape="rect" id="node6" href="$d6/df6/class_project_view.html#a38e5277f4dea0f3024292806a4e67ae9" title="ProjectView::currentDiagram." alt="" coords="734,56,922,83"/>
+<area shape="rect" id="node7" href="$d6/dc5/class_q_e_t_project.html#a0ee151a44be349d43417695fcaa6a88c" title=" " alt="" coords="747,107,909,149"/>
+<area shape="rect" id="node8" href="$d7/d9c/class_diagram_view.html#a8c062e9be49d4f8f5c43322fceed60ca" title=" " alt="" coords="751,173,905,200"/>
+<area shape="rect" id="node9" href="$d6/dc5/class_q_e_t_project.html#adc4028be6b4416dc35cd3298f56d87bd" title="QETProject::elementAutoNumCurrentFormula." alt="" coords="729,225,927,266"/>
+<area shape="rect" id="node14" href="$d6/dc5/class_q_e_t_project.html#ad9020cd9cd747e25149a052f9f42dee8" title="QETProject::elementCurrentAutoNum." alt="" coords="735,290,921,331"/>
+<area shape="rect" id="node10" href="$d6/dc5/class_q_e_t_project.html#af5eefcb7abbbd1d60333bd76f810725c" title="QETProject::elementAutoNumFormula." alt="" coords="1000,225,1199,266"/>
+<area shape="rect" id="node11" href="$d1/ddb/namespaceautonum.html#ac5013eb6df6a472f5b2676d51b579da8" title="numerotationContextToFormula" alt="" coords="1247,225,1448,266"/>
+<area shape="rect" id="node12" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="1496,191,1643,233"/>
+<area shape="rect" id="node13" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="1496,257,1643,298"/>
+<area shape="rect" id="node17" href="$d7/df8/class_q_e_t_app.html#af908933c2ac107c92171c1f78e19563f" title="QETApp::commonTitleBlockTemplatesCollection." alt="" coords="469,355,656,397"/>
+<area shape="rect" id="node19" href="$d7/df8/class_q_e_t_app.html#a01e92e95dee20e424ada0c3cd7a181f9" title="QETApp::customTitleBlockTemplatesCollection." alt="" coords="473,421,653,462"/>
+<area shape="rect" id="node22" href="$d6/dc5/class_q_e_t_project.html#a0c09108ed136c346d1c771f82cc5d5b8" title="QETProject::integrateTitleBlockTemplate Integrate a title block template into this project." alt="" coords="477,551,649,593"/>
+<area shape="rect" id="node18" href="$d7/df8/class_q_e_t_app.html#a7df442d8b364e80cb617a16922591ceb" title="QETApp::commonTitleBlockTemplatesDir." alt="" coords="735,355,921,397"/>
+<area shape="rect" id="node20" href="$d7/df8/class_q_e_t_app.html#aaa607877c66d4a7004c0b56327d8fbb4" title="QETApp::customTitleBlockTemplatesDir." alt="" coords="738,421,918,462"/>
+<area shape="rect" id="node21" href="$d7/df8/class_q_e_t_app.html#a19c87f4f930f26f4fc60118fa5a79b8f" title="QETApp::configDir Return the QET configuration folder, i.e. the path to the folder in which QET will ..." alt="" coords="1034,428,1165,455"/>
+<area shape="rect" id="node23" href="$dc/d38/class_title_block_template_location.html#a3f6b61cee5b21b0259f44886d731bdc1" title=" " alt="" coords="733,486,923,527"/>
+<area shape="rect" id="node24" href="$dc/d38/class_title_block_template_location.html#ab3e7bc602187c30fd6f95393334c9825" title=" " alt="" coords="737,551,919,593"/>
+<area shape="rect" id="node25" href="$d8/d31/class_title_block_templates_project_collection.html#a7d8f2426cc0ea8eafa8e30054cfdc231" title=" " alt="" coords="704,617,952,658"/>
+<area shape="rect" id="node26" href="$d8/d31/class_title_block_templates_project_collection.html#ac0dbc2e369043e43e3551462b1b95358" title=" " alt="" coords="737,682,919,723"/>
+</map>

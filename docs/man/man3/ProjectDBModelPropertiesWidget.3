@@ -1,0 +1,102 @@
+.TH "ProjectDBModelPropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProjectDBModelPropertiesWidget \- The projectDBModelPropertiesWidget class This class is an editor for a NomenclatureModel\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <projectdbmodelpropertieswidget\&.h>\fP
+.PP
+Inherits \fBPropertiesEditorWidget\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectDBModelPropertiesWidget\fP (\fBProjectDBModel\fP *model=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "projectDBModelPropertiesWidget::projectDBModelPropertiesWidget "
+.ti -1c
+.RI "\fB~ProjectDBModelPropertiesWidget\fP ()"
+.br
+.RI "projectDBModelPropertiesWidget::~projectDBModelPropertiesWidget "
+.ti -1c
+.RI "void \fBsetModel\fP (\fBProjectDBModel\fP *model)"
+.br
+.RI "projectDBModelPropertiesWidget::setModel "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_edit_query_pb_clicked\fP ()"
+.br
+.RI "projectDBModelPropertiesWidget::on_m_edit_query_pb_clicked "
+.ti -1c
+.RI "void \fBon_m_refresh_pb_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ProjectDBModelPropertiesWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBProjectDBModel\fP * \fBm_model\fP = nullptr"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The projectDBModelPropertiesWidget class This class is an editor for a NomenclatureModel\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ProjectDBModelPropertiesWidget::ProjectDBModelPropertiesWidget (\fBProjectDBModel\fP * model = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+projectDBModelPropertiesWidget::projectDBModelPropertiesWidget 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodel\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "ProjectDBModelPropertiesWidget::~ProjectDBModelPropertiesWidget ()"
+
+.PP
+projectDBModelPropertiesWidget::~projectDBModelPropertiesWidget 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ProjectDBModelPropertiesWidget::on_m_edit_query_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+projectDBModelPropertiesWidget::on_m_edit_query_pb_clicked 
+.SS "void ProjectDBModelPropertiesWidget::on_m_refresh_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ProjectDBModelPropertiesWidget::setModel (\fBProjectDBModel\fP * model)"
+
+.PP
+projectDBModelPropertiesWidget::setModel 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodel\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBProjectDBModel\fP* ProjectDBModelPropertiesWidget::m_model = nullptr\fC [private]\fP"
+
+.SS "Ui::ProjectDBModelPropertiesWidget* ProjectDBModelPropertiesWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

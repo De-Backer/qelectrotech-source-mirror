@@ -1,0 +1,334 @@
+.TH "PartTerminal" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PartTerminal
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <partterminal\&.h>\fP
+.PP
+Inherits \fBCustomElementGraphicPart\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1106 }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBorientationChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBnameChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPartTerminal\fP (\fBQETElementEditor\fP *editor, QGraphicsItem *parent=nullptr)"
+.br
+.RI "\fBPartTerminal::PartTerminal\fP\&. "
+.ti -1c
+.RI "\fB~PartTerminal\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.ti -1c
+.RI "QString \fBxmlName\fP () const override"
+.br
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &) override"
+.br
+.ti -1c
+.RI "const QDomElement \fBtoXml\fP (QDomDocument &) const override"
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *) override"
+.br
+.ti -1c
+.RI "QPainterPath \fBshape\fP () const override"
+.br
+.RI "\fBPartTerminal::shape\fP\&. "
+.ti -1c
+.RI "QPainterPath \fBshadowShape\fP () const override"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBPartTerminal::boundingRect\fP\&. "
+.ti -1c
+.RI "bool \fBisUseless\fP () const override"
+.br
+.ti -1c
+.RI "QRectF \fBsceneGeometricRect\fP () const override"
+.br
+.ti -1c
+.RI "void \fBstartUserTransformation\fP (const QRectF &) override"
+.br
+.ti -1c
+.RI "void \fBhandleUserTransformation\fP (const QRectF &, const QRectF &) override"
+.br
+.ti -1c
+.RI "\fBQet::Orientation\fP \fBorientation\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetOrientation\fP (\fBQet::Orientation\fP ori)"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (QString &\fBname\fP)"
+.br
+.RI "\fBPartTerminal::setName\fP\&. "
+.ti -1c
+.RI "void \fBsetNewUuid\fP ()"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBQet::Orientation\fP \fBorientation\fP"
+.br
+.ti -1c
+.RI "QString \fBname\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPartTerminal\fP (const \fBPartTerminal\fP &)"
+.br
+.ti -1c
+.RI "void \fBupdateSecondPoint\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminalData\fP * \fBd\fP"
+.br
+.ti -1c
+.RI "QPointF \fBsaved_position_\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents a terminal which may be used to compose the drawing of an electrical element within the element editor\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PartTerminal::PartTerminal (\fBQETElementEditor\fP * editor, QGraphicsItem * parent = \fCnullptr\fP)"
+
+.PP
+\fBPartTerminal::PartTerminal\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP : L'editeur d'element concerne 
+.br
+\fIparent\fP : Le QGraphicsItem parent de cette borne 
+.RE
+.PP
+
+.SS "PartTerminal::~PartTerminal ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "PartTerminal::PartTerminal (const \fBPartTerminal\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QRectF PartTerminal::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBPartTerminal::boundingRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the bounding rect of this item 
+.RE
+.PP
+
+.SS "void PartTerminal::fromXml (const QDomElement & xml_elmt)\fC [override]\fP, \fC [virtual]\fP"
+Importe les proprietes d'une borne depuis un element XML 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_elmt\fP \fBElement\fP XML a lire 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartTerminal::handleUserTransformation (const QRectF & initial_selection_rect, const QRectF & new_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+Handle the user-induced transformation from \fIinitial_selection_rect\fP to \fInew_selection_rect\fP 
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "bool PartTerminal::isUseless () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si cette partie n'est pas pertinente et ne merite pas d'etre conservee / enregistree\&. Une borne est toujours pertinente ; cette fonction renvoie donc toujours false 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "QString PartTerminal::name () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name of the primitive 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartTerminal::nameChanged ()\fC [signal]\fP"
+
+.SS "\fBQet::Orientation\fP PartTerminal::orientation () const\fC [inline]\fP"
+
+.SS "void PartTerminal::orientationChanged ()\fC [signal]\fP"
+
+.SS "void PartTerminal::paint (QPainter * p, const QStyleOptionGraphicsItem * options, QWidget * widget)\fC [override]\fP"
+Dessine la borne 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP QPainter a utiliser pour rendre le dessin 
+.br
+\fIoptions\fP Options pour affiner le rendu 
+.br
+\fIwidget\fP Widget sur lequel le rendu est effectue 
+.RE
+.PP
+
+.SS "QRectF PartTerminal::sceneGeometricRect () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the minimum, margin-less rectangle this part can fit into, in scene coordinates\&. It is different from \fBboundingRect()\fP because it is not supposed to imply any margin, and it is different from shape because it is a regular rectangle, not a complex shape\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartTerminal::setName (QString & name)"
+
+.PP
+\fBPartTerminal::setName\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP 
+.RE
+.PP
+
+.SS "void PartTerminal::setNewUuid ()"
+
+.SS "void PartTerminal::setOrientation (\fBQet::Orientation\fP ori)"
+Definit l'orientation de la borne 
+.PP
+\fBParameters\fP
+.RS 4
+\fIori\fP la nouvelle orientation de la borne 
+.RE
+.PP
+
+.SS "QPainterPath PartTerminal::shadowShape () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBCustomElementGraphicPart\fP\&.
+.SS "QPainterPath PartTerminal::shape () const\fC [override]\fP"
+
+.PP
+\fBPartTerminal::shape\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the shape of this item 
+.RE
+.PP
+
+.SS "void PartTerminal::startUserTransformation (const QRectF & initial_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+Start the user-induced transformation, provided this primitive is contained within the \fIinitial_selection_rect\fP bounding rectangle\&. 
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "const QDomElement PartTerminal::toXml (QDomDocument & xml_document) const\fC [override]\fP, \fC [virtual]\fP"
+Exporte la borne en XML 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP Document XML a utiliser pour creer l'element XML 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+un element XML decrivant la borne 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "int PartTerminal::type () const\fC [inline]\fP, \fC [override]\fP"
+Enable the use of qgraphicsitem_cast to safely cast a QGraphicsItem into a \fBPartTerminal\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the QGraphicsItem type 
+.RE
+.PP
+
+.SS "void PartTerminal::updateSecondPoint ()\fC [private]\fP"
+Met a jour la position du second point en fonction de la position et de l'orientation de la borne\&. 
+.SS "QString PartTerminal::xmlName () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name that will be used as XML tag when exporting the primitive 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTerminalData\fP* PartTerminal::d\fC [private]\fP"
+
+.SS "QPointF PartTerminal::saved_position_\fC [private]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "QString PartTerminal::name\fC [read]\fP, \fC [write]\fP"
+
+.SS "\fBQet::Orientation\fP PartTerminal::orientation\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

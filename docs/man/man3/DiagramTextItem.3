@@ -1,0 +1,564 @@
+.TH "DiagramTextItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramTextItem
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramtextitem\&.h>\fP
+.PP
+Inherits QGraphicsTextItem\&.
+.PP
+Inherited by \fBConductorTextItem\fP, \fBDynamicElementTextItem\fP, and \fBIndependentTextItem\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1004 }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBcolorChanged\fP (QColor \fBcolor\fP)"
+.br
+.ti -1c
+.RI "void \fBalignmentChanged\fP (Qt::Alignment \fBalignment\fP)"
+.br
+.ti -1c
+.RI "void \fBtextEdited\fP (const QString &old_str, const QString &new_str)"
+.br
+.ti -1c
+.RI "void \fBfontChanged\fP (QFont \fBfont\fP)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramTextItem\fP (QGraphicsItem *=nullptr)"
+.br
+.RI "\fBDiagramTextItem::DiagramTextItem\fP\&. "
+.ti -1c
+.RI "\fBDiagramTextItem\fP (const QString &, QGraphicsItem *=nullptr)"
+.br
+.RI "\fBDiagramTextItem::DiagramTextItem\fP\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP () const"
+.br
+.RI "\fBDiagramTextItem::diagram\fP\&. "
+.ti -1c
+.RI "virtual void \fBfromXml\fP (const QDomElement &)=0"
+.br
+.ti -1c
+.RI "virtual QDomElement \fBtoXml\fP (QDomDocument &) const"
+.br
+.RI "\fBDiagramTextItem::toXml\fP This method do nothing and return an empty DomElement This is used to be inherited by child class\&. "
+.ti -1c
+.RI "void \fBedit\fP ()"
+.br
+.RI "Edit the text with HtmlEditor\&. "
+.ti -1c
+.RI "QPointF \fBmapMovementToScene\fP (const QPointF &) const"
+.br
+.ti -1c
+.RI "QPointF \fBmapMovementFromScene\fP (const QPointF &) const"
+.br
+.ti -1c
+.RI "QPointF \fBmapMovementToParent\fP (const QPointF &) const"
+.br
+.ti -1c
+.RI "QPointF \fBmapMovementFromParent\fP (const QPointF &) const"
+.br
+.ti -1c
+.RI "void \fBsetFont\fP (const QFont &\fBfont\fP)"
+.br
+.ti -1c
+.RI "void \fBsetColor\fP (const QColor &\fBcolor\fP)"
+.br
+.ti -1c
+.RI "QColor \fBcolor\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetNoEditable\fP (bool e=true)"
+.br
+.ti -1c
+.RI "void \fBsetAlignment\fP (const Qt::Alignment &\fBalignment\fP)"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBalignment\fP () const"
+.br
+.ti -1c
+.RI "QRectF \fBframeRect\fP () const"
+.br
+.RI "\fBDiagramTextItem::frameRect\fP\&. "
+.ti -1c
+.RI "void \fBsetHtml\fP (const QString &text)"
+.br
+.ti -1c
+.RI "void \fBsetPlainText\fP (const QString &text)"
+.br
+.ti -1c
+.RI "bool \fBisHtml\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_block_alignment\fP = false"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *) override"
+.br
+.RI "\fBDiagramTextItem::paint\fP Draw this text field\&. This method draw the text by calling QGraphicsTextItem::paint\&. If text is hovered, this method draw the bounding rect in grey\&. "
+.ti -1c
+.RI "void \fBfocusInEvent\fP (QFocusEvent *) override"
+.br
+.RI "\fBDiagramTextItem::focusInEvent\fP\&. "
+.ti -1c
+.RI "void \fBfocusOutEvent\fP (QFocusEvent *) override"
+.br
+.RI "\fBDiagramTextItem::focusOutEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramTextItem::mousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramTextItem::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramTextItem::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "void \fBhoverEnterEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.ti -1c
+.RI "void \fBhoverLeaveEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.ti -1c
+.RI "void \fBhoverMoveEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.ti -1c
+.RI "virtual void \fBapplyRotation\fP (const qreal &)"
+.br
+.ti -1c
+.RI "void \fBprepareAlignment\fP ()"
+.br
+.RI "\fBDiagramTextItem::prepareAlignment\fP Call this function before changing the bounding rect of this text\&. "
+.ti -1c
+.RI "void \fBfinishAlignment\fP ()"
+.br
+.RI "\fBDiagramTextItem::finishAlignment\fP Call this function after changing the bouding rect of this text to set the position of this text according to the alignment property\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_mouse_hover\fP = false"
+.br
+.ti -1c
+.RI "bool \fBm_first_move\fP = true"
+.br
+.ti -1c
+.RI "bool \fBm_no_editable\fP"
+.br
+.ti -1c
+.RI "bool \fBm_is_html\fP = false"
+.br
+.ti -1c
+.RI "QString \fBm_previous_html_text\fP"
+.br
+.ti -1c
+.RI "QString \fBm_previous_text\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_mouse_to_origin_movement\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "QColor \fBcolor\fP"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBalignment\fP"
+.br
+.ti -1c
+.RI "QString \fBplainText\fP"
+.br
+.ti -1c
+.RI "QFont \fBfont\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBbuild\fP ()"
+.br
+.RI "\fBDiagramTextItem::build\fP Build this item with default value\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QRectF \fBm_alignment_rect\fP"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBm_alignment\fP = (Qt::AlignTop | Qt::AlignLeft)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a selectable, movable and editable text field on a diagram\&. 
+.PP
+\fBSee also\fP
+.RS 4
+QGraphicsItem::GraphicsItemFlags 
+.RE
+.PP
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramTextItem::DiagramTextItem (QGraphicsItem * parent = \fCnullptr\fP)"
+
+.PP
+\fBDiagramTextItem::DiagramTextItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : parent item 
+.RE
+.PP
+
+.SS "DiagramTextItem::DiagramTextItem (const QString & text, QGraphicsItem * parent = \fCnullptr\fP)"
+
+.PP
+\fBDiagramTextItem::DiagramTextItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP : text to display 
+.br
+\fIparent\fP : parent item 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "Qt::Alignment DiagramTextItem::alignment () const"
+
+.SS "void DiagramTextItem::alignmentChanged (Qt::Alignment alignment)\fC [signal]\fP"
+
+.SS "void DiagramTextItem::applyRotation (const qreal & angle)\fC [protected]\fP, \fC [virtual]\fP"
+Effectue la rotation du texte en elle-meme Pour les \fBDiagramTextItem\fP, la rotation s'effectue autour du point (0, 0)\&. Cette methode peut toutefois etre redefinie dans des classes filles 
+.PP
+\fBParameters\fP
+.RS 4
+\fIangle\fP Angle de la rotation a effectuer 
+.RE
+.PP
+
+.SS "void DiagramTextItem::build ()\fC [private]\fP"
+
+.PP
+\fBDiagramTextItem::build\fP Build this item with default value\&. 
+.SS "QColor DiagramTextItem::color () const"
+
+.SS "void DiagramTextItem::colorChanged (QColor color)\fC [signal]\fP"
+
+.SS "\fBDiagram\fP * DiagramTextItem::diagram () const"
+
+.PP
+\fBDiagramTextItem::diagram\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The diagram of this item or 0 if this text isn't in a diagram 
+.RE
+.PP
+
+.SS "void DiagramTextItem::edit ()"
+
+.PP
+Edit the text with HtmlEditor\&. 
+.SS "void DiagramTextItem::finishAlignment ()\fC [protected]\fP"
+
+.PP
+\fBDiagramTextItem::finishAlignment\fP Call this function after changing the bouding rect of this text to set the position of this text according to the alignment property\&. 
+.SS "void DiagramTextItem::focusInEvent (QFocusEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramTextItem::focusInEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DiagramTextItem::focusOutEvent (QFocusEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramTextItem::focusOutEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DiagramTextItem::fontChanged (QFont font)\fC [signal]\fP"
+
+.SS "QRectF DiagramTextItem::frameRect () const"
+
+.PP
+\fBDiagramTextItem::frameRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the rect used to draw a frame around this text 
+.RE
+.PP
+
+.SS "virtual void DiagramTextItem::fromXml (const QDomElement &)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBDynamicElementTextItem\fP, \fBConductorTextItem\fP, and \fBIndependentTextItem\fP\&.
+.SS "void DiagramTextItem::hoverEnterEvent (QGraphicsSceneHoverEvent * e)\fC [override]\fP, \fC [protected]\fP"
+When mouse over element change m_mouse_hover to true (used in \fBpaint()\fP function ) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP QGraphicsSceneHoverEvent 
+.RE
+.PP
+
+.SS "void DiagramTextItem::hoverLeaveEvent (QGraphicsSceneHoverEvent * e)\fC [override]\fP, \fC [protected]\fP"
+When mouse over element leave the position change m_mouse_hover to false (used in \fBpaint()\fP function ) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP QGraphicsSceneHoverEvent 
+.RE
+.PP
+
+.SS "void DiagramTextItem::hoverMoveEvent (QGraphicsSceneHoverEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Do nothing default function \&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP QGraphicsSceneHoverEvent 
+.RE
+.PP
+
+.SS "bool DiagramTextItem::isHtml () const"
+
+.SS "QPointF DiagramTextItem::mapMovementFromParent (const QPointF & movement) const"
+Traduit en coordonnees locales un mouvement / vecteur initialement exprime en coordonnees du parent\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImovement\fP Vecteur exprime en coordonnees du parent 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le meme vecteur, exprime en coordonnees locales 
+.RE
+.PP
+
+.SS "QPointF DiagramTextItem::mapMovementFromScene (const QPointF & movement) const"
+Traduit en coordonnees locales un mouvement / vecteur initialement exprime en coordonnees de la scene\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImovement\fP Vecteur exprime en coordonnees de la scene 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le meme vecteur, exprime en coordonnees locales 
+.RE
+.PP
+
+.SS "QPointF DiagramTextItem::mapMovementToParent (const QPointF & movement) const"
+Traduit en coordonnees de l'item parent un mouvement / vecteur initialement exprime en coordonnees locales\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImovement\fP Vecteur exprime en coordonnees locales 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le meme vecteur, exprime en coordonnees du parent 
+.RE
+.PP
+
+.SS "QPointF DiagramTextItem::mapMovementToScene (const QPointF & movement) const"
+Traduit en coordonnees de la scene un mouvement / vecteur initialement exprime en coordonnees locales\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImovement\fP Vecteur exprime en coordonnees locales 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le meme vecteur, exprime en coordonnees de la scene 
+.RE
+.PP
+
+.SS "void DiagramTextItem::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+Gere les double-clics sur ce champ de texte\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP un QGraphicsSceneMouseEvent decrivant le double-clic 
+.RE
+.PP
+
+.SS "void DiagramTextItem::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramTextItem::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DiagramTextItem::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramTextItem::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DiagramTextItem::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramTextItem::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DiagramTextItem::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramTextItem::paint\fP Draw this text field\&. This method draw the text by calling QGraphicsTextItem::paint\&. If text is hovered, this method draw the bounding rect in grey\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP : painter to use 
+.br
+\fIoption\fP : style option 
+.br
+\fIwidget\fP : widget where must to draw 
+.RE
+.PP
+
+.SS "void DiagramTextItem::prepareAlignment ()\fC [protected]\fP"
+
+.PP
+\fBDiagramTextItem::prepareAlignment\fP Call this function before changing the bounding rect of this text\&. 
+.SS "void DiagramTextItem::setAlignment (const Qt::Alignment & alignment)"
+
+.SS "void DiagramTextItem::setColor (const QColor & color)"
+
+.SS "void DiagramTextItem::setFont (const QFont & font)"
+
+.SS "void DiagramTextItem::setHtml (const QString & text)"
+
+.SS "void DiagramTextItem::setNoEditable (bool e = \fCtrue\fP)\fC [inline]\fP"
+
+.SS "void DiagramTextItem::setPlainText (const QString & text)"
+
+.SS "void DiagramTextItem::textEdited (const QString & old_str, const QString & new_str)\fC [signal]\fP"
+
+.SS "QDomElement DiagramTextItem::toXml (QDomDocument &) const\fC [virtual]\fP"
+
+.PP
+\fBDiagramTextItem::toXml\fP This method do nothing and return an empty DomElement This is used to be inherited by child class\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Reimplemented in \fBDynamicElementTextItem\fP, and \fBIndependentTextItem\fP\&.
+.SS "int DiagramTextItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Qt::Alignment DiagramTextItem::m_alignment = (Qt::AlignTop | Qt::AlignLeft)\fC [private]\fP"
+
+.SS "QRectF DiagramTextItem::m_alignment_rect\fC [private]\fP"
+
+.SS "bool DiagramTextItem::m_block_alignment = false"
+
+.SS "bool DiagramTextItem::m_first_move = true\fC [protected]\fP"
+
+.SS "bool DiagramTextItem::m_is_html = false\fC [protected]\fP"
+
+.SS "bool DiagramTextItem::m_mouse_hover = false\fC [protected]\fP"
+
+.SS "QPointF DiagramTextItem::m_mouse_to_origin_movement\fC [protected]\fP"
+
+.SS "bool DiagramTextItem::m_no_editable\fC [protected]\fP"
+
+.SS "QString DiagramTextItem::m_previous_html_text\fC [protected]\fP"
+
+.SS "QString DiagramTextItem::m_previous_text\fC [protected]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "Qt::Alignment DiagramTextItem::alignment\fC [read]\fP, \fC [write]\fP"
+
+.SS "QColor DiagramTextItem::color\fC [read]\fP, \fC [write]\fP"
+
+.SS "QFont DiagramTextItem::font\fC [read]\fP, \fC [write]\fP"
+
+.SS "QString DiagramTextItem::plainText\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

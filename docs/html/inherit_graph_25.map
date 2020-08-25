@@ -1,0 +1,40 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$dc/d21/class_custom_element_part.html" title="The CustomElementPart class This abstract class represents a primitive of the visual representation o..." alt="" coords="9,537,150,564"/>
+<area shape="rect" id="node2" href="$df/d66/class_custom_element_graphic_part.html" title="The CustomElementGraphicPart class This class is the base for all home&#45;made primitive like line,..." alt="" coords="204,461,391,488"/>
+<area shape="rect" id="node10" href="$d9/df7/class_part_dynamic_text_field.html" title="The PartDynamicTextField class This class represents an editable dynamic text field which may be used..." alt="" coords="221,588,373,615"/>
+<area shape="rect" id="node11" href="$d9/def/class_part_text.html" title=" " alt="" coords="261,537,333,564"/>
+<area shape="rect" id="node3" href="$d9/da9/class_abstract_part_ellipse.html" title="The AbstractPartEllipse class This is the base class for all ellipse based item like ellipse,..." alt="" coords="461,563,595,589"/>
+<area shape="rect" id="node6" href="$dd/d2f/class_part_line.html" title=" " alt="" coords="493,360,563,387"/>
+<area shape="rect" id="node7" href="$d0/d48/class_part_polygon.html" title="The PartPolygon class This class represents a polygon primitive which may be used to compose the draw..." alt="" coords="481,411,575,437"/>
+<area shape="rect" id="node8" href="$d3/df0/class_part_rectangle.html" title=" " alt="" coords="475,461,581,488"/>
+<area shape="rect" id="node9" href="$d4/de5/class_part_terminal.html" title=" " alt="" coords="480,512,576,539"/>
+<area shape="rect" id="node4" href="$d6/dca/class_part_arc.html" title="The PartArc class This class represents an elliptical arc primitive which may be used to compose the ..." alt="" coords="689,537,755,564"/>
+<area shape="rect" id="node5" href="$d8/d2a/class_part_ellipse.html" title="The PartEllipse class This class represents an ellipse primitive which may be used to compose the dra..." alt="" coords="679,588,765,615"/>
+<area shape="rect" id="node12" title=" " alt="" coords="24,19,135,45"/>
+<area shape="rect" id="node13" href="$d3/d09/class_qet_graphics_handler_item.html" title="The QetGraphicsHandlerItem class This graphics item represents a point, destined to be used as an han..." alt="" coords="214,5,381,32"/>
+<area shape="rect" id="node14" href="$d6/dbd/class_title_block_template_visual_cell.html" title=" " alt="" coords="201,56,393,83"/>
+<area shape="rect" id="node15" title=" " alt="" coords="5,81,153,108"/>
+<area shape="rect" id="node16" href="$da/d9e/class_helper_cell.html" title=" " alt="" coords="256,107,339,133"/>
+<area shape="rect" id="node17" href="$de/d03/class_splitted_helper_cell.html" title=" " alt="" coords="465,107,591,133"/>
+<area shape="rect" id="node18" title=" " alt="" coords="18,284,141,311"/>
+<area shape="rect" id="node19" href="$da/d7f/class_conductor.html" title=" " alt="" coords="256,309,339,336"/>
+<area shape="rect" id="node20" href="$df/d6e/class_cross_ref_item.html" title="The CrossRefItem class This clas provide an item, for show the cross reference, like the contacts lin..." alt="" coords="246,360,349,387"/>
+<area shape="rect" id="node21" href="$d9/d5f/class_element_primitive_decorator.html" title=" " alt="" coords="209,411,386,437"/>
+<area shape="rect" id="node22" href="$db/d7c/class_qet_graphics_header_item.html" title="The QetGraphicsHeaderItem class The header have a few parameters to edit her visual aspect...." alt="" coords="216,157,379,184"/>
+<area shape="rect" id="node23" href="$d7/db5/class_qet_graphics_item.html" title=" " alt="" coords="237,208,358,235"/>
+<area shape="rect" id="node33" href="$dc/d46/class_terminal.html" title="The Terminal class This class represents a terminal of an electrical element, i.e...." alt="" coords="262,259,333,285"/>
+<area shape="rect" id="node24" href="$dc/df1/class_diagram_image_item.html" title=" " alt="" coords="461,309,595,336"/>
+<area shape="rect" id="node25" href="$d5/d50/class_element.html" title=" " alt="" coords="493,157,563,184"/>
+<area shape="rect" id="node31" href="$d7/d15/class_qet_graphics_table_item.html" title="The QetGraphicsTableItem class This item display a table destined to represent the content of a QAbst..." alt="" coords="452,208,604,235"/>
+<area shape="rect" id="node32" href="$d1/d09/class_qet_shape_item.html" title="The QetShapeItem class this class is used to draw a basic shape (line, rectangle, ellipse) into a dia..." alt="" coords="475,259,581,285"/>
+<area shape="rect" id="node26" href="$d0/d2b/class_master_element.html" title="The MasterElement class This class is a custom element, with extended behavior to be a master element..." alt="" coords="667,107,777,133"/>
+<area shape="rect" id="node27" href="$dc/da0/class_report_element.html" title=" " alt="" coords="667,157,777,184"/>
+<area shape="rect" id="node28" href="$db/d72/class_simple_element.html" title="The SimpleElement class this class represente a simple element with no specific attribute." alt="" coords="667,208,777,235"/>
+<area shape="rect" id="node29" href="$de/da7/class_slave_element.html" title=" " alt="" coords="671,259,773,285"/>
+<area shape="rect" id="node30" href="$d4/d33/class_terminal_element.html" title="The TerminalElement class." alt="" coords="663,56,781,83"/>
+<area shape="rect" id="node34" title=" " alt="" coords="12,588,147,615"/>
+<area shape="rect" id="node35" href="$d4/dbd/class_diagram_text_item.html" title=" " alt="" coords="236,652,359,679"/>
+<area shape="rect" id="node36" href="$de/d07/class_conductor_text_item.html" title=" " alt="" coords="461,613,595,640"/>
+<area shape="rect" id="node37" href="$d0/d59/class_dynamic_element_text_item.html" title="The DynamicElementTextItem class This class provide a simple text field of element who can be added o..." alt="" coords="441,664,615,691"/>
+<area shape="rect" id="node38" href="$dc/d1c/class_independent_text_item.html" title=" " alt="" coords="456,715,600,741"/>
+</map>

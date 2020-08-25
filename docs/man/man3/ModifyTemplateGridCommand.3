@@ -1,0 +1,319 @@
+.TH "ModifyTemplateGridCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModifyTemplateGridCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatecommands\&.h>\fP
+.PP
+Inherits \fBTitleBlockTemplateCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModifyTemplateGridCommand\fP (\fBTitleBlockTemplate\fP *=nullptr, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ModifyTemplateGridCommand\fP () override"
+.br
+.ti -1c
+.RI "int \fBindex\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetIndex\fP (int)"
+.br
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP * > \fBcells\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetCells\fP (const QList< \fBTitleBlockCell\fP * > &)"
+.br
+.ti -1c
+.RI "\fBTitleBlockDimension\fP \fBdimension\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDimension\fP (const \fBTitleBlockDimension\fP &)"
+.br
+.ti -1c
+.RI "int \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetType\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBisInsertion\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetInsertion\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBModifyTemplateGridCommand\fP * \fBaddRow\fP (\fBTitleBlockTemplate\fP *, int=\-1)"
+.br
+.ti -1c
+.RI "static \fBModifyTemplateGridCommand\fP * \fBaddColumn\fP (\fBTitleBlockTemplate\fP *, int=\-1)"
+.br
+.ti -1c
+.RI "static \fBModifyTemplateGridCommand\fP * \fBdeleteRow\fP (\fBTitleBlockTemplate\fP *, int=\-1)"
+.br
+.ti -1c
+.RI "static \fBModifyTemplateGridCommand\fP * \fBdeleteColumn\fP (\fBTitleBlockTemplate\fP *, int=\-1)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModifyTemplateGridCommand\fP (const \fBModifyTemplateGridCommand\fP &)"
+.br
+.ti -1c
+.RI "void \fBupdateText\fP ()"
+.br
+.ti -1c
+.RI "void \fBapply\fP (bool=false)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBindex_\fP"
+.br
+.RI "Index of the inserted/deleted row/column\&. "
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP * > \fBcells_\fP"
+.br
+.RI "Cells composing the inserted/deleted row/column\&. "
+.ti -1c
+.RI "bool \fBtype_\fP"
+.br
+.RI "true for a row, false for a column "
+.ti -1c
+.RI "\fBTitleBlockDimension\fP \fBdimension_\fP"
+.br
+.RI "width/height of the column/row, which interpretation depends on type_ "
+.ti -1c
+.RI "bool \fBinsertion_\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents the action of adding or deleting a row or column within a title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModifyTemplateGridCommand::ModifyTemplateGridCommand (\fBTitleBlockTemplate\fP * tbtemplate = \fCnullptr\fP, QUndoCommand * parent = \fCnullptr\fP)"
+Construct a default \fBModifyTemplateGridCommand\fP, i\&.e\&. a command adding a 25px row at the bottom of the template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbtemplate\fP Modified title block template 
+.br
+\fIparent\fP Parent QUndoCommand 
+.RE
+.PP
+
+.SS "ModifyTemplateGridCommand::~ModifyTemplateGridCommand ()\fC [override]\fP"
+Destructor 
+.SS "ModifyTemplateGridCommand::ModifyTemplateGridCommand (const \fBModifyTemplateGridCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBModifyTemplateGridCommand\fP * ModifyTemplateGridCommand::addColumn (\fBTitleBlockTemplate\fP * tbtemplate, int index = \fC\-1\fP)\fC [static]\fP"
+This static method is a convenience to create a \fBModifyTemplateGridCommand\fP that adds a column to \fItbtemplate\fP at \fIindex\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbtemplate\fP Modified title block template\&. 
+.br
+\fIindex\fP Index where the column should be inserted\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a \fBModifyTemplateGridCommand\fP object, or 0 if something went wrong\&. 
+.RE
+.PP
+
+.SS "\fBModifyTemplateGridCommand\fP * ModifyTemplateGridCommand::addRow (\fBTitleBlockTemplate\fP * tbtemplate, int index = \fC\-1\fP)\fC [static]\fP"
+This static method is a convenience to create a \fBModifyTemplateGridCommand\fP that adds a row to \fItbtemplate\fP at \fIindex\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbtemplate\fP Modified title block template 
+.br
+\fIindex\fP Index where the row should be inserted\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a \fBModifyTemplateGridCommand\fP object, or 0 if something went wrong\&. 
+.RE
+.PP
+
+.SS "void ModifyTemplateGridCommand::apply (bool undo = \fCfalse\fP)\fC [private]\fP"
+
+.SS "QList< \fBTitleBlockCell\fP * > ModifyTemplateGridCommand::cells () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+a list of pointers to cells composing the inserted/deleted row/column\&. 
+.RE
+.PP
+
+.SS "\fBModifyTemplateGridCommand\fP * ModifyTemplateGridCommand::deleteColumn (\fBTitleBlockTemplate\fP * tbtemplate, int index = \fC\-1\fP)\fC [static]\fP"
+This static method is a convenience to create a \fBModifyTemplateGridCommand\fP that removes the column at \fIindex\fP from \fItbtemplate\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbtemplate\fP Modified title block template\&. 
+.br
+\fIindex\fP Index of the removed column\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a \fBModifyTemplateGridCommand\fP object, or 0 if something went wrong\&. 
+.RE
+.PP
+
+.SS "\fBModifyTemplateGridCommand\fP * ModifyTemplateGridCommand::deleteRow (\fBTitleBlockTemplate\fP * tbtemplate, int index = \fC\-1\fP)\fC [static]\fP"
+This static method is a convenience to create a \fBModifyTemplateGridCommand\fP that removes the row at \fIindex\fP from \fItbtemplate\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbtemplate\fP Modified title block template\&. 
+.br
+\fIindex\fP Index of the removed row\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a \fBModifyTemplateGridCommand\fP object, or 0 if something went wrong\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockDimension\fP ModifyTemplateGridCommand::dimension () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the dimension of the inserted/deleted row/column\&. 
+.RE
+.PP
+
+.SS "int ModifyTemplateGridCommand::index () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the index of the inserted/deleted row/column 
+.RE
+.PP
+
+.SS "bool ModifyTemplateGridCommand::isInsertion () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if the row/column is inserted, false if it is deleted 
+.RE
+.PP
+
+.SS "void ModifyTemplateGridCommand::redo ()\fC [override]\fP"
+Redo the change\&. 
+.SS "void ModifyTemplateGridCommand::setCells (const QList< \fBTitleBlockCell\fP * > & cells)"
+Set the cells composing the inserted/deleted row/column\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcells\fP List of pointers to cells composing the inserted/deleted row/column\&. 
+.RE
+.PP
+
+.SS "void ModifyTemplateGridCommand::setDimension (const \fBTitleBlockDimension\fP & dimension)"
+Set the dimension of the inserted/deleted row/column 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdimension\fP Dimension of the inserted/deleted row/column 
+.RE
+.PP
+
+.SS "void ModifyTemplateGridCommand::setIndex (int index)"
+Set the index of the inserted/deleted row/column\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP Index of the inserted/deleted row/column\&. 
+.RE
+.PP
+
+.SS "void ModifyTemplateGridCommand::setInsertion (bool insertion)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIinsertion\fP true if the row/column is inserted, false if it is deleted 
+.RE
+.PP
+
+.SS "void ModifyTemplateGridCommand::setType (bool type)"
+Indicates whether this object inserts/deletes a row or a column\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP true if this object is about inserting/deleting a row, false for a column\&. 
+.RE
+.PP
+
+.SS "int ModifyTemplateGridCommand::type () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if this object is about inserting/deleting a row, false for a column\&. 
+.RE
+.PP
+
+.SS "void ModifyTemplateGridCommand::undo ()\fC [override]\fP"
+Undo the change\&. 
+.SS "void ModifyTemplateGridCommand::updateText ()\fC [private]\fP"
+Update the text describing what the command does\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<\fBTitleBlockCell\fP *> ModifyTemplateGridCommand::cells_\fC [private]\fP"
+
+.PP
+Cells composing the inserted/deleted row/column\&. 
+.SS "\fBTitleBlockDimension\fP ModifyTemplateGridCommand::dimension_\fC [private]\fP"
+
+.PP
+width/height of the column/row, which interpretation depends on type_ 
+.SS "int ModifyTemplateGridCommand::index_\fC [private]\fP"
+
+.PP
+Index of the inserted/deleted row/column\&. 
+.SS "bool ModifyTemplateGridCommand::insertion_\fC [private]\fP"
+
+.SS "bool ModifyTemplateGridCommand::type_\fC [private]\fP"
+
+.PP
+true for a row, false for a column 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

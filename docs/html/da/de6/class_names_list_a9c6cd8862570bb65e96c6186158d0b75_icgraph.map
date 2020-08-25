@@ -1,0 +1,20 @@
+<map id="NamesList::toXml" name="NamesList::toXml">
+<area shape="rect" id="node1" title=" " alt="" coords="944,218,1071,245"/>
+<area shape="rect" id="node2" href="$df/dd9/class_xml_element_collection.html#a4c6f807ccacad2d627de41d1535d2178" title="XmlElementCollection::addElement Add the element at location to this collection. The element is copie..." alt="" coords="717,5,868,47"/>
+<area shape="rect" id="node6" href="$d1/da3/class_e_c_h_s_xml_to_file.html#ad98631906b952e526625a7e4a763653a" title=" " alt="" coords="689,71,896,98"/>
+<area shape="rect" id="node8" href="$df/dd9/class_xml_element_collection.html#a964c737641ae2f82b441e171cb8156b5" title="XmlElementCollection::createDir Create a child directorie at path path with the name name...." alt="" coords="717,123,868,164"/>
+<area shape="rect" id="node9" href="$d0/d67/class_element_collection_handler.html#aeaae4c815cbfcae9dd79de05471a24ce" title="ElementCollectionHandler::createDir Create a directorie with name as child of parent...." alt="" coords="463,181,637,223"/>
+<area shape="rect" id="node12" href="$dc/dfd/class_title_block_cell.html#a08494d2f80f8a7c0334e039c1b281626" title="TitleBlockCell::saveContentToXml." alt="" coords="701,240,885,281"/>
+<area shape="rect" id="node13" href="$d0/d67/class_element_collection_handler.html#a6db30fe463f63cb84bcae5dfa58fade8" title="ElementCollectionHandler::setNames Set the names stored in name_list as the names of the item represe..." alt="" coords="706,305,879,347"/>
+<area shape="rect" id="node15" href="$d2/d17/class_element_scene.html#a16f4183a62e96a3ea2988bb2e31e148f" title="ElementScene::toXml Export this element as a xml file." alt="" coords="718,371,867,398"/>
+<area shape="rect" id="node18" href="$df/dd9/class_xml_element_collection.html#a589dc56ad78307ac51b1fe8c67ea55e0" title="XmlElementCollection::XmlElementCollection Build an empty collection. The collection start by :" alt="" coords="713,423,872,464"/>
+<area shape="rect" id="node3" href="$d6/dc5/class_q_e_t_project.html#ad4324141be707e2ad9524250d2593cb1" title="QETProject::importElement Import the element represented by location to the embbeded collection of th..." alt="" coords="459,13,641,39"/>
+<area shape="rect" id="node4" href="$de/d1f/class_diagram_event_add_element.html#a3515ac9716d6bf6147d13105253a1776" title="DiagramEventAddElement::buildElement Build the element, if the element is build successfully,..." alt="" coords="236,5,411,47"/>
+<area shape="rect" id="node5" href="$de/d1f/class_diagram_event_add_element.html#afc0999b41ed221f4494437fff0544b15" title="DiagramEventAddElement::DiagramEventAddElement Defaut constructor." alt="" coords="5,5,188,47"/>
+<area shape="rect" id="node7" href="$d1/da3/class_e_c_h_s_xml_to_file.html#a9f8a9b19355aeb3ea64ee6d05d28013a" title=" " alt="" coords="473,71,627,98"/>
+<area shape="rect" id="node10" href="$d0/d13/class_elements_category_editor.html#a5156ad941afdaf5579cb8df11fe56b9c" title="ElementsCategoryEditor::acceptCreation Valid the creation of the category." alt="" coords="241,196,406,237"/>
+<area shape="rect" id="node11" href="$d0/d13/class_elements_category_editor.html#a78519d96cd332d1156e5e70833e4a789" title="ElementsCategoryEditor::ElementsCategoryEditor Constructor." alt="" coords="10,243,183,284"/>
+<area shape="rect" id="node14" href="$d0/d13/class_elements_category_editor.html#a03cfa164d9bb20df7ca31b2666268924" title="ElementsCategoryEditor::acceptUpdate Valid the update of the category." alt="" coords="241,291,406,332"/>
+<area shape="rect" id="node16" href="$d2/d17/class_element_scene.html#ad083a900013fae3aedece63d935caafd" title="ElementScene::copy Handles the fact of copying the selection = exporting it as XML to the clipboard." alt="" coords="479,371,621,398"/>
+<area shape="rect" id="node17" href="$d2/d17/class_element_scene.html#aff5ea8fe5be26e588ca8d601402fc56d" title="ElementScene::cut Handles the fact of cutting the selection = exporting it in XML to the clipboard th..." alt="" coords="257,371,390,398"/>
+</map>

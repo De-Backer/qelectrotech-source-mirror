@@ -1,0 +1,14 @@
+<map id="Diagram::fromXml" name="Diagram::fromXml">
+<area shape="rect" id="node1" title="Diagram::fromXml Imports the described schema into an XML document. If a position is specified,..." alt="" coords="1113,81,1241,108"/>
+<area shape="rect" id="node2" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="917,5,1045,32"/>
+<area shape="rect" id="node3" href="$d3/d37/class_diagram.html#a622d4814c7d62c17cdab974278b593af" title="Diagram::initFromXml Imports the described schema in an XML element. This method delegates its work t..." alt="" coords="907,56,1056,83"/>
+<area shape="rect" id="node8" href="$d7/d9c/class_diagram_view.html#a076d36fec97e0d42e06ef5b1daf9b199" title="DiagramView::paste Import the element stored in the clipboard to the diagram." alt="" coords="912,107,1051,133"/>
+<area shape="rect" id="node11" href="$d5/dcc/class_multi_paste_dialog.html#a8788e76c17a1908550ab51294cb3fcc4" title=" " alt="" coords="897,158,1065,199"/>
+<area shape="rect" id="node4" href="$d6/dc5/class_q_e_t_project.html#aa6ab11517671dc9e288da42555dc79d6" title="QETProject::readDiagramsXml Load the diagrams from the xml description of the project...." alt="" coords="648,56,849,83"/>
+<area shape="rect" id="node5" href="$d6/dc5/class_q_e_t_project.html#ad9a09b5d1756ddc11c5eed75bb3738c6" title="QETProject::readProjectXml Read and make the project from an xml description." alt="" coords="413,56,600,83"/>
+<area shape="rect" id="node6" href="$d6/dc5/class_q_e_t_project.html#a260924555b97e401594c9ae6d6733281" title="QETProject::openFile." alt="" coords="219,56,365,83"/>
+<area shape="rect" id="node7" href="$d6/dc5/class_q_e_t_project.html#ab739141bacf11150129e65eaa11a0946" title="QETProject::QETProject Construct a project from a .qet file." alt="" coords="5,56,171,83"/>
+<area shape="rect" id="node9" href="$d7/d9c/class_diagram_view.html#a5cf31c8d5d2f6fcdced2411da94346cc" title=" " alt="" coords="665,107,832,133"/>
+<area shape="rect" id="node10" href="$d7/d9c/class_diagram_view.html#aa7ddeae989deaf45dc87f9b4614152c0" title=" " alt="" coords="414,107,599,133"/>
+<area shape="rect" id="node12" href="$d5/dcc/class_multi_paste_dialog.html#a9f60c5bd510d7961de088f75f0eeb92d" title=" " alt="" coords="653,158,844,199"/>
+</map>

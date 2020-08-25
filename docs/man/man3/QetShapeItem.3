@@ -1,0 +1,822 @@
+.TH "QetShapeItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QetShapeItem \- The \fBQetShapeItem\fP class this class is used to draw a basic shape (line, rectangle, ellipse) into a diagram, that can be saved to \&.qet file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetshapeitem\&.h>\fP
+.PP
+Inherits \fBQetGraphicsItem\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBShapeType\fP { \fBLine\fP =1, \fBRectangle\fP =2, \fBEllipse\fP =4, \fBPolygon\fP =8 }"
+.br
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1008 }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBpenChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBbrushChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBcloseChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBXRadiusChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBYRadiusChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQetShapeItem\fP (QPointF, QPointF=QPointF(0, 0), \fBShapeType\fP=\fBLine\fP, QGraphicsItem *parent=nullptr)"
+.br
+.RI "\fBQetShapeItem::QetShapeItem\fP Constructor of shape item\&. point 1 and 2 must be in scene coordinate\&. "
+.ti -1c
+.RI "\fB~QetShapeItem\fP () override"
+.br
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "QPen \fBpen\fP () const"
+.br
+.RI "METHODS\&. "
+.ti -1c
+.RI "void \fBsetPen\fP (const QPen &\fBpen\fP)"
+.br
+.RI "\fBQetShapeItem::setPen\fP Set the pen to use for draw the shape\&. "
+.ti -1c
+.RI "QBrush \fBbrush\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetBrush\fP (const QBrush &\fBbrush\fP)"
+.br
+.RI "\fBQetShapeItem::setBrush\fP Set the brush to use for the fill the shape\&. "
+.ti -1c
+.RI "\fBShapeType\fP \fBshapeType\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBfromXml\fP (const QDomElement &)"
+.br
+.RI "\fBQetShapeItem::fromXml\fP Build this item from the xml description\&. "
+.ti -1c
+.RI "virtual QDomElement \fBtoXml\fP (QDomDocument &document) const"
+.br
+.RI "\fBQetShapeItem::toXml\fP Save this item to xml element\&. "
+.ti -1c
+.RI "virtual bool \fBtoDXF\fP (const QString &filepath, const QPen &\fBpen\fP)"
+.br
+.RI "\fBQetShapeItem::toDXF\fP Draw this element to the dxf document\&. "
+.ti -1c
+.RI "void \fBeditProperty\fP () override"
+.br
+.RI "\fBQetShapeItem::editProperty\fP Edit the property of this item\&. "
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.RI "\fBQetShapeItem::name\fP\&. "
+.ti -1c
+.RI "void \fBsetP2\fP (const QPointF &P2)"
+.br
+.RI "\fBQetShapeItem::setP2\fP Set the second point of this item\&. If this item is a polyline, the last point of the polyline is replaced by P2\&. "
+.ti -1c
+.RI "QLineF \fBline\fP () const"
+.br
+.ti -1c
+.RI "bool \fBsetLine\fP (const QLineF &\fBline\fP)"
+.br
+.RI "\fBQetShapeItem::setLine\fP Set item geometry to line (only available for line shape) "
+.ti -1c
+.RI "QRectF \fBrect\fP () const"
+.br
+.ti -1c
+.RI "bool \fBsetRect\fP (const QRectF &\fBrect\fP)"
+.br
+.RI "\fBQetShapeItem::setRect\fP Set this item geometry to rect (only available if shape is a rectangle or an ellipse) "
+.ti -1c
+.RI "QPolygonF \fBpolygon\fP () const"
+.br
+.ti -1c
+.RI "bool \fBsetPolygon\fP (const QPolygonF &\fBpolygon\fP)"
+.br
+.RI "\fBQetShapeItem::setPolygon\fP Set this item geometry to polygon (only available if shape is a polyline) "
+.ti -1c
+.RI "bool \fBisClosed\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetClosed\fP (bool \fBclose\fP)"
+.br
+.RI "\fBQetShapeItem::setClosed\fP Close this item, have effect only if this item is a polygon\&. "
+.ti -1c
+.RI "qreal \fBXRadius\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetXRadius\fP (qreal X)"
+.br
+.ti -1c
+.RI "qreal \fBYRadius\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetYRadius\fP (qreal Y)"
+.br
+.ti -1c
+.RI "int \fBpointsCount\fP () const"
+.br
+.RI "QetShapeItem::pointCount\&. "
+.ti -1c
+.RI "void \fBsetNextPoint\fP (QPointF P)"
+.br
+.RI "\fBQetShapeItem::setNextPoint\fP Add a new point to the curent polygon\&. "
+.ti -1c
+.RI "void \fBremovePoints\fP (int number=1)"
+.br
+.RI "\fBQetShapeItem::removePoints\fP Number of point to remove on the polygon If number is superior to number of polygon points-2, all points of polygon will be removed except the first two (minimum point for the polygon);\&. "
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBQetShapeItem::boundingRect\fP\&. "
+.ti -1c
+.RI "QPainterPath \fBshape\fP () const override"
+.br
+.RI "\fBQetShapeItem::shape\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override"
+.br
+.RI "\fBQetShapeItem::paint\fP Paint this item\&. "
+.ti -1c
+.RI "void \fBhoverEnterEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBQetShapeItem::hoverEnterEvent\fP Handle hover enter event\&. "
+.ti -1c
+.RI "void \fBhoverLeaveEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBQetShapeItem::hoverLeaveEvent\fP Handle hover leave event\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "QVariant \fBitemChange\fP (GraphicsItemChange change, const QVariant &value) override"
+.br
+.RI "\fBQetShapeItem::itemChange\fP\&. "
+.ti -1c
+.RI "bool \fBsceneEventFilter\fP (QGraphicsItem *watched, QEvent *event) override"
+.br
+.RI "\fBQetShapeItem::sceneEventFilter\fP\&. "
+.ti -1c
+.RI "void \fBcontextMenuEvent\fP (QGraphicsSceneContextMenuEvent *event) override"
+.br
+.RI "\fBQetShapeItem::contextMenuEvent\fP\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "QPen \fBpen\fP"
+.br
+.ti -1c
+.RI "QBrush \fBbrush\fP"
+.br
+.ti -1c
+.RI "QRectF \fBrect\fP"
+.br
+.ti -1c
+.RI "QLineF \fBline\fP"
+.br
+.ti -1c
+.RI "QPolygonF \fBpolygon\fP"
+.br
+.ti -1c
+.RI "bool \fBclose\fP"
+.br
+.ti -1c
+.RI "qreal \fBxRadius\fP"
+.br
+.ti -1c
+.RI "qreal \fByRadius\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBswitchResizeMode\fP ()"
+.br
+.RI "\fBQetShapeItem::switchResizeMode\fP\&. "
+.ti -1c
+.RI "void \fBaddHandler\fP ()"
+.br
+.ti -1c
+.RI "void \fBadjusteHandlerPos\fP ()"
+.br
+.RI "\fBQetShapeItem::adjusteHandlerPos\fP Adjust the position of the handler item\&. "
+.ti -1c
+.RI "void \fBinsertPoint\fP ()"
+.br
+.ti -1c
+.RI "void \fBremovePoint\fP ()"
+.br
+.ti -1c
+.RI "void \fBhandlerMousePressEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBQetShapeItem::handlerMousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMouseMoveEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBQetShapeItem::handlerMouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMouseReleaseEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBQetShapeItem::handlerMouseReleaseEvent\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBShapeType\fP \fBm_shapeType\fP"
+.br
+.RI "ATTRIBUTES\&. "
+.ti -1c
+.RI "QPen \fBm_pen\fP"
+.br
+.ti -1c
+.RI "QBrush \fBm_brush\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_P1\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_P2\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_old_P1\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_old_P2\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_context_menu_pos\fP"
+.br
+.ti -1c
+.RI "QPolygonF \fBm_polygon\fP"
+.br
+.ti -1c
+.RI "QPolygonF \fBm_old_polygon\fP"
+.br
+.ti -1c
+.RI "bool \fBm_hovered\fP"
+.br
+.ti -1c
+.RI "int \fBm_vector_index\fP"
+.br
+.ti -1c
+.RI "bool \fBm_closed\fP = false"
+.br
+.ti -1c
+.RI "bool \fBm_modifie_radius_equaly\fP = false"
+.br
+.ti -1c
+.RI "int \fBm_resize_mode\fP = 1"
+.br
+.ti -1c
+.RI "QVector< \fBQetGraphicsHandlerItem\fP * > \fBm_handler_vector\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_insert_point\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_remove_point\fP"
+.br
+.ti -1c
+.RI "qreal \fBm_xRadius\fP = 0"
+.br
+.ti -1c
+.RI "qreal \fBm_yRadius\fP = 0"
+.br
+.ti -1c
+.RI "qreal \fBm_old_xRadius\fP"
+.br
+.ti -1c
+.RI "qreal \fBm_old_yRadius\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBQetShapeItem\fP class this class is used to draw a basic shape (line, rectangle, ellipse) into a diagram, that can be saved to \&.qet file\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SS "enum \fBQetShapeItem::ShapeType\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILine \fP\fP
+.TP
+\fB\fIRectangle \fP\fP
+.TP
+\fB\fIEllipse \fP\fP
+.TP
+\fB\fIPolygon \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QetShapeItem::QetShapeItem (QPointF p1, QPointF p2 = \fCQPointF(0,0)\fP, \fBShapeType\fP type = \fC\fBLine\fP\fP, QGraphicsItem * parent = \fCnullptr\fP)"
+
+.PP
+\fBQetShapeItem::QetShapeItem\fP Constructor of shape item\&. point 1 and 2 must be in scene coordinate\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp1\fP first point 
+.br
+\fIp2\fP second point 
+.br
+\fItype\fP type of item (line, rectangle, ellipse) 
+.br
+\fIparent\fP parent item 
+.RE
+.PP
+
+.SS "QetShapeItem::~QetShapeItem ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QetShapeItem::addHandler ()\fC [private]\fP"
+
+.SS "void QetShapeItem::adjusteHandlerPos ()\fC [private]\fP"
+
+.PP
+\fBQetShapeItem::adjusteHandlerPos\fP Adjust the position of the handler item\&. 
+.SS "QRectF QetShapeItem::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBQetShapeItem::boundingRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the bounding rect of this item 
+.RE
+.PP
+
+.SS "QBrush QetShapeItem::brush () const\fC [inline]\fP"
+
+.SS "void QetShapeItem::brushChanged ()\fC [signal]\fP"
+
+.SS "void QetShapeItem::closeChanged ()\fC [signal]\fP"
+
+.SS "void QetShapeItem::contextMenuEvent (QGraphicsSceneContextMenuEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBQetShapeItem::contextMenuEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void QetShapeItem::editProperty ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBQetShapeItem::editProperty\fP Edit the property of this item\&. 
+.PP
+Reimplemented from \fBQetGraphicsItem\fP\&.
+.SS "bool QetShapeItem::fromXml (const QDomElement & e)\fC [virtual]\fP"
+
+.PP
+\fBQetShapeItem::fromXml\fP Build this item from the xml description\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP element where is stored this item 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if load success 
+.RE
+.PP
+
+.SS "void QetShapeItem::handlerMouseMoveEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBQetShapeItem::handlerMouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void QetShapeItem::handlerMousePressEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBQetShapeItem::handlerMousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void QetShapeItem::handlerMouseReleaseEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBQetShapeItem::handlerMouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void QetShapeItem::hoverEnterEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBQetShapeItem::hoverEnterEvent\fP Handle hover enter event\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void QetShapeItem::hoverLeaveEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBQetShapeItem::hoverLeaveEvent\fP Handle hover leave event\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void QetShapeItem::insertPoint ()\fC [private]\fP"
+
+.SS "bool QetShapeItem::isClosed () const\fC [inline]\fP"
+
+.SS "QVariant QetShapeItem::itemChange (GraphicsItemChange change, const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBQetShapeItem::itemChange\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QLineF QetShapeItem::line () const\fC [inline]\fP"
+
+.SS "void QetShapeItem::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "QString QetShapeItem::name () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBQetShapeItem::name\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the name of the curent shape\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQetGraphicsItem\fP\&.
+.SS "void QetShapeItem::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBQetShapeItem::paint\fP Paint this item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.br
+\fIoption\fP 
+.br
+\fIwidget\fP 
+.RE
+.PP
+
+.SS "QPen QetShapeItem::pen () const\fC [inline]\fP"
+
+.PP
+METHODS\&. 
+.SS "void QetShapeItem::penChanged ()\fC [signal]\fP"
+
+.SS "int QetShapeItem::pointsCount () const"
+
+.PP
+QetShapeItem::pointCount\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the number of point in the polygon 
+.RE
+.PP
+
+.SS "QPolygonF QetShapeItem::polygon () const\fC [inline]\fP"
+
+.SS "QRectF QetShapeItem::rect () const\fC [inline]\fP"
+
+.SS "void QetShapeItem::removePoint ()\fC [private]\fP"
+
+.SS "void QetShapeItem::removePoints (int number = \fC1\fP)"
+
+.PP
+\fBQetShapeItem::removePoints\fP Number of point to remove on the polygon If number is superior to number of polygon points-2, all points of polygon will be removed except the first two (minimum point for the polygon);\&. 
+.SS "bool QetShapeItem::sceneEventFilter (QGraphicsItem * watched, QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBQetShapeItem::sceneEventFilter\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwatched\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void QetShapeItem::setBrush (const QBrush & brush)"
+
+.PP
+\fBQetShapeItem::setBrush\fP Set the brush to use for the fill the shape\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbrush\fP 
+.RE
+.PP
+
+.SS "void QetShapeItem::setClosed (bool close)"
+
+.PP
+\fBQetShapeItem::setClosed\fP Close this item, have effect only if this item is a polygon\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclose\fP 
+.RE
+.PP
+
+.SS "bool QetShapeItem::setLine (const QLineF & line)"
+
+.PP
+\fBQetShapeItem::setLine\fP Set item geometry to line (only available for line shape) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIline\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+: true when shape is a Line, else false 
+.RE
+.PP
+
+.SS "void QetShapeItem::setNextPoint (QPointF P)"
+
+.PP
+\fBQetShapeItem::setNextPoint\fP Add a new point to the curent polygon\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIP\fP the new point\&. 
+.RE
+.PP
+
+.SS "void QetShapeItem::setP2 (const QPointF & P2)"
+
+.PP
+\fBQetShapeItem::setP2\fP Set the second point of this item\&. If this item is a polyline, the last point of the polyline is replaced by P2\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIP2\fP 
+.RE
+.PP
+
+.SS "void QetShapeItem::setPen (const QPen & pen)"
+
+.PP
+\fBQetShapeItem::setPen\fP Set the pen to use for draw the shape\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpen\fP 
+.RE
+.PP
+
+.SS "bool QetShapeItem::setPolygon (const QPolygonF & polygon)"
+
+.PP
+\fBQetShapeItem::setPolygon\fP Set this item geometry to polygon (only available if shape is a polyline) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpolygon\fP : new polygon 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if item is polygon, else false 
+.RE
+.PP
+
+.SS "bool QetShapeItem::setRect (const QRectF & rect)"
+
+.PP
+\fBQetShapeItem::setRect\fP Set this item geometry to rect (only available if shape is a rectangle or an ellipse) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrect\fP : new rect 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+: true when shape is rectangle or ellipse, else false 
+.RE
+.PP
+
+.SS "void QetShapeItem::setXRadius (qreal X)"
+
+.SS "void QetShapeItem::setYRadius (qreal Y)"
+
+.SS "QPainterPath QetShapeItem::shape () const\fC [override]\fP"
+
+.PP
+\fBQetShapeItem::shape\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the shape of this item 
+.RE
+.PP
+
+.SS "\fBShapeType\fP QetShapeItem::shapeType () const\fC [inline]\fP"
+
+.SS "void QetShapeItem::switchResizeMode ()\fC [private]\fP"
+
+.PP
+\fBQetShapeItem::switchResizeMode\fP\&. 
+.SS "bool QetShapeItem::toDXF (const QString & filepath, const QPen & pen)\fC [virtual]\fP"
+
+.PP
+\fBQetShapeItem::toDXF\fP Draw this element to the dxf document\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP file path of the the dxf document 
+.br
+\fIpen\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if draw success 
+.RE
+.PP
+
+.SS "QDomElement QetShapeItem::toXml (QDomDocument & document) const\fC [virtual]\fP"
+
+.PP
+\fBQetShapeItem::toXml\fP Save this item to xml element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP parent document xml 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+element xml where is write this item 
+.RE
+.PP
+
+.SS "int QetShapeItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "qreal QetShapeItem::XRadius () const\fC [inline]\fP"
+
+.SS "void QetShapeItem::XRadiusChanged ()\fC [signal]\fP"
+
+.SS "qreal QetShapeItem::YRadius () const\fC [inline]\fP"
+
+.SS "void QetShapeItem::YRadiusChanged ()\fC [signal]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QBrush QetShapeItem::m_brush\fC [private]\fP"
+
+.SS "bool QetShapeItem::m_closed = false\fC [private]\fP"
+
+.SS "QPointF QetShapeItem::m_context_menu_pos\fC [private]\fP"
+
+.SS "QVector<\fBQetGraphicsHandlerItem\fP *> QetShapeItem::m_handler_vector\fC [private]\fP"
+
+.SS "bool QetShapeItem::m_hovered\fC [private]\fP"
+
+.SS "QAction* QetShapeItem::m_insert_point\fC [private]\fP"
+
+.SS "bool QetShapeItem::m_modifie_radius_equaly = false\fC [private]\fP"
+
+.SS "QPointF QetShapeItem::m_old_P1\fC [private]\fP"
+
+.SS "QPointF QetShapeItem::m_old_P2\fC [private]\fP"
+
+.SS "QPolygonF QetShapeItem::m_old_polygon\fC [private]\fP"
+
+.SS "qreal QetShapeItem::m_old_xRadius\fC [private]\fP"
+
+.SS "qreal QetShapeItem::m_old_yRadius\fC [private]\fP"
+
+.SS "QPointF QetShapeItem::m_P1\fC [private]\fP"
+
+.SS "QPointF QetShapeItem::m_P2\fC [private]\fP"
+
+.SS "QPen QetShapeItem::m_pen\fC [private]\fP"
+
+.SS "QPolygonF QetShapeItem::m_polygon\fC [private]\fP"
+
+.SS "QAction * QetShapeItem::m_remove_point\fC [private]\fP"
+
+.SS "int QetShapeItem::m_resize_mode = 1\fC [private]\fP"
+
+.SS "\fBShapeType\fP QetShapeItem::m_shapeType\fC [private]\fP"
+
+.PP
+ATTRIBUTES\&. 
+.SS "int QetShapeItem::m_vector_index\fC [private]\fP"
+
+.SS "qreal QetShapeItem::m_xRadius = 0\fC [private]\fP"
+
+.SS "qreal QetShapeItem::m_yRadius = 0\fC [private]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "QBrush QetShapeItem::brush\fC [read]\fP, \fC [write]\fP"
+
+.SS "bool QetShapeItem::close\fC [read]\fP, \fC [write]\fP"
+
+.SS "QLineF QetShapeItem::line\fC [read]\fP, \fC [write]\fP"
+
+.SS "QPen QetShapeItem::pen\fC [read]\fP, \fC [write]\fP"
+
+.SS "QPolygonF QetShapeItem::polygon\fC [read]\fP, \fC [write]\fP"
+
+.SS "QRectF QetShapeItem::rect\fC [read]\fP, \fC [write]\fP"
+
+.SS "qreal QetShapeItem::xRadius\fC [read]\fP, \fC [write]\fP"
+
+.SS "qreal QetShapeItem::yRadius\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

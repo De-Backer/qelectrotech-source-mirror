@@ -1,0 +1,174 @@
+.TH "DiagramEventAddShape" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramEventAddShape \- The \fBDiagramEventAddShape\fP class This event manage the creation of a shape\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagrameventaddshape\&.h>\fP
+.PP
+Inherits \fBDiagramEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramEventAddShape\fP (\fBDiagram\fP *diagram, \fBQetShapeItem::ShapeType\fP shape_type)"
+.br
+.RI "\fBDiagramEventAddShape::DiagramEventAddShape\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~DiagramEventAddShape\fP () override"
+.br
+.RI "\fBDiagramEventAddShape::~DiagramEventAddShape\fP\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddShape::mousePressEvent\fP Action when mouse is pressed\&. "
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddShape::mouseMoveEvent\fP Action when mouse move\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddShape::mouseReleaseEvent\fP Action when mouse button is released\&. "
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddShape::mouseDoubleClickEvent\fP Action when mouse button is double clicked\&. "
+.ti -1c
+.RI "void \fBinit\fP () override"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQetShapeItem::ShapeType\fP \fBm_shape_type\fP"
+.br
+.ti -1c
+.RI "\fBQetShapeItem\fP * \fBm_shape_item\fP"
+.br
+.ti -1c
+.RI "QGraphicsLineItem * \fBm_help_horiz\fP"
+.br
+.ti -1c
+.RI "QGraphicsLineItem * \fBm_help_verti\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateHelpCross\fP (const QPointF &p)"
+.br
+.RI "\fBDiagramEventAddShape::updateHelpCross\fP Create and update the position of the cross to help user for draw new shape\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBDiagramEventAddShape\fP class This event manage the creation of a shape\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramEventAddShape::DiagramEventAddShape (\fBDiagram\fP * diagram, \fBQetShapeItem::ShapeType\fP shape_type)"
+
+.PP
+\fBDiagramEventAddShape::DiagramEventAddShape\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : the diagram where this event must operate 
+.br
+\fIshape_type\fP : the type of shape to draw 
+.RE
+.PP
+
+.SS "DiagramEventAddShape::~DiagramEventAddShape ()\fC [override]\fP"
+
+.PP
+\fBDiagramEventAddShape::~DiagramEventAddShape\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramEventAddShape::init ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddShape::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddShape::mouseDoubleClickEvent\fP Action when mouse button is double clicked\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP : event of mouse double click 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddShape::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddShape::mouseMoveEvent\fP Action when mouse move\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP : event of mouse move 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddShape::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddShape::mousePressEvent\fP Action when mouse is pressed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP : event of mouse press 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddShape::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddShape::mouseReleaseEvent\fP Action when mouse button is released\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP : event of mouse release 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddShape::updateHelpCross (const QPointF & p)\fC [private]\fP"
+
+.PP
+\fBDiagramEventAddShape::updateHelpCross\fP Create and update the position of the cross to help user for draw new shape\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP : the center of the cross 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QGraphicsLineItem* DiagramEventAddShape::m_help_horiz\fC [protected]\fP"
+
+.SS "QGraphicsLineItem * DiagramEventAddShape::m_help_verti\fC [protected]\fP"
+
+.SS "\fBQetShapeItem\fP* DiagramEventAddShape::m_shape_item\fC [protected]\fP"
+
+.SS "\fBQetShapeItem::ShapeType\fP DiagramEventAddShape::m_shape_type\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

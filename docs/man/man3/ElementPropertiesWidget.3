@@ -1,0 +1,265 @@
+.TH "ElementPropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementPropertiesWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementpropertieswidget\&.h>\fP
+.PP
+Inherits \fBAbstractElementPropertiesEditorWidget\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBfindInPanel\fP ()"
+.br
+.RI "\fBElementPropertiesWidget::findInPanel\fP If m_element is a custom element, emit findElementRequired\&. "
+.ti -1c
+.RI "void \fBeditElement\fP ()"
+.br
+.RI "\fBElementPropertiesWidget::editElement\fP If m_element is a custom element, emit findElementRequired and editElementRequired\&. "
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBfindEditClicked\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementPropertiesWidget\fP (\fBElement\fP *elmt, QWidget *parent=nullptr)"
+.br
+.RI "\fBElementPropertiesWidget::ElementPropertiesWidget\fP Default constructor\&. "
+.ti -1c
+.RI "\fBElementPropertiesWidget\fP (\fBDynamicElementTextItem\fP *text, QWidget *parent=nullptr)"
+.br
+.RI "\fBElementPropertiesWidget::ElementPropertiesWidget\fP Same as default constructor, the edited element, is the parent element of text\&. The only difference with default constructor, is that the current tab is the tab for dynamic texts, and the item in the tree that represent text is expanded and selected\&. "
+.ti -1c
+.RI "\fBElementPropertiesWidget\fP (\fBElementTextItemGroup\fP *group, QWidget *parent=nullptr)"
+.br
+.RI "\fBElementPropertiesWidget::ElementPropertiesWidget\fP Same as default constructor, the edited element, is the parent element of group\&. The only difference with default constructor, is that the current tab is the tab for dynamic texts, and the item in the tree that represent group is expanded and selected\&. "
+.ti -1c
+.RI "void \fBsetElement\fP (\fBElement\fP *element) override"
+.br
+.RI "\fBElementPropertiesWidget::setElement\fP Set element to be the edited element\&. "
+.ti -1c
+.RI "void \fBsetDynamicText\fP (\fBDynamicElementTextItem\fP *text)"
+.br
+.RI "\fBElementPropertiesWidget::setDynamicText\fP convenience function: same as call : \fBElementPropertiesWidget::setElement\fP, with parameter the parent element of text\&. Set the dynamics text tab as current tab, expand and select the item that represent text\&. "
+.ti -1c
+.RI "void \fBsetTextsGroup\fP (\fBElementTextItemGroup\fP *group)"
+.br
+.RI "\fBElementPropertiesWidget::setTextsGroup\fP Conveniance function : same as call : \fBElementPropertiesWidget::setElement\fP, with parameter the parent element of group\&. Set the dynamics text tab as current tab, expand and select the item that represent group\&. "
+.ti -1c
+.RI "void \fBapply\fP () override"
+.br
+.RI "\fBElementPropertiesWidget::apply\fP Apply the new properties by pushing an undo command to the parent project's undo stack of element\&. "
+.ti -1c
+.RI "void \fBreset\fP () override"
+.br
+.RI "\fBElementPropertiesWidget::reset\fP Reset the edited properties\&. "
+.ti -1c
+.RI "bool \fBsetLiveEdit\fP (bool live_edit) override"
+.br
+.RI "\fBPropertiesEditorWidget::setLiveEdit\fP Set the editor in live edit mode\&. When an editor is in live edit mode, every change is applied immediately (no need to call apply)\&. If live edit can be enable, return true, else false\&. By default this method do nothing and return false (live edit is disable)\&. Herited class of \fBPropertiesEditorWidget\fP must reimplemente this methode to manage the live edit mode\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBbuildGui\fP ()"
+.br
+.RI "ElementPropertiesWidget::build Build the content of this widget\&. "
+.ti -1c
+.RI "void \fBupdateUi\fP () override"
+.br
+.RI "\fBElementPropertiesWidget::updateUi\fP Update the content of this widget\&. "
+.ti -1c
+.RI "void \fBaddGeneralWidget\fP ()"
+.br
+.RI "\fBElementPropertiesWidget::addGeneralWidget\fP Add or update the general widget on this tab widget\&. "
+.ti -1c
+.RI "QWidget * \fBgeneralWidget\fP ()"
+.br
+.RI "\fBElementPropertiesWidget::generalWidget\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP"
+.br
+.ti -1c
+.RI "QTabWidget * \fBm_tab\fP"
+.br
+.ti -1c
+.RI "QList< \fBAbstractElementPropertiesEditorWidget\fP * > \fBm_list_editor\fP"
+.br
+.ti -1c
+.RI "QWidget * \fBm_general_widget\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementPropertiesWidget::ElementPropertiesWidget (\fBElement\fP * elmt, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBElementPropertiesWidget::ElementPropertiesWidget\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "ElementPropertiesWidget::ElementPropertiesWidget (\fBDynamicElementTextItem\fP * text, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBElementPropertiesWidget::ElementPropertiesWidget\fP Same as default constructor, the edited element, is the parent element of text\&. The only difference with default constructor, is that the current tab is the tab for dynamic texts, and the item in the tree that represent text is expanded and selected\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "ElementPropertiesWidget::ElementPropertiesWidget (\fBElementTextItemGroup\fP * group, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBElementPropertiesWidget::ElementPropertiesWidget\fP Same as default constructor, the edited element, is the parent element of group\&. The only difference with default constructor, is that the current tab is the tab for dynamic texts, and the item in the tree that represent group is expanded and selected\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementPropertiesWidget::addGeneralWidget ()\fC [private]\fP"
+
+.PP
+\fBElementPropertiesWidget::addGeneralWidget\fP Add or update the general widget on this tab widget\&. 
+.SS "void ElementPropertiesWidget::apply ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementPropertiesWidget::apply\fP Apply the new properties by pushing an undo command to the parent project's undo stack of element\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ElementPropertiesWidget::buildGui ()\fC [private]\fP"
+
+.PP
+ElementPropertiesWidget::build Build the content of this widget\&. 
+.SS "void ElementPropertiesWidget::editElement ()\fC [slot]\fP"
+
+.PP
+\fBElementPropertiesWidget::editElement\fP If m_element is a custom element, emit findElementRequired and editElementRequired\&. 
+.SS "void ElementPropertiesWidget::findEditClicked ()\fC [signal]\fP"
+
+.SS "void ElementPropertiesWidget::findInPanel ()\fC [slot]\fP"
+
+.PP
+\fBElementPropertiesWidget::findInPanel\fP If m_element is a custom element, emit findElementRequired\&. 
+.SS "QWidget * ElementPropertiesWidget::generalWidget ()\fC [private]\fP"
+
+.PP
+\fBElementPropertiesWidget::generalWidget\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+build and return the 'general' widget 
+.RE
+.PP
+
+.SS "void ElementPropertiesWidget::reset ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementPropertiesWidget::reset\fP Reset the edited properties\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ElementPropertiesWidget::setDynamicText (\fBDynamicElementTextItem\fP * text)"
+
+.PP
+\fBElementPropertiesWidget::setDynamicText\fP convenience function: same as call : \fBElementPropertiesWidget::setElement\fP, with parameter the parent element of text\&. Set the dynamics text tab as current tab, expand and select the item that represent text\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP 
+.RE
+.PP
+
+.SS "void ElementPropertiesWidget::setElement (\fBElement\fP * element)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementPropertiesWidget::setElement\fP Set element to be the edited element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.PP
+Implements \fBAbstractElementPropertiesEditorWidget\fP\&.
+.SS "bool ElementPropertiesWidget::setLiveEdit (bool live_edit)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorWidget::setLiveEdit\fP Set the editor in live edit mode\&. When an editor is in live edit mode, every change is applied immediately (no need to call apply)\&. If live edit can be enable, return true, else false\&. By default this method do nothing and return false (live edit is disable)\&. Herited class of \fBPropertiesEditorWidget\fP must reimplemente this methode to manage the live edit mode\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlive_edit\fP true to enable live edit 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if live edit is enable, else false\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ElementPropertiesWidget::setTextsGroup (\fBElementTextItemGroup\fP * group)"
+
+.PP
+\fBElementPropertiesWidget::setTextsGroup\fP Conveniance function : same as call : \fBElementPropertiesWidget::setElement\fP, with parameter the parent element of group\&. Set the dynamics text tab as current tab, expand and select the item that represent group\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP 
+.RE
+.PP
+
+.SS "void ElementPropertiesWidget::updateUi ()\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementPropertiesWidget::updateUi\fP Update the content of this widget\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagram\fP* ElementPropertiesWidget::m_diagram\fC [private]\fP"
+
+.SS "QWidget* ElementPropertiesWidget::m_general_widget\fC [private]\fP"
+
+.SS "QList<\fBAbstractElementPropertiesEditorWidget\fP *> ElementPropertiesWidget::m_list_editor\fC [private]\fP"
+
+.SS "QTabWidget* ElementPropertiesWidget::m_tab\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

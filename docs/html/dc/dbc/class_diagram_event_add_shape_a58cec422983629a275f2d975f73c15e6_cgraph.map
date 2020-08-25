@@ -1,0 +1,16 @@
+<map id="DiagramEventAddShape::mouseReleaseEvent" name="DiagramEventAddShape::mouseReleaseEvent">
+<area shape="rect" id="node1" title="DiagramEventAddShape::mouseReleaseEvent Action when mouse button is released." alt="" coords="5,150,169,191"/>
+<area shape="rect" id="node2" href="$d1/d09/class_qet_shape_item.html#a328ced48e6da24176925b4a789f297d7" title="QetShapeItem::pointCount." alt="" coords="475,5,659,32"/>
+<area shape="rect" id="node3" href="$d3/d37/class_diagram.html#a0b0af5271af64fe8eab04efb14e849d8" title="Diagram::removeItem Reimplemented from QGraphicsScene::removeItem(QGraphicsItem *item) Do some specif..." alt="" coords="241,157,387,184"/>
+<area shape="rect" id="node10" href="$d1/d09/class_qet_shape_item.html#a13e5bcf3e97a29198569c21787b918da" title="QetShapeItem::removePoints Number of point to remove on the polygon If number is superior to number o..." alt="" coords="217,56,411,83"/>
+<area shape="rect" id="node13" href="$d1/d09/class_qet_shape_item.html#ac1f7f96eb0e150461bb532ad09c157b2" title="QetShapeItem::setP2 Set the second point of this item. If this item is a polyline,..." alt="" coords="240,208,388,235"/>
+<area shape="rect" id="node14" href="$d3/d37/class_diagram.html#aca79c4ab46b3b8d3869affb2344253e8" title="Diagram::snapToGrid Return a nearest snap point of p." alt="" coords="241,259,387,285"/>
+<area shape="rect" id="node4" href="$d6/dc5/class_q_e_t_project.html#a38c4778acc88e16b55913fefa48e6f5b" title="QETProject::dataBase." alt="" coords="491,107,643,133"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#ab576e6398fe6d00cd92d6bbf9300f7b6" title="Diagram::isReadOnly." alt="" coords="494,157,641,184"/>
+<area shape="rect" id="node6" href="$dc/d46/class_terminal.html#a35ee48aaa14c345828ba931876dba1c9" title="Terminal::removeConductor Remove a conductor from this terminal." alt="" coords="477,208,658,235"/>
+<area shape="rect" id="node7" href="$d5/d7f/classproject_data_base.html#a936b9fe54fd06e16c4f769643cfedf8f" title="projectDataBase::removeElement" alt="" coords="459,259,676,285"/>
+<area shape="rect" id="node9" href="$d5/d50/class_element.html#a9a1858b233f9a764d9934619ade84c2d" title=" " alt="" coords="477,309,658,336"/>
+<area shape="rect" id="node8" href="$d5/d50/class_element.html#a873eecea89b2cdb02b740beabd2e36c6" title="Element::uuid." alt="" coords="748,259,849,285"/>
+<area shape="rect" id="node11" href="$d1/d09/class_qet_shape_item.html#a54a651279dca1c2f2bbbeef9c91efb5d" title="QetShapeItem::boundingRect." alt="" coords="471,56,664,83"/>
+<area shape="rect" id="node12" href="$d1/d09/class_qet_shape_item.html#ad205ac661b6b9bf02ea3e6fbb5404d5e" title="QetShapeItem::shape." alt="" coords="724,56,873,83"/>
+</map>

@@ -1,0 +1,770 @@
+.TH "QET" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QET
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBIcons\fP"
+.br
+.ti -1c
+.RI " \fBQetMessageBox\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBGraphicsItemState\fP { \fBGIOK\fP, \fBGIBuildingFromXml\fP, \fBGILoadingFromXml\fP }"
+.br
+.ti -1c
+.RI "enum \fBDepthOption\fP { \fBBringForward\fP, \fBRaise\fP, \fBLower\fP, \fBSendBackward\fP }"
+.br
+.RI "List the various kind of changes for the zValue\&. "
+.ti -1c
+.RI "enum \fBOrientedMovement\fP { \fBToNorth\fP, \fBToNorthEast\fP, \fBToEast\fP, \fBToSouthEast\fP, \fBToSouth\fP, \fBToSouthWest\fP, \fBToWest\fP, \fBToNorthWest\fP }"
+.br
+.RI "Oriented movements\&. "
+.ti -1c
+.RI "enum \fBOperationAreas\fP { \fBChangeInnerPoints\fP = -4, \fBRotateArea\fP = -3, \fBMoveArea\fP = -2, \fBNoOperation\fP = -1, \fBResizeFromTopLeftCorner\fP = 0, \fBResizeFromTopCenterCorner\fP = 1, \fBResizeFromTopRightCorner\fP = 2, \fBResizeFromMiddleLeftCorner\fP = 3, \fBResizeFromMiddleRightCorner\fP = 4, \fBResizeFromBottomLeftCorner\fP = 5, \fBResizeFromBottomCenterCorner\fP = 6, \fBResizeFromBottomRightCorner\fP = 7 }"
+.br
+.RI "List areas related to some common operations\&. "
+.ti -1c
+.RI "enum \fBScalingMethod\fP { \fBFreeScaling\fP, \fBSnapScalingPointToGrid\fP, \fBRoundScaleRatios\fP }"
+.br
+.RI "Supported types of interactive scaling, typically for a single element primitive\&. "
+.ti -1c
+.RI "enum \fBConductorSegmentType\fP { \fBHorizontal\fP = 1, \fBVertical\fP = 2, \fBBoth\fP = 3 }"
+.br
+.RI "Known kinds of conductor segments\&. "
+.ti -1c
+.RI "enum \fBItemType\fP { \fBElement\fP = 1, \fBElementsCategory\fP = 2, \fBElementsCollection\fP = 4, \fBElementsContainer\fP = 6, \fBElementsCollectionItem\fP = 7, \fBTitleBlockTemplate\fP = 8, \fBTitleBlockTemplatesCollection\fP = 16, \fBTitleBlockTemplatesCollectionItem\fP = 24, \fBDiagram\fP = 32, \fBProject\fP = 64, \fBAll\fP = 127 }"
+.br
+.ti -1c
+.RI "enum \fBFiltering\fP { \fBBeginFilter\fP, \fBRegularFilter\fP, \fBEndFilter\fP }"
+.br
+.ti -1c
+.RI "enum \fBAction\fP { \fBRetry\fP, \fBIgnore\fP, \fBErase\fP, \fBAbort\fP, \fBManaged\fP, \fBRename\fP }"
+.br
+.ti -1c
+.RI "enum \fBDiagramArea\fP { \fBBorderArea\fP, \fBElementsArea\fP }"
+.br
+.ti -1c
+.RI "enum \fBTitleBlockColumnLength\fP { \fBAbsolute\fP, \fBRelativeToTotalLength\fP, \fBRelativeToRemainingLength\fP }"
+.br
+.RI "enum used to specify the type of a length "
+.ti -1c
+.RI "enum \fBQetCollection\fP { \fBCommon\fP, \fBCustom\fP, \fBEmbedded\fP }"
+.br
+.RI "Enum used to specify the origin of a collection of thing (title block, element etc\&.\&.\&.) "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "QString \fBlicense\fP ()"
+.br
+.ti -1c
+.RI "QString \fBqetCollectionToString\fP (const \fBQetCollection\fP &c)"
+.br
+.RI "\fBQET::qetCollectionToString\fP\&. "
+.ti -1c
+.RI "\fBQetCollection\fP \fBqetCollectionFromString\fP (const QString &str)"
+.br
+.RI "\fBQET::qetCollectionFromString\fP\&. "
+.ti -1c
+.RI "bool \fBlineContainsPoint\fP (const QLineF &, const QPointF &)"
+.br
+.ti -1c
+.RI "bool \fBorthogonalProjection\fP (const QPointF &, const QLineF &, QPointF *=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBattributeIsAnInteger\fP (const QDomElement &, const QString &, int *=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBattributeIsAReal\fP (const QDomElement &, const QString &, qreal *=nullptr)"
+.br
+.ti -1c
+.RI "QString \fBElementsAndConductorsSentence\fP (int elements=0, int conductors=0, int indi_texts=0, int images=0, int shapes=0, int element_text=0, int tables_count=0)"
+.br
+.RI "\fBQET::ElementsAndConductorsSentence\fP Permet de composer rapidement la proposition 'x elements et y conducteurs' ou encore 'x elements, y conducteurs et z champs de texte'\&. "
+.ti -1c
+.RI "QList< QDomElement > \fBfindInDomElement\fP (const QDomElement &, const QString &)"
+.br
+.ti -1c
+.RI "QList< QDomElement > \fBfindInDomElement\fP (const QDomElement &, const QString &, const QString &)"
+.br
+.ti -1c
+.RI "QList< QChar > \fBforbiddenCharacters\fP ()"
+.br
+.ti -1c
+.RI "QString \fBstringToFileName\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBescapeSpaces\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBunescapeSpaces\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBjoinWithSpaces\fP (const QStringList &)"
+.br
+.ti -1c
+.RI "QStringList \fBsplitWithSpaces\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBdiagramAreaToString\fP (const \fBQET::DiagramArea\fP &)"
+.br
+.ti -1c
+.RI "\fBQET::DiagramArea\fP \fBdiagramAreaFromString\fP (const QString &)"
+.br
+.ti -1c
+.RI "qreal \fBround\fP (qreal, qreal)"
+.br
+.ti -1c
+.RI "qreal \fBcorrectAngle\fP (const qreal &)"
+.br
+.ti -1c
+.RI "bool \fBcompareCanonicalFilePaths\fP (const QString &, const QString &)"
+.br
+.ti -1c
+.RI "bool \fBwriteXmlFile\fP (QDomDocument &xml_doc, const QString &filepath, QString *error_message=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBwriteToFile\fP (QDomDocument &xml_doc, QFile *file, QString *error_message=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBeachStrIsEqual\fP (const QStringList &qsl)"
+.br
+.RI "\fBQET::eachStrIsEqual\fP\&. "
+.ti -1c
+.RI "QActionGroup * \fBdepthActionGroup\fP (QObject *parent=nullptr)"
+.br
+.RI "\fBQET::depthActionGroup\fP\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const QString \fBversion\fP = '0\&.80'"
+.br
+.RI "QElectroTech version (as string, used to mark projects and elements XML documents) "
+.ti -1c
+.RI "const QString \fBdisplayedVersion\fP = '0\&.80\-DEV'"
+.br
+.RI "QElectroTech displayed version\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This file provides useful functions and enums that may be used from anywhere else within the QElectroTech application\&.
+.PP
+This namespace is meant to delare icons used within the QElectroTech application\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBQET::Action\fP"
+This enums lists the various ways to handle a standard problem when copying or moving element items (collections, categories, elements)\&. 
+.PP
+\fBSee also\fP
+.RS 4
+MoveElementsHandler 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIRetry \fP\fP
+The operation must be tried again\&. 
+.TP
+\fB\fIIgnore \fP\fP
+Skip the current item\&. 
+.TP
+\fB\fIErase \fP\fP
+Erase the target content\&. 
+.TP
+\fB\fIAbort \fP\fP
+abort the whole operation, ignoring the curent item 
+.TP
+\fB\fIManaged \fP\fP
+the current item was handled by the Strategy object: do not treat it and continue 
+.TP
+\fB\fIRename \fP\fP
+the target has to be renamed 
+.SS "enum \fBQET::ConductorSegmentType\fP"
+
+.PP
+Known kinds of conductor segments\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIHorizontal \fP\fP
+Horizontal segment\&. 
+.TP
+\fB\fIVertical \fP\fP
+Vertical segment\&. 
+.TP
+\fB\fIBoth \fP\fP
+Invalid segment\&. 
+.SS "enum \fBQET::DepthOption\fP"
+
+.PP
+List the various kind of changes for the zValue\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBringForward \fP\fP
+Bring item to the foreground so they have the highest zValue\&. 
+.TP
+\fB\fIRaise \fP\fP
+Raise item one layer above their current one; zValues are incremented\&. 
+.TP
+\fB\fILower \fP\fP
+Send item one layer below their current one; zValues are decremented\&. 
+.TP
+\fB\fISendBackward \fP\fP
+Send item to the background so they have the lowest zValue\&. 
+.SS "enum \fBQET::DiagramArea\fP"
+This enum represents diagram areas that may be exported/printed\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBorderArea \fP\fP
+Export the diagram along with its border and title block\&. 
+.TP
+\fB\fIElementsArea \fP\fP
+Export the content of the diagram only\&. 
+.SS "enum \fBQET::Filtering\fP"
+This enum represents the various steps when applying a filter\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBeginFilter \fP\fP
+.TP
+\fB\fIRegularFilter \fP\fP
+.TP
+\fB\fIEndFilter \fP\fP
+.SS "enum \fBQET::GraphicsItemState\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIGIOK \fP\fP
+General state\&. 
+.TP
+\fB\fIGIBuildingFromXml \fP\fP
+Item is currently building from a xml description (element) 
+.TP
+\fB\fIGILoadingFromXml \fP\fP
+Item is loading her properties from a xml description\&. 
+.SS "enum \fBQET::ItemType\fP"
+This enums lists the various kind of items users can manage within the application\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIElement \fP\fP
+.TP
+\fB\fIElementsCategory \fP\fP
+.TP
+\fB\fIElementsCollection \fP\fP
+.TP
+\fB\fIElementsContainer \fP\fP
+.TP
+\fB\fIElementsCollectionItem \fP\fP
+.TP
+\fB\fITitleBlockTemplate \fP\fP
+.TP
+\fB\fITitleBlockTemplatesCollection \fP\fP
+.TP
+\fB\fITitleBlockTemplatesCollectionItem \fP\fP
+.TP
+\fB\fIDiagram \fP\fP
+.TP
+\fB\fIProject \fP\fP
+.TP
+\fB\fIAll \fP\fP
+.SS "enum \fBQET::OperationAreas\fP"
+
+.PP
+List areas related to some common operations\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIChangeInnerPoints \fP\fP
+.TP
+\fB\fIRotateArea \fP\fP
+.TP
+\fB\fIMoveArea \fP\fP
+.TP
+\fB\fINoOperation \fP\fP
+.TP
+\fB\fIResizeFromTopLeftCorner \fP\fP
+.TP
+\fB\fIResizeFromTopCenterCorner \fP\fP
+.TP
+\fB\fIResizeFromTopRightCorner \fP\fP
+.TP
+\fB\fIResizeFromMiddleLeftCorner \fP\fP
+.TP
+\fB\fIResizeFromMiddleRightCorner \fP\fP
+.TP
+\fB\fIResizeFromBottomLeftCorner \fP\fP
+.TP
+\fB\fIResizeFromBottomCenterCorner \fP\fP
+.TP
+\fB\fIResizeFromBottomRightCorner \fP\fP
+.SS "enum \fBQET::OrientedMovement\fP"
+
+.PP
+Oriented movements\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIToNorth \fP\fP
+.TP
+\fB\fIToNorthEast \fP\fP
+.TP
+\fB\fIToEast \fP\fP
+.TP
+\fB\fIToSouthEast \fP\fP
+.TP
+\fB\fIToSouth \fP\fP
+.TP
+\fB\fIToSouthWest \fP\fP
+.TP
+\fB\fIToWest \fP\fP
+.TP
+\fB\fIToNorthWest \fP\fP
+.SS "enum \fBQET::QetCollection\fP"
+
+.PP
+Enum used to specify the origin of a collection of thing (title block, element etc\&.\&.\&.) 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICommon \fP\fP
+From common collection\&. 
+.TP
+\fB\fICustom \fP\fP
+From user collection\&. 
+.TP
+\fB\fIEmbedded \fP\fP
+From an embedded collection (a project for exemple) 
+.SS "enum \fBQET::ScalingMethod\fP"
+
+.PP
+Supported types of interactive scaling, typically for a single element primitive\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIFreeScaling \fP\fP
+do not interfer with the default scaling process 
+.TP
+\fB\fISnapScalingPointToGrid \fP\fP
+snap the point used to define the new bounding rectangle to the grid 
+.TP
+\fB\fIRoundScaleRatios \fP\fP
+adjust the scaling movement so that the induced scaling ratios are rounded 
+.SS "enum \fBQET::TitleBlockColumnLength\fP"
+
+.PP
+enum used to specify the type of a length 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIAbsolute \fP\fP
+the length is absolute and should be applied as is 
+.TP
+\fB\fIRelativeToTotalLength \fP\fP
+the length is just a fraction of the total available length 
+.TP
+\fB\fIRelativeToRemainingLength \fP\fP
+the length is just a fraction of the length that is still available when other types of lengths have been removed 
+.SH "Function Documentation"
+.PP 
+.SS "bool QET::attributeIsAnInteger (const QDomElement & e, const QString & nom_attribut, int * entier = \fCnullptr\fP)"
+Permet de savoir si l'attribut nom_attribut d'un element XML e est bien un entier\&. Si oui, sa valeur est copiee dans entier\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP \fBElement\fP XML 
+.br
+\fInom_attribut\fP Nom de l'attribut a analyser 
+.br
+\fIentier\fP Pointeur facultatif vers un entier 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si l'attribut est bien un entier, false sinon 
+.RE
+.PP
+
+.SS "bool QET::attributeIsAReal (const QDomElement & e, const QString & nom_attribut, qreal * reel = \fCnullptr\fP)"
+Permet de savoir si l'attribut nom_attribut d'un element XML e est bien un reel\&. Si oui, sa valeur est copiee dans reel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP \fBElement\fP XML 
+.br
+\fInom_attribut\fP Nom de l'attribut a analyser 
+.br
+\fIreel\fP Pointeur facultatif vers un double 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si l'attribut est bien un reel, false sinon 
+.RE
+.PP
+
+.SS "bool QET::compareCanonicalFilePaths (const QString & first, const QString & second)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirst\fP Un premier chemin vers un fichier 
+.br
+\fIsecond\fP Un second chemin vers un fichier 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si les deux chemins existent existent et sont identiques lorsqu'ils sont exprimes sous forme canonique 
+.RE
+.PP
+
+.SS "qreal QET::correctAngle (const qreal & angle)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIangle\fP Un angle quelconque 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+l'angle passe en parametre, mais ramene entre -360\&.0 + 360\&.0 degres 
+.RE
+.PP
+
+.SS "QActionGroup * QET::depthActionGroup (QObject * parent = \fCnullptr\fP)"
+
+.PP
+\fBQET::depthActionGroup\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+an action group which contain 4 actions (forward, raise, lower, backward) already made with icon, shortcut and data (see \fBQET::DepthOption\fP) 
+.RE
+.PP
+
+.SS "\fBQET::DiagramArea\fP QET::diagramAreaFromString (const QString & string)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP une chaine representant un type de zone de schema 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le type de zone de schema correspondant ; si la chaine est invalide, \fBQET::ElementsArea\fP est retourne\&. 
+.RE
+.PP
+
+.SS "QString QET::diagramAreaToString (const \fBQET::DiagramArea\fP & diagram_area)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_area\fP un type de zone de schema 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+une chaine representant le type de zone de schema 
+.RE
+.PP
+
+.SS "bool QET::eachStrIsEqual (const QStringList & qsl)"
+
+.PP
+\fBQET::eachStrIsEqual\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqsl\fP list of string to compare 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if every string is identical, else false; The list must not be empty If the list can be empty, call isEmpty() before calling this function 
+.RE
+.PP
+
+.SS "QString QET::ElementsAndConductorsSentence (int elements_count = \fC0\fP, int conductors_count = \fC0\fP, int texts_count = \fC0\fP, int images_count = \fC0\fP, int shapes_count = \fC0\fP, int element_text_count = \fC0\fP, int tables_count = \fC0\fP)"
+
+.PP
+\fBQET::ElementsAndConductorsSentence\fP Permet de composer rapidement la proposition 'x elements et y conducteurs' ou encore 'x elements, y conducteurs et z champs de texte'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelements_count\fP nombre d'elements 
+.br
+\fIconductors_count\fP nombre de conducteurs 
+.br
+\fItexts_count\fP nombre de champs de texte 
+.br
+\fIimages_count\fP nombre d'images 
+.br
+\fIshapes_count\fP 
+.br
+\fIelement_text_count\fP 
+.br
+\fItables_count\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la proposition decrivant le nombre d'elements, de conducteurs et de textes 
+.RE
+.PP
+
+.SS "QString QET::escapeSpaces (const QString & string)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP une chaine de caracteres 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la meme chaine de caracteres, mais avec les espaces et backslashes echappes 
+.RE
+.PP
+
+.SS "QList< QDomElement > QET::findInDomElement (const QDomElement & e, const QString & tag_name)"
+
+.PP
+\fBReturns\fP
+.RS 4
+the list of \fItag_name\fP elements directly under the \fIe\fP XML element\&. 
+.RE
+.PP
+
+.SS "QList< QDomElement > QET::findInDomElement (const QDomElement & e, const QString & parent, const QString & children)"
+Etant donne un element XML e, renvoie la liste de tous les elements children imbriques dans les elements parent, eux-memes enfants de l'elememt e 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP \fBElement\fP XML a explorer 
+.br
+\fIparent\fP tag XML intermediaire 
+.br
+\fIchildren\fP tag XML a rechercher 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+La liste des elements XML children 
+.RE
+.PP
+
+.SS "QList< QChar > QET::forbiddenCharacters ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+la liste des caracteres interdits dans les noms de fichiers sous Windows 
+.RE
+.PP
+
+.SS "QString QET::joinWithSpaces (const QStringList & string_list)"
+Assemble une liste de chaines en une seule\&. Un espace separe chaque chaine\&. Les espaces et backslashes des chaines sont echappes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring_list\fP une liste de chaine 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+l'assemblage des chaines 
+.RE
+.PP
+
+.SS "QString QET::license ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+le texte de la licence de QElectroTech (GNU/GPL) 
+.RE
+.PP
+
+.SS "bool QET::lineContainsPoint (const QLineF & line, const QPointF & point)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIline\fP Un segment de droite 
+.br
+\fIpoint\fP Un point 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si le point appartient au segment de droite, false sinon 
+.RE
+.PP
+
+.SS "bool QET::orthogonalProjection (const QPointF & point, const QLineF & line, QPointF * intersection = \fCnullptr\fP)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIpoint\fP Un point donne 
+.br
+\fIline\fP Un segment de droite donnee 
+.br
+\fIintersection\fP si ce pointeur est different de 0, le QPointF ainsi designe contiendra les coordonnees du projete orthogonal, meme si celui-ci n'appartient pas au segment de droite 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si le projete orthogonal du point sur la droite appartient au segment de droite\&. 
+.RE
+.PP
+
+.SS "\fBQET::QetCollection\fP QET::qetCollectionFromString (const QString & str)"
+
+.PP
+\fBQET::qetCollectionFromString\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP string to convert 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding QetCollection value from a string\&. If the string don't match anything, we return the failsafe value QetCollection::Common 
+.RE
+.PP
+
+.SS "QString QET::qetCollectionToString (const \fBQetCollection\fP & c)"
+
+.PP
+\fBQET::qetCollectionToString\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP QetCollection value to convert 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The QetCollection enum value converted to a QString 
+.RE
+.PP
+
+.SS "qreal QET::round (qreal x, qreal epsilon)"
+Round \fIx\fP to the nearest multiple of the invert of \fIepsilon\fP\&. For instance, epsilon = 10 will round to 1/10 = 0\&.1 
+.SS "QStringList QET::splitWithSpaces (const QString & string)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Une chaine de caracteres contenant des sous-chaines a extraire separees par des espaces non echappes\&. Les espaces des sous-chaines sont echappes\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+La liste des sous-chaines, sans echappement\&. 
+.RE
+.PP
+
+.SS "QString QET::stringToFileName (const QString & name)"
+Cette fonction transforme une chaine de caracteres (typiquement : un nom de schema, de projet, d'element) en un nom de fichier potable\&. Par nom de fichier potable, on entend un nom : ne comprenant pas de caracteres interdits sous Windows ne comprenant pas d'espace 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Chaine de caractere a transformer en nom de fichier potable 
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+virer les caracteres accentues ? 
+.RE
+.PP
+
+.SS "QString QET::unescapeSpaces (const QString & string)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP une chaine de caracteres 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la meme chaine de caracteres, mais avec les espaces et backslashes non echappes 
+.RE
+.PP
+
+.SS "bool QET::writeToFile (QDomDocument & xml_doc, QFile * file, QString * error_message = \fCnullptr\fP)"
+
+.SS "bool QET::writeXmlFile (QDomDocument & xml_doc, const QString & filepath, QString * error_message = \fCnullptr\fP)"
+Export an XML document to an UTF-8 text file indented with 4 spaces, with LF end of lines and no BOM\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_doc\fP An XML document to be exported 
+.br
+\fIfilepath\fP Path to the file to be written 
+.br
+\fIerror_message\fP If non-zero, will contain an error message explaining what happened when this function returns false\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+false if an error occurred, true otherwise 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "const QString QET::displayedVersion = '0\&.80\-DEV'"
+
+.PP
+QElectroTech displayed version\&. 
+.SS "const QString QET::version = '0\&.80'"
+
+.PP
+QElectroTech version (as string, used to mark projects and elements XML documents) 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

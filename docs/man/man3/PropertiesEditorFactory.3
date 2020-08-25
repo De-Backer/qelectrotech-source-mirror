@@ -1,0 +1,65 @@
+.TH "PropertiesEditorFactory" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PropertiesEditorFactory
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPropertiesEditorWidget\fP * \fBpropertiesEditor\fP (QAbstractItemModel *model, \fBPropertiesEditorWidget\fP *editor=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBPropertiesEditorFactory::propertiesEditor\fP\&. "
+.ti -1c
+.RI "\fBPropertiesEditorWidget\fP * \fBpropertiesEditor\fP (QList< QGraphicsItem * > items, \fBPropertiesEditorWidget\fP *editor=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "propertiesEditor "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBPropertiesEditorWidget\fP * PropertiesEditorFactory::propertiesEditor (QAbstractItemModel * model, \fBPropertiesEditorWidget\fP * editor = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBPropertiesEditorFactory::propertiesEditor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodel\fP : the model to be edited 
+.br
+\fIeditor\fP : if the properties editor to be created is the same class as editor, the this function set item as edited item of editor and return editor 
+.br
+\fIparent\fP : parent widget of the returned editor 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+an editor or nullptr 
+.RE
+.PP
+
+.SS "\fBPropertiesEditorWidget\fP * PropertiesEditorFactory::propertiesEditor (QList< QGraphicsItem * > items, \fBPropertiesEditorWidget\fP * editor = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+propertiesEditor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitems\fP : The items to be edited 
+.br
+\fIeditor\fP : If the properties editor to be created is the same class as editor, then this function set item as edited item of editor and return editor 
+.br
+\fIparent\fP : parent widget of the returned editor 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+: an editor or nullptr; 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

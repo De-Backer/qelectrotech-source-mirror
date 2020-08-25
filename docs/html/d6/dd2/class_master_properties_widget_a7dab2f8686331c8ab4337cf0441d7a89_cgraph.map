@@ -1,0 +1,36 @@
+<map id="MasterPropertiesWidget::MasterPropertiesWidget" name="MasterPropertiesWidget::MasterPropertiesWidget">
+<area shape="rect" id="node1" title="MasterPropertiesWidget::MasterPropertiesWidget Default constructor." alt="" coords="5,259,176,300"/>
+<area shape="rect" id="node2" href="$d6/dd2/class_master_properties_widget.html#a95778a0df8cf4d4d68ba7f480ca0c987" title="MasterPropertiesWidget::headerCustomContextMenuRequested." alt="" coords="224,128,479,169"/>
+<area shape="rect" id="node3" href="$d6/dd2/class_master_properties_widget.html#a88c3a163e4212db8428774939adec887" title="MasterPropertiesWidget::on_link_button_clicked move curent item in the free_list to linked_list." alt="" coords="270,259,433,300"/>
+<area shape="rect" id="node25" href="$d6/dd2/class_master_properties_widget.html#a8d51006cdb5ed4519903ab9856cb1b51" title="MasterPropertiesWidget::on_unlink_button_clicked move curent item in linked_list to free_list." alt="" coords="264,193,439,235"/>
+<area shape="rect" id="node26" href="$d6/dd2/class_master_properties_widget.html#aa61de47a6c1ddbc95930035bb6c654ef" title="MasterPropertiesWidget::setElement Set the element to be edited." alt="" coords="768,317,931,359"/>
+<area shape="rect" id="node33" href="$d6/dd2/class_master_properties_widget.html#ae28676b4347a8ec6bb202ae9cf811ec1" title="MasterPropertiesWidget::showElementFromTWI Show the element corresponding to the given QTreeWidgetIte..." alt="" coords="269,376,433,417"/>
+<area shape="rect" id="node4" href="$d6/dd2/class_master_properties_widget.html#af3d277add359a9f8521bbbbfac5fa173" title="MasterPropertiesWidget::apply If link betwen edited element and other change, apply the change with a..." alt="" coords="542,193,705,235"/>
+<area shape="rect" id="node5" href="$d6/dd2/class_master_properties_widget.html#a6eb58cf23219721c74abfb56f653cea6" title="MasterPropertiesWidget::associatedUndo If link between the edited element and other change,..." alt="" coords="768,193,931,235"/>
+<area shape="rect" id="node6" href="$d6/d1a/class_link_element_command.html#a49bdbf57a5779bbea3e59c9ef9a9ad5a" title="LinkElementCommand::setLink Replace all linked elements of edited element by elements stored in eleme..." alt="" coords="1009,128,1163,169"/>
+<area shape="rect" id="node24" href="$d6/d1a/class_link_element_command.html#a44ab6921e4ebe84808cc9d03c157b92a" title="LinkElementCommand::unlinkAll Unlink all element of the edited element." alt="" coords="1009,193,1163,235"/>
+<area shape="rect" id="node7" href="$d6/d1a/class_link_element_command.html#a5d1be18d8c8105e0327069f0c64c1981" title="LinkElementCommand::setUpNewLink Update the content of m_link_after with the content of element_list...." alt="" coords="1245,160,1400,201"/>
+<area shape="rect" id="node8" href="$d6/d1a/class_link_element_command.html#a5caf6895b35eeed602c44aaf3e69d5ee" title="LinkElementCommand::isLinkable." alt="" coords="1473,160,1627,201"/>
+<area shape="rect" id="node23" href="$d5/d50/class_element.html#a81ccfa68d05b06fcfb1a05a0abd533d6" title=" " alt="" coords="1716,247,1841,274"/>
+<area shape="rect" id="node9" href="$d5/d50/class_element.html#a47b3b7b793b6482759a16268dbabf436" title=" " alt="" coords="1722,197,1835,223"/>
+<area shape="rect" id="node10" href="$d5/d50/class_element.html#a6e6dd7422b4247998b2c2dd06b6112e2" title="Element::linkedElements." alt="" coords="1696,146,1861,173"/>
+<area shape="rect" id="node11" href="$d4/dfe/element_8h.html#aefbd4becc52ac4934fb4268241ab5f50" title="comparPos Compare position of the two elements. Compare 3 points: 1 folio &#45; 2 row &#45; 3 line returns a ..." alt="" coords="1909,231,1997,258"/>
+<area shape="rect" id="node12" href="$d3/d37/class_diagram.html#a00ca50b86ab52583341ccbc8fefe9967" title="Diagram::convertPosition." alt="" coords="2048,181,2217,207"/>
+<area shape="rect" id="node20" href="$d7/db5/class_qet_graphics_item.html#af9b4e57c5ad3f5a9307a03a4310ce7b2" title=" " alt="" coords="2045,363,2220,390"/>
+<area shape="rect" id="node21" href="$d3/d37/class_diagram.html#a6fa7b30a9b91175f316ce8212c32afd6" title="Diagram::folioIndex." alt="" coords="2065,231,2200,258"/>
+<area shape="rect" id="node22" href="$dc/d20/class_diagram_position.html#a6204c673acd9167925f6c8194dcabed6" title=" " alt="" coords="2055,282,2210,309"/>
+<area shape="rect" id="node13" href="$df/d92/class_border_title_block.html#afa48dd3cfdb5bb46e4cf4e4720705211" title="BorderTitleBlock::convertPosition Convert a Point in cartesian coordinate (x : 12...." alt="" coords="2279,129,2448,171"/>
+<area shape="rect" id="node18" href="$dc/d20/class_diagram_position.html#aee22136fa026b42fb599dc402e733617" title=" " alt="" coords="2268,225,2459,251"/>
+<area shape="rect" id="node14" href="$df/d92/class_border_title_block.html#af38649a1abd3a73a7f8026382330541c" title=" " alt="" coords="2515,188,2690,229"/>
+<area shape="rect" id="node15" href="$df/d92/class_border_title_block.html#ad77b51d22f7e035a416cc3279de90bf0" title="BorderTitleBlock::incrementLetters increments string with Letters A to Z." alt="" coords="2511,5,2694,47"/>
+<area shape="rect" id="node16" href="$df/d92/class_border_title_block.html#abf6fab4e876c1d76e10b4f4bd2943aab" title="BorderTitleBlock::insideBorderRect." alt="" coords="2523,71,2683,112"/>
+<area shape="rect" id="node17" href="$df/d92/class_border_title_block.html#a92a59aec4ce6210e9d80781e770626df" title=" " alt="" coords="2507,137,2699,163"/>
+<area shape="rect" id="node19" href="$dc/d20/class_diagram_position.html#ac16f72e5a2f3081071e830dca9e0cd47" title=" " alt="" coords="2517,254,2688,281"/>
+<area shape="rect" id="node27" href="$d6/dd2/class_master_properties_widget.html#ab1b3e25d751b75b989ad377b8d943d2c" title="MasterPropertiesWidget::diagramWasdeletedFromProject This slot is called when a diagram is removed fr..." alt="" coords="979,259,1193,300"/>
+<area shape="rect" id="node28" href="$d6/dd2/class_master_properties_widget.html#aa81336b4520c1f0af5a6080619b9da41" title="MasterPropertiesWidget::updateUi Build the interface of the widget." alt="" coords="1241,299,1404,340"/>
+<area shape="rect" id="node32" href="$d3/d37/class_diagram.html#a8a2a4a08dce92d0eed86f94077e9cc84" title="Diagram::project." alt="" coords="1027,325,1145,351"/>
+<area shape="rect" id="node29" href="$d3/df5/classautonum_1_1_assign_variables.html#abf8fecd78bdaa59e34a2f7da7af6ebcf" title="AssignVariables::formulaToLabel Return the formula with variable assigned (ready to be displayed)" alt="" coords="1463,328,1637,369"/>
+<area shape="rect" id="node30" href="$df/d20/class_element_provider.html#a6a8380ee321c761b369f0fc4bb654432" title="ElementProvider::FreeElement Search and return the asked element corresponding with the given filter ..." alt="" coords="1452,277,1648,303"/>
+<area shape="rect" id="node31" href="$d3/d37/class_diagram.html#aeda483a2ff3aca3855bd627de685f525" title="Diagram::elements." alt="" coords="1713,298,1845,325"/>
+<area shape="rect" id="node34" href="$d6/dd2/class_master_properties_widget.html#a75f570368e71409d66c6ddb288d5cad0" title="MasterPropertiesWidget::showedElementWasDeleted Set to nullptr the current showed element when he was..." alt="" coords="527,376,720,417"/>
+</map>

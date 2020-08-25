@@ -1,0 +1,52 @@
+<map id="DiagramEventAddShape::mousePressEvent" name="DiagramEventAddShape::mousePressEvent">
+<area shape="rect" id="node1" title="DiagramEventAddShape::mousePressEvent Action when mouse is pressed." alt="" coords="5,945,169,987"/>
+<area shape="rect" id="node2" href="$d3/d37/class_diagram.html#ac808ccc853ae12b34660417d98354b9b" title="Diagram::addItem Réimplemented from QGraphicsScene::addItem(QGraphicsItem *item) Do some specific ope..." alt="" coords="249,750,376,777"/>
+<area shape="rect" id="node38" href="$d3/d37/class_diagram.html#ab576e6398fe6d00cd92d6bbf9300f7b6" title="Diagram::isReadOnly." alt="" coords="495,826,641,853"/>
+<area shape="rect" id="node39" href="$d1/d09/class_qet_shape_item.html#aa5552bcd9e698b5bb023de562e3b7ac3" title="QetShapeItem::setNextPoint Add a new point to the curent polygon." alt="" coords="217,927,408,954"/>
+<area shape="rect" id="node40" href="$d3/d37/class_diagram.html#aca79c4ab46b3b8d3869affb2344253e8" title="Diagram::snapToGrid Return a nearest snap point of p." alt="" coords="495,902,641,929"/>
+<area shape="rect" id="node41" href="$d1/d09/class_qet_shape_item.html#ac1f7f96eb0e150461bb532ad09c157b2" title="QetShapeItem::setP2 Set the second point of this item. If this item is a polyline,..." alt="" coords="239,978,387,1005"/>
+<area shape="rect" id="node42" href="$d1/d09/class_qet_shape_item.html#ad8e1c0b12464af458d0b5576c337fda8" title="QetShapeItem::setRect Set this item geometry to rect (only available if shape is a rectangle or an el..." alt="" coords="233,1029,392,1055"/>
+<area shape="rect" id="node47" href="$d1/d09/class_qet_shape_item.html#a9b74714b4bea1901dbf2a9b04936e398" title=" " alt="" coords="224,1079,401,1106"/>
+<area shape="rect" id="node48" href="$d3/d37/class_diagram.html#aadc97c48501180ecd35ce25a8ebf161d" title="Diagram::undoStack." alt="" coords="242,1130,383,1157"/>
+<area shape="rect" id="node3" href="$dc/d46/class_terminal.html#a377dac06e69a03135dfc1df2fad8fad1" title="Terminal::addConductor Add a conductor to this terminal." alt="" coords="488,775,648,802"/>
+<area shape="rect" id="node4" href="$d5/d7f/classproject_data_base.html#a2ce088e76015c5887728319c0e33af33" title="projectDataBase::addElement" alt="" coords="470,238,666,265"/>
+<area shape="rect" id="node19" href="$da/d7f/class_conductor.html#ab352e0bd0e048b8897ad67684d00b01a" title="Conductor::calculateTextItemPosition Move the text at middle of conductor (if is vertical or horizont..." alt="" coords="485,659,651,700"/>
+<area shape="rect" id="node37" href="$d6/dc5/class_q_e_t_project.html#a38c4778acc88e16b55913fefa48e6f5b" title="QETProject::dataBase." alt="" coords="492,725,644,751"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#a00ca50b86ab52583341ccbc8fefe9967" title="Diagram::convertPosition." alt="" coords="740,133,909,159"/>
+<area shape="rect" id="node8" href="$d7/db5/class_qet_graphics_item.html#af9b4e57c5ad3f5a9307a03a4310ce7b2" title=" " alt="" coords="1230,222,1405,249"/>
+<area shape="rect" id="node9" href="$d5/d7f/classproject_data_base.html#aae556b3bb552f359c085e10d54a6e6b1" title="projectDataBase::elementInfoToString" alt="" coords="738,340,911,381"/>
+<area shape="rect" id="node13" href="$d5/d50/class_element.html#a5ba6e350aebd61f0f52dfb8c06f7172a" title=" " alt="" coords="738,238,911,265"/>
+<area shape="rect" id="node14" href="$d5/d50/class_element.html#a0f7d00971240f5104ec6245ae25c465d" title=" " alt="" coords="738,289,911,315"/>
+<area shape="rect" id="node15" href="$dc/d20/class_diagram_position.html#a37f627cb8f0961ccd981148fd811e3ca" title=" " alt="" coords="739,82,910,109"/>
+<area shape="rect" id="node17" href="$d5/d50/class_element.html#a873eecea89b2cdb02b740beabd2e36c6" title="Element::uuid." alt="" coords="774,406,875,433"/>
+<area shape="rect" id="node18" href="$d3/d37/class_diagram.html#abb9eb4e6dbe6f6367aa644610a097ab2" title="Diagram::uuid." alt="" coords="773,31,876,58"/>
+<area shape="rect" id="node6" href="$df/d92/class_border_title_block.html#afa48dd3cfdb5bb46e4cf4e4720705211" title="BorderTitleBlock::convertPosition Convert a Point in cartesian coordinate (x : 12...." alt="" coords="982,123,1151,164"/>
+<area shape="rect" id="node7" href="$dc/d20/class_diagram_position.html#aee22136fa026b42fb599dc402e733617" title=" " alt="" coords="971,71,1162,98"/>
+<area shape="rect" id="node10" href="$d5/d50/class_element.html#acaa85efeeff7a62c5b6e0aaa5577de15" title="Element::actualLabel Always return the current label to be displayed. This function is usefull when l..." alt="" coords="995,255,1138,282"/>
+<area shape="rect" id="node11" href="$d7/df8/class_q_e_t_app.html#ac4d9d7a8ca3c7b9501d403f8028a5857" title="QETApp::elementInfoKeys." alt="" coords="979,322,1155,349"/>
+<area shape="rect" id="node12" href="$d5/d50/class_element.html#aef4d1daf654b1340b0b2e977e01c0836" title=" " alt="" coords="969,373,1164,399"/>
+<area shape="rect" id="node16" href="$dc/d20/class_diagram_position.html#a17057b857099120f43de211fce884040" title=" " alt="" coords="981,5,1152,47"/>
+<area shape="rect" id="node20" href="$da/d7f/class_conductor.html#a649d3839caef33cd2d47759f82e68a08" title="Conductor::boundingRect." alt="" coords="740,507,909,534"/>
+<area shape="rect" id="node23" href="$da/d7f/class_conductor.html#a3bc24a36dba5f211726f9524ffe48953" title=" " alt="" coords="757,853,893,879"/>
+<area shape="rect" id="node24" href="$d9/d9d/conductor_8cpp.html#a7255f2a0d5739fa13352d03e061fc893" title="longuestConductorInPotential" alt="" coords="728,609,921,635"/>
+<area shape="rect" id="node26" href="$da/d7f/class_conductor.html#a7df52a1f89a88dad4ecd531c9d02675f" title="Conductor::relatedPotentialConductors Return all conductors at the same potential of this conductor,..." alt="" coords="977,551,1157,592"/>
+<area shape="rect" id="node27" href="$da/d7f/class_conductor.html#aeba0bf998f55fd1a797b2db95822edd6" title=" " alt="" coords="738,660,911,701"/>
+<area shape="rect" id="node29" href="$da/d7f/class_conductor.html#a6f60f9f146fd142ee57b84084c843409" title="Conductor::nearShape." alt="" coords="749,726,901,753"/>
+<area shape="rect" id="node30" href="$da/d7f/class_conductor.html#ab32bd11b8874c7b45d1127c640477218" title="Conductor::posForText Calculate and return the better pos for text." alt="" coords="747,802,902,829"/>
+<area shape="rect" id="node36" href="$da/d7f/class_conductor.html#ad3546c9cc056283d1b8b64ba0660f8ab" title=" " alt="" coords="755,457,894,483"/>
+<area shape="rect" id="node21" href="$da/d7f/class_conductor.html#a9a17e0e7c33d5963b336be63133f7bd0" title="Conductor::shape." alt="" coords="1004,499,1129,526"/>
+<area shape="rect" id="node22" href="$da/d7f/class_conductor.html#a4272fa407d1088bd4f6e99c8c82a35a4" title=" " alt="" coords="1260,617,1375,643"/>
+<area shape="rect" id="node25" href="$da/d7f/class_conductor.html#a25b82af24dc6117765fb802c68422c18" title="Conductor::length." alt="" coords="1004,617,1129,643"/>
+<area shape="rect" id="node28" href="$dc/da9/namespace_q_e_t.html#a8c06162adcffa1bc992082e3fc4705a7" title=" " alt="" coords="979,667,1154,694"/>
+<area shape="rect" id="node31" href="$d2/d0c/class_conductor_segment.html#ae487262ea29ceb538015805470591d60" title=" " alt="" coords="978,885,1155,927"/>
+<area shape="rect" id="node32" href="$d2/d0c/class_conductor_segment.html#a801965b0c65b1980159543b2147038da" title=" " alt="" coords="1212,977,1423,1003"/>
+<area shape="rect" id="node33" href="$d2/d0c/class_conductor_segment.html#a5ddcdf5405e5a01ec08f8e14a33db742" title=" " alt="" coords="979,951,1155,978"/>
+<area shape="rect" id="node34" href="$d2/d0c/class_conductor_segment.html#a35228a00501c2a046076c58e4642c255" title=" " alt="" coords="977,769,1156,795"/>
+<area shape="rect" id="node35" href="$d2/d0c/class_conductor_segment.html#aeb8047230822998b478445073624bea9" title=" " alt="" coords="971,820,1162,861"/>
+<area shape="rect" id="node43" href="$d1/d09/class_qet_shape_item.html#aa9462849068688e453ba4835a20c6def" title="QetShapeItem::adjusteHandlerPos Adjust the position of the handler item." alt="" coords="456,1053,680,1079"/>
+<area shape="rect" id="node44" href="$d1/d09/class_qet_shape_item.html#ae6f97d53a66f1f211d94f92698621a67" title=" " alt="" coords="735,1075,915,1102"/>
+<area shape="rect" id="node45" href="$d2/d2c/class_qet_graphics_handler_utility.html#a9622a0398a24772a35e6c96db0a08fd5" title="QetGraphicsHandlerUtility::pointForRadiusRect." alt="" coords="979,1119,1154,1160"/>
+<area shape="rect" id="node46" href="$d2/d2c/class_qet_graphics_handler_utility.html#a8d978099db033c551fce0d92d366e3a9" title="QetGraphicsHandlerUtility::pointsForRect Return the keys points of the rectangle, stored in a vector...." alt="" coords="979,1053,1154,1095"/>
+<area shape="rect" id="node49" href="$d3/d37/class_diagram.html#a8a2a4a08dce92d0eed86f94077e9cc84" title="Diagram::project." alt="" coords="509,1157,627,1183"/>
+<area shape="rect" id="node50" href="$d6/dc5/class_q_e_t_project.html#af94030b24e669c0007caf263ae52b4b3" title=" " alt="" coords="489,1106,647,1133"/>
+</map>

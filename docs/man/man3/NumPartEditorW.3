@@ -1,0 +1,252 @@
+.TH "NumPartEditorW" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NumPartEditorW
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <numparteditorw\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBtype\fP { \fBunit\fP, \fBunitfolio\fP, \fBten\fP, \fBtenfolio\fP, \fBhundred\fP, \fBhundredfolio\fP, \fBstring\fP, \fBidfolio\fP, \fBfolio\fP, \fBplant\fP, \fBlocmach\fP, \fBelementline\fP, \fBelementcolumn\fP, \fBelementprefix\fP }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBchanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNumPartEditorW\fP (int \fBtype\fP, QWidget *parent=nullptr)"
+.br
+.RI "\fBNumPartEditorW::NumPartEditorW\fP Constructor\&. "
+.ti -1c
+.RI "\fBNumPartEditorW\fP (\fBNumerotationContext\fP &, int, int \fBtype\fP, QWidget *parent=nullptr)"
+.br
+.RI "\fBNumPartEditorW::NumPartEditorW\fP Constructor Build with value of context at position i\&. "
+.ti -1c
+.RI "\fB~NumPartEditorW\fP () override"
+.br
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBtoNumContext\fP ()"
+.br
+.RI "\fBNumPartEditorW::toNumContext\fP\&. "
+.ti -1c
+.RI "bool \fBisValid\fP ()"
+.br
+.RI "\fBNumPartEditorW::isValid\fP\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtype\fP \fBtype_\fP"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_type_cb_activated\fP (int)"
+.br
+.RI "\fBNumPartEditorW::on_type_cb_activated\fP Action when user change the type comboBox\&. "
+.ti -1c
+.RI "void \fBon_value_field_textEdited\fP ()"
+.br
+.RI "NumPartEditorW::on_value_field_textChanged emit changed when value_field text changed\&. "
+.ti -1c
+.RI "void \fBon_increase_spinBox_valueChanged\fP (int)"
+.br
+.RI "\fBNumPartEditorW::on_increase_spinBox_valueChanged\fP emit changed when increase_spinBox value changed\&. "
+.ti -1c
+.RI "void \fBsetType\fP (\fBNumPartEditorW::type\fP t, bool=false)"
+.br
+.RI "\fBNumPartEditorW::setType\fP Set good behavior by type t\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetVisibleItems\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisableItem\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBsetCurrentIndex\fP (\fBNumPartEditorW::type\fP)"
+.br
+.RI "\fBNumPartEditorW::setCurrentIndex\fP Set Current Index of type_cb\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::NumPartEditorW * \fBui\fP"
+.br
+.ti -1c
+.RI "QValidator * \fBintValidator\fP"
+.br
+.ti -1c
+.RI "int \fBm_edited_type\fP = \-1"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBNumPartEditorW::type\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIunit \fP\fP
+.TP
+\fB\fIunitfolio \fP\fP
+.TP
+\fB\fIten \fP\fP
+.TP
+\fB\fItenfolio \fP\fP
+.TP
+\fB\fIhundred \fP\fP
+.TP
+\fB\fIhundredfolio \fP\fP
+.TP
+\fB\fIstring \fP\fP
+.TP
+\fB\fIidfolio \fP\fP
+.TP
+\fB\fIfolio \fP\fP
+.TP
+\fB\fIplant \fP\fP
+.TP
+\fB\fIlocmach \fP\fP
+.TP
+\fB\fIelementline \fP\fP
+.TP
+\fB\fIelementcolumn \fP\fP
+.TP
+\fB\fIelementprefix \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NumPartEditorW::NumPartEditorW (int type, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBNumPartEditorW::NumPartEditorW\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "NumPartEditorW::NumPartEditorW (\fBNumerotationContext\fP & context, int i, int type, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBNumPartEditorW::NumPartEditorW\fP Constructor Build with value of context at position i\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontext\fP 
+.br
+\fIi\fP 
+.br
+\fItype\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "NumPartEditorW::~NumPartEditorW ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void NumPartEditorW::changed ()\fC [signal]\fP"
+
+.SS "void NumPartEditorW::disableItem (int index)\fC [private]\fP"
+
+.SS "bool NumPartEditorW::isValid ()"
+
+.PP
+\fBNumPartEditorW::isValid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if value field isn't empty or if type is folio 
+.RE
+.PP
+
+.SS "void NumPartEditorW::on_increase_spinBox_valueChanged (int)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBNumPartEditorW::on_increase_spinBox_valueChanged\fP emit changed when increase_spinBox value changed\&. 
+.SS "void NumPartEditorW::on_type_cb_activated (int)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBNumPartEditorW::on_type_cb_activated\fP Action when user change the type comboBox\&. 
+.SS "void NumPartEditorW::on_value_field_textEdited ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+NumPartEditorW::on_value_field_textChanged emit changed when value_field text changed\&. 
+.SS "void NumPartEditorW::setCurrentIndex (\fBNumPartEditorW::type\fP t)\fC [private]\fP"
+
+.PP
+\fBNumPartEditorW::setCurrentIndex\fP Set Current Index of type_cb\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIt\fP : type used 
+.RE
+.PP
+
+.SS "void NumPartEditorW::setType (\fBNumPartEditorW::type\fP t, bool fnum = \fCfalse\fP)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBNumPartEditorW::setType\fP Set good behavior by type t\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIt\fP : type used 
+.br
+\fIfnum\fP : force the behavior of numeric type 
+.RE
+.PP
+
+.SS "void NumPartEditorW::setVisibleItems ()\fC [private]\fP"
+
+.SS "\fBNumerotationContext\fP NumPartEditorW::toNumContext ()"
+
+.PP
+\fBNumPartEditorW::toNumContext\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the display to \fBNumerotationContext\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QValidator* NumPartEditorW::intValidator\fC [private]\fP"
+
+.SS "int NumPartEditorW::m_edited_type = \-1\fC [private]\fP"
+
+.SS "\fBtype\fP NumPartEditorW::type_"
+
+.SS "Ui::NumPartEditorW* NumPartEditorW::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

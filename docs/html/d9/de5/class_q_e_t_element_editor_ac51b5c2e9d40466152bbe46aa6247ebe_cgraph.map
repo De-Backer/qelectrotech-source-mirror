@@ -1,0 +1,36 @@
+<map id="QETElementEditor::slot_reload" name="QETElementEditor::slot_reload">
+<area shape="rect" id="node1" title="QETElementEditor::slot_reload Reload the element from the file or location." alt="" coords="5,486,165,527"/>
+<area shape="rect" id="node2" href="$d9/de5/class_q_e_t_element_editor.html#a4ffc7a8db5b74690f2c0ff10614e900e" title=" " alt="" coords="227,199,414,225"/>
+<area shape="rect" id="node14" href="$d9/de5/class_q_e_t_element_editor.html#a5fd8e86c805cd2eff97ac6bb1819ce6c" title="QETElementEditor::fromLocation Location of the element to edit." alt="" coords="213,493,428,520"/>
+<area shape="rect" id="node34" href="$d4/dad/namespace_q_e_t_1_1_qet_message_box.html#a8473717dd3ffb571ec0ad1b9fe82d1ef" title=" " alt="" coords="245,545,397,586"/>
+<area shape="rect" id="node3" href="$d4/dad/namespace_q_e_t_1_1_qet_message_box.html#aea0b231af3718d03172aee0e1923859a" title=" " alt="" coords="507,221,659,262"/>
+<area shape="rect" id="node4" href="$d7/df8/class_q_e_t_app.html#a13e42ea941e53f93a3c982d32491f622" title="QETApp::elementsRecentFiles." alt="" coords="482,68,683,95"/>
+<area shape="rect" id="node5" href="$d9/de5/class_q_e_t_element_editor.html#ac353b4f772efc33c56fd8c964ec66fa8" title=" " alt="" coords="476,17,689,44"/>
+<area shape="rect" id="node7" href="$d9/de5/class_q_e_t_element_editor.html#aeeed0bf113baeb2160a58d3d784a86d8" title=" " alt="" coords="738,269,953,296"/>
+<area shape="rect" id="node8" href="$d9/de5/class_q_e_t_element_editor.html#aa8e95aa54f6a048d4c263623246c6b71" title=" " alt="" coords="1033,262,1193,303"/>
+<area shape="rect" id="node12" href="$d9/de5/class_q_e_t_element_editor.html#a78871d3acbfcb25dd8b5273e289b40a8" title=" " alt="" coords="503,286,663,327"/>
+<area shape="rect" id="node13" href="$d4/dad/namespace_q_e_t_1_1_qet_message_box.html#a101c69ea80bf5a90a3e5556c883285d7" title=" " alt="" coords="507,351,659,393"/>
+<area shape="rect" id="node6" href="$d9/de5/class_q_e_t_element_editor.html#ab77a6ef16b79400ad623ce4eb50c715f" title=" " alt="" coords="1009,5,1216,32"/>
+<area shape="rect" id="node10" href="$d9/de5/class_q_e_t_element_editor.html#a2b96e825abbde3388d85ed8e08d529fa" title=" " alt="" coords="765,53,925,94"/>
+<area shape="rect" id="node9" href="$d2/d17/class_element_scene.html#aee8c8d6475aa50a773bbac1346de9107" title="ElementScene::clipboardMayContainElement." alt="" coords="1277,262,1469,303"/>
+<area shape="rect" id="node11" href="$d5/dd7/class_elements_location.html#a0d81e7b444878d63aba9bbaaf5d6fa20" title="ElementsLocation::isNull." alt="" coords="1029,60,1196,87"/>
+<area shape="rect" id="node15" href="$d5/dd7/class_elements_location.html#acfded834f9b1e5b0fc2b0933a107ff1e" title="ElementsLocation::exist." alt="" coords="501,747,664,773"/>
+<area shape="rect" id="node23" href="$d5/dd7/class_elements_location.html#a45f9e8dbe179a42f73a8ea0625bddc7e" title="ElementsLocation::isElement." alt="" coords="1017,772,1209,799"/>
+<area shape="rect" id="node24" href="$d5/dd7/class_elements_location.html#a52e18c44080a407413fcf852ae3665f6" title="ElementsLocation::isWritable." alt="" coords="750,544,941,571"/>
+<area shape="rect" id="node29" href="$d9/de5/class_q_e_t_element_editor.html#ab6564593bb3981a7265ed76e8c23aa29" title=" " alt="" coords="491,569,675,596"/>
+<area shape="rect" id="node30" href="$d9/de5/class_q_e_t_element_editor.html#a0878373a864a7708485b391c4a134638" title="QETElementEditor::setLocation The new location to edit." alt="" coords="479,468,686,495"/>
+<area shape="rect" id="node31" href="$d5/dd7/class_elements_location.html#a00a4e9b223af42e8350f3d823d0dddc4" title="ElementsLocation::xml." alt="" coords="505,980,660,1007"/>
+<area shape="rect" id="node16" href="$d5/dd7/class_elements_location.html#af60688342bf5c70c8619e77c5f6232e0" title="ElementsLocation::collectionPath Return the path of the represented element relative to collection if..." alt="" coords="737,645,953,672"/>
+<area shape="rect" id="node18" href="$d6/dc5/class_q_e_t_project.html#a6e182aa14ce7c48753e6be355ebbdb5f" title="QETProject::embeddedCollection." alt="" coords="743,914,948,955"/>
+<area shape="rect" id="node19" href="$df/dd9/class_xml_element_collection.html#a7f27796160cb849693b029979c0d5eaf" title="XmlElementCollection::exist Return true if the path path exist in this collection." alt="" coords="770,849,921,890"/>
+<area shape="rect" id="node21" href="$d5/dd7/class_elements_location.html#a5d08aed111ae277d92d65193d496e0d8" title="ElementsLocation::fileSystemPath." alt="" coords="1001,595,1224,621"/>
+<area shape="rect" id="node22" href="$d5/dd7/class_elements_location.html#a86f6d84916123008ed9b90dac81eeda5" title="ElementsLocation::isDirectory." alt="" coords="746,797,945,824"/>
+<area shape="rect" id="node17" href="$d5/dd7/class_elements_location.html#ac46aeb57416fc91e16266fc937a02810" title="ElementsLocation::path." alt="" coords="1033,645,1192,672"/>
+<area shape="rect" id="node20" href="$df/dd9/class_xml_element_collection.html#a5cb901cc25363fdd9e5f8e77661f49d3" title="XmlElementCollection::child If parent_element have child element with an attribute name = child_name,..." alt="" coords="1037,1031,1188,1073"/>
+<area shape="rect" id="node25" href="$d7/df8/class_q_e_t_app.html#aa1d76144001acd7736b11f78b0dee649" title="QETApp::commonElementsDirN like QString QETApp::commonElementsDir but without &quot;/&quot; at the end." alt="" coords="1007,544,1218,571"/>
+<area shape="rect" id="node27" href="$d5/dd7/class_elements_location.html#a9bb48a1e0d52bec51f37b8df599c51fe" title="ElementsLocation::isFileSystem." alt="" coords="1030,427,1195,469"/>
+<area shape="rect" id="node28" href="$d6/dc5/class_q_e_t_project.html#aae99a71249123116c24ea5d8e435de71" title="QETProject::isReadOnly." alt="" coords="1031,493,1195,520"/>
+<area shape="rect" id="node26" href="$d7/df8/class_q_e_t_app.html#a63b7129a16de541f941e880e4c82e0b4" title="QETApp::commonElementsDir." alt="" coords="1272,544,1473,571"/>
+<area shape="rect" id="node32" href="$df/dd9/class_xml_element_collection.html#a21d7a45d847c560734ee73ca5dd9c3d3" title="XmlElementCollection::directory." alt="" coords="770,1031,921,1073"/>
+<area shape="rect" id="node33" href="$df/dd9/class_xml_element_collection.html#acd7dcecea45b62258579598d3782610d" title="XmlElementCollection::element." alt="" coords="770,1097,921,1138"/>
+</map>

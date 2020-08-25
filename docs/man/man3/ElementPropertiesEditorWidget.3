@@ -1,0 +1,143 @@
+.TH "ElementPropertiesEditorWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementPropertiesEditorWidget \- The \fBElementPropertiesEditorWidget\fP class This class provide a dialog for edit various property of element, like the type (master, slave, report etc\&.\&.\&.\&.) and kind info\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementpropertieseditorwidget\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementPropertiesEditorWidget\fP (QString &basic_type, \fBDiagramContext\fP &kind_info, \fBDiagramContext\fP &elmt_info, QWidget *parent=nullptr)"
+.br
+.RI "\fBElementPropertiesEditorWidget::ElementPropertiesEditorWidget\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~ElementPropertiesEditorWidget\fP () override"
+.br
+.RI "\fBElementPropertiesEditorWidget::~ElementPropertiesEditorWidget\fP Default destructor\&. "
+.ti -1c
+.RI "void \fBupDateInterface\fP ()"
+.br
+.RI "\fBElementPropertiesEditorWidget::upDateInterface\fP Update the interface with the curent value\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_buttonBox_accepted\fP ()"
+.br
+.RI "\fBElementPropertiesEditorWidget::on_m_buttonBox_accepted\fP Action on button accepted : the new information is set\&. "
+.ti -1c
+.RI "void \fBon_m_base_type_cb_currentIndexChanged\fP (int index)"
+.br
+.RI "\fBElementPropertiesEditorWidget::on_m_base_type_cb_currentIndexChanged\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpInterface\fP ()"
+.br
+.RI "\fBElementPropertiesEditorWidget::setUpInterface\fP\&. "
+.ti -1c
+.RI "void \fBupdateTree\fP ()"
+.br
+.ti -1c
+.RI "void \fBpopulateTree\fP ()"
+.br
+.RI "\fBElementPropertiesEditorWidget::populateTree\fP Create QTreeWidgetItem of the tree widget and populate it\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ElementPropertiesEditorWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "QString & \fBm_basic_type\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP & \fBm_kind_info\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP & \fBm_elmt_info\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementPropertiesEditorWidget\fP class This class provide a dialog for edit various property of element, like the type (master, slave, report etc\&.\&.\&.\&.) and kind info\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementPropertiesEditorWidget::ElementPropertiesEditorWidget (QString & basic_type, \fBDiagramContext\fP & kind_info, \fBDiagramContext\fP & elmt_info, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBElementPropertiesEditorWidget::ElementPropertiesEditorWidget\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbasic_type\fP : QString of the drawed element 
+.br
+\fIkind_info\fP : \fBDiagramContext\fP to store kindInfo of drawed element 
+.br
+\fIelmt_info\fP : the information of element (label, manufacturer etc\&.\&.\&.] 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "ElementPropertiesEditorWidget::~ElementPropertiesEditorWidget ()\fC [override]\fP"
+
+.PP
+\fBElementPropertiesEditorWidget::~ElementPropertiesEditorWidget\fP Default destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementPropertiesEditorWidget::on_m_base_type_cb_currentIndexChanged (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementPropertiesEditorWidget::on_m_base_type_cb_currentIndexChanged\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP : Action when combo-box base type index change 
+.RE
+.PP
+
+.SS "void ElementPropertiesEditorWidget::on_m_buttonBox_accepted ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementPropertiesEditorWidget::on_m_buttonBox_accepted\fP Action on button accepted : the new information is set\&. 
+.SS "void ElementPropertiesEditorWidget::populateTree ()\fC [private]\fP"
+
+.PP
+\fBElementPropertiesEditorWidget::populateTree\fP Create QTreeWidgetItem of the tree widget and populate it\&. 
+.SS "void ElementPropertiesEditorWidget::setUpInterface ()\fC [private]\fP"
+
+.PP
+\fBElementPropertiesEditorWidget::setUpInterface\fP\&. 
+.SS "void ElementPropertiesEditorWidget::upDateInterface ()"
+
+.PP
+\fBElementPropertiesEditorWidget::upDateInterface\fP Update the interface with the curent value\&. 
+.SS "void ElementPropertiesEditorWidget::updateTree ()\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString& ElementPropertiesEditorWidget::m_basic_type\fC [private]\fP"
+
+.SS "\fBDiagramContext\fP & ElementPropertiesEditorWidget::m_elmt_info\fC [private]\fP"
+
+.SS "\fBDiagramContext\fP& ElementPropertiesEditorWidget::m_kind_info\fC [private]\fP"
+
+.SS "Ui::ElementPropertiesEditorWidget* ElementPropertiesEditorWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

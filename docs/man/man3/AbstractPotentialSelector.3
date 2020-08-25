@@ -1,0 +1,87 @@
+.TH "AbstractPotentialSelector" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AbstractPotentialSelector
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <potentialselectordialog\&.h>\fP
+.PP
+Inherited by \fBLinkReportPotentialSelector\fP, and \fBNewConductorPotentialSelector\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAbstractPotentialSelector\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~AbstractPotentialSelector\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBisValid\fP () const =0"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP \fBm_seq_num_1\fP"
+.br
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP \fBm_seq_num_2\fP"
+.br
+.ti -1c
+.RI "int \fBm_conductor_number_1\fP"
+.br
+.ti -1c
+.RI "int \fBm_conductor_number_2\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductorProperties\fP > \fBm_properties_list_1\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductorProperties\fP > \fBm_properties_list_2\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBm_conductors_list_1\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBm_conductors_list_2\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AbstractPotentialSelector::AbstractPotentialSelector ()\fC [inline]\fP"
+
+.SS "virtual AbstractPotentialSelector::~AbstractPotentialSelector ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool AbstractPotentialSelector::isValid () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBLinkReportPotentialSelector\fP, and \fBNewConductorPotentialSelector\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int AbstractPotentialSelector::m_conductor_number_1"
+
+.SS "int AbstractPotentialSelector::m_conductor_number_2"
+
+.SS "QList<\fBConductor\fP *> AbstractPotentialSelector::m_conductors_list_1"
+
+.SS "QList<\fBConductor\fP *> AbstractPotentialSelector::m_conductors_list_2"
+
+.SS "QList<\fBConductorProperties\fP> AbstractPotentialSelector::m_properties_list_1"
+
+.SS "QList<\fBConductorProperties\fP> AbstractPotentialSelector::m_properties_list_2"
+
+.SS "\fBautonum::sequentialNumbers\fP AbstractPotentialSelector::m_seq_num_1"
+
+.SS "\fBautonum::sequentialNumbers\fP AbstractPotentialSelector::m_seq_num_2"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

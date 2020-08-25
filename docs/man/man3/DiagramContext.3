@@ -1,0 +1,304 @@
+.TH "DiagramContext" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramContext
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcontext\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBKeyOrder\fP { \fBNone\fP, \fBAlphabetical\fP, \fBDecreasingLength\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBadd\fP (\fBDiagramContext\fP other)"
+.br
+.RI "\fBDiagramContext::add\fP Add all value of other to this\&. If a key already exist, the value is replaced\&. If a key doesn't exist, she will be added\&. All other keys of this context, which are not present in other, stay unchanged\&. "
+.ti -1c
+.RI "void \fBremove\fP (const QString &key)"
+.br
+.RI "\fBDiagramContext::remove\fP\&. "
+.ti -1c
+.RI "QList< QString > \fBkeys\fP (\fBKeyOrder\fP=\fBNone\fP) const"
+.br
+.ti -1c
+.RI "bool \fBcontains\fP (const QString &) const"
+.br
+.ti -1c
+.RI "const QVariant \fBoperator[]\fP (const QString &) const"
+.br
+.ti -1c
+.RI "bool \fBaddValue\fP (const QString &, const QVariant &, bool show=true)"
+.br
+.ti -1c
+.RI "QVariant \fBvalue\fP (const QString &key) const"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "int \fBcount\fP ()"
+.br
+.ti -1c
+.RI "bool \fBkeyMustShow\fP (const QString &) const"
+.br
+.RI "\fBDiagramContext::keyMustShow\fP\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBDiagramContext\fP &) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBDiagramContext\fP &) const"
+.br
+.ti -1c
+.RI "void \fBtoXml\fP (QDomElement &, const QString &='property') const"
+.br
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &, const QString &='property')"
+.br
+.ti -1c
+.RI "void \fBfromXml\fP (const pugi::xml_node &dom_element, const QString &tag_name='property')"
+.br
+.RI "\fBDiagramContext::fromXml\fP Read this context properties from the dom_element, looking for tags named tag_name\&. "
+.ti -1c
+.RI "void \fBtoSettings\fP (QSettings &, const QString &) const"
+.br
+.ti -1c
+.RI "void \fBfromSettings\fP (QSettings &, const QString &)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBvalidKeyRegExp\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBkeyIsAcceptable\fP (const QString &) const"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBstringLongerThan\fP (const QString &, const QString &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QHash< QString, QVariant > \fBm_content\fP"
+.br
+.RI "\fBDiagram\fP context data (key/value pairs) "
+.ti -1c
+.RI "QHash< QString, bool > \fBm_content_show\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a diagram context, i\&.e\&. the data (a list of key/value pairs) of a diagram at a given time\&. It is notably used by titleblock templates to fetch the informations they need to do their rendering, or element for retrieve information about itself Key for element : label -> label or identification of element formula -> formula used to create the label (formula is make with variable) designation -> exhaustive comment used to explain what the element does\&. description -> exhaustive description used to explain what the element does\&. plant -> the plant assigned to the element comment -> a little comment wich can be displayed in the folio manufacturer -> the manufacturer of the element manufacturer_reference -> the manufacturer reference of the element quantity -> quantity of the element unity -> unity of the element auxiliary1 -> auxiliary 1 of element auxiliary2 -> auxiliary 2 of element machine_manufacturer_reference -> reference of the machine manufacturer supplier -> the supplier of the element function -> the function of element location -> the location assigned to the element frozenLabel -> label locked at a given time 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBDiagramContext::KeyOrder\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINone \fP\fP
+.TP
+\fB\fIAlphabetical \fP\fP
+.TP
+\fB\fIDecreasingLength \fP\fP
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramContext::add (\fBDiagramContext\fP other)"
+
+.PP
+\fBDiagramContext::add\fP Add all value of other to this\&. If a key already exist, the value is replaced\&. If a key doesn't exist, she will be added\&. All other keys of this context, which are not present in other, stay unchanged\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+
+.SS "bool DiagramContext::addValue (const QString & key, const QVariant & value, bool show = \fCtrue\fP)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP key to insert in the context - the key may only contain lowercase letters and dashes\&. If embedded key is set, key must be find it else value is not added\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBDiagramContext::keyIsAcceptable()\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP value to insert in the context 
+.br
+\fIshow\fP if value is used to be show on the diagram or somewhere else, we can specify if he is show(true) or not(false) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the insertion succeeds, false otherwise 
+.RE
+.PP
+
+.SS "void DiagramContext::clear ()"
+Clear the content of this diagram context\&. 
+.SS "bool DiagramContext::contains (const QString & key) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP string key 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if that key is known to the diagram context, false otherwise 
+.RE
+.PP
+
+.SS "int DiagramContext::count ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+the number of key/value pairs stored in this object\&. 
+.RE
+.PP
+
+.SS "void DiagramContext::fromSettings (QSettings & settings, const QString & array_name)"
+Read this context properties from \fIsettings\fP by running through the array named \fIarray_name\fP\&. 
+.SS "void DiagramContext::fromXml (const pugi::xml_node & dom_element, const QString & tag_name = \fC'property'\fP)"
+
+.PP
+\fBDiagramContext::fromXml\fP Read this context properties from the dom_element, looking for tags named tag_name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_element\fP : dom element to parse 
+.br
+\fItag_name\fP : tag name to find, by default 'property' 
+.RE
+.PP
+
+.SS "void DiagramContext::fromXml (const QDomElement & e, const QString & tag_name = \fC'property'\fP)"
+Read this context properties from the \fIe\fP XML element, looking for tags named \fItag_name\fP (defaults to 'property')\&. 
+.SS "bool DiagramContext::keyIsAcceptable (const QString & key) const\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP a key string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if that key is acceptable, false otherwise 
+.RE
+.PP
+
+.SS "bool DiagramContext::keyMustShow (const QString & key) const"
+
+.PP
+\fBDiagramContext::keyMustShow\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the value pairs with key, if key no found, return false 
+.RE
+.PP
+
+.SS "QList< QString > DiagramContext::keys (\fBDiagramContext::KeyOrder\fP order = \fC\fBNone\fP\fP) const"
+
+.PP
+\fBReturns\fP
+.RS 4
+a list containing all the keys in the context object\&. 
+.RE
+.PP
+
+.SS "bool DiagramContext::operator!= (const \fBDiagramContext\fP & dc) const"
+
+.SS "bool DiagramContext::operator== (const \fBDiagramContext\fP & dc) const"
+
+.SS "const QVariant DiagramContext::operator[] (const QString & key) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+
+.SS "void DiagramContext::remove (const QString & key)"
+
+.PP
+\fBDiagramContext::remove\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+
+.SS "bool DiagramContext::stringLongerThan (const QString & a, const QString & b)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+True if \fIa\fP is longer than \fIb\fP, false otherwise\&. 
+.RE
+.PP
+
+.SS "void DiagramContext::toSettings (QSettings & settings, const QString & array_name) const"
+Export this context properties to \fIsettings\fP by creating an array named \fIarray_name\fP\&. 
+.SS "void DiagramContext::toXml (QDomElement & e, const QString & tag_name = \fC'property'\fP) const"
+Export this context properties under the \fIe\fP XML element, using tags named \fItag_name\fP (defaults to 'property')\&. 
+.SS "QString DiagramContext::validKeyRegExp ()\fC [static]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the regular expression used to check whether a given key is acceptable\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBkeyIsAcceptable()\fP 
+.RE
+.PP
+
+.SS "QVariant DiagramContext::value (const QString & key) const"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QHash<QString, QVariant> DiagramContext::m_content\fC [private]\fP"
+
+.PP
+\fBDiagram\fP context data (key/value pairs) 
+.SS "QHash<QString, bool> DiagramContext::m_content_show\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

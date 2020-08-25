@@ -1,0 +1,21 @@
+<map id="ElementScene::snapToGrid" name="ElementScene::snapToGrid">
+<area shape="rect" id="node1" title="ElementScene::snapToGrid Rounds the coordinates of the point passed as a parameter so that this point..." alt="" coords="519,405,700,431"/>
+<area shape="rect" id="node2" href="$d8/d2a/class_part_ellipse.html#addba4d27eac5d8d1f1dad69501f15e47" title="PartEllipse::handlerMouseMoveEvent." alt="" coords="274,5,449,47"/>
+<area shape="rect" id="node4" href="$d6/dca/class_part_arc.html#a108527be86c22a232ad2c4afcb4654c9" title="PartArc::handlerMouseMoveEvent." alt="" coords="268,71,455,112"/>
+<area shape="rect" id="node6" href="$d3/df0/class_part_rectangle.html#a90d344205c3cbeec8e3e62e6de25e11d" title="PartRectangle::handlerMouseMoveEvent." alt="" coords="264,136,459,177"/>
+<area shape="rect" id="node8" href="$d0/d48/class_part_polygon.html#ade5bbe8ff98324c77f3ae6728ed2802e" title="PartPolygon::handlerMouseMoveEvent." alt="" coords="270,201,453,243"/>
+<area shape="rect" id="node10" href="$dd/d2f/class_part_line.html#a834ea9f2a369c7f0ee789bc240f3afac" title="PartLine::handlerMouseMoveEvent." alt="" coords="266,267,457,308"/>
+<area shape="rect" id="node12" href="$d0/d25/class_e_s_event_add_rect.html#a622f6edcf48cce5a8c40f02bcd661ba0" title="ESEventAddRect::mouseMoveEvent." alt="" coords="261,332,461,373"/>
+<area shape="rect" id="node13" href="$dc/d51/class_e_s_event_add_dynamic_text_field.html#a3152ed2c9d0f08927d3a8427843e7ca2" title="ESEventAddDynamicTextField::mouseMoveEvent." alt="" coords="261,397,462,439"/>
+<area shape="rect" id="node14" href="$d2/d17/class_element_scene.html#a06d8730a15d1421d2b951d51a39ddf72" title="ElementScene::mouseMoveEvent." alt="" coords="252,463,471,490"/>
+<area shape="rect" id="node15" href="$d0/d25/class_e_s_event_add_rect.html#a6926b1168c3975fe3920b775057b4b26" title="ESEventAddRect::mousePressEvent." alt="" coords="260,515,463,556"/>
+<area shape="rect" id="node16" href="$d0/dd1/class_e_s_event_add_arc.html#ac7bef35b7bbbf20eda4851d5855b0796" title="ESEventAddPolygon::mousePressEvent." alt="" coords="263,580,460,621"/>
+<area shape="rect" id="node17" href="$df/d12/class_e_s_event_add_polygon.html#aad20151b10c866440080eb06f24b53ad" title="ESEventAddPolygon::mousePressEvent." alt="" coords="286,645,437,687"/>
+<area shape="rect" id="node18" href="$d7/d44/class_e_s_event_add_ellipse.html#afcba4e276955d6ea13e1999be309dd24" title="ESEventAddEllipse::mousePressEvent." alt="" coords="290,711,433,752"/>
+<area shape="rect" id="node19" href="$dc/d51/class_e_s_event_add_dynamic_text_field.html#a45468bc5078060f8017ba32dc9a3d5c6" title="ESEventAddDynamicTextField::mouseReleaseEvent." alt="" coords="261,776,462,817"/>
+<area shape="rect" id="node3" href="$d8/d2a/class_part_ellipse.html#a93a697ff43f6fd97ad29d4c6ec7461df" title="PartEllipse::sceneEventFilter." alt="" coords="9,13,200,39"/>
+<area shape="rect" id="node5" href="$d6/dca/class_part_arc.html#a29994882509d8fb116c3389fb228a371" title="PartArc::sceneEventFilter." alt="" coords="19,78,191,105"/>
+<area shape="rect" id="node7" href="$d3/df0/class_part_rectangle.html#ae5d56aa9e1ece753029f60ebd68d793f" title="PartRectangle::sceneEventFilter." alt="" coords="14,136,195,177"/>
+<area shape="rect" id="node9" href="$d0/d48/class_part_polygon.html#a182dcd5d77d502171cc53572b05ecb8c" title="PartPolygon::sceneEventFilter." alt="" coords="5,209,204,235"/>
+<area shape="rect" id="node11" href="$dd/d2f/class_part_line.html#ac318087c3c7e30769949c72d548bf168" title="PartLine::sceneEventFilter." alt="" coords="17,274,193,301"/>
+</map>

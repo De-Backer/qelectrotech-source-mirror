@@ -1,0 +1,116 @@
+.TH "ConductorPropertiesDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConductorPropertiesDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductorpropertiesdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorPropertiesDialog\fP (\fBConductor\fP *conductor, QWidget *parent=nullptr)"
+.br
+.RI "\fBConductorPropertiesDialog::ConductorPropertiesDialog\fP Constructor\&. "
+.ti -1c
+.RI "\fB~ConductorPropertiesDialog\fP () override"
+.br
+.RI "\fBConductorPropertiesDialog::~ConductorPropertiesDialog\fP\&. "
+.ti -1c
+.RI "\fBConductorProperties\fP \fBproperties\fP () const"
+.br
+.RI "\fBConductorPropertiesDialog::properties\fP\&. "
+.ti -1c
+.RI "bool \fBapplyAll\fP () const"
+.br
+.RI "\fBConductorPropertiesDialog::applyAll\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBPropertiesDialog\fP (\fBConductor\fP *conductor, QWidget *parent=nullptr)"
+.br
+.RI "\fBConductorPropertiesDialog::PropertiesDialog\fP Static method for open and apply properties\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ConductorPropertiesDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBConductorPropertiesWidget\fP * \fBm_cpw\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConductorPropertiesDialog::ConductorPropertiesDialog (\fBConductor\fP * conductor, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBConductorPropertiesDialog::ConductorPropertiesDialog\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP : conductor to edit propertie 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "ConductorPropertiesDialog::~ConductorPropertiesDialog ()\fC [override]\fP"
+
+.PP
+\fBConductorPropertiesDialog::~ConductorPropertiesDialog\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ConductorPropertiesDialog::applyAll () const"
+
+.PP
+\fBConductorPropertiesDialog::applyAll\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true -> must apply the propertie to all conductor at the same potential false -> must apply properties only for the edited conductor 
+.RE
+.PP
+
+.SS "\fBConductorProperties\fP ConductorPropertiesDialog::properties () const"
+
+.PP
+\fBConductorPropertiesDialog::properties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the edited properties 
+.RE
+.PP
+
+.SS "void ConductorPropertiesDialog::PropertiesDialog (\fBConductor\fP * conductor, QWidget * parent = \fCnullptr\fP)\fC [static]\fP"
+
+.PP
+\fBConductorPropertiesDialog::PropertiesDialog\fP Static method for open and apply properties\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP : conductor to edit propertie 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBConductorPropertiesWidget\fP* ConductorPropertiesDialog::m_cpw\fC [private]\fP"
+
+.SS "Ui::ConductorPropertiesDialog* ConductorPropertiesDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

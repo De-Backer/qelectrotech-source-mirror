@@ -1,0 +1,87 @@
+.TH "ImportElementTextPattern" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ImportElementTextPattern
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementtextpattern\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBImportElementTextPattern\fP (\fBElement\fP *elmt)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QString \fBgetName\fP (const QStringList &list, bool *ok, bool *erase) const"
+.br
+.RI "\fBImportElementTextPattern::getName\fP Open a dialog to let user select a conf\&. "
+.ti -1c
+.RI "QWidget * \fBparentWidget\fP () const"
+.br
+.ti -1c
+.RI "void \fBapply\fP (QString name, bool erase=false) const"
+.br
+.RI "\fBImportElementTextPattern::apply\fP Apply the user choice\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElement\fP * \fBm_element\fP = nullptr"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ImportElementTextPattern::ImportElementTextPattern (\fBElement\fP * elmt)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ImportElementTextPattern::apply (QString name, bool erase = \fCfalse\fP) const\fC [private]\fP"
+
+.PP
+\fBImportElementTextPattern::apply\fP Apply the user choice\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP : the name of the selected pattern 
+.br
+\fIerase\fP : erase the existing texts and groups of element\&. 
+.RE
+.PP
+
+.SS "QString ImportElementTextPattern::getName (const QStringList & list, bool * ok, bool * erase) const\fC [private]\fP"
+
+.PP
+\fBImportElementTextPattern::getName\fP Open a dialog to let user select a conf\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlist\fP 
+.br
+\fIok\fP 
+.br
+\fIerase\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QWidget * ImportElementTextPattern::parentWidget () const\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElement\fP* ImportElementTextPattern::m_element = nullptr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

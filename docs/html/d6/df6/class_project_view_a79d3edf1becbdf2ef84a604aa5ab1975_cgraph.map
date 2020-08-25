@@ -1,0 +1,52 @@
+<map id="ProjectView::setProject" name="ProjectView::setProject">
+<area shape="rect" id="node1" title="ProjectView::setProject Set the project display by the project view." alt="" coords="5,1210,164,1237"/>
+<area shape="rect" id="node2" href="$d6/dc5/class_q_e_t_project.html#a9d1de6d97c0e283b0ec972176f27d422" title="QETProject::addNewDiagram Add a new diagram in project at position pos." alt="" coords="212,937,407,963"/>
+<area shape="rect" id="node36" href="$d6/df6/class_project_view.html#a22af99ca069e44ef581f5bd10a3c93b7" title=" " alt="" coords="214,1203,405,1244"/>
+<area shape="rect" id="node37" href="$d6/df6/class_project_view.html#a590ff876e299345da58b33fcf36554b1" title="ProjectView::updateWindowTitle Update the project view title." alt="" coords="467,1144,653,1185"/>
+<area shape="rect" id="node38" href="$d6/df6/class_project_view.html#a899319c2b6ea33ff945ab6b8759b2a38" title="ProjectView::loadDiagrams Load diagrams of project. We create a diagram view for each diagram,..." alt="" coords="220,1387,399,1414"/>
+<area shape="rect" id="node50" href="$d6/df6/class_project_view.html#a9d34c2b0e40f9bfc877bab3bcc57586a" title=" " alt="" coords="240,1438,379,1465"/>
+<area shape="rect" id="node3" href="$d6/dc5/class_q_e_t_project.html#ae0a665031afdee208609327d787dc3b1" title="QETProject::addDiagram Add a diagram in this project." alt="" coords="477,962,643,989"/>
+<area shape="rect" id="node12" href="$d6/dc5/class_q_e_t_project.html#ae5044dca70341ec110e84b738952d05e" title="DEFAULT PROPERTIES." alt="" coords="473,1013,647,1055"/>
+<area shape="rect" id="node13" href="$d6/dc5/class_q_e_t_project.html#ab0d498e1b398969630cd569ca7535f80" title=" " alt="" coords="462,1079,658,1120"/>
+<area shape="rect" id="node14" href="$d6/dc5/class_q_e_t_project.html#a0ee151a44be349d43417695fcaa6a88c" title=" " alt="" coords="479,221,641,263"/>
+<area shape="rect" id="node15" href="$df/d92/class_border_title_block.html#a32a8794d18eca27cc627f2c4027250c6" title="BorderTitleBlock::importBorder." alt="" coords="479,287,641,328"/>
+<area shape="rect" id="node24" href="$df/d92/class_border_title_block.html#a6a937fb3d147ca6b76ad52fcac040c05" title="BorderTitleBlock::importTitleBlock." alt="" coords="479,769,641,811"/>
+<area shape="rect" id="node35" href="$d6/dc5/class_q_e_t_project.html#aae99a71249123116c24ea5d8e435de71" title="QETProject::isReadOnly." alt="" coords="478,911,642,938"/>
+<area shape="rect" id="node4" href="$d5/d7f/classproject_data_base.html#a87e36426b802049610db0d2bdbf9f8a0" title=" " alt="" coords="715,1038,913,1065"/>
+<area shape="rect" id="node8" href="$d6/dc5/class_q_e_t_project.html#a113392389e518c47bd1a5bd797b9f109" title=" " alt="" coords="718,1089,910,1131"/>
+<area shape="rect" id="node11" href="$d6/dc5/class_q_e_t_project.html#a9d544ae13f012979a6ea2dfa74eb1d67" title=" " alt="" coords="723,1155,905,1196"/>
+<area shape="rect" id="node5" href="$d7/df8/class_q_e_t_app.html#a6dcf05d56c1e351444a481c30a57bb3a" title="QETApp::diagramInfoKeys." alt="" coords="964,979,1140,1006"/>
+<area shape="rect" id="node6" href="$df/d92/class_border_title_block.html#a137662075a0bdae6801b05eb9b538745" title="BorderTitleBlock::titleblockInformation." alt="" coords="963,1031,1141,1072"/>
+<area shape="rect" id="node7" href="$d3/d37/class_diagram.html#abb9eb4e6dbe6f6367aa644610a097ab2" title="Diagram::uuid." alt="" coords="1001,929,1103,955"/>
+<area shape="rect" id="node9" href="$db/dfb/class_diagram_context.html#a523b81ff2dfbcf73e304a55ccdc58c1b" title=" " alt="" coords="963,1147,1141,1174"/>
+<area shape="rect" id="node10" href="$d6/dc5/class_q_e_t_project.html#a5bd24c3f623183ebf6f8f964118d2e6b" title=" " alt="" coords="981,1097,1123,1123"/>
+<area shape="rect" id="node16" href="$df/d92/class_border_title_block.html#a4c31aa3f4003d6c5cfb4efacbfa6c512" title="BorderTitleBlock::displayColumns." alt="" coords="731,5,897,47"/>
+<area shape="rect" id="node17" href="$df/d92/class_border_title_block.html#ad7f79c50edd4c943368caf3a43829d2b" title="BorderTitleBlock::displayRows." alt="" coords="713,71,915,98"/>
+<area shape="rect" id="node18" href="$df/d92/class_border_title_block.html#a99592b672eabb626322afd8d123c6cbc" title="BorderTitleBlock::setColumnsCount Allows you to change the number of columns. If this number of colum..." alt="" coords="716,123,912,164"/>
+<area shape="rect" id="node19" href="$df/d92/class_border_title_block.html#a6320e811c305fcb602922aed8bb86c9d" title="BorderTitleBlock::setColumnsHeaderHeight Change the height of the headers containing the column numbe..." alt="" coords="716,188,912,229"/>
+<area shape="rect" id="node20" href="$df/d92/class_border_title_block.html#a300797fce97fab966a763f480b683e7f" title="BorderTitleBlock::setColumnsWidth Change the width of the columns. If the width indicated is less tha..." alt="" coords="716,253,912,295"/>
+<area shape="rect" id="node21" href="$df/d92/class_border_title_block.html#a72a0fbbde5b1cb78de2d3fa9bba4f072" title="BorderTitleBlock::setRowsCount Allows you to change the number of lines. If this number of lines is l..." alt="" coords="725,319,903,360"/>
+<area shape="rect" id="node22" href="$df/d92/class_border_title_block.html#abf692c10316187d0415ecda89dd0e018" title="BorderTitleBlock::setRowsHeaderWidth Change the width of the headers containing the line numbers...." alt="" coords="725,384,903,425"/>
+<area shape="rect" id="node23" href="$df/d92/class_border_title_block.html#a298a1f7fd508657af32d2f5a87814405" title="BorderTitleBlock::setRowsHeight Change the height of the lines. If the indicated height is lower than..." alt="" coords="725,449,903,491"/>
+<area shape="rect" id="node25" href="$df/d92/class_border_title_block.html#aaffba5bd6f4f22471dfc6dac1ca1091d" title="BorderTitleBlock::setAuthor." alt="" coords="723,718,905,745"/>
+<area shape="rect" id="node26" href="$df/d92/class_border_title_block.html#a036300965749656927461dba7ff0a613" title="BorderTitleBlock::setAutoPageNum." alt="" coords="729,769,899,811"/>
+<area shape="rect" id="node27" href="$df/d92/class_border_title_block.html#a229b295b1f451ea6b9579ce97dab1e35" title="BorderTitleBlock::setDate." alt="" coords="728,835,900,862"/>
+<area shape="rect" id="node28" href="$df/d92/class_border_title_block.html#aef6ef9fd4c0a8189cb9dc83b9df09bc6" title="BorderTitleBlock::setFileName." alt="" coords="714,886,914,913"/>
+<area shape="rect" id="node29" href="$df/d92/class_border_title_block.html#a84eeb614160d236cb27df501815b0003" title="BorderTitleBlock::setFolio." alt="" coords="728,937,900,963"/>
+<area shape="rect" id="node30" href="$df/d92/class_border_title_block.html#ae2a11c789e18b3d2655df2fb7d72fda3" title="BorderTitleBlock::setIndicerev." alt="" coords="715,987,913,1014"/>
+<area shape="rect" id="node31" href="$df/d92/class_border_title_block.html#a2d4c444b3ad79861c003eba6867a54e9" title="BorderTitleBlock::setLocMach." alt="" coords="715,515,913,542"/>
+<area shape="rect" id="node32" href="$df/d92/class_border_title_block.html#a52372b3d6102693c8ff2081c76d8d5c6" title="BorderTitleBlock::setPlant." alt="" coords="727,566,901,593"/>
+<area shape="rect" id="node33" href="$df/d92/class_border_title_block.html#add5b8f1f123f28094109d0396fa679c9" title="BorderTitleBlock::setTitle." alt="" coords="729,617,899,643"/>
+<area shape="rect" id="node34" href="$df/d92/class_border_title_block.html#a86324719730b733964a2df5a359022bc" title="BorderTitleBlock::setVersion." alt="" coords="721,667,907,694"/>
+<area shape="rect" id="node39" href="$d6/df6/class_project_view.html#a38e5277f4dea0f3024292806a4e67ae9" title="ProjectView::currentDiagram." alt="" coords="466,1646,654,1673"/>
+<area shape="rect" id="node40" href="$d6/dc5/class_q_e_t_project.html#ab392b0727b732b7fd1a7a1010f0404dd" title=" " alt="" coords="485,1697,635,1723"/>
+<area shape="rect" id="node41" href="$d6/df6/class_project_view.html#a0200a230f75660f453f2c24db13c17a3" title=" " alt="" coords="475,1210,645,1237"/>
+<area shape="rect" id="node42" href="$d2/dd7/class_dialog_waiting.html#ae9f0eef472d59ab8b7f40352c5f6f4e4" title=" " alt="" coords="469,1261,651,1287"/>
+<area shape="rect" id="node43" href="$d2/dd7/class_dialog_waiting.html#a012d3946b00f2b947572180af0ce36c1" title=" " alt="" coords="481,1362,639,1389"/>
+<area shape="rect" id="node45" href="$d2/dd7/class_dialog_waiting.html#a7a44e5ccdf3d157ceb8576797a7b4652" title="DialogWaiting::setDetail of action." alt="" coords="971,1337,1133,1363"/>
+<area shape="rect" id="node46" href="$d2/dd7/class_dialog_waiting.html#a49f186d6778a22d927d0850e0a2e4dee" title="DialogWaiting::setTitle of action." alt="" coords="975,1387,1129,1414"/>
+<area shape="rect" id="node47" href="$d2/dd7/class_dialog_waiting.html#a9487b3a7b26a590ac6782427d875a0bc" title="DialogWaiting::progressBarValue." alt="" coords="470,1464,650,1505"/>
+<area shape="rect" id="node48" href="$d6/df6/class_project_view.html#a2b5bf2b21107ed482d8cedbd85d373f4" title=" " alt="" coords="455,1529,665,1571"/>
+<area shape="rect" id="node49" href="$d2/dd7/class_dialog_waiting.html#aa1952cac7306a372c917de1456a4e628" title="DialogWaiting::setProgressBar." alt="" coords="460,1595,660,1622"/>
+<area shape="rect" id="node44" href="$d2/dd7/class_dialog_waiting.html#af61f8d03d97026598ba4282b557f23d4" title="DialogWaiting::DialogWaiting." alt="" coords="719,1362,909,1389"/>
+</map>

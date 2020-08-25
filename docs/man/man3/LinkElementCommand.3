@@ -1,0 +1,229 @@
+.TH "LinkElementCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LinkElementCommand \- The \fBLinkElementCommand\fP class This undo class manage link between elements\&. In the same instance of this class, we can link and unlink elements from an edited element This undo class support the merge\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <linkelementcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLinkElementCommand\fP (\fBElement\fP *element_, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBLinkElementCommand::LinkElementCommand\fP Constructor\&. "
+.ti -1c
+.RI "int \fBid\fP () const override"
+.br
+.ti -1c
+.RI "bool \fBmergeWith\fP (const QUndoCommand *other) override"
+.br
+.RI "\fBLinkElementCommand::mergeWith\fP\&. "
+.ti -1c
+.RI "void \fBsetLink\fP (const QList< \fBElement\fP * > &element_list)"
+.br
+.RI "\fBLinkElementCommand::setLink\fP Replace all linked elements of edited element by elements stored in element_list This method do several check to know if element can be linked or not\&. "
+.ti -1c
+.RI "void \fBsetLink\fP (\fBElement\fP *element_)"
+.br
+.RI "\fBLinkElementCommand::setLink\fP This is an overloaded function\&. "
+.ti -1c
+.RI "void \fBunlink\fP (QList< \fBElement\fP * > element_list)"
+.br
+.RI "\fBLinkElementCommand::unlink\fP Unlink all elements of element_list from the edited element\&. "
+.ti -1c
+.RI "void \fBunlinkAll\fP ()"
+.br
+.RI "\fBLinkElementCommand::unlinkAll\fP Unlink all element of the edited element\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBLinkElementCommand::undo\fP Undo this command\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBLinkElementCommand::redo\fP Redo this command\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBisLinkable\fP (\fBElement\fP *element_a, \fBElement\fP *element_b, bool already_linked=false)"
+.br
+.RI "\fBLinkElementCommand::isLinkable\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpNewLink\fP (const QList< \fBElement\fP * > &element_list, bool already_link)"
+.br
+.RI "\fBLinkElementCommand::setUpNewLink\fP Update the content of m_link_after with the content of element_list\&. Each linkable element (know via the static method isLinkable) is added to m_linked_after already_link is used for the static method isLinkable\&. "
+.ti -1c
+.RI "void \fBmakeLink\fP (const QList< \fBElement\fP * > &element_list)"
+.br
+.RI "\fBLinkElementCommand::makeLink\fP Make the link between m_element and element_list; This method unlink elements if needed\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElement\fP * \fBm_element\fP"
+.br
+.ti -1c
+.RI "bool \fBm_first_redo\fP"
+.br
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBm_linked_before\fP"
+.br
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBm_linked_after\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBLinkElementCommand\fP class This undo class manage link between elements\&. In the same instance of this class, we can link and unlink elements from an edited element This undo class support the merge\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "LinkElementCommand::LinkElementCommand (\fBElement\fP * element_, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBLinkElementCommand::LinkElementCommand\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement_\fP : element where we work the link / unlink 
+.br
+\fIparent\fP : parent undo 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int LinkElementCommand::id () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "bool LinkElementCommand::isLinkable (\fBElement\fP * element_a, \fBElement\fP * element_b, bool already_linked = \fCfalse\fP)\fC [static]\fP"
+
+.PP
+\fBLinkElementCommand::isLinkable\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement_a\fP 
+.br
+\fIelement_b\fP 
+.br
+\fIalready_linked\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if element_a and element_b can be linked between them\&. There is few condition to be linked : 1- element_a and element_b must be linkable type\&. (Ex : A is master and B is slave 'OK', A and B is master 'KO') 2- For element type slave and report (no matter if element is 'A' or 'B'), the element must be free (not connected to an element) 3- we can override the section 2 by set already_linked to true\&. In this case, if slave or report is already linked to the other element ('A' or 'B') return true, but if linked to another element (not 'A' or 'B') return false 
+.RE
+.PP
+
+.SS "void LinkElementCommand::makeLink (const QList< \fBElement\fP * > & element_list)\fC [private]\fP"
+
+.PP
+\fBLinkElementCommand::makeLink\fP Make the link between m_element and element_list; This method unlink elements if needed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement_list\fP 
+.RE
+.PP
+
+.SS "bool LinkElementCommand::mergeWith (const QUndoCommand * other)\fC [override]\fP"
+
+.PP
+\fBLinkElementCommand::mergeWith\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP try to merge this command with other 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if merge with success else false 
+.RE
+.PP
+
+.SS "void LinkElementCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBLinkElementCommand::redo\fP Redo this command\&. 
+.SS "void LinkElementCommand::setLink (const QList< \fBElement\fP * > & element_list)"
+
+.PP
+\fBLinkElementCommand::setLink\fP Replace all linked elements of edited element by elements stored in element_list This method do several check to know if element can be linked or not\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement_list\fP 
+.RE
+.PP
+
+.SS "void LinkElementCommand::setLink (\fBElement\fP * element_)"
+
+.PP
+\fBLinkElementCommand::setLink\fP This is an overloaded function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement_\fP 
+.RE
+.PP
+
+.SS "void LinkElementCommand::setUpNewLink (const QList< \fBElement\fP * > & element_list, bool already_link)\fC [private]\fP"
+
+.PP
+\fBLinkElementCommand::setUpNewLink\fP Update the content of m_link_after with the content of element_list\&. Each linkable element (know via the static method isLinkable) is added to m_linked_after already_link is used for the static method isLinkable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement_list\fP 
+.br
+\fIalready_link\fP 
+.RE
+.PP
+
+.SS "void LinkElementCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBLinkElementCommand::undo\fP Undo this command\&. 
+.SS "void LinkElementCommand::unlink (QList< \fBElement\fP * > element_list)"
+
+.PP
+\fBLinkElementCommand::unlink\fP Unlink all elements of element_list from the edited element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement_list\fP 
+.RE
+.PP
+
+.SS "void LinkElementCommand::unlinkAll ()"
+
+.PP
+\fBLinkElementCommand::unlinkAll\fP Unlink all element of the edited element\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElement\fP* LinkElementCommand::m_element\fC [private]\fP"
+
+.SS "bool LinkElementCommand::m_first_redo\fC [private]\fP"
+
+.SS "QList<\fBElement\fP *> LinkElementCommand::m_linked_after\fC [private]\fP"
+
+.SS "QList<\fBElement\fP *> LinkElementCommand::m_linked_before\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

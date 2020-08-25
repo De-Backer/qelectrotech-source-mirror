@@ -1,0 +1,1593 @@
+.TH "Diagram" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Diagram \- The \fBDiagram\fP class This class represents an electric diagram\&. It manages its various child elements, conductors and texts and handles their graphic rendering\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagram\&.h>\fP
+.PP
+Inherits QGraphicsScene\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBBorderOptions\fP { \fBEmptyBorder\fP, \fBTitleBlock\fP, \fBColumns\fP }"
+.br
+.RI "The BorderOptions enum Represents available options when rendering a particular diagram: EmptyBorder: display border only TitleBlock: display title block Columns: display columns\&. "
+.ti -1c
+.RI "enum \fBNumerotationType\fP { \fBConductors\fP }"
+.br
+.RI "Represents available option of Numerotation type\&. "
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBadjustSceneRect\fP ()"
+.br
+.RI "\fBDiagram::adjustSceneRect\fP Recalcul and adjust the size of the scene\&. "
+.ti -1c
+.RI "void \fBtitleChanged\fP (const QString &)"
+.br
+.RI "\fBDiagram::titleChanged\fP emit(diagramTitleChanged(this, title));\&. "
+.ti -1c
+.RI "void \fBtitleBlockTemplateChanged\fP (const QString &)"
+.br
+.RI "\fBDiagram::titleBlockTemplateChanged\fP This slot may be used to inform the diagram object that the given title block template has changed\&. The diagram will thus flush its title block-dedicated rendering cache\&. "
+.ti -1c
+.RI "void \fBtitleBlockTemplateRemoved\fP (const QString &, const QString &=QString())"
+.br
+.RI "\fBDiagram::titleBlockTemplateRemoved\fP This slot has to be be used to inform this class that the given title block template is about to be removed and is no longer accessible\&. This class will either use the provided optional \fBTitleBlockTemplate\fP or the default title block provided by \fBQETApp::defaultTitleBlockTemplate()\fP "
+.ti -1c
+.RI "void \fBsetTitleBlockTemplate\fP (const QString &)"
+.br
+.RI "\fBDiagram::setTitleBlockTemplate\fP Set the template to use to render the title block of this diagram\&. "
+.ti -1c
+.RI "void \fBupdateLabels\fP ()"
+.br
+.RI "\fBDiagram::updateLabels\fP Update elements and conductors that reference folio field in their labels\&. "
+.ti -1c
+.RI "void \fBloadElmtFolioSeq\fP ()"
+.br
+.RI "\fBDiagram::loadElmtFolioSeq\fP This class loads all folio sequential variables related to the current autonum\&. "
+.ti -1c
+.RI "void \fBloadCndFolioSeq\fP ()"
+.br
+.RI "\fBDiagram::loadCndFolioSeq\fP This class loads all conductor folio sequential variables related to the current autonum\&. "
+.ti -1c
+.RI "void \fBselectAll\fP ()"
+.br
+.RI "\fBDiagram::selectAll\fP Select all schema objects\&. "
+.ti -1c
+.RI "void \fBdeselectAll\fP ()"
+.br
+.RI "\fBDiagram::deselectAll\fP Deselects all selected objects\&. "
+.ti -1c
+.RI "void \fBinvertSelection\fP ()"
+.br
+.RI "\fBDiagram::invertSelection\fP Reverses the selection state of all schema objects Inverse l'etat de selection de tous les objets du schema\&. "
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBshowDiagram\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBusedTitleBlockTemplateChanged\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBdiagramTitleChanged\fP (\fBDiagram\fP *, const QString &)"
+.br
+.ti -1c
+.RI "void \fBfindElementRequired\fP (const \fBElementsLocation\fP &)"
+.br
+.ti -1c
+.RI "void \fBeditElementRequired\fP (const \fBElementsLocation\fP &)"
+.br
+.RI "Signal emitted when users wish to edit an element from the diagram\&. "
+.ti -1c
+.RI "void \fBdiagramActivated\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QUuid \fBuuid\fP ()"
+.br
+.RI "\fBDiagram::uuid\fP\&. "
+.ti -1c
+.RI "void \fBsetEventInterface\fP (\fBDiagramEventInterface\fP *event_interface)"
+.br
+.RI "\fBDiagram::setEventInterface\fP Set event_interface has current interface\&. \fBDiagram\fP become the ownership of event_interface If there is a previous interface, they will be delete before and call init() to the new interface\&. "
+.ti -1c
+.RI "void \fBclearEventInterface\fP ()"
+.br
+.RI "\fBDiagram::clearEventInterface\fP Clear the current event interface\&. "
+.ti -1c
+.RI "QString \fBconductorsAutonumName\fP () const"
+.br
+.RI "\fBDiagram::conductorsAutonumName\fP\&. "
+.ti -1c
+.RI "void \fBsetConductorsAutonumName\fP (const QString &name)"
+.br
+.RI "\fBDiagram::setConductorsAutonumName\fP\&. "
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject\fP () const"
+.br
+.RI "\fBDiagram::project\fP\&. "
+.ti -1c
+.RI "int \fBfolioIndex\fP () const"
+.br
+.RI "\fBDiagram::folioIndex\fP\&. "
+.ti -1c
+.RI "qreal \fBdeclaredQElectroTechVersion\fP (bool=true) const"
+.br
+.RI "\fBDiagram::declaredQElectroTechVersion\fP\&. "
+.ti -1c
+.RI "void \fBshowMe\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisReadOnly\fP () const"
+.br
+.RI "\fBDiagram::isReadOnly\fP\&. "
+.ti -1c
+.RI "void \fBsetConductor\fP (bool)"
+.br
+.RI "\fBDiagram::setConductor\fP Display or hide the conductor setter, i\&.e\&. a dashed conductor stub which appears when creating a conductor between two terminals\&. "
+.ti -1c
+.RI "void \fBsetConductorStart\fP (QPointF)"
+.br
+.RI "\fBDiagram::setConductorStart\fP Set the start point of the conductor setter\&. "
+.ti -1c
+.RI "void \fBsetConductorStop\fP (QPointF)"
+.br
+.RI "\fBDiagram::setConductorStop\fP Set the end point of the conductor setter\&. "
+.ti -1c
+.RI "QList< QSet< \fBConductor\fP * > > \fBpotentials\fP ()"
+.br
+.RI "Diagram::potential\&. "
+.ti -1c
+.RI "QDomDocument \fBtoXml\fP (bool=true)"
+.br
+.RI "\fBDiagram::toXml\fP Exports all or part of the schema\&. "
+.ti -1c
+.RI "bool \fBinitFromXml\fP (QDomElement &, QPointF=QPointF(), bool=true, \fBDiagramContent\fP *=nullptr)"
+.br
+.RI "\fBDiagram::initFromXml\fP Imports the described schema in an XML element\&. This method delegates its work to \fBDiagram\fP :: fromXml If the import is successful, this method also initializes the XML document internal allowing to manage the recording of this diagram in the project to which it belongs\&. "
+.ti -1c
+.RI "bool \fBfromXml\fP (QDomDocument &, QPointF=QPointF(), bool=true, \fBDiagramContent\fP *=nullptr)"
+.br
+.RI "\fBDiagram::fromXml\fP Imports the described schema into an XML document\&. If a position is specified, the imported elements are positioned so that the upper left corner of the smallest rectangle that can surround them all (the bounding rect) is at this position\&. "
+.ti -1c
+.RI "bool \fBfromXml\fP (QDomElement &, QPointF=QPointF(), bool=true, \fBDiagramContent\fP *=nullptr)"
+.br
+.RI "\fBDiagram::fromXml\fP Imports the described schema in an XML element\&. If a position is specified, the imported elements are positioned in such a way that the upper left corner of the smallest rectangle that can surround them all (the bounding rect) either at this position\&. "
+.ti -1c
+.RI "void \fBfolioSequentialsToXml\fP (QHash< QString, QStringList > *, QDomElement *, const QString &, const QString &, QDomDocument *)"
+.br
+.RI "\fBDiagram::folioSequentialsToXml\fP Add folio sequential to QDomElement\&. "
+.ti -1c
+.RI "void \fBfolioSequentialsFromXml\fP (const QDomElement &, QHash< QString, QStringList > *, const QString &, const QString &, const QString &, const QString &)"
+.br
+.RI "\fBDiagram::folioSequentialsFromXml\fP Load folio sequential from QDomElement\&. "
+.ti -1c
+.RI "void \fBrefreshContents\fP ()"
+.br
+.RI "\fBDiagram::refreshContents\fP refresh all content of diagram\&. "
+.ti -1c
+.RI "virtual void \fBaddItem\fP (QGraphicsItem *item)"
+.br
+.RI "\fBDiagram::addItem\fP Réimplemented from QGraphicsScene::addItem(QGraphicsItem *item) Do some specific operation if item need it (for exemple an element) "
+.ti -1c
+.RI "virtual void \fBremoveItem\fP (QGraphicsItem *item)"
+.br
+.RI "\fBDiagram::removeItem\fP Reimplemented from QGraphicsScene::removeItem(QGraphicsItem *item) Do some specific operation if item need it (for exemple an element) "
+.ti -1c
+.RI "\fBExportProperties\fP \fBapplyProperties\fP (const \fBExportProperties\fP &)"
+.br
+.RI "\fBDiagram::applyProperties\fP This method allows you to apply new rendering options while accessing the current rendering properties\&. "
+.ti -1c
+.RI "void \fBsetDisplayGrid\fP (bool)"
+.br
+.RI "\fBDiagram::setDisplayGrid\fP Set whether the diagram grid should be drawn\&. "
+.ti -1c
+.RI "bool \fBdisplayGrid\fP ()"
+.br
+.RI "\fBDiagram::displayGrid\fP\&. "
+.ti -1c
+.RI "void \fBsetUseBorder\fP (bool)"
+.br
+.RI "\fBDiagram::setUseBorder\fP Set whether the diagram border (including rows/colums headers and the title block) should be rendered along with the diagram\&. When set to false, the size of the smallest rectangle containing all items is considered as the diagram size\&. "
+.ti -1c
+.RI "bool \fBuseBorder\fP ()"
+.br
+.RI "\fBDiagram::useBorder\fP\&. "
+.ti -1c
+.RI "void \fBsetBorderOptions\fP (\fBBorderOptions\fP)"
+.br
+.RI "\fBDiagram::setBorderOptions\fP Set the rendering options for the diagram border (including rows/colums headers and the title block) "
+.ti -1c
+.RI "\fBBorderOptions\fP \fBborderOptions\fP ()"
+.br
+.RI "\fBDiagram::borderOptions\fP\&. "
+.ti -1c
+.RI "\fBDiagramPosition\fP \fBconvertPosition\fP (const QPointF &)"
+.br
+.RI "\fBDiagram::convertPosition\fP\&. "
+.ti -1c
+.RI "bool \fBdrawTerminals\fP () const"
+.br
+.RI "\fBDiagram::drawTerminals\fP\&. "
+.ti -1c
+.RI "void \fBsetDrawTerminals\fP (bool)"
+.br
+.RI "\fBDiagram::setDrawTerminals\fP Defines whether or not to display the terminals\&. "
+.ti -1c
+.RI "bool \fBdrawColoredConductors\fP () const"
+.br
+.RI "\fBDiagram::drawColoredConductors\fP\&. "
+.ti -1c
+.RI "void \fBsetDrawColoredConductors\fP (bool)"
+.br
+.RI "\fBDiagram::setDrawColoredConductors\fP Defines whether or not to respect the colors of the conductors\&. If not, the conductors are all drawn in black\&. "
+.ti -1c
+.RI "QString \fBtitle\fP () const"
+.br
+.RI "\fBDiagram::title\fP\&. "
+.ti -1c
+.RI "bool \fBtoPaintDevice\fP (QPaintDevice &, int=\-1, int=\-1, Qt::AspectRatioMode=Qt::KeepAspectRatio)"
+.br
+.ti -1c
+.RI "QSize \fBimageSize\fP () const"
+.br
+.RI "\fBDiagram::imageSize\fP Allows you to know the dimensions that the image generated by the toImage() method will have\&. "
+.ti -1c
+.RI "bool \fBisEmpty\fP () const"
+.br
+.RI "\fBDiagram::isEmpty\fP An empty schema contains no element, conductor, or text field\&. "
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBelements\fP () const"
+.br
+.RI "\fBDiagram::elements\fP\&. "
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBconductors\fP () const"
+.br
+.RI "\fBDiagram::conductors\fP\&. "
+.ti -1c
+.RI "QSet< \fBConductor\fP * > \fBselectedConductors\fP () const"
+.br
+.RI "\fBDiagram::selectedConductors\fP\&. "
+.ti -1c
+.RI "\fBDiagramContent\fP \fBcontent\fP () const"
+.br
+.RI "\fBDiagram::content\fP\&. "
+.ti -1c
+.RI "bool \fBcanRotateSelection\fP () const"
+.br
+.RI "\fBDiagram::canRotateSelection\fP\&. "
+.ti -1c
+.RI "\fBElementsMover\fP & \fBelementsMover\fP ()"
+.br
+.RI "\fBDiagram::elementsMover\fP\&. "
+.ti -1c
+.RI "\fBElementTextsMover\fP & \fBelementTextsMover\fP ()"
+.br
+.RI "\fBDiagram::elementTextsMover\fP\&. "
+.ti -1c
+.RI "bool \fBusesElement\fP (const \fBElementsLocation\fP &)"
+.br
+.RI "\fBDiagram::usesElement\fP Used to find out if an element is used on a schema\&. "
+.ti -1c
+.RI "bool \fBusesTitleBlockTemplate\fP (const QString &)"
+.br
+.RI "\fBDiagram::usesTitleBlockTemplate\fP\&. "
+.ti -1c
+.RI "QUndoStack & \fBundoStack\fP ()"
+.br
+.RI "\fBDiagram::undoStack\fP\&. "
+.ti -1c
+.RI "\fBQGIManager\fP & \fBqgiManager\fP ()"
+.br
+.RI "\fBDiagram::qgiManager\fP\&. "
+.ti -1c
+.RI "void \fBfreezeElements\fP (bool freeze)"
+.br
+.RI "\fBDiagram::freezeElements\fP Freeze every existent element label\&. "
+.ti -1c
+.RI "void \fBunfreezeElements\fP ()"
+.br
+.RI "\fBDiagram::unfreezeElements\fP Unfreeze every existent element label\&. "
+.ti -1c
+.RI "void \fBsetFreezeNewElements\fP (bool)"
+.br
+.RI "\fBDiagram::freezeNewElements\fP Set new element label to be frozen\&. "
+.ti -1c
+.RI "bool \fBfreezeNewElements\fP ()"
+.br
+.RI "\fBDiagram::freezeNewElements\fP\&. "
+.ti -1c
+.RI "void \fBfreezeConductors\fP (bool freeze)"
+.br
+.RI "\fBDiagram::freezeConductors\fP Freeze every existent conductor label\&. "
+.ti -1c
+.RI "void \fBsetFreezeNewConductors\fP (bool)"
+.br
+.RI "Diagram::setfreezeNewConductors Set new conductor label to be frozen\&. "
+.ti -1c
+.RI "bool \fBfreezeNewConductors\fP ()"
+.br
+.RI "\fBDiagram::freezeNewConductors\fP\&. "
+.ti -1c
+.RI "void \fBinsertFolioSeqHash\fP (QHash< QString, QStringList > *hash, const QString &\fBtitle\fP, const QString &seq, \fBNumerotationContext\fP *nc)"
+.br
+.RI "\fBDiagram::insertFolioSeqHash\fP This class inserts a stringlist containing all sequential variables related to an autonum in a QHash\&. "
+.ti -1c
+.RI "void \fBloadFolioSeqHash\fP (QHash< QString, QStringList > *hash, const QString &\fBtitle\fP, const QString &seq, \fBNumerotationContext\fP *nc)"
+.br
+.RI "\fBDiagram::loadFolioSeqHash\fP This class loads all folio sequential variables related to the current autonum\&. "
+.ti -1c
+.RI "void \fBchangeZValue\fP (\fBQET::DepthOption\fP option)"
+.br
+.RI "\fBDiagram::changeZValue\fP Change the Z value of the current selected item, according to option\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBclipboardMayContainDiagram\fP ()"
+.br
+.RI "\fBDiagram::clipboardMayContainDiagram\fP\&. "
+.ti -1c
+.RI "static QPointF \fBsnapToGrid\fP (const QPointF &p)"
+.br
+.RI "\fBDiagram::snapToGrid\fP Return a nearest snap point of p\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorProperties\fP \fBdefaultConductorProperties\fP"
+.br
+.RI "Default properties for new conductors\&. "
+.ti -1c
+.RI "\fBBorderTitleBlock\fP \fBborder_and_titleblock\fP"
+.br
+.RI "\fBDiagram\fP dimensions and title block\&. "
+.ti -1c
+.RI "QHash< QString, QStringList > \fBm_elmt_unitfolio_max\fP"
+.br
+.RI "Hash containing max values for folio sequential autonums in this diagram\&. "
+.ti -1c
+.RI "QHash< QString, QStringList > \fBm_elmt_tenfolio_max\fP"
+.br
+.ti -1c
+.RI "QHash< QString, QStringList > \fBm_elmt_hundredfolio_max\fP"
+.br
+.ti -1c
+.RI "QHash< QString, QStringList > \fBm_cnd_unitfolio_max\fP"
+.br
+.RI "Hash containing max values for folio sequential autonums in this diagram\&. "
+.ti -1c
+.RI "QHash< QString, QStringList > \fBm_cnd_tenfolio_max\fP"
+.br
+.ti -1c
+.RI "QHash< QString, QStringList > \fBm_cnd_hundredfolio_max\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBxGrid\fP = 10"
+.br
+.RI "abscissa grid step size "
+.ti -1c
+.RI "static int \fByGrid\fP = 10"
+.br
+.RI "ordinate grid step size "
+.ti -1c
+.RI "static int \fBxKeyGrid\fP = 10"
+.br
+.RI "Key grid x step size\&. "
+.ti -1c
+.RI "static int \fByKeyGrid\fP = 10"
+.br
+.RI "Key grid y step size\&. "
+.ti -1c
+.RI "static int \fBxKeyGridFine\fP = 1"
+.br
+.RI "Key grid fine x step size\&. "
+.ti -1c
+.RI "static int \fByKeyGridFine\fP = 1"
+.br
+.RI "Key grid fine y step size\&. "
+.ti -1c
+.RI "static const qreal \fBmargin\fP = 5\&.0"
+.br
+.RI "margin around the diagram "
+.ti -1c
+.RI "static QColor \fBbackground_color\fP = Qt::white"
+.br
+.RI "background color of diagram "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdrawBackground\fP (QPainter *, const QRectF &) override"
+.br
+.RI "\fBDiagram::drawBackground\fP Draw the background of the diagram, ie the grid\&. "
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagram::mouseDoubleClickEvent\fP This event is managed by diagram event interface if any\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagram::mousePressEvent\fP This event is managed by diagram event interface if any\&. "
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagram::mouseMoveEvent\fP This event is managed by diagram event interface if any\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagram::mouseReleaseEvent\fP This event is managed by diagram event interface if any\&. "
+.ti -1c
+.RI "void \fBwheelEvent\fP (QGraphicsSceneWheelEvent *event) override"
+.br
+.RI "\fBDiagram::wheelEvent\fP This event is managed by diagram event interface if any\&. "
+.ti -1c
+.RI "void \fBkeyPressEvent\fP (QKeyEvent *event) override"
+.br
+.RI "\fBDiagram::keyPressEvent\fP This event is managed by diagram event interface if any\&. Else move selected elements\&. "
+.ti -1c
+.RI "void \fBkeyReleaseEvent\fP (QKeyEvent *) override"
+.br
+.RI "\fBDiagram::keyReleaseEvent\fP This event is managed by diagram event interface if any\&. Else move selected element\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP (\fBQETProject\fP *\fBproject\fP)"
+.br
+.RI "\fBDiagram::Diagram\fP Constructor\&. "
+.ti -1c
+.RI "\fB~Diagram\fP () override"
+.br
+.RI "\fBDiagram::~Diagram\fP Destructor\&. "
+.ti -1c
+.RI "\fBDiagram\fP (const \fBDiagram\fP &diagram)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "friend \fBDiagramFolioList\fP"
+.br
+.ti -1c
+.RI "friend \fBQETProject\fP"
+.br
+.ti -1c
+.RI "QGraphicsLineItem * \fBconductor_setter_\fP"
+.br
+.ti -1c
+.RI "\fBElementsMover\fP \fBm_elements_mover\fP"
+.br
+.ti -1c
+.RI "\fBElementTextsMover\fP \fBm_element_texts_mover\fP"
+.br
+.ti -1c
+.RI "\fBQGIManager\fP * \fBqgi_manager_\fP"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP"
+.br
+.ti -1c
+.RI "QDomDocument \fBxml_document_\fP"
+.br
+.ti -1c
+.RI "qreal \fBdiagram_qet_version_\fP"
+.br
+.ti -1c
+.RI "bool \fBdraw_grid_\fP"
+.br
+.ti -1c
+.RI "bool \fBuse_border_\fP"
+.br
+.ti -1c
+.RI "bool \fBdraw_terminals_\fP"
+.br
+.ti -1c
+.RI "bool \fBdraw_colored_conductors_\fP"
+.br
+.ti -1c
+.RI "QString \fBm_conductors_autonum_name\fP"
+.br
+.ti -1c
+.RI "\fBDiagramEventInterface\fP * \fBm_event_interface\fP"
+.br
+.ti -1c
+.RI "bool \fBm_freeze_new_elements\fP"
+.br
+.ti -1c
+.RI "bool \fBm_freeze_new_conductors_\fP"
+.br
+.ti -1c
+.RI "QUuid \fBm_uuid\fP = QUuid::createUuid()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBDiagram\fP class This class represents an electric diagram\&. It manages its various child elements, conductors and texts and handles their graphic rendering\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBDiagram::BorderOptions\fP"
+
+.PP
+The BorderOptions enum Represents available options when rendering a particular diagram: EmptyBorder: display border only TitleBlock: display title block Columns: display columns\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIEmptyBorder \fP\fP
+.TP
+\fB\fITitleBlock \fP\fP
+.TP
+\fB\fIColumns \fP\fP
+.SS "enum \fBDiagram::NumerotationType\fP"
+
+.PP
+Represents available option of Numerotation type\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIConductors \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Diagram::Diagram (\fBQETProject\fP * project)\fC [private]\fP"
+
+.PP
+\fBDiagram::Diagram\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : The project of this diagram and also parent QObject 
+.RE
+.PP
+
+.SS "Diagram::~Diagram ()\fC [override]\fP, \fC [private]\fP"
+
+.PP
+\fBDiagram::~Diagram\fP Destructor\&. 
+.SS "Diagram::Diagram (const \fBDiagram\fP & diagram)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Diagram::addItem (QGraphicsItem * item)\fC [virtual]\fP"
+
+.PP
+\fBDiagram::addItem\fP Réimplemented from QGraphicsScene::addItem(QGraphicsItem *item) Do some specific operation if item need it (for exemple an element) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+
+.SS "void Diagram::adjustSceneRect ()\fC [slot]\fP"
+
+.PP
+\fBDiagram::adjustSceneRect\fP Recalcul and adjust the size of the scene\&. 
+.SS "\fBExportProperties\fP Diagram::applyProperties (const \fBExportProperties\fP & new_properties)"
+
+.PP
+\fBDiagram::applyProperties\fP This method allows you to apply new rendering options while accessing the current rendering properties\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_properties\fP : New rendering options to apply 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+rendering options before applying new_properties 
+.RE
+.PP
+
+.SS "\fBDiagram::BorderOptions\fP Diagram::borderOptions ()\fC [inline]\fP"
+
+.PP
+\fBDiagram::borderOptions\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The rendering optios for the diagram border 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBsetBorderOptions\fP 
+.RE
+.PP
+
+.SS "bool Diagram::canRotateSelection () const"
+
+.PP
+\fBDiagram::canRotateSelection\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if a least one of selected items can be rotated 
+.RE
+.PP
+
+.SS "void Diagram::changeZValue (\fBQET::DepthOption\fP option)"
+
+.PP
+\fBDiagram::changeZValue\fP Change the Z value of the current selected item, according to option\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoption\fP 
+.RE
+.PP
+
+.SS "void Diagram::clearEventInterface ()"
+
+.PP
+\fBDiagram::clearEventInterface\fP Clear the current event interface\&. 
+.SS "bool Diagram::clipboardMayContainDiagram ()\fC [static]\fP"
+
+.PP
+\fBDiagram::clipboardMayContainDiagram\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the clipboard appears to contain a schema 
+.RE
+.PP
+
+.SS "QList< \fBConductor\fP * > Diagram::conductors () const"
+
+.PP
+\fBDiagram::conductors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list containing all conductors 
+.RE
+.PP
+
+.SS "QString Diagram::conductorsAutonumName () const"
+
+.PP
+\fBDiagram::conductorsAutonumName\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the name of autonum to use\&. 
+.RE
+.PP
+
+.SS "\fBDiagramContent\fP Diagram::content () const"
+
+.PP
+\fBDiagram::content\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The content of the diagram\&. The conductors are all seated in conductorsToMove\&. 
+.RE
+.PP
+
+.SS "\fBDiagramPosition\fP Diagram::convertPosition (const QPointF & pos)"
+
+.PP
+\fBDiagram::convertPosition\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Cartesian position (ex: 10\&.3, 45\&.2) to transform into position in the grid (ex: B2) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a position in the grid corresponding to pos 
+.RE
+.PP
+
+.SS "qreal Diagram::declaredQElectroTechVersion (bool fallback_to_project = \fCtrue\fP) const"
+
+.PP
+\fBDiagram::declaredQElectroTechVersion\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfallback_to_project\fP : When a diagram does not have a declared version, this method will use the one declared by its parent project only if fallback_to_project is true\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the declared QElectroTech version of this diagram 
+.RE
+.PP
+
+.SS "void Diagram::deselectAll ()\fC [slot]\fP"
+
+.PP
+\fBDiagram::deselectAll\fP Deselects all selected objects\&. 
+.SS "void Diagram::diagramActivated ()\fC [signal]\fP"
+
+.SS "void Diagram::diagramTitleChanged (\fBDiagram\fP *, const QString &)\fC [signal]\fP"
+
+.SS "bool Diagram::displayGrid ()\fC [inline]\fP"
+
+.PP
+\fBDiagram::displayGrid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+draw_grid_ true if the grid is drawn, false otherwise\&. 
+.RE
+.PP
+
+.SS "void Diagram::drawBackground (QPainter * p, const QRectF & r)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagram::drawBackground\fP Draw the background of the diagram, ie the grid\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP : The QPainter to use for drawing 
+.br
+\fIr\fP : The rectangle of the area to be drawn 
+.RE
+.PP
+
+.SS "bool Diagram::drawColoredConductors () const\fC [inline]\fP"
+
+.PP
+\fBDiagram::drawColoredConductors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if conductors colors are rendered, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Diagram::drawTerminals () const\fC [inline]\fP"
+
+.PP
+\fBDiagram::drawTerminals\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if terminals are rendered, false otherwise 
+.RE
+.PP
+
+.SS "void Diagram::editElementRequired (const \fBElementsLocation\fP &)\fC [signal]\fP"
+
+.PP
+Signal emitted when users wish to edit an element from the diagram\&. 
+.SS "QList< \fBElement\fP * > Diagram::elements () const"
+
+.PP
+\fBDiagram::elements\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list containing all elements 
+.RE
+.PP
+
+.SS "\fBElementsMover\fP & Diagram::elementsMover ()"
+
+.PP
+\fBDiagram::elementsMover\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "\fBElementTextsMover\fP & Diagram::elementTextsMover ()"
+
+.PP
+\fBDiagram::elementTextsMover\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void Diagram::findElementRequired (const \fBElementsLocation\fP &)\fC [signal]\fP"
+Signal emitted when users wish to locate an element from the diagram within elements collection 
+.SS "int Diagram::folioIndex () const"
+
+.PP
+\fBDiagram::folioIndex\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the folio number of this diagram within its parent project, or -1 if it is has no parent project 
+.RE
+.PP
+
+.SS "void Diagram::folioSequentialsFromXml (const QDomElement & root, QHash< QString, QStringList > * hash, const QString & folioSeq, const QString & seq, const QString & type, const QString & autonumFolioSeqType)"
+
+.PP
+\fBDiagram::folioSequentialsFromXml\fP Load folio sequential from QDomElement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIroot\fP containing all folio sequentials 
+.br
+\fIhash\fP : to be loaded with content 
+.br
+\fIfolioSeq\fP type 
+.br
+\fIseq\fP type 
+.br
+\fItype\fP of sequential 
+.br
+\fIautonumFolioSeqType\fP 
+.RE
+.PP
+
+.SS "void Diagram::folioSequentialsToXml (QHash< QString, QStringList > * hash, QDomElement * domElement, const QString & seq_type, const QString & type, QDomDocument * doc)"
+
+.PP
+\fBDiagram::folioSequentialsToXml\fP Add folio sequential to QDomElement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhash\fP to retrieve content with content 
+.br
+\fIdomElement\fP to add attributes 
+.br
+\fIseq_type\fP type 
+.br
+\fItype\fP 
+.br
+\fIdoc\fP 
+.RE
+.PP
+
+.SS "void Diagram::freezeConductors (bool freeze)"
+
+.PP
+\fBDiagram::freezeConductors\fP Freeze every existent conductor label\&. 
+.SS "void Diagram::freezeElements (bool freeze)"
+
+.PP
+\fBDiagram::freezeElements\fP Freeze every existent element label\&. 
+.SS "bool Diagram::freezeNewConductors ()"
+
+.PP
+\fBDiagram::freezeNewConductors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+current freeze new conductor status \&. 
+.RE
+.PP
+
+.SS "bool Diagram::freezeNewElements ()"
+
+.PP
+\fBDiagram::freezeNewElements\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+current freeze new element status \&. 
+.RE
+.PP
+
+.SS "bool Diagram::fromXml (QDomDocument & document, QPointF position = \fCQPointF()\fP, bool consider_informations = \fCtrue\fP, \fBDiagramContent\fP * content_ptr = \fCnullptr\fP)"
+
+.PP
+\fBDiagram::fromXml\fP Imports the described schema into an XML document\&. If a position is specified, the imported elements are positioned so that the upper left corner of the smallest rectangle that can surround them all (the bounding rect) is at this position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP : The XML document to analyze 
+.br
+\fIposition\fP : The position of the diagram matters 
+.br
+\fIconsider_informations\fP : If true, additional information (author, title, \&.\&.\&.) will be taken into account 
+.br
+\fIcontent_ptr\fP : if this pointer to a \fBDiagramContent\fP is different from 0, it will be filled with the content added to the schema by the fromXml 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the import was successful, false otherwise 
+.RE
+.PP
+
+.SS "bool Diagram::fromXml (QDomElement & document, QPointF position = \fCQPointF()\fP, bool consider_informations = \fCtrue\fP, \fBDiagramContent\fP * content_ptr = \fCnullptr\fP)"
+
+.PP
+\fBDiagram::fromXml\fP Imports the described schema in an XML element\&. If a position is specified, the imported elements are positioned in such a way that the upper left corner of the smallest rectangle that can surround them all (the bounding rect) either at this position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP : The XML document to analyze 
+.br
+\fIposition\fP : The position of the diagram matters 
+.br
+\fIconsider_informations\fP : If true, additional information (author, title, \&.\&.\&.) will be taken into account 
+.br
+\fIcontent_ptr\fP : if this pointer to a \fBDiagramContent\fP is different from 0, it will be filled with the content added to the schema by the fromXml 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the import was successful, false otherwise 
+.RE
+.PP
+
+.SS "QSize Diagram::imageSize () const"
+
+.PP
+\fBDiagram::imageSize\fP Allows you to know the dimensions that the image generated by the toImage() method will have\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The size of the image generated by toImage() 
+.RE
+.PP
+
+.SS "bool Diagram::initFromXml (QDomElement & document, QPointF position = \fCQPointF()\fP, bool consider_informations = \fCtrue\fP, \fBDiagramContent\fP * content_ptr = \fCnullptr\fP)"
+
+.PP
+\fBDiagram::initFromXml\fP Imports the described schema in an XML element\&. This method delegates its work to \fBDiagram\fP :: fromXml If the import is successful, this method also initializes the XML document internal allowing to manage the recording of this diagram in the project to which it belongs\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBDiagram::fromXml\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP : The XML document to analyze 
+.br
+\fIposition\fP : The position of the diagram matters 
+.br
+\fIconsider_informations\fP : If true, additional information (author, title, \&.\&.\&.) will be taken into account 
+.br
+\fIcontent_ptr\fP : if this pointer to a \fBDiagramContent\fP is different from 0, it will be filled with the content added to the schema by the fromXml 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the import was successful, false otherwise 
+.RE
+.PP
+
+.SS "void Diagram::insertFolioSeqHash (QHash< QString, QStringList > * hash, const QString & title, const QString & type, \fBNumerotationContext\fP * nc)"
+
+.PP
+\fBDiagram::insertFolioSeqHash\fP This class inserts a stringlist containing all sequential variables related to an autonum in a QHash\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhash\fP : to be accessed 
+.br
+\fItitle\fP : autonum title 
+.br
+\fItype\fP : to be treated 
+.br
+\fInc\fP : Context to be manipulated 
+.RE
+.PP
+
+.SS "void Diagram::invertSelection ()\fC [slot]\fP"
+
+.PP
+\fBDiagram::invertSelection\fP Reverses the selection state of all schema objects Inverse l'etat de selection de tous les objets du schema\&. 
+.SS "bool Diagram::isEmpty () const"
+
+.PP
+\fBDiagram::isEmpty\fP An empty schema contains no element, conductor, or text field\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the schema is considered empty, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool Diagram::isReadOnly () const"
+
+.PP
+\fBDiagram::isReadOnly\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this diagram is read only\&. This method is same has call \fBDiagram::project()\fP -> \fBisReadOnly()\fP 
+.RE
+.PP
+
+.SS "void Diagram::keyPressEvent (QKeyEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagram::keyPressEvent\fP This event is managed by diagram event interface if any\&. Else move selected elements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void Diagram::keyReleaseEvent (QKeyEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagram::keyReleaseEvent\fP This event is managed by diagram event interface if any\&. Else move selected element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "void Diagram::loadCndFolioSeq ()\fC [slot]\fP"
+
+.PP
+\fBDiagram::loadCndFolioSeq\fP This class loads all conductor folio sequential variables related to the current autonum\&. 
+.SS "void Diagram::loadElmtFolioSeq ()\fC [slot]\fP"
+
+.PP
+\fBDiagram::loadElmtFolioSeq\fP This class loads all folio sequential variables related to the current autonum\&. 
+.SS "void Diagram::loadFolioSeqHash (QHash< QString, QStringList > * hash, const QString & title, const QString & type, \fBNumerotationContext\fP * nc)"
+
+.PP
+\fBDiagram::loadFolioSeqHash\fP This class loads all folio sequential variables related to the current autonum\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhash\fP : to be accessed 
+.br
+\fItitle\fP : autonum title 
+.br
+\fItype\fP : to be treated 
+.br
+\fInc\fP : Context to be manipulated 
+.RE
+.PP
+
+.SS "void Diagram::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagram::mouseDoubleClickEvent\fP This event is managed by diagram event interface if any\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP : 
+.RE
+.PP
+
+.SS "void Diagram::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagram::mouseMoveEvent\fP This event is managed by diagram event interface if any\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void Diagram::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagram::mousePressEvent\fP This event is managed by diagram event interface if any\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void Diagram::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagram::mouseReleaseEvent\fP This event is managed by diagram event interface if any\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "QList< QSet< \fBConductor\fP * > > Diagram::potentials ()"
+
+.PP
+Diagram::potential\&. 
+.PP
+\fBReturns\fP
+.RS 4
+all potential in the diagram each potential are in the QList and each conductors of one potential are in the QSet 
+.RE
+.PP
+
+.SS "\fBQETProject\fP * Diagram::project () const"
+
+.PP
+\fBDiagram::project\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the project to which this schema belongs or 0 if it is an independent schema\&. 
+.RE
+.PP
+
+.SS "\fBQGIManager\fP & Diagram::qgiManager ()\fC [inline]\fP"
+
+.PP
+\fBDiagram::qgiManager\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the diagram graphics item manager 
+.RE
+.PP
+
+.SS "void Diagram::refreshContents ()"
+
+.PP
+\fBDiagram::refreshContents\fP refresh all content of diagram\&. 
+.IP "\(bu" 2
+refresh conductor text\&.
+.IP "\(bu" 2
+linking the elements waiting to be linked
+.IP "\(bu" 2
+Refresh the connection of the dynamic element text item (use for text with source of text label) 
+.PP
+
+.SS "void Diagram::removeItem (QGraphicsItem * item)\fC [virtual]\fP"
+
+.PP
+\fBDiagram::removeItem\fP Reimplemented from QGraphicsScene::removeItem(QGraphicsItem *item) Do some specific operation if item need it (for exemple an element) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+
+.SS "void Diagram::selectAll ()\fC [slot]\fP"
+
+.PP
+\fBDiagram::selectAll\fP Select all schema objects\&. 
+.SS "QSet< \fBConductor\fP * > Diagram::selectedConductors () const"
+
+.PP
+\fBDiagram::selectedConductors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of conductors selected on the diagram 
+.RE
+.PP
+
+.SS "void Diagram::setBorderOptions (\fBDiagram::BorderOptions\fP bo)\fC [inline]\fP"
+
+.PP
+\fBDiagram::setBorderOptions\fP Set the rendering options for the diagram border (including rows/colums headers and the title block) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbo\fP Enabled options ORed together 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBBorderOptions\fP 
+.RE
+.PP
+
+.SS "void Diagram::setConductor (bool adding)\fC [inline]\fP"
+
+.PP
+\fBDiagram::setConductor\fP Display or hide the conductor setter, i\&.e\&. a dashed conductor stub which appears when creating a conductor between two terminals\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIadding\fP true add conductor ,false remove conductor 
+.RE
+.PP
+
+.SS "void Diagram::setConductorsAutonumName (const QString & name)"
+
+.PP
+\fBDiagram::setConductorsAutonumName\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP : name of autonum to use\&. 
+.RE
+.PP
+
+.SS "void Diagram::setConductorStart (QPointF start)\fC [inline]\fP"
+
+.PP
+\fBDiagram::setConductorStart\fP Set the start point of the conductor setter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP the point (in scene coordinates) which the newly created conductor should start from\&. 
+.RE
+.PP
+
+.SS "void Diagram::setConductorStop (QPointF end)\fC [inline]\fP"
+
+.PP
+\fBDiagram::setConductorStop\fP Set the end point of the conductor setter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIend\fP the point (in scene coordinates) upon to which the newly created conductor should be drawn\&. 
+.RE
+.PP
+
+.SS "void Diagram::setDisplayGrid (bool dg)\fC [inline]\fP"
+
+.PP
+\fBDiagram::setDisplayGrid\fP Set whether the diagram grid should be drawn\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdg\fP true to render the grid, false otherwise\&. 
+.RE
+.PP
+
+.SS "void Diagram::setDrawColoredConductors (bool dcc)"
+
+.PP
+\fBDiagram::setDrawColoredConductors\fP Defines whether or not to respect the colors of the conductors\&. If not, the conductors are all drawn in black\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdcc\fP true to respect the colors, false otherwise 
+.RE
+.PP
+
+.SS "void Diagram::setDrawTerminals (bool dt)"
+
+.PP
+\fBDiagram::setDrawTerminals\fP Defines whether or not to display the terminals\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdt\fP : true to display the bounds, false otherwise 
+.RE
+.PP
+
+.SS "void Diagram::setEventInterface (\fBDiagramEventInterface\fP * event_interface)"
+
+.PP
+\fBDiagram::setEventInterface\fP Set event_interface has current interface\&. \fBDiagram\fP become the ownership of event_interface If there is a previous interface, they will be delete before and call init() to the new interface\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent_interface\fP 
+.RE
+.PP
+
+.SS "void Diagram::setFreezeNewConductors (bool b)"
+
+.PP
+Diagram::setfreezeNewConductors Set new conductor label to be frozen\&. 
+.SS "void Diagram::setFreezeNewElements (bool b)"
+
+.PP
+\fBDiagram::freezeNewElements\fP Set new element label to be frozen\&. 
+.SS "void Diagram::setTitleBlockTemplate (const QString & template_name)\fC [slot]\fP"
+
+.PP
+\fBDiagram::setTitleBlockTemplate\fP Set the template to use to render the title block of this diagram\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of the title block template\&. 
+.RE
+.PP
+
+.SS "void Diagram::setUseBorder (bool ub)\fC [inline]\fP"
+
+.PP
+\fBDiagram::setUseBorder\fP Set whether the diagram border (including rows/colums headers and the title block) should be rendered along with the diagram\&. When set to false, the size of the smallest rectangle containing all items is considered as the diagram size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIub\fP true to take the border into account, false otherwise 
+.RE
+.PP
+
+.SS "void Diagram::showDiagram (\fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void Diagram::showMe ()\fC [inline]\fP"
+
+.SS "QPointF Diagram::snapToGrid (const QPointF & p)\fC [static]\fP"
+
+.PP
+\fBDiagram::snapToGrid\fP Return a nearest snap point of p\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP point to find the nearest snaped point 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QString Diagram::title () const"
+
+.PP
+\fBDiagram::title\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+title of the titleblock 
+.RE
+.PP
+
+.SS "void Diagram::titleBlockTemplateChanged (const QString & template_name)\fC [slot]\fP"
+
+.PP
+\fBDiagram::titleBlockTemplateChanged\fP This slot may be used to inform the diagram object that the given title block template has changed\&. The diagram will thus flush its title block-dedicated rendering cache\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of the title block template that has changed 
+.RE
+.PP
+
+.SS "void Diagram::titleBlockTemplateRemoved (const QString & template_name, const QString & new_template = \fCQString()\fP)\fC [slot]\fP"
+
+.PP
+\fBDiagram::titleBlockTemplateRemoved\fP This slot has to be be used to inform this class that the given title block template is about to be removed and is no longer accessible\&. This class will either use the provided optional \fBTitleBlockTemplate\fP or the default title block provided by \fBQETApp::defaultTitleBlockTemplate()\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of the title block template that has changed 
+.br
+\fInew_template\fP (Optional) Name of the title block template to use instead 
+.RE
+.PP
+
+.SS "void Diagram::titleChanged (const QString & title)\fC [slot]\fP"
+
+.PP
+\fBDiagram::titleChanged\fP emit(diagramTitleChanged(this, title));\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitle\fP 
+.RE
+.PP
+
+.SS "bool Diagram::toPaintDevice (QPaintDevice & pix, int width = \fC\-1\fP, int height = \fC\-1\fP, Qt::AspectRatioMode aspectRatioMode = \fCQt::KeepAspectRatio\fP)"
+Exporte le schema vers une image 
+.PP
+\fBReturns\fP
+.RS 4
+Une QImage representant le schema 
+.RE
+.PP
+
+.SS "QDomDocument Diagram::toXml (bool whole_content = \fCtrue\fP)"
+
+.PP
+\fBDiagram::toXml\fP Exports all or part of the schema\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwhole_content\fP : Boolean (to true by default) indicating if the generated XML must represent the entire schema or only the selected content 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An XML Document (QDomDocument) 
+.RE
+.PP
+
+.SS "QUndoStack & Diagram::undoStack ()\fC [inline]\fP"
+
+.PP
+\fBDiagram::undoStack\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the diagram undo stack 
+.RE
+.PP
+
+.SS "void Diagram::unfreezeElements ()"
+
+.PP
+\fBDiagram::unfreezeElements\fP Unfreeze every existent element label\&. 
+.SS "void Diagram::updateLabels ()\fC [slot]\fP"
+
+.PP
+\fBDiagram::updateLabels\fP Update elements and conductors that reference folio field in their labels\&. 
+.SS "bool Diagram::useBorder ()\fC [inline]\fP"
+
+.PP
+\fBDiagram::useBorder\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+use_border_ true if the border is rendered and take into account, false otherwise\&. 
+.RE
+.PP
+
+.SS "void Diagram::usedTitleBlockTemplateChanged (const QString &)\fC [signal]\fP"
+
+.SS "bool Diagram::usesElement (const \fBElementsLocation\fP & location)"
+
+.PP
+\fBDiagram::usesElement\fP Used to find out if an element is used on a schema\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP : Location of an element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the location element is used on this schema, false otherwise 
+.RE
+.PP
+
+.SS "bool Diagram::usesTitleBlockTemplate (const QString & name)"
+
+.PP
+\fBDiagram::usesTitleBlockTemplate\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP : a title block template name 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the provided template is used by this diagram, false otherwise\&. 
+.RE
+.PP
+
+.SS "QUuid Diagram::uuid ()"
+
+.PP
+\fBDiagram::uuid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the uuid of this diagram 
+.RE
+.PP
+
+.SS "void Diagram::wheelEvent (QGraphicsSceneWheelEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagram::wheelEvent\fP This event is managed by diagram event interface if any\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QColor Diagram::background_color = Qt::white\fC [static]\fP"
+
+.PP
+background color of diagram \fBDiagram::background_color\fP static variable to keep track of present background color of the diagram\&. 
+.SS "\fBBorderTitleBlock\fP Diagram::border_and_titleblock"
+
+.PP
+\fBDiagram\fP dimensions and title block\&. 
+.SS "QGraphicsLineItem* Diagram::conductor_setter_\fC [private]\fP"
+
+.SS "\fBConductorProperties\fP Diagram::defaultConductorProperties"
+
+.PP
+Default properties for new conductors\&. 
+.SS "qreal Diagram::diagram_qet_version_\fC [private]\fP"
+
+.SS "friend Diagram::DiagramFolioList\fC [private]\fP"
+
+.SS "bool Diagram::draw_colored_conductors_\fC [private]\fP"
+
+.SS "bool Diagram::draw_grid_\fC [private]\fP"
+
+.SS "bool Diagram::draw_terminals_\fC [private]\fP"
+
+.SS "QHash<QString, QStringList> Diagram::m_cnd_hundredfolio_max"
+
+.SS "QHash<QString, QStringList> Diagram::m_cnd_tenfolio_max"
+
+.SS "QHash<QString, QStringList> Diagram::m_cnd_unitfolio_max"
+
+.PP
+Hash containing max values for folio sequential autonums in this diagram\&. 
+.SS "QString Diagram::m_conductors_autonum_name\fC [private]\fP"
+
+.SS "\fBElementTextsMover\fP Diagram::m_element_texts_mover\fC [private]\fP"
+
+.SS "\fBElementsMover\fP Diagram::m_elements_mover\fC [private]\fP"
+
+.SS "QHash<QString, QStringList> Diagram::m_elmt_hundredfolio_max"
+
+.SS "QHash<QString, QStringList> Diagram::m_elmt_tenfolio_max"
+
+.SS "QHash<QString, QStringList> Diagram::m_elmt_unitfolio_max"
+
+.PP
+Hash containing max values for folio sequential autonums in this diagram\&. 
+.SS "\fBDiagramEventInterface\fP* Diagram::m_event_interface\fC [private]\fP"
+
+.SS "bool Diagram::m_freeze_new_conductors_\fC [private]\fP"
+
+.SS "bool Diagram::m_freeze_new_elements\fC [private]\fP"
+
+.SS "\fBQETProject\fP* Diagram::m_project\fC [private]\fP"
+
+.SS "QUuid Diagram::m_uuid = QUuid::createUuid()\fC [private]\fP"
+
+.SS "const qreal Diagram::margin = 5\&.0\fC [static]\fP"
+
+.PP
+margin around the diagram 
+.SS "friend Diagram::QETProject\fC [private]\fP"
+
+.SS "\fBQGIManager\fP* Diagram::qgi_manager_\fC [private]\fP"
+
+.SS "bool Diagram::use_border_\fC [private]\fP"
+
+.SS "int Diagram::xGrid = 10\fC [static]\fP"
+
+.PP
+abscissa grid step size 
+.SS "int Diagram::xKeyGrid = 10\fC [static]\fP"
+
+.PP
+Key grid x step size\&. 
+.SS "int Diagram::xKeyGridFine = 1\fC [static]\fP"
+
+.PP
+Key grid fine x step size\&. 
+.SS "QDomDocument Diagram::xml_document_\fC [private]\fP"
+
+.SS "int Diagram::yGrid = 10\fC [static]\fP"
+
+.PP
+ordinate grid step size 
+.SS "int Diagram::yKeyGrid = 10\fC [static]\fP"
+
+.PP
+Key grid y step size\&. 
+.SS "int Diagram::yKeyGridFine = 1\fC [static]\fP"
+
+.PP
+Key grid fine y step size\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

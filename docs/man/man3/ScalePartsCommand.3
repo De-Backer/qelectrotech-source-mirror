@@ -1,0 +1,176 @@
+.TH "ScalePartsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ScalePartsCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <editorcommands\&.h>\fP
+.PP
+Inherits \fBElementEditionCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBScalePartsCommand\fP (\fBElementScene\fP *=nullptr, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ScalePartsCommand\fP () override"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.ti -1c
+.RI "\fBElementScene\fP * \fBelementScene\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetScaledPrimitives\fP (const QList< \fBCustomElementPart\fP * > &)"
+.br
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBscaledPrimitives\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetTransformation\fP (const QRectF &, const QRectF &)"
+.br
+.RI "\fBScalePartsCommand::setTransformation\fP Define the transformation applied by this command\&. "
+.ti -1c
+.RI "QPair< QRectF, QRectF > \fBtransformation\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBscale\fP (const QRectF &before, const QRectF &after)"
+.br
+.ti -1c
+.RI "void \fBadjustText\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBScalePartsCommand\fP (const \fBScalePartsCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBscaled_primitives_\fP"
+.br
+.RI "List of moved primitives\&. "
+.ti -1c
+.RI "QRectF \fBoriginal_rect_\fP"
+.br
+.RI "original rect items fit in "
+.ti -1c
+.RI "QRectF \fBnew_rect_\fP"
+.br
+.RI "new rect items should fit in "
+.ti -1c
+.RI "bool \fBfirst_redo\fP"
+.br
+.RI "Prevent the first call to \fBredo()\fP "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This command scales primitives when editing an electrical element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ScalePartsCommand::ScalePartsCommand (\fBElementScene\fP * scene = \fCnullptr\fP, QUndoCommand * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP Modified \fBElementScene\fP 
+.br
+\fIparent\fP Parent QUndoCommand 
+.RE
+.PP
+
+.SS "ScalePartsCommand::~ScalePartsCommand ()\fC [override]\fP"
+Destructor 
+.SS "ScalePartsCommand::ScalePartsCommand (const \fBScalePartsCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ScalePartsCommand::adjustText ()\fC [protected]\fP"
+Generate the text describing what this command does exactly\&. 
+.SS "\fBElementScene\fP * ScalePartsCommand::elementScene () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the element editor/scene the command should take place on 
+.RE
+.PP
+
+.SS "void ScalePartsCommand::redo ()\fC [override]\fP"
+Redo the scaling operation 
+.SS "void ScalePartsCommand::scale (const QRectF & before, const QRectF & after)\fC [protected]\fP"
+Apply the scaling operation from \fIbefore\fP to \fIafter\fP\&. 
+.SS "QList< \fBCustomElementPart\fP * > ScalePartsCommand::scaledPrimitives () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the list of primitives to be scaled by this command 
+.RE
+.PP
+
+.SS "void ScalePartsCommand::setScaledPrimitives (const QList< \fBCustomElementPart\fP * > & primitives)"
+Set \fIprimitives\fP as the list of primitives to be scaled by this command 
+.SS "void ScalePartsCommand::setTransformation (const QRectF & original_rect, const QRectF & new_rect)"
+
+.PP
+\fBScalePartsCommand::setTransformation\fP Define the transformation applied by this command\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoriginal_rect\fP : Bounding rectangle for all scaled primitives before the operation 
+.br
+\fInew_rect\fP : Bounding rectangle for all scaled primitives after the operation 
+.RE
+.PP
+
+.SS "QPair< QRectF, QRectF > ScalePartsCommand::transformation ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+the transformation applied by this command\&. The returned rectangles are the bounding rectangles for all scaled primitives respectively before and after the operation\&. 
+.RE
+.PP
+
+.SS "void ScalePartsCommand::undo ()\fC [override]\fP"
+Undo the scaling operation 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool ScalePartsCommand::first_redo\fC [private]\fP"
+
+.PP
+Prevent the first call to \fBredo()\fP 
+.SS "QRectF ScalePartsCommand::new_rect_\fC [private]\fP"
+
+.PP
+new rect items should fit in 
+.SS "QRectF ScalePartsCommand::original_rect_\fC [private]\fP"
+
+.PP
+original rect items fit in 
+.SS "QList<\fBCustomElementPart\fP *> ScalePartsCommand::scaled_primitives_\fC [private]\fP"
+
+.PP
+List of moved primitives\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

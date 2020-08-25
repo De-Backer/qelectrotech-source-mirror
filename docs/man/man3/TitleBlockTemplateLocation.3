@@ -1,0 +1,219 @@
+.TH "TitleBlockTemplateLocation" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateLocation
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatelocation\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateLocation\fP (const QString &=QString(), \fBTitleBlockTemplatesCollection\fP *=nullptr)"
+.br
+.ti -1c
+.RI "virtual \fB~TitleBlockTemplateLocation\fP ()"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateLocation\fP \fBlocationFromString\fP (const QString &)"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplatesCollection\fP * \fBparentCollection\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetParentCollection\fP (\fBTitleBlockTemplatesCollection\fP *)"
+.br
+.RI "\fBTitleBlockTemplateLocation::setParentCollection\fP\&. "
+.ti -1c
+.RI "QString \fBname\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (const QString &)"
+.br
+.ti -1c
+.RI "bool \fBisValid\fP () const"
+.br
+.ti -1c
+.RI "void \fBfromString\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBtoString\fP () const"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBparentProject\fP () const"
+.br
+.ti -1c
+.RI "QString \fBprotocol\fP () const"
+.br
+.ti -1c
+.RI "QDomElement \fBgetTemplateXmlDescription\fP () const"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBgetTemplate\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisReadOnly\fP () const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBTitleBlockTemplateLocation\fP &) const"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBMetaTypeId\fP = qRegisterMetaType<\fBTitleBlockTemplateLocation\fP>('TitleBlockTemplateLocation')"
+.br
+.RI "Id of the corresponding Qt meta type\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplatesCollection\fP * \fBcollection_\fP"
+.br
+.RI "Collection the template belongs to\&. "
+.ti -1c
+.RI "QString \fBname_\fP"
+.br
+.RI "Name of the template\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents the location of a title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateLocation::TitleBlockTemplateLocation (const QString & name = \fCQString()\fP, \fBTitleBlockTemplatesCollection\fP * collection = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection\fP Parent collection of the title block template 
+.br
+\fIname\fP Name of the title block template within its parent project or collection 
+.RE
+.PP
+
+.SS "TitleBlockTemplateLocation::~TitleBlockTemplateLocation ()\fC [virtual]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void TitleBlockTemplateLocation::fromString (const QString & loc_str)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIloc_str\fP String describing the location of a title block template\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplate\fP * TitleBlockTemplateLocation::getTemplate () const"
+This is a convenience method equivalent to \fBparentCollection()\fP -> getTemplate(\&.\&.\&.)\&. 
+.SS "QDomElement TitleBlockTemplateLocation::getTemplateXmlDescription () const"
+This is a convenience method equivalent to \fBparentCollection()\fP -> getTemplateXmlDescription 
+.SS "bool TitleBlockTemplateLocation::isReadOnly () const"
+This is a convenience method equivalent to \fBparentCollection()\fP -> isReadOnly(name()) 
+.SS "bool TitleBlockTemplateLocation::isValid () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if this location is null, false otherwise 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplateLocation\fP TitleBlockTemplateLocation::locationFromString (const QString & loc_str)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIloc_str\fP String describing the location of a title block template\&. 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplateLocation::name () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name of this template within its parent project or collection\&. 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplateLocation::operator== (const \fBTitleBlockTemplateLocation\fP & location) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP other location that should be compared to this one 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if locations are equal, false otherwise 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplatesCollection\fP * TitleBlockTemplateLocation::parentCollection () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the parent collection of the template, or 0 if none was defined 
+.RE
+.PP
+
+.SS "\fBQETProject\fP * TitleBlockTemplateLocation::parentProject () const"
+This is a convenience method equivalent to \fBparentCollection()\fP -> \fBparentProject()\fP\&. 
+.SS "QString TitleBlockTemplateLocation::protocol () const"
+This is a convenience method equivalent to \fBparentCollection()\fP -> \fBprotocol()\fP\&. 
+.SS "void TitleBlockTemplateLocation::setName (const QString & name)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The new name of this template\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateLocation::setParentCollection (\fBTitleBlockTemplatesCollection\fP * collection)"
+
+.PP
+\fBTitleBlockTemplateLocation::setParentCollection\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection\fP : \fBTitleBlockTemplatesCollection\fP 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplateLocation::toString () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+A string representation of the location 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTitleBlockTemplatesCollection\fP* TitleBlockTemplateLocation::collection_\fC [private]\fP"
+
+.PP
+Collection the template belongs to\&. 
+.SS "int TitleBlockTemplateLocation::MetaTypeId = qRegisterMetaType<\fBTitleBlockTemplateLocation\fP>('TitleBlockTemplateLocation')\fC [static]\fP"
+
+.PP
+Id of the corresponding Qt meta type\&. 
+.SS "QString TitleBlockTemplateLocation::name_\fC [private]\fP"
+
+.PP
+Name of the template\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

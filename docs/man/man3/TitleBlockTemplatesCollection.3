@@ -1,0 +1,283 @@
+.TH "TitleBlockTemplatesCollection" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplatesCollection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatescollection\&.h>\fP
+.PP
+Inherits QObject\&.
+.PP
+Inherited by \fBTitleBlockTemplatesFilesCollection\fP, and \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBchanged\fP (\fBTitleBlockTemplatesCollection\fP *, const QString &=QString())"
+.br
+.ti -1c
+.RI "void \fBaboutToRemove\fP (\fBTitleBlockTemplatesCollection\fP *, const QString &)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplatesCollection\fP (QObject *parent)"
+.br
+.ti -1c
+.RI "\fB~TitleBlockTemplatesCollection\fP () override"
+.br
+.ti -1c
+.RI "virtual QStringList \fBtemplates\fP ()=0"
+.br
+.ti -1c
+.RI "virtual \fBTitleBlockTemplate\fP * \fBgetTemplate\fP (const QString &)=0"
+.br
+.ti -1c
+.RI "virtual QDomElement \fBgetTemplateXmlDescription\fP (const QString &)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBsetTemplateXmlDescription\fP (const QString &, const QDomElement &)=0"
+.br
+.ti -1c
+.RI "virtual void \fBremoveTemplate\fP (const QString &)=0"
+.br
+.ti -1c
+.RI "virtual \fBTitleBlockTemplateLocation\fP \fBlocation\fP (const QString &=QString())=0"
+.br
+.ti -1c
+.RI "virtual bool \fBhasFilePath\fP ()=0"
+.br
+.ti -1c
+.RI "virtual QString \fBfilePath\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisReadOnly\fP (const QString &=QString()) const =0"
+.br
+.ti -1c
+.RI "virtual QString \fBtitle\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetTitle\fP (const QString &)"
+.br
+.RI "\fBTitleBlockTemplatesCollection::setTitle\fP\&. "
+.ti -1c
+.RI "virtual QString \fBprotocol\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetProtocol\fP (const QString &)"
+.br
+.ti -1c
+.RI "virtual \fBQET::QetCollection\fP \fBcollection\fP () const"
+.br
+.RI "\fBTitleBlockTemplatesCollection::collection\fP\&. "
+.ti -1c
+.RI "virtual void \fBsetCollection\fP (\fBQET::QetCollection\fP)"
+.br
+.RI "\fBTitleBlockTemplatesCollection::setCollection\fP Set the storage of this collection\&. "
+.ti -1c
+.RI "virtual \fBQETProject\fP * \fBparentProject\fP ()"
+.br
+.ti -1c
+.RI "virtual QList< \fBTitleBlockTemplateLocation\fP > \fBtemplatesLocations\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBtitle_\fP"
+.br
+.RI "Human-readable title for this collection\&. "
+.ti -1c
+.RI "QString \fBprotocol_\fP"
+.br
+.RI "Protocol used to designate this collection\&. "
+.ti -1c
+.RI "\fBQET::QetCollection\fP \fBm_collection\fP"
+.br
+.ti -1c
+.RI "QHash< QString, \fBTitleBlockTemplate\fP * > \fBtitleblock_templates_\fP"
+.br
+.RI "Already parsed embedded titleblock templates\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplatesCollection\fP (const \fBTitleBlockTemplatesCollection\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This abstract class represents a generic collection of title block templates\&. Unlike elements collections, title block templates collections do not provide a tree structure\&. Instead, they provide a simple, flat list of available templates\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplatesCollection::TitleBlockTemplatesCollection (QObject * parent)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Parent QObject 
+.RE
+.PP
+
+.SS "TitleBlockTemplatesCollection::~TitleBlockTemplatesCollection ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockTemplatesCollection::TitleBlockTemplatesCollection (const \fBTitleBlockTemplatesCollection\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TitleBlockTemplatesCollection::aboutToRemove (\fBTitleBlockTemplatesCollection\fP *, const QString &)\fC [signal]\fP"
+
+.SS "void TitleBlockTemplatesCollection::changed (\fBTitleBlockTemplatesCollection\fP *, const QString & = \fCQString()\fP)\fC [signal]\fP"
+
+.SS "\fBQET::QetCollection\fP TitleBlockTemplatesCollection::collection () const\fC [virtual]\fP"
+
+.PP
+\fBTitleBlockTemplatesCollection::collection\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the collection where is stored this collection\&. 
+.RE
+.PP
+
+.SS "virtual QString TitleBlockTemplatesCollection::filePath ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTitleBlockTemplatesFilesCollection\fP, and \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "virtual \fBTitleBlockTemplate\fP* TitleBlockTemplatesCollection::getTemplate (const QString &)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTitleBlockTemplatesFilesCollection\fP, and \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "virtual QDomElement TitleBlockTemplatesCollection::getTemplateXmlDescription (const QString &)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTitleBlockTemplatesFilesCollection\fP, and \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "virtual bool TitleBlockTemplatesCollection::hasFilePath ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTitleBlockTemplatesFilesCollection\fP, and \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "virtual bool TitleBlockTemplatesCollection::isReadOnly (const QString & = \fCQString()\fP) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTitleBlockTemplatesFilesCollection\fP, and \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "virtual \fBTitleBlockTemplateLocation\fP TitleBlockTemplatesCollection::location (const QString & = \fCQString()\fP)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTitleBlockTemplatesFilesCollection\fP, and \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "\fBQETProject\fP * TitleBlockTemplatesCollection::parentProject ()\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the project this collection is affiliated to, or 0 if this collection is not related to any project\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "QString TitleBlockTemplatesCollection::protocol () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the protocol used by this collection ; examples: commontbt, customtbt, embedtbt, \&.\&.\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "virtual void TitleBlockTemplatesCollection::removeTemplate (const QString &)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTitleBlockTemplatesFilesCollection\fP, and \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "void TitleBlockTemplatesCollection::setCollection (\fBQET::QetCollection\fP c)\fC [virtual]\fP"
+
+.PP
+\fBTitleBlockTemplatesCollection::setCollection\fP Set the storage of this collection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplatesCollection::setProtocol (const QString & protocol)\fC [virtual]\fP"
+Define the protocol for this collection 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprotocol\fP New protocol for this collection 
+.RE
+.PP
+
+.SS "virtual bool TitleBlockTemplatesCollection::setTemplateXmlDescription (const QString &, const QDomElement &)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTitleBlockTemplatesFilesCollection\fP, and \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "void TitleBlockTemplatesCollection::setTitle (const QString & title)\fC [virtual]\fP"
+
+.PP
+\fBTitleBlockTemplatesCollection::setTitle\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitle\fP : New title for this collection 
+.RE
+.PP
+
+.SS "virtual QStringList TitleBlockTemplatesCollection::templates ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTitleBlockTemplatesFilesCollection\fP, and \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SS "QList< \fBTitleBlockTemplateLocation\fP > TitleBlockTemplatesCollection::templatesLocations ()\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the templates contained within this collection, as a list of location objects\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBtemplates()\fP 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplatesCollection::title () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the title of this collection 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTitleBlockTemplatesProjectCollection\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQET::QetCollection\fP TitleBlockTemplatesCollection::m_collection\fC [protected]\fP"
+
+.SS "QString TitleBlockTemplatesCollection::protocol_\fC [protected]\fP"
+
+.PP
+Protocol used to designate this collection\&. 
+.SS "QString TitleBlockTemplatesCollection::title_\fC [protected]\fP"
+
+.PP
+Human-readable title for this collection\&. 
+.SS "QHash<QString, \fBTitleBlockTemplate\fP *> TitleBlockTemplatesCollection::titleblock_templates_\fC [protected]\fP"
+
+.PP
+Already parsed embedded titleblock templates\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

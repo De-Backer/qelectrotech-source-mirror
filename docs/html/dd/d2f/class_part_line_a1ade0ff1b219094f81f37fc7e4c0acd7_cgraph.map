@@ -1,0 +1,11 @@
+<map id="PartLine::paint" name="PartLine::paint">
+<area shape="rect" id="node1" title="PartLine::paint Draw this line." alt="" coords="5,107,112,134"/>
+<area shape="rect" id="node2" href="$df/d66/class_custom_element_graphic_part.html#a57a2441ef4a977e9b428d927b05c78f6" title="CustomElementGraphicPart::applyStylesToQPainter Apply the current style to the QPainter." alt="" coords="160,5,347,47"/>
+<area shape="rect" id="node3" href="$df/d66/class_custom_element_graphic_part.html#ab05e8fef68db95bc8e424c9753515fce" title="CustomElementGraphicPart::drawShadowShape Draw a transparent blue shadow arround the shape of this it..." alt="" coords="160,71,347,112"/>
+<area shape="rect" id="node5" href="$dd/d2f/class_part_line.html#ab898ecf62690672cf388920f3bad4b4c" title="PartLine::isUseless." alt="" coords="185,137,322,163"/>
+<area shape="rect" id="node6" href="$dd/d2f/class_part_line.html#a75fa7d7e7050b6f94e8d3af25646c100" title="PartLine::path." alt="" coords="201,189,305,215"/>
+<area shape="rect" id="node4" href="$df/d66/class_custom_element_graphic_part.html#a67b534eeb91b5f91c0ca08dfd88e25e7" title=" " alt="" coords="395,68,581,109"/>
+<area shape="rect" id="node7" href="$dd/d2f/class_part_line.html#a8ca3eeaec3c0eaaa8e08b60a04bfa18b" title="PartLine::fourEndPoints Return the four interesting point needed to draw the shape at extremity of li..." alt="" coords="407,134,569,161"/>
+<area shape="rect" id="node8" href="$df/d66/class_custom_element_graphic_part.html#a3782d931409fab50f712f7dc38931a3e" title="CustomElementGraphicPart::penWeight." alt="" coords="395,185,581,227"/>
+<area shape="rect" id="node9" href="$dd/d2f/class_part_line.html#a46d99599dd667074ff4304ce4e6e4e6f" title="PartLine::requiredLengthForEndType." alt="" coords="406,251,570,292"/>
+</map>

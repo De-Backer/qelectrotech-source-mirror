@@ -1,0 +1,81 @@
+.TH "ElementLineNum" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementLineNum
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <numerotationcontextcommands\&.h>\fP
+.PP
+Inherits \fBNumStrategy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementLineNum\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "QString \fBtoRepresentedString\fP (const QString) const override"
+.br
+.RI "\fBElementLineNum::toRepresentedString\fP\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBnext\fP (const \fBNumerotationContext\fP &, const int) const override"
+.br
+.RI "\fBElementLineNum::next\fP\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBprevious\fP (const \fBNumerotationContext\fP &, const int) const override"
+.br
+.RI "\fBElementLineNum::previous\fP\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementLineNum::ElementLineNum (\fBDiagram\fP * d)"
+Constructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBNumerotationContext\fP ElementLineNum::next (const \fBNumerotationContext\fP & nc, const int i) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementLineNum::next\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the next \fBNumerotationContext\fP nc at position i 
+.RE
+.PP
+
+.PP
+Implements \fBNumStrategy\fP\&.
+.SS "\fBNumerotationContext\fP ElementLineNum::previous (const \fBNumerotationContext\fP & nc, const int i) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementLineNum::previous\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the previous \fBNumerotationContext\fP nc at posiiton i 
+.RE
+.PP
+
+.PP
+Implements \fBNumStrategy\fP\&.
+.SS "QString ElementLineNum::toRepresentedString (const QString str) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementLineNum::toRepresentedString\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the represented string of folio 
+.RE
+.PP
+
+.PP
+Implements \fBNumStrategy\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,52 @@
+<map id="Conductor::sceneEventFilter" name="Conductor::sceneEventFilter">
+<area shape="rect" id="node1" title="Conductor::sceneEventFilter." alt="" coords="5,860,192,887"/>
+<area shape="rect" id="node2" href="$da/d7f/class_conductor.html#ac6b418b398cbb61a5c73b5136b99c050" title="Conductor::editProperty." alt="" coords="269,264,430,291"/>
+<area shape="rect" id="node16" href="$da/d7f/class_conductor.html#ad89a22b06b1849b5726e76541788744c" title="Conductor::handlerMouseMoveEvent." alt="" coords="248,795,451,837"/>
+<area shape="rect" id="node45" href="$da/d7f/class_conductor.html#aeec4450e97f07bc47cd0ff2586f44578" title="Conductor::handlerMousePressEvent." alt="" coords="247,1201,452,1242"/>
+<area shape="rect" id="node47" href="$da/d7f/class_conductor.html#a3f2a923b69927a1477da3017af7c6fce" title="Conductor::handlerMouseReleaseEvent." alt="" coords="240,1005,459,1046"/>
+<area shape="rect" id="node3" href="$da/d7f/class_conductor.html#a180d5c54f65a9bdb3e167892fccb0584" title="Conductor::diagramEditor." alt="" coords="515,264,686,291"/>
+<area shape="rect" id="node5" href="$da/d6b/class_conductor_properties_dialog.html#a2345b73499b5756d9b3941dda9ad6f37" title="ConductorPropertiesDialog::PropertiesDialog Static method for open and apply properties." alt="" coords="511,173,690,214"/>
+<area shape="rect" id="node4" href="$da/d7f/class_conductor.html#a3bc24a36dba5f211726f9524ffe48953" title=" " alt="" coords="775,264,911,291"/>
+<area shape="rect" id="node6" href="$da/d6b/class_conductor_properties_dialog.html#a533080142a991b65eaf464f468d16835" title="ConductorPropertiesDialog::applyAll." alt="" coords="753,82,932,123"/>
+<area shape="rect" id="node7" href="$da/d6b/class_conductor_properties_dialog.html#a0ba011a2dbfee89d34c4277ecbc31334" title="ConductorPropertiesDialog::properties." alt="" coords="753,147,932,189"/>
+<area shape="rect" id="node8" href="$da/d7f/class_conductor.html#a7df52a1f89a88dad4ecd531c9d02675f" title="Conductor::relatedPotentialConductors Return all conductors at the same potential of this conductor,..." alt="" coords="996,249,1176,290"/>
+<area shape="rect" id="node13" href="$d3/d37/class_diagram.html#aadc97c48501180ecd35ce25a8ebf161d" title="Diagram::undoStack." alt="" coords="772,31,913,57"/>
+<area shape="rect" id="node9" href="$dc/d46/class_terminal.html#a31d1c604e0f9991140ad938c741df3af" title="Terminal::conductors." alt="" coords="1265,260,1407,287"/>
+<area shape="rect" id="node10" href="$d8/dc7/terminal_8cpp.html#a0d860470dc66715c56fd2cad5e2dd9bb" title="Conductor::relatedPotentialTerminal Return terminal at the same potential from the same parent elemen..." alt="" coords="1255,209,1417,236"/>
+<area shape="rect" id="node11" href="$dc/d46/class_terminal.html#aac01ad77bc72ce5406f9397bfcb656da" title="Terminal::parentElement." alt="" coords="1491,184,1653,211"/>
+<area shape="rect" id="node12" href="$d5/d50/class_element.html#aa52d2e2e5f2d4368588962d3ecf6f75f" title="Element::terminals." alt="" coords="1507,235,1637,261"/>
+<area shape="rect" id="node14" href="$d3/d37/class_diagram.html#a8a2a4a08dce92d0eed86f94077e9cc84" title="Diagram::project." alt="" coords="1027,5,1145,32"/>
+<area shape="rect" id="node15" href="$d6/dc5/class_q_e_t_project.html#af94030b24e669c0007caf263ae52b4b3" title=" " alt="" coords="1007,56,1165,83"/>
+<area shape="rect" id="node17" href="$da/d7f/class_conductor.html#ab352e0bd0e048b8897ad67684d00b01a" title="Conductor::calculateTextItemPosition Move the text at middle of conductor (if is vertical or horizont..." alt="" coords="517,467,684,509"/>
+<area shape="rect" id="node32" href="$d2/d0c/class_conductor_segment.html#a35228a00501c2a046076c58e4642c255" title=" " alt="" coords="1247,853,1425,880"/>
+<area shape="rect" id="node35" href="$da/d7f/class_conductor.html#ae179dfb31032f55b10d9a3200aa15acf" title="Conductor::segmentsToPath Generate the QPainterPath from the list of points." alt="" coords="507,1005,695,1032"/>
+<area shape="rect" id="node44" href="$d3/d37/class_diagram.html#aca79c4ab46b3b8d3869affb2344253e8" title="Diagram::snapToGrid Return a nearest snap point of p." alt="" coords="528,752,673,779"/>
+<area shape="rect" id="node18" href="$da/d7f/class_conductor.html#a649d3839caef33cd2d47759f82e68a08" title="Conductor::boundingRect." alt="" coords="758,723,927,749"/>
+<area shape="rect" id="node21" href="$d9/d9d/conductor_8cpp.html#a7255f2a0d5739fa13352d03e061fc893" title="longuestConductorInPotential" alt="" coords="746,365,939,392"/>
+<area shape="rect" id="node23" href="$da/d7f/class_conductor.html#aeba0bf998f55fd1a797b2db95822edd6" title=" " alt="" coords="756,467,929,509"/>
+<area shape="rect" id="node26" href="$da/d7f/class_conductor.html#a6f60f9f146fd142ee57b84084c843409" title="Conductor::nearShape." alt="" coords="1010,651,1162,677"/>
+<area shape="rect" id="node27" href="$da/d7f/class_conductor.html#ab32bd11b8874c7b45d1127c640477218" title="Conductor::posForText Calculate and return the better pos for text." alt="" coords="765,533,920,560"/>
+<area shape="rect" id="node34" href="$da/d7f/class_conductor.html#ad3546c9cc056283d1b8b64ba0660f8ab" title=" " alt="" coords="773,416,912,443"/>
+<area shape="rect" id="node19" href="$da/d7f/class_conductor.html#a9a17e0e7c33d5963b336be63133f7bd0" title="Conductor::shape." alt="" coords="1023,752,1149,779"/>
+<area shape="rect" id="node20" href="$da/d7f/class_conductor.html#a4272fa407d1088bd4f6e99c8c82a35a4" title=" " alt="" coords="1279,752,1393,779"/>
+<area shape="rect" id="node22" href="$da/d7f/class_conductor.html#a25b82af24dc6117765fb802c68422c18" title="Conductor::length." alt="" coords="1023,365,1149,392"/>
+<area shape="rect" id="node24" href="$dc/da9/namespace_q_e_t.html#a8c06162adcffa1bc992082e3fc4705a7" title=" " alt="" coords="999,315,1173,341"/>
+<area shape="rect" id="node25" href="$dc/da9/namespace_q_e_t.html#a10470c9b812d673642856d8a828342cc" title=" " alt="" coords="1257,315,1415,341"/>
+<area shape="rect" id="node28" href="$d2/d0c/class_conductor_segment.html#ae487262ea29ceb538015805470591d60" title=" " alt="" coords="997,417,1175,458"/>
+<area shape="rect" id="node30" href="$d2/d0c/class_conductor_segment.html#a801965b0c65b1980159543b2147038da" title=" " alt="" coords="1231,508,1441,535"/>
+<area shape="rect" id="node31" href="$d2/d0c/class_conductor_segment.html#a5ddcdf5405e5a01ec08f8e14a33db742" title=" " alt="" coords="998,533,1174,560"/>
+<area shape="rect" id="node33" href="$d2/d0c/class_conductor_segment.html#aeb8047230822998b478445073624bea9" title=" " alt="" coords="991,585,1181,626"/>
+<area shape="rect" id="node29" href="$d2/d0c/class_conductor_segment.html#ad90ab7d58cc0dce6d02353fd54cb5f75" title=" " alt="" coords="1229,417,1443,458"/>
+<area shape="rect" id="node36" href="$da/d7f/class_conductor.html#afb3100d2ff5431340611d058be72f3dd" title="Conductor::addHandler Add handlers for this item." alt="" coords="765,1157,921,1184"/>
+<area shape="rect" id="node39" href="$da/d7f/class_conductor.html#a9a90b13a4ecbff5790c8f82f6231f99d" title="Conductor::handlerPoints." alt="" coords="1001,1056,1171,1083"/>
+<area shape="rect" id="node41" href="$da/d7f/class_conductor.html#ad061b78a3976c1b05f05f839fcb00cde" title="Conductor::adjusteHandlerPos Adjust the position of the handler item." alt="" coords="743,1056,943,1083"/>
+<area shape="rect" id="node42" href="$da/d7f/class_conductor.html#ab33e66bb9b491275761142290b376161" title="Conductor::removeHandler Remove the handlers of this item." alt="" coords="754,1107,931,1133"/>
+<area shape="rect" id="node43" href="$da/d7f/class_conductor.html#a8099231eca7f72573c51ea77b8c39af9" title=" " alt="" coords="1019,803,1153,829"/>
+<area shape="rect" id="node37" href="$d3/d09/class_qet_graphics_handler_item.html#a27ff7e1e214f07ada35dce0d79dc58a2" title="QetGraphicsHandlerItem::handlerForPoint." alt="" coords="1003,1259,1169,1301"/>
+<area shape="rect" id="node38" href="$d3/d09/class_qet_graphics_handler_item.html#a6fd90204e6570cfffb1a86b8f68982f0" title="QetGraphicsHandlerItem::QetGraphicsHandlerItem." alt="" coords="1249,1259,1423,1301"/>
+<area shape="rect" id="node40" href="$da/d7f/class_conductor.html#ab8b59894e85705f874a8e2fbb7b8fb96" title=" " alt="" coords="1252,1132,1420,1159"/>
+<area shape="rect" id="node46" href="$d3/d09/class_qet_graphics_handler_item.html#a77c6a8b97a188bf55d800417fa0a2ba2" title="QetGraphicsHandlerItem::setColor." alt="" coords="517,1259,684,1301"/>
+<area shape="rect" id="node48" href="$da/d7f/class_conductor.html#ac6a16f9e398282ceb21a1f9af2811cc3" title=" " alt="" coords="523,904,678,931"/>
+<area shape="rect" id="node49" href="$da/d7f/class_conductor.html#aa4d9b88ee021d32c11d90b425a07a69d" title=" " alt="" coords="750,904,935,931"/>
+<area shape="rect" id="node50" href="$da/d7f/class_conductor.html#aa9680d1f729374c7ffe916837a488d55" title=" " alt="" coords="997,904,1175,931"/>
+</map>

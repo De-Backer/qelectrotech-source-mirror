@@ -1,0 +1,16 @@
+<map id="projectDataBase::removeElement" name="projectDataBase::removeElement">
+<area shape="rect" id="node1" title="projectDataBase::removeElement" alt="" coords="695,325,912,352"/>
+<area shape="rect" id="node2" href="$d3/d37/class_diagram.html#a0b0af5271af64fe8eab04efb14e849d8" title="Diagram::removeItem Reimplemented from QGraphicsScene::removeItem(QGraphicsItem *item) Do some specif..." alt="" coords="500,325,647,352"/>
+<area shape="rect" id="node3" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="284,5,412,32"/>
+<area shape="rect" id="node4" href="$de/d1f/class_diagram_event_add_element.html#ac1abaacc4cd3bb2a0e28ed403c0683cd" title="DiagramEventAddElement::mouseDoubleClickEvent If mouse left double clic, finish this event (isRunning..." alt="" coords="261,57,435,98"/>
+<area shape="rect" id="node5" href="$dc/dbc/class_diagram_event_add_shape.html#a58cec422983629a275f2d975f73c15e6" title="DiagramEventAddShape::mouseReleaseEvent Action when mouse button is released." alt="" coords="266,122,430,163"/>
+<area shape="rect" id="node6" href="$de/d1f/class_diagram_event_add_element.html#a83197f59aa1fe080ac85c7fc6124be53" title="DiagramEventAddElement::mouseReleaseEvent Right button finish this event (isRunning = false) and emit..." alt="" coords="261,187,435,229"/>
+<area shape="rect" id="node7" href="$d8/db3/class_delete_q_graphics_item_command.html#a66bc5005b1823174e15fbf80baa5927c" title="DeleteQGraphicsItemCommand::redo Redo the delete command." alt="" coords="244,253,452,294"/>
+<area shape="rect" id="node8" href="$d1/db0/class_paste_diagram_command.html#a674894587b1edeffe8f687293501009e" title="PasteDiagramCommand::undo Undo this command." alt="" coords="265,318,431,359"/>
+<area shape="rect" id="node9" href="$d5/dcc/class_multi_paste_dialog.html#a8788e76c17a1908550ab51294cb3fcc4" title=" " alt="" coords="264,383,432,425"/>
+<area shape="rect" id="node11" href="$de/d1f/class_diagram_event_add_element.html#a6432edad046b699fed2ecbe6043b70c9" title="DiagramEventAddElement::~DiagramEventAddElement Destructor Enable context menu for each view of diagr..." alt="" coords="253,449,443,490"/>
+<area shape="rect" id="node12" href="$d7/dad/class_diagram_event_add_image.html#ae8aa9677395e9bbba05546c476143a47" title="DiagramEventAddImage::~DiagramEventAddImage." alt="" coords="259,514,437,555"/>
+<area shape="rect" id="node13" href="$dc/dbc/class_diagram_event_add_shape.html#a498be77078bc1acaff321554c6af3f01" title="DiagramEventAddShape::~DiagramEventAddShape." alt="" coords="258,579,438,621"/>
+<area shape="rect" id="node14" href="$d5/dcc/class_multi_paste_dialog.html#add1a70b0c62665184fe45a995240a8d7" title=" " alt="" coords="283,645,413,686"/>
+<area shape="rect" id="node10" href="$d5/dcc/class_multi_paste_dialog.html#a9f60c5bd510d7961de088f75f0eeb92d" title=" " alt="" coords="5,383,196,425"/>
+</map>

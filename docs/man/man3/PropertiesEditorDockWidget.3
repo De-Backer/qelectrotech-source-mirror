@@ -1,0 +1,150 @@
+.TH "PropertiesEditorDockWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PropertiesEditorDockWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <propertieseditordockwidget\&.h>\fP
+.PP
+Inherits QDockWidget\&.
+.PP
+Inherited by \fBDiagramPropertiesEditorDockWidget\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPropertiesEditorDockWidget\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBPropertiesEditorDockWidget::PropertiesEditorDockWidget\fP Constructor\&. "
+.ti -1c
+.RI "\fB~PropertiesEditorDockWidget\fP () override"
+.br
+.RI "\fBPropertiesEditorDockWidget::~PropertiesEditorDockWidget\fP Destructor\&. "
+.ti -1c
+.RI "virtual void \fBclear\fP ()"
+.br
+.RI "\fBPropertiesEditorDockWidget::clear\fP Remove all editor present in this dock and delete it\&. They also disabled the button box at the bottom of this dock\&. "
+.ti -1c
+.RI "virtual void \fBapply\fP ()"
+.br
+.RI "\fBPropertiesEditorDockWidget::apply\fP Call the apply method for each editor present in this dock\&. "
+.ti -1c
+.RI "virtual void \fBreset\fP ()"
+.br
+.RI "\fBPropertiesEditorDockWidget::reset\fP Call the reset method for each editor present in this widget\&. "
+.ti -1c
+.RI "bool \fBaddEditor\fP (\fBPropertiesEditorWidget\fP *editor, int index=0)"
+.br
+.RI "\fBPropertiesEditorDockWidget::addEditor\fP Add an editor in this dock at index in the main vertical layout (note the button box are displayed at bottom of this layout by default) When an editor is added, we enable the button box\&. "
+.ti -1c
+.RI "QList< \fBPropertiesEditorWidget\fP * > \fBeditors\fP () const"
+.br
+.RI "\fBPropertiesEditorDockWidget::editors\fP\&. "
+.ti -1c
+.RI "bool \fBremoveEditor\fP (\fBPropertiesEditorWidget\fP *editor)"
+.br
+.RI "\fBPropertiesEditorDockWidget::removeEditor\fP Remove editor from this dock\&. The editor wasn't delete a the end of this method If the editor was the last on this widget, we disabled the button box\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBPropertiesEditorWidget\fP * > \fBm_editor_list\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::PropertiesEditorDockWidget * \fBui\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PropertiesEditorDockWidget::PropertiesEditorDockWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBPropertiesEditorDockWidget::PropertiesEditorDockWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "PropertiesEditorDockWidget::~PropertiesEditorDockWidget ()\fC [override]\fP"
+
+.PP
+\fBPropertiesEditorDockWidget::~PropertiesEditorDockWidget\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool PropertiesEditorDockWidget::addEditor (\fBPropertiesEditorWidget\fP * editor, int index = \fC0\fP)"
+
+.PP
+\fBPropertiesEditorDockWidget::addEditor\fP Add an editor in this dock at index in the main vertical layout (note the button box are displayed at bottom of this layout by default) When an editor is added, we enable the button box\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP : editor to add; 
+.br
+\fIindex\fP : index of editor in the layout 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if was added (or already add) or false if can't be add (editor = nullptr) 
+.RE
+.PP
+
+.SS "void PropertiesEditorDockWidget::apply ()\fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorDockWidget::apply\fP Call the apply method for each editor present in this dock\&. 
+.SS "void PropertiesEditorDockWidget::clear ()\fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorDockWidget::clear\fP Remove all editor present in this dock and delete it\&. They also disabled the button box at the bottom of this dock\&. 
+.SS "QList< \fBPropertiesEditorWidget\fP * > PropertiesEditorDockWidget::editors () const"
+
+.PP
+\fBPropertiesEditorDockWidget::editors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+all editor used in this dock 
+.RE
+.PP
+
+.SS "bool PropertiesEditorDockWidget::removeEditor (\fBPropertiesEditorWidget\fP * editor)"
+
+.PP
+\fBPropertiesEditorDockWidget::removeEditor\fP Remove editor from this dock\&. The editor wasn't delete a the end of this method If the editor was the last on this widget, we disabled the button box\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP : editor to remove 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true on success, else false 
+.RE
+.PP
+
+.SS "void PropertiesEditorDockWidget::reset ()\fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorDockWidget::reset\fP Call the reset method for each editor present in this widget\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<\fBPropertiesEditorWidget\fP *> PropertiesEditorDockWidget::m_editor_list\fC [protected]\fP"
+
+.SS "Ui::PropertiesEditorDockWidget* PropertiesEditorDockWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

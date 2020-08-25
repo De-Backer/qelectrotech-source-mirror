@@ -1,0 +1,434 @@
+.TH "ElementView" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementView
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementview\&.h>\fP
+.PP
+Inherits QGraphicsView\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetVisualisationMode\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSelectionMode\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomIn\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomOut\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomInSlowly\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomOutSlowly\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomFit\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomReset\fP ()"
+.br
+.ti -1c
+.RI "void \fBadjustSceneRect\fP ()"
+.br
+.RI "\fBElementView::adjustSceneRect\fP Adjust the scenRect, so that he include all primitives of element plus the viewport of the scene with a margin of 1/3 of herself\&. "
+.ti -1c
+.RI "void \fBresetSceneRect\fP ()"
+.br
+.RI "\fBElementView::resetSceneRect\fP reset le sceneRect (zone du schéma visualisée par l'\fBElementView\fP) afin que celui-ci inclut uniquement les primitives de l'élément dessiné\&. "
+.ti -1c
+.RI "void \fBcut\fP ()"
+.br
+.ti -1c
+.RI "void \fBcopy\fP ()"
+.br
+.ti -1c
+.RI "void \fBpaste\fP ()"
+.br
+.ti -1c
+.RI "void \fBpasteInArea\fP ()"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBmodeChanged\fP ()"
+.br
+.RI "Signal emitted after the mode changed\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementView\fP (\fBElementScene\fP *, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ElementView\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "\fBElementScene\fP * \fBscene\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetScene\fP (\fBElementScene\fP *)"
+.br
+.ti -1c
+.RI "QRectF \fBviewedSceneRect\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QMouseEvent *) override"
+.br
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QMouseEvent *) override"
+.br
+.RI "\fBElementView::mouseMoveEvent\fP Manage the event move mouse\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QMouseEvent *) override"
+.br
+.RI "\fBElementView::mouseReleaseEvent\fP Manage event release click mouse\&. "
+.ti -1c
+.RI "bool \fBgestureEvent\fP (QGestureEvent *\fBevent\fP)"
+.br
+.RI "\fBElementView::gestureEvent\fP\&. "
+.ti -1c
+.RI "bool \fBevent\fP (QEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBwheelEvent\fP (QWheelEvent *) override"
+.br
+.RI "\fBElementView::wheelEvent\fP\&. "
+.ti -1c
+.RI "void \fBdrawBackground\fP (QPainter *, const QRectF &) override"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBgetPasteArea\fP (const QRectF &)"
+.br
+.ti -1c
+.RI "\fBElementContent\fP \fBpasteAreaDefined\fP (const QRectF &)"
+.br
+.ti -1c
+.RI "\fBElementContent\fP \fBpaste\fP (const QPointF &)"
+.br
+.ti -1c
+.RI "\fBElementContent\fP \fBpaste\fP (const QDomDocument &, const QPointF &)"
+.br
+.ti -1c
+.RI "\fBElementContent\fP \fBpasteWithOffset\fP (const QDomDocument &)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementView\fP (const \fBElementView\fP &)"
+.br
+.ti -1c
+.RI "QRectF \fBapplyMovement\fP (const QRectF &, const QPointF &)"
+.br
+.RI "\fBElementView::applyMovement\fP Applique le decalage offset dans le sens movement au rectangle start\&. "
+.ti -1c
+.RI "bool \fBgestures\fP () const"
+.br
+.RI "\fBElementView::gestures\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElementScene\fP * \fBm_scene\fP"
+.br
+.ti -1c
+.RI "QString \fBto_paste_in_area_\fP"
+.br
+.ti -1c
+.RI "int \fBoffset_paste_count_\fP"
+.br
+.ti -1c
+.RI "QPointF \fBstart_top_left_corner_\fP"
+.br
+.ti -1c
+.RI "QPointF \fBreference_view_\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBPastePartsCommand\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a widget to render an \fBElementScene\fP instance, i\&.e\&. the edition class for electrical elements\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementView::ElementView (\fBElementScene\fP * scene, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP \fBElementScene\fP visualisee par cette \fBElementView\fP 
+.br
+\fIparent\fP QWidget parent de cette \fBElementView\fP 
+.RE
+.PP
+
+.SS "ElementView::~ElementView ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "ElementView::ElementView (const \fBElementView\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementView::adjustSceneRect ()\fC [slot]\fP"
+
+.PP
+\fBElementView::adjustSceneRect\fP Adjust the scenRect, so that he include all primitives of element plus the viewport of the scene with a margin of 1/3 of herself\&. 
+.SS "QRectF ElementView::applyMovement (const QRectF & start, const QPointF & offset)\fC [private]\fP"
+
+.PP
+\fBElementView::applyMovement\fP Applique le decalage offset dans le sens movement au rectangle start\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP : rectangle a decaler 
+.br
+\fIoffset\fP : Decalage a appliquer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void ElementView::copy ()\fC [slot]\fP"
+Gere le fait de copier la selection = l'exporter en XML dans le presse-papier\&. 
+.SS "void ElementView::cut ()\fC [slot]\fP"
+Gere le fait de couper la selection = l'exporter en XML dans le presse-papier puis la supprimer\&. 
+.SS "void ElementView::drawBackground (QPainter * p, const QRectF & r)\fC [override]\fP, \fC [protected]\fP"
+Dessine l'arriere-plan de l'editeur, cad la grille\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Le QPainter a utiliser pour dessiner 
+.br
+\fIr\fP Le rectangle de la zone a dessiner 
+.RE
+.PP
+
+.SS "bool ElementView::event (QEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Gere les evenements de la \fBElementView\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP Evenement 
+.RE
+.PP
+
+.SS "bool ElementView::gestureEvent (QGestureEvent * event)\fC [protected]\fP"
+
+.PP
+\fBElementView::gestureEvent\fP\&. Utilise le pincement du trackpad pour zoomer 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool ElementView::gestures () const\fC [private]\fP"
+
+.PP
+\fBElementView::gestures\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void ElementView::getPasteArea (const QRectF & to_paste)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIto_paste\fP Rectangle englobant les parties a coller 
+.RE
+.PP
+
+.SS "void ElementView::modeChanged ()\fC [signal]\fP"
+
+.PP
+Signal emitted after the mode changed\&. 
+.SS "void ElementView::mouseMoveEvent (QMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementView::mouseMoveEvent\fP Manage the event move mouse\&. 
+.SS "void ElementView::mousePressEvent (QMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Gere les clics sur la vue - permet de coller lorsaue l'on enfonce le bouton du milieu de la souris\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP QMouseEvent decrivant l'evenement souris 
+.RE
+.PP
+
+.SS "void ElementView::mouseReleaseEvent (QMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementView::mouseReleaseEvent\fP Manage event release click mouse\&. 
+.SS "void ElementView::paste ()\fC [slot]\fP"
+Gere le fait de coller le contenu du presse-papier = l'importer dans l'element\&. Cette methode examine le contenu du presse-papier\&. Si celui-ci semble avoir ete copie depuis cet element, il est colle a cote de sa zone d'origine ; s'il est recolle, il sera colle un cran a cote de la zone deja recollee, etc\&. Sinon, cette methode demande a l'utilisateur de definir la zone ou le collage devra s'effectuer\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBpasteAreaDefined(const QRectF &)\fP 
+.RE
+.PP
+
+.SS "\fBElementContent\fP ElementView::paste (const QDomDocument & xml_document, const QPointF & pos)\fC [private]\fP, \fC [slot]\fP"
+Colle le document XML xml_document a la position pos 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP Document XML a coller 
+.br
+\fIpos\fP Coin superieur gauche du rectangle cible 
+.RE
+.PP
+
+.SS "\fBElementContent\fP ElementView::paste (const QPointF & position)\fC [private]\fP, \fC [slot]\fP"
+Gere le fait de coller le contenu du presse-papier = l'importer dans l'element\&. Cette methode examine le contenu du presse-papier\&. Si celui-ci est exploitable, elle le colle a la position passee en parametre\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBpasteAreaDefined(const QRectF &)\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP Point de collage 
+.RE
+.PP
+
+.SS "\fBElementContent\fP ElementView::pasteAreaDefined (const QRectF & target_rect)\fC [private]\fP, \fC [slot]\fP"
+Slot appele lorsque la scene annonce avoir defini une zone de collage 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget_rect\fP Rectangle cible pour le collage 
+.RE
+.PP
+
+.SS "void ElementView::pasteInArea ()\fC [slot]\fP"
+Colle le contenu du presse-papier en demandant systematiquement a l'utilisateur de choisir une zone de collage 
+.SS "\fBElementContent\fP ElementView::pasteWithOffset (const QDomDocument & xml_document)\fC [private]\fP, \fC [slot]\fP"
+Colle le document XML xml_document a la position pos 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP Document XML a coller 
+.RE
+.PP
+
+.SS "void ElementView::resetSceneRect ()\fC [slot]\fP"
+
+.PP
+\fBElementView::resetSceneRect\fP reset le sceneRect (zone du schéma visualisée par l'\fBElementView\fP) afin que celui-ci inclut uniquement les primitives de l'élément dessiné\&. 
+.SS "\fBElementScene\fP * ElementView::scene () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+l'\fBElementScene\fP visualisee par cette \fBElementView\fP 
+.RE
+.PP
+
+.SS "void ElementView::setScene (\fBElementScene\fP * s)"
+Definit l'\fBElementScene\fP visualisee par cette \fBElementView\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP l'\fBElementScene\fP visualisee par cette \fBElementView\fP 
+.RE
+.PP
+
+.SS "void ElementView::setSelectionMode ()\fC [slot]\fP"
+Set the \fBDiagram\fP in Selection mode 
+.SS "void ElementView::setVisualisationMode ()\fC [slot]\fP"
+Set the \fBDiagram\fP in visualisation mode 
+.SS "QRectF ElementView::viewedSceneRect () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le rectangle de l'element visualise par cet \fBElementView\fP 
+.RE
+.PP
+
+.SS "void ElementView::wheelEvent (QWheelEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementView::wheelEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "void ElementView::zoomFit ()\fC [slot]\fP"
+Agrandit ou rectrecit le schema de facon a ce que tous les elements du schema soient visibles a l'ecran\&. S'il n'y a aucun element sur le schema, le zoom est reinitialise 
+.SS "void ElementView::zoomIn ()\fC [slot]\fP"
+Agrandit le schema (+33% = inverse des -25 % de zoomMoins()) 
+.SS "void ElementView::zoomInSlowly ()\fC [slot]\fP"
+Agrandit le schema avec le trackpad 
+.SS "void ElementView::zoomOut ()\fC [slot]\fP"
+Retrecit le schema (-25% = inverse des +33 % de zoomPlus()) 
+.SS "void ElementView::zoomOutSlowly ()\fC [slot]\fP"
+Retrecit le schema avec le trackpad 
+.SS "void ElementView::zoomReset ()\fC [slot]\fP"
+Reinitialise le zoom 
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBPastePartsCommand\fP\fC [friend]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElementScene\fP* ElementView::m_scene\fC [private]\fP"
+
+.SS "int ElementView::offset_paste_count_\fC [private]\fP"
+
+.SS "QPointF ElementView::reference_view_\fC [private]\fP"
+
+.SS "QPointF ElementView::start_top_left_corner_\fC [private]\fP"
+
+.SS "QString ElementView::to_paste_in_area_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

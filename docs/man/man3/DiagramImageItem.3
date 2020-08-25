@@ -1,0 +1,230 @@
+.TH "DiagramImageItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramImageItem
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramimageitem\&.h>\fP
+.PP
+Inherits \fBQetGraphicsItem\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1007 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramImageItem\fP (\fBQetGraphicsItem\fP *=nullptr)"
+.br
+.RI "\fBDiagramImageItem::DiagramImageItem\fP Constructor without pixmap\&. "
+.ti -1c
+.RI "\fBDiagramImageItem\fP (const QPixmap &pixmap, \fBQetGraphicsItem\fP *=nullptr)"
+.br
+.RI "\fBDiagramImageItem::DiagramImageItem\fP Constructor with pixmap\&. "
+.ti -1c
+.RI "\fB~DiagramImageItem\fP () override"
+.br
+.RI "\fBDiagramImageItem::~DiagramImageItem\fP Destructor\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "virtual bool \fBfromXml\fP (const QDomElement &)"
+.br
+.RI "\fBDiagramImageItem::fromXml\fP Load this image fro xml elemebt e\&. "
+.ti -1c
+.RI "virtual QDomElement \fBtoXml\fP (QDomDocument &) const"
+.br
+.ti -1c
+.RI "void \fBeditProperty\fP () override"
+.br
+.RI "\fBDiagramImageItem::editProperty\fP Open the approriate dialog to edit this image\&. "
+.ti -1c
+.RI "void \fBsetPixmap\fP (const QPixmap &pixmap)"
+.br
+.RI "\fBDiagramImageItem::setPixmap\fP Set the new pixmap to be draw\&. "
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBDiagramImageItem::boundingRect\fP the outer bounds of the item as a rectangle, if no pixmap are set, return a default QRectF\&. "
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.RI "\fBDiagramImageItem::name\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *) override"
+.br
+.RI "\fBDiagramImageItem::paint\fP Draw the pixmap\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPixmap \fBpixmap_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a selectable, movable and editable image on a diagram\&. 
+.PP
+\fBSee also\fP
+.RS 4
+QGraphicsItem::GraphicsItemFlags 
+.RE
+.PP
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramImageItem::DiagramImageItem (\fBQetGraphicsItem\fP * parent_item = \fCnullptr\fP)"
+
+.PP
+\fBDiagramImageItem::DiagramImageItem\fP Constructor without pixmap\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_item\fP the parent graphics item 
+.RE
+.PP
+
+.SS "DiagramImageItem::DiagramImageItem (const QPixmap & pixmap, \fBQetGraphicsItem\fP * parent_item = \fCnullptr\fP)"
+
+.PP
+\fBDiagramImageItem::DiagramImageItem\fP Constructor with pixmap\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpixmap\fP the pixmap to be draw 
+.br
+\fIparent_item\fP the parent graphic item 
+.RE
+.PP
+
+.SS "DiagramImageItem::~DiagramImageItem ()\fC [override]\fP"
+
+.PP
+\fBDiagramImageItem::~DiagramImageItem\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "QRectF DiagramImageItem::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBDiagramImageItem::boundingRect\fP the outer bounds of the item as a rectangle, if no pixmap are set, return a default QRectF\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a QRectF represent the bounding rectangle 
+.RE
+.PP
+
+.SS "void DiagramImageItem::editProperty ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramImageItem::editProperty\fP Open the approriate dialog to edit this image\&. 
+.PP
+Reimplemented from \fBQetGraphicsItem\fP\&.
+.SS "bool DiagramImageItem::fromXml (const QDomElement & e)\fC [virtual]\fP"
+
+.PP
+\fBDiagramImageItem::fromXml\fP Load this image fro xml elemebt e\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if succesfully load\&. 
+.RE
+.PP
+
+.SS "QString DiagramImageItem::name () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramImageItem::name\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the generic name of this item (picture) 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQetGraphicsItem\fP\&.
+.SS "void DiagramImageItem::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramImageItem::paint\fP Draw the pixmap\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP the Qpainter to use for draw the pixmap 
+.br
+\fIoption\fP the style option 
+.br
+\fIwidget\fP the QWidget where we draw the pixmap 
+.RE
+.PP
+
+.SS "void DiagramImageItem::setPixmap (const QPixmap & pixmap)"
+
+.PP
+\fBDiagramImageItem::setPixmap\fP Set the new pixmap to be draw\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpixmap\fP the new pixmap 
+.RE
+.PP
+
+.SS "QDomElement DiagramImageItem::toXml (QDomDocument & document) const\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP Le document XML a utiliser 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+L'element XML representant l'image 
+.RE
+.PP
+
+.SS "int DiagramImageItem::type () const\fC [inline]\fP, \fC [override]\fP"
+Enable the use of qgraphicsitem_cast to safely cast a QGraphicsItem into a \fBDiagramImageItem\fP 
+.PP
+\fBReturns\fP
+.RS 4
+the QGraphicsItem type 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QPixmap DiagramImageItem::pixmap_\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

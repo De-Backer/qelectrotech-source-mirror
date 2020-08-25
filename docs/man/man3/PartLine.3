@@ -1,0 +1,735 @@
+.TH "PartLine" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PartLine
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <partline\&.h>\fP
+.PP
+Inherits \fBCustomElementGraphicPart\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1104 }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBlineChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBfirstEndTypeChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBsecondEndTypeChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBfirstEndLengthChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBsecondEndLengthChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPartLine\fP (\fBQETElementEditor\fP *, QGraphicsItem *=nullptr)"
+.br
+.RI "\fBPartLine::PartLine\fP Constructor\&. "
+.ti -1c
+.RI "\fB~PartLine\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *=nullptr) override"
+.br
+.RI "\fBPartLine::paint\fP Draw this line\&. "
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.ti -1c
+.RI "QString \fBxmlName\fP () const override"
+.br
+.ti -1c
+.RI "const QDomElement \fBtoXml\fP (QDomDocument &) const override"
+.br
+.RI "\fBPartLine::toXml\fP Export this line in xml\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &) override"
+.br
+.RI "\fBPartLine::fromXml\fP Import the properties of this line from a xml element\&. "
+.ti -1c
+.RI "virtual QPointF \fBsceneP1\fP () const"
+.br
+.RI "\fBPartLine::sceneP1\fP\&. "
+.ti -1c
+.RI "virtual QPointF \fBsceneP2\fP () const"
+.br
+.RI "\fBPartLine::sceneP2\fP\&. "
+.ti -1c
+.RI "QPainterPath \fBshape\fP () const override"
+.br
+.RI "\fBPartLine::shape\fP\&. "
+.ti -1c
+.RI "QPainterPath \fBshadowShape\fP () const override"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBPartLine::boundingRect\fP\&. "
+.ti -1c
+.RI "bool \fBisUseless\fP () const override"
+.br
+.RI "\fBPartLine::isUseless\fP\&. "
+.ti -1c
+.RI "QRectF \fBsceneGeometricRect\fP () const override"
+.br
+.RI "\fBPartLine::sceneGeometricRect\fP\&. "
+.ti -1c
+.RI "void \fBstartUserTransformation\fP (const QRectF &) override"
+.br
+.RI "\fBPartLine::startUserTransformation\fP Start the user-induced transformation, provided this primitive is contained within the \fIinitial_selection_rect\fP bounding rectangle\&. "
+.ti -1c
+.RI "void \fBhandleUserTransformation\fP (const QRectF &, const QRectF &) override"
+.br
+.RI "\fBPartLine::handleUserTransformation\fP Handle the user-induced transformation from \fIinitial_selection_rect\fP to \fInew_selection_rect\fP\&. "
+.ti -1c
+.RI "QLineF \fBline\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetLine\fP (const QLineF &\fBline\fP)"
+.br
+.ti -1c
+.RI "\fBQet::EndType\fP \fBfirstEndType\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetFirstEndType\fP (const \fBQet::EndType\fP &et)"
+.br
+.ti -1c
+.RI "\fBQet::EndType\fP \fBsecondEndType\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetSecondEndType\fP (const \fBQet::EndType\fP &et)"
+.br
+.ti -1c
+.RI "qreal \fBfirstEndLength\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetFirstEndLength\fP (const qreal &l)"
+.br
+.ti -1c
+.RI "qreal \fBsecondEndLength\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetSecondEndLength\fP (const qreal &l)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static uint \fBrequiredLengthForEndType\fP (const \fBQet::EndType\fP &)"
+.br
+.RI "\fBPartLine::requiredLengthForEndType\fP\&. "
+.ti -1c
+.RI "static QList< QPointF > \fBfourEndPoints\fP (const QPointF &, const QPointF &, const qreal &)"
+.br
+.RI "\fBPartLine::fourEndPoints\fP Return the four interesting point needed to draw the shape at extremity of line (circle, diamond, arrow, triangle) This points are in order : O : point on the line, at a distance 'length' of the extremity A : point on the line at a 'length' of 2x the extremity length B : point at a distance of length O - O is the projection of B on the line C : point at a distance of length O - O is the projection of C on the line\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QVariant \fBitemChange\fP (GraphicsItemChange change, const QVariant &value) override"
+.br
+.RI "\fBPartLine::itemChange\fP\&. "
+.ti -1c
+.RI "bool \fBsceneEventFilter\fP (QGraphicsItem *watched, QEvent *event) override"
+.br
+.RI "\fBPartLine::sceneEventFilter\fP\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBQet::EndType\fP \fBend1\fP"
+.br
+.ti -1c
+.RI "\fBQet::EndType\fP \fBend2\fP"
+.br
+.ti -1c
+.RI "qreal \fBlength1\fP"
+.br
+.ti -1c
+.RI "qreal \fBlength2\fP"
+.br
+.ti -1c
+.RI "QLineF \fBline\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPartLine\fP (const \fBPartLine\fP &)"
+.br
+.ti -1c
+.RI "void \fBadjusteHandlerPos\fP ()"
+.br
+.RI "\fBPartLine::adjusteHandlerPos\fP Adjust the position of the handler item\&. "
+.ti -1c
+.RI "void \fBhandlerMousePressEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBPartLine::handlerMousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMouseMoveEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBPartLine::handlerMouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMouseReleaseEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBPartLine::handlerMouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "void \fBsceneSelectionChanged\fP ()"
+.br
+.RI "\fBPartLine::sceneSelectionChanged\fP When the scene selection change, if there are several primitive selected, we remove the handler of this item\&. "
+.ti -1c
+.RI "void \fBaddHandler\fP ()"
+.br
+.RI "\fBPartLine::addHandler\fP Add handlers for this item\&. "
+.ti -1c
+.RI "void \fBremoveHandler\fP ()"
+.br
+.RI "\fBPartLine::removeHandler\fP Remove the handlers of this item\&. "
+.ti -1c
+.RI "QPainterPath \fBpath\fP () const"
+.br
+.RI "\fBPartLine::path\fP\&. "
+.ti -1c
+.RI "QList< QPointF > \fBfourShapePoints\fP () const"
+.br
+.RI "\fBPartLine::fourShapePoints\fP\&. "
+.ti -1c
+.RI "QRectF \fBfirstEndCircleRect\fP () const"
+.br
+.RI "\fBPartLine::firstEndCircleRect\fP\&. "
+.ti -1c
+.RI "QRectF \fBsecondEndCircleRect\fP () const"
+.br
+.RI "\fBPartLine::secondEndCircleRect\fP\&. "
+.ti -1c
+.RI "void \fBdebugPaint\fP (QPainter *)"
+.br
+.RI "\fBPartLine::debugPaint\fP Display several composante of the drawing -the bounding rect -special points at each extremity -the quadrature of the circle at each extremity, even if itself is an other type\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQet::EndType\fP \fBfirst_end\fP"
+.br
+.ti -1c
+.RI "qreal \fBfirst_length\fP"
+.br
+.ti -1c
+.RI "\fBQet::EndType\fP \fBsecond_end\fP"
+.br
+.ti -1c
+.RI "qreal \fBsecond_length\fP"
+.br
+.ti -1c
+.RI "QList< QPointF > \fBsaved_points_\fP"
+.br
+.ti -1c
+.RI "QLineF \fBm_line\fP"
+.br
+.ti -1c
+.RI "int \fBm_vector_index\fP = \-1"
+.br
+.ti -1c
+.RI "\fBQPropertyUndoCommand\fP * \fBm_undo_command\fP"
+.br
+.ti -1c
+.RI "QVector< \fBQetGraphicsHandlerItem\fP * > \fBm_handler_vector\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents a line primitive which may be used to compose the drawing of an electrical element within the element editor\&. Lines may have specific visual ends (e\&.g\&. arrows) through the setFirstEndType and setSecondEndType methods\&. Their size can be defined using the setFirstEndLength and setSecondEndLength methods\&. Please note ends are not drawn if the required length for their drawing is longer than the line itself\&. In case there is room for a single end only, the first one get priority\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PartLine::PartLine (\fBQETElementEditor\fP * editor, QGraphicsItem * parent = \fCnullptr\fP)"
+
+.PP
+\fBPartLine::PartLine\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP : \fBQETElementEditor\fP of this part 
+.br
+\fIparent\fP : parent item 
+.RE
+.PP
+
+.SS "PartLine::~PartLine ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "PartLine::PartLine (const \fBPartLine\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void PartLine::addHandler ()\fC [private]\fP"
+
+.PP
+\fBPartLine::addHandler\fP Add handlers for this item\&. 
+.SS "void PartLine::adjusteHandlerPos ()\fC [private]\fP"
+
+.PP
+\fBPartLine::adjusteHandlerPos\fP Adjust the position of the handler item\&. 
+.SS "QRectF PartLine::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBPartLine::boundingRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the bounding rect of this part 
+.RE
+.PP
+
+.SS "void PartLine::debugPaint (QPainter * painter)\fC [private]\fP"
+
+.PP
+\fBPartLine::debugPaint\fP Display several composante of the drawing -the bounding rect -special points at each extremity -the quadrature of the circle at each extremity, even if itself is an other type\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.RE
+.PP
+
+.SS "QRectF PartLine::firstEndCircleRect () const\fC [private]\fP"
+
+.PP
+\fBPartLine::firstEndCircleRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the rectangle bordering the entirety of the first extremity 
+.RE
+.PP
+
+.SS "qreal PartLine::firstEndLength () const\fC [inline]\fP"
+
+.SS "void PartLine::firstEndLengthChanged ()\fC [signal]\fP"
+
+.SS "\fBQet::EndType\fP PartLine::firstEndType () const\fC [inline]\fP"
+
+.SS "void PartLine::firstEndTypeChanged ()\fC [signal]\fP"
+
+.SS "QList< QPointF > PartLine::fourEndPoints (const QPointF & end_point, const QPointF & other_point, const qreal & length)\fC [static]\fP"
+
+.PP
+\fBPartLine::fourEndPoints\fP Return the four interesting point needed to draw the shape at extremity of line (circle, diamond, arrow, triangle) This points are in order : O : point on the line, at a distance 'length' of the extremity A : point on the line at a 'length' of 2x the extremity length B : point at a distance of length O - O is the projection of B on the line C : point at a distance of length O - O is the projection of C on the line\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIend_point\fP : The concerned extremity 
+.br
+\fIother_point\fP : other needed point to define the line 
+.br
+\fIlength\fP : length to use between the extremity and the point O 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QList< QPointF > PartLine::fourShapePoints () const\fC [private]\fP"
+
+.PP
+\fBPartLine::fourShapePoints\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a list with the two points that delimite the line
+.IP "\(bu" 2
+the four points surrounding these two points 
+.PP
+.RE
+.PP
+
+.SS "void PartLine::fromXml (const QDomElement & qde)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartLine::fromXml\fP Import the properties of this line from a xml element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqde\fP : Xml document to use 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartLine::handlerMouseMoveEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBPartLine::handlerMouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void PartLine::handlerMousePressEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBPartLine::handlerMousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void PartLine::handlerMouseReleaseEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBPartLine::handlerMouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void PartLine::handleUserTransformation (const QRectF & initial_selection_rect, const QRectF & new_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartLine::handleUserTransformation\fP Handle the user-induced transformation from \fIinitial_selection_rect\fP to \fInew_selection_rect\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_selection_rect\fP 
+.br
+\fInew_selection_rect\fP 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "bool PartLine::isUseless () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartLine::isUseless\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this part is irrelevant and does not deserve to be Retained / registered\&. A line is relevant when is two point is different 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "QVariant PartLine::itemChange (GraphicsItemChange change, const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartLine::itemChange\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QLineF PartLine::line () const"
+
+.SS "void PartLine::lineChanged ()\fC [signal]\fP"
+
+.SS "QString PartLine::name () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name of the primitive 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartLine::paint (QPainter * painter, const QStyleOptionGraphicsItem * options, QWidget * widget = \fCnullptr\fP)\fC [override]\fP"
+
+.PP
+\fBPartLine::paint\fP Draw this line\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.br
+\fIoptions\fP 
+.br
+\fIwidget\fP 
+.RE
+.PP
+
+.SS "QPainterPath PartLine::path () const\fC [private]\fP"
+
+.PP
+\fBPartLine::path\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+this line has a QPainterPath\&. It's notably use when this line have an end type (circle, triangle etc\&.\&.\&.\&.), because return a QPainterPath with end already draw\&. Else if there isn't an end type get P1 and P2 of line is better (faster)\&. 
+.RE
+.PP
+
+.PP
+\fBReturns\fP
+.RS 4
+true si cette partie n'est pas pertinente et ne merite pas d'etre conservee / enregistree\&. Une ligne est pertinente des lors que ses deux points sont differents
+.RE
+.PP
+
+.SS "void PartLine::removeHandler ()\fC [private]\fP"
+
+.PP
+\fBPartLine::removeHandler\fP Remove the handlers of this item\&. 
+.SS "uint PartLine::requiredLengthForEndType (const \fBQet::EndType\fP & end_type)\fC [static]\fP"
+
+.PP
+\fBPartLine::requiredLengthForEndType\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIend_type\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the number of 'length' needed to draw a extremity of type \fBQet::EndType\fP\&. 
+.RE
+.PP
+
+.SS "bool PartLine::sceneEventFilter (QGraphicsItem * watched, QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartLine::sceneEventFilter\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwatched\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QRectF PartLine::sceneGeometricRect () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartLine::sceneGeometricRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the minimum, margin-less rectangle this part can fit into, in scene coordinates\&. It is different from \fBboundingRect()\fP because it is not supposed to imply any margin, and it is different from shape because it is a regular rectangle, not a complex shape\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "QPointF PartLine::sceneP1 () const\fC [virtual]\fP"
+
+.PP
+\fBPartLine::sceneP1\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the point p1 in scene coordinate 
+.RE
+.PP
+
+.SS "QPointF PartLine::sceneP2 () const\fC [virtual]\fP"
+
+.PP
+\fBPartLine::sceneP2\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the point p2 in scen coordinate 
+.RE
+.PP
+
+.SS "void PartLine::sceneSelectionChanged ()\fC [private]\fP"
+
+.PP
+\fBPartLine::sceneSelectionChanged\fP When the scene selection change, if there are several primitive selected, we remove the handler of this item\&. 
+.SS "QRectF PartLine::secondEndCircleRect () const\fC [private]\fP"
+
+.PP
+\fBPartLine::secondEndCircleRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the rectangle bordering the entirety of the second extremity 
+.RE
+.PP
+
+.SS "qreal PartLine::secondEndLength () const\fC [inline]\fP"
+
+.SS "void PartLine::secondEndLengthChanged ()\fC [signal]\fP"
+
+.SS "\fBQet::EndType\fP PartLine::secondEndType () const\fC [inline]\fP"
+
+.SS "void PartLine::secondEndTypeChanged ()\fC [signal]\fP"
+
+.SS "void PartLine::setFirstEndLength (const qreal & l)"
+
+.SS "void PartLine::setFirstEndType (const \fBQet::EndType\fP & et)"
+
+.SS "void PartLine::setLine (const QLineF & line)"
+
+.SS "void PartLine::setSecondEndLength (const qreal & l)"
+
+.SS "void PartLine::setSecondEndType (const \fBQet::EndType\fP & et)"
+
+.SS "QPainterPath PartLine::shadowShape () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBCustomElementGraphicPart\fP\&.
+.SS "QPainterPath PartLine::shape () const\fC [override]\fP"
+
+.PP
+\fBPartLine::shape\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the shape of this item 
+.RE
+.PP
+
+.SS "void PartLine::startUserTransformation (const QRectF & initial_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartLine::startUserTransformation\fP Start the user-induced transformation, provided this primitive is contained within the \fIinitial_selection_rect\fP bounding rectangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_selection_rect\fP 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "const QDomElement PartLine::toXml (QDomDocument & xml_document) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartLine::toXml\fP Export this line in xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP : Xml document to use for create the xml element\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+an xml element that describe this line 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "int PartLine::type () const\fC [inline]\fP, \fC [override]\fP"
+Enable the use of qgraphicsitem_cast to safely cast a QGraphicsItem into a \fBPartLine\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the QGraphicsItem type 
+.RE
+.PP
+
+.SS "QString PartLine::xmlName () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name that will be used as XML tag when exporting the primitive 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQet::EndType\fP PartLine::first_end\fC [private]\fP"
+
+.SS "qreal PartLine::first_length\fC [private]\fP"
+
+.SS "QVector<\fBQetGraphicsHandlerItem\fP *> PartLine::m_handler_vector\fC [private]\fP"
+
+.SS "QLineF PartLine::m_line\fC [private]\fP"
+
+.SS "\fBQPropertyUndoCommand\fP* PartLine::m_undo_command\fC [private]\fP"
+
+.SS "int PartLine::m_vector_index = \-1\fC [private]\fP"
+
+.SS "QList<QPointF> PartLine::saved_points_\fC [private]\fP"
+
+.SS "\fBQet::EndType\fP PartLine::second_end\fC [private]\fP"
+
+.SS "qreal PartLine::second_length\fC [private]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "\fBQet::EndType\fP PartLine::end1\fC [read]\fP, \fC [write]\fP"
+
+.SS "\fBQet::EndType\fP PartLine::end2\fC [read]\fP, \fC [write]\fP"
+
+.SS "qreal PartLine::length1\fC [read]\fP, \fC [write]\fP"
+
+.SS "qreal PartLine::length2\fC [read]\fP, \fC [write]\fP"
+
+.SS "QLineF PartLine::line\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

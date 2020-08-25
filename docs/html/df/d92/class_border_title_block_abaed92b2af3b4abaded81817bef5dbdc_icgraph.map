@@ -1,0 +1,12 @@
+<map id="BorderTitleBlock::needTitleBlockTemplate" name="BorderTitleBlock::needTitleBlockTemplate">
+<area shape="rect" id="node1" title="needTitleBlockTemplate Signal emitted when this object needs to set a specific title block template...." alt="" coords="884,53,1063,94"/>
+<area shape="rect" id="node2" href="$d3/d37/class_diagram.html#a3a51ca00d34d4d198b1ab7768522846f" title="Diagram::Diagram Constructor." alt="" coords="691,31,819,57"/>
+<area shape="rect" id="node3" href="$df/d92/class_border_title_block.html#a6a937fb3d147ca6b76ad52fcac040c05" title="BorderTitleBlock::importTitleBlock." alt="" coords="673,82,836,123"/>
+<area shape="rect" id="node4" href="$d6/dc5/class_q_e_t_project.html#a9d1de6d97c0e283b0ec972176f27d422" title="QETProject::addNewDiagram Add a new diagram in project at position pos." alt="" coords="431,31,625,57"/>
+<area shape="rect" id="node8" href="$df/d92/class_border_title_block.html#a6ac6f1a45fbad8710b6249dc31390106" title="BorderTitleBlock::BorderTitleBlock Simple constructor: build a border by recovering the dimensions in..." alt="" coords="446,82,610,123"/>
+<area shape="rect" id="node9" href="$df/d92/class_border_title_block.html#a61c599afbdb17ebcc588d14cca5ab616" title="BorderTitleBlock::titleBlockFromXml Reads the title block values from XML." alt="" coords="438,147,618,189"/>
+<area shape="rect" id="node5" href="$d6/df6/class_project_view.html#a766d1dadf059e79e2de811c2f250f407" title=" " alt="" coords="223,5,383,32"/>
+<area shape="rect" id="node7" href="$d6/df6/class_project_view.html#a79d3edf1becbdf2ef84a604aa5ab1975" title="ProjectView::setProject Set the project display by the project view." alt="" coords="223,56,382,83"/>
+<area shape="rect" id="node6" href="$d6/df6/class_project_view.html#a92b14ca3695dc24da5dca2e351f889dd" title=" " alt="" coords="5,31,175,57"/>
+<area shape="rect" id="node10" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="239,155,367,181"/>
+</map>

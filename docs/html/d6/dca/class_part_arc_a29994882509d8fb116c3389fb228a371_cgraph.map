@@ -1,0 +1,22 @@
+<map id="PartArc::sceneEventFilter" name="PartArc::sceneEventFilter">
+<area shape="rect" id="node1" title="PartArc::sceneEventFilter." alt="" coords="5,331,177,358"/>
+<area shape="rect" id="node2" href="$d6/dca/class_part_arc.html#a108527be86c22a232ad2c4afcb4654c9" title="PartArc::handlerMouseMoveEvent." alt="" coords="233,324,420,365"/>
+<area shape="rect" id="node16" href="$d6/dca/class_part_arc.html#ac2e8d193f70d04b29ce466707be756d0" title="PartArc::handlerMousePressEvent." alt="" coords="231,579,422,620"/>
+<area shape="rect" id="node18" href="$d6/dca/class_part_arc.html#acf72cef608489987b13e79b94115ad96" title="PartArc::handlerMouseReleaseEvent." alt="" coords="225,93,428,135"/>
+<area shape="rect" id="node3" href="$dc/d21/class_custom_element_part.html#a16051b529ae65ad62390c9727d1f23ab" title=" " alt="" coords="493,123,641,164"/>
+<area shape="rect" id="node4" href="$d2/d2c/class_qet_graphics_handler_utility.html#a4817316247ba48b306bfe3fac5abbb43" title="QetGraphicsHandlerUtility::mirrorRectForPosAtIndex Return a rectangle after modification of the point..." alt="" coords="478,240,655,281"/>
+<area shape="rect" id="node5" href="$d2/d2c/class_qet_graphics_handler_utility.html#a20f6f0915c48a2908a9eafe4c15ae37b" title="QetGraphicsHandlerUtility::pointsForArc Return the points for the given arc. The first value in the v..." alt="" coords="939,473,1113,515"/>
+<area shape="rect" id="node6" href="$d2/d2c/class_qet_graphics_handler_utility.html#a7670390638f5215446f4f03215d94a4f" title="QetGraphicsHandlerUtility::rectForPosAtIndex Return a rectangle after modification of the point &#39;pos&#39;..." alt="" coords="479,520,654,561"/>
+<area shape="rect" id="node7" href="$d6/dca/class_part_arc.html#a7fdf53c12d54a4f771601a2b31e2e77f" title="AbstractPartEllipse::setRect Sets the item&#39;s ellipse geometry to rect. The rectangle&#39;s left edge defi..." alt="" coords="507,306,627,333"/>
+<area shape="rect" id="node11" href="$d6/dca/class_part_arc.html#a6d8ee7eb10be215eb1aad1c539cf313d" title="AbstractPartEllipse::setSpanAngle Returns the span angle of an ellipse segment in 16ths of a degree...." alt="" coords="489,357,645,383"/>
+<area shape="rect" id="node13" href="$d6/dca/class_part_arc.html#a8bf1203bf8f3377e74065b7eebf55eac" title="AbstractPartEllipse::setStartAngle Sets the start angle for an ellipse segment to angle,..." alt="" coords="489,407,644,434"/>
+<area shape="rect" id="node15" href="$d2/d17/class_element_scene.html#a514dd2042f9a612fe5f9252b5f50b541" title="ElementScene::snapToGrid Rounds the coordinates of the point passed as a parameter so that this point..." alt="" coords="476,189,657,215"/>
+<area shape="rect" id="node8" href="$d6/dca/class_part_arc.html#a44e702841017261a5cf1756293b65e28" title="PartArc::adjusteHandlerPos." alt="" coords="705,298,891,325"/>
+<area shape="rect" id="node10" href="$d9/da9/class_abstract_part_ellipse.html#aafebf618fc66c68537a93e215c9b1b48" title="AbstractPartEllipse::setRect Sets the item&#39;s ellipse geometry to rect. The rectangle&#39;s left edge defi..." alt="" coords="731,232,865,273"/>
+<area shape="rect" id="node9" href="$d2/d2c/class_qet_graphics_handler_utility.html#a8d978099db033c551fce0d92d366e3a9" title="QetGraphicsHandlerUtility::pointsForRect Return the keys points of the rectangle, stored in a vector...." alt="" coords="939,291,1113,332"/>
+<area shape="rect" id="node12" href="$d9/da9/class_abstract_part_ellipse.html#a7a401c894ae55c602a6f47de74a4dd5b" title="AbstractPartEllipse::setSpanAngle Returns the span angle of an ellipse segment in 16ths of a degree...." alt="" coords="731,349,865,391"/>
+<area shape="rect" id="node14" href="$d9/da9/class_abstract_part_ellipse.html#af333d77db32306187439963281b5e672" title="AbstractPartEllipse::setStartAngle Sets the start angle for an ellipse segment to angle,..." alt="" coords="731,415,865,456"/>
+<area shape="rect" id="node17" href="$d8/d58/class_q_property_undo_command.html#a62c22eb056d39243310db052e1b115fc" title="QPropertyUndoCommand::enableAnimation True to enable animation." alt="" coords="480,637,653,679"/>
+<area shape="rect" id="node19" href="$d8/d58/class_q_property_undo_command.html#ae5358c4196a4c75e5e57b396461bda16" title="QPropertyUndoCommand::setNewValue Set the new value of the property (set with redo) to new_value." alt="" coords="480,5,653,47"/>
+<area shape="rect" id="node20" href="$d2/d17/class_element_scene.html#a089c70001e634c03745223c1ca52cd5c" title="ElementScene::undoStack." alt="" coords="478,71,655,98"/>
+</map>

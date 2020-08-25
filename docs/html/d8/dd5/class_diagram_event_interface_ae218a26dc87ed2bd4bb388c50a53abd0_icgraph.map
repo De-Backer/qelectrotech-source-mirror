@@ -1,0 +1,5 @@
+<map id="DiagramEventInterface::keyPressEvent" name="DiagramEventInterface::keyPressEvent">
+<area shape="rect" id="node1" title="DiagramEventInterface::keyPressEvent By default, press escape key abort the curent action." alt="" coords="228,35,384,76"/>
+<area shape="rect" id="node2" href="$de/d1f/class_diagram_event_add_element.html#aa1000865e7020051c09dead9e19ad76e" title="DiagramEventAddElement::keyPressEvent Press space key rotate the element to 90° (return true) else ca..." alt="" coords="5,5,180,47"/>
+<area shape="rect" id="node3" href="$d3/d37/class_diagram.html#a1304d75039e5950b8de9900f6bc476c1" title="Diagram::keyPressEvent This event is managed by diagram event interface if any. Else move selected el..." alt="" coords="9,71,176,98"/>
+</map>

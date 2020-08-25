@@ -1,0 +1,1123 @@
+.TH "Element" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Element
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <element\&.h>\fP
+.PP
+Inherits \fBQetGraphicsItem\fP\&.
+.PP
+Inherited by \fBMasterElement\fP, \fBReportElement\fP, \fBSimpleElement\fP, \fBSlaveElement\fP, and \fBTerminalElement\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBkind\fP { \fBSimple\fP = 1, \fBNextReport\fP = 2, \fBPreviousReport\fP = 4, \fBAllReport\fP = 6, \fBMaster\fP = 8, \fBSlave\fP = 16, \fBTerminale\fP = 32 }"
+.br
+.RI "The kind enum Used to know the kind of this element (master, slave, report ect\&.\&.\&.) "
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1000 }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBlinkedElementChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBelementInfoChange\fP (\fBDiagramContext\fP old_info, \fBDiagramContext\fP new_info)"
+.br
+.ti -1c
+.RI "void \fBtextAdded\fP (\fBDynamicElementTextItem\fP *deti)"
+.br
+.ti -1c
+.RI "void \fBtextRemoved\fP (\fBDynamicElementTextItem\fP *deti)"
+.br
+.ti -1c
+.RI "void \fBtextsGroupAdded\fP (\fBElementTextItemGroup\fP *group)"
+.br
+.ti -1c
+.RI "void \fBtextsGroupAboutToBeRemoved\fP (\fBElementTextItemGroup\fP *group)"
+.br
+.ti -1c
+.RI "void \fBtextAddedToGroup\fP (\fBDynamicElementTextItem\fP *text, \fBElementTextItemGroup\fP *group)"
+.br
+.ti -1c
+.RI "void \fBtextRemovedFromGroup\fP (\fBDynamicElementTextItem\fP *text, \fBElementTextItemGroup\fP *group)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElement\fP (const \fBElementsLocation\fP &\fBlocation\fP, QGraphicsItem *=nullptr, int *\fBstate\fP=nullptr, \fBElement::kind\fP link_type=\fBElement::Simple\fP)"
+.br
+.RI "\fBElement::Element\fP\&. "
+.ti -1c
+.RI "\fB~Element\fP () override"
+.br
+.RI "\fBElement::~Element\fP\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "QList< \fBTerminal\fP * > \fBterminals\fP () const"
+.br
+.RI "\fBElement::terminals\fP\&. "
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBconductors\fP () const"
+.br
+.RI "\fBElement::conductors\fP\&. "
+.ti -1c
+.RI "QList< QPair< \fBTerminal\fP *, \fBTerminal\fP * > > \fBAlignedFreeTerminals\fP () const"
+.br
+.RI "\fBElement::AlignedFreeTerminals\fP\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBelementInformations\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetElementInformations\fP (\fBDiagramContext\fP dc)"
+.br
+.RI "\fBElement::setElementInformations\fP Set new information for this element\&. If new information is different of current infotmation emit elementInfoChange\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBkindInformations\fP () const"
+.br
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP \fBsequenceStruct\fP () const"
+.br
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP & \fBrSequenceStruct\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUpFormula\fP (bool code_letter=true)"
+.br
+.RI "\fBElement::setUpFormula\fP Set up the formula used to create the label of this element\&. "
+.ti -1c
+.RI "void \fBsetPrefix\fP (QString)"
+.br
+.RI "\fBElement::setPrefix\fP set \fBElement\fP Prefix\&. "
+.ti -1c
+.RI "QString \fBgetPrefix\fP () const"
+.br
+.RI "\fBElement::getPrefix\fP get \fBElement\fP Prefix\&. "
+.ti -1c
+.RI "void \fBfreezeLabel\fP (bool freeze)"
+.br
+.RI "\fBElement::freezeLabel\fP Freeze this element label\&. "
+.ti -1c
+.RI "bool \fBisFreezeLabel\fP () const"
+.br
+.ti -1c
+.RI "void \fBfreezeNewAddedElement\fP ()"
+.br
+.RI "\fBElement::freezeNewAddedElement\fP Freeze this label if needed\&. "
+.ti -1c
+.RI "QString \fBactualLabel\fP ()"
+.br
+.RI "\fBElement::actualLabel\fP Always return the current label to be displayed\&. This function is usefull when label is based on formula, because label can change at any time\&. "
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.RI "\fBElement::name\fP\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP \fBlocation\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetHighlighted\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBdisplayHelpLine\fP (bool b=true)"
+.br
+.RI "\fBElement::displayHelpLine\fP Display the help line of each terminal if b is true\&. "
+.ti -1c
+.RI "QSize \fBsize\fP () const"
+.br
+.ti -1c
+.RI "QPixmap \fBpixmap\fP ()"
+.br
+.RI "\fBElement::pixmap\fP\&. "
+.ti -1c
+.RI "QPoint \fBsetHotspot\fP (QPoint)"
+.br
+.ti -1c
+.RI "QPoint \fBhotspot\fP () const"
+.br
+.ti -1c
+.RI "void \fBeditProperty\fP () override"
+.br
+.ti -1c
+.RI "virtual bool \fBfromXml\fP (QDomElement &, QHash< int, \fBTerminal\fP * > &, bool=false)"
+.br
+.RI "\fBElement::fromXml\fP Import the parameters of this element from a xml document\&. When call this function ensure this element is already in a scene, because the dynamic text item and element text item group (in the xml file) are created in this function and need a diagram for create their Xref, when this element is linked to another\&. If not the Xref can be not displayed, until the next call of update Xref of the group or text item\&. "
+.ti -1c
+.RI "virtual QDomElement \fBtoXml\fP (QDomDocument &, QHash< \fBTerminal\fP *, int > &) const"
+.br
+.RI "\fBElement::toXml\fP Allows to export the element in XML\&. "
+.ti -1c
+.RI "QUuid \fBuuid\fP () const"
+.br
+.RI "\fBElement::uuid\fP\&. "
+.ti -1c
+.RI "int \fBorientation\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddDynamicTextItem\fP (\fBDynamicElementTextItem\fP *deti=nullptr)"
+.br
+.RI "Element::addDynamiqueTextItem Add deti as a dynamic text item of this element, deti is reparented to this If deti is null, a new \fBDynamicElementTextItem\fP is created and added to this element\&. "
+.ti -1c
+.RI "void \fBremoveDynamicTextItem\fP (\fBDynamicElementTextItem\fP *deti)"
+.br
+.RI "\fBElement::removeDynamicTextItem\fP Remove deti, no matter if is a child of this element or a child of a group of this element\&. Set he parent item of deti to 0, deti is not deleted\&. "
+.ti -1c
+.RI "QList< \fBDynamicElementTextItem\fP * > \fBdynamicTextItems\fP () const"
+.br
+.RI "\fBElement::dynamicTextItems\fP\&. "
+.ti -1c
+.RI "\fBElementTextItemGroup\fP * \fBaddTextGroup\fP (const QString &\fBname\fP)"
+.br
+.RI "\fBElement::addTextGroup\fP Create and add an element text item group to this element\&. If this element already have a group with the same name, then name will renamed to name1 or name2 etc\&.\&.\&.\&. "
+.ti -1c
+.RI "void \fBaddTextGroup\fP (\fBElementTextItemGroup\fP *group)"
+.br
+.RI "\fBElement::addTextGroup\fP\&. "
+.ti -1c
+.RI "void \fBremoveTextGroup\fP (\fBElementTextItemGroup\fP *group)"
+.br
+.RI "\fBElement::removeTextGroup\fP Remove the text group group from this element, and set the parent of group to 0\&. group is not deleted\&. All texts owned by the group will be reparented to this element\&. "
+.ti -1c
+.RI "\fBElementTextItemGroup\fP * \fBtextGroup\fP (const QString &\fBname\fP) const"
+.br
+.RI "\fBElement::textGroup\fP\&. "
+.ti -1c
+.RI "QList< \fBElementTextItemGroup\fP * > \fBtextGroups\fP () const"
+.br
+.RI "\fBElement::textGroups\fP\&. "
+.ti -1c
+.RI "bool \fBaddTextToGroup\fP (\fBDynamicElementTextItem\fP *text, \fBElementTextItemGroup\fP *group)"
+.br
+.RI "\fBElement::addTextToGroup\fP Add the text text to the group group; If group isn't owned by this element return false\&. The text must be a text of this element\&. "
+.ti -1c
+.RI "bool \fBremoveTextFromGroup\fP (\fBDynamicElementTextItem\fP *text, \fBElementTextItemGroup\fP *group)"
+.br
+.RI "\fBElement::removeTextFromGroup\fP Remove the text text from the group group, en reparent text to this element\&. "
+.ti -1c
+.RI "bool \fBisFree\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBlinkToElement\fP (\fBElement\fP *)"
+.br
+.ti -1c
+.RI "virtual void \fBunlinkAllElements\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBunlinkElement\fP (\fBElement\fP *)"
+.br
+.ti -1c
+.RI "virtual void \fBinitLink\fP (\fBQETProject\fP *)"
+.br
+.RI "\fBElement::initLink\fP Initialise the link between this element and other elements\&. This method can be call once because init the link according to uuid store in a private list, after link, the list is clear, so call another time do nothing\&. "
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBlinkedElements\fP ()"
+.br
+.RI "\fBElement::linkedElements\fP\&. "
+.ti -1c
+.RI "virtual \fBkind\fP \fBlinkType\fP () const"
+.br
+.ti -1c
+.RI "QString \fBlinkTypeToString\fP () const"
+.br
+.ti -1c
+.RI "void \fBnewUuid\fP ()"
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *) override"
+.br
+.RI "\fBElement::paint\fP\&. "
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBvalideXml\fP (QDomElement &)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdrawAxes\fP (QPainter *, const QStyleOptionGraphicsItem *)"
+.br
+.ti -1c
+.RI "void \fBsetSize\fP (int, int)"
+.br
+.RI "\fBElement::setSize\fP Define the size of the element\&. The size must be a multiple of 10\&. If not, the dimensions indicated will be arrrondies to higher tens\&. "
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBElement::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBElement::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "void \fBhoverEnterEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.ti -1c
+.RI "void \fBhoverLeaveEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QHash< \fBDynamicElementTextItem\fP *, QPointF > \fBm_converted_text_from_xml_description\fP"
+.br
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBconnected_elements\fP"
+.br
+.ti -1c
+.RI "QList< QUuid > \fBtmp_uuids_link\fP"
+.br
+.ti -1c
+.RI "QUuid \fBm_uuid\fP"
+.br
+.ti -1c
+.RI "\fBkind\fP \fBm_link_type\fP = \fBElement::Simple\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBm_element_informations\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBm_kind_informations\fP"
+.br
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP \fBm_autoNum_seq\fP"
+.br
+.ti -1c
+.RI "bool \fBm_freeze_label\fP = false"
+.br
+.ti -1c
+.RI "QString \fBm_F_str\fP"
+.br
+.ti -1c
+.RI "\fBElementsLocation\fP \fBm_location\fP"
+.br
+.ti -1c
+.RI "\fBNamesList\fP \fBm_names\fP"
+.br
+.ti -1c
+.RI "QList< \fBTerminal\fP * > \fBm_terminals\fP"
+.br
+.ti -1c
+.RI "const QPicture \fBm_picture\fP"
+.br
+.ti -1c
+.RI "const QPicture \fBm_low_zoom_picture\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElement\fP (const \fBElement\fP &)"
+.br
+.ti -1c
+.RI "void \fBdrawSelection\fP (QPainter *, const QStyleOptionGraphicsItem *)"
+.br
+.ti -1c
+.RI "void \fBdrawHighlight\fP (QPainter *, const QStyleOptionGraphicsItem *)"
+.br
+.ti -1c
+.RI "bool \fBbuildFromXml\fP (const QDomElement &, int *=nullptr)"
+.br
+.RI "\fBElement::buildFromXml\fP Build this element from an xml description\&. "
+.ti -1c
+.RI "bool \fBparseElement\fP (const QDomElement &dom)"
+.br
+.RI "\fBElement::parseElement\fP Parse the element of the xml description of this element\&. "
+.ti -1c
+.RI "bool \fBparseInput\fP (const QDomElement &dom_element)"
+.br
+.RI "\fBElement::parseInput\fP Parse the input (old text field) the parsed input are converted to dynamic text field, this function is only here to keep compatibility with old text\&. "
+.ti -1c
+.RI "\fBDynamicElementTextItem\fP * \fBparseDynamicText\fP (const QDomElement &dom_element)"
+.br
+.RI "\fBElement::parseDynamicText\fP Create the dynamic text field describ in dom_element\&. "
+.ti -1c
+.RI "\fBTerminal\fP * \fBparseTerminal\fP (const QDomElement &dom_element)"
+.br
+.RI "\fBElement::parseTerminal\fP Parse partTerminal from xml structure\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_must_highlight\fP = false"
+.br
+.ti -1c
+.RI "QSize \fBdimensions\fP"
+.br
+.ti -1c
+.RI "QPoint \fBhotspot_coord\fP"
+.br
+.ti -1c
+.RI "bool \fBm_mouse_over\fP = false"
+.br
+.ti -1c
+.RI "QString \fBm_prefix\fP"
+.br
+.ti -1c
+.RI "QList< \fBDynamicElementTextItem\fP * > \fBm_dynamic_text_list\fP"
+.br
+.ti -1c
+.RI "QList< \fBElementTextItemGroup\fP * > \fBm_texts_group\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBDiagramEventAddElement\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the base class for electrical elements\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+Enable the use of qgraphicsitem_cast to safely cast a QGraphicsItem into an \fBElement\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the QGraphicsItem type 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SS "enum \fBElement::kind\fP"
+
+.PP
+The kind enum Used to know the kind of this element (master, slave, report ect\&.\&.\&.) 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISimple \fP\fP
+.TP
+\fB\fINextReport \fP\fP
+.TP
+\fB\fIPreviousReport \fP\fP
+.TP
+\fB\fIAllReport \fP\fP
+.TP
+\fB\fIMaster \fP\fP
+.TP
+\fB\fISlave \fP\fP
+.TP
+\fB\fITerminale \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Element::Element (const \fBElementsLocation\fP & location, QGraphicsItem * parent = \fCnullptr\fP, int * state = \fCnullptr\fP, \fBElement::kind\fP link_type = \fC\fBElement::Simple\fP\fP)"
+
+.PP
+\fBElement::Element\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP : location of this element 
+.br
+\fIparent\fP : parent graphics item 
+.br
+\fIstate\fP : state of the instanciation 
+.br
+\fIlink_type\fP 
+.RE
+.PP
+
+.SS "Element::~Element ()\fC [override]\fP"
+
+.PP
+\fBElement::~Element\fP\&. 
+.SS "Element::Element (const \fBElement\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QString Element::actualLabel ()"
+
+.PP
+\fBElement::actualLabel\fP Always return the current label to be displayed\&. This function is usefull when label is based on formula, because label can change at any time\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void Element::addDynamicTextItem (\fBDynamicElementTextItem\fP * deti = \fCnullptr\fP)"
+
+.PP
+Element::addDynamiqueTextItem Add deti as a dynamic text item of this element, deti is reparented to this If deti is null, a new \fBDynamicElementTextItem\fP is created and added to this element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeti\fP 
+.RE
+.PP
+
+.SS "\fBElementTextItemGroup\fP * Element::addTextGroup (const QString & name)"
+
+.PP
+\fBElement::addTextGroup\fP Create and add an element text item group to this element\&. If this element already have a group with the same name, then name will renamed to name1 or name2 etc\&.\&.\&.\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP : the name of the group 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the created group\&. 
+.RE
+.PP
+
+.SS "void Element::addTextGroup (\fBElementTextItemGroup\fP * group)"
+
+.PP
+\fBElement::addTextGroup\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP add group to the group of this element\&. the group must not be owned by an element\&. 
+.RE
+.PP
+
+.SS "bool Element::addTextToGroup (\fBDynamicElementTextItem\fP * text, \fBElementTextItemGroup\fP * group)"
+
+.PP
+\fBElement::addTextToGroup\fP Add the text text to the group group; If group isn't owned by this element return false\&. The text must be a text of this element\&. 
+.PP
+\fBReturns\fP
+.RS 4
+: true if the text was succesfully added to the group\&. 
+.RE
+.PP
+
+.SS "QList< QPair< \fBTerminal\fP *, \fBTerminal\fP * > > Element::AlignedFreeTerminals () const"
+
+.PP
+\fBElement::AlignedFreeTerminals\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a list of terminal (owned by this element) aligned to other terminal (from other element) The first \fBTerminal\fP of QPair is a \fBTerminal\fP owned by this element, this terminal haven't got any conductor docked\&. The second \fBTerminal\fP of QPair is a \fBTerminal\fP owned by an other element, which is aligned with the first \fBTerminal\fP\&. The second \fBTerminal\fP can have or not docked conductors\&. 
+.RE
+.PP
+
+.SS "QRectF Element::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Le rectangle delimitant le contour de l'element 
+.RE
+.PP
+
+.SS "bool Element::buildFromXml (const QDomElement & xml_def_elmt, int * state = \fCnullptr\fP)\fC [private]\fP"
+
+.PP
+\fBElement::buildFromXml\fP Build this element from an xml description\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_def_elmt\fP 
+.br
+\fIstate\fP Optional pointer which define the status of build 0 - evreything all right 4 - xml isn't a 'definition' 5 - attribute of the definition isn't present or valid 6 - the definition is empty 7 - parsing of a xml node who describe a graphical part failed\&. 8 - No part of the drawing could be loaded 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QList< \fBConductor\fP * > Element::conductors () const"
+
+.PP
+\fBElement::conductors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The list of conductors docked to this element the list is sorted according to the position of the terminal where the conductor is docked from top to bottom, and left to right\&. 
+.RE
+.PP
+
+.SS "void Element::displayHelpLine (bool b = \fCtrue\fP)"
+
+.PP
+\fBElement::displayHelpLine\fP Display the help line of each terminal if b is true\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIb\fP 
+.RE
+.PP
+
+.SS "void Element::drawAxes (QPainter * painter, const QStyleOptionGraphicsItem * options)\fC [protected]\fP"
+Dessine un petit repere (axes x et y) relatif a l'element 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP Le QPainter a utiliser pour dessiner les axes 
+.br
+\fIoptions\fP Les options de style a prendre en compte 
+.RE
+.PP
+
+.SS "void Element::drawHighlight (QPainter * painter, const QStyleOptionGraphicsItem * options)\fC [private]\fP"
+Dessine le cadre de selection de l'element de maniere systematiquement non antialiasee\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP Le QPainter a utiliser pour dessiner les bornes\&. 
+.br
+\fIoptions\fP Les options de style a prendre en compte 
+.RE
+.PP
+
+.SS "void Element::drawSelection (QPainter * painter, const QStyleOptionGraphicsItem * options)\fC [private]\fP"
+Dessine le cadre de selection de l'element de maniere systematiquement non antialiasee\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP Le QPainter a utiliser pour dessiner les bornes\&. 
+.br
+\fIoptions\fP Les options de style a prendre en compte 
+.RE
+.PP
+
+.SS "QList< \fBDynamicElementTextItem\fP * > Element::dynamicTextItems () const"
+
+.PP
+\fBElement::dynamicTextItems\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+all dynamic text items of this element directly child of this element\&. Texts in text-groups belonging to this element are not returned by this function\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBElementTextItemGroup::texts\fP 
+.RE
+.PP
+
+.SS "void Element::editProperty ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBQetGraphicsItem\fP\&.
+.SS "void Element::elementInfoChange (\fBDiagramContext\fP old_info, \fBDiagramContext\fP new_info)\fC [signal]\fP"
+
+.SS "\fBDiagramContext\fP Element::elementInformations () const\fC [inline]\fP"
+
+.SS "void Element::freezeLabel (bool freeze)"
+
+.PP
+\fBElement::freezeLabel\fP Freeze this element label\&. 
+.SS "void Element::freezeNewAddedElement ()"
+
+.PP
+\fBElement::freezeNewAddedElement\fP Freeze this label if needed\&. 
+.SS "bool Element::fromXml (QDomElement & e, QHash< int, \fBTerminal\fP * > & table_id_adr, bool handle_inputs_rotation = \fCfalse\fP)\fC [virtual]\fP"
+
+.PP
+\fBElement::fromXml\fP Import the parameters of this element from a xml document\&. When call this function ensure this element is already in a scene, because the dynamic text item and element text item group (in the xml file) are created in this function and need a diagram for create their Xref, when this element is linked to another\&. If not the Xref can be not displayed, until the next call of update Xref of the group or text item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP : the dom element where the parameter is stored 
+.br
+\fItable_id_adr\fP : Reference to the mapping table between IDs of the XML file and the addresses in memory\&. If the import succeeds, it must be add the right couples (id, address)\&. 
+.br
+\fIhandle_inputs_rotation\fP : apply the rotation of this element to his child text 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QString Element::getPrefix () const"
+
+.PP
+\fBElement::getPrefix\fP get \fBElement\fP Prefix\&. 
+.SS "QPoint Element::hotspot () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+Le hotspot courant de l'element 
+.RE
+.PP
+
+.SS "void Element::hoverEnterEvent (QGraphicsSceneHoverEvent * e)\fC [override]\fP, \fC [protected]\fP"
+When mouse over element change m_mouse_over to true (used in \fBpaint()\fP function ) Also highlight linked elements 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP QGraphicsSceneHoverEvent 
+.RE
+.PP
+
+.SS "void Element::hoverLeaveEvent (QGraphicsSceneHoverEvent * e)\fC [override]\fP, \fC [protected]\fP"
+When mouse over element leave the position change m_mouse_over to false(used in paint() function ) Also un-highlight linked elements 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP QGraphicsSceneHoverEvent 
+.RE
+.PP
+
+.SS "void Element::initLink (\fBQETProject\fP * prj)\fC [virtual]\fP"
+
+.PP
+\fBElement::initLink\fP Initialise the link between this element and other elements\&. This method can be call once because init the link according to uuid store in a private list, after link, the list is clear, so call another time do nothing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprj\fP : ownership project of this element and other element to be linked 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBMasterElement\fP, \fBSimpleElement\fP, and \fBTerminalElement\fP\&.
+.SS "bool Element::isFree () const\fC [inline]\fP"
+
+.SS "bool Element::isFreezeLabel () const\fC [inline]\fP"
+
+.SS "\fBDiagramContext\fP Element::kindInformations () const\fC [inline]\fP"
+
+.SS "void Element::linkedElementChanged ()\fC [signal]\fP"
+
+.SS "QList< \fBElement\fP * > Element::linkedElements ()\fC [inline]\fP"
+
+.PP
+\fBElement::linkedElements\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of linked elements, the list is sorted by position 
+.RE
+.PP
+
+.SS "virtual void Element::linkToElement (\fBElement\fP *)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBMasterElement\fP, \fBSlaveElement\fP, and \fBReportElement\fP\&.
+.SS "virtual \fBkind\fP Element::linkType () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.SS "QString Element::linkTypeToString () const"
+
+.SS "\fBElementsLocation\fP Element::location () const"
+
+.SS "void Element::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElement::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void Element::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElement::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "QString Element::name () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElement::name\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the human name of this element 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQetGraphicsItem\fP\&.
+.SS "void Element::newUuid ()\fC [inline]\fP"
+
+.SS "int Element::orientation () const\fC [inline]\fP"
+Indicate the current orientation of this element O = 0° 1 = 90° 2 = 180° 3 = 270° 
+.PP
+\fBReturns\fP
+.RS 4
+the current orientation of this element 
+.RE
+.PP
+
+.SS "void Element::paint (QPainter * painter, const QStyleOptionGraphicsItem * options, QWidget *)\fC [override]\fP"
+
+.PP
+\fBElement::paint\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.br
+\fIoptions\fP 
+.RE
+.PP
+
+.SS "\fBDynamicElementTextItem\fP * Element::parseDynamicText (const QDomElement & dom_element)\fC [private]\fP"
+
+.PP
+\fBElement::parseDynamicText\fP Create the dynamic text field describ in dom_element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool Element::parseElement (const QDomElement & dom)\fC [private]\fP"
+
+.PP
+\fBElement::parseElement\fP Parse the element of the xml description of this element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool Element::parseInput (const QDomElement & dom_element)\fC [private]\fP"
+
+.PP
+\fBElement::parseInput\fP Parse the input (old text field) the parsed input are converted to dynamic text field, this function is only here to keep compatibility with old text\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "\fBTerminal\fP * Element::parseTerminal (const QDomElement & dom_element)\fC [private]\fP"
+
+.PP
+\fBElement::parseTerminal\fP Parse partTerminal from xml structure\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QPixmap Element::pixmap ()"
+
+.PP
+\fBElement::pixmap\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the pixmap of this element 
+.RE
+.PP
+
+.SS "void Element::removeDynamicTextItem (\fBDynamicElementTextItem\fP * deti)"
+
+.PP
+\fBElement::removeDynamicTextItem\fP Remove deti, no matter if is a child of this element or a child of a group of this element\&. Set he parent item of deti to 0, deti is not deleted\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeti\fP 
+.RE
+.PP
+
+.SS "bool Element::removeTextFromGroup (\fBDynamicElementTextItem\fP * text, \fBElementTextItemGroup\fP * group)"
+
+.PP
+\fBElement::removeTextFromGroup\fP Remove the text text from the group group, en reparent text to this element\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if text was succesfully removed 
+.RE
+.PP
+
+.SS "void Element::removeTextGroup (\fBElementTextItemGroup\fP * group)"
+
+.PP
+\fBElement::removeTextGroup\fP Remove the text group group from this element, and set the parent of group to 0\&. group is not deleted\&. All texts owned by the group will be reparented to this element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP 
+.RE
+.PP
+
+.SS "\fBautonum::sequentialNumbers\fP& Element::rSequenceStruct ()\fC [inline]\fP"
+
+.SS "\fBautonum::sequentialNumbers\fP Element::sequenceStruct () const\fC [inline]\fP"
+
+.SS "void Element::setElementInformations (\fBDiagramContext\fP dc)\fC [virtual]\fP"
+
+.PP
+\fBElement::setElementInformations\fP Set new information for this element\&. If new information is different of current infotmation emit elementInfoChange\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdc\fP 
+.RE
+.PP
+
+.SS "void Element::setHighlighted (bool hl)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIhl\fP true pour mettre l'element en evidence, false sinon 
+.RE
+.PP
+
+.SS "QPoint Element::setHotspot (QPoint hs)"
+Definit le hotspot de l'element par rapport au coin superieur gauche de son rectangle delimitant\&. Necessite que la taille ait deja ete definie 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhs\fP Coordonnees du hotspot 
+.RE
+.PP
+
+.SS "void Element::setPrefix (QString prefix)"
+
+.PP
+\fBElement::setPrefix\fP set \fBElement\fP Prefix\&. 
+.SS "void Element::setSize (int wid, int hei)\fC [protected]\fP"
+
+.PP
+\fBElement::setSize\fP Define the size of the element\&. The size must be a multiple of 10\&. If not, the dimensions indicated will be arrrondies to higher tens\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwid\fP 
+.br
+\fIhei\fP 
+.RE
+.PP
+
+.SS "void Element::setUpFormula (bool code_letter = \fCtrue\fP)"
+
+.PP
+\fBElement::setUpFormula\fP Set up the formula used to create the label of this element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcode_letter\fP : Q_UNUSED(code_letter) if true set tagged text to code letter (ex K for coil) with condition : formula is empty, text tagged 'label' is emptty or '_'; 
+.RE
+.PP
+
+.SS "QSize Element::size () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la taille de l'element sur le schema 
+.RE
+.PP
+
+.SS "QList< \fBTerminal\fP * > Element::terminals () const"
+
+.PP
+\fBElement::terminals\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of terminals of this element\&. 
+.RE
+.PP
+
+.SS "void Element::textAdded (\fBDynamicElementTextItem\fP * deti)\fC [signal]\fP"
+
+.SS "void Element::textAddedToGroup (\fBDynamicElementTextItem\fP * text, \fBElementTextItemGroup\fP * group)\fC [signal]\fP"
+
+.SS "\fBElementTextItemGroup\fP * Element::textGroup (const QString & name) const"
+
+.PP
+\fBElement::textGroup\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the text group named name or nullptr if this element haven't got a group with this name 
+.RE
+.PP
+
+.SS "QList< \fBElementTextItemGroup\fP * > Element::textGroups () const"
+
+.PP
+\fBElement::textGroups\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+All texts groups of this element 
+.RE
+.PP
+
+.SS "void Element::textRemoved (\fBDynamicElementTextItem\fP * deti)\fC [signal]\fP"
+
+.SS "void Element::textRemovedFromGroup (\fBDynamicElementTextItem\fP * text, \fBElementTextItemGroup\fP * group)\fC [signal]\fP"
+
+.SS "void Element::textsGroupAboutToBeRemoved (\fBElementTextItemGroup\fP * group)\fC [signal]\fP"
+
+.SS "void Element::textsGroupAdded (\fBElementTextItemGroup\fP * group)\fC [signal]\fP"
+
+.SS "QDomElement Element::toXml (QDomDocument & document, QHash< \fBTerminal\fP *, int > & table_adr_id) const\fC [virtual]\fP"
+
+.PP
+\fBElement::toXml\fP Allows to export the element in XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP : XML document to use 
+.br
+\fItable_adr_id\fP : Correspondence table between the addresses of the terminals and their id in the XML representation; this table completed by this method 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The XML element representing this electrical element 
+.RE
+.PP
+
+.SS "int Element::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "virtual void Element::unlinkAllElements ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBMasterElement\fP, \fBReportElement\fP, and \fBSlaveElement\fP\&.
+.SS "virtual void Element::unlinkElement (\fBElement\fP *)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBMasterElement\fP, \fBReportElement\fP, and \fBSlaveElement\fP\&.
+.SS "QUuid Element::uuid () const\fC [inline]\fP"
+
+.PP
+\fBElement::uuid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the uuid of this element 
+.RE
+.PP
+
+.SS "bool Element::valideXml (QDomElement & e)\fC [static]\fP"
+Permet de savoir si un element XML (QDomElement) represente bien un element 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP Le QDomElement a valide 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si l'element XML est un \fBElement\fP, false sinon 
+.RE
+.PP
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBDiagramEventAddElement\fP\fC [friend]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<\fBElement\fP *> Element::connected_elements\fC [protected]\fP"
+
+.SS "QSize Element::dimensions\fC [private]\fP"
+
+.SS "QPoint Element::hotspot_coord\fC [private]\fP"
+
+.SS "\fBautonum::sequentialNumbers\fP Element::m_autoNum_seq\fC [protected]\fP"
+
+.SS "QHash<\fBDynamicElementTextItem\fP *, QPointF> Element::m_converted_text_from_xml_description\fC [protected]\fP"
+
+.SS "QList<\fBDynamicElementTextItem\fP *> Element::m_dynamic_text_list\fC [private]\fP"
+
+.SS "\fBDiagramContext\fP Element::m_element_informations\fC [protected]\fP"
+
+.SS "QString Element::m_F_str\fC [protected]\fP"
+
+.SS "bool Element::m_freeze_label = false\fC [protected]\fP"
+
+.SS "\fBDiagramContext\fP Element::m_kind_informations\fC [protected]\fP"
+
+.SS "\fBkind\fP Element::m_link_type = \fBElement::Simple\fP\fC [protected]\fP"
+
+.SS "\fBElementsLocation\fP Element::m_location\fC [protected]\fP"
+
+.SS "const QPicture Element::m_low_zoom_picture\fC [protected]\fP"
+
+.SS "bool Element::m_mouse_over = false\fC [private]\fP"
+
+.SS "bool Element::m_must_highlight = false\fC [private]\fP"
+
+.SS "\fBNamesList\fP Element::m_names\fC [protected]\fP"
+
+.SS "const QPicture Element::m_picture\fC [protected]\fP"
+
+.SS "QString Element::m_prefix\fC [private]\fP"
+
+.SS "QList<\fBTerminal\fP *> Element::m_terminals\fC [protected]\fP"
+
+.SS "QList<\fBElementTextItemGroup\fP *> Element::m_texts_group\fC [private]\fP"
+
+.SS "QUuid Element::m_uuid\fC [protected]\fP"
+
+.SS "QList<QUuid> Element::tmp_uuids_link\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

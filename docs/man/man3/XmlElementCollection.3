@@ -1,0 +1,641 @@
+.TH "XmlElementCollection" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XmlElementCollection \- The \fBXmlElementCollection\fP class This class represent a collection of elements stored to xml\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <xmlelementcollection\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBelementAdded\fP (QString collection_path)"
+.br
+.RI "elementAdded This signal is emited when a element is added to this collection "
+.ti -1c
+.RI "void \fBelementChanged\fP (QString collection_path)"
+.br
+.RI "elementChanged This signal is emited when the defintion of the element at path was changed "
+.ti -1c
+.RI "void \fBelementRemoved\fP (QString collection_path)"
+.br
+.RI "elementRemoved This signal is emited when an element is removed to this collection "
+.ti -1c
+.RI "void \fBdirectorieAdded\fP (QString collection_path)"
+.br
+.RI "directorieAdded This signal is emited when a directorie is added to this collection "
+.ti -1c
+.RI "void \fBdirectoryRemoved\fP (QString collection_path)"
+.br
+.RI "directoryRemoved This signal is emited when a directory is removed to this collection "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXmlElementCollection\fP (\fBQETProject\fP *project)"
+.br
+.RI "\fBXmlElementCollection::XmlElementCollection\fP Build an empty collection\&. The collection start by : "
+.ti -1c
+.RI "\fBXmlElementCollection\fP (const QDomElement &dom_element, \fBQETProject\fP *project)"
+.br
+.RI "\fBXmlElementCollection::XmlElementCollection\fP Constructor with an collection\&. The tagName of dom_element must be 'collection'\&. "
+.ti -1c
+.RI "QDomElement \fBroot\fP () const"
+.br
+.RI "\fBXmlElementCollection::root\fP The root is the first DOM-Element the xml collection, the tag name of the dom element is : collection\&. "
+.ti -1c
+.RI "QDomElement \fBimportCategory\fP () const"
+.br
+.RI "\fBXmlElementCollection::importCategory\fP\&. "
+.ti -1c
+.RI "QDomNodeList \fBchilds\fP (const QDomElement &parent_element) const"
+.br
+.RI "\fBXmlElementCollection::childs\fP\&. "
+.ti -1c
+.RI "QDomElement \fBchild\fP (const QDomElement &parent_element, const QString &child_name) const"
+.br
+.RI "\fBXmlElementCollection::child\fP If parent_element have child element with an attribute name = child_name, return it, else return a null QDomElement\&. Only search for element with tag-name 'category' and 'element' (if child_name end with '\&.elmt') "
+.ti -1c
+.RI "QDomElement \fBchild\fP (const QString &path) const"
+.br
+.RI "\fBXmlElementCollection::child\fP\&. "
+.ti -1c
+.RI "QList< QDomElement > \fBdirectories\fP (const QDomElement &parent_element) const"
+.br
+.RI "\fBXmlElementCollection::directories\fP\&. "
+.ti -1c
+.RI "QStringList \fBdirectoriesNames\fP (const QDomElement &parent_element) const"
+.br
+.RI "\fBXmlElementCollection::directoriesNames\fP\&. "
+.ti -1c
+.RI "QList< QDomElement > \fBelements\fP (const QDomElement &parent_element) const"
+.br
+.RI "\fBXmlElementCollection::elements\fP\&. "
+.ti -1c
+.RI "QStringList \fBelementsNames\fP (const QDomElement &parent_element) const"
+.br
+.RI "\fBXmlElementCollection::elementsNames\fP\&. "
+.ti -1c
+.RI "QDomElement \fBelement\fP (const QString &path) const"
+.br
+.RI "\fBXmlElementCollection::element\fP\&. "
+.ti -1c
+.RI "QDomElement \fBdirectory\fP (const QString &path) const"
+.br
+.RI "\fBXmlElementCollection::directory\fP\&. "
+.ti -1c
+.RI "QString \fBaddElement\fP (\fBElementsLocation\fP &location)"
+.br
+.RI "\fBXmlElementCollection::addElement\fP Add the element at location to this collection\&. The element is copied in this collection in 'import' dir with the same path, in other word if the path is dir1/dir2/dir3/myElement\&.elmt, myElement is copied to this collection at the path : import/dir1/dir2/dir3/myElement\&.elmt If the path doesn't exist, he was created\&. If the element already exist, do nothing\&. "
+.ti -1c
+.RI "bool \fBaddElementDefinition\fP (const QString &dir_path, const QString &elmt_name, const QDomElement &xml_definition)"
+.br
+.RI "\fBXmlElementCollection::addElementDefinition\fP Add the élément defintion xml_definition in the directory at path dir_path with the name elmt_name\&. "
+.ti -1c
+.RI "bool \fBremoveElement\fP (const QString &path)"
+.br
+.RI "\fBXmlElementCollection::removeElement\fP Remove the element at path path\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP \fBcopy\fP (\fBElementsLocation\fP &source, \fBElementsLocation\fP &destination, const QString &rename=QString(), bool deep_copy=true)"
+.br
+.RI "\fBXmlElementCollection::copy\fP Copy the content represented by source (an element or a directory) to destination\&. Destination must be a directory of this collection\&. If the destination already have an item at the same path of source, he will be replaced by source\&. "
+.ti -1c
+.RI "bool \fBexist\fP (const QString &path) const"
+.br
+.RI "\fBXmlElementCollection::exist\fP Return true if the path path exist in this collection\&. "
+.ti -1c
+.RI "bool \fBcreateDir\fP (const QString &path, const QString &name, const \fBNamesList\fP &name_list)"
+.br
+.RI "\fBXmlElementCollection::createDir\fP Create a child directorie at path path with the name name\&. Emit directorieAdded if success\&. "
+.ti -1c
+.RI "bool \fBremoveDir\fP (const QString &path)"
+.br
+.RI "\fBXmlElementCollection::removeDir\fP Remove the directory at path path\&. "
+.ti -1c
+.RI "QList< \fBElementsLocation\fP > \fBelementsLocation\fP (QDomElement dom_element=QDomElement(), bool \fBchilds\fP=true) const"
+.br
+.RI "\fBXmlElementCollection::elementsLocation\fP Return all locations stored in dom_element (element and directory)\&. If dom_element is null, return all location owned by this collection dom_element must be a child of this collection\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP \fBdomToLocation\fP (QDomElement dom_element) const"
+.br
+.RI "\fBXmlElementCollection::domToLocation\fP Return the element location who represent the xml element : dom_element dom_element must be owned by this collection\&. "
+.ti -1c
+.RI "void \fBcleanUnusedElement\fP ()"
+.br
+.RI "\fBXmlElementCollection::cleanUnusedElement\fP Remove elements in this collection which is not used in the owner project\&. "
+.ti -1c
+.RI "void \fBcleanUnusedDirectory\fP ()"
+.br
+.RI "\fBXmlElementCollection::cleanUnusedDirectory\fP Remove the empty directories of this collection\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsLocation\fP \fBcopyDirectory\fP (\fBElementsLocation\fP &source, \fBElementsLocation\fP &destination, const QString &rename=QString(), bool deep_copy=true)"
+.br
+.RI "\fBXmlElementCollection::copyDirectory\fP Copy the directory represented by source to destination\&. if destination have a directory with the same name as source, then this directory is removed\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP \fBcopyElement\fP (\fBElementsLocation\fP &source, \fBElementsLocation\fP &destination, const QString &rename=QString())"
+.br
+.RI "\fBXmlElementCollection::copyElement\fP Copy the element represented by source to destination (must be a directory) If element already exist in destination he will be replaced by the new\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QDomDocument \fBm_dom_document\fP"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBXmlElementCollection\fP class This class represent a collection of elements stored to xml\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "XmlElementCollection::XmlElementCollection (\fBQETProject\fP * project)"
+
+.PP
+\fBXmlElementCollection::XmlElementCollection\fP Build an empty collection\&. The collection start by : 
+.PP
+.nf
+<collection>
+        <category name="import>
+        </category>
+</collection>
+
+.fi
+.PP
+ All elements and category are stored as child of <category name="import> 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : the project of this collection 
+.RE
+.PP
+
+.SS "XmlElementCollection::XmlElementCollection (const QDomElement & dom_element, \fBQETProject\fP * project)"
+
+.PP
+\fBXmlElementCollection::XmlElementCollection\fP Constructor with an collection\&. The tagName of dom_element must be 'collection'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_element\fP : -the collection in a dom_element (the dom element in cloned) 
+.br
+\fIproject\fP : the project of this collection 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QString XmlElementCollection::addElement (\fBElementsLocation\fP & location)"
+
+.PP
+\fBXmlElementCollection::addElement\fP Add the element at location to this collection\&. The element is copied in this collection in 'import' dir with the same path, in other word if the path is dir1/dir2/dir3/myElement\&.elmt, myElement is copied to this collection at the path : import/dir1/dir2/dir3/myElement\&.elmt If the path doesn't exist, he was created\&. If the element already exist, do nothing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP : location of the element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the collection path of the added item or a null QString if element can't be added\&. 
+.RE
+.PP
+
+.SS "bool XmlElementCollection::addElementDefinition (const QString & dir_path, const QString & elmt_name, const QDomElement & xml_definition)"
+
+.PP
+\fBXmlElementCollection::addElementDefinition\fP Add the élément defintion xml_definition in the directory at path dir_path with the name elmt_name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdir_path\fP : the path of the directory where we must add the element\&. The path must be an existing directory of this collection\&. 
+.br
+\fIelmt_name\fP : The name used to store the element (the name must end with \&.elmt, if not, \&.elmt will be append to elmt_name) 
+.br
+\fIxml_definition\fP : The xml definition of the element\&. The tag name of xml_definition must be 'definition'\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the element is added with success\&. 
+.RE
+.PP
+
+.SS "QDomElement XmlElementCollection::child (const QDomElement & parent_element, const QString & child_name) const"
+
+.PP
+\fBXmlElementCollection::child\fP If parent_element have child element with an attribute name = child_name, return it, else return a null QDomElement\&. Only search for element with tag-name 'category' and 'element' (if child_name end with '\&.elmt') 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_element\fP : the parent DomElement where we search for child\&. parent_element must be a child node of this \fBXmlElementCollection\fP\&. 
+.br
+\fIchild_name\fP : name of child to search\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The child QDomElement or a null QDomElement if not found 
+.RE
+.PP
+
+.SS "QDomElement XmlElementCollection::child (const QString & path) const"
+
+.PP
+\fBXmlElementCollection::child\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the DomElement at path if exist, else return a null QDomElement 
+.RE
+.PP
+
+.SS "QDomNodeList XmlElementCollection::childs (const QDomElement & parent_element) const"
+
+.PP
+\fBXmlElementCollection::childs\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+All childs element in the parent_element tree 
+.RE
+.PP
+
+.SS "void XmlElementCollection::cleanUnusedDirectory ()"
+
+.PP
+\fBXmlElementCollection::cleanUnusedDirectory\fP Remove the empty directories of this collection\&. 
+.SS "void XmlElementCollection::cleanUnusedElement ()"
+
+.PP
+\fBXmlElementCollection::cleanUnusedElement\fP Remove elements in this collection which is not used in the owner project\&. 
+.SS "\fBElementsLocation\fP XmlElementCollection::copy (\fBElementsLocation\fP & source, \fBElementsLocation\fP & destination, const QString & rename = \fCQString()\fP, bool deep_copy = \fCtrue\fP)"
+
+.PP
+\fBXmlElementCollection::copy\fP Copy the content represented by source (an element or a directory) to destination\&. Destination must be a directory of this collection\&. If the destination already have an item at the same path of source, he will be replaced by source\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsource\fP : content to copy 
+.br
+\fIdestination\fP : destination of the copy, must be a directory of this collection 
+.br
+\fIrename\fP : rename the copy with rename else use the name of source 
+.br
+\fIdeep_copy\fP : if true copy all childs of source (only if source is directory) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the ElementLocation that represent the copy, if copy failed return a null ElementLocation 
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP XmlElementCollection::copyDirectory (\fBElementsLocation\fP & source, \fBElementsLocation\fP & destination, const QString & rename = \fCQString()\fP, bool deep_copy = \fCtrue\fP)\fC [private]\fP"
+
+.PP
+\fBXmlElementCollection::copyDirectory\fP Copy the directory represented by source to destination\&. if destination have a directory with the same name as source, then this directory is removed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsource\fP : directory to copy 
+.br
+\fIdestination\fP : destination of the copy 
+.br
+\fIrename\fP : rename the copy with rename else use the name of source 
+.br
+\fIdeep_copy\fP :if true copy all childs of source 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the ElementLocation that represent the copy, if copy failed return a null ElementLocation 
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP XmlElementCollection::copyElement (\fBElementsLocation\fP & source, \fBElementsLocation\fP & destination, const QString & rename = \fCQString()\fP)\fC [private]\fP"
+
+.PP
+\fBXmlElementCollection::copyElement\fP Copy the element represented by source to destination (must be a directory) If element already exist in destination he will be replaced by the new\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsource\fP : element to copy 
+.br
+\fIdestination\fP : destination of the copy 
+.br
+\fIrename\fP : rename the copy with rename else use the name of source 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The \fBElementsLocation\fP of the copy 
+.RE
+.PP
+
+.SS "bool XmlElementCollection::createDir (const QString & path, const QString & name, const \fBNamesList\fP & name_list)"
+
+.PP
+\fBXmlElementCollection::createDir\fP Create a child directorie at path path with the name name\&. Emit directorieAdded if success\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : path of parent diectorie 
+.br
+\fIname\fP : name of the directori to create\&. 
+.br
+\fIname_list\fP : translation of the directorie name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if creation success, if directorie already exist return true\&. 
+.RE
+.PP
+
+.SS "void XmlElementCollection::directorieAdded (QString collection_path)\fC [signal]\fP"
+
+.PP
+directorieAdded This signal is emited when a directorie is added to this collection 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection_path\fP : the path of the new directorie 
+.RE
+.PP
+
+.SS "QList< QDomElement > XmlElementCollection::directories (const QDomElement & parent_element) const"
+
+.PP
+\fBXmlElementCollection::directories\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A list of directory stored in parent_element 
+.RE
+.PP
+
+.SS "QStringList XmlElementCollection::directoriesNames (const QDomElement & parent_element) const"
+
+.PP
+\fBXmlElementCollection::directoriesNames\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a list of names for every child directories of parent_element 
+.RE
+.PP
+
+.SS "QDomElement XmlElementCollection::directory (const QString & path) const"
+
+.PP
+\fBXmlElementCollection::directory\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : path of the directory in this collection 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the QDomElement that represent the directory at path path or a null QDomElement if not found\&. 
+.RE
+.PP
+
+.SS "void XmlElementCollection::directoryRemoved (QString collection_path)\fC [signal]\fP"
+
+.PP
+directoryRemoved This signal is emited when a directory is removed to this collection 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection_path\fP : the path of the removed directory 
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP XmlElementCollection::domToLocation (QDomElement dom_element) const"
+
+.PP
+\fBXmlElementCollection::domToLocation\fP Return the element location who represent the xml element : dom_element dom_element must be owned by this collection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_element\fP : the dom_element of this collection that represent an element\&. The tag name of dom_element must be 'element' 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the element location, location can be null if fail\&. 
+.RE
+.PP
+
+.SS "QDomElement XmlElementCollection::element (const QString & path) const"
+
+.PP
+\fBXmlElementCollection::element\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : path of the element in this collection 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the QDomElement that represent the element at path path or a null QDomElement if not found or doesn't represent an element 
+.RE
+.PP
+
+.SS "void XmlElementCollection::elementAdded (QString collection_path)\fC [signal]\fP"
+
+.PP
+elementAdded This signal is emited when a element is added to this collection 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection_path\fP : the path of element in this collection 
+.RE
+.PP
+
+.SS "void XmlElementCollection::elementChanged (QString collection_path)\fC [signal]\fP"
+
+.PP
+elementChanged This signal is emited when the defintion of the element at path was changed 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection_path\fP : the path of this element in this collection 
+.RE
+.PP
+
+.SS "void XmlElementCollection::elementRemoved (QString collection_path)\fC [signal]\fP"
+
+.PP
+elementRemoved This signal is emited when an element is removed to this collection 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection_path\fP : the path of the removed element in this collection 
+.RE
+.PP
+
+.SS "QList< QDomElement > XmlElementCollection::elements (const QDomElement & parent_element) const"
+
+.PP
+\fBXmlElementCollection::elements\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A list of element stored in parent_element 
+.RE
+.PP
+
+.SS "QList< \fBElementsLocation\fP > XmlElementCollection::elementsLocation (QDomElement dom_element = \fCQDomElement()\fP, bool childs = \fCtrue\fP) const"
+
+.PP
+\fBXmlElementCollection::elementsLocation\fP Return all locations stored in dom_element (element and directory)\&. If dom_element is null, return all location owned by this collection dom_element must be a child of this collection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_element\fP : dom_element where we must to search location\&. 
+.br
+\fIchilds\fP = if true return all childs location of dom_element, if false, only return the direct childs location of dom_element\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QStringList XmlElementCollection::elementsNames (const QDomElement & parent_element) const"
+
+.PP
+\fBXmlElementCollection::elementsNames\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A list of names fr every childs element of parent_element 
+.RE
+.PP
+
+.SS "bool XmlElementCollection::exist (const QString & path) const"
+
+.PP
+\fBXmlElementCollection::exist\fP Return true if the path path exist in this collection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QDomElement XmlElementCollection::importCategory () const"
+
+.PP
+\fBXmlElementCollection::importCategory\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The QDomElement import (the begining of a xml collection) or a null QDomElement if doesn't exist\&. 
+.RE
+.PP
+
+.SS "bool XmlElementCollection::removeDir (const QString & path)"
+
+.PP
+\fBXmlElementCollection::removeDir\fP Remove the directory at path path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if successfuly removed and emit \fBdirectoryRemoved(QString)\fP, else false\&. 
+.RE
+.PP
+
+.SS "bool XmlElementCollection::removeElement (const QString & path)"
+
+.PP
+\fBXmlElementCollection::removeElement\fP Remove the element at path path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if element is removed and emit the signal elementRemoved\&. else false\&. 
+.RE
+.PP
+
+.SS "QDomElement XmlElementCollection::root () const"
+
+.PP
+\fBXmlElementCollection::root\fP The root is the first DOM-Element the xml collection, the tag name of the dom element is : collection\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The root QDomElement of the collection 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QDomDocument XmlElementCollection::m_dom_document\fC [private]\fP"
+
+.SS "\fBQETProject\fP* XmlElementCollection::m_project = nullptr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

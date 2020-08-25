@@ -1,0 +1,34 @@
+<map id="ProjectView::cleanProject" name="ProjectView::cleanProject">
+<area shape="rect" id="node1" title=" " alt="" coords="5,667,176,694"/>
+<area shape="rect" id="node2" href="$df/dd9/class_xml_element_collection.html#a58816911077463c18ca9167bd098784f" title="XmlElementCollection::cleanUnusedDirectory Remove the empty directories of this collection." alt="" coords="740,120,900,161"/>
+<area shape="rect" id="node9" href="$df/dd9/class_xml_element_collection.html#a9a6494c57108aad17a791bfbe7bd3615" title="XmlElementCollection::cleanUnusedElement Remove elements in this collection which is not used in the ..." alt="" coords="256,533,411,575"/>
+<area shape="rect" id="node20" href="$d6/dc5/class_q_e_t_project.html#a6e182aa14ce7c48753e6be355ebbdb5f" title="QETProject::embeddedCollection." alt="" coords="1174,639,1379,680"/>
+<area shape="rect" id="node27" href="$d4/dad/namespace_q_e_t_1_1_qet_message_box.html#aea0b231af3718d03172aee0e1923859a" title=" " alt="" coords="257,689,409,731"/>
+<area shape="rect" id="node28" href="$d8/d31/class_title_block_templates_project_collection.html#a3f0f2bed7af5a53254908e9eaa320d99" title=" " alt="" coords="224,755,443,811"/>
+<area shape="rect" id="node32" href="$d6/dc5/class_q_e_t_project.html#a4daf9c5e852f1033bbc37eb5ed51a7cc" title=" " alt="" coords="242,836,425,877"/>
+<area shape="rect" id="node3" href="$df/dd9/class_xml_element_collection.html#a9a0e97bbe27cbba89c8d2ccf9b264f56" title="XmlElementCollection::domToLocation Return the element location who represent the xml element : dom_e..." alt="" coords="961,136,1111,177"/>
+<area shape="rect" id="node4" href="$df/dd9/class_xml_element_collection.html#afbd36f00c5e382a10b8c74d9a32cd8c6" title="XmlElementCollection::importCategory." alt="" coords="961,5,1111,47"/>
+<area shape="rect" id="node6" href="$df/dd9/class_xml_element_collection.html#a35852f73fb228e8b20610830c29a0fd4" title="XmlElementCollection::removeDir Remove the directory at path path." alt="" coords="961,71,1111,112"/>
+<area shape="rect" id="node5" href="$df/dd9/class_xml_element_collection.html#aecf971dbf0c6f87e214cd86c901e25c8" title="XmlElementCollection::root The root is the first DOM&#45;Element the xml collection, the tag name of the ..." alt="" coords="1201,5,1352,47"/>
+<area shape="rect" id="node7" href="$df/dd9/class_xml_element_collection.html#a21d7a45d847c560734ee73ca5dd9c3d3" title="XmlElementCollection::directory." alt="" coords="1201,103,1352,144"/>
+<area shape="rect" id="node8" href="$df/dd9/class_xml_element_collection.html#a5cb901cc25363fdd9e5f8e77661f49d3" title="XmlElementCollection::child If parent_element have child element with an attribute name = child_name,..." alt="" coords="1457,195,1607,236"/>
+<area shape="rect" id="node10" href="$d5/dd7/class_elements_location.html#af60688342bf5c70c8619e77c5f6232e0" title="ElementsLocation::collectionPath Return the path of the represented element relative to collection if..." alt="" coords="1169,587,1385,614"/>
+<area shape="rect" id="node12" href="$df/dd9/class_xml_element_collection.html#a57d1ec8cdcd3a0f4f705ed29838deb71" title="XmlElementCollection::removeElement Remove the element at path path." alt="" coords="513,301,663,343"/>
+<area shape="rect" id="node14" href="$d6/dc5/class_q_e_t_project.html#a6116cc7be3567be59304f0e6b4f6a391" title="QETProject::unusedElements." alt="" coords="491,502,685,529"/>
+<area shape="rect" id="node11" href="$d5/dd7/class_elements_location.html#ac46aeb57416fc91e16266fc937a02810" title="ElementsLocation::path." alt="" coords="1453,587,1611,614"/>
+<area shape="rect" id="node13" href="$df/dd9/class_xml_element_collection.html#acd7dcecea45b62258579598d3782610d" title="XmlElementCollection::element." alt="" coords="745,212,895,253"/>
+<area shape="rect" id="node15" href="$df/dd9/class_xml_element_collection.html#aa4520f1b9dd0041beb5bf39e07c0d293" title="XmlElementCollection::elementsLocation Return all locations stored in dom_element (element and direct..." alt="" coords="745,407,895,448"/>
+<area shape="rect" id="node24" href="$d5/dd7/class_elements_location.html#a45f9e8dbe179a42f73a8ea0625bddc7e" title="ElementsLocation::isElement." alt="" coords="1436,486,1628,513"/>
+<area shape="rect" id="node25" href="$d6/dc5/class_q_e_t_project.html#a567af7debe75adb7a799c7d4f0cddca0" title=" " alt="" coords="733,333,907,359"/>
+<area shape="rect" id="node16" href="$df/dd9/class_xml_element_collection.html#ab48a9a8918f37fd38d6ace3fe3f116b4" title="XmlElementCollection::childs." alt="" coords="1201,253,1352,295"/>
+<area shape="rect" id="node17" href="$df/dd9/class_xml_element_collection.html#a19ee2e9399be8d67372299b3b37214ce" title="XmlElementCollection::directories." alt="" coords="961,304,1111,345"/>
+<area shape="rect" id="node18" href="$df/dd9/class_xml_element_collection.html#a60367bb4ac1d43c26f52958398b427df" title="XmlElementCollection::elements." alt="" coords="961,369,1111,411"/>
+<area shape="rect" id="node19" href="$d5/dd7/class_elements_location.html#acfded834f9b1e5b0fc2b0933a107ff1e" title="ElementsLocation::exist." alt="" coords="955,486,1117,513"/>
+<area shape="rect" id="node21" href="$df/dd9/class_xml_element_collection.html#a7f27796160cb849693b029979c0d5eaf" title="XmlElementCollection::exist Return true if the path path exist in this collection." alt="" coords="1201,319,1352,360"/>
+<area shape="rect" id="node22" href="$d5/dd7/class_elements_location.html#a5d08aed111ae277d92d65193d496e0d8" title="ElementsLocation::fileSystemPath." alt="" coords="1165,385,1388,411"/>
+<area shape="rect" id="node23" href="$d5/dd7/class_elements_location.html#a86f6d84916123008ed9b90dac81eeda5" title="ElementsLocation::isDirectory." alt="" coords="1177,486,1376,513"/>
+<area shape="rect" id="node26" href="$d6/dc5/class_q_e_t_project.html#ab392b0727b732b7fd1a7a1010f0404dd" title=" " alt="" coords="961,253,1111,279"/>
+<area shape="rect" id="node29" href="$d8/d31/class_title_block_templates_project_collection.html#a3dca58ce39292b9f22a5602d30368f07" title=" " alt="" coords="497,828,679,869"/>
+<area shape="rect" id="node30" href="$d8/d31/class_title_block_templates_project_collection.html#a95e56f65c8475e0a3798a453107c0923" title=" " alt="" coords="497,697,679,739"/>
+<area shape="rect" id="node31" href="$d8/d31/class_title_block_templates_project_collection.html#ac0dbc2e369043e43e3551462b1b95358" title=" " alt="" coords="497,763,679,804"/>
+</map>

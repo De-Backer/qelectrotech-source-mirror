@@ -1,0 +1,1105 @@
+.TH "ElementScene" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementScene \- The \fBElementScene\fP class This class is the canvas allowing the visual edition of an electrial element\&. It displays the various primitives composing the drawing of the element, the border due to its fixed size and its hotspot\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementscene\&.h>\fP
+.PP
+Inherits QGraphicsScene\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBBehavior\fP { \fBNormal\fP, \fBPasteArea\fP, \fBAddPart\fP }"
+.br
+.ti -1c
+.RI "enum \fBItemOption\fP { \fBSortByZValue\fP = 1, \fBIncludeTerminals\fP = 2, \fBIncludeHelperItems\fP = 4, \fBSelected\fP = 8, \fBNonSelected\fP = 16, \fBSelectedOrNot\fP = 24 }"
+.br
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBslot_select\fP (const \fBElementContent\fP &)"
+.br
+.RI "\fBElementScene::slot_select\fP Select the item in content, every others items in the scene are deselected\&. "
+.ti -1c
+.RI "void \fBslot_selectAll\fP ()"
+.br
+.RI "\fBElementScene::slot_selectAll\fP Select all items\&. "
+.ti -1c
+.RI "void \fBslot_deselectAll\fP ()"
+.br
+.RI "\fBElementScene::slot_deselectAll\fP deselect all item\&. "
+.ti -1c
+.RI "void \fBslot_invertSelection\fP ()"
+.br
+.RI "\fBElementScene::slot_invertSelection\fP Inverse Selection\&. "
+.ti -1c
+.RI "void \fBslot_delete\fP ()"
+.br
+.RI "\fBElementScene::slot_delete\fP Delete selected items\&. "
+.ti -1c
+.RI "void \fBslot_editNames\fP ()"
+.br
+.RI "\fBElementScene::slot_editNames\fP Launch a dialog for edit the names of the edited element\&. "
+.ti -1c
+.RI "void \fBslot_editAuthorInformations\fP ()"
+.br
+.RI "\fBElementScene::slot_editAuthorInformations\fP Starts a dialog to edit the additional information of this element\&. Concretely, this free field is intended to receive information on the author of the element, its license, etc\&. "
+.ti -1c
+.RI "void \fBslot_editProperties\fP ()"
+.br
+.RI "\fBElementScene::slot_editProperties\fP Open dialog to edit the element properties\&. "
+.ti -1c
+.RI "void \fBmanagePrimitivesGroups\fP ()"
+.br
+.RI "\fBElementScene::managePrimitivesGroups\fP Ensure the decorator is adequately shown, hidden or updated so it always represents the current selection\&. "
+.ti -1c
+.RI "void \fBstackAction\fP (\fBElementEditionCommand\fP *)"
+.br
+.RI "\fBElementScene::stackAction\fP Push the provided \fIcommand\fP on the undo stack\&. "
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBpartsAdded\fP ()"
+.br
+.RI "Signal emitted after one or several parts were added\&. "
+.ti -1c
+.RI "void \fBpartsRemoved\fP ()"
+.br
+.RI "Signal emitted after one or several parts were removed\&. "
+.ti -1c
+.RI "void \fBpartsZValueChanged\fP ()"
+.br
+.RI "Signal emitted when the zValue of one or several parts change\&. "
+.ti -1c
+.RI "void \fBpasteAreaDefined\fP (const QRectF &)"
+.br
+.RI "Signal emitted when users have defined the copy/paste area\&. "
+.ti -1c
+.RI "void \fBneedZoomFit\fP ()"
+.br
+.RI "Signal emitted when need zoomFit\&. "
+.ti -1c
+.RI "void \fBelementInfoChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementScene\fP (\fBQETElementEditor\fP *, QObject *=nullptr)"
+.br
+.RI "\fBElementScene::ElementScene\fP constructor\&. "
+.ti -1c
+.RI "\fB~ElementScene\fP () override"
+.br
+.RI "\fBElementScene::~ElementScene\fP\&. "
+.ti -1c
+.RI "void \fBsetEventInterface\fP (\fBESEventInterface\fP *event_interface)"
+.br
+.RI "\fBElementScene::setEventInterface\fP Set a new event interface\&. "
+.ti -1c
+.RI "void \fBclearEventInterface\fP ()"
+.br
+.RI "\fBElementScene::clearEventInterface\fP Clear the current event interface\&. "
+.ti -1c
+.RI "void \fBsetBehavior\fP (\fBElementScene::Behavior\fP)"
+.br
+.RI "\fBElementScene::setBehavior\fP Modify the current behavior of this scene\&. "
+.ti -1c
+.RI "\fBElementScene::Behavior\fP \fBbehavior\fP () const"
+.br
+.ti -1c
+.RI "QPointF \fBsnapToGrid\fP (QPointF point)"
+.br
+.RI "\fBElementScene::snapToGrid\fP Rounds the coordinates of the point passed as a parameter so that this point is aligned with the grid\&. "
+.ti -1c
+.RI "void \fBsetNames\fP (const \fBNamesList\fP &)"
+.br
+.RI "\fBElementScene::setNames\fP\&. "
+.ti -1c
+.RI "\fBNamesList\fP \fBnames\fP () const"
+.br
+.RI "\fBElementScene::names\fP\&. "
+.ti -1c
+.RI "QString \fBinformations\fP () const"
+.br
+.RI "\fBElementScene::informations\fP\&. "
+.ti -1c
+.RI "void \fBsetInformations\fP (const QString &)"
+.br
+.RI "\fBElementScene::setInformations\fP\&. "
+.ti -1c
+.RI "QString \fBelementType\fP () const"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBelementKindInfo\fP () const"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBelementInformation\fP () const"
+.br
+.ti -1c
+.RI "virtual int \fBxGrid\fP () const"
+.br
+.RI "\fBElementScene::xGrid\fP\&. "
+.ti -1c
+.RI "virtual int \fByGrid\fP () const"
+.br
+.RI "\fBElementScene::yGrid\fP\&. "
+.ti -1c
+.RI "virtual void \fBsetGrid\fP (int, int)"
+.br
+.RI "\fBElementScene::setGrid\fP\&. "
+.ti -1c
+.RI "virtual const QDomDocument \fBtoXml\fP (bool=true)"
+.br
+.RI "\fBElementScene::toXml\fP Export this element as a xml file\&. "
+.ti -1c
+.RI "virtual QRectF \fBboundingRectFromXml\fP (const QDomDocument &)"
+.br
+.RI "\fBElementScene::boundingRectFromXml\fP\&. "
+.ti -1c
+.RI "virtual void \fBfromXml\fP (const QDomDocument &, const QPointF &=QPointF(), bool=true, \fBElementContent\fP *=nullptr)"
+.br
+.RI "\fBElementScene::fromXml\fP Imports the element described in an XML document\&. If a position is specified, the imported elements are positioned in such a way that the upper left corner of the smallest rectangle that can surround them all (the bounding rect) either at this position\&. "
+.ti -1c
+.RI "virtual void \fBreset\fP ()"
+.br
+.RI "\fBElementScene::reset\fP Remove all QGraphicsItems in the scene and clear the undo stack\&. "
+.ti -1c
+.RI "virtual QList< \fBCustomElementPart\fP * > \fBprimitives\fP () const"
+.br
+.RI "\fBElementScene::primitives\fP\&. "
+.ti -1c
+.RI "virtual QList< QGraphicsItem * > \fBzItems\fP (ItemOptions options=ItemOptions(\fBSortByZValue\fP|\fBIncludeTerminals\fP|\fBSelectedOrNot\fP)) const"
+.br
+.RI "\fBElementScene::zItems\fP\&. "
+.ti -1c
+.RI "virtual \fBElementContent\fP \fBselectedContent\fP () const"
+.br
+.RI "\fBElementScene::selectedContent\fP\&. "
+.ti -1c
+.RI "virtual void \fBgetPasteArea\fP (const QRectF &)"
+.br
+.RI "\fBElementScene::getPasteArea\fP\&. "
+.ti -1c
+.RI "QRectF \fBelementSceneGeometricRect\fP () const"
+.br
+.RI "\fBElementScene::elementSceneGeometricRect\fP\&. "
+.ti -1c
+.RI "bool \fBcontainsTerminals\fP () const"
+.br
+.RI "\fBElementScene::containsTerminals\fP\&. "
+.ti -1c
+.RI "QUndoStack & \fBundoStack\fP ()"
+.br
+.RI "\fBElementScene::undoStack\fP\&. "
+.ti -1c
+.RI "\fBQGIManager\fP & \fBqgiManager\fP ()"
+.br
+.RI "\fBElementScene::qgiManager\fP\&. "
+.ti -1c
+.RI "bool \fBwasCopiedFromThisElement\fP (const QString &)"
+.br
+.RI "\fBElementScene::wasCopiedFromThisElement\fP\&. "
+.ti -1c
+.RI "void \fBcut\fP ()"
+.br
+.RI "\fBElementScene::cut\fP Handles the fact of cutting the selection = exporting it in XML to the clipboard then deleting it\&. "
+.ti -1c
+.RI "void \fBcopy\fP ()"
+.br
+.RI "\fBElementScene::copy\fP Handles the fact of copying the selection = exporting it as XML to the clipboard\&. "
+.ti -1c
+.RI "\fBQETElementEditor\fP * \fBeditor\fP () const"
+.br
+.RI "\fBElementScene::editor\fP\&. "
+.ti -1c
+.RI "void \fBsetElementInfo\fP (const \fBDiagramContext\fP &dc)"
+.br
+.RI "\fBElementScene::setElementInfo\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBclipboardMayContainElement\fP ()"
+.br
+.RI "\fBElementScene::clipboardMayContainElement\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.RI "\fBElementScene::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.RI "\fBElementScene::mousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.RI "\fBElementScene::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBElementScene::mouseDoubleClickEvent\fP\&. "
+.ti -1c
+.RI "void \fBkeyPressEvent\fP (QKeyEvent *event) override"
+.br
+.RI "\fBElementScene::keyPressEvent\fP manage key press event\&. "
+.ti -1c
+.RI "void \fBcontextMenuEvent\fP (QGraphicsSceneContextMenuEvent *event) override"
+.br
+.RI "\fBElementScene::contextMenuEvent\fP Display the context menu event, only if behavior are Normal\&. "
+.ti -1c
+.RI "void \fBdrawForeground\fP (QPainter *, const QRectF &) override"
+.br
+.RI "\fBElementScene::drawForeground\fP Draws the background of the editor, ie the hotspot indicator\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementScene\fP (const \fBElementScene\fP &)"
+.br
+.ti -1c
+.RI "QRectF \fBelementContentBoundingRect\fP (const \fBElementContent\fP &) const"
+.br
+.RI "\fBElementScene::elementContentBoundingRect\fP\&. "
+.ti -1c
+.RI "bool \fBapplyInformations\fP (const QDomDocument &)"
+.br
+.RI "\fBElementScene::applyInformations\fP Applies the information (dimensions, hostpot, orientations, internal connections, names and additional information) contained in an XML document\&. "
+.ti -1c
+.RI "\fBElementContent\fP \fBloadContent\fP (const QDomDocument &)"
+.br
+.RI "\fBElementScene::loadContent\fP Create and load the content describe in the xml document\&. "
+.ti -1c
+.RI "\fBElementContent\fP \fBaddContent\fP (const \fBElementContent\fP &)"
+.br
+.RI "\fBElementScene::addContent\fP Add content content to this element\&. "
+.ti -1c
+.RI "\fBElementContent\fP \fBaddContentAtPos\fP (const \fBElementContent\fP &, const QPointF &)"
+.br
+.RI "\fBElementScene::addContentAtPos\fP Add content content to this element\&. "
+.ti -1c
+.RI "void \fBaddPrimitive\fP (QGraphicsItem *)"
+.br
+.RI "\fBElementScene::addPrimitive\fP Add a primitive to the scene by wrapping it within an \fBElementPrimitiveDecorator\fP group\&. "
+.ti -1c
+.RI "void \fBinitPasteArea\fP ()"
+.br
+.RI "\fBElementScene::initPasteArea\fP Initializes the paste area\&. "
+.ti -1c
+.RI "void \fBcenterElementToOrigine\fP ()"
+.br
+.RI "\fBElementScene::centerElementToOrigine\fP try to center better is possible the element to the scene (the calcul isn't optimal but work good) "
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBzValueLessThan\fP (QGraphicsItem *, QGraphicsItem *)"
+.br
+.RI "\fBElementScene::zValueLessThan\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBNamesList\fP \fBm_names_list\fP"
+.br
+.ti -1c
+.RI "QString \fBm_informations\fP"
+.br
+.RI "List of localized names\&. "
+.ti -1c
+.RI "QString \fBm_elmt_type\fP"
+.br
+.RI "Extra informations\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBm_elmt_kindInfo\fP"
+.br
+.RI "element type "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBm_elmt_information\fP"
+.br
+.ti -1c
+.RI "\fBQGIManager\fP \fBm_qgi_manager\fP"
+.br
+.RI "element kind info "
+.ti -1c
+.RI "QUndoStack \fBm_undo_stack\fP"
+.br
+.ti -1c
+.RI "\fBESEventInterface\fP * \fBm_event_interface\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBBehavior\fP \fBm_behavior\fP"
+.br
+.ti -1c
+.RI "\fBQETElementEditor\fP * \fBm_element_editor\fP = nullptr"
+.br
+.ti -1c
+.RI "QGraphicsRectItem * \fBm_paste_area\fP"
+.br
+.ti -1c
+.RI "QRectF \fBm_defined_paste_area\fP"
+.br
+.ti -1c
+.RI "QString \fBm_last_copied\fP"
+.br
+.ti -1c
+.RI "\fBElementPrimitiveDecorator\fP * \fBm_decorator\fP = nullptr"
+.br
+.RI "Decorator item displayed when at least one item is selected\&. "
+.ti -1c
+.RI "int \fBm_x_grid\fP"
+.br
+.ti -1c
+.RI "int \fBm_y_grid\fP"
+.br
+.ti -1c
+.RI "QMutex * \fBm_decorator_lock\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBChangePropertiesCommand\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementScene\fP class This class is the canvas allowing the visual edition of an electrial element\&. It displays the various primitives composing the drawing of the element, the border due to its fixed size and its hotspot\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBElementScene::Behavior\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINormal \fP\fP
+.TP
+\fB\fIPasteArea \fP\fP
+.TP
+\fB\fIAddPart \fP\fP
+.SS "enum \fBElementScene::ItemOption\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISortByZValue \fP\fP
+.TP
+\fB\fIIncludeTerminals \fP\fP
+.TP
+\fB\fIIncludeHelperItems \fP\fP
+.TP
+\fB\fISelected \fP\fP
+.TP
+\fB\fINonSelected \fP\fP
+.TP
+\fB\fISelectedOrNot \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementScene::ElementScene (\fBQETElementEditor\fP * editor, QObject * parent = \fCnullptr\fP)"
+
+.PP
+\fBElementScene::ElementScene\fP constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP : \fBElement\fP editor concerned 
+.br
+\fIparent\fP : Widget parent 
+.RE
+.PP
+
+.SS "ElementScene::~ElementScene ()\fC [override]\fP"
+
+.PP
+\fBElementScene::~ElementScene\fP\&. 
+.SS "ElementScene::ElementScene (const \fBElementScene\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBElementContent\fP ElementScene::addContent (const \fBElementContent\fP & content)\fC [private]\fP"
+
+.PP
+\fBElementScene::addContent\fP Add content content to this element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontent\fP : content (= list of parts) to load 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Content adds 
+.RE
+.PP
+
+.SS "\fBElementContent\fP ElementScene::addContentAtPos (const \fBElementContent\fP & content, const QPointF & pos)\fC [private]\fP"
+
+.PP
+\fBElementScene::addContentAtPos\fP Add content content to this element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontent\fP : content (= list of parts) to load 
+.br
+\fIpos\fP : Position of the upper left corner of the content after being added 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Content adds 
+.RE
+.PP
+
+.SS "void ElementScene::addPrimitive (QGraphicsItem * primitive)\fC [private]\fP"
+
+.PP
+\fBElementScene::addPrimitive\fP Add a primitive to the scene by wrapping it within an \fBElementPrimitiveDecorator\fP group\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprimitive\fP 
+.RE
+.PP
+
+.SS "bool ElementScene::applyInformations (const QDomDocument & xml_document)\fC [private]\fP"
+
+.PP
+\fBElementScene::applyInformations\fP Applies the information (dimensions, hostpot, orientations, internal connections, names and additional information) contained in an XML document\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP : Document XML a analyser 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if reading and applying the information went well, false otherwise\&. 
+.RE
+.PP
+
+.SS "\fBElementScene::Behavior\fP ElementScene::behavior () const"
+
+.SS "QRectF ElementScene::boundingRectFromXml (const QDomDocument & xml_document)\fC [virtual]\fP"
+
+.PP
+\fBElementScene::boundingRectFromXml\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP : an XML document describing an element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the boundingRect of the element's content 
+.RE
+.PP
+
+.SS "void ElementScene::centerElementToOrigine ()\fC [private]\fP"
+
+.PP
+\fBElementScene::centerElementToOrigine\fP try to center better is possible the element to the scene (the calcul isn't optimal but work good) 
+.SS "void ElementScene::clearEventInterface ()"
+
+.PP
+\fBElementScene::clearEventInterface\fP Clear the current event interface\&. 
+.SS "bool ElementScene::clipboardMayContainElement ()\fC [static]\fP"
+
+.PP
+\fBElementScene::clipboardMayContainElement\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the clipboard appears to contain an element 
+.RE
+.PP
+
+.SS "bool ElementScene::containsTerminals () const"
+
+.PP
+\fBElementScene::containsTerminals\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the element has at least one terminal, false if it has none\&. 
+.RE
+.PP
+
+.SS "void ElementScene::contextMenuEvent (QGraphicsSceneContextMenuEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementScene::contextMenuEvent\fP Display the context menu event, only if behavior are Normal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void ElementScene::copy ()"
+
+.PP
+\fBElementScene::copy\fP Handles the fact of copying the selection = exporting it as XML to the clipboard\&. 
+.SS "void ElementScene::cut ()"
+
+.PP
+\fBElementScene::cut\fP Handles the fact of cutting the selection = exporting it in XML to the clipboard then deleting it\&. 
+.SS "void ElementScene::drawForeground (QPainter * p, const QRectF & rect)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementScene::drawForeground\fP Draws the background of the editor, ie the hotspot indicator\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP : The QPainter to use for drawing 
+.br
+\fIrect\fP : The rectangle of the area to be drawn 
+.RE
+.PP
+
+.SS "\fBQETElementEditor\fP * ElementScene::editor () const"
+
+.PP
+\fBElementScene::editor\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QRectF ElementScene::elementContentBoundingRect (const \fBElementContent\fP & content) const\fC [private]\fP"
+
+.PP
+\fBElementScene::elementContentBoundingRect\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontent\fP : Content (= parts) of an element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the boundingRect of these parts, expressed in the coordinates of the scene 
+.RE
+.PP
+
+.SS "void ElementScene::elementInfoChanged ()\fC [signal]\fP"
+
+.SS "\fBDiagramContext\fP ElementScene::elementInformation () const\fC [inline]\fP"
+
+.SS "\fBDiagramContext\fP ElementScene::elementKindInfo () const\fC [inline]\fP"
+
+.SS "QRectF ElementScene::elementSceneGeometricRect () const"
+
+.PP
+\fBElementScene::elementSceneGeometricRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the minimum, margin-less rectangle the element can fit into, in scene coordinates\&. It is different from itemsBoundingRect() because it is not supposed to imply any margin\&. 
+.RE
+.PP
+
+.SS "QString ElementScene::elementType () const\fC [inline]\fP"
+
+.SS "void ElementScene::fromXml (const QDomDocument & xml_document, const QPointF & position = \fCQPointF()\fP, bool consider_informations = \fCtrue\fP, \fBElementContent\fP * content_ptr = \fCnullptr\fP)\fC [virtual]\fP"
+
+.PP
+\fBElementScene::fromXml\fP Imports the element described in an XML document\&. If a position is specified, the imported elements are positioned in such a way that the upper left corner of the smallest rectangle that can surround them all (the bounding rect) either at this position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP : an XML document describing the element 
+.br
+\fIposition\fP : The position of the imported parts 
+.br
+\fIconsider_informations\fP : If true, additional information (dimensions, hotspot, etc\&.) will be taken into account 
+.br
+\fIcontent_ptr\fP : if this pointer to an ElementContent is different from 0, it will be filled with the content added to the element by the fromXml 
+.RE
+.PP
+
+.SS "void ElementScene::getPasteArea (const QRectF & to_paste)\fC [virtual]\fP"
+
+.PP
+\fBElementScene::getPasteArea\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIto_paste\fP : Rectangle enclosing the parts to be glued 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the rectangle where you will have to glue these parts 
+.RE
+.PP
+
+.SS "QString ElementScene::informations () const\fC [inline]\fP"
+
+.PP
+\fBElementScene::informations\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+extra informations of the currently edited element 
+.RE
+.PP
+
+.SS "void ElementScene::initPasteArea ()\fC [private]\fP"
+
+.PP
+\fBElementScene::initPasteArea\fP Initializes the paste area\&. 
+.SS "void ElementScene::keyPressEvent (QKeyEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementScene::keyPressEvent\fP manage key press event\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "\fBElementContent\fP ElementScene::loadContent (const QDomDocument & xml_document)\fC [private]\fP"
+
+.PP
+\fBElementScene::loadContent\fP Create and load the content describe in the xml document\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP : xml dom document to analyze 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the loaded content 
+.RE
+.PP
+
+.SS "void ElementScene::managePrimitivesGroups ()\fC [slot]\fP"
+
+.PP
+\fBElementScene::managePrimitivesGroups\fP Ensure the decorator is adequately shown, hidden or updated so it always represents the current selection\&. 
+.SS "void ElementScene::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementScene::mouseDoubleClickEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void ElementScene::mouseMoveEvent (QGraphicsSceneMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementScene::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "void ElementScene::mousePressEvent (QGraphicsSceneMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementScene::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "void ElementScene::mouseReleaseEvent (QGraphicsSceneMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementScene::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "\fBNamesList\fP ElementScene::names () const\fC [inline]\fP"
+
+.PP
+\fBElementScene::names\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of names of the currently edited element 
+.RE
+.PP
+
+.SS "void ElementScene::needZoomFit ()\fC [signal]\fP"
+
+.PP
+Signal emitted when need zoomFit\&. 
+.SS "void ElementScene::partsAdded ()\fC [signal]\fP"
+
+.PP
+Signal emitted after one or several parts were added\&. 
+.SS "void ElementScene::partsRemoved ()\fC [signal]\fP"
+
+.PP
+Signal emitted after one or several parts were removed\&. 
+.SS "void ElementScene::partsZValueChanged ()\fC [signal]\fP"
+
+.PP
+Signal emitted when the zValue of one or several parts change\&. 
+.SS "void ElementScene::pasteAreaDefined (const QRectF &)\fC [signal]\fP"
+
+.PP
+Signal emitted when users have defined the copy/paste area\&. 
+.SS "QList< \fBCustomElementPart\fP * > ElementScene::primitives () const\fC [virtual]\fP"
+
+.PP
+\fBElementScene::primitives\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of primitives currently present on the scene\&. 
+.RE
+.PP
+
+.SS "\fBQGIManager\fP & ElementScene::qgiManager ()"
+
+.PP
+\fBElementScene::qgiManager\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the QGraphicsItem manager of this item editor 
+.RE
+.PP
+
+.SS "void ElementScene::reset ()\fC [virtual]\fP"
+
+.PP
+\fBElementScene::reset\fP Remove all QGraphicsItems in the scene and clear the undo stack\&. 
+.SS "\fBElementContent\fP ElementScene::selectedContent () const\fC [virtual]\fP"
+
+.PP
+\fBElementScene::selectedContent\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the selected graphic parts 
+.RE
+.PP
+
+.SS "void ElementScene::setBehavior (\fBElementScene::Behavior\fP b)"
+
+.PP
+\fBElementScene::setBehavior\fP Modify the current behavior of this scene\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIb\fP 
+.RE
+.PP
+
+.SS "void ElementScene::setElementInfo (const \fBDiagramContext\fP & dc)"
+
+.PP
+\fBElementScene::setElementInfo\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdc\fP 
+.RE
+.PP
+
+.SS "void ElementScene::setEventInterface (\fBESEventInterface\fP * event_interface)"
+
+.PP
+\fBElementScene::setEventInterface\fP Set a new event interface\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent_interface\fP 
+.RE
+.PP
+
+.SS "void ElementScene::setGrid (int x_g, int y_g)\fC [virtual]\fP"
+
+.PP
+\fBElementScene::setGrid\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx_g\fP : Horizontal grid size 
+.br
+\fIy_g\fP : Vertical grid size 
+.RE
+.PP
+
+.SS "void ElementScene::setInformations (const QString & infos)\fC [inline]\fP"
+
+.PP
+\fBElementScene::setInformations\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfos\fP new extra information for the currently edited element 
+.RE
+.PP
+
+.SS "void ElementScene::setNames (const \fBNamesList\fP & nameslist)\fC [inline]\fP"
+
+.PP
+\fBElementScene::setNames\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInameslist\fP New set of naes for the currently edited element 
+.RE
+.PP
+
+.SS "void ElementScene::slot_delete ()\fC [slot]\fP"
+
+.PP
+\fBElementScene::slot_delete\fP Delete selected items\&. 
+.SS "void ElementScene::slot_deselectAll ()\fC [slot]\fP"
+
+.PP
+\fBElementScene::slot_deselectAll\fP deselect all item\&. 
+.SS "void ElementScene::slot_editAuthorInformations ()\fC [slot]\fP"
+
+.PP
+\fBElementScene::slot_editAuthorInformations\fP Starts a dialog to edit the additional information of this element\&. Concretely, this free field is intended to receive information on the author of the element, its license, etc\&. 
+.SS "void ElementScene::slot_editNames ()\fC [slot]\fP"
+
+.PP
+\fBElementScene::slot_editNames\fP Launch a dialog for edit the names of the edited element\&. 
+.SS "void ElementScene::slot_editProperties ()\fC [slot]\fP"
+
+.PP
+\fBElementScene::slot_editProperties\fP Open dialog to edit the element properties\&. 
+.SS "void ElementScene::slot_invertSelection ()\fC [slot]\fP"
+
+.PP
+\fBElementScene::slot_invertSelection\fP Inverse Selection\&. 
+.SS "void ElementScene::slot_select (const \fBElementContent\fP & content)\fC [slot]\fP"
+
+.PP
+\fBElementScene::slot_select\fP Select the item in content, every others items in the scene are deselected\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontent\fP 
+.RE
+.PP
+
+.SS "void ElementScene::slot_selectAll ()\fC [slot]\fP"
+
+.PP
+\fBElementScene::slot_selectAll\fP Select all items\&. 
+.SS "QPointF ElementScene::snapToGrid (QPointF point)"
+
+.PP
+\fBElementScene::snapToGrid\fP Rounds the coordinates of the point passed as a parameter so that this point is aligned with the grid\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpoint\fP : a reference to a QPointF\&. This object will be modified\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+point 
+.RE
+.PP
+
+.SS "void ElementScene::stackAction (\fBElementEditionCommand\fP * command)\fC [slot]\fP"
+
+.PP
+\fBElementScene::stackAction\fP Push the provided \fIcommand\fP on the undo stack\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP 
+.RE
+.PP
+
+.SS "const QDomDocument ElementScene::toXml (bool all_parts = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+\fBElementScene::toXml\fP Export this element as a xml file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIall_parts\fP : (true by default) if true, export the entire element in xml, if false, only export the selected parts\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+an xml document that describe the element\&. 
+.RE
+.PP
+
+.SS "QUndoStack & ElementScene::undoStack ()"
+
+.PP
+\fBElementScene::undoStack\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the undo stack of this element editor 
+.RE
+.PP
+
+.SS "bool ElementScene::wasCopiedFromThisElement (const QString & clipboard_content)"
+
+.PP
+\fBElementScene::wasCopiedFromThisElement\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclipboard_content\fP : character string, probably coming from the clipboard\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if clipboard_content has been copied from this element\&. 
+.RE
+.PP
+
+.SS "int ElementScene::xGrid () const\fC [virtual]\fP"
+
+.PP
+\fBElementScene::xGrid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the horizontal size of the grid 
+.RE
+.PP
+
+.SS "int ElementScene::yGrid () const\fC [virtual]\fP"
+
+.PP
+\fBElementScene::yGrid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+vertical grid size 
+.RE
+.PP
+
+.SS "QList< QGraphicsItem * > ElementScene::zItems (ItemOptions options = \fCItemOptions(\fBSortByZValue\fP							 | \fBIncludeTerminals\fP							 | \fBSelectedOrNot\fP)\fP) const\fC [virtual]\fP"
+
+.PP
+\fBElementScene::zItems\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoptions\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the parts of the element ordered by increasing zValue 
+.RE
+.PP
+
+.SS "bool ElementScene::zValueLessThan (QGraphicsItem * item1, QGraphicsItem * item2)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBElementScene::zValueLessThan\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem1\fP : QGraphicsItem 
+.br
+\fIitem2\fP : QGraphicsItem 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if \fIitem1's\fP zValue() is less than \fIitem2's\fP\&. 
+.RE
+.PP
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBChangePropertiesCommand\fP\fC [friend]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBBehavior\fP ElementScene::m_behavior\fC [private]\fP"
+
+.SS "\fBElementPrimitiveDecorator\fP* ElementScene::m_decorator = nullptr\fC [private]\fP"
+
+.PP
+Decorator item displayed when at least one item is selected\&. 
+.SS "QMutex* ElementScene::m_decorator_lock\fC [private]\fP"
+
+.SS "QRectF ElementScene::m_defined_paste_area\fC [private]\fP"
+
+.SS "\fBQETElementEditor\fP* ElementScene::m_element_editor = nullptr\fC [private]\fP"
+
+.SS "\fBDiagramContext\fP ElementScene::m_elmt_information\fC [private]\fP"
+
+.SS "\fBDiagramContext\fP ElementScene::m_elmt_kindInfo\fC [private]\fP"
+
+.PP
+element type 
+.SS "QString ElementScene::m_elmt_type\fC [private]\fP"
+
+.PP
+Extra informations\&. 
+.SS "\fBESEventInterface\fP* ElementScene::m_event_interface = nullptr\fC [private]\fP"
+
+.SS "QString ElementScene::m_informations\fC [private]\fP"
+
+.PP
+List of localized names\&. 
+.SS "QString ElementScene::m_last_copied\fC [private]\fP"
+
+.SS "\fBNamesList\fP ElementScene::m_names_list\fC [private]\fP"
+
+.SS "QGraphicsRectItem* ElementScene::m_paste_area\fC [private]\fP"
+
+.SS "\fBQGIManager\fP ElementScene::m_qgi_manager\fC [private]\fP"
+
+.PP
+element kind info 
+.SS "QUndoStack ElementScene::m_undo_stack\fC [private]\fP"
+
+.SS "int ElementScene::m_x_grid\fC [private]\fP"
+
+.SS "int ElementScene::m_y_grid\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

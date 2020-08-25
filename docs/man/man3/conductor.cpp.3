@@ -1,0 +1,129 @@
+.TH "sources/qetgraphicsitem/conductor.cpp" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qetgraphicsitem/conductor.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QtDebug>\fP
+.br
+\fC#include <QMultiHash>\fP
+.br
+\fC#include 'conductor\&.h'\fP
+.br
+\fC#include 'conductorsegment\&.h'\fP
+.br
+\fC#include 'conductorsegmentprofile\&.h'\fP
+.br
+\fC#include 'conductortextitem\&.h'\fP
+.br
+\fC#include 'element\&.h'\fP
+.br
+\fC#include 'diagram\&.h'\fP
+.br
+\fC#include 'diagramcommands\&.h'\fP
+.br
+\fC#include 'qetdiagrameditor\&.h'\fP
+.br
+\fC#include 'terminal\&.h'\fP
+.br
+\fC#include 'conductorautonumerotation\&.h'\fP
+.br
+\fC#include 'conductorpropertiesdialog\&.h'\fP
+.br
+\fC#include 'QPropertyUndoCommand/qpropertyundocommand\&.h'\fP
+.br
+\fC#include 'numerotationcontextcommands\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBConductorXmlRetroCompatibility\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPR\fP(x)   qDebug() << #x ' = ' << x;"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisContained\fP (const QPointF &a, const QPointF &b, const QPointF &c)"
+.br
+.ti -1c
+.RI "\fBConductor\fP * \fBlonguestConductorInPotential\fP (\fBConductor\fP *conductor, bool all_diagram)"
+.br
+.RI "longuestConductorInPotential "
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBrelatedConductors\fP (const \fBConductor\fP *conductor)"
+.br
+.RI "relatedConductors "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define PR(x)   qDebug() << #x ' = ' << x;"
+
+.SH "Function Documentation"
+.PP 
+.SS "bool isContained (const QPointF & a, const QPointF & b, const QPointF & c)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP point 
+.br
+\fIb\fP point 
+.br
+\fIc\fP point 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si le point a est contenu dans le rectangle delimite par les points b et c 
+.RE
+.PP
+
+.SS "\fBConductor\fP* longuestConductorInPotential (\fBConductor\fP * conductor, bool all_diagram)"
+
+.PP
+longuestConductorInPotential 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP : a conductor in the potential to search 
+.br
+\fIall_diagram\fP : true -> search in the whole project, false -> search only in the diagram of conductor 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the longuest conductor in the same potential of conductor 
+.RE
+.PP
+
+.SS "QList<\fBConductor\fP *> relatedConductors (const \fBConductor\fP * conductor)"
+
+.PP
+relatedConductors 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+return all conductors who share the same terminals of conductor given as parametre, except conductor himself\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

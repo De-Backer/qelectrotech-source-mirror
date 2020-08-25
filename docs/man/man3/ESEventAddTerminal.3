@@ -1,0 +1,126 @@
+.TH "ESEventAddTerminal" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESEventAddTerminal \- The \fBESEventAddTerminal\fP class This ESEvent manage creation of terminal in an \fBElementScene\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eseventaddterminal\&.h>\fP
+.PP
+Inherits \fBESEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESEventAddTerminal\fP (\fBElementScene\fP *scene)"
+.br
+.RI "\fBESEventAddTerminal::ESEventAddTerminal\fP\&. "
+.ti -1c
+.RI "\fB~ESEventAddTerminal\fP () override"
+.br
+.RI "\fBESEventAddTerminal::~ESEventAddTerminal\fP\&. "
+.ti -1c
+.RI "bool \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddTerminal::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddTerminal::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "bool \fBkeyPressEvent\fP (QKeyEvent *event) override"
+.br
+.RI "\fBESEventAddTerminal::keyPressEvent\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPartTerminal\fP * \fBm_terminal\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBESEventAddTerminal\fP class This ESEvent manage creation of terminal in an \fBElementScene\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESEventAddTerminal::ESEventAddTerminal (\fBElementScene\fP * scene)"
+
+.PP
+\fBESEventAddTerminal::ESEventAddTerminal\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP 
+.RE
+.PP
+
+.SS "ESEventAddTerminal::~ESEventAddTerminal ()\fC [override]\fP"
+
+.PP
+\fBESEventAddTerminal::~ESEventAddTerminal\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ESEventAddTerminal::keyPressEvent (QKeyEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddTerminal::keyPressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddTerminal::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddTerminal::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddTerminal::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddTerminal::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPartTerminal\fP* ESEventAddTerminal::m_terminal\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

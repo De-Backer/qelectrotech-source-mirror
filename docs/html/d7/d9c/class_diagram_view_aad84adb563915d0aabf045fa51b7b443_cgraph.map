@@ -1,0 +1,15 @@
+<map id="DiagramView::event" name="DiagramView::event">
+<area shape="rect" id="node1" title="DiagramView::event Manage the event on this diagram view. &#45;At first activation (QEvent::WindowActivat..." alt="" coords="5,81,144,108"/>
+<area shape="rect" id="node2" href="$d7/d9c/class_diagram_view.html#a40b76343432d9a9bd24bf80dd62612eb" title="DiagramView::gestureEvent Use the pinch of the trackpad for zoom." alt="" coords="192,81,375,108"/>
+<area shape="rect" id="node12" href="$d7/d9c/class_diagram_view.html#a7481a01ef93861ed1c182f20b86c8b73" title=" " alt="" coords="192,133,375,174"/>
+<area shape="rect" id="node13" href="$d7/d9c/class_diagram_view.html#a399414a83cf6a524e386d2f88bb53cc8" title=" " alt="" coords="423,31,577,57"/>
+<area shape="rect" id="node3" href="$d7/d9c/class_diagram_view.html#afcd4ea23c8b2eabd32b1682b136248bc" title="DiagramView::zoom Zomm the view. A zoom_factor &gt; 1 zoom in. A zoom_factor &lt; 1 zoom out." alt="" coords="431,81,569,108"/>
+<area shape="rect" id="node4" href="$d7/d9c/class_diagram_view.html#a40fdb7d6378cd0b453455afe7e0afaef" title=" " alt="" coords="625,81,839,108"/>
+<area shape="rect" id="node8" href="$d7/d9c/class_diagram_view.html#a9d6616c3a0e7175f1390197671f5a33a" title="DiagramView::adjustSceneRect Calcul and set the area of the scene visualized by this view." alt="" coords="629,31,835,57"/>
+<area shape="rect" id="node9" href="$d3/d37/class_diagram.html#a5ce477a5197fdfc394d662f8f71dc977" title="Diagram::adjustSceneRect Recalcul and adjust the size of the scene." alt="" coords="643,136,821,163"/>
+<area shape="rect" id="node5" href="$d7/d9c/class_diagram_view.html#a667fdabfcb325526aff83c6422f57144" title=" " alt="" coords="899,5,1085,32"/>
+<area shape="rect" id="node6" href="$d3/d37/class_diagram.html#a016f54253c225274892e27f6a0740f26" title="Diagram::setDisplayGrid Set whether the diagram grid should be drawn." alt="" coords="909,56,1075,83"/>
+<area shape="rect" id="node7" href="$d7/d9c/class_diagram_view.html#aa96c2929ff8f9f9fb2281a263e730a18" title=" " alt="" coords="887,107,1097,133"/>
+<area shape="rect" id="node10" href="$df/d92/class_border_title_block.html#a8f493ea91d266e4f8219b45b83a01550" title="BorderTitleBlock::borderAndTitleBlockRect." alt="" coords="911,158,1073,199"/>
+<area shape="rect" id="node11" href="$df/d92/class_border_title_block.html#adf35a4b1315de6d6efed2095a1f5ab60" title="BorderTitleBlock::titleBlockRect." alt="" coords="1145,165,1352,192"/>
+</map>

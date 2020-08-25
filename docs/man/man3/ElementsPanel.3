@@ -1,0 +1,394 @@
+.TH "ElementsPanel" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementsPanel
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementspanel\&.h>\fP
+.PP
+Inherits \fBGenericPanel\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBslot_doubleClick\fP (QTreeWidgetItem *, int)"
+.br
+.ti -1c
+.RI "void \fBreload\fP (bool=false)"
+.br
+.RI "\fBElementsPanel::reload\fP Reload the elements tree\&. "
+.ti -1c
+.RI "void \fBfilter\fP (const QString &, \fBQET::Filtering\fP=\fBQET::RegularFilter\fP)"
+.br
+.ti -1c
+.RI "void \fBprojectWasOpened\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBprojectWasClosed\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBbuildFilterList\fP ()"
+.br
+.ti -1c
+.RI "void \fBapplyCurrentFilter\fP (const QList< QTreeWidgetItem * > &)"
+.br
+.ti -1c
+.RI "void \fBensureHierarchyIsVisible\fP (const QList< QTreeWidgetItem * > &)"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBrequestForProject\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForDiagram\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForTitleBlockTemplate\fP (const \fBTitleBlockTemplateLocation\fP &)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsPanel\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ElementsPanel\fP () override"
+.br
+.ti -1c
+.RI "QString \fBdirPathForItem\fP (QTreeWidgetItem *)"
+.br
+.RI "\fBElementsPanel::dirPathForItem\fP\&. "
+.ti -1c
+.RI "QString \fBfilePathForItem\fP (QTreeWidgetItem *)"
+.br
+.RI "\fBElementsPanel::filePathForItem\fP\&. "
+.in -1c
+.SS "Protected Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBpanelContentChange\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstartDrag\fP (Qt::DropActions) override"
+.br
+.ti -1c
+.RI "void \fBstartTitleBlockTemplateDrag\fP (const \fBTitleBlockTemplateLocation\fP &)"
+.br
+.ti -1c
+.RI "bool \fBmatchesFilter\fP (const QTreeWidgetItem *, const QString &) const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsPanel\fP (const \fBElementsPanel\fP &)"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBaddProject\fP (\fBQETProject\fP *, QTreeWidgetItem *=nullptr, PanelOptions=\fBAddAllChild\fP) override"
+.br
+.RI "\fBElementsPanel::addProject\fP Methode permettant d'ajouter un projet au panel d'elements\&. "
+.ti -1c
+.RI "QTreeWidgetItem * \fBupdateTemplatesCollectionItem\fP (QTreeWidgetItem *, \fBTitleBlockTemplatesCollection\fP *, PanelOptions=\fBAddAllChild\fP, bool=false) override"
+.br
+.RI "\fBGenericPanel::updateTemplatesCollectionItem\fP\&. "
+.ti -1c
+.RI "QTreeWidgetItem * \fBupdateTemplateItem\fP (QTreeWidgetItem *, const \fBTitleBlockTemplateLocation\fP &, PanelOptions, bool=false) override"
+.br
+.RI "\fBGenericPanel::updateTemplateItem\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QSet< \fBQETProject\fP * > \fBprojects_to_display_\fP"
+.br
+.RI "list of projects that have been added to this panel "
+.ti -1c
+.RI "QTreeWidgetItem * \fBcommon_tbt_collection_item_\fP"
+.br
+.RI "pointer to the item representing the common templates collection "
+.ti -1c
+.RI "QTreeWidgetItem * \fBcustom_tbt_collection_item_\fP"
+.br
+.RI "pointer to the item representing the user templates collection "
+.ti -1c
+.RI "bool \fBfirst_reload_\fP"
+.br
+.RI "used to distinguish the first time this panel is reloaded "
+.ti -1c
+.RI "QString \fBfilter_\fP"
+.br
+.RI "Currently applied filter\&. "
+.ti -1c
+.RI "QStringList \fBfilter_list_\fP"
+.br
+.RI "Currently applied list of filter\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class provides a tree widget listing known filesystem-based elements collections and opened project files along with their content (diagrams, embedded collections, \&.\&.\&.)\&. It enables users to perform various actions on the displayed content 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementsPanel::ElementsPanel (QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Le QWidget parent du panel d'appareils 
+.RE
+.PP
+
+.SS "ElementsPanel::~ElementsPanel ()\fC [override]\fP"
+Destructeur 
+.SS "ElementsPanel::ElementsPanel (const \fBElementsPanel\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QTreeWidgetItem * ElementsPanel::addProject (\fBQETProject\fP * project, QTreeWidgetItem * parent_item = \fCnullptr\fP, PanelOptions options = \fC\fBAddAllChild\fP\fP)\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementsPanel::addProject\fP Methode permettant d'ajouter un projet au panel d'elements\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : project Projet a inserer dans le panel d'elements 
+.br
+\fIparent_item\fP : Q_UNUSED QTreeWidgetItem parent sous lequel sera insere le projet 
+.br
+\fIoptions\fP : Q_UNUSED 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Le QTreeWidgetItem insere le plus haut 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBGenericPanel\fP\&.
+.SS "void ElementsPanel::applyCurrentFilter (const QList< QTreeWidgetItem * > & items)\fC [slot]\fP"
+Apply the current filter to a given item\&. 
+.SS "void ElementsPanel::buildFilterList ()\fC [slot]\fP"
+Build filter list for multiple filter 
+.SS "QString ElementsPanel::dirPathForItem (QTreeWidgetItem * item)"
+
+.PP
+\fBElementsPanel::dirPathForItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP : a QTreeWidgetItem 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the directory path of the object represented by \fIitem\fP 
+.RE
+.PP
+
+.SS "void ElementsPanel::ensureHierarchyIsVisible (const QList< QTreeWidgetItem * > & items)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIitems\fP une liste de QTreeWidgetItem pour lesquels il faut s'assurer que eux et leurs parents sont visibles 
+.RE
+.PP
+
+.SS "QString ElementsPanel::filePathForItem (QTreeWidgetItem * item)"
+
+.PP
+\fBElementsPanel::filePathForItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP : a QTreeWidgetItem 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the filepath of the object represented by \fIitem\fP 
+.RE
+.PP
+
+.SS "void ElementsPanel::filter (const QString & m, \fBQET::Filtering\fP filtering = \fC\fBQET::RegularFilter\fP\fP)\fC [slot]\fP"
+Hide items that do not match the provided string, ensure others are visible along with their parent hierarchy\&. When ending the filtering, restore the tree as it was before the filtering (except the current item) and scroll to the currently selected item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIm\fP String to be matched 
+.br
+\fIfiltering\fP whether to begin/apply/end the filtering 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBQET::Filtering\fP 
+.RE
+.PP
+
+.SS "bool ElementsPanel::matchesFilter (const QTreeWidgetItem * item, const QString & filter) const\fC [protected]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if \fIitem\fP matches the filter, false otherwise 
+.RE
+.PP
+
+.SS "void ElementsPanel::panelContentChange ()\fC [protected]\fP, \fC [slot]\fP"
+Ensure the filter is applied again after the panel content has changed\&. 
+.SS "void ElementsPanel::projectWasClosed (\fBQETProject\fP * project)\fC [slot]\fP"
+Enleve un projet du panel d'elements 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Projet a enlever du panel 
+.RE
+.PP
+
+.SS "void ElementsPanel::projectWasOpened (\fBQETProject\fP * project)\fC [slot]\fP"
+Rajoute un projet au panel d'elements 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Projet ouvert a rajouter au panel 
+.RE
+.PP
+
+.SS "void ElementsPanel::reload (bool reload_collections = \fCfalse\fP)\fC [slot]\fP"
+
+.PP
+\fBElementsPanel::reload\fP Reload the elements tree\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreload_collections\fP : true for read all collections since their sources (files, projects \&.\&.\&.) 
+.RE
+.PP
+
+.SS "void ElementsPanel::requestForDiagram (\fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanel::requestForProject (\fBQETProject\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanel::requestForTitleBlockTemplate (const \fBTitleBlockTemplateLocation\fP &)\fC [signal]\fP"
+
+.SS "void ElementsPanel::slot_doubleClick (QTreeWidgetItem * qtwi, int)\fC [slot]\fP"
+Gere le double-clic sur un element\&. Si un double-clic sur un projet est effectue, le signal requestForProject est emis\&. Si un double-clic sur un schema est effectue, le signal requestForDiagram est emis\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqtwi\fP 
+.RE
+.PP
+
+.SS "void ElementsPanel::startDrag (Qt::DropActions supportedActions)\fC [override]\fP, \fC [protected]\fP"
+Gere le debut des drag'n drop 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsupportedActions\fP Les actions supportees 
+.RE
+.PP
+
+.SS "void ElementsPanel::startTitleBlockTemplateDrag (const \fBTitleBlockTemplateLocation\fP & location)\fC [protected]\fP"
+Handle the dragging of a title block template 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP Location of the dragged template\&. 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * ElementsPanel::updateTemplateItem (QTreeWidgetItem * tb_template_qtwi, const \fBTitleBlockTemplateLocation\fP & tb_template, PanelOptions options, bool freshly_created = \fCfalse\fP)\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::updateTemplateItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItb_template_qtwi\fP 
+.br
+\fItb_template\fP 
+.br
+\fIoptions\fP 
+.br
+\fIfreshly_created\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+updateItem(tb_template_qtwi, options, freshly_created) 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBGenericPanel\fP\&.
+.SS "QTreeWidgetItem * ElementsPanel::updateTemplatesCollectionItem (QTreeWidgetItem * tbt_collection_qtwi, \fBTitleBlockTemplatesCollection\fP * tbt_collection, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::updateTemplatesCollectionItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_collection_qtwi\fP 
+.br
+\fItbt_collection\fP 
+.br
+\fIoptions\fP 
+.br
+\fIfreshly_created\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+updateItem(tbt_collection_qtwi, options, freshly_created) 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBGenericPanel\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QTreeWidgetItem* ElementsPanel::common_tbt_collection_item_\fC [private]\fP"
+
+.PP
+pointer to the item representing the common templates collection 
+.SS "QTreeWidgetItem* ElementsPanel::custom_tbt_collection_item_\fC [private]\fP"
+
+.PP
+pointer to the item representing the user templates collection 
+.SS "QString ElementsPanel::filter_\fC [private]\fP"
+
+.PP
+Currently applied filter\&. 
+.SS "QStringList ElementsPanel::filter_list_\fC [private]\fP"
+
+.PP
+Currently applied list of filter\&. 
+.SS "bool ElementsPanel::first_reload_\fC [private]\fP"
+
+.PP
+used to distinguish the first time this panel is reloaded 
+.SS "QSet<\fBQETProject\fP *> ElementsPanel::projects_to_display_\fC [private]\fP"
+
+.PP
+list of projects that have been added to this panel 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

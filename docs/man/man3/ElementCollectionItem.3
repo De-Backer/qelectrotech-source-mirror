@@ -1,0 +1,301 @@
+.TH "ElementCollectionItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementCollectionItem \- The \fBElementCollectionItem\fP class This class represent a item (a directory or an element) in a element collection\&. This class must be herited for specialisation\&. This item is used by \fBElementsCollectionModel\fP for manage the elements collection\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementcollectionitem\&.h>\fP
+.PP
+Inherits QStandardItem\&.
+.PP
+Inherited by \fBFileElementCollectionItem\fP, and \fBXmlProjectElementCollectionItem\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType+1 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementCollectionItem\fP ()"
+.br
+.RI "\fBElementCollectionItem::ElementCollectionItem\fP Constructor\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "virtual bool \fBisDir\fP () const =0"
+.br
+.ti -1c
+.RI "virtual bool \fBisElement\fP () const =0"
+.br
+.ti -1c
+.RI "virtual QString \fBlocalName\fP ()=0"
+.br
+.ti -1c
+.RI "virtual QString \fBname\fP () const =0"
+.br
+.ti -1c
+.RI "virtual QString \fBcollectionPath\fP () const =0"
+.br
+.ti -1c
+.RI "virtual bool \fBisCollectionRoot\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBaddChildAtPath\fP (const QString &collection_name)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUpData\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUpIcon\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBclearData\fP ()"
+.br
+.RI "\fBElementCollectionItem::clearData\fP Reset the data\&. "
+.ti -1c
+.RI "\fBElementCollectionItem\fP * \fBlastItemForPath\fP (const QString &path, QString &no_found_path)"
+.br
+.RI "\fBElementCollectionItem::lastItemForPath\fP Return the last existing item in this \fBElementCollectionItem\fP hierarchy according to the given path\&. Next_item is the first non existing item in this hierarchy according to the given path\&. "
+.ti -1c
+.RI "\fBElementCollectionItem\fP * \fBchildWithCollectionName\fP (const QString &\fBname\fP) const"
+.br
+.RI "\fBElementCollectionItem::childWithCollectionName\fP Return the child with the collection name name, else return nullptr\&. "
+.ti -1c
+.RI "QList< QStandardItem * > \fBdirectChilds\fP () const"
+.br
+.RI "\fBElementCollectionItem::directChilds\fP Return the direct child of this item\&. "
+.ti -1c
+.RI "int \fBrowForInsertItem\fP (const QString &\fBname\fP)"
+.br
+.RI "\fBElementCollectionItem::rowForInsertItem\fP Return the row for insert a new child item to this item with name\&. "
+.ti -1c
+.RI "\fBElementCollectionItem\fP * \fBitemAtPath\fP (const QString &path)"
+.br
+.RI "\fBElementCollectionItem::itemAtPath\fP\&. "
+.ti -1c
+.RI "QList< \fBElementCollectionItem\fP * > \fBelementsDirectChild\fP () const"
+.br
+.RI "\fBElementCollectionItem::elementsDirectChild\fP\&. "
+.ti -1c
+.RI "QList< \fBElementCollectionItem\fP * > \fBdirectoriesDirectChild\fP () const"
+.br
+.RI "\fBElementCollectionItem::directoriesDirectChild\fP\&. "
+.ti -1c
+.RI "QList< \fBElementCollectionItem\fP * > \fBelementsChild\fP () const"
+.br
+.RI "\fBElementCollectionItem::elementsChild\fP\&. "
+.ti -1c
+.RI "QList< \fBElementCollectionItem\fP * > \fBdirectoriesChild\fP () const"
+.br
+.RI "\fBElementCollectionItem::directoriesChild\fP\&. "
+.ti -1c
+.RI "QList< \fBElementCollectionItem\fP * > \fBitems\fP () const"
+.br
+.RI "\fBElementCollectionItem::items\fP\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementCollectionItem\fP class This class represent a item (a directory or an element) in a element collection\&. This class must be herited for specialisation\&. This item is used by \fBElementsCollectionModel\fP for manage the elements collection\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementCollectionItem::ElementCollectionItem ()"
+
+.PP
+\fBElementCollectionItem::ElementCollectionItem\fP Constructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void ElementCollectionItem::addChildAtPath (const QString & collection_name)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBFileElementCollectionItem\fP, and \fBXmlProjectElementCollectionItem\fP\&.
+.SS "\fBElementCollectionItem\fP * ElementCollectionItem::childWithCollectionName (const QString & name) const"
+
+.PP
+\fBElementCollectionItem::childWithCollectionName\fP Return the child with the collection name name, else return nullptr\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void ElementCollectionItem::clearData ()\fC [virtual]\fP"
+
+.PP
+\fBElementCollectionItem::clearData\fP Reset the data\&. 
+.SS "virtual QString ElementCollectionItem::collectionPath () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBFileElementCollectionItem\fP, and \fBXmlProjectElementCollectionItem\fP\&.
+.SS "QList< QStandardItem * > ElementCollectionItem::directChilds () const"
+
+.PP
+\fBElementCollectionItem::directChilds\fP Return the direct child of this item\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QList< \fBElementCollectionItem\fP * > ElementCollectionItem::directoriesChild () const"
+
+.PP
+\fBElementCollectionItem::directoriesChild\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Every directories child (direct and indirect) of this item 
+.RE
+.PP
+
+.SS "QList< \fBElementCollectionItem\fP * > ElementCollectionItem::directoriesDirectChild () const"
+
+.PP
+\fBElementCollectionItem::directoriesDirectChild\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the direct directory child of this item 
+.RE
+.PP
+
+.SS "QList< \fBElementCollectionItem\fP * > ElementCollectionItem::elementsChild () const"
+
+.PP
+\fBElementCollectionItem::elementsChild\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Every elements child (direct and indirect) of this item 
+.RE
+.PP
+
+.SS "QList< \fBElementCollectionItem\fP * > ElementCollectionItem::elementsDirectChild () const"
+
+.PP
+\fBElementCollectionItem::elementsDirectChild\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The direct element child of this item 
+.RE
+.PP
+
+.SS "virtual bool ElementCollectionItem::isCollectionRoot () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBFileElementCollectionItem\fP, and \fBXmlProjectElementCollectionItem\fP\&.
+.SS "virtual bool ElementCollectionItem::isDir () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBFileElementCollectionItem\fP, and \fBXmlProjectElementCollectionItem\fP\&.
+.SS "virtual bool ElementCollectionItem::isElement () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBFileElementCollectionItem\fP, and \fBXmlProjectElementCollectionItem\fP\&.
+.SS "\fBElementCollectionItem\fP * ElementCollectionItem::itemAtPath (const QString & path)"
+
+.PP
+\fBElementCollectionItem::itemAtPath\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the item at path or nullptr if doesn't exist 
+.RE
+.PP
+
+.SS "QList< \fBElementCollectionItem\fP * > ElementCollectionItem::items () const"
+
+.PP
+\fBElementCollectionItem::items\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+every childs of this item (direct and indirect childs) 
+.RE
+.PP
+
+.SS "\fBElementCollectionItem\fP * ElementCollectionItem::lastItemForPath (const QString & path, QString & no_found_path)"
+
+.PP
+\fBElementCollectionItem::lastItemForPath\fP Return the last existing item in this \fBElementCollectionItem\fP hierarchy according to the given path\&. Next_item is the first non existing item in this hierarchy according to the given path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : The path to find last item\&. The path must be in form : path/otherPath/\&.\&.\&./\&.\&.\&./myElement\&.elmt\&. 
+.br
+\fIno_found_path\fP : The first item that not exist in this hierarchy 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+: The last item that exist in this hierarchy, or nullptr can't find (an error was occurred, or path already exist) 
+.RE
+.PP
+
+.SS "virtual QString ElementCollectionItem::localName ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBFileElementCollectionItem\fP, and \fBXmlProjectElementCollectionItem\fP\&.
+.SS "virtual QString ElementCollectionItem::name () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBFileElementCollectionItem\fP, and \fBXmlProjectElementCollectionItem\fP\&.
+.SS "int ElementCollectionItem::rowForInsertItem (const QString & name)"
+
+.PP
+\fBElementCollectionItem::rowForInsertItem\fP Return the row for insert a new child item to this item with name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+If row can't be found (name is null, or already exist) return -1; 
+.RE
+.PP
+
+.SS "virtual void ElementCollectionItem::setUpData ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBFileElementCollectionItem\fP, and \fBXmlProjectElementCollectionItem\fP\&.
+.SS "virtual void ElementCollectionItem::setUpIcon ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBFileElementCollectionItem\fP, and \fBXmlProjectElementCollectionItem\fP\&.
+.SS "int ElementCollectionItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

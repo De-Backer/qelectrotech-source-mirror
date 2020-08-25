@@ -1,0 +1,168 @@
+.TH "ChangeConductorCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChangeConductorCommand \- The \fBChangeConductorCommand\fP class This command changes a particular conductor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeConductorCommand\fP (\fBConductor\fP *, const \fBConductorProfile\fP &, const \fBConductorProfile\fP &, Qt::Corner, QUndoCommand *=nullptr)"
+.br
+.RI "\fBChangeConductorCommand::ChangeConductorCommand\fP Constructeur\&. "
+.ti -1c
+.RI "\fB~ChangeConductorCommand\fP () override"
+.br
+.RI "\fBChangeConductorCommand::~ChangeConductorCommand\fP Destructeur\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBChangeConductorCommand::undo\fP Annule la modification du conducteur\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBChangeConductorCommand::redo\fP Refait la modification du conducteur\&. "
+.ti -1c
+.RI "virtual void \fBsetConductorTextItemMove\fP (const QPointF &, const QPointF &)"
+.br
+.RI "\fBChangeConductorCommand::setConductorTextItemMove\fP Integre dans cet objet d'annulation le repositionnement du champ de texte du conducteur\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeConductorCommand\fP (const \fBChangeConductorCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConductor\fP * \fBconductor\fP"
+.br
+.RI "changed conductor "
+.ti -1c
+.RI "\fBConductorProfile\fP \fBold_profile\fP"
+.br
+.RI "profile before the change "
+.ti -1c
+.RI "\fBConductorProfile\fP \fBnew_profile\fP"
+.br
+.RI "profile after the change "
+.ti -1c
+.RI "Qt::Corner \fBpath_type\fP"
+.br
+.RI "Path type of the modified conductor\&. "
+.ti -1c
+.RI "QPointF \fBtext_pos_before_mov_\fP"
+.br
+.RI "position of the text item before the change "
+.ti -1c
+.RI "QPointF \fBtext_pos_after_mov_\fP"
+.br
+.RI "position of the text item after the change "
+.ti -1c
+.RI "bool \fBfirst_redo\fP"
+.br
+.RI "prevent the first call to \fBredo()\fP "
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBChangeConductorCommand\fP class This command changes a particular conductor\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChangeConductorCommand::ChangeConductorCommand (\fBConductor\fP * c, const \fBConductorProfile\fP & old_p, const \fBConductorProfile\fP & new_p, Qt::Corner path_t, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBChangeConductorCommand::ChangeConductorCommand\fP Constructeur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP Conducteur modifie 
+.br
+\fIold_p\fP ancien profil du conducteur 
+.br
+\fInew_p\fP nouveau profil du conducteur 
+.br
+\fIpath_t\fP Trajectoire du trajet modifie 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "ChangeConductorCommand::~ChangeConductorCommand ()\fC [override]\fP"
+
+.PP
+\fBChangeConductorCommand::~ChangeConductorCommand\fP Destructeur\&. 
+.SS "ChangeConductorCommand::ChangeConductorCommand (const \fBChangeConductorCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChangeConductorCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBChangeConductorCommand::redo\fP Refait la modification du conducteur\&. 
+.SS "void ChangeConductorCommand::setConductorTextItemMove (const QPointF & pos_before, const QPointF & pos_after)\fC [virtual]\fP"
+
+.PP
+\fBChangeConductorCommand::setConductorTextItemMove\fP Integre dans cet objet d'annulation le repositionnement du champ de texte du conducteur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos_before\fP Position du texte avant la modification du conducteur 
+.br
+\fIpos_after\fP Position du texte apres la modification du conducteur 
+.RE
+.PP
+
+.SS "void ChangeConductorCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBChangeConductorCommand::undo\fP Annule la modification du conducteur\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBConductor\fP* ChangeConductorCommand::conductor\fC [private]\fP"
+
+.PP
+changed conductor 
+.SS "\fBDiagram\fP* ChangeConductorCommand::diagram\fC [private]\fP"
+
+.SS "bool ChangeConductorCommand::first_redo\fC [private]\fP"
+
+.PP
+prevent the first call to \fBredo()\fP 
+.SS "\fBConductorProfile\fP ChangeConductorCommand::new_profile\fC [private]\fP"
+
+.PP
+profile after the change 
+.SS "\fBConductorProfile\fP ChangeConductorCommand::old_profile\fC [private]\fP"
+
+.PP
+profile before the change 
+.SS "Qt::Corner ChangeConductorCommand::path_type\fC [private]\fP"
+
+.PP
+Path type of the modified conductor\&. 
+.SS "QPointF ChangeConductorCommand::text_pos_after_mov_\fC [private]\fP"
+
+.PP
+position of the text item after the change 
+.SS "QPointF ChangeConductorCommand::text_pos_before_mov_\fC [private]\fP"
+
+.PP
+position of the text item before the change 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

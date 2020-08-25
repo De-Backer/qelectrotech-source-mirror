@@ -1,0 +1,481 @@
+.TH "PartText" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PartText
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <parttext\&.h>\fP
+.PP
+Inherits QGraphicsTextItem, and \fBCustomElementPart\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1107 }"
+.br
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBadjustItemPosition\fP (int=0)"
+.br
+.ti -1c
+.RI "void \fBsetEditable\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBstartEdition\fP ()"
+.br
+.ti -1c
+.RI "void \fBendEdition\fP ()"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBfontChanged\fP (const QFont &\fBfont\fP)"
+.br
+.ti -1c
+.RI "void \fBcolorChanged\fP (const QColor &\fBcolor\fP)"
+.br
+.ti -1c
+.RI "void \fBplainTextChanged\fP (const QString &\fBtext\fP)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPartText\fP (\fBQETElementEditor\fP *, QGraphicsItem *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~PartText\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.ti -1c
+.RI "QString \fBxmlName\fP () const override"
+.br
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &) override"
+.br
+.ti -1c
+.RI "const QDomElement \fBtoXml\fP (QDomDocument &) const override"
+.br
+.ti -1c
+.RI "void \fBsetRotation\fP (qreal angle)"
+.br
+.ti -1c
+.RI "bool \fBisUseless\fP () const override"
+.br
+.ti -1c
+.RI "QRectF \fBsceneGeometricRect\fP () const override"
+.br
+.ti -1c
+.RI "void \fBstartUserTransformation\fP (const QRectF &) override"
+.br
+.ti -1c
+.RI "void \fBhandleUserTransformation\fP (const QRectF &, const QRectF &) override"
+.br
+.ti -1c
+.RI "void \fBsetProperty\fP (const char *\fBname\fP, const QVariant &value) override"
+.br
+.ti -1c
+.RI "QVariant \fBproperty\fP (const char *\fBname\fP) const override"
+.br
+.ti -1c
+.RI "qreal \fBrealSize\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetRealSize\fP (qreal rs)"
+.br
+.ti -1c
+.RI "void \fBsetDefaultTextColor\fP (const QColor &\fBcolor\fP)"
+.br
+.ti -1c
+.RI "void \fBsetPlainText\fP (const QString &\fBtext\fP)"
+.br
+.ti -1c
+.RI "void \fBsetFont\fP (const QFont &\fBfont\fP)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBfocusInEvent\fP (QFocusEvent *) override"
+.br
+.RI "\fBPartText::focusInEvent\fP\&. "
+.ti -1c
+.RI "void \fBfocusOutEvent\fP (QFocusEvent *) override"
+.br
+.RI "\fBPartText::focusOutEvent\fP\&. "
+.ti -1c
+.RI "void \fBkeyPressEvent\fP (QKeyEvent *) override"
+.br
+.RI "\fBPartText::keyPressEvent\fP Used to handle the escape key when the event is delivered to the field, not to the decorator\&. "
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.ti -1c
+.RI "QVariant \fBitemChange\fP (GraphicsItemChange, const QVariant &) override"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "qreal \fBreal_size\fP"
+.br
+.ti -1c
+.RI "QColor \fBcolor\fP"
+.br
+.ti -1c
+.RI "QString \fBtext\fP"
+.br
+.ti -1c
+.RI "QFont \fBfont\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPartText\fP (const \fBPartText\fP &)"
+.br
+.ti -1c
+.RI "QPointF \fBmargin\fP () const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBprevious_text\fP"
+.br
+.ti -1c
+.RI "qreal \fBreal_font_size_\fP"
+.br
+.ti -1c
+.RI "QPointF \fBsaved_point_\fP"
+.br
+.ti -1c
+.RI "qreal \fBsaved_font_size_\fP"
+.br
+.ti -1c
+.RI "QGraphicsItem * \fBdecorator_\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_origine_pos\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents an static text primitive which may be used to compose the drawing of an electrical element within the element editor\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PartText::PartText (\fBQETElementEditor\fP * editor, QGraphicsItem * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP L'editeur d'element concerne 
+.br
+\fIparent\fP Le QGraphicsItem parent de ce texte statique 
+.RE
+.PP
+
+.SS "PartText::~PartText ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "PartText::PartText (const \fBPartText\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void PartText::adjustItemPosition (int new_block_count = \fC0\fP)\fC [slot]\fP"
+Cette methode s'assure que la position du champ de texte est coherente en repositionnant son origine (c-a-d le milieu du bord gauche du champ de texte) a la position originale\&. Cela est notamment utile lorsque le champ de texte est agrandi ou retreci verticalement (ajout ou retrait de lignes)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_block_count\fP Nombre de blocs dans le \fBPartText\fP 
+.RE
+.PP
+
+.SS "QRectF PartText::boundingRect () const\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+le rectangle delimitant cette partie\&. 
+.RE
+.PP
+
+.SS "void PartText::colorChanged (const QColor & color)\fC [signal]\fP"
+
+.SS "void PartText::endEdition ()\fC [slot]\fP"
+End text edition, potentially generating a ChangePartCommand if the text has changed\&. 
+.SS "void PartText::focusInEvent (QFocusEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartText::focusInEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP : The QFocusEvent object describing the focus gain\&. Start text edition when the item gains focus\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+QGraphicsItem::focusInEvent(QFocusEvent *) 
+.RE
+.PP
+
+.SS "void PartText::focusOutEvent (QFocusEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartText::focusOutEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP : The QFocusEvent object describing the focus loss\&. End text edition when the item loses focus\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+QGraphicsItem::focusOutEvent(QFocusEvent *) 
+.RE
+.PP
+
+.SS "void PartText::fontChanged (const QFont & font)\fC [signal]\fP"
+
+.SS "void PartText::fromXml (const QDomElement & xml_element)\fC [override]\fP, \fC [virtual]\fP"
+Importe les proprietes d'un texte statique depuis un element XML 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP \fBElement\fP XML a lire 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartText::handleUserTransformation (const QRectF & initial_selection_rect, const QRectF & new_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+Handle the user-induced transformation from \fIinitial_selection_rect\fP to \fInew_selection_rect\fP 
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "bool PartText::isUseless () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si cette partie n'est pas pertinente et ne merite pas d'etre conservee / enregistree\&. Un texte statique n'est pas pertinent lorsque son texte est vide\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "QVariant PartText::itemChange (GraphicsItemChange change, const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+Gere les changements intervenant sur cette partie 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP Type de changement 
+.br
+\fIvalue\fP Valeur numerique relative au changement 
+.RE
+.PP
+
+.SS "void PartText::keyPressEvent (QKeyEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartText::keyPressEvent\fP Used to handle the escape key when the event is delivered to the field, not to the decorator\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+QGraphicsTextItem::keyPressEvent() 
+.RE
+.PP
+
+.SS "QPointF PartText::margin () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Les coordonnees du point situe en bas a gauche du texte\&. 
+.RE
+.PP
+
+.SS "void PartText::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Permet a l'element texte de devenir editable lorsqu'on double-clique dessus 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP Le QGraphicsSceneMouseEvent qui decrit le double-clic 
+.RE
+.PP
+
+.SS "void PartText::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void PartText::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void PartText::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "QString PartText::name () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name of the primitive 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartText::plainTextChanged (const QString & text)\fC [signal]\fP"
+
+.SS "QVariant PartText::property (const char * name) const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Get the current value of a specific primitive property 
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "qreal PartText::realSize () const\fC [inline]\fP"
+
+.SS "QRectF PartText::sceneGeometricRect () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the minimum, margin-less rectangle this part can fit into, in scene coordinates\&. It is different from \fBboundingRect()\fP because it is not supposed to imply any margin, and it is different from shape because it is a regular rectangle, not a complex shape\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartText::setDefaultTextColor (const QColor & color)"
+
+.SS "void PartText::setEditable (bool editable)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditable\fP Whether this text item should be interactively editable\&. 
+.RE
+.PP
+
+.SS "void PartText::setFont (const QFont & font)"
+
+.SS "void PartText::setPlainText (const QString & text)"
+
+.SS "void PartText::setProperty (const char * name, const QVariant & value)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Set a specific property of the primitive 
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartText::setRealSize (qreal rs)\fC [inline]\fP"
+
+.SS "void PartText::setRotation (qreal angle)\fC [inline]\fP"
+
+.SS "void PartText::startEdition ()\fC [slot]\fP"
+Start text edition by storing the former value of the text\&. 
+.SS "void PartText::startUserTransformation (const QRectF & rect)\fC [override]\fP, \fC [virtual]\fP"
+Start the user-induced transformation, provided this primitive is contained within the \fIrect\fP bounding rectangle\&. 
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "const QDomElement PartText::toXml (QDomDocument & xml_document) const\fC [override]\fP, \fC [virtual]\fP"
+Exporte le texte statique en XML 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP Document XML a utiliser pour creer l'element XML 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+un element XML decrivant le texte statique 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "int PartText::type () const\fC [inline]\fP, \fC [override]\fP"
+Enable the use of qgraphicsitem_cast to safely cast a QGraphicsItem into a \fBPartText\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the QGraphicsItem type 
+.RE
+.PP
+
+.SS "QString PartText::xmlName () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name that will be used as XML tag when exporting the primitive 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QGraphicsItem* PartText::decorator_\fC [private]\fP"
+
+.SS "QPointF PartText::m_origine_pos\fC [private]\fP"
+
+.SS "QString PartText::previous_text\fC [private]\fP"
+
+.SS "qreal PartText::real_font_size_\fC [private]\fP"
+
+.SS "qreal PartText::saved_font_size_\fC [private]\fP"
+
+.SS "QPointF PartText::saved_point_\fC [private]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "QColor PartText::color\fC [read]\fP, \fC [write]\fP"
+
+.SS "QFont PartText::font\fC [read]\fP, \fC [write]\fP"
+
+.SS "qreal PartText::real_size\fC [read]\fP, \fC [write]\fP"
+
+.SS "QString PartText::text\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

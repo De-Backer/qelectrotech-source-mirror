@@ -1,0 +1,124 @@
+.TH "CompositeTextEditDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CompositeTextEditDialog \- The \fBCompositeTextEditDialog\fP class \fBCompositeTextEditDialog\fP display a dialog use to write the complex text of a dynamic element text item\&. This dialog provide a QComboBox to quickly add an information of the element in the composite text\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <compositetexteditdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCompositeTextEditDialog\fP (\fBDynamicElementTextItem\fP *text, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fBCompositeTextEditDialog\fP (QString text, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~CompositeTextEditDialog\fP () override"
+.br
+.ti -1c
+.RI "QString \fBplainText\fP () const"
+.br
+.RI "\fBCompositeTextEditDialog::plainText\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfocusInEvent\fP (QFocusEvent *event) override"
+.br
+.RI "\fBCompositeTextEditDialog::focusInEvent\fP Reimplemented from QWidget::focusInEvent\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_info_cb_activated\fP (const QString &arg1)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpComboBox\fP ()"
+.br
+.RI "\fBCompositeTextEditDialog::setUpComboBox\fP Add the available element information in the combo box\&. "
+.ti -1c
+.RI "QString \fBinfoToVar\fP (const QString &info) const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::CompositeTextEditDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "QString \fBm_default_text\fP"
+.br
+.ti -1c
+.RI "\fBDynamicElementTextItem\fP * \fBm_text\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBCompositeTextEditDialog\fP class \fBCompositeTextEditDialog\fP display a dialog use to write the complex text of a dynamic element text item\&. This dialog provide a QComboBox to quickly add an information of the element in the composite text\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CompositeTextEditDialog::CompositeTextEditDialog (\fBDynamicElementTextItem\fP * text, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "CompositeTextEditDialog::CompositeTextEditDialog (QString text, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "CompositeTextEditDialog::~CompositeTextEditDialog ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void CompositeTextEditDialog::focusInEvent (QFocusEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBCompositeTextEditDialog::focusInEvent\fP Reimplemented from QWidget::focusInEvent\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "QString CompositeTextEditDialog::infoToVar (const QString & info) const\fC [private]\fP"
+
+.SS "void CompositeTextEditDialog::on_m_info_cb_activated (const QString & arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "QString CompositeTextEditDialog::plainText () const"
+
+.PP
+\fBCompositeTextEditDialog::plainText\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The edited text 
+.RE
+.PP
+
+.SS "void CompositeTextEditDialog::setUpComboBox ()\fC [private]\fP"
+
+.PP
+\fBCompositeTextEditDialog::setUpComboBox\fP Add the available element information in the combo box\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QString CompositeTextEditDialog::m_default_text\fC [private]\fP"
+
+.SS "\fBDynamicElementTextItem\fP* CompositeTextEditDialog::m_text = nullptr\fC [private]\fP"
+
+.SS "Ui::CompositeTextEditDialog* CompositeTextEditDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

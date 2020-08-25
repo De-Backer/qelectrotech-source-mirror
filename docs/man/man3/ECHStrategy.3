@@ -1,0 +1,61 @@
+.TH "ECHStrategy" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ECHStrategy \- The \fBECHStrategy\fP class Abstract class for manage copy of directory or element from a collection to another\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementcollectionhandler\&.h>\fP
+.PP
+Inherited by \fBECHSFileToFile\fP, \fBECHSToXml\fP, and \fBECHSXmlToFile\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBECHStrategy\fP (\fBElementsLocation\fP &source, \fBElementsLocation\fP &destination)"
+.br
+.ti -1c
+.RI "virtual \fB~ECHStrategy\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBElementsLocation\fP \fBcopy\fP ()=0"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsLocation\fP \fBm_source\fP"
+.br
+.ti -1c
+.RI "\fBElementsLocation\fP \fBm_destination\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBECHStrategy\fP class Abstract class for manage copy of directory or element from a collection to another\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ECHStrategy::ECHStrategy (\fBElementsLocation\fP & source, \fBElementsLocation\fP & destination)"
+
+.SS "ECHStrategy::~ECHStrategy ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBElementsLocation\fP ECHStrategy::copy ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBECHSToXml\fP, \fBECHSXmlToFile\fP, and \fBECHSFileToFile\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElementsLocation\fP ECHStrategy::m_destination"
+
+.SS "\fBElementsLocation\fP ECHStrategy::m_source"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

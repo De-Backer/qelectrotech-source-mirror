@@ -1,0 +1,711 @@
+.TH "DiagramView" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramView
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramview\&.h>\fP
+.PP
+Inherits QGraphicsView\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBselectNothing\fP ()"
+.br
+.ti -1c
+.RI "void \fBselectAll\fP ()"
+.br
+.ti -1c
+.RI "void \fBselectInvert\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetVisualisationMode\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSelectionMode\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoom\fP (const qreal zoom_factor)"
+.br
+.RI "\fBDiagramView::zoom\fP Zomm the view\&. A zoom_factor > 1 zoom in\&. A zoom_factor < 1 zoom out\&. "
+.ti -1c
+.RI "void \fBzoomFit\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomContent\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomReset\fP ()"
+.br
+.ti -1c
+.RI "void \fBcut\fP ()"
+.br
+.ti -1c
+.RI "void \fBcopy\fP ()"
+.br
+.ti -1c
+.RI "void \fBpaste\fP (const QPointF &=QPointF(), QClipboard::Mode=QClipboard::Clipboard)"
+.br
+.RI "\fBDiagramView::paste\fP Import the element stored in the clipboard to the diagram\&. "
+.ti -1c
+.RI "void \fBpasteHere\fP ()"
+.br
+.ti -1c
+.RI "void \fBadjustSceneRect\fP ()"
+.br
+.RI "\fBDiagramView::adjustSceneRect\fP Calcul and set the area of the scene visualized by this view\&. "
+.ti -1c
+.RI "void \fBupdateWindowTitle\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditSelectedConductorColor\fP ()"
+.br
+.RI "\fBDiagramView::editSelectedConductorColor\fP Edit the color of the selected conductor; does nothing if multiple conductors are selected\&. "
+.ti -1c
+.RI "void \fBeditConductorColor\fP (\fBConductor\fP *)"
+.br
+.ti -1c
+.RI "void \fBresetConductors\fP ()"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBmodeChanged\fP ()"
+.br
+.RI "Signal emitted after the selection mode changed\&. "
+.ti -1c
+.RI "void \fBtitleChanged\fP (\fBDiagramView\fP *, const QString &)"
+.br
+.RI "Signal emitted after the diagram title changed\&. "
+.ti -1c
+.RI "void \fBfindElementRequired\fP (const \fBElementsLocation\fP &)"
+.br
+.RI "Signal emitted when users wish to locate an element from the diagram within elements collection\&. "
+.ti -1c
+.RI "void \fBeditElementRequired\fP (const \fBElementsLocation\fP &)"
+.br
+.RI "Signal emitted when users wish to edit an element from the diagram\&. "
+.ti -1c
+.RI "void \fBshowDiagram\fP (\fBDiagram\fP *)"
+.br
+.RI "Signal emmitted when diagram must be show\&. "
+.ti -1c
+.RI "void \fBfreeRubberBandChanged\fP (QPolygonF polygon)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramView\fP (\fBDiagram\fP *\fBdiagram\fP, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~DiagramView\fP () override"
+.br
+.ti -1c
+.RI "QString \fBtitle\fP () const"
+.br
+.ti -1c
+.RI "void \fBeditDiagramProperties\fP ()"
+.br
+.RI "\fBDiagramView::editDiagramProperties\fP Edit the properties of the viewed digram\&. "
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP ()"
+.br
+.ti -1c
+.RI "\fBQETDiagramEditor\fP * \fBdiagramEditor\fP () const"
+.br
+.ti -1c
+.RI "void \fBeditSelection\fP ()"
+.br
+.RI "\fBDiagramView::editSelection\fP Edit the selected item if he can be edited and if only one item is selected\&. "
+.ti -1c
+.RI "void \fBsetEventInterface\fP (\fBDVEventInterface\fP *event_interface)"
+.br
+.RI "\fBDiagramView::setEventInterface\fP Set an event interface to diagram view\&. If diagram view already have an event interface, he delete it before\&. \fBDiagram\fP view take ownership of event interface and delete it when event interface is finish\&. "
+.ti -1c
+.RI "QList< QAction * > \fBcontextMenuActions\fP () const"
+.br
+.RI "\fBDiagramView::contextMenuActions\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QMouseEvent *) override"
+.br
+.RI "\fBDiagramView::mouseDoubleClickEvent\fP\&. "
+.ti -1c
+.RI "void \fBcontextMenuEvent\fP (QContextMenuEvent *) override"
+.br
+.RI "\fBDiagramView::contextMenuEvent\fP\&. "
+.ti -1c
+.RI "void \fBwheelEvent\fP (QWheelEvent *) override"
+.br
+.RI "\fBDiagramView::wheelEvent\fP Manage wheel event of mouse\&. "
+.ti -1c
+.RI "void \fBfocusInEvent\fP (QFocusEvent *) override"
+.br
+.ti -1c
+.RI "void \fBkeyPressEvent\fP (QKeyEvent *) override"
+.br
+.RI "\fBDiagramView::keyPressEvent\fP Handles 'key press' events\&. Reimplemented here to switch to visualisation mode if needed\&. "
+.ti -1c
+.RI "void \fBkeyReleaseEvent\fP (QKeyEvent *) override"
+.br
+.ti -1c
+.RI "bool \fBevent\fP (QEvent *) override"
+.br
+.RI "\fBDiagramView::event\fP Manage the event on this diagram view\&. -At first activation (QEvent::WindowActivate or QEvent::Show) we zoomFit\&. -Convert event interpreted to mouse event to gesture event if needed\&. -send Shortcut to view (by default send to QMenu /QAction) Gere les evenements de la \fBDiagramView\fP\&. "
+.ti -1c
+.RI "void \fBpaintEvent\fP (QPaintEvent *\fBevent\fP) override"
+.br
+.RI "\fBDiagramView::paintEvent\fP Reimplemented from QGraphicsView\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QMouseEvent *) override"
+.br
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QMouseEvent *) override"
+.br
+.RI "\fBDiagramView::mouseMoveEvent\fP Manage the event move mouse\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QMouseEvent *) override"
+.br
+.RI "\fBDiagramView::mouseReleaseEvent\fP Manage event release click mouse\&. "
+.ti -1c
+.RI "void \fBdragEnterEvent\fP (QDragEnterEvent *) override"
+.br
+.ti -1c
+.RI "void \fBdragMoveEvent\fP (QDragMoveEvent *) override"
+.br
+.ti -1c
+.RI "void \fBdropEvent\fP (QDropEvent *) override"
+.br
+.ti -1c
+.RI "virtual bool \fBswitchToVisualisationModeIfNeeded\fP (QInputEvent *e)"
+.br
+.ti -1c
+.RI "virtual bool \fBswitchToSelectionModeIfNeeded\fP (QInputEvent *e)"
+.br
+.ti -1c
+.RI "virtual bool \fBisCtrlShifting\fP (QInputEvent *)"
+.br
+.ti -1c
+.RI "virtual bool \fBselectedItemHasFocus\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBadjustGridToZoom\fP ()"
+.br
+.ti -1c
+.RI "void \fBapplyReadOnly\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramView\fP (const \fBDiagramView\fP &)"
+.br
+.ti -1c
+.RI "void \fBhandleElementDrop\fP (QDropEvent *)"
+.br
+.RI "\fBDiagramView::handleElementDrop\fP Handle the drop of an element\&. "
+.ti -1c
+.RI "void \fBhandleTitleBlockDrop\fP (QDropEvent *)"
+.br
+.RI "\fBDiagramView::handleTitleBlockDrop\fP Handle the dropEvent that contain data of a titleblock\&. "
+.ti -1c
+.RI "void \fBhandleTextDrop\fP (QDropEvent *)"
+.br
+.ti -1c
+.RI "void \fBscrollOnMovement\fP (QKeyEvent *)"
+.br
+.ti -1c
+.RI "bool \fBgestureEvent\fP (QGestureEvent *\fBevent\fP)"
+.br
+.RI "\fBDiagramView::gestureEvent\fP Use the pinch of the trackpad for zoom\&. "
+.ti -1c
+.RI "QRectF \fBviewedSceneRect\fP () const"
+.br
+.ti -1c
+.RI "bool \fBmustIntegrateTitleBlockTemplate\fP (const \fBTitleBlockTemplateLocation\fP &) const"
+.br
+.ti -1c
+.RI "bool \fBgestures\fP () const"
+.br
+.RI "\fBDiagramView::gestures\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBDVEventInterface\fP * \fBm_event_interface\fP = nullptr"
+.br
+.ti -1c
+.RI "QAction * \fBm_paste_here\fP = nullptr"
+.br
+.ti -1c
+.RI "QAction * \fBm_multi_paste\fP = nullptr"
+.br
+.ti -1c
+.RI "QPoint \fBm_paste_here_pos\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_drag_last_pos\fP"
+.br
+.ti -1c
+.RI "bool \fBm_fresh_focus_in\fP"
+.br
+.ti -1c
+.RI "bool \fBm_first_activation\fP = true"
+.br
+.ti -1c
+.RI "QList< QAction * > \fBm_separators\fP"
+.br
+.ti -1c
+.RI "QPolygonF \fBm_free_rubberband\fP"
+.br
+.ti -1c
+.RI "bool \fBm_free_rubberbanding\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a widget to render an electric diagram in an editable, interactive way\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramView::DiagramView (\fBDiagram\fP * diagram, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a afficher ; si diagram vaut 0, un nouveau \fBDiagram\fP est utilise 
+.br
+\fIparent\fP Le QWidget parent de cette vue de schema 
+.RE
+.PP
+
+.SS "DiagramView::~DiagramView ()\fC [override]\fP"
+Destructeur 
+.SS "DiagramView::DiagramView (const \fBDiagramView\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramView::adjustGridToZoom ()\fC [private]\fP, \fC [slot]\fP"
+Enables or disables the drawing grid according to the amount of pixels display 
+.SS "void DiagramView::adjustSceneRect ()\fC [slot]\fP"
+
+.PP
+\fBDiagramView::adjustSceneRect\fP Calcul and set the area of the scene visualized by this view\&. 
+.SS "void DiagramView::applyReadOnly ()\fC [private]\fP, \fC [slot]\fP"
+Fait en sorte que le schema ne soit editable que s'il n'est pas en lecture seule 
+.SS "QList< QAction * > DiagramView::contextMenuActions () const"
+
+.PP
+\fBDiagramView::contextMenuActions\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a list of actions currently available for a context menu\&. 
+.RE
+.PP
+
+.SS "void DiagramView::contextMenuEvent (QContextMenuEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramView::contextMenuEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "void DiagramView::copy ()\fC [slot]\fP"
+Copie les elements selectionnes du schema dans le presse-papier 
+.SS "void DiagramView::cut ()\fC [slot]\fP"
+Copie les elements selectionnes du schema dans le presse-papier puis les supprime 
+.SS "\fBDiagram\fP* DiagramView::diagram ()\fC [inline]\fP"
+
+.SS "\fBQETDiagramEditor\fP * DiagramView::diagramEditor () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+l'editeur de schemas parent ou 0 
+.RE
+.PP
+
+.SS "void DiagramView::dragEnterEvent (QDragEnterEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Accepte ou refuse le drag'n drop en fonction du type de donnees entrant 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP le QDragEnterEvent correspondant au drag'n drop tente 
+.RE
+.PP
+
+.SS "void DiagramView::dragMoveEvent (QDragMoveEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Accepte ou refuse le drag'n drop en fonction du type de donnees entrant 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP le QDragMoveEvent correspondant au drag'n drop tente 
+.RE
+.PP
+
+.SS "void DiagramView::dropEvent (QDropEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Handle the drops accepted on diagram (elements and title block templates)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP the QDropEvent describing the current drag'n drop 
+.RE
+.PP
+
+.SS "void DiagramView::editConductorColor (\fBConductor\fP * edited_conductor)\fC [slot]\fP"
+Edit the color of the given conductor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIedited_conductor\fP \fBConductor\fP we want to change the color 
+.RE
+.PP
+
+.SS "void DiagramView::editDiagramProperties ()"
+
+.PP
+\fBDiagramView::editDiagramProperties\fP Edit the properties of the viewed digram\&. 
+.SS "void DiagramView::editElementRequired (const \fBElementsLocation\fP &)\fC [signal]\fP"
+
+.PP
+Signal emitted when users wish to edit an element from the diagram\&. 
+.SS "void DiagramView::editSelectedConductorColor ()\fC [slot]\fP"
+
+.PP
+\fBDiagramView::editSelectedConductorColor\fP Edit the color of the selected conductor; does nothing if multiple conductors are selected\&. 
+.SS "void DiagramView::editSelection ()"
+
+.PP
+\fBDiagramView::editSelection\fP Edit the selected item if he can be edited and if only one item is selected\&. 
+.SS "bool DiagramView::event (QEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramView::event\fP Manage the event on this diagram view\&. -At first activation (QEvent::WindowActivate or QEvent::Show) we zoomFit\&. -Convert event interpreted to mouse event to gesture event if needed\&. -send Shortcut to view (by default send to QMenu /QAction) Gere les evenements de la \fBDiagramView\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP : the event\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void DiagramView::findElementRequired (const \fBElementsLocation\fP &)\fC [signal]\fP"
+
+.PP
+Signal emitted when users wish to locate an element from the diagram within elements collection\&. 
+.SS "void DiagramView::focusInEvent (QFocusEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Handles 'Focus in' events\&. Reimplemented here to store the fact the focus was freshly acquired again using the mouse\&. This information is later used in \fBDiagramView::mousePressEvent()\fP\&. 
+.SS "void DiagramView::freeRubberBandChanged (QPolygonF polygon)\fC [signal]\fP"
+Signal emmtted when free rubberband changed\&. When free rubberband selection ends this signal will be emitted with null value\&. 
+.SS "bool DiagramView::gestureEvent (QGestureEvent * event)\fC [private]\fP"
+
+.PP
+\fBDiagramView::gestureEvent\fP Use the pinch of the trackpad for zoom\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool DiagramView::gestures () const\fC [private]\fP"
+
+.PP
+\fBDiagramView::gestures\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void DiagramView::handleElementDrop (QDropEvent * event)\fC [private]\fP"
+
+.PP
+\fBDiagramView::handleElementDrop\fP Handle the drop of an element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP the QDropEvent describing the current drag'n drop 
+.RE
+.PP
+
+.SS "void DiagramView::handleTextDrop (QDropEvent * e)\fC [private]\fP"
+
+.PP
+.nf
+  @brief DiagramView::handleTextDrop
+
+.fi
+.PP
+ handle the drop of text 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP the QDropEvent describing the current drag'n drop 
+.RE
+.PP
+
+.SS "void DiagramView::handleTitleBlockDrop (QDropEvent * e)\fC [private]\fP"
+
+.PP
+\fBDiagramView::handleTitleBlockDrop\fP Handle the dropEvent that contain data of a titleblock\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "bool DiagramView::isCtrlShifting (QInputEvent * e)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if the user is pressing Ctrl and Shift simultaneously\&. 
+.RE
+.PP
+
+.SS "void DiagramView::keyPressEvent (QKeyEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramView::keyPressEvent\fP Handles 'key press' events\&. Reimplemented here to switch to visualisation mode if needed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "void DiagramView::keyReleaseEvent (QKeyEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Handles 'key release' events\&. Reimplemented here to switch to selection mode if needed\&. 
+.SS "void DiagramView::modeChanged ()\fC [signal]\fP"
+
+.PP
+Signal emitted after the selection mode changed\&. 
+.SS "void DiagramView::mouseDoubleClickEvent (QMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramView::mouseDoubleClickEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "void DiagramView::mouseMoveEvent (QMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramView::mouseMoveEvent\fP Manage the event move mouse\&. 
+.SS "void DiagramView::mousePressEvent (QMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Manage the events press click : click to add an independent text field 
+.SS "void DiagramView::mouseReleaseEvent (QMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramView::mouseReleaseEvent\fP Manage event release click mouse\&. 
+.SS "bool DiagramView::mustIntegrateTitleBlockTemplate (const \fBTitleBlockTemplateLocation\fP & tbt_loc) const\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_loc\fP A title block template location 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the title block template needs to be integrated in the parent project before being applied to the current diagram, or false if it can be directly applied 
+.RE
+.PP
+
+.SS "void DiagramView::paintEvent (QPaintEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramView::paintEvent\fP Reimplemented from QGraphicsView\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DiagramView::paste (const QPointF & pos = \fCQPointF()\fP, QClipboard::Mode clipboard_mode = \fCQClipboard::Clipboard\fP)\fC [slot]\fP"
+
+.PP
+\fBDiagramView::paste\fP Import the element stored in the clipboard to the diagram\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : top left corner of the bounding rect of imported elements 
+.br
+\fIclipboard_mode\fP 
+.RE
+.PP
+
+.SS "void DiagramView::pasteHere ()\fC [slot]\fP"
+Colle le contenu du presse-papier sur le schema a la position de la souris 
+.SS "void DiagramView::resetConductors ()\fC [slot]\fP"
+Reinitialise le profil des conducteurs selectionnes 
+.SS "void DiagramView::scrollOnMovement (QKeyEvent * e)\fC [private]\fP"
+Handles element movement when editor is zoomed in and scrolls vertical and horizontal bar\&. If element is moved to the right side of the editor or below the editor SceneRect is expanded 
+.SS "void DiagramView::selectAll ()\fC [slot]\fP"
+Selectionne tous les objets du schema 
+.SS "bool DiagramView::selectedItemHasFocus ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if there is a selected item and that item has the focus\&. 
+.RE
+.PP
+
+.SS "void DiagramView::selectInvert ()\fC [slot]\fP"
+Inverse l'etat de selection de tous les objets du schema 
+.SS "void DiagramView::selectNothing ()\fC [slot]\fP"
+Deslectionne tous les objets selectionnes 
+.SS "void DiagramView::setEventInterface (\fBDVEventInterface\fP * event_interface)"
+
+.PP
+\fBDiagramView::setEventInterface\fP Set an event interface to diagram view\&. If diagram view already have an event interface, he delete it before\&. \fBDiagram\fP view take ownership of event interface and delete it when event interface is finish\&. 
+.SS "void DiagramView::setSelectionMode ()\fC [slot]\fP"
+Set the \fBDiagram\fP in Selection mode 
+.SS "void DiagramView::setVisualisationMode ()\fC [slot]\fP"
+Set the \fBDiagram\fP in visualisation mode 
+.SS "void DiagramView::showDiagram (\fBDiagram\fP *)\fC [signal]\fP"
+
+.PP
+Signal emmitted when diagram must be show\&. 
+.SS "bool DiagramView::switchToSelectionModeIfNeeded (QInputEvent * e)\fC [protected]\fP, \fC [virtual]\fP"
+Switch back to selection mode if the user is not pressing Ctrl and Shift\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the view was switched to selection mode, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool DiagramView::switchToVisualisationModeIfNeeded (QInputEvent * e)\fC [protected]\fP, \fC [virtual]\fP"
+Switch to visualisation mode if the user is pressing Ctrl and Shift\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the view was switched to visualisation mode, false otherwise\&. 
+.RE
+.PP
+
+.SS "QString DiagramView::title () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le titre de cette vue ; cela correspond au titre du schema visualise precede de la mention 'Schema'\&. Si le titre du schema est vide, la mention 'Schema sans titre' est utilisee 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBDiagram::title()\fP 
+.RE
+.PP
+
+.SS "void DiagramView::titleChanged (\fBDiagramView\fP *, const QString &)\fC [signal]\fP"
+
+.PP
+Signal emitted after the diagram title changed\&. 
+.SS "void DiagramView::updateWindowTitle ()\fC [slot]\fP"
+Met a jour le titre du widget 
+.SS "QRectF DiagramView::viewedSceneRect () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+le rectangle du schema (classe \fBDiagram\fP) visualise par ce \fBDiagramView\fP 
+.RE
+.PP
+
+.SS "void DiagramView::wheelEvent (QWheelEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDiagramView::wheelEvent\fP Manage wheel event of mouse\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP QWheelEvent 
+.RE
+.PP
+
+.SS "void DiagramView::zoom (const qreal zoom_factor)\fC [slot]\fP"
+
+.PP
+\fBDiagramView::zoom\fP Zomm the view\&. A zoom_factor > 1 zoom in\&. A zoom_factor < 1 zoom out\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIzoom_factor\fP 
+.RE
+.PP
+
+.SS "void DiagramView::zoomContent ()\fC [slot]\fP"
+Adjust zoom to fit all elements in the view, regardless of diagram borders\&. 
+.SS "void DiagramView::zoomFit ()\fC [slot]\fP"
+Agrandit ou rectrecit le schema de facon a ce que tous les elements du schema soient visibles a l'ecran\&. S'il n'y a aucun element sur le schema, le zoom est reinitialise 
+.SS "void DiagramView::zoomReset ()\fC [slot]\fP"
+Reinitialise le zoom 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagram\fP* DiagramView::m_diagram = nullptr\fC [private]\fP"
+
+.SS "QPointF DiagramView::m_drag_last_pos\fC [private]\fP"
+
+.SS "\fBDVEventInterface\fP* DiagramView::m_event_interface = nullptr\fC [private]\fP"
+
+.SS "bool DiagramView::m_first_activation = true\fC [private]\fP"
+
+.SS "QPolygonF DiagramView::m_free_rubberband\fC [private]\fP"
+
+.SS "bool DiagramView::m_free_rubberbanding = false\fC [private]\fP"
+
+.SS "bool DiagramView::m_fresh_focus_in\fC [private]\fP"
+
+.SS "QAction* DiagramView::m_multi_paste = nullptr\fC [private]\fP"
+
+.SS "QAction* DiagramView::m_paste_here = nullptr\fC [private]\fP"
+
+.SS "QPoint DiagramView::m_paste_here_pos\fC [private]\fP"
+
+.SS "QList<QAction *> DiagramView::m_separators\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

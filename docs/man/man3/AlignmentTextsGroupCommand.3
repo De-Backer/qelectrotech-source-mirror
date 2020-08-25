@@ -1,0 +1,122 @@
+.TH "AlignmentTextsGroupCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AlignmentTextsGroupCommand \- The \fBAlignmentTextsGroupCommand\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <addelementtextcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAlignmentTextsGroupCommand\fP (\fBElementTextItemGroup\fP *group, Qt::Alignment new_alignment, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBAlignmentTextsGroupCommand::AlignmentTextsGroupCommand\fP\&. "
+.ti -1c
+.RI "\fB~AlignmentTextsGroupCommand\fP () override"
+.br
+.RI "\fBAlignmentTextsGroupCommand::~AlignmentTextsGroupCommand\fP Destructor\&. "
+.ti -1c
+.RI "int \fBid\fP () const override"
+.br
+.ti -1c
+.RI "bool \fBmergeWith\fP (const QUndoCommand *other) override"
+.br
+.RI "\fBAlignmentTextsGroupCommand::mergeWith\fP Try to merge this command with other command\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBAlignmentTextsGroupCommand::undo\fP\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBAlignmentTextsGroupCommand::redo\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< \fBElementTextItemGroup\fP > \fBm_group\fP"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBm_previous_alignment\fP"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBm_new_alignment\fP"
+.br
+.ti -1c
+.RI "QHash< \fBDynamicElementTextItem\fP *, QPointF > \fBm_texts_pos\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBAlignmentTextsGroupCommand\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AlignmentTextsGroupCommand::AlignmentTextsGroupCommand (\fBElementTextItemGroup\fP * group, Qt::Alignment new_alignment, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBAlignmentTextsGroupCommand::AlignmentTextsGroupCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP : Group to change the alignment 
+.br
+\fInew_alignment\fP : the new alignment of the group 
+.br
+\fIparent\fP : the parent QUndoCommand of this undo 
+.RE
+.PP
+
+.SS "AlignmentTextsGroupCommand::~AlignmentTextsGroupCommand ()\fC [override]\fP"
+
+.PP
+\fBAlignmentTextsGroupCommand::~AlignmentTextsGroupCommand\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "int AlignmentTextsGroupCommand::id () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "bool AlignmentTextsGroupCommand::mergeWith (const QUndoCommand * other)\fC [override]\fP"
+
+.PP
+\fBAlignmentTextsGroupCommand::mergeWith\fP Try to merge this command with other command\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if was merged, else false 
+.RE
+.PP
+
+.SS "void AlignmentTextsGroupCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBAlignmentTextsGroupCommand::redo\fP\&. 
+.SS "void AlignmentTextsGroupCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBAlignmentTextsGroupCommand::undo\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QPointer<\fBElementTextItemGroup\fP> AlignmentTextsGroupCommand::m_group\fC [private]\fP"
+
+.SS "Qt::Alignment AlignmentTextsGroupCommand::m_new_alignment\fC [private]\fP"
+
+.SS "Qt::Alignment AlignmentTextsGroupCommand::m_previous_alignment\fC [private]\fP"
+
+.SS "QHash<\fBDynamicElementTextItem\fP *, QPointF> AlignmentTextsGroupCommand::m_texts_pos\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

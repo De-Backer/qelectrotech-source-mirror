@@ -1,0 +1,251 @@
+.TH "NumerotationContext" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NumerotationContext
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <numerotationcontext\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNumerotationContext\fP ()"
+.br
+.ti -1c
+.RI "\fBNumerotationContext\fP (QDomElement &)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "\fBNumerotationContext::clear\fP, clear the content\&. "
+.ti -1c
+.RI "bool \fBaddValue\fP (const QString &, const QVariant &=QVariant(1), const int=1, const int=0)"
+.br
+.RI "\fBNumerotationContext::addValue\fP add a new value on the contexte\&. "
+.ti -1c
+.RI "QString \fBoperator[]\fP (const int &) const"
+.br
+.RI "\fBNumerotationContext::operator []\fP\&. "
+.ti -1c
+.RI "void \fBoperator<<\fP (const \fBNumerotationContext\fP &)"
+.br
+.RI "\fBNumerotationContext::operator <<\fP , append other\&. "
+.ti -1c
+.RI "int \fBsize\fP () const"
+.br
+.RI "\fBNumerotationContext::size\fP\&. "
+.ti -1c
+.RI "bool \fBisEmpty\fP () const"
+.br
+.RI "\fBNumerotationContext::isEmpty\fP\&. "
+.ti -1c
+.RI "QStringList \fBitemAt\fP (const int) const"
+.br
+.RI "\fBNumerotationContext::itemAt\fP\&. "
+.ti -1c
+.RI "QString \fBvalidRegExpNum\fP () const"
+.br
+.RI "validRegExpNum "
+.ti -1c
+.RI "QString \fBvalidRegExpNumber\fP () const"
+.br
+.RI "\fBNumerotationContext::validRegExpNumber\fP\&. "
+.ti -1c
+.RI "bool \fBkeyIsAcceptable\fP (const QString &) const"
+.br
+.RI "\fBNumerotationContext::keyIsAcceptable\fP\&. "
+.ti -1c
+.RI "bool \fBkeyIsNumber\fP (const QString &) const"
+.br
+.RI "\fBNumerotationContext::keyIsNumber\fP\&. "
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &, const QString &)"
+.br
+.RI "\fBNumerotationContext::toXml\fP Save the numerotation context in a QDomElement under the element name str\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (QDomElement &)"
+.br
+.RI "\fBNumerotationContext::fromXml\fP load numerotation context from e\&. "
+.ti -1c
+.RI "void \fBreplaceValue\fP (int, QString)"
+.br
+.RI "\fBNumerotationContext::replaceValue\fP This class replaces the current NC field value with content\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QStringList \fBcontent_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a numerotation context, i\&.e\&. the data (type, value, increase) of a numerotation at a given time\&. It is notably used by conductor to store the informations they need to do their autonumerotation\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NumerotationContext::NumerotationContext ()"
+Constructor 
+.SS "NumerotationContext::NumerotationContext (QDomElement & e)"
+Constructor from xml 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool NumerotationContext::addValue (const QString & type, const QVariant & value = \fCQVariant(1)\fP, const int increase = \fC1\fP, const int initialvalue = \fC0\fP)"
+
+.PP
+\fBNumerotationContext::addValue\fP add a new value on the contexte\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP the type of value 
+.br
+\fIvalue\fP the value itself 
+.br
+\fIincrease\fP the increase number of value 
+.br
+\fIinitialvalue\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if value is append 
+.RE
+.PP
+
+.SS "void NumerotationContext::clear ()"
+
+.PP
+\fBNumerotationContext::clear\fP, clear the content\&. 
+.SS "void NumerotationContext::fromXml (QDomElement & e)"
+
+.PP
+\fBNumerotationContext::fromXml\fP load numerotation context from e\&. 
+.SS "bool NumerotationContext::isEmpty () const"
+
+.PP
+\fBNumerotationContext::isEmpty\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if numerotation contet is empty 
+.RE
+.PP
+
+.SS "QStringList NumerotationContext::itemAt (const int i) const"
+
+.PP
+\fBNumerotationContext::itemAt\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the content at position i 1:type 2:value 3:increase 
+.RE
+.PP
+
+.SS "bool NumerotationContext::keyIsAcceptable (const QString & type) const"
+
+.PP
+\fBNumerotationContext::keyIsAcceptable\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if type is acceptable 
+.RE
+.PP
+
+.SS "bool NumerotationContext::keyIsNumber (const QString & type) const"
+
+.PP
+\fBNumerotationContext::keyIsNumber\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if type represent a number 
+.RE
+.PP
+
+.SS "void NumerotationContext::operator<< (const \fBNumerotationContext\fP & other)"
+
+.PP
+\fBNumerotationContext::operator <<\fP , append other\&. 
+.SS "QString NumerotationContext::operator[] (const int & i) const"
+
+.PP
+\fBNumerotationContext::operator []\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the string at position i 
+.RE
+.PP
+
+.SS "void NumerotationContext::replaceValue (int index, QString content)"
+
+.PP
+\fBNumerotationContext::replaceValue\fP This class replaces the current NC field value with content\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP of NC Item 
+.br
+\fIcontent\fP to replace current value 
+.RE
+.PP
+
+.SS "int NumerotationContext::size () const"
+
+.PP
+\fBNumerotationContext::size\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+size of context 
+.RE
+.PP
+
+.SS "QDomElement NumerotationContext::toXml (QDomDocument & d, const QString & str)"
+
+.PP
+\fBNumerotationContext::toXml\fP Save the numerotation context in a QDomElement under the element name str\&. 
+.SS "QString NumerotationContext::validRegExpNum () const"
+
+.PP
+validRegExpNum 
+.PP
+\fBReturns\fP
+.RS 4
+all type use to numerotation 
+.RE
+.PP
+
+.SS "QString NumerotationContext::validRegExpNumber () const"
+
+.PP
+\fBNumerotationContext::validRegExpNumber\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+all type represents a number 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QStringList NumerotationContext::content_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

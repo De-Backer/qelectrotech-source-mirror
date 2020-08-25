@@ -1,0 +1,232 @@
+.TH "ElementInfoPartWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementInfoPartWidget \- The \fBElementInfoPartWidget\fP class gebruikt bij schema editor als men edit dit \fBElement\fP aanklikt\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementinfopartwidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBtextEdited\fP (const QString &\fBtext\fP)"
+.br
+.ti -1c
+.RI "void \fBtextChanged\fP (const QString &\fBtext\fP)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementInfoPartWidget\fP (QString \fBkey\fP, const QString &translated_key, QWidget *parent=nullptr)"
+.br
+.RI "\fBElementInfoPartWidget::ElementInfoPartWidget\fP Constructor\&. "
+.ti -1c
+.RI "\fB~ElementInfoPartWidget\fP () override"
+.br
+.RI "\fBElementInfoPartWidget::~ElementInfoPartWidget\fP destructor\&. "
+.ti -1c
+.RI "QString \fBkey\fP () const"
+.br
+.ti -1c
+.RI "QString \fBtext\fP () const"
+.br
+.RI "\fBElementInfoPartWidget::text\fP\&. "
+.ti -1c
+.RI "void \fBsetText\fP (const QString &)"
+.br
+.RI "\fBElementInfoPartWidget::setText\fP Set text to line edit\&. "
+.ti -1c
+.RI "void \fBsetPlaceHolderText\fP (const QString &\fBtext\fP)"
+.br
+.RI "\fBElementInfoPartWidget::setPlaceHolderText\fP\&. "
+.ti -1c
+.RI "void \fBsetFocusTolineEdit\fP ()"
+.br
+.RI "\fBElementInfoPartWidget::setFocusTolineEdit\fP Set the focus to the line edit\&. "
+.ti -1c
+.RI "void \fBsetEnabled\fP (bool e)"
+.br
+.RI "\fBElementInfoPartWidget::setEnabled\fP enable the line edit\&. "
+.ti -1c
+.RI "void \fBsetDisabled\fP (bool d)"
+.br
+.RI "\fBElementInfoPartWidget::setDisabled\fP disable the line edit\&. "
+.ti -1c
+.RI "void \fBsetEraseTextVisible\fP (bool visible)"
+.br
+.RI "\fBElementInfoPartWidget::setEraseTextVisible\fP\&. "
+.ti -1c
+.RI "void \fBsetEraseTextChecked\fP (bool check)"
+.br
+.RI "\fBElementInfoPartWidget::setEraseTextChecked\fP\&. "
+.ti -1c
+.RI "Qt::CheckState \fBEraseTextCheckState\fP () const"
+.br
+.RI "\fBElementInfoPartWidget::EraseTextCheckState\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_erase_text_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ElementInfoPartWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "QString \fBkey_\fP"
+.br
+.ti -1c
+.RI "bool \fBm_show_erase\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementInfoPartWidget\fP class gebruikt bij schema editor als men edit dit \fBElement\fP aanklikt\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementInfoPartWidget::ElementInfoPartWidget (QString key, const QString & translated_key, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBElementInfoPartWidget::ElementInfoPartWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP the string key what represent this info part 
+.br
+\fItranslated_key\fP the string key translated 
+.br
+\fIparent\fP parent widget 
+.RE
+.PP
+
+.SS "ElementInfoPartWidget::~ElementInfoPartWidget ()\fC [override]\fP"
+
+.PP
+\fBElementInfoPartWidget::~ElementInfoPartWidget\fP destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "Qt::CheckState ElementInfoPartWidget::EraseTextCheckState () const"
+
+.PP
+\fBElementInfoPartWidget::EraseTextCheckState\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QString ElementInfoPartWidget::key () const\fC [inline]\fP"
+
+.SS "void ElementInfoPartWidget::on_m_erase_text_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ElementInfoPartWidget::setDisabled (bool d)"
+
+.PP
+\fBElementInfoPartWidget::setDisabled\fP disable the line edit\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP 
+.RE
+.PP
+
+.SS "void ElementInfoPartWidget::setEnabled (bool e)"
+
+.PP
+\fBElementInfoPartWidget::setEnabled\fP enable the line edit\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "void ElementInfoPartWidget::setEraseTextChecked (bool check)"
+
+.PP
+\fBElementInfoPartWidget::setEraseTextChecked\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcheck\fP 
+.RE
+.PP
+
+.SS "void ElementInfoPartWidget::setEraseTextVisible (bool visible)"
+
+.PP
+\fBElementInfoPartWidget::setEraseTextVisible\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvisible\fP 
+.RE
+.PP
+
+.SS "void ElementInfoPartWidget::setFocusTolineEdit ()"
+
+.PP
+\fBElementInfoPartWidget::setFocusTolineEdit\fP Set the focus to the line edit\&. 
+.SS "void ElementInfoPartWidget::setPlaceHolderText (const QString & text)"
+
+.PP
+\fBElementInfoPartWidget::setPlaceHolderText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP 
+.RE
+.PP
+
+.SS "void ElementInfoPartWidget::setText (const QString & txt)"
+
+.PP
+\fBElementInfoPartWidget::setText\fP Set text to line edit\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItxt\fP 
+.RE
+.PP
+
+.SS "QString ElementInfoPartWidget::text () const"
+
+.PP
+\fBElementInfoPartWidget::text\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the text in the line edit 
+.RE
+.PP
+
+.SS "void ElementInfoPartWidget::textChanged (const QString & text)\fC [signal]\fP"
+
+.SS "void ElementInfoPartWidget::textEdited (const QString & text)\fC [signal]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString ElementInfoPartWidget::key_\fC [private]\fP"
+
+.SS "bool ElementInfoPartWidget::m_show_erase = false\fC [private]\fP"
+
+.SS "Ui::ElementInfoPartWidget* ElementInfoPartWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

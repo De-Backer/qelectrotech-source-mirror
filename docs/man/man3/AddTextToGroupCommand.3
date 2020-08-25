@@ -1,0 +1,92 @@
+.TH "AddTextToGroupCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AddTextToGroupCommand \- The \fBAddTextToGroupCommand\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <addelementtextcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAddTextToGroupCommand\fP (\fBDynamicElementTextItem\fP *text, \fBElementTextItemGroup\fP *group, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBAddTextToGroupCommand::AddTextToGroupCommand\fP\&. "
+.ti -1c
+.RI "\fB~AddTextToGroupCommand\fP () override"
+.br
+.RI "\fBAddTextToGroupCommand::~AddTextToGroupCommand\fP Destructor\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBAddTextToGroupCommand::undo\fP\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBAddTextToGroupCommand::redo\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< \fBDynamicElementTextItem\fP > \fBm_text\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBElementTextItemGroup\fP > \fBm_group\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBElement\fP > \fBm_element\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBAddTextToGroupCommand\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AddTextToGroupCommand::AddTextToGroupCommand (\fBDynamicElementTextItem\fP * text, \fBElementTextItemGroup\fP * group, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBAddTextToGroupCommand::AddTextToGroupCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP 
+.br
+\fIgroup\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "AddTextToGroupCommand::~AddTextToGroupCommand ()\fC [override]\fP"
+
+.PP
+\fBAddTextToGroupCommand::~AddTextToGroupCommand\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void AddTextToGroupCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBAddTextToGroupCommand::redo\fP\&. 
+.SS "void AddTextToGroupCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBAddTextToGroupCommand::undo\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QPointer<\fBElement\fP> AddTextToGroupCommand::m_element\fC [private]\fP"
+
+.SS "QPointer<\fBElementTextItemGroup\fP> AddTextToGroupCommand::m_group\fC [private]\fP"
+
+.SS "QPointer<\fBDynamicElementTextItem\fP> AddTextToGroupCommand::m_text\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

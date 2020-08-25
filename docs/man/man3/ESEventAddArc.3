@@ -1,0 +1,174 @@
+.TH "ESEventAddArc" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESEventAddArc \- The \fBESEventAddArc\fP class This ESEvent manage creation of arc in an \fBElementScene\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eseventaddarc\&.h>\fP
+.PP
+Inherits \fBESEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESEventAddArc\fP (\fBElementScene\fP *scene)"
+.br
+.RI "\fBESEventAddArc::ESEventAddArc\fP\&. "
+.ti -1c
+.RI "\fB~ESEventAddArc\fP () override"
+.br
+.RI "\fBESEventAddArc::~ESEventAddArc\fP\&. "
+.ti -1c
+.RI "bool \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddPolygon::mousePressEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddArc::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddArc::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "bool \fBkeyPressEvent\fP (QKeyEvent *event) override"
+.br
+.RI "\fBESEventAddArc::keyPressEvent\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateArc\fP ()"
+.br
+.RI "\fBESEventAddArc::updateArc\fP Redraw the arc with curent value\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPartArc\fP * \fBm_arc\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_origin\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_mouse_pos\fP"
+.br
+.ti -1c
+.RI "bool \fBm_inverted\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBESEventAddArc\fP class This ESEvent manage creation of arc in an \fBElementScene\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESEventAddArc::ESEventAddArc (\fBElementScene\fP * scene)"
+
+.PP
+\fBESEventAddArc::ESEventAddArc\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP 
+.RE
+.PP
+
+.SS "ESEventAddArc::~ESEventAddArc ()\fC [override]\fP"
+
+.PP
+\fBESEventAddArc::~ESEventAddArc\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ESEventAddArc::keyPressEvent (QKeyEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddArc::keyPressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddArc::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddArc::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddArc::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddPolygon::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddArc::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddArc::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "void ESEventAddArc::updateArc ()\fC [private]\fP"
+
+.PP
+\fBESEventAddArc::updateArc\fP Redraw the arc with curent value\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPartArc\fP* ESEventAddArc::m_arc\fC [private]\fP"
+
+.SS "bool ESEventAddArc::m_inverted\fC [private]\fP"
+
+.SS "QPointF ESEventAddArc::m_mouse_pos\fC [private]\fP"
+
+.SS "QPointF ESEventAddArc::m_origin\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

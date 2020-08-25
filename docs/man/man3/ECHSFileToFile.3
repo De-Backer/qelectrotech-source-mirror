@@ -1,0 +1,55 @@
+.TH "ECHSFileToFile" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ECHSFileToFile \- The \fBECHSFileToFile\fP class Manage the copy of directory or element from a file system collection to another file system collection\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementcollectionhandler\&.h>\fP
+.PP
+Inherits \fBECHStrategy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBECHSFileToFile\fP (\fBElementsLocation\fP &source, \fBElementsLocation\fP &destination)"
+.br
+.ti -1c
+.RI "\fBElementsLocation\fP \fBcopy\fP () override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsLocation\fP \fBcopyDirectory\fP (\fBElementsLocation\fP &source, \fBElementsLocation\fP &destination, const QString &rename=QString())"
+.br
+.ti -1c
+.RI "\fBElementsLocation\fP \fBcopyElement\fP (\fBElementsLocation\fP &source, \fBElementsLocation\fP &destination, const QString &rename=QString())"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBECHSFileToFile\fP class Manage the copy of directory or element from a file system collection to another file system collection\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ECHSFileToFile::ECHSFileToFile (\fBElementsLocation\fP & source, \fBElementsLocation\fP & destination)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBElementsLocation\fP ECHSFileToFile::copy ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBECHStrategy\fP\&.
+.SS "\fBElementsLocation\fP ECHSFileToFile::copyDirectory (\fBElementsLocation\fP & source, \fBElementsLocation\fP & destination, const QString & rename = \fCQString()\fP)\fC [private]\fP"
+
+.SS "\fBElementsLocation\fP ECHSFileToFile::copyElement (\fBElementsLocation\fP & source, \fBElementsLocation\fP & destination, const QString & rename = \fCQString()\fP)\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

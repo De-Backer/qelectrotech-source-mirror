@@ -1,0 +1,218 @@
+.TH "RecentFiles" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RecentFiles
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <recentfiles\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBsave\fP ()"
+.br
+.ti -1c
+.RI "void \fBfileWasOpened\fP (const QString &)"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBfileOpeningRequested\fP (const QString &)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRecentFiles\fP (const QString &, int=10, QObject *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~RecentFiles\fP () override"
+.br
+.ti -1c
+.RI "int \fBsize\fP () const"
+.br
+.ti -1c
+.RI "QMenu * \fBmenu\fP () const"
+.br
+.ti -1c
+.RI "QIcon \fBiconForFiles\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetIconForFiles\fP (const QIcon &)"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBhandleMenuRequest\fP (const QString &)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRecentFiles\fP (const \fBRecentFiles\fP &)"
+.br
+.ti -1c
+.RI "void \fBextractFilesFromSettings\fP ()"
+.br
+.RI "\fBRecentFiles::extractFilesFromSettings\fP Read the list of recent file from settings\&. "
+.ti -1c
+.RI "void \fBinsertFile\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBsaveFilesToSettings\fP ()"
+.br
+.RI "\fBRecentFiles::saveFilesToSettings\fP Write the list of recent files to settings\&. "
+.ti -1c
+.RI "void \fBbuildMenu\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBidentifier_\fP"
+.br
+.ti -1c
+.RI "int \fBsize_\fP"
+.br
+.ti -1c
+.RI "QList< QString > \fBlist_\fP"
+.br
+.ti -1c
+.RI "QMenu * \fBmenu_\fP"
+.br
+.ti -1c
+.RI "QSignalMapper * \fBmapper_\fP"
+.br
+.ti -1c
+.RI "QIcon \fBfiles_icon_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a way to manage recently opened files\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RecentFiles::RecentFiles (const QString & identifier, int size = \fC10\fP, QObject * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIidentifier\fP prefixe a utiliser pour recuperer les fichiers recents dans la configuration de l'application 
+.br
+\fIsize\fP Nombre de fichiers recents a retenir 
+.br
+\fIparent\fP QObject parent 
+.RE
+.PP
+
+.SS "RecentFiles::~RecentFiles ()\fC [override]\fP"
+Destructeur 
+.PP
+\fBTodo\fP
+.RS 4
+determiner s'il faut detruire ou non le menu 
+.RE
+.PP
+
+.SS "RecentFiles::RecentFiles (const \fBRecentFiles\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void RecentFiles::buildMenu ()\fC [private]\fP"
+Construit le menu 
+.SS "void RecentFiles::clear ()\fC [slot]\fP"
+Oublie les fichiers recents 
+.SS "void RecentFiles::extractFilesFromSettings ()\fC [private]\fP"
+
+.PP
+\fBRecentFiles::extractFilesFromSettings\fP Read the list of recent file from settings\&. 
+.SS "void RecentFiles::fileOpeningRequested (const QString &)\fC [signal]\fP"
+
+.SS "void RecentFiles::fileWasOpened (const QString & filepath)\fC [slot]\fP"
+Gere le fait qu'un fichier ait ete ouvert 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP Chemin du fichier ouvert 
+.RE
+.PP
+
+.SS "void RecentFiles::handleMenuRequest (const QString & filepath)\fC [private]\fP, \fC [slot]\fP"
+Gere les actions sur le menu 
+.SS "QIcon RecentFiles::iconForFiles () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+l'icone affichee a cote de chaque fichier, ou une QIcon nulle si aucune icone n'est utilisee\&. 
+.RE
+.PP
+
+.SS "void RecentFiles::insertFile (const QString & filepath)\fC [private]\fP"
+Insere un fichier dans la liste des fichiers recents 
+.SS "QMenu * RecentFiles::menu () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+un menu listant les derniers fichiers ouverts 
+.RE
+.PP
+
+.SS "void RecentFiles::save ()\fC [slot]\fP"
+Sauvegarde les fichiers recents dans la configuration 
+.SS "void RecentFiles::saveFilesToSettings ()\fC [private]\fP"
+
+.PP
+\fBRecentFiles::saveFilesToSettings\fP Write the list of recent files to settings\&. 
+.SS "void RecentFiles::setIconForFiles (const QIcon & icon)"
+Definit l'icone a afficher a cote de chaque fichier\&. Si une QIcon nulle est fournie, aucune icone n'est utilisee\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIicon\fP Icone a afficher a cote de chaque fichier 
+.RE
+.PP
+
+.SS "int RecentFiles::size () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le nombre de fichiers a retenir 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QIcon RecentFiles::files_icon_\fC [private]\fP"
+
+.SS "QString RecentFiles::identifier_\fC [private]\fP"
+
+.SS "QList<QString> RecentFiles::list_\fC [private]\fP"
+
+.SS "QSignalMapper* RecentFiles::mapper_\fC [private]\fP"
+
+.SS "QMenu* RecentFiles::menu_\fC [private]\fP"
+
+.SS "int RecentFiles::size_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

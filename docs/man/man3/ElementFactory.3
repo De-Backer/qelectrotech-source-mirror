@@ -1,0 +1,99 @@
+.TH "ElementFactory" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementFactory \- The \fBElementFactory\fP class this class is a pattern factory and also a singleton factory\&. this class create new instance of herited class element like simple element or report element\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementfactory\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElement\fP * \fBcreateElement\fP (const \fBElementsLocation\fP &, QGraphicsItem *=nullptr, int *=nullptr)"
+.br
+.RI "\fBElementFactory::createElement\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBElementFactory\fP * \fBInstance\fP ()"
+.br
+.ti -1c
+.RI "static void \fBdropInstance\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementFactory\fP ()"
+.br
+.ti -1c
+.RI "\fBElementFactory\fP (const \fBElementFactory\fP &)"
+.br
+.ti -1c
+.RI "\fBElementFactory\fP \fBoperator=\fP (const \fBElementFactory\fP &)"
+.br
+.ti -1c
+.RI "\fB~ElementFactory\fP ()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBElementFactory\fP * \fBfactory_\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementFactory\fP class this class is a pattern factory and also a singleton factory\&. this class create new instance of herited class element like simple element or report element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementFactory::ElementFactory ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "ElementFactory::ElementFactory (const \fBElementFactory\fP &)\fC [private]\fP"
+
+.SS "ElementFactory::~ElementFactory ()\fC [inline]\fP, \fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBElement\fP * ElementFactory::createElement (const \fBElementsLocation\fP & location, QGraphicsItem * qgi = \fCnullptr\fP, int * state = \fCnullptr\fP)"
+
+.PP
+\fBElementFactory::createElement\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP create element at this location 
+.br
+\fIqgi\fP parent item for this elemnt 
+.br
+\fIstate\fP state of the creation 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the element or 0 
+.RE
+.PP
+
+.SS "static void ElementFactory::dropInstance ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static \fBElementFactory\fP* ElementFactory::Instance ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "\fBElementFactory\fP ElementFactory::operator= (const \fBElementFactory\fP &)\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElementFactory\fP * ElementFactory::factory_ = nullptr\fC [static]\fP, \fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

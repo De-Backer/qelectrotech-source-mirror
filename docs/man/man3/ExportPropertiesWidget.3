@@ -1,0 +1,231 @@
+.TH "ExportPropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExportPropertiesWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <exportpropertieswidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBslot_chooseADirectory\fP ()"
+.br
+.RI "\fBExportPropertiesWidget::slot_chooseADirectory\fP Slot asking the user to choose a folder / Slot demandant a l'utilisateur de choisir un dossier\&. "
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBformatChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBexportedAreaChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBoptionChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExportPropertiesWidget\fP (QWidget *=nullptr)"
+.br
+.RI "\fBExportPropertiesWidget::ExportPropertiesWidget\fP Constructeur\&. "
+.ti -1c
+.RI "\fBExportPropertiesWidget\fP (const \fBExportProperties\fP &, QWidget *=nullptr)"
+.br
+.RI "\fBExportPropertiesWidget::ExportPropertiesWidget\fP Constructeur\&. "
+.ti -1c
+.RI "\fB~ExportPropertiesWidget\fP () override"
+.br
+.RI "\fBExportPropertiesWidget::~ExportPropertiesWidget\fP Destructeur\&. "
+.ti -1c
+.RI "void \fBsetExportProperties\fP (const \fBExportProperties\fP &)"
+.br
+.RI "\fBExportPropertiesWidget::setExportProperties\fP\&. "
+.ti -1c
+.RI "\fBExportProperties\fP \fBexportProperties\fP () const"
+.br
+.RI "\fBExportPropertiesWidget::exportProperties\fP\&. "
+.ti -1c
+.RI "void \fBsetPrintingMode\fP (bool)"
+.br
+.RI "\fBExportPropertiesWidget::setPrintingMode\fP Puts the widget in Print or Export mode\&. Print mode does not display as many options as Export mode\&. / Passe le widget en mode Impression ou en mode Export\&. Le mode Impression n'affiche pas autant d'options que le mode Export\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExportPropertiesWidget\fP (const \fBExportPropertiesWidget\fP &)"
+.br
+.ti -1c
+.RI "void \fBbuild\fP ()"
+.br
+.RI "\fBExportPropertiesWidget::build\fP Generated the \fBExportPropertiesWidget\fP ui / Cette methode construit le widget en lui-meme\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QLabel * \fBdirpath_label\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBdirpath\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBbutton_browse\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBformat_label\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBformat\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBdraw_grid\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBdraw_border\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBdraw_titleblock\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBdraw_terminals\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBdraw_colored_conductors\fP"
+.br
+.ti -1c
+.RI "QRadioButton * \fBexport_border\fP"
+.br
+.ti -1c
+.RI "QRadioButton * \fBexport_elements\fP"
+.br
+.ti -1c
+.RI "QButtonGroup * \fBexported_content_choices\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This widget enables users to edit the various options available when exporting a project\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ExportPropertiesWidget::ExportPropertiesWidget (QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBExportPropertiesWidget::ExportPropertiesWidget\fP Constructeur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP QWidget parent 
+.RE
+.PP
+
+.SS "ExportPropertiesWidget::ExportPropertiesWidget (const \fBExportProperties\fP & export_properties, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBExportPropertiesWidget::ExportPropertiesWidget\fP Constructeur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIexport_properties\fP Parametres d'export a afficher / editer 
+.br
+\fIparent\fP QWidget parent 
+.RE
+.PP
+
+.SS "ExportPropertiesWidget::~ExportPropertiesWidget ()\fC [override]\fP"
+
+.PP
+\fBExportPropertiesWidget::~ExportPropertiesWidget\fP Destructeur\&. 
+.SS "ExportPropertiesWidget::ExportPropertiesWidget (const \fBExportPropertiesWidget\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ExportPropertiesWidget::build ()\fC [private]\fP"
+
+.PP
+\fBExportPropertiesWidget::build\fP Generated the \fBExportPropertiesWidget\fP ui / Cette methode construit le widget en lui-meme\&. 
+.SS "void ExportPropertiesWidget::exportedAreaChanged ()\fC [signal]\fP"
+
+.SS "\fBExportProperties\fP ExportPropertiesWidget::exportProperties () const"
+
+.PP
+\fBExportPropertiesWidget::exportProperties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+les parametres d'export definis via le widget 
+.RE
+.PP
+
+.SS "void ExportPropertiesWidget::formatChanged ()\fC [signal]\fP"
+
+.SS "void ExportPropertiesWidget::optionChanged ()\fC [signal]\fP"
+
+.SS "void ExportPropertiesWidget::setExportProperties (const \fBExportProperties\fP & export_properties)"
+
+.PP
+\fBExportPropertiesWidget::setExportProperties\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIexport_properties\fP les parametres d'export a afficher / editer via le widget 
+.RE
+.PP
+
+.SS "void ExportPropertiesWidget::setPrintingMode (bool mode)"
+
+.PP
+\fBExportPropertiesWidget::setPrintingMode\fP Puts the widget in Print or Export mode\&. Print mode does not display as many options as Export mode\&. / Passe le widget en mode Impression ou en mode Export\&. Le mode Impression n'affiche pas autant d'options que le mode Export\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImode\fP true to use the widget in print mode, false to use it in export mode / true pour utiliser le widget en mode impression, false pour l'utiliser en mode export 
+.RE
+.PP
+
+.SS "void ExportPropertiesWidget::slot_chooseADirectory ()\fC [slot]\fP"
+
+.PP
+\fBExportPropertiesWidget::slot_chooseADirectory\fP Slot asking the user to choose a folder / Slot demandant a l'utilisateur de choisir un dossier\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QPushButton* ExportPropertiesWidget::button_browse\fC [private]\fP"
+
+.SS "QLineEdit* ExportPropertiesWidget::dirpath\fC [private]\fP"
+
+.SS "QLabel* ExportPropertiesWidget::dirpath_label\fC [private]\fP"
+
+.SS "QCheckBox* ExportPropertiesWidget::draw_border\fC [private]\fP"
+
+.SS "QCheckBox* ExportPropertiesWidget::draw_colored_conductors\fC [private]\fP"
+
+.SS "QCheckBox* ExportPropertiesWidget::draw_grid\fC [private]\fP"
+
+.SS "QCheckBox* ExportPropertiesWidget::draw_terminals\fC [private]\fP"
+
+.SS "QCheckBox* ExportPropertiesWidget::draw_titleblock\fC [private]\fP"
+
+.SS "QRadioButton* ExportPropertiesWidget::export_border\fC [private]\fP"
+
+.SS "QRadioButton* ExportPropertiesWidget::export_elements\fC [private]\fP"
+
+.SS "QButtonGroup* ExportPropertiesWidget::exported_content_choices\fC [private]\fP"
+
+.SS "QComboBox* ExportPropertiesWidget::format\fC [private]\fP"
+
+.SS "QLabel* ExportPropertiesWidget::format_label\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

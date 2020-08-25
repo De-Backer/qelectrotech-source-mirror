@@ -1,0 +1,347 @@
+.TH "ElementQueryWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementQueryWidget \- The \fBElementQueryWidget\fP class A widget use to edit a sql query for get element information This widget only work to get information from ProjectDataBase\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementquerywidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementQueryWidget\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBElementQueryWidget::ElementQueryWidget\fP\&. "
+.ti -1c
+.RI "\fB~ElementQueryWidget\fP ()"
+.br
+.RI "\fBElementQueryWidget::~ElementQueryWidget\fP\&. "
+.ti -1c
+.RI "void \fBsetQuery\fP (const QString &query)"
+.br
+.RI "\fBElementQueryWidget::setQuery\fP\&. "
+.ti -1c
+.RI "QString \fBqueryStr\fP () const"
+.br
+.RI "\fBElementQueryWidget::queryStr\fP\&. "
+.ti -1c
+.RI "void \fBsetGroupBy\fP (QString text, bool set=true)"
+.br
+.RI "\fBElementQueryWidget::setGroupBy\fP Add the query instruction GROUP BY\&. "
+.ti -1c
+.RI "void \fBsetCount\fP (QString text, bool set=true)"
+.br
+.RI "\fBElementQueryWidget::setCount\fP Add the query instruction COUNT\&. Unlike setGroupBy, you have to write the entire sentance\&. ex : text = 'COUNT(*) AS designation_qty'\&. the query will contain what you write\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBmodelIdentifier\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_up_pb_clicked\fP ()"
+.br
+.RI "\fBElementQueryWidget::on_m_up_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_add_pb_clicked\fP ()"
+.br
+.RI "\fBElementQueryWidget::on_m_add_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_remove_pb_clicked\fP ()"
+.br
+.RI "\fBElementQueryWidget::on_m_remove_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_down_pb_clicked\fP ()"
+.br
+.RI "\fBElementQueryWidget::on_m_down_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_edit_sql_query_cb_clicked\fP ()"
+.br
+.RI "\fBElementQueryWidget::on_m_edit_sql_query_cb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_filter_le_textEdited\fP (const QString &arg1)"
+.br
+.RI "\fBElementQueryWidget::on_m_filter_le_textEdited\fP\&. "
+.ti -1c
+.RI "void \fBon_m_filter_type_cb_activated\fP (int index)"
+.br
+.RI "\fBElementQueryWidget::on_m_filter_type_cb_activated\fP\&. "
+.ti -1c
+.RI "void \fBon_m_load_pb_clicked\fP ()"
+.br
+.RI "\fBElementQueryWidget::on_m_load_pb_clicked\fP Load a query from nomenclature\&.json file\&. "
+.ti -1c
+.RI "void \fBon_m_save_current_conf_pb_clicked\fP ()"
+.br
+.RI "\fBElementQueryWidget::on_m_save_current_conf_pb_clicked\fP Save the actual query to nomenclature\&.json file\&. "
+.ti -1c
+.RI "void \fBon_m_save_name_le_textChanged\fP (const QString &arg1)"
+.br
+.ti -1c
+.RI "void \fBon_m_choosen_list_currentItemChanged\fP (QListWidgetItem *current, QListWidgetItem *previous)"
+.br
+.ti -1c
+.RI "void \fBon_m_var_list_itemDoubleClicked\fP (QListWidgetItem *item)"
+.br
+.ti -1c
+.RI "void \fBon_m_choosen_list_itemDoubleClicked\fP (QListWidgetItem *item)"
+.br
+.ti -1c
+.RI "void \fBupdateQueryLine\fP ()"
+.br
+.RI "\fBElementQueryWidget::updateQueryLine\fP\&. "
+.ti -1c
+.RI "QStringList \fBselectedKeys\fP () const"
+.br
+.RI "\fBElementQueryWidget::selectedKeys\fP\&. "
+.ti -1c
+.RI "void \fBsetUpItems\fP ()"
+.br
+.RI "\fBElementQueryWidget::setUpItems\fP\&. "
+.ti -1c
+.RI "QPair< int, QString > \fBFilterFor\fP (const QString &key) const"
+.br
+.RI "\fBElementQueryWidget::FilterFor\fP\&. "
+.ti -1c
+.RI "void \fBfillSavedQuery\fP ()"
+.br
+.RI "\fBElementQueryWidget::fillSavedQuery\fP Fill the combobox of saved queries\&. "
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.RI "\fBElementQueryWidget::reset\fP Clear this widget aka set to initial state\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ElementQueryWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "QHash< QString, QString > \fBm_export_info\fP"
+.br
+.ti -1c
+.RI "QButtonGroup \fBm_button_group\fP"
+.br
+.ti -1c
+.RI "QList< QListWidgetItem * > \fBm_items_list\fP"
+.br
+.ti -1c
+.RI "QString \fBm_custom_query\fP"
+.br
+.ti -1c
+.RI "QString \fBm_group_by\fP"
+.br
+.ti -1c
+.RI "QString \fBm_count\fP"
+.br
+.ti -1c
+.RI "QHash< QString, QPair< int, QString > > \fBm_filter\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementQueryWidget\fP class A widget use to edit a sql query for get element information This widget only work to get information from ProjectDataBase\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementQueryWidget::ElementQueryWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBElementQueryWidget::ElementQueryWidget\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SS "ElementQueryWidget::~ElementQueryWidget ()"
+
+.PP
+\fBElementQueryWidget::~ElementQueryWidget\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementQueryWidget::fillSavedQuery ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::fillSavedQuery\fP Fill the combobox of saved queries\&. 
+.SS "QPair< int, QString > ElementQueryWidget::FilterFor (const QString & key) const\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::FilterFor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the filter associated to key 
+.RE
+.PP
+
+.SS "static QString ElementQueryWidget::modelIdentifier ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "void ElementQueryWidget::on_m_add_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::on_m_add_pb_clicked\fP\&. 
+.SS "void ElementQueryWidget::on_m_choosen_list_currentItemChanged (QListWidgetItem * current, QListWidgetItem * previous)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ElementQueryWidget::on_m_choosen_list_itemDoubleClicked (QListWidgetItem * item)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ElementQueryWidget::on_m_down_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::on_m_down_pb_clicked\fP\&. 
+.SS "void ElementQueryWidget::on_m_edit_sql_query_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::on_m_edit_sql_query_cb_clicked\fP\&. 
+.SS "void ElementQueryWidget::on_m_filter_le_textEdited (const QString & arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::on_m_filter_le_textEdited\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg1\fP 
+.RE
+.PP
+
+.SS "void ElementQueryWidget::on_m_filter_type_cb_activated (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::on_m_filter_type_cb_activated\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+
+.SS "void ElementQueryWidget::on_m_load_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::on_m_load_pb_clicked\fP Load a query from nomenclature\&.json file\&. 
+.SS "void ElementQueryWidget::on_m_remove_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::on_m_remove_pb_clicked\fP\&. 
+.SS "void ElementQueryWidget::on_m_save_current_conf_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::on_m_save_current_conf_pb_clicked\fP Save the actual query to nomenclature\&.json file\&. 
+.SS "void ElementQueryWidget::on_m_save_name_le_textChanged (const QString & arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ElementQueryWidget::on_m_up_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::on_m_up_pb_clicked\fP\&. 
+.SS "void ElementQueryWidget::on_m_var_list_itemDoubleClicked (QListWidgetItem * item)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "QString ElementQueryWidget::queryStr () const"
+
+.PP
+\fBElementQueryWidget::queryStr\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current query 
+.RE
+.PP
+
+.SS "void ElementQueryWidget::reset ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::reset\fP Clear this widget aka set to initial state\&. 
+.SS "QStringList ElementQueryWidget::selectedKeys () const\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::selectedKeys\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the current keys of selected infos to be exported 
+.RE
+.PP
+
+.SS "void ElementQueryWidget::setCount (QString text, bool set = \fCtrue\fP)"
+
+.PP
+\fBElementQueryWidget::setCount\fP Add the query instruction COUNT\&. Unlike setGroupBy, you have to write the entire sentance\&. ex : text = 'COUNT(*) AS designation_qty'\&. the query will contain what you write\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP : the count instruction 
+.br
+\fIset\fP : true by default -> count will be used\&. false -> count will be not used\&. 
+.RE
+.PP
+
+.SS "void ElementQueryWidget::setGroupBy (QString text, bool set = \fCtrue\fP)"
+
+.PP
+\fBElementQueryWidget::setGroupBy\fP Add the query instruction GROUP BY\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP : the text of the GROUP BY instruction: ex : if text = designation, the query will contain 'GROUP BY designation' 
+.br
+\fIset\fP : true by default -> GROUP BY will be used\&. false -> GROUP BY will be not used 
+.RE
+.PP
+
+.SS "void ElementQueryWidget::setQuery (const QString & query)"
+
+.PP
+\fBElementQueryWidget::setQuery\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIquery\fP Set the current query to query\&. If it's possible, rebuild the state of the widget from the query 
+.RE
+.PP
+
+.SS "void ElementQueryWidget::setUpItems ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::setUpItems\fP\&. 
+.SS "void ElementQueryWidget::updateQueryLine ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementQueryWidget::updateQueryLine\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QButtonGroup ElementQueryWidget::m_button_group\fC [private]\fP"
+
+.SS "QString ElementQueryWidget::m_count\fC [private]\fP"
+
+.SS "QString ElementQueryWidget::m_custom_query\fC [private]\fP"
+
+.SS "QHash<QString, QString> ElementQueryWidget::m_export_info\fC [private]\fP"
+
+.SS "QHash<QString, QPair<int, QString> > ElementQueryWidget::m_filter\fC [private]\fP"
+
+.SS "QString ElementQueryWidget::m_group_by\fC [private]\fP"
+
+.SS "QList<QListWidgetItem *> ElementQueryWidget::m_items_list\fC [private]\fP"
+
+.SS "Ui::ElementQueryWidget* ElementQueryWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

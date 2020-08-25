@@ -1,0 +1,134 @@
+.TH "ConductorCreator" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConductorCreator \- The \fBConductorCreator\fP class This class create one or several or several conductors in a given context\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductorcreator\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorCreator\fP (\fBDiagram\fP *d, QList< \fBTerminal\fP * > terminals_list)"
+.br
+.RI "\fBConductorCreator::ConductorCreator\fP Create an electrical potential between all terminals of terminals_list\&. the terminals of the list must be in the same diagram\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBcreate\fP (\fBDiagram\fP *d, const QPolygonF &polygon)"
+.br
+.RI "\fBConductorCreator::create\fP Create an electrical potential between the terminals of the diagram d, contained in the polygon\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpPropertieToUse\fP ()"
+.br
+.RI "ConductorCreator::propertieToUse\&. "
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBexistingPotential\fP ()"
+.br
+.RI "\fBConductorCreator::existingPotential\fP Return the list of existing potential of the terminal list\&. "
+.ti -1c
+.RI "\fBTerminal\fP * \fBhubTerminal\fP ()"
+.br
+.RI "\fBConductorCreator::hubTerminal\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBTerminal\fP * > \fBm_terminals_list\fP"
+.br
+.ti -1c
+.RI "\fBConductorProperties\fP \fBm_properties\fP"
+.br
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP \fBm_sequential_number\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBConductorCreator\fP class This class create one or several or several conductors in a given context\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConductorCreator::ConductorCreator (\fBDiagram\fP * d, QList< \fBTerminal\fP * > terminals_list)"
+
+.PP
+\fBConductorCreator::ConductorCreator\fP Create an electrical potential between all terminals of terminals_list\&. the terminals of the list must be in the same diagram\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP \fBDiagram\fP 
+.br
+\fIterminals_list\fP QList<Terminal *> 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ConductorCreator::create (\fBDiagram\fP * d, const QPolygonF & polygon)\fC [static]\fP"
+
+.PP
+\fBConductorCreator::create\fP Create an electrical potential between the terminals of the diagram d, contained in the polygon\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP \fBDiagram\fP 
+.br
+\fIpolygon\fP : polygon in diagram coordinate 
+.RE
+.PP
+
+.SS "QList< \fBConductor\fP * > ConductorCreator::existingPotential ()\fC [private]\fP"
+
+.PP
+\fBConductorCreator::existingPotential\fP Return the list of existing potential of the terminal list\&. 
+.PP
+\fBReturns\fP
+.RS 4
+c_list QList<Conductor *> 
+.RE
+.PP
+
+.SS "\fBTerminal\fP * ConductorCreator::hubTerminal ()\fC [private]\fP"
+
+.PP
+\fBConductorCreator::hubTerminal\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+hub_terminal 
+.RE
+.PP
+
+.SS "void ConductorCreator::setUpPropertieToUse ()\fC [private]\fP"
+
+.PP
+ConductorCreator::propertieToUse\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the conductor properties to use for the new conductors\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBConductorProperties\fP ConductorCreator::m_properties\fC [private]\fP"
+
+.SS "\fBautonum::sequentialNumbers\fP ConductorCreator::m_sequential_number\fC [private]\fP"
+
+.SS "QList<\fBTerminal\fP *> ConductorCreator::m_terminals_list\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

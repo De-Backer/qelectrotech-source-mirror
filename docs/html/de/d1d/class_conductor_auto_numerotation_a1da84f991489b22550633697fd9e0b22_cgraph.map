@@ -1,0 +1,17 @@
+<map id="ConductorAutoNumerotation::newProperties" name="ConductorAutoNumerotation::newProperties">
+<area shape="rect" id="node1" title="ConductorAutoNumerotation::newProperties Create a new properties according to the current autonum rul..." alt="" coords="5,232,192,273"/>
+<area shape="rect" id="node2" href="$d6/dc5/class_q_e_t_project.html#aee782dd4898087e3e26e03466c889211" title="QETProject::addConductorAutoNum Add a new conductor numerotation context. If key already exist,..." alt="" coords="266,5,445,47"/>
+<area shape="rect" id="node3" href="$d6/dc5/class_q_e_t_project.html#a77506f0b161248e94dc3ddd68736e0d6" title="QETProject::conductorAutoNum." alt="" coords="251,71,460,98"/>
+<area shape="rect" id="node4" href="$d6/dc5/class_q_e_t_project.html#ae496c389282a8afba6b1fc4e125dff15" title="QETProject::conductorCurrentAutoNum." alt="" coords="257,123,454,164"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#a7d9dac1371b6cde3a1929981e7dcf9a7" title="Diagram::conductorsAutonumName." alt="" coords="240,189,471,215"/>
+<area shape="rect" id="node6" href="$d7/db7/class_numerotation_context.html#a597bebf0816382be8c7588da15ddd1eb" title="NumerotationContext::isEmpty." alt="" coords="552,341,699,383"/>
+<area shape="rect" id="node7" href="$dc/dcb/class_numerotation_context_commands.html#aad44e5c7dfc1989f5651e3e09b285b90" title="NumerotationContextCommands::next." alt="" coords="519,159,732,200"/>
+<area shape="rect" id="node11" href="$d1/ddb/namespaceautonum.html#ac5013eb6df6a472f5b2676d51b579da8" title="numerotationContextToFormula" alt="" coords="525,407,726,448"/>
+<area shape="rect" id="node12" href="$d3/d37/class_diagram.html#a8a2a4a08dce92d0eed86f94077e9cc84" title="Diagram::project." alt="" coords="296,442,415,469"/>
+<area shape="rect" id="node13" href="$d1/ddb/namespaceautonum.html#abb6951e25029c8e731ee96c5ce807bf0" title="setSequential Fill seqStruct" alt="" coords="276,290,435,317"/>
+<area shape="rect" id="node8" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="813,217,960,259"/>
+<area shape="rect" id="node9" href="$dc/dcb/class_numerotation_context_commands.html#a8d31e00e3c510c67a59f5de6964ef54a" title="NumerotationContextCommands::setNumStrategy apply the good strategy relative to str." alt="" coords="780,152,993,193"/>
+<area shape="rect" id="node10" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="813,283,960,324"/>
+<area shape="rect" id="node14" href="$d1/ddb/namespaceautonum.html#a4c12cf7b9ff9108dc629feb969d01690" title="setFolioSequentialToHash Insert all value of list in hash with key autoNumName" alt="" coords="532,276,719,317"/>
+<area shape="rect" id="node15" href="$d1/ddb/namespaceautonum.html#a9594e0b4bcd2ea2e20070c829ccbdb19" title="setSequentialToList Append all sequential of type type owned by context in list" alt="" coords="528,225,723,251"/>
+</map>

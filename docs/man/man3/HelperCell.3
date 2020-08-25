@@ -1,0 +1,255 @@
+.TH "HelperCell" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HelperCell
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <helpercell\&.h>\fP
+.PP
+Inherits QGraphicsObject, and QGraphicsLayoutItem\&.
+.PP
+Inherited by \fBSplittedHelperCell\fP\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBcontextMenuTriggered\fP (\fBHelperCell\fP *)"
+.br
+.ti -1c
+.RI "void \fBdoubleClicked\fP (\fBHelperCell\fP *)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHelperCell\fP (QGraphicsItem *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~HelperCell\fP () override"
+.br
+.ti -1c
+.RI "void \fBsetGeometry\fP (const QRectF &) override"
+.br
+.ti -1c
+.RI "QSizeF \fBsizeHint\fP (Qt::SizeHint, const QSizeF &=QSizeF()) const override"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *=nullptr) override"
+.br
+.ti -1c
+.RI "virtual void \fBsetType\fP (\fBQET::TitleBlockColumnLength\fP)"
+.br
+.ti -1c
+.RI "virtual void \fBsetActions\fP (const QList< QAction * > &)"
+.br
+.ti -1c
+.RI "virtual QList< QAction * > \fBactions\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetLabel\fP (const QString &text, bool=true)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QColor \fBbackground_color\fP"
+.br
+.RI "Background color when rendering this cell\&. "
+.ti -1c
+.RI "QColor \fBforeground_color\fP"
+.br
+.RI "Text color when rendering this cell\&. "
+.ti -1c
+.RI "QString \fBlabel\fP"
+.br
+.RI "Label displayed in this cell\&. "
+.ti -1c
+.RI "Qt::Orientation \fBorientation\fP"
+.br
+.RI "Orientation of this cell\&. "
+.ti -1c
+.RI "int \fBindex\fP"
+.br
+.RI "Index of this cell\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcontextMenuEvent\fP (QGraphicsSceneContextMenuEvent *) override"
+.br
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHelperCell\fP (const \fBHelperCell\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< QAction * > \fBactions_\fP"
+.br
+.RI "List of actions displayed by the context menu\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements a helper widget for cells that indicate the length of columns and rows\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "HelperCell::HelperCell (QGraphicsItem * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Parent QGraphicsItem 
+.RE
+.PP
+
+.SS "HelperCell::~HelperCell ()\fC [override]\fP"
+Destructor 
+.SS "HelperCell::HelperCell (const \fBHelperCell\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QList< QAction * > HelperCell::actions () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the list of actions displayed by the context menu of this helper cell\&. 
+.RE
+.PP
+
+.SS "QRectF HelperCell::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the bounding rect of this helper cell 
+.RE
+.PP
+
+.SS "void HelperCell::contextMenuEvent (QGraphicsSceneContextMenuEvent * event)\fC [override]\fP, \fC [protected]\fP"
+Handle context menu events\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Context menu event\&. 
+.RE
+.PP
+
+.SS "void HelperCell::contextMenuTriggered (\fBHelperCell\fP *)\fC [signal]\fP"
+
+.SS "void HelperCell::doubleClicked (\fBHelperCell\fP *)\fC [signal]\fP"
+
+.SS "void HelperCell::mouseDoubleClickEvent (QGraphicsSceneMouseEvent *)\fC [override]\fP, \fC [protected]\fP"
+Handle double click events\&. 
+.SS "void HelperCell::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = \fCnullptr\fP)\fC [override]\fP"
+Handles the helper cell visual rendering 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP QPainter to be used for the rendering 
+.br
+\fIoption\fP Rendering options 
+.br
+\fIwidget\fP QWidget being painted, if any 
+.RE
+.PP
+
+.SS "void HelperCell::setActions (const QList< QAction * > & actions)\fC [virtual]\fP"
+Set the list of actions displayed by the context menu of this helper cell\&. 
+.SS "void HelperCell::setGeometry (const QRectF & g)\fC [override]\fP"
+Ensure geometry changes are handled for both QGraphicsObject and QGraphicsLayoutItem\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP New geometry 
+.RE
+.PP
+
+.SS "void HelperCell::setLabel (const QString & text, bool set_as_tooltip = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP New label displayed by this helper cell 
+.br
+\fIset_as_tooltip\fP If true, the text is also used as tooltip\&. 
+.RE
+.PP
+
+.SS "void HelperCell::setType (\fBQET::TitleBlockColumnLength\fP type)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP new type of this helper cell -- 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBQET::TitleBlockColumnLength\fP 
+.RE
+.PP
+
+.SS "QSizeF HelperCell::sizeHint (Qt::SizeHint which, const QSizeF & constraint = \fCQSizeF()\fP) const\fC [override]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIwhich\fP Size hint to be modified 
+.br
+\fIconstraint\fP New value for the size hint 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the size hint for \fIwhich\fP using the width or height of \fIconstraint\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QAction *> HelperCell::actions_\fC [private]\fP"
+
+.PP
+List of actions displayed by the context menu\&. 
+.SS "QColor HelperCell::background_color"
+
+.PP
+Background color when rendering this cell\&. 
+.SS "QColor HelperCell::foreground_color"
+
+.PP
+Text color when rendering this cell\&. 
+.SS "int HelperCell::index"
+
+.PP
+Index of this cell\&. 
+.SS "QString HelperCell::label"
+
+.PP
+Label displayed in this cell\&. 
+.SS "Qt::Orientation HelperCell::orientation"
+
+.PP
+Orientation of this cell\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

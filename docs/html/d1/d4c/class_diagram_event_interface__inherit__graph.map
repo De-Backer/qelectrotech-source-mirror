@@ -1,0 +1,7 @@
+<map id="DiagramEventInterface" name="DiagramEventInterface">
+<area shape="rect" id="node1" title="The DiagramEventInterface class isRunning() return true if action is running (do something)...." alt="" coords="343,5,529,259"/>
+<area shape="rect" id="node2" href="$de/d1f/class_diagram_event_add_element.html" title="The DiagramEventAddElement class This diagram event add a new element, for each left click button at ..." alt="" coords="5,307,208,545"/>
+<area shape="rect" id="node3" href="$d7/dad/class_diagram_event_add_image.html" title="The DiagramEventAddImage class This diagram event, handle the adding of an image in a diagram." alt="" coords="233,329,423,523"/>
+<area shape="rect" id="node4" href="$dc/dbc/class_diagram_event_add_shape.html" title="The DiagramEventAddShape class This event manage the creation of a shape." alt="" coords="448,314,640,538"/>
+<area shape="rect" id="node5" href="$dd/d33/class_diagram_event_add_text.html" title="The DiagramEventAddText class This diagram event handle the creation of a new text in a diagram." alt="" coords="665,373,845,479"/>
+</map>

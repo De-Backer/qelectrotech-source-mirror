@@ -1,0 +1,167 @@
+.TH "ExportProperties" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExportProperties
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <exportproperties\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExportProperties\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~ExportProperties\fP ()"
+.br
+.ti -1c
+.RI "void \fBtoSettings\fP (QSettings &, const QString &=QString()) const"
+.br
+.ti -1c
+.RI "void \fBfromSettings\fP (QSettings &, const QString &=QString())"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBExportProperties\fP \fBdefaultExportProperties\fP ()"
+.br
+.RI "ExportProperties::defaultProperties\&. "
+.ti -1c
+.RI "static \fBExportProperties\fP \fBdefaultPrintProperties\fP ()"
+.br
+.RI "\fBExportProperties::defaultPrintProperties\fP\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QDir \fBdestination_directory\fP"
+.br
+.RI "Target directory for generated files\&. "
+.ti -1c
+.RI "QString \fBformat\fP"
+.br
+.RI "Image format of generated files\&. "
+.ti -1c
+.RI "bool \fBdraw_grid\fP"
+.br
+.RI "Whether to render the diagram grid\&. "
+.ti -1c
+.RI "bool \fBdraw_border\fP"
+.br
+.RI "Whether to render the border (along with rows/columns headers) "
+.ti -1c
+.RI "bool \fBdraw_titleblock\fP"
+.br
+.RI "Whether to render the title block\&. "
+.ti -1c
+.RI "bool \fBdraw_terminals\fP"
+.br
+.RI "Whether to render terminals\&. "
+.ti -1c
+.RI "bool \fBdraw_colored_conductors\fP"
+.br
+.RI "Whether to render conductors colors\&. "
+.ti -1c
+.RI "\fBQET::DiagramArea\fP \fBexported_area\fP"
+.br
+.RI "Area of diagrams to be rendered\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is a container for various options used when printing or exporting a diagram as an image file\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ExportProperties::ExportProperties ()"
+Constructeur par defaut : le repertoire de destination est le Bureau de l'utilisateur le format d'export est PNG la grille et les bornes ne doivent pas etre dessinees la bordure et le cartouche doivent etre dessines la zone exportee est le schema avec son cadre et son cartouche 
+.SS "ExportProperties::~ExportProperties ()\fC [virtual]\fP"
+Destructeur 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBExportProperties\fP ExportProperties::defaultExportProperties ()\fC [static]\fP"
+
+.PP
+ExportProperties::defaultProperties\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the default properties stored in the setting file 
+.RE
+.PP
+
+.SS "\fBExportProperties\fP ExportProperties::defaultPrintProperties ()\fC [static]\fP"
+
+.PP
+\fBExportProperties::defaultPrintProperties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the default properties stored in the setting file 
+.RE
+.PP
+
+.SS "void ExportProperties::fromSettings (QSettings & settings, const QString & prefix = \fCQString()\fP)"
+Lit les options depuis une configuration\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP Parametres a lire 
+.br
+\fIprefix\fP prefixe a ajouter devant les noms des parametres 
+.RE
+.PP
+
+.SS "void ExportProperties::toSettings (QSettings & settings, const QString & prefix = \fCQString()\fP) const"
+Exporte les options dans une configuration\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP Parametres a ecrire 
+.br
+\fIprefix\fP prefixe a ajouter devant les noms des parametres 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QDir ExportProperties::destination_directory"
+
+.PP
+Target directory for generated files\&. 
+.SS "bool ExportProperties::draw_border"
+
+.PP
+Whether to render the border (along with rows/columns headers) 
+.SS "bool ExportProperties::draw_colored_conductors"
+
+.PP
+Whether to render conductors colors\&. 
+.SS "bool ExportProperties::draw_grid"
+
+.PP
+Whether to render the diagram grid\&. 
+.SS "bool ExportProperties::draw_terminals"
+
+.PP
+Whether to render terminals\&. 
+.SS "bool ExportProperties::draw_titleblock"
+
+.PP
+Whether to render the title block\&. 
+.SS "\fBQET::DiagramArea\fP ExportProperties::exported_area"
+
+.PP
+Area of diagrams to be rendered\&. 
+.SS "QString ExportProperties::format"
+
+.PP
+Image format of generated files\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

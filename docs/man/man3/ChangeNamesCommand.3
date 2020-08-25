@@ -1,0 +1,101 @@
+.TH "ChangeNamesCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChangeNamesCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <editorcommands\&.h>\fP
+.PP
+Inherits \fBElementEditionCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeNamesCommand\fP (\fBElementScene\fP *, const \fBNamesList\fP &, const \fBNamesList\fP &, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ChangeNamesCommand\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "Annule le changement\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "Refait le changement\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeNamesCommand\fP (const \fBChangeNamesCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBNamesList\fP \fBnames_before\fP"
+.br
+.RI "List of former names\&. "
+.ti -1c
+.RI "\fBNamesList\fP \fBnames_after\fP"
+.br
+.RI "List of new names\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This command changes the translated names of an electrical element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChangeNamesCommand::ChangeNamesCommand (\fBElementScene\fP * element_scene, const \fBNamesList\fP & before, const \fBNamesList\fP & after, QUndoCommand * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement_scene\fP \fBElement\fP edite 
+.br
+\fIbefore\fP Listes des noms avant changement 
+.br
+\fIafter\fP Listes des noms apres changement 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "ChangeNamesCommand::~ChangeNamesCommand ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "ChangeNamesCommand::ChangeNamesCommand (const \fBChangeNamesCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChangeNamesCommand::redo ()\fC [override]\fP"
+
+.PP
+Refait le changement\&. 
+.SS "void ChangeNamesCommand::undo ()\fC [override]\fP"
+
+.PP
+Annule le changement\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBNamesList\fP ChangeNamesCommand::names_after\fC [private]\fP"
+
+.PP
+List of new names\&. 
+.SS "\fBNamesList\fP ChangeNamesCommand::names_before\fC [private]\fP"
+
+.PP
+List of former names\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,163 @@
+.TH "DiagramEventAddImage" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramEventAddImage \- The \fBDiagramEventAddImage\fP class This diagram event, handle the adding of an image in a diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagrameventaddimage\&.h>\fP
+.PP
+Inherits \fBDiagramEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramEventAddImage\fP (\fBDiagram\fP *diagram)"
+.br
+.RI "\fBDiagramEventAddImage::DiagramEventAddImage\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~DiagramEventAddImage\fP () override"
+.br
+.RI "\fBDiagramEventAddImage::~DiagramEventAddImage\fP\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddImage::mousePressEvent\fP Action when mouse is pressed\&. "
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddImage::mouseMoveEvent\fP Action when mouse move\&. "
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddImage::mouseDoubleClickEvent\fP This method is only use to overwrite double click\&. When double click, image propertie dialog isn't open\&. "
+.ti -1c
+.RI "void \fBwheelEvent\fP (QGraphicsSceneWheelEvent *event) override"
+.br
+.RI "\fBDiagramEventAddImage::wheelEvent\fP Action when mouse wheel is rotate\&. "
+.ti -1c
+.RI "bool \fBisNull\fP () const"
+.br
+.RI "\fBDiagramEventAddImage::isNull\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBopenDialog\fP ()"
+.br
+.RI "\fBDiagramEventAddImage::openDialog\fP Open dialog for select the image to add\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramImageItem\fP * \fBm_image\fP"
+.br
+.ti -1c
+.RI "bool \fBm_is_added\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBDiagramEventAddImage\fP class This diagram event, handle the adding of an image in a diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramEventAddImage::DiagramEventAddImage (\fBDiagram\fP * diagram)"
+
+.PP
+\fBDiagramEventAddImage::DiagramEventAddImage\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : diagram where operate this event 
+.RE
+.PP
+
+.SS "DiagramEventAddImage::~DiagramEventAddImage ()\fC [override]\fP"
+
+.PP
+\fBDiagramEventAddImage::~DiagramEventAddImage\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool DiagramEventAddImage::isNull () const"
+
+.PP
+\fBDiagramEventAddImage::isNull\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+: true if image can't be loaded, otherwise return false\&. 
+.RE
+.PP
+
+.SS "void DiagramEventAddImage::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddImage::mouseDoubleClickEvent\fP This method is only use to overwrite double click\&. When double click, image propertie dialog isn't open\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP : event of mouse double click\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddImage::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddImage::mouseMoveEvent\fP Action when mouse move\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP : event of mouse move 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddImage::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddImage::mousePressEvent\fP Action when mouse is pressed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP : event of mouse pressed 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddImage::openDialog ()\fC [private]\fP"
+
+.PP
+\fBDiagramEventAddImage::openDialog\fP Open dialog for select the image to add\&. 
+.SS "void DiagramEventAddImage::wheelEvent (QGraphicsSceneWheelEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddImage::wheelEvent\fP Action when mouse wheel is rotate\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP evet of mouse wheel 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagramImageItem\fP* DiagramEventAddImage::m_image\fC [private]\fP"
+
+.SS "bool DiagramEventAddImage::m_is_added\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,22 @@
+<map id="ElementsCollectionCache::fetchElement" name="ElementsCollectionCache::fetchElement">
+<area shape="rect" id="node1" title="ElementsCollectionCache::fetchElement Retrieve the data for a given element, using the cache if avail..." alt="" coords="5,224,179,265"/>
+<area shape="rect" id="node2" href="$d2/d51/class_elements_collection_cache.html#a7a38f26afff8bd0347b6229c6054bf8f" title="ElementsCollectionCache::cacheName Cache the current (i.e. last retrieved) name The cache entry will ..." alt="" coords="233,5,406,47"/>
+<area shape="rect" id="node3" href="$d2/d51/class_elements_collection_cache.html#a5daf04339eda38fc88c7d5236d483699" title="ElementsCollectionCache::cachePixmap Cache the current (i.e. last retrieved) pixmap." alt="" coords="233,71,406,112"/>
+<area shape="rect" id="node4" href="$d2/d51/class_elements_collection_cache.html#a829ddd72e7f39e9fda5e4a4ffa5a8253" title=" " alt="" coords="233,136,406,177"/>
+<area shape="rect" id="node9" href="$d5/dd7/class_elements_location.html#ac182ae18bb9df2ce11a08bc0442ea89a" title="ElementsLocation::toString." alt="" coords="461,202,640,229"/>
+<area shape="rect" id="node12" href="$d2/d51/class_elements_collection_cache.html#a1f7887c0ec976d250fa7522ee955803f" title="ElementsCollectionCache::fetchNameFromCache Retrieve the name for an element, given its path and uuid..." alt="" coords="233,253,406,295"/>
+<area shape="rect" id="node13" href="$d2/d51/class_elements_collection_cache.html#adf43e919debb67f8b61363a0c3007062" title="ElementsCollectionCache::fetchPixmapFromCache Retrieve the pixmap for an element, given its path and ..." alt="" coords="233,319,406,360"/>
+<area shape="rect" id="node14" href="$d5/dd7/class_elements_location.html#ade366028c25fbe20a2b54c4186a37183" title="ElementsLocation::isProject." alt="" coords="227,385,412,411"/>
+<area shape="rect" id="node15" href="$d5/dd7/class_elements_location.html#a4d04cf5ab3e268d88e863e4c15eb36e0" title="ElementsLocation::uuid." alt="" coords="240,435,399,462"/>
+<area shape="rect" id="node5" href="$db/d8d/class_element_factory.html#aa1937c3e4b527b4fbc1118efdb541d92" title=" " alt="" coords="465,19,637,46"/>
+<area shape="rect" id="node7" href="$d2/d51/class_elements_collection_cache.html#ab054c128246576dbc520fdd1e8b2c9f3" title=" " alt="" coords="464,71,637,112"/>
+<area shape="rect" id="node8" href="$d2/d51/class_elements_collection_cache.html#a84d4c1728d76a78f8fdf3fe3b356d204" title=" " alt="" coords="464,136,637,177"/>
+<area shape="rect" id="node6" href="$db/d8d/class_element_factory.html#af30f0530e7542b2b25bd43617e6ab8cf" title=" " alt="" coords="689,19,904,46"/>
+<area shape="rect" id="node10" href="$d7/df8/class_q_e_t_app.html#a69a31da8f6a67539cfcbed0e903c1671" title="QETApp::projectId." alt="" coords="732,202,861,229"/>
+<area shape="rect" id="node11" href="$d7/df8/class_q_e_t_app.html#a6be4484aa447132c5b44732279b0836c" title="QETApp::project." alt="" coords="968,202,1087,229"/>
+<area shape="rect" id="node16" href="$d5/dd7/class_elements_location.html#a45f9e8dbe179a42f73a8ea0625bddc7e" title="ElementsLocation::isElement." alt="" coords="701,405,893,431"/>
+<area shape="rect" id="node17" href="$d5/dd7/class_elements_location.html#a8bf454abc5960cbd72b72d471599d7b7" title="ElementsLocation::pugiXml." alt="" coords="460,462,641,489"/>
+<area shape="rect" id="node18" href="$df/dd9/class_xml_element_collection.html#acd7dcecea45b62258579598d3782610d" title="XmlElementCollection::element." alt="" coords="721,456,872,497"/>
+<area shape="rect" id="node20" href="$d6/dc5/class_q_e_t_project.html#a6e182aa14ce7c48753e6be355ebbdb5f" title="QETProject::embeddedCollection." alt="" coords="694,521,899,563"/>
+<area shape="rect" id="node19" href="$df/dd9/class_xml_element_collection.html#a5cb901cc25363fdd9e5f8e77661f49d3" title="XmlElementCollection::child If parent_element have child element with an attribute name = child_name,..." alt="" coords="952,456,1103,497"/>
+</map>

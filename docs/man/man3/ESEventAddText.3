@@ -1,0 +1,105 @@
+.TH "ESEventAddText" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESEventAddText \- The \fBESEventAddText\fP class This ESEvent manage creation of text in an \fBElementScene\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eseventaddtext\&.h>\fP
+.PP
+Inherits \fBESEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESEventAddText\fP (\fBElementScene\fP *scene)"
+.br
+.RI "\fBESEventAddText::ESEventAddText\fP\&. "
+.ti -1c
+.RI "\fB~ESEventAddText\fP () override"
+.br
+.RI "\fBESEventAddText::~ESEventAddText\fP\&. "
+.ti -1c
+.RI "bool \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddText::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddText::mouseReleaseEvent\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPartText\fP * \fBm_text\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBESEventAddText\fP class This ESEvent manage creation of text in an \fBElementScene\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESEventAddText::ESEventAddText (\fBElementScene\fP * scene)"
+
+.PP
+\fBESEventAddText::ESEventAddText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP 
+.RE
+.PP
+
+.SS "ESEventAddText::~ESEventAddText ()\fC [override]\fP"
+
+.PP
+\fBESEventAddText::~ESEventAddText\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ESEventAddText::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddText::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddText::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddText::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPartText\fP* ESEventAddText::m_text\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

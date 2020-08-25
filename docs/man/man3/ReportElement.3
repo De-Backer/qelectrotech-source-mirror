@@ -1,0 +1,107 @@
+.TH "ReportElement" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReportElement
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <reportelement\&.h>\fP
+.PP
+Inherits \fBElement\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReportElement\fP (const \fBElementsLocation\fP &, const QString &link_type, QGraphicsItem *=nullptr, int *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ReportElement\fP () override"
+.br
+.RI "\fBReportElement::~ReportElement\fP Destructor\&. "
+.ti -1c
+.RI "void \fBlinkToElement\fP (\fBElement\fP *) override"
+.br
+.RI "\fBReportElement::linkToElement\fP Link this element to the other element\&. "
+.ti -1c
+.RI "void \fBunlinkAllElements\fP () override"
+.br
+.RI "ReportElement::unLinkAllElements Unlink all of the element in the QList connected_elements\&. "
+.ti -1c
+.RI "void \fBunlinkElement\fP (\fBElement\fP *elmt) override"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_inverse_report\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+  @brief The ReportElement class
+
+.fi
+.PP
+ this class represent an element that can be linked to an other \fBReportElement\fP a folio report in a diagram is a element that show a wire go on an other folio 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ReportElement::ReportElement (const \fBElementsLocation\fP & location, const QString & link_type, QGraphicsItem * qgi = \fCnullptr\fP, int * state = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "ReportElement::~ReportElement ()\fC [override]\fP"
+
+.PP
+\fBReportElement::~ReportElement\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ReportElement::linkToElement (\fBElement\fP * elmt)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReportElement::linkToElement\fP Link this element to the other element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP element to be linked with this 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBElement\fP\&.
+.SS "void ReportElement::unlinkAllElements ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+ReportElement::unLinkAllElements Unlink all of the element in the QList connected_elements\&. 
+.PP
+Reimplemented from \fBElement\fP\&.
+.SS "void ReportElement::unlinkElement (\fBElement\fP * elmt)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+.nf
+  @brief ReportElement::unlinkElement
+
+.fi
+.PP
+ unlink the specified element\&. for reportelement, they must be only one linked element, so we call unlinkAllElements for clear the connected_elements list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBElement\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int ReportElement::m_inverse_report\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

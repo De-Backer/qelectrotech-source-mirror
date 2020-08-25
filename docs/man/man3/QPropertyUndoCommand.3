@@ -1,0 +1,211 @@
+.TH "QPropertyUndoCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QPropertyUndoCommand \- The \fBQPropertyUndoCommand\fP class This undo command manage QProperty of a QObject\&. This undo command can use QPropertyAnimation to animate the change when undo/redo is call To use animation call setAnimated(true)\&. By default animation is disable\&. Some QVariant date can't be animated and result this command don't work\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qpropertyundocommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQPropertyUndoCommand\fP (QObject *object, const char *property_name, const QVariant &old_value, const QVariant &new_value, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBQPropertyUndoCommand::QPropertyUndoCommand\fP Default constructor with old and new value This command don't take ownership of object\&. "
+.ti -1c
+.RI "\fBQPropertyUndoCommand\fP (QObject *object, const char *property_name, const QVariant &old_value, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBQPropertyUndoCommand::QPropertyUndoCommand\fP Default constructor with old value\&. Call setNewValue to setup the new value of the edited QObject This command don't take ownership of object\&. "
+.ti -1c
+.RI "\fBQPropertyUndoCommand\fP (const \fBQPropertyUndoCommand\fP *other)"
+.br
+.RI "\fBQPropertyUndoCommand::QPropertyUndoCommand\fP\&. "
+.ti -1c
+.RI "void \fBsetNewValue\fP (const QVariant &new_value)"
+.br
+.RI "\fBQPropertyUndoCommand::setNewValue\fP Set the new value of the property (set with redo) to new_value\&. "
+.ti -1c
+.RI "void \fBenableAnimation\fP (bool animate=true)"
+.br
+.RI "\fBQPropertyUndoCommand::enableAnimation\fP True to enable animation\&. "
+.ti -1c
+.RI "void \fBsetAnimated\fP (bool animate=true, bool first_time=true)"
+.br
+.RI "\fBQPropertyUndoCommand::setAnimated\fP\&. "
+.ti -1c
+.RI "int \fBid\fP () const override"
+.br
+.ti -1c
+.RI "bool \fBmergeWith\fP (const QUndoCommand *other) override"
+.br
+.RI "\fBQPropertyUndoCommand::mergeWith\fP Try to merge this command with other command\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBQPropertyUndoCommand::redo\fP Redo this command\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBQPropertyUndoCommand::undo\fP Undo this command\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QObject * \fBm_object\fP = nullptr"
+.br
+.ti -1c
+.RI "const char * \fBm_property_name\fP"
+.br
+.ti -1c
+.RI "QVariant \fBm_old_value\fP"
+.br
+.ti -1c
+.RI "QVariant \fBm_new_value\fP"
+.br
+.ti -1c
+.RI "bool \fBm_animate\fP = false"
+.br
+.ti -1c
+.RI "bool \fBm_first_time\fP = true"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBQPropertyUndoCommand\fP class This undo command manage QProperty of a QObject\&. This undo command can use QPropertyAnimation to animate the change when undo/redo is call To use animation call setAnimated(true)\&. By default animation is disable\&. Some QVariant date can't be animated and result this command don't work\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QPropertyUndoCommand::QPropertyUndoCommand (QObject * object, const char * property_name, const QVariant & old_value, const QVariant & new_value, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBQPropertyUndoCommand::QPropertyUndoCommand\fP Default constructor with old and new value This command don't take ownership of object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobject\fP 
+.br
+\fIproperty_name\fP 
+.br
+\fIold_value\fP 
+.br
+\fInew_value\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "QPropertyUndoCommand::QPropertyUndoCommand (QObject * object, const char * property_name, const QVariant & old_value, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBQPropertyUndoCommand::QPropertyUndoCommand\fP Default constructor with old value\&. Call setNewValue to setup the new value of the edited QObject This command don't take ownership of object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIobject\fP 
+.br
+\fIproperty_name\fP 
+.br
+\fIold_value\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "QPropertyUndoCommand::QPropertyUndoCommand (const \fBQPropertyUndoCommand\fP * other)"
+
+.PP
+\fBQPropertyUndoCommand::QPropertyUndoCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QPropertyUndoCommand::enableAnimation (bool animate = \fCtrue\fP)"
+
+.PP
+\fBQPropertyUndoCommand::enableAnimation\fP True to enable animation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIanimate\fP 
+.RE
+.PP
+
+.SS "int QPropertyUndoCommand::id () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "bool QPropertyUndoCommand::mergeWith (const QUndoCommand * other)\fC [override]\fP"
+
+.PP
+\fBQPropertyUndoCommand::mergeWith\fP Try to merge this command with other command\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if was merged, else false 
+.RE
+.PP
+
+.SS "void QPropertyUndoCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBQPropertyUndoCommand::redo\fP Redo this command\&. 
+.SS "void QPropertyUndoCommand::setAnimated (bool animate = \fCtrue\fP, bool first_time = \fCtrue\fP)"
+
+.PP
+\fBQPropertyUndoCommand::setAnimated\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIanimate\fP = true for animate this undo 
+.br
+\fIfirst_time\fP = if true, the first animation is done at the first call of redo if false, the first animation is done at the second call of redo\&. 
+.RE
+.PP
+
+.SS "void QPropertyUndoCommand::setNewValue (const QVariant & new_value)"
+
+.PP
+\fBQPropertyUndoCommand::setNewValue\fP Set the new value of the property (set with redo) to new_value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP 
+.RE
+.PP
+
+.SS "void QPropertyUndoCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBQPropertyUndoCommand::undo\fP Undo this command\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool QPropertyUndoCommand::m_animate = false\fC [private]\fP"
+
+.SS "bool QPropertyUndoCommand::m_first_time = true\fC [private]\fP"
+
+.SS "QVariant QPropertyUndoCommand::m_new_value\fC [private]\fP"
+
+.SS "QObject* QPropertyUndoCommand::m_object = nullptr\fC [private]\fP"
+
+.SS "QVariant QPropertyUndoCommand::m_old_value\fC [private]\fP"
+
+.SS "const char* QPropertyUndoCommand::m_property_name\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

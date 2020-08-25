@@ -1,0 +1,106 @@
+.TH "PrintConfigPage" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PrintConfigPage \- The \fBPrintConfigPage\fP class This configuration page enables users to set default printing options\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configpages\&.h>\fP
+.PP
+Inherits \fBConfigPage\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPrintConfigPage\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~PrintConfigPage\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBapplyConf\fP () override"
+.br
+.RI "\fBPrintConfigPage::applyConf\fP Apply the config of this page\&. "
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.ti -1c
+.RI "QIcon \fBicon\fP () const override"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBExportPropertiesWidget\fP * \fBepw\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPrintConfigPage\fP (const \fBPrintConfigPage\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBPrintConfigPage\fP class This configuration page enables users to set default printing options\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PrintConfigPage::PrintConfigPage (QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP QWidget parent 
+.RE
+.PP
+
+.SS "PrintConfigPage::~PrintConfigPage ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "PrintConfigPage::PrintConfigPage (const \fBPrintConfigPage\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void PrintConfigPage::applyConf ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPrintConfigPage::applyConf\fP Apply the config of this page\&. 
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "QIcon PrintConfigPage::icon () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+l'icone de cette page 
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "QString PrintConfigPage::title () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+le titre de cette page 
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBExportPropertiesWidget\fP* PrintConfigPage::epw"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

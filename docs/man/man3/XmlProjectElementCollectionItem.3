@@ -1,0 +1,303 @@
+.TH "XmlProjectElementCollectionItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XmlProjectElementCollectionItem \- The \fBXmlProjectElementCollectionItem\fP class This class specialise \fBElementCollectionItem\fP for manage an xml collection embedded in a project\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <xmlprojectelementcollectionitem\&.h>\fP
+.PP
+Inherits \fBElementCollectionItem\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType+3 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXmlProjectElementCollectionItem\fP ()"
+.br
+.RI "\fBXmlProjectElementCollectionItem::XmlProjectElementCollectionItem\fP Constructor\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "bool \fBisDir\fP () const override"
+.br
+.RI "\fBXmlProjectElementCollectionItem::isDir\fP\&. "
+.ti -1c
+.RI "bool \fBisElement\fP () const override"
+.br
+.RI "\fBXmlProjectElementCollectionItem::isElement\fP\&. "
+.ti -1c
+.RI "QString \fBlocalName\fP () override"
+.br
+.RI "\fBXmlProjectElementCollectionItem::localName\fP\&. "
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.RI "\fBXmlProjectElementCollectionItem::name\fP\&. "
+.ti -1c
+.RI "QString \fBcollectionPath\fP () const override"
+.br
+.RI "\fBXmlProjectElementCollectionItem::collectionPath\fP\&. "
+.ti -1c
+.RI "virtual QString \fBembeddedPath\fP () const"
+.br
+.RI "\fBXmlProjectElementCollectionItem::embeddedPath\fP\&. "
+.ti -1c
+.RI "bool \fBisCollectionRoot\fP () const override"
+.br
+.RI "\fBXmlProjectElementCollectionItem::isCollectionRoot\fP\&. "
+.ti -1c
+.RI "void \fBaddChildAtPath\fP (const QString &collection_name) override"
+.br
+.RI "\fBXmlProjectElementCollectionItem::addChildAtPath\fP Ask to this item item to add a new child with collection name collection_name (the child must exist in the xml element collection) "
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject\fP () const"
+.br
+.RI "\fBXmlProjectElementCollectionItem::project\fP\&. "
+.ti -1c
+.RI "void \fBsetProject\fP (\fBQETProject\fP *\fBproject\fP, bool set_data=true, bool hide_element=false)"
+.br
+.RI "\fBXmlProjectElementCollectionItem::setProject\fP Set the project for this item\&. Use this method for set this item the root of the collection\&. "
+.ti -1c
+.RI "void \fBsetUpData\fP () override"
+.br
+.RI "\fBXmlProjectElementCollectionItem::setUpData\fP SetUp the data of this item\&. "
+.ti -1c
+.RI "void \fBsetUpIcon\fP () override"
+.br
+.RI "\fBXmlProjectElementCollectionItem::setUpIcon\fP SetUp the icon of this item\&. Because icon use several memory, we use this method for setup icon instead setUpData\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpopulate\fP (bool set_data=true, bool hide_element=false)"
+.br
+.RI "\fBXmlProjectElementCollectionItem::populate\fP Create the childs of this item\&. "
+.ti -1c
+.RI "void \fBsetXmlElement\fP (const QDomElement &element, \fBQETProject\fP *\fBproject\fP, bool set_data=true, bool hide_element=false)"
+.br
+.RI "\fBXmlProjectElementCollectionItem::setXmlElement\fP Set the managed content of this item\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP = nullptr"
+.br
+.ti -1c
+.RI "QDomElement \fBm_dom_element\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBXmlProjectElementCollectionItem\fP class This class specialise \fBElementCollectionItem\fP for manage an xml collection embedded in a project\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "XmlProjectElementCollectionItem::XmlProjectElementCollectionItem ()"
+
+.PP
+\fBXmlProjectElementCollectionItem::XmlProjectElementCollectionItem\fP Constructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void XmlProjectElementCollectionItem::addChildAtPath (const QString & collection_name)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::addChildAtPath\fP Ask to this item item to add a new child with collection name collection_name (the child must exist in the xml element collection) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection_name\fP : name of the child item to add\&. 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "QString XmlProjectElementCollectionItem::collectionPath () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::collectionPath\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The path of this item relative to the collection\&. 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "QString XmlProjectElementCollectionItem::embeddedPath () const\fC [virtual]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::embeddedPath\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The embedde path of this item The path is in form : embed://dir/subdir/myElement\&.elmt 
+.RE
+.PP
+
+.SS "bool XmlProjectElementCollectionItem::isCollectionRoot () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::isCollectionRoot\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this item represent the root of collection 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "bool XmlProjectElementCollectionItem::isDir () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::isDir\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this item represent a directory 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "bool XmlProjectElementCollectionItem::isElement () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::isElement\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this item represent an element 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "QString XmlProjectElementCollectionItem::localName ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::localName\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the located name of this item 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "QString XmlProjectElementCollectionItem::name () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::name\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The collection name of this item 
+.RE
+.PP
+
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "void XmlProjectElementCollectionItem::populate (bool set_data = \fCtrue\fP, bool hide_element = \fCfalse\fP)\fC [private]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::populate\fP Create the childs of this item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIset_data\fP : if true, call setUpData for every child of this item 
+.br
+\fIhide_element\fP : bool 
+.RE
+.PP
+
+.SS "\fBQETProject\fP * XmlProjectElementCollectionItem::project () const"
+
+.PP
+\fBXmlProjectElementCollectionItem::project\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the paretn project of the managed collection 
+.RE
+.PP
+
+.SS "void XmlProjectElementCollectionItem::setProject (\fBQETProject\fP * project, bool set_data = \fCtrue\fP, bool hide_element = \fCfalse\fP)"
+
+.PP
+\fBXmlProjectElementCollectionItem::setProject\fP Set the project for this item\&. Use this method for set this item the root of the collection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : project to manage the collection 
+.br
+\fIset_data\fP : if true, call setUpData for every child of this item 
+.br
+\fIhide_element\fP : bool 
+.RE
+.PP
+
+.SS "void XmlProjectElementCollectionItem::setUpData ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::setUpData\fP SetUp the data of this item\&. 
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "void XmlProjectElementCollectionItem::setUpIcon ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::setUpIcon\fP SetUp the icon of this item\&. Because icon use several memory, we use this method for setup icon instead setUpData\&. 
+.PP
+Implements \fBElementCollectionItem\fP\&.
+.SS "void XmlProjectElementCollectionItem::setXmlElement (const QDomElement & element, \fBQETProject\fP * project, bool set_data = \fCtrue\fP, bool hide_element = \fCfalse\fP)\fC [private]\fP"
+
+.PP
+\fBXmlProjectElementCollectionItem::setXmlElement\fP Set the managed content of this item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP : the dom element (directory or element), to be managed by this item 
+.br
+\fIproject\fP : the parent project of managed collection 
+.br
+\fIset_data\fP : if true, call setUpData for every child of this item 
+.br
+\fIhide_element\fP : bool 
+.RE
+.PP
+
+.SS "int XmlProjectElementCollectionItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QDomElement XmlProjectElementCollectionItem::m_dom_element\fC [private]\fP"
+
+.SS "\fBQETProject\fP* XmlProjectElementCollectionItem::m_project = nullptr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

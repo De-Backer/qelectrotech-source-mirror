@@ -1,0 +1,21 @@
+<map id="TitleBlockTemplate::loadGrid" name="TitleBlockTemplate::loadGrid">
+<area shape="rect" id="node1" title=" " alt="" coords="5,235,139,276"/>
+<area shape="rect" id="node2" href="$dd/d5a/class_title_block_template.html#a405ec0a2697e69941b603f9cbf053482" title="TitleBlockTemplate::applyCellSpans Forget any previously applied span, then apply again all spans def..." alt="" coords="191,71,325,112"/>
+<area shape="rect" id="node9" href="$dd/d5a/class_title_block_template.html#a09d415f1a8397d5b3bcb9b40337d1716" title="TitleBlockTemplate::applyRowColNums Ensure all cells have the right col+row numbers." alt="" coords="187,136,329,177"/>
+<area shape="rect" id="node10" href="$dd/d5a/class_title_block_template.html#a50524c17ec7334634737946f5dc7bceb" title="TitleBlockTemplate::initCells Initialize the internal cells grid with the row and column counts...." alt="" coords="191,201,325,243"/>
+<area shape="rect" id="node14" href="$dd/d5a/class_title_block_template.html#ac9f85baeb72787a8f12e7699f1382589" title="TitleBlockTemplate::loadCells Analyze an XML element, looking for grid cells. The grid cells are chec..." alt="" coords="191,267,325,308"/>
+<area shape="rect" id="node18" href="$dd/d5a/class_title_block_template.html#a73b907decb8abb442407afbfda6dd27f" title="TitleBlockTemplate::parseColumns Parse the columns widths." alt="" coords="191,332,325,373"/>
+<area shape="rect" id="node19" href="$dd/d5a/class_title_block_template.html#a73db4ed558942bb331bdeb90b2bb2f6f" title="TitleBlockTemplate::parseRows Parse the rows heights." alt="" coords="191,397,325,439"/>
+<area shape="rect" id="node3" href="$dd/d5a/class_title_block_template.html#a24320b9d4eed764e2d9e9f74bcd05b07" title="TitleBlockTemplate::applyCellSpan Ensure the spans of the provided cell are applied within the grid s..." alt="" coords="377,5,511,47"/>
+<area shape="rect" id="node5" href="$dd/d5a/class_title_block_template.html#a6e5864045f85eea334f0b60b4592e184" title="TitleBlockTemplate::checkCellSpan Check whether a given cell can be spanned according to its row_span..." alt="" coords="377,71,511,112"/>
+<area shape="rect" id="node8" href="$dd/d5a/class_title_block_template.html#a397fb24688dacd9591ee291cd191efbb" title="TitleBlockTemplate::forgetSpanning Set the spanner_cell attribute of every cell to 0." alt="" coords="377,136,511,177"/>
+<area shape="rect" id="node4" href="$dd/d5a/class_title_block_template.html#a47d5c2e38f25aae806c43736c95e7a7e" title="TitleBlockTemplate::cell." alt="" coords="559,5,692,47"/>
+<area shape="rect" id="node6" href="$dd/d5a/class_title_block_template.html#aab1fceb6908c662ca294354ca43ab630" title="TitleBlockTemplate::columnsCount." alt="" coords="559,71,692,112"/>
+<area shape="rect" id="node7" href="$dd/d5a/class_title_block_template.html#aa5f92bd2293abf61d7d7bd4c6f0abe0f" title="TitleBlockTemplate::rowsCount." alt="" coords="559,136,692,177"/>
+<area shape="rect" id="node11" href="$dd/d5a/class_title_block_template.html#aea4e9aaf70598be0a1ef80e77db8c8e2" title="TitleBlockTemplate::createColumn." alt="" coords="377,201,511,243"/>
+<area shape="rect" id="node12" href="$dd/d5a/class_title_block_template.html#aaae9ec47b0d19821a3c6eb66c45531da" title="TitleBlockTemplate::createCellsList." alt="" coords="559,201,692,243"/>
+<area shape="rect" id="node13" href="$dd/d5a/class_title_block_template.html#aa2a5cbdb2fa3f12989f1f9a0c55b3980" title="TitleBlockTemplate::createCell Create a new cell and associate it with this template,..." alt="" coords="758,201,891,243"/>
+<area shape="rect" id="node15" href="$dd/d5a/class_title_block_template.html#a7541cee78fe6e290887afccf81129f3e" title="TitleBlockTemplate::loadCell Load a cell into this template." alt="" coords="377,267,511,308"/>
+<area shape="rect" id="node16" href="$dd/d5a/class_title_block_template.html#a29a201ff9ba0224834a0a2ea79467e65" title="TitleBlockTemplate::checkCell Load the essential attributes of a cell: row and column indices and spa..." alt="" coords="559,267,692,308"/>
+<area shape="rect" id="node17" href="$dc/da9/namespace_q_e_t.html#aeb9edd427d7439ebba0362f5b80d5ef1" title=" " alt="" coords="740,274,909,301"/>
+</map>

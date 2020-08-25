@@ -1,0 +1,108 @@
+.TH "SplittedHelperCell" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SplittedHelperCell
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <splittedhelpercell\&.h>\fP
+.PP
+Inherits \fBHelperCell\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSplittedHelperCell\fP (QGraphicsItem *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~SplittedHelperCell\fP () override"
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *=nullptr) override"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QColor \fBsplit_background_color\fP"
+.br
+.RI "Background color on the split side\&. "
+.ti -1c
+.RI "QColor \fBsplit_foreground_color\fP"
+.br
+.RI "Text color on the split side\&. "
+.ti -1c
+.RI "QString \fBsplit_label\fP"
+.br
+.RI "Text displayed on the split side\&. "
+.ti -1c
+.RI "int \fBsplit_size\fP"
+.br
+.RI "Length of the split side\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSplittedHelperCell\fP (const \fBSplittedHelperCell\fP &)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class is a variant of \fBHelperCell\fP having the ability to display two labels, with a split line between them\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SplittedHelperCell::SplittedHelperCell (QGraphicsItem * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Parent QGraphicsItem 
+.RE
+.PP
+
+.SS "SplittedHelperCell::~SplittedHelperCell ()\fC [override]\fP"
+Destructor 
+.SS "SplittedHelperCell::SplittedHelperCell (const \fBSplittedHelperCell\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void SplittedHelperCell::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = \fCnullptr\fP)\fC [override]\fP"
+Handles the splitted helper cell visual rendering 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP QPainter to be used for the rendering 
+.br
+\fIoption\fP Rendering options 
+.br
+\fIwidget\fP QWidget being painted, if any 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QColor SplittedHelperCell::split_background_color"
+
+.PP
+Background color on the split side\&. 
+.SS "QColor SplittedHelperCell::split_foreground_color"
+
+.PP
+Text color on the split side\&. 
+.SS "QString SplittedHelperCell::split_label"
+
+.PP
+Text displayed on the split side\&. 
+.SS "int SplittedHelperCell::split_size"
+
+.PP
+Length of the split side\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

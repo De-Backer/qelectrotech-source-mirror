@@ -1,0 +1,298 @@
+.TH "TitleBlockTemplatesProjectCollection" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplatesProjectCollection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatescollection\&.h>\fP
+.PP
+Inherits \fBTitleBlockTemplatesCollection\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplatesProjectCollection\fP (\fBQETProject\fP *, QObject *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~TitleBlockTemplatesProjectCollection\fP () override"
+.br
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.ti -1c
+.RI "QString \fBprotocol\fP () const override"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBparentProject\fP () override"
+.br
+.ti -1c
+.RI "QStringList \fBtemplates\fP () override"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBgetTemplate\fP (const QString &) override"
+.br
+.ti -1c
+.RI "QDomElement \fBgetTemplateXmlDescription\fP (const QString &) override"
+.br
+.ti -1c
+.RI "bool \fBsetTemplateXmlDescription\fP (const QString &, const QDomElement &) override"
+.br
+.ti -1c
+.RI "void \fBremoveTemplate\fP (const QString &) override"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateLocation\fP \fBlocation\fP (const QString &=QString()) override"
+.br
+.ti -1c
+.RI "bool \fBhasFilePath\fP () override"
+.br
+.ti -1c
+.RI "QString \fBfilePath\fP () override"
+.br
+.ti -1c
+.RI "bool \fBisReadOnly\fP (const QString &=QString()) const override"
+.br
+.ti -1c
+.RI "virtual void \fBfromXml\fP (const QDomElement &)"
+.br
+.ti -1c
+.RI "virtual void \fBdeleteUnusedTitleBlocKTemplates\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplatesProjectCollection\fP (const \fBTitleBlockTemplatesProjectCollection\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject_\fP"
+.br
+.RI "Parent project\&. "
+.ti -1c
+.RI "QDomDocument \fBxml_document_\fP"
+.br
+.RI "Parent QDomDocument for stored QDomElements\&. "
+.ti -1c
+.RI "QHash< QString, QDomElement > \fBtitleblock_templates_xml_\fP"
+.br
+.RI "XML descriptions of embedded titleblock templates\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents a simple abastraction layer for a collection of title block templates embedded within a project\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplatesProjectCollection::TitleBlockTemplatesProjectCollection (\fBQETProject\fP * project, QObject * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Parent project 
+.br
+\fIparent\fP Parent QObject 
+.RE
+.PP
+
+.SS "TitleBlockTemplatesProjectCollection::~TitleBlockTemplatesProjectCollection ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockTemplatesProjectCollection::TitleBlockTemplatesProjectCollection (const \fBTitleBlockTemplatesProjectCollection\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TitleBlockTemplatesProjectCollection::deleteUnusedTitleBlocKTemplates ()\fC [virtual]\fP"
+Delete all title block templates not used within the parent project 
+.SS "QString TitleBlockTemplatesProjectCollection::filePath ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+always an empty string since a project collection is not stored on any filesystem\&. 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "void TitleBlockTemplatesProjectCollection::fromXml (const QDomElement & xml_element)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP XML element to be parsed to load title block templates 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplate\fP * TitleBlockTemplatesProjectCollection::getTemplate (const QString & template_name)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of the requested template 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the requested template, or 0 if there is no valid template of this name within the project 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "QDomElement TitleBlockTemplatesProjectCollection::getTemplateXmlDescription (const QString & template_name)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of the requested template 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the XML description of the requested template, or a null QDomElement if the project does not have such an titleblock template 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "bool TitleBlockTemplatesProjectCollection::hasFilePath ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+always false since a project collection is not stored on any filesystem\&. 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "bool TitleBlockTemplatesProjectCollection::isReadOnly (const QString & template_name = \fCQString()\fP) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Either an empty QString to know whether the collection itself is read only, or a specific template name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the specified template is read only, false otherwise 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "\fBTitleBlockTemplateLocation\fP TitleBlockTemplatesProjectCollection::location (const QString & template_name = \fCQString()\fP)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of the requested template 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the location object for the requested template 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "\fBQETProject\fP * TitleBlockTemplatesProjectCollection::parentProject ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the parent project of this project collection 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTitleBlockTemplatesCollection\fP\&.
+.SS "QString TitleBlockTemplatesProjectCollection::protocol () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the protocol used to mention this collection 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTitleBlockTemplatesCollection\fP\&.
+.SS "void TitleBlockTemplatesProjectCollection::removeTemplate (const QString & template_name)\fC [override]\fP, \fC [virtual]\fP"
+This methods allows removing a template embedded within the project\&. This method emits the signal \fBchanged()\fP if necessary\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of the template to be removed 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "bool TitleBlockTemplatesProjectCollection::setTemplateXmlDescription (const QString & template_name, const QDomElement & xml_elmt)\fC [override]\fP, \fC [virtual]\fP"
+This methods allows adding or modifying a template embedded within the project\&. This method emits the signal \fBchanged()\fP if necessary\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name / Identifier of the template - will be used to determine whether the given description will be added or will replace an existing one\&. 
+.br
+\fIxml_elmt\fP An <titleblocktemplate> XML element describing the template\&. Its 'name' attribute must equal to template_name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+false if a problem occurred, true otherwise 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "QStringList TitleBlockTemplatesProjectCollection::templates ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the list of title block templates embedded within the project\&. 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "QString TitleBlockTemplatesProjectCollection::title () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+a human readable title for this collection 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTitleBlockTemplatesCollection\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQETProject\fP* TitleBlockTemplatesProjectCollection::project_\fC [private]\fP"
+
+.PP
+Parent project\&. 
+.SS "QHash<QString, QDomElement> TitleBlockTemplatesProjectCollection::titleblock_templates_xml_\fC [private]\fP"
+
+.PP
+XML descriptions of embedded titleblock templates\&. 
+.SS "QDomDocument TitleBlockTemplatesProjectCollection::xml_document_\fC [private]\fP"
+
+.PP
+Parent QDomDocument for stored QDomElements\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

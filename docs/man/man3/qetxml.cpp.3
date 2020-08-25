@@ -1,0 +1,44 @@
+.TH "sources/qetxml.cpp" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qetxml.cpp \- \fBQETXML::fileSystemElementToXmlCollectionElement\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'qetxml\&.h'\fP
+.br
+\fC#include 'nameslist\&.h'\fP
+.br
+\fC#include <QPen>\fP
+.br
+\fC#include <QDir>\fP
+.br
+\fC#include <QFont>\fP
+.br
+
+.SH "Detailed Description"
+.PP 
+\fBQETXML::fileSystemElementToXmlCollectionElement\fP\&. 
+
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP : owner document of returned QDomElement, use to create the QDomElement\&. 
+.br
+\fIfile\fP : file system element file to convert to QDomElement; 
+.br
+\fIrename\fP : by default the attribute 'name' of the returned QDomElement is the same name of but we can override itwith rename 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A file system element converted to a QDomElement ready to be inserted into a \fBXmlElementCollection\fP If the QDomElement can't be created, return a null QDomElement 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

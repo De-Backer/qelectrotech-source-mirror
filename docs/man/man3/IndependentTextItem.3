@@ -1,0 +1,126 @@
+.TH "IndependentTextItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IndependentTextItem
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <independenttextitem\&.h>\fP
+.PP
+Inherits \fBDiagramTextItem\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1005 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIndependentTextItem\fP ()"
+.br
+.ti -1c
+.RI "\fBIndependentTextItem\fP (const QString &)"
+.br
+.RI "\fBIndependentTextItem::IndependentTextItem\fP Constructeur\&. "
+.ti -1c
+.RI "\fB~IndependentTextItem\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &) override"
+.br
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &) const override"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfocusOutEvent\fP (QFocusEvent *event) override"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents an independent text field on a particular diagram\&. It may be moved, edited, and rotated\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IndependentTextItem::IndependentTextItem ()"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_diagram\fP Le schema auquel est rattache le champ de texte 
+.RE
+.PP
+
+.SS "IndependentTextItem::IndependentTextItem (const QString & text)"
+
+.PP
+\fBIndependentTextItem::IndependentTextItem\fP Constructeur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP Le texte affiche par le champ de texte 
+.RE
+.PP
+
+.SS "IndependentTextItem::~IndependentTextItem ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void IndependentTextItem::focusOutEvent (QFocusEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void IndependentTextItem::fromXml (const QDomElement & e)\fC [override]\fP, \fC [virtual]\fP"
+Permet de lire le texte a mettre dans le champ a partir d'un element XML\&. Cette methode se base sur la position du champ pour assigner ou non la valeur a ce champ\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP L'element XML representant le champ de texte 
+.RE
+.PP
+
+.PP
+Implements \fBDiagramTextItem\fP\&.
+.SS "QDomElement IndependentTextItem::toXml (QDomDocument & document) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP Le document XML a utiliser 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+L'element XML representant ce champ de texte 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramTextItem\fP\&.
+.SS "int IndependentTextItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

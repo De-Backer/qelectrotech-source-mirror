@@ -1,0 +1,1087 @@
+.TH "GenericPanel" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GenericPanel \- The \fBGenericPanel\fP class The generic panel is a QTreeWidget subclass providing extra methods allowing developers to easily add objects (projects, diagrams, title block templates, elements, \&.\&.\&.) to it; it also ensures the displayed information remains up to date\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <genericpanel\&.h>\fP
+.PP
+Inherits QTreeWidget\&.
+.PP
+Inherited by \fBElementsPanel\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPanelOption\fP { \fBAddChildDiagrams\fP = 1, \fBAddChildTemplatesCollection\fP = 2, \fBAddChildTemplates\fP = 4, \fBAddAllChildTemplates\fP = 6, \fBAddAllChild\fP = 63, \fBAll\fP = 127 }"
+.br
+.ti -1c
+.RI "enum \fBMetaData\fP { \fBItem\fP = Qt::UserRole + 1, \fBAliasItem\fP, \fBParent\fP, \fBPanelFlags\fP }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "bool \fBfirstActivated\fP ()"
+.br
+.ti -1c
+.RI "void \fBpanelContentChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGenericPanel\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~GenericPanel\fP () override"
+.br
+.ti -1c
+.RI "virtual int \fBcurrentItemType\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBQETProject\fP * \fBprojectForItem\fP (QTreeWidgetItem *) const"
+.br
+.RI "\fBGenericPanel::projectForItem\fP\&. "
+.ti -1c
+.RI "virtual \fBDiagram\fP * \fBdiagramForItem\fP (QTreeWidgetItem *) const"
+.br
+.RI "\fBGenericPanel::diagramForItem\fP\&. "
+.ti -1c
+.RI "virtual \fBTitleBlockTemplateLocation\fP \fBtemplateLocationForItem\fP (QTreeWidgetItem *) const"
+.br
+.RI "\fBGenericPanel::templateLocationForItem\fP\&. "
+.ti -1c
+.RI "virtual \fBQETProject\fP * \fBselectedProject\fP () const"
+.br
+.RI "\fBGenericPanel::selectedProject\fP\&. "
+.ti -1c
+.RI "virtual \fBDiagram\fP * \fBselectedDiagram\fP () const"
+.br
+.RI "\fBGenericPanel::selectedDiagram\fP\&. "
+.ti -1c
+.RI "virtual \fBTitleBlockTemplateLocation\fP \fBselectedTemplateLocation\fP () const"
+.br
+.RI "\fBGenericPanel::selectedTemplateLocation\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBaddProject\fP (\fBQETProject\fP *, QTreeWidgetItem *=nullptr, PanelOptions=\fBAddAllChild\fP)"
+.br
+.RI "\fBGenericPanel::addProject\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBitemForProject\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBaddDiagram\fP (\fBDiagram\fP *, QTreeWidgetItem *=nullptr, PanelOptions=\fBAddAllChild\fP)"
+.br
+.RI "\fBGenericPanel::addDiagram\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBaddTemplatesCollection\fP (\fBTitleBlockTemplatesCollection\fP *, QTreeWidgetItem *=nullptr, PanelOptions=\fBAddAllChild\fP)"
+.br
+.RI "\fBGenericPanel::addTemplatesCollection\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBitemForTemplatesCollection\fP (\fBTitleBlockTemplatesCollection\fP *)"
+.br
+.RI "\fBGenericPanel::itemForTemplatesCollection\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBaddTemplate\fP (const \fBTitleBlockTemplateLocation\fP &, QTreeWidgetItem *=nullptr, PanelOptions=\fBAddAllChild\fP)"
+.br
+.RI "\fBGenericPanel::addTemplate\fP\&. "
+.in -1c
+.SS "Protected Slots"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBprojectInformationsChanged\fP (\fBQETProject\fP *)"
+.br
+.RI "\fBGenericPanel::projectInformationsChanged\fP\&. "
+.ti -1c
+.RI "virtual void \fBdiagramAdded\fP (\fBQETProject\fP *, \fBDiagram\fP *)"
+.br
+.RI "\fBGenericPanel::diagramAdded\fP\&. "
+.ti -1c
+.RI "virtual void \fBdiagramRemoved\fP (\fBQETProject\fP *, \fBDiagram\fP *)"
+.br
+.RI "\fBGenericPanel::diagramRemoved\fP\&. "
+.ti -1c
+.RI "virtual void \fBprojectDiagramsOrderChanged\fP (\fBQETProject\fP *, int, int)"
+.br
+.RI "\fBGenericPanel::projectDiagramsOrderChanged\fP\&. "
+.ti -1c
+.RI "virtual void \fBdiagramTitleChanged\fP (\fBDiagram\fP *, const QString &)"
+.br
+.RI "\fBGenericPanel::diagramTitleChanged\fP Inform this panel the diagram \fIdiagram\fP has changed its title to \fItitle\fP\&. "
+.ti -1c
+.RI "virtual void \fBtemplatesCollectionChanged\fP (\fBTitleBlockTemplatesCollection\fP *, const QString &)"
+.br
+.RI "\fBGenericPanel::templatesCollectionChanged\fP\&. "
+.ti -1c
+.RI "virtual void \fBdiagramUsedTemplate\fP (\fBTitleBlockTemplatesCollection\fP *, const QString &)"
+.br
+.RI "\fBGenericPanel::diagramUsedTemplate\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBgetItemForProject\fP (\fBQETProject\fP *, bool *=nullptr)"
+.br
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBupdateProjectItem\fP (QTreeWidgetItem *, \fBQETProject\fP *, PanelOptions=\fBAddAllChild\fP, bool=false)"
+.br
+.RI "\fBGenericPanel::updateProjectItem\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBfillProjectItem\fP (QTreeWidgetItem *, \fBQETProject\fP *, PanelOptions=\fBAddAllChild\fP, bool=false)"
+.br
+.RI "\fBGenericPanel::fillProjectItem\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBgetItemForDiagram\fP (\fBDiagram\fP *, bool *=nullptr)"
+.br
+.RI "\fBGenericPanel::getItemForDiagram\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBupdateDiagramItem\fP (QTreeWidgetItem *, \fBDiagram\fP *, PanelOptions=\fBAddAllChild\fP, bool=false)"
+.br
+.RI "\fBGenericPanel::updateDiagramItem\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBfillDiagramItem\fP (QTreeWidgetItem *, \fBDiagram\fP *, PanelOptions=\fBAddAllChild\fP, bool=false)"
+.br
+.RI "\fBGenericPanel::fillDiagramItem\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBgetItemForTemplatesCollection\fP (\fBTitleBlockTemplatesCollection\fP *, bool *=nullptr)"
+.br
+.RI "\fBGenericPanel::getItemForTemplatesCollection\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBupdateTemplatesCollectionItem\fP (QTreeWidgetItem *, \fBTitleBlockTemplatesCollection\fP *, PanelOptions=\fBAddAllChild\fP, bool=false)"
+.br
+.RI "\fBGenericPanel::updateTemplatesCollectionItem\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBfillTemplatesCollectionItem\fP (QTreeWidgetItem *, \fBTitleBlockTemplatesCollection\fP *, PanelOptions=\fBAddAllChild\fP, bool=false)"
+.br
+.RI "\fBGenericPanel::fillTemplatesCollectionItem\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBgetItemForTemplate\fP (const \fBTitleBlockTemplateLocation\fP &, bool *=nullptr)"
+.br
+.RI "\fBGenericPanel::getItemForTemplate\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBupdateTemplateItem\fP (QTreeWidgetItem *, const \fBTitleBlockTemplateLocation\fP &, PanelOptions=\fBAddAllChild\fP, bool=false)"
+.br
+.RI "\fBGenericPanel::updateTemplateItem\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBfillTemplateItem\fP (QTreeWidgetItem *, const \fBTitleBlockTemplateLocation\fP &, PanelOptions=\fBAddAllChild\fP, bool=false)"
+.br
+.RI "\fBGenericPanel::fillTemplateItem\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBupdateItem\fP (QTreeWidgetItem *, PanelOptions=\fBAddAllChild\fP, bool=false)"
+.br
+.RI "\fBGenericPanel::updateItem\fP This generic method is called at the end of each update*Item method\&. Its only purpose is being reimplemented in a subclass\&. The default implementation does nothing\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBfillItem\fP (QTreeWidgetItem *, PanelOptions=\fBAddAllChild\fP, bool=false)"
+.br
+.RI "\fBGenericPanel::fillItem\fP This generic method is called at the end of each fill*Item method\&. Its only purpose is being reimplemented in a subclass\&. The default implementation does nothing\&. "
+.ti -1c
+.RI "virtual QString \fBdefaultText\fP (\fBQET::ItemType\fP)"
+.br
+.RI "\fBGenericPanel::defaultText\fP\&. "
+.ti -1c
+.RI "virtual QIcon \fBdefaultIcon\fP (\fBQET::ItemType\fP)"
+.br
+.RI "\fBGenericPanel::defaultIcon\fP\&. "
+.ti -1c
+.RI "virtual QTreeWidgetItem * \fBmakeItem\fP (\fBQET::ItemType\fP, QTreeWidgetItem *=nullptr, const QString &=QString(), const QIcon &=QIcon())"
+.br
+.RI "\fBGenericPanel::makeItem\fP Create a QTreeWidgetItem\&. "
+.ti -1c
+.RI "virtual void \fBdeleteItem\fP (QTreeWidgetItem *, bool=false)"
+.br
+.RI "\fBGenericPanel::deleteItem\fP Delete and item and its children\&. "
+.ti -1c
+.RI "virtual void \fBmarkItemAsUnused\fP (QTreeWidgetItem *)"
+.br
+.RI "\fBGenericPanel::markItemAsUnused\fP Mark the provided QTreeWidgetItem as unused in its parent project\&. "
+.ti -1c
+.RI "virtual void \fBreparent\fP (QTreeWidgetItem *, QTreeWidgetItem *)"
+.br
+.RI "\fBGenericPanel::reparent\fP\&. "
+.ti -1c
+.RI "QList< QTreeWidgetItem * > \fBchildItems\fP (QTreeWidgetItem *, \fBQET::ItemType\fP, bool=false) const"
+.br
+.RI "\fBGenericPanel::childItems\fP\&. "
+.ti -1c
+.RI "template<typename T > void \fBremoveObsoleteItems\fP (const QList< T > &, QTreeWidgetItem *, \fBQET::ItemType\fP, bool)"
+.br
+.ti -1c
+.RI "template<typename T > T \fBvalueForItem\fP (QTreeWidgetItem *) const"
+.br
+.ti -1c
+.RI "void \fBunregisterItem\fP (QTreeWidgetItem *)"
+.br
+.RI "\fBGenericPanel::unregisterItem\fP\&. "
+.ti -1c
+.RI "bool \fBevent\fP (QEvent *) override"
+.br
+.RI "\fBGenericPanel::event\fP Handle various events; reimplemented here to emit the signal \fBfirstActivated()\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBemitFirstActivated\fP ()"
+.br
+.RI "\fBGenericPanel::emitFirstActivated\fP Emit the signal \fBfirstActivated()\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBfirst_activation_\fP"
+.br
+.RI "first_activation_ boolean used to track the first time this widget is activated/shown "
+.ti -1c
+.RI "QHash< \fBQETProject\fP *, QTreeWidgetItem * > \fBprojects_\fP"
+.br
+.RI "projects_ Allow quick retrieval of the item representing a given project "
+.ti -1c
+.RI "QHash< \fBDiagram\fP *, QTreeWidgetItem * > \fBdiagrams_\fP"
+.br
+.RI "diagrams_ Allow quick retrieval of the item representing a given diagram "
+.ti -1c
+.RI "QHash< \fBTitleBlockTemplateLocation\fP, QTreeWidgetItem * > \fBtb_templates_\fP"
+.br
+.RI "tb_templates_ Allow quick retrieval of the item representing a title block template "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBGenericPanel\fP class The generic panel is a QTreeWidget subclass providing extra methods allowing developers to easily add objects (projects, diagrams, title block templates, elements, \&.\&.\&.) to it; it also ensures the displayed information remains up to date\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBGenericPanel::MetaData\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIItem \fP\fP
+.TP
+\fB\fIAliasItem \fP\fP
+.TP
+\fB\fIParent \fP\fP
+.TP
+\fB\fIPanelFlags \fP\fP
+.SS "enum \fBGenericPanel::PanelOption\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIAddChildDiagrams \fP\fP
+.TP
+\fB\fIAddChildTemplatesCollection \fP\fP
+.TP
+\fB\fIAddChildTemplates \fP\fP
+.TP
+\fB\fIAddAllChildTemplates \fP\fP
+.TP
+\fB\fIAddAllChild \fP\fP
+.TP
+\fB\fIAll \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GenericPanel::GenericPanel (QWidget * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Parent QWidget 
+.RE
+.PP
+
+.SS "GenericPanel::~GenericPanel ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "QTreeWidgetItem * GenericPanel::addDiagram (\fBDiagram\fP * diagram, QTreeWidgetItem * parent_item = \fCnullptr\fP, PanelOptions options = \fC\fBAddAllChild\fP\fP)\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::addDiagram\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP 
+.br
+\fIparent_item\fP 
+.br
+\fIoptions\fP (unused) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+diagram_qtwi 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::addProject (\fBQETProject\fP * project, QTreeWidgetItem * parent_item = \fCnullptr\fP, PanelOptions options = \fC\fBAddAllChild\fP\fP)\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::addProject\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.br
+\fIparent_item\fP 
+.br
+\fIoptions\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+project_qtwi 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBElementsPanel\fP\&.
+.SS "QTreeWidgetItem * GenericPanel::addTemplate (const \fBTitleBlockTemplateLocation\fP & tb_template, QTreeWidgetItem * parent_item = \fCnullptr\fP, PanelOptions options = \fC\fBAddAllChild\fP\fP)\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::addTemplate\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItb_template\fP 
+.br
+\fIparent_item\fP 
+.br
+\fIoptions\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+tb_template_qtwi 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::addTemplatesCollection (\fBTitleBlockTemplatesCollection\fP * tbt_collection, QTreeWidgetItem * parent_item = \fCnullptr\fP, PanelOptions options = \fC\fBAddAllChild\fP\fP)\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::addTemplatesCollection\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_collection\fP 
+.br
+\fIparent_item\fP 
+.br
+\fIoptions\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+tbt_collection_qtwi 
+.RE
+.PP
+
+.SS "QList< QTreeWidgetItem * > GenericPanel::childItems (QTreeWidgetItem * item, \fBQET::ItemType\fP type, bool recursive = \fCfalse\fP) const\fC [protected]\fP"
+
+.PP
+\fBGenericPanel::childItems\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP Parent item that will be searched\&. 
+.br
+\fItype\fP Type of items to look for\&. 
+.br
+\fIrecursive\fP Whether to search recursively\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the child items of \fIitem\fP of type \fItype\fP 
+.RE
+.PP
+
+.SS "int GenericPanel::currentItemType ()\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the type of the current item 
+.RE
+.PP
+
+.SS "QIcon GenericPanel::defaultIcon (\fBQET::ItemType\fP type)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::defaultIcon\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP Item type we want the default icon for 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the default icon for \fItype\fP 
+.RE
+.PP
+
+.SS "QString GenericPanel::defaultText (\fBQET::ItemType\fP type)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::defaultText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the default text for \fItype\fP 
+.RE
+.PP
+
+.SS "void GenericPanel::deleteItem (QTreeWidgetItem * item, bool deleted_on_cascade = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::deleteItem\fP Delete and item and its children\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP item to delete 
+.br
+\fIdeleted_on_cascade\fP true if the item is not being directly deleted but is undergoing the deletion of its parent\&. (unused) 
+.RE
+.PP
+
+.SS "void GenericPanel::diagramAdded (\fBQETProject\fP * project, \fBDiagram\fP * diagram)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+
+.PP
+\fBGenericPanel::diagramAdded\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.br
+\fIdiagram\fP (unused) 
+.RE
+.PP
+
+.SS "\fBDiagram\fP * GenericPanel::diagramForItem (QTreeWidgetItem * item) const\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::diagramForItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nullptr 
+.RE
+.PP
+
+.SS "void GenericPanel::diagramRemoved (\fBQETProject\fP * project, \fBDiagram\fP * diagram)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+
+.PP
+\fBGenericPanel::diagramRemoved\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.br
+\fIdiagram\fP (unused) 
+.RE
+.PP
+
+.SS "void GenericPanel::diagramTitleChanged (\fBDiagram\fP * diagram, const QString & title)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+
+.PP
+\fBGenericPanel::diagramTitleChanged\fP Inform this panel the diagram \fIdiagram\fP has changed its title to \fItitle\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP 
+.br
+\fItitle\fP (unused) 
+.RE
+.PP
+
+.SS "void GenericPanel::diagramUsedTemplate (\fBTitleBlockTemplatesCollection\fP * collection, const QString & name)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+
+.PP
+\fBGenericPanel::diagramUsedTemplate\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection\fP 
+.br
+\fIname\fP : (unused) 
+.RE
+.PP
+
+.SS "void GenericPanel::emitFirstActivated ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBGenericPanel::emitFirstActivated\fP Emit the signal \fBfirstActivated()\fP\&. 
+.SS "bool GenericPanel::event (QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBGenericPanel::event\fP Handle various events; reimplemented here to emit the signal \fBfirstActivated()\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::fillDiagramItem (QTreeWidgetItem * diagram_qtwi, \fBDiagram\fP * diagram, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::fillDiagramItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_qtwi\fP 
+.br
+\fIdiagram\fP (unused) 
+.br
+\fIoptions\fP 
+.br
+\fIfreshly_created\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+fillItem(diagram_qtwi, options, freshly_created) 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::fillItem (QTreeWidgetItem * qtwi, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::fillItem\fP This generic method is called at the end of each fill*Item method\&. Its only purpose is being reimplemented in a subclass\&. The default implementation does nothing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqtwi\fP 
+.br
+\fIoptions\fP (unused) 
+.br
+\fIfreshly_created\fP (unused) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+qtwi 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::fillProjectItem (QTreeWidgetItem * project_qtwi, \fBQETProject\fP * project, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::fillProjectItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject_qtwi\fP 
+.br
+\fIproject\fP 
+.br
+\fIoptions\fP 
+.br
+\fIfreshly_created\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+fillItem(project_qtwi, options, freshly_created) 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::fillTemplateItem (QTreeWidgetItem * tb_template_qtwi, const \fBTitleBlockTemplateLocation\fP & tb_template, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::fillTemplateItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItb_template_qtwi\fP 
+.br
+\fItb_template\fP (unused) 
+.br
+\fIoptions\fP 
+.br
+\fIfreshly_created\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+fillItem(tb_template_qtwi, options, freshly_created) 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::fillTemplatesCollectionItem (QTreeWidgetItem * tbt_collection_qtwi, \fBTitleBlockTemplatesCollection\fP * tbt_collection, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::fillTemplatesCollectionItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_collection_qtwi\fP 
+.br
+\fItbt_collection\fP 
+.br
+\fIoptions\fP 
+.br
+\fIfreshly_created\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+fillItem(tbt_collection_qtwi, options, freshly_created) 
+.RE
+.PP
+
+.SS "bool GenericPanel::firstActivated ()\fC [signal]\fP"
+
+.SS "QTreeWidgetItem * GenericPanel::getItemForDiagram (\fBDiagram\fP * diagram, bool * created = \fCnullptr\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::getItemForDiagram\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP 
+.br
+\fIcreated\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+diagram_qtwi 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::getItemForProject (\fBQETProject\fP * project, bool * created = \fCnullptr\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP A standard project\&. 
+.br
+\fIcreated\fP if provided with a pointer to a boolean, this method will update it to reflect whether the returned item has been freshly created or not\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the tree item representing the provided project\&. If it does not appear within this panel, it is created\&. 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::getItemForTemplate (const \fBTitleBlockTemplateLocation\fP & tb_template, bool * created = \fCnullptr\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::getItemForTemplate\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItb_template\fP 
+.br
+\fIcreated\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+tb_template_qtwi 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::getItemForTemplatesCollection (\fBTitleBlockTemplatesCollection\fP * tbt_collection, bool * created = \fCnullptr\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::getItemForTemplatesCollection\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_collection\fP 
+.br
+\fIcreated\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+tbt_collection_item 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::itemForProject (\fBQETProject\fP * project)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP A standard project\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the tree item representing the provided project or 0 if this project does not appear within this panel\&. 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::itemForTemplatesCollection (\fBTitleBlockTemplatesCollection\fP * tbt_collection)\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::itemForTemplatesCollection\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_collection\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+tb_templates_\&.value(tbt_collection -> location(), nullptr) 
+.PP
+nullptr 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::makeItem (\fBQET::ItemType\fP type, QTreeWidgetItem * parent = \fCnullptr\fP, const QString & label = \fCQString()\fP, const QIcon & icon = \fCQIcon()\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::makeItem\fP Create a QTreeWidgetItem\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP Item type (e\&.g \fBQET::Diagram\fP, \fBQET::Project\fP, \&.\&.\&.) 
+.br
+\fIparent\fP Parent for the created item 
+.br
+\fIlabel\fP Label for the created item 
+.br
+\fIicon\fP Icon for the created item 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the create QTreeWidgetItem 
+.RE
+.PP
+
+.SS "void GenericPanel::markItemAsUnused (QTreeWidgetItem * qtwi)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::markItemAsUnused\fP Mark the provided QTreeWidgetItem as unused in its parent project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqtwi\fP A QTreeWidgetItem 
+.RE
+.PP
+
+.SS "void GenericPanel::panelContentChanged ()\fC [signal]\fP"
+
+.SS "void GenericPanel::projectDiagramsOrderChanged (\fBQETProject\fP * project, int from, int to)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+
+.PP
+\fBGenericPanel::projectDiagramsOrderChanged\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP project where diagram moved 
+.br
+\fIfrom\fP Index of diagram before move 
+.br
+\fIto\fP Index of diagram after move 
+.RE
+.PP
+
+.SS "\fBQETProject\fP * GenericPanel::projectForItem (QTreeWidgetItem * item) const\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::projectForItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+nullptr 
+.RE
+.PP
+
+.SS "void GenericPanel::projectInformationsChanged (\fBQETProject\fP * project)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+
+.PP
+\fBGenericPanel::projectInformationsChanged\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.RE
+.PP
+
+.SS "template<typename T > void GenericPanel::removeObsoleteItems (const QList< T > & expected_items, QTreeWidgetItem * item, \fBQET::ItemType\fP type, bool recursive)\fC [protected]\fP"
+This variant of \fBchildItems()\fP removes any child considered obsolete, i\&.e\&. not found in \fIexpected_items\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIexpected_items\fP A list of non-obsolete values 
+.br
+\fIitem\fP Parent item that will be searched\&. 
+.br
+\fItype\fP Type of items to look for\&. 
+.br
+\fIrecursive\fP Whether to search recursively\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBGenericPanel::childItems()\fP 
+.RE
+.PP
+
+.SS "void GenericPanel::reparent (QTreeWidgetItem * item, QTreeWidgetItem * parent)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::reparent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "\fBDiagram\fP * GenericPanel::selectedDiagram () const\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::selectedDiagram\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+diagramForItem(currentItem()) 
+.RE
+.PP
+
+.SS "\fBQETProject\fP * GenericPanel::selectedProject () const\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::selectedProject\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+projectForItem(currentItem()) 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplateLocation\fP GenericPanel::selectedTemplateLocation () const\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::selectedTemplateLocation\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+templateLocationForItem(currentItem()) 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplateLocation\fP GenericPanel::templateLocationForItem (QTreeWidgetItem * item) const\fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::templateLocationForItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBTitleBlockTemplateLocation()\fP 
+.RE
+.PP
+
+.SS "void GenericPanel::templatesCollectionChanged (\fBTitleBlockTemplatesCollection\fP * collection, const QString & template_name)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+
+.PP
+\fBGenericPanel::templatesCollectionChanged\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection\fP : Title block templates collection that changed and should be updated 
+.br
+\fItemplate_name\fP : Name of the changed template (unused) 
+.RE
+.PP
+
+.SS "void GenericPanel::unregisterItem (QTreeWidgetItem * item)\fC [protected]\fP"
+
+.PP
+\fBGenericPanel::unregisterItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::updateDiagramItem (QTreeWidgetItem * diagram_qtwi, \fBDiagram\fP * diagram, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::updateDiagramItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_qtwi\fP 
+.br
+\fIdiagram\fP 
+.br
+\fIoptions\fP 
+.br
+\fIfreshly_created\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+updateItem(diagram_qtwi, options, freshly_created) 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::updateItem (QTreeWidgetItem * qtwi, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::updateItem\fP This generic method is called at the end of each update*Item method\&. Its only purpose is being reimplemented in a subclass\&. The default implementation does nothing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqtwi\fP 
+.br
+\fIoptions\fP (unused) 
+.br
+\fIfreshly_created\fP (unused) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+qtwi 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::updateProjectItem (QTreeWidgetItem * project_qtwi, \fBQETProject\fP * project, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::updateProjectItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject_qtwi\fP 
+.br
+\fIproject\fP 
+.br
+\fIoptions\fP (unused) 
+.br
+\fIfreshly_created\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+updateItem(project_qtwi, options, freshly_created) 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * GenericPanel::updateTemplateItem (QTreeWidgetItem * tb_template_qtwi, const \fBTitleBlockTemplateLocation\fP & tb_template, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::updateTemplateItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItb_template_qtwi\fP 
+.br
+\fItb_template\fP 
+.br
+\fIoptions\fP 
+.br
+\fIfreshly_created\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+updateItem(tb_template_qtwi, options, freshly_created) 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBElementsPanel\fP\&.
+.SS "QTreeWidgetItem * GenericPanel::updateTemplatesCollectionItem (QTreeWidgetItem * tbt_collection_qtwi, \fBTitleBlockTemplatesCollection\fP * tbt_collection, PanelOptions options = \fC\fBAddAllChild\fP\fP, bool freshly_created = \fCfalse\fP)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGenericPanel::updateTemplatesCollectionItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_collection_qtwi\fP 
+.br
+\fItbt_collection\fP 
+.br
+\fIoptions\fP 
+.br
+\fIfreshly_created\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+updateItem(tbt_collection_qtwi, options, freshly_created) 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBElementsPanel\fP\&.
+.SS "template<typename T > template \fBDiagram\fP * GenericPanel::valueForItem (QTreeWidgetItem *) const\fC [protected]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value stored in \fIitem\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QHash<\fBDiagram\fP *, QTreeWidgetItem *> GenericPanel::diagrams_\fC [private]\fP"
+
+.PP
+diagrams_ Allow quick retrieval of the item representing a given diagram 
+.SS "bool GenericPanel::first_activation_\fC [private]\fP"
+
+.PP
+first_activation_ boolean used to track the first time this widget is activated/shown 
+.SS "QHash<\fBQETProject\fP *, QTreeWidgetItem *> GenericPanel::projects_\fC [private]\fP"
+
+.PP
+projects_ Allow quick retrieval of the item representing a given project 
+.SS "QHash<\fBTitleBlockTemplateLocation\fP, QTreeWidgetItem *> GenericPanel::tb_templates_\fC [private]\fP"
+
+.PP
+tb_templates_ Allow quick retrieval of the item representing a title block template 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

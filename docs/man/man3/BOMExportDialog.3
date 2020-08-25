@@ -1,0 +1,113 @@
+.TH "BOMExportDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BOMExportDialog \- The \fBBOMExportDialog\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <bomexportdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBOMExportDialog\fP (\fBQETProject\fP *project, QWidget *parent=nullptr)"
+.br
+.RI "\fBBOMExportDialog::BOMExportDialog\fP\&. "
+.ti -1c
+.RI "\fB~BOMExportDialog\fP () override"
+.br
+.RI "\fBBOMExportDialog::~BOMExportDialog\fP\&. "
+.ti -1c
+.RI "virtual int \fBexec\fP () override"
+.br
+.RI "\fBBOMExportDialog::exec\fP\&. "
+.ti -1c
+.RI "QString \fBgetBom\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_format_as_bom_clicked\fP (bool checked)"
+.br
+.RI "\fBBOMExportDialog::on_m_format_as_bom_clicked\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::BOMExportDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBElementQueryWidget\fP * \fBm_query_widget\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBBOMExportDialog\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BOMExportDialog::BOMExportDialog (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBBOMExportDialog::BOMExportDialog\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "BOMExportDialog::~BOMExportDialog ()\fC [override]\fP"
+
+.PP
+\fBBOMExportDialog::~BOMExportDialog\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "int BOMExportDialog::exec ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBBOMExportDialog::exec\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QString BOMExportDialog::getBom ()"
+
+.SS "void BOMExportDialog::on_m_format_as_bom_clicked (bool checked)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBBOMExportDialog::on_m_format_as_bom_clicked\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchecked\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQETProject\fP* BOMExportDialog::m_project = nullptr\fC [private]\fP"
+
+.SS "\fBElementQueryWidget\fP* BOMExportDialog::m_query_widget = nullptr\fC [private]\fP"
+
+.SS "Ui::BOMExportDialog* BOMExportDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

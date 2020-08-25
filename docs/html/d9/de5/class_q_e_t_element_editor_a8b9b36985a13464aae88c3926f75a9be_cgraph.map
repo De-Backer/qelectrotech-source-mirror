@@ -1,0 +1,52 @@
+<map id="QETElementEditor::slot_save" name="QETElementEditor::slot_save">
+<area shape="rect" id="node1" title="QETElementEditor::slot_save Save the current editing element. If the filepath or location is unknown,..." alt="" coords="5,528,200,555"/>
+<area shape="rect" id="node2" href="$d9/de5/class_q_e_t_element_editor.html#a10d88a8b64428ca86c31de02a56e26c1" title="QETElementEditor::checkElement Do several check about element. If error is occurred return false." alt="" coords="456,579,679,605"/>
+<area shape="rect" id="node3" href="$d4/dad/namespace_q_e_t_1_1_qet_message_box.html#aea0b231af3718d03172aee0e1923859a" title=" " alt="" coords="758,482,910,523"/>
+<area shape="rect" id="node5" href="$d5/dd7/class_elements_location.html#a0d81e7b444878d63aba9bbaaf5d6fa20" title="ElementsLocation::isNull." alt="" coords="1009,44,1176,71"/>
+<area shape="rect" id="node6" href="$d9/de5/class_q_e_t_element_editor.html#adf97309e5d7de0e274ac602e7de0a619" title="QETElementEditor::slot_saveAs Ask a location to user and save the current edited element to this loca..." alt="" coords="248,390,408,431"/>
+<area shape="rect" id="node29" href="$d9/de5/class_q_e_t_element_editor.html#aa0867302f94fe95901fca716cd75e3ba" title="QETElementEditor::toLocation Save the element to Location." alt="" coords="468,528,667,555"/>
+<area shape="rect" id="node44" href="$d9/de5/class_q_e_t_element_editor.html#a90d9019381d82b772d65a2a3b3f912a5" title="QETElementEditor::slot_saveAsFile Ask a file to user and save the current edited element to this file..." alt="" coords="248,630,408,671"/>
+<area shape="rect" id="node49" href="$d9/de5/class_q_e_t_element_editor.html#a01506702ad55268e3533d67aed67237c" title="QETElementEditor::toFile Save to file the drawed element." alt="" coords="482,731,653,757"/>
+<area shape="rect" id="node4" href="$d4/dad/namespace_q_e_t_1_1_qet_message_box.html#a101c69ea80bf5a90a3e5556c883285d7" title=" " alt="" coords="758,665,910,706"/>
+<area shape="rect" id="node7" href="$d4/d9f/class_element_dialog.html#ae0f316f7c49f42f28a1a4b2d08c27156" title="ElementDialog::getSaveElementLocation Display a dialog that allow to user to select an element (exist..." alt="" coords="462,310,673,351"/>
+<area shape="rect" id="node17" href="$d9/de5/class_q_e_t_element_editor.html#ab6564593bb3981a7265ed76e8c23aa29" title=" " alt="" coords="742,401,926,428"/>
+<area shape="rect" id="node18" href="$d9/de5/class_q_e_t_element_editor.html#a0878373a864a7708485b391c4a134638" title="QETElementEditor::setLocation The new location to edit." alt="" coords="464,208,671,235"/>
+<area shape="rect" id="node8" href="$d4/d9f/class_element_dialog.html#adc31d4c10b7949c59976cbf852049b6d" title="ElementDialog::execConfiguredDialog launch a dialog with the chosen mode." alt="" coords="731,314,937,355"/>
+<area shape="rect" id="node9" href="$d4/d9f/class_element_dialog.html#ab239b0d1b9d9a99332abe66554eeea81" title="ElementDialog::ElementDialog." alt="" coords="993,153,1193,180"/>
+<area shape="rect" id="node12" href="$d4/d9f/class_element_dialog.html#a14cd6de20b76ec0a26ec28b08a0654ac" title="ElementDialog::location." alt="" coords="1013,384,1173,411"/>
+<area shape="rect" id="node10" href="$d4/d9f/class_element_dialog.html#aef8b46325621e6729642ac7c50aeb86c" title="ElementDialog::setUpConnection Setup connection of this dialog." alt="" coords="1247,56,1463,83"/>
+<area shape="rect" id="node11" href="$d4/d9f/class_element_dialog.html#a9f5fdb41b3cdc1c0c955d3f6fe7bb7be" title="ElementDialog::setUpWidget Build and setup the widgets of this dialog." alt="" coords="1260,5,1451,32"/>
+<area shape="rect" id="node13" href="$d5/dd7/class_elements_location.html#a78178bad97a2aa31fa9f61f1b77f002d" title="ElementsLocation::addToPath Add a string to the actual path of this location." alt="" coords="1257,376,1453,403"/>
+<area shape="rect" id="node15" href="$d5/dd7/class_elements_location.html#a86f6d84916123008ed9b90dac81eeda5" title="ElementsLocation::isDirectory." alt="" coords="1256,528,1455,555"/>
+<area shape="rect" id="node16" href="$d5/dd7/class_elements_location.html#a45f9e8dbe179a42f73a8ea0625bddc7e" title="ElementsLocation::isElement." alt="" coords="1519,587,1711,613"/>
+<area shape="rect" id="node14" href="$d5/dd7/class_elements_location.html#a9bb48a1e0d52bec51f37b8df599c51fe" title="ElementsLocation::isFileSystem." alt="" coords="1533,318,1698,359"/>
+<area shape="rect" id="node19" href="$d5/dd7/class_elements_location.html#a52e18c44080a407413fcf852ae3665f6" title="ElementsLocation::isWritable." alt="" coords="997,208,1188,235"/>
+<area shape="rect" id="node24" href="$d9/de5/class_q_e_t_element_editor.html#aeeed0bf113baeb2160a58d3d784a86d8" title=" " alt="" coords="727,263,941,289"/>
+<area shape="rect" id="node27" href="$d9/de5/class_q_e_t_element_editor.html#a2b96e825abbde3388d85ed8e08d529fa" title=" " alt="" coords="754,95,914,137"/>
+<area shape="rect" id="node20" href="$d7/df8/class_q_e_t_app.html#aa1d76144001acd7736b11f78b0dee649" title="QETApp::commonElementsDirN like QString QETApp::commonElementsDir but without &quot;/&quot; at the end." alt="" coords="1250,107,1461,133"/>
+<area shape="rect" id="node22" href="$d5/dd7/class_elements_location.html#a5d08aed111ae277d92d65193d496e0d8" title="ElementsLocation::fileSystemPath." alt="" coords="1244,477,1467,504"/>
+<area shape="rect" id="node23" href="$d6/dc5/class_q_e_t_project.html#aae99a71249123116c24ea5d8e435de71" title="QETProject::isReadOnly." alt="" coords="1273,208,1437,235"/>
+<area shape="rect" id="node21" href="$d7/df8/class_q_e_t_app.html#a63b7129a16de541f941e880e4c82e0b4" title="QETApp::commonElementsDir." alt="" coords="1515,107,1716,133"/>
+<area shape="rect" id="node25" href="$d9/de5/class_q_e_t_element_editor.html#aa8e95aa54f6a048d4c263623246c6b71" title=" " alt="" coords="1013,259,1173,301"/>
+<area shape="rect" id="node26" href="$d2/d17/class_element_scene.html#aee8c8d6475aa50a773bbac1346de9107" title="ElementScene::clipboardMayContainElement." alt="" coords="1259,259,1451,301"/>
+<area shape="rect" id="node28" href="$d9/de5/class_q_e_t_element_editor.html#ab77a6ef16b79400ad623ce4eb50c715f" title=" " alt="" coords="989,103,1196,129"/>
+<area shape="rect" id="node30" href="$d5/dd7/class_elements_location.html#a1e4c3bb8de7967fa2dc850705ce70b6a" title="ElementsLocation::setXml Replace the current xml description by xml_document; The document element of..." alt="" coords="747,548,921,575"/>
+<area shape="rect" id="node43" href="$d9/de5/class_q_e_t_element_editor.html#a7469cfdb2035c222416d6b72e757f154" title="QETElementEditor::UncheckAddPrimitive Uncheck all action related to primitive." alt="" coords="739,599,929,641"/>
+<area shape="rect" id="node31" href="$df/dd9/class_xml_element_collection.html#ace09f3c88df3749b2e02ebdd099cfe92" title="XmlElementCollection::addElementDefinition Add the élément defintion xml_definition in the directory ..." alt="" coords="1015,897,1170,938"/>
+<area shape="rect" id="node33" href="$d5/dd7/class_elements_location.html#af60688342bf5c70c8619e77c5f6232e0" title="ElementsLocation::collectionPath Return the path of the represented element relative to collection if..." alt="" coords="1247,696,1463,723"/>
+<area shape="rect" id="node35" href="$d6/dc5/class_q_e_t_project.html#a6e182aa14ce7c48753e6be355ebbdb5f" title="QETProject::embeddedCollection." alt="" coords="1253,747,1458,789"/>
+<area shape="rect" id="node36" href="$d5/dd7/class_elements_location.html#acfded834f9b1e5b0fc2b0933a107ff1e" title="ElementsLocation::exist." alt="" coords="1011,645,1174,672"/>
+<area shape="rect" id="node38" href="$d5/dd7/class_elements_location.html#ade366028c25fbe20a2b54c4186a37183" title="ElementsLocation::isProject." alt="" coords="1000,493,1185,520"/>
+<area shape="rect" id="node39" href="$d5/dd7/class_elements_location.html#aca8d214a0d7569264c514dc0e302fca5" title="ElementsLocation::project." alt="" coords="1006,544,1179,571"/>
+<area shape="rect" id="node40" href="$dd/d7e/namespace_q_e_t_x_m_l.html#a236bf268408d5c171ff719c146615649" title="QETXML::writeXmlFile Export an XML document to an UTF&#45;8 text file indented with 4 spaces,..." alt="" coords="1015,595,1171,621"/>
+<area shape="rect" id="node41" href="$d5/dd7/class_elements_location.html#a00a4e9b223af42e8350f3d823d0dddc4" title="ElementsLocation::xml." alt="" coords="1015,813,1170,840"/>
+<area shape="rect" id="node32" href="$df/dd9/class_xml_element_collection.html#a21d7a45d847c560734ee73ca5dd9c3d3" title="XmlElementCollection::directory." alt="" coords="1280,930,1431,971"/>
+<area shape="rect" id="node34" href="$d5/dd7/class_elements_location.html#ac46aeb57416fc91e16266fc937a02810" title="ElementsLocation::path." alt="" coords="1536,696,1695,723"/>
+<area shape="rect" id="node37" href="$df/dd9/class_xml_element_collection.html#a7f27796160cb849693b029979c0d5eaf" title="XmlElementCollection::exist Return true if the path path exist in this collection." alt="" coords="1280,579,1431,621"/>
+<area shape="rect" id="node42" href="$df/dd9/class_xml_element_collection.html#acd7dcecea45b62258579598d3782610d" title="XmlElementCollection::element." alt="" coords="1280,865,1431,906"/>
+<area shape="rect" id="node45" href="$d7/df8/class_q_e_t_app.html#a0991c2c64acf67c4bea937c8de80aaac" title="QETApp::customElementsDir." alt="" coords="470,781,665,808"/>
+<area shape="rect" id="node47" href="$d7/df8/class_q_e_t_app.html#a13e42ea941e53f93a3c982d32491f622" title="QETApp::elementsRecentFiles." alt="" coords="467,680,668,707"/>
+<area shape="rect" id="node48" href="$d9/de5/class_q_e_t_element_editor.html#ac353b4f772efc33c56fd8c964ec66fa8" title=" " alt="" coords="461,259,674,285"/>
+<area shape="rect" id="node46" href="$d7/df8/class_q_e_t_app.html#a19c87f4f930f26f4fc60118fa5a79b8f" title="QETApp::configDir Return the QET configuration folder, i.e. the path to the folder in which QET will ..." alt="" coords="769,781,899,808"/>
+<area shape="rect" id="node50" href="$dc/da9/namespace_q_e_t.html#a9d3e518c2a6f63bfdf8edcdb253b3246" title=" " alt="" coords="771,731,897,757"/>
+</map>

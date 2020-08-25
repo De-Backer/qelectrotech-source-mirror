@@ -1,0 +1,793 @@
+.TH "Terminal" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Terminal \- The \fBTerminal\fP class This class represents a terminal of an electrical element, i\&.e\&. a possible plug point for conductors\&. This class handles all mouse events for connecting conductors\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <terminal\&.h>\fP
+.PP
+Inherits QGraphicsObject\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1002 }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBconductorWasAdded\fP (\fBConductor\fP *conductor)"
+.br
+.ti -1c
+.RI "void \fBconductorWasRemoved\fP (\fBConductor\fP *conductor)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminal\fP (QPointF, \fBQet::Orientation\fP, \fBElement\fP *=nullptr)"
+.br
+.ti -1c
+.RI "\fBTerminal\fP (qreal, qreal, \fBQet::Orientation\fP, \fBElement\fP *=nullptr)"
+.br
+.ti -1c
+.RI "\fBTerminal\fP (\fBTerminalData\fP *data, \fBElement\fP *e=nullptr)"
+.br
+.ti -1c
+.RI "\fBTerminal\fP (QPointF, \fBQet::Orientation\fP, QString \fBnumber\fP, QString \fBname\fP, bool hiddenName, \fBElement\fP *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~Terminal\fP () override"
+.br
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.RI "type Enable the use of qgraphicsitem_cast to safely cast a QGraphicsItem into a \fBTerminal\fP "
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *) override"
+.br
+.RI "\fBTerminal::paint\fP Fonction de dessin des bornes\&. "
+.ti -1c
+.RI "void \fBdrawHelpLine\fP (bool draw=true)"
+.br
+.RI "\fBTerminal::drawHelpLine\fP\&. "
+.ti -1c
+.RI "QLineF \fBHelpLine\fP () const"
+.br
+.RI "\fBTerminal::HelpLine\fP\&. "
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBTerminal::boundingRect\fP\&. "
+.ti -1c
+.RI "\fBTerminal\fP * \fBalignedWithTerminal\fP () const"
+.br
+.RI "\fBTerminal::alignedWithTerminal\fP If this terminal is aligned with an other terminal and is orientation is opposed return the other terminal else return nullptr\&. "
+.ti -1c
+.RI "bool \fBaddConductor\fP (\fBConductor\fP *conductor)"
+.br
+.RI "\fBTerminal::addConductor\fP Add a conductor to this terminal\&. "
+.ti -1c
+.RI "void \fBremoveConductor\fP (\fBConductor\fP *conductor)"
+.br
+.RI "\fBTerminal::removeConductor\fP Remove a conductor from this terminal\&. "
+.ti -1c
+.RI "int \fBconductorsCount\fP () const"
+.br
+.RI "\fBTerminal::conductorsCount\fP\&. "
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP () const"
+.br
+.RI "\fBTerminal::diagram\fP\&. "
+.ti -1c
+.RI "\fBElement\fP * \fBparentElement\fP () const"
+.br
+.RI "\fBTerminal::parentElement\fP\&. "
+.ti -1c
+.RI "QUuid \fBuuid\fP () const"
+.br
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBconductors\fP () const"
+.br
+.RI "\fBTerminal::conductors\fP\&. "
+.ti -1c
+.RI "\fBQet::Orientation\fP \fBorientation\fP () const"
+.br
+.ti -1c
+.RI "QPointF \fBdockConductor\fP () const"
+.br
+.RI "\fBTerminal::dockConductor\fP\&. "
+.ti -1c
+.RI "QString \fBnumber\fP () const"
+.br
+.RI "\fBTerminal::number\fP\&. "
+.ti -1c
+.RI "QString \fBname\fP () const"
+.br
+.RI "\fBTerminal::name\fP\&. "
+.ti -1c
+.RI "void \fBsetNumber\fP (QString \fBnumber\fP)"
+.br
+.RI "\fBTerminal::setNumber\fP\&. "
+.ti -1c
+.RI "void \fBsetName\fP (QString \fBname\fP, bool hiddenName)"
+.br
+.RI "\fBTerminal::setName\fP\&. "
+.ti -1c
+.RI "void \fBupdateConductor\fP ()"
+.br
+.RI "\fBTerminal::updateConductor\fP Update the path of conductor docked to this terminal\&. "
+.ti -1c
+.RI "bool \fBisLinkedTo\fP (\fBTerminal\fP *)"
+.br
+.RI "\fBTerminal::isLinkedTo\fP\&. "
+.ti -1c
+.RI "bool \fBcanBeLinkedTo\fP (\fBTerminal\fP *)"
+.br
+.RI "\fBTerminal::canBeLinkedTo\fP Checking if the terminal can be linked to \fCother_terminal\fP or not Reasons for not linable: "
+.ti -1c
+.RI "bool \fBfromXml\fP (QDomElement &)"
+.br
+.RI "\fBTerminal::fromXml\fP Permet de savoir si un element XML represente cette borne\&. Attention, l'element XML n'est pas verifie\&. "
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &) const"
+.br
+.RI "\fBTerminal::toXml\fP Methode d'export en XML\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBvalideXml\fP (QDomElement &)"
+.br
+.RI "\fBTerminal::valideXml\fP Permet de savoir si un element XML represente une borne\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const qreal \fBterminalSize\fP = 4\&.0"
+.br
+.ti -1c
+.RI "static const qreal \fBZ\fP = 1000"
+.br
+.ti -1c
+.RI "static QColor \fBneutralColor\fP = QColor(Qt::blue)"
+.br
+.RI "default color "
+.ti -1c
+.RI "static QColor \fBallowedColor\fP = QColor(Qt::darkGreen)"
+.br
+.RI "color for legal actions "
+.ti -1c
+.RI "static QColor \fBwarningColor\fP = QColor('#ff8000')"
+.br
+.RI "color for allowed but fuzzy or not recommended actions "
+.ti -1c
+.RI "static QColor \fBforbiddenColor\fP = QColor(Qt::red)"
+.br
+.RI "color for forbidden actions "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBhoverEnterEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.RI "\fBTerminal::hoverEnterEvent\fP Gere l'entree de la souris sur la zone de la Borne\&. "
+.ti -1c
+.RI "void \fBhoverMoveEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.RI "\fBTerminal::hoverMoveEvent\fP Gere les mouvements de la souris sur la zone de la Borne\&. "
+.ti -1c
+.RI "void \fBhoverLeaveEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.RI "\fBTerminal::hoverLeaveEvent\fP Gere le fait que la souris sorte de la zone de la Borne\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.RI "\fBTerminal::mousePressEvent\fP Gere le fait qu'on enfonce un bouton de la souris sur la Borne\&. "
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.RI "\fBTerminal::mouseMoveEvent\fP Gere le fait qu'on bouge la souris sur la Borne\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.RI "\fBTerminal::mouseReleaseEvent\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminal\fP (const \fBTerminal\fP &)"
+.br
+.ti -1c
+.RI "void \fBinit\fP (QString \fBnumber\fP, QString \fBname\fP, bool hiddenName)"
+.br
+.RI "\fBTerminal::init\fP Methode privee pour initialiser la borne\&. "
+.ti -1c
+.RI "void \fBinit\fP (QPointF pf, \fBQet::Orientation\fP o, QString \fBnumber\fP, QString \fBname\fP, bool hiddenName)"
+.br
+.RI "\fBTerminal::init\fP Additionaly to the init above, this method stores position and orientation into the data class\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_draw_help_line\fP {false}"
+.br
+.ti -1c
+.RI "QGraphicsLineItem * \fBm_help_line\fP {nullptr}"
+.br
+.ti -1c
+.RI "QGraphicsLineItem * \fBm_help_line_a\fP {nullptr}"
+.br
+.ti -1c
+.RI "\fBTerminalData\fP * \fBd\fP"
+.br
+.ti -1c
+.RI "\fBElement\fP * \fBparent_element_\fP {nullptr}"
+.br
+.RI "Parent electrical element\&. "
+.ti -1c
+.RI "QPointF \fBdock_elmt_\fP"
+.br
+.RI "docking point for parent element "
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBconductors_\fP"
+.br
+.RI "List of conductors attached to the terminal\&. "
+.ti -1c
+.RI "QRectF * \fBbr_\fP {nullptr}"
+.br
+.ti -1c
+.RI "\fBTerminal\fP * \fBprevious_terminal_\fP"
+.br
+.RI "Last terminal seen through an attached conductor\&. "
+.ti -1c
+.RI "bool \fBhovered_\fP"
+.br
+.RI "Whether the mouse pointer is hovering the terminal\&. "
+.ti -1c
+.RI "QColor \fBhovered_color_\fP"
+.br
+.RI "Color used for the hover effect\&. "
+.ti -1c
+.RI "QString \fBnumber_terminal_\fP"
+.br
+.RI "Number of \fBTerminal\fP\&. "
+.ti -1c
+.RI "QString \fBname_terminal_\fP"
+.br
+.RI "Name of \fBTerminal\fP\&. "
+.ti -1c
+.RI "bool \fBname_terminal_hidden\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBTerminal\fP class This class represents a terminal of an electrical element, i\&.e\&. a possible plug point for conductors\&. This class handles all mouse events for connecting conductors\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Terminal::Terminal (QPointF pf, \fBQet::Orientation\fP o, \fBElement\fP * e = \fCnullptr\fP)"
+initialise une borne 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpf\fP position du point d'amarrage pour un conducteur 
+.br
+\fIo\fP orientation de la borne : Qt::Horizontal ou Qt::Vertical 
+.br
+\fIe\fP \fBElement\fP auquel cette borne appartient 
+.RE
+.PP
+
+.SS "Terminal::Terminal (qreal pf_x, qreal pf_y, \fBQet::Orientation\fP o, \fBElement\fP * e = \fCnullptr\fP)"
+initialise une borne 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpf_x\fP Abscisse du point d'amarrage pour un conducteur 
+.br
+\fIpf_y\fP Ordonnee du point d'amarrage pour un conducteur 
+.br
+\fIo\fP orientation de la borne : Qt::Horizontal ou Qt::Vertical 
+.br
+\fIe\fP \fBElement\fP auquel cette borne appartient 
+.RE
+.PP
+
+.SS "Terminal::Terminal (\fBTerminalData\fP * data, \fBElement\fP * e = \fCnullptr\fP)"
+
+.SS "Terminal::Terminal (QPointF pf, \fBQet::Orientation\fP o, QString num, QString name, bool hiddenName, \fBElement\fP * e = \fCnullptr\fP)"
+initialise une borne 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpf\fP position du point d'amarrage pour un conducteur 
+.br
+\fIo\fP orientation de la borne : Qt::Horizontal ou Qt::Vertical 
+.br
+\fInum\fP number of terminal (ex 3 - 4 for NO) 
+.br
+\fIname\fP of terminal 
+.br
+\fIhiddenName\fP hide or show the name 
+.br
+\fIe\fP \fBElement\fP auquel cette borne appartient 
+.RE
+.PP
+
+.SS "Terminal::~Terminal ()\fC [override]\fP"
+Destructeur La destruction de la borne entraine la destruction des conducteurs associes\&. 
+.SS "Terminal::Terminal (const \fBTerminal\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Terminal::addConductor (\fBConductor\fP * conductor)"
+
+.PP
+\fBTerminal::addConductor\fP Add a conductor to this terminal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP : the conductor to add\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the conductor was successfully added 
+.RE
+.PP
+
+.SS "\fBTerminal\fP * Terminal::alignedWithTerminal () const"
+
+.PP
+\fBTerminal::alignedWithTerminal\fP If this terminal is aligned with an other terminal and is orientation is opposed return the other terminal else return nullptr\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QRectF Terminal::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBTerminal::boundingRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Le rectangle (en precision flottante) delimitant la borne et ses alentours\&. 
+.RE
+.PP
+
+.SS "bool Terminal::canBeLinkedTo (\fBTerminal\fP * other_terminal)"
+
+.PP
+\fBTerminal::canBeLinkedTo\fP Checking if the terminal can be linked to \fCother_terminal\fP or not Reasons for not linable: 
+.IP "\(bu" 2
+\fCother_terminal\fP is this terminal
+.IP "\(bu" 2
+this terminal is already connected to \fCother_terminal\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_terminal\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if this terminal can be linked to other_terminal, otherwise false 
+.RE
+.PP
+
+.PP
+
+.SS "QList< \fBConductor\fP * > Terminal::conductors () const"
+
+.PP
+\fBTerminal::conductors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+La liste des conducteurs lies a cette borne 
+.RE
+.PP
+
+.SS "int Terminal::conductorsCount () const\fC [inline]\fP"
+
+.PP
+\fBTerminal::conductorsCount\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the number of conductors attached to the terminal\&. 
+.RE
+.PP
+
+.SS "void Terminal::conductorWasAdded (\fBConductor\fP * conductor)\fC [signal]\fP"
+
+.SS "void Terminal::conductorWasRemoved (\fBConductor\fP * conductor)\fC [signal]\fP"
+
+.SS "\fBDiagram\fP * Terminal::diagram () const"
+
+.PP
+\fBTerminal::diagram\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+le \fBDiagram\fP auquel cette borne appartient, ou 0 si cette borne est independant 
+.RE
+.PP
+
+.SS "QPointF Terminal::dockConductor () const"
+
+.PP
+\fBTerminal::dockConductor\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the position, relative to the scene, of the docking point for conductors\&. 
+.RE
+.PP
+
+.SS "void Terminal::drawHelpLine (bool draw = \fCtrue\fP)"
+
+.PP
+\fBTerminal::drawHelpLine\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdraw\fP : true, display the help line false, hide it\&. 
+.RE
+.PP
+
+.SS "bool Terminal::fromXml (QDomElement & terminal)"
+
+.PP
+\fBTerminal::fromXml\fP Permet de savoir si un element XML represente cette borne\&. Attention, l'element XML n'est pas verifie\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIterminal\fP Le QDomElement a analyser 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si la borne 'se reconnait' (memes coordonnes, meme orientation), false sinon 
+.RE
+.PP
+
+.SS "QLineF Terminal::HelpLine () const"
+
+.PP
+\fBTerminal::HelpLine\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a line with coordinate P1 the dock point of conductor and P2 the border of diagram, according to the orientation of terminal The line is in scene coordinate; 
+.RE
+.PP
+
+.SS "void Terminal::hoverEnterEvent (QGraphicsSceneHoverEvent *)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBTerminal::hoverEnterEvent\fP Gere l'entree de la souris sur la zone de la Borne\&. 
+.SS "void Terminal::hoverLeaveEvent (QGraphicsSceneHoverEvent *)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBTerminal::hoverLeaveEvent\fP Gere le fait que la souris sorte de la zone de la Borne\&. 
+.SS "void Terminal::hoverMoveEvent (QGraphicsSceneHoverEvent *)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBTerminal::hoverMoveEvent\fP Gere les mouvements de la souris sur la zone de la Borne\&. 
+.SS "void Terminal::init (QPointF pf, \fBQet::Orientation\fP o, QString number, QString name, bool hiddenName)\fC [private]\fP"
+
+.PP
+\fBTerminal::init\fP Additionaly to the init above, this method stores position and orientation into the data class\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpf\fP 
+.br
+\fIo\fP 
+.br
+\fInumber\fP 
+.br
+\fIname\fP 
+.br
+\fIhiddenName\fP 
+.RE
+.PP
+
+.SS "void Terminal::init (QString number, QString name, bool hiddenName)\fC [private]\fP"
+
+.PP
+\fBTerminal::init\fP Methode privee pour initialiser la borne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInumber\fP of terminal 
+.br
+\fIname\fP of terminal 
+.br
+\fIhiddenName\fP 
+.RE
+.PP
+
+.SS "bool Terminal::isLinkedTo (\fBTerminal\fP * other_terminal)"
+
+.PP
+\fBTerminal::isLinkedTo\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_terminal\fP Autre borne 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si cette borne est reliee a other_terminal, false sion 
+.RE
+.PP
+
+.SS "void Terminal::mouseMoveEvent (QGraphicsSceneMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBTerminal::mouseMoveEvent\fP Gere le fait qu'on bouge la souris sur la Borne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP L'evenement souris correspondant 
+.RE
+.PP
+
+.SS "void Terminal::mousePressEvent (QGraphicsSceneMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBTerminal::mousePressEvent\fP Gere le fait qu'on enfonce un bouton de la souris sur la Borne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP L'evenement souris correspondant 
+.RE
+.PP
+
+.SS "void Terminal::mouseReleaseEvent (QGraphicsSceneMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBTerminal::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "QString Terminal::name () const\fC [inline]\fP"
+
+.PP
+\fBTerminal::name\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the name of terminal\&. 
+.RE
+.PP
+
+.SS "QString Terminal::number () const\fC [inline]\fP"
+
+.PP
+\fBTerminal::number\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the number of terminal\&. 
+.RE
+.PP
+
+.SS "\fBQet::Orientation\fP Terminal::orientation () const"
+Permet de connaitre l'orientation de la borne\&. Si le parent de la borne est bien un \fBElement\fP, cette fonction renvoie l'orientation par rapport a la scene de la borne, en tenant compte du fait que l'element ait pu etre pivote\&. Sinon elle renvoie son sens normal\&. 
+.PP
+\fBReturns\fP
+.RS 4
+L'orientation actuelle de la \fBTerminal\fP\&. 
+.RE
+.PP
+
+.SS "void Terminal::paint (QPainter * p, const QStyleOptionGraphicsItem * options, QWidget *)\fC [override]\fP"
+
+.PP
+\fBTerminal::paint\fP Fonction de dessin des bornes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP Le QPainter a utiliser 
+.br
+\fIoptions\fP Les options de dessin 
+.RE
+.PP
+
+.SS "\fBElement\fP * Terminal::parentElement () const"
+
+.PP
+\fBTerminal::parentElement\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+L'element auquel cette borne est rattachee 
+.RE
+.PP
+
+.SS "void Terminal::removeConductor (\fBConductor\fP * conductor)"
+
+.PP
+\fBTerminal::removeConductor\fP Remove a conductor from this terminal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP : conductor to remove 
+.RE
+.PP
+
+.SS "void Terminal::setName (QString name, bool hiddenName)"
+
+.PP
+\fBTerminal::setName\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP : QString 
+.br
+\fIhiddenName\fP : bool 
+.RE
+.PP
+
+.SS "void Terminal::setNumber (QString number)"
+
+.PP
+\fBTerminal::setNumber\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInumber\fP 
+.RE
+.PP
+
+.SS "QDomElement Terminal::toXml (QDomDocument & doc) const"
+
+.PP
+\fBTerminal::toXml\fP Methode d'export en XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdoc\fP Le Document XML a utiliser pour creer l'element XML 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+un QDomElement representant cette borne 
+.RE
+.PP
+
+.SS "int Terminal::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.PP
+type Enable the use of qgraphicsitem_cast to safely cast a QGraphicsItem into a \fBTerminal\fP 
+.PP
+\fBReturns\fP
+.RS 4
+the QGraphicsItem type 
+.RE
+.PP
+
+.SS "void Terminal::updateConductor ()"
+
+.PP
+\fBTerminal::updateConductor\fP Update the path of conductor docked to this terminal\&. 
+.SS "QUuid Terminal::uuid () const"
+
+.SS "bool Terminal::valideXml (QDomElement & terminal)\fC [static]\fP"
+
+.PP
+\fBTerminal::valideXml\fP Permet de savoir si un element XML represente une borne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIterminal\fP Le QDomElement a analyser 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si le QDomElement passe en parametre est une borne, false sinon 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QColor Terminal::allowedColor = QColor(Qt::darkGreen)\fC [static]\fP"
+
+.PP
+color for legal actions 
+.SS "QRectF* Terminal::br_ {nullptr}\fC [private]\fP"
+Pointer to a rectangle representing the terminal bounding rect; used to calculate the bounding rect once only; used a pointer because \fBboundingRect()\fP is supposed to be const\&. 
+.SS "QList<\fBConductor\fP *> Terminal::conductors_\fC [private]\fP"
+
+.PP
+List of conductors attached to the terminal\&. 
+.SS "\fBTerminalData\fP* Terminal::d\fC [private]\fP"
+
+.SS "QPointF Terminal::dock_elmt_\fC [private]\fP"
+
+.PP
+docking point for parent element 
+.SS "QColor Terminal::forbiddenColor = QColor(Qt::red)\fC [static]\fP"
+
+.PP
+color for forbidden actions 
+.SS "bool Terminal::hovered_\fC [private]\fP"
+
+.PP
+Whether the mouse pointer is hovering the terminal\&. 
+.SS "QColor Terminal::hovered_color_\fC [private]\fP"
+
+.PP
+Color used for the hover effect\&. 
+.SS "bool Terminal::m_draw_help_line {false}\fC [private]\fP"
+
+.SS "QGraphicsLineItem* Terminal::m_help_line {nullptr}\fC [private]\fP"
+
+.SS "QGraphicsLineItem* Terminal::m_help_line_a {nullptr}\fC [private]\fP"
+
+.SS "QString Terminal::name_terminal_\fC [private]\fP"
+
+.PP
+Name of \fBTerminal\fP\&. 
+.SS "bool Terminal::name_terminal_hidden\fC [private]\fP"
+
+.SS "QColor Terminal::neutralColor = QColor(Qt::blue)\fC [static]\fP"
+
+.PP
+default color 
+.SS "QString Terminal::number_terminal_\fC [private]\fP"
+
+.PP
+Number of \fBTerminal\fP\&. 
+.SS "\fBElement\fP* Terminal::parent_element_ {nullptr}\fC [private]\fP"
+
+.PP
+Parent electrical element\&. 
+.SS "\fBTerminal\fP* Terminal::previous_terminal_\fC [private]\fP"
+
+.PP
+Last terminal seen through an attached conductor\&. 
+.SS "const qreal Terminal::terminalSize = 4\&.0\fC [static]\fP"
+
+.SS "QColor Terminal::warningColor = QColor('#ff8000')\fC [static]\fP"
+
+.PP
+color for allowed but fuzzy or not recommended actions 
+.SS "const qreal Terminal::Z = 1000\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

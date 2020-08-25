@@ -1,0 +1,180 @@
+.TH "ElementItemEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementItemEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementitemeditor\&.h>\fP
+.PP
+Inherits QWidget\&.
+.PP
+Inherited by \fBArcEditor\fP, \fBDynamicTextFieldEditor\fP, \fBEllipseEditor\fP, \fBLineEditor\fP, \fBPolygonEditor\fP, \fBRectangleEditor\fP, \fBStyleEditor\fP, \fBTerminalEditor\fP, and \fBTextEditor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementItemEditor\fP (\fBQETElementEditor\fP *, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ElementItemEditor\fP () override"
+.br
+.ti -1c
+.RI "virtual \fBQETElementEditor\fP * \fBelementEditor\fP () const"
+.br
+.ti -1c
+.RI "virtual \fBElementScene\fP * \fBelementScene\fP () const"
+.br
+.ti -1c
+.RI "virtual QUndoStack & \fBundoStack\fP () const"
+.br
+.ti -1c
+.RI "virtual QString \fBelementTypeName\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetElementTypeName\fP (const QString &)"
+.br
+.ti -1c
+.RI "virtual void \fBdetach\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBsetPart\fP (\fBCustomElementPart\fP *)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBsetParts\fP (QList< \fBCustomElementPart\fP * >)"
+.br
+.ti -1c
+.RI "virtual \fBCustomElementPart\fP * \fBcurrentPart\fP () const =0"
+.br
+.ti -1c
+.RI "virtual QList< \fBCustomElementPart\fP * > \fBcurrentParts\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBupdateForm\fP ()=0"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementItemEditor\fP (const \fBElementItemEditor\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETElementEditor\fP * \fBelement_editor\fP"
+.br
+.ti -1c
+.RI "QString \fBelement_type_name\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the base class for primitives editors within the element editor\&. It provides methods to access the editor itself, the undo stack, the edition scene and even a method to easily take a ChangePartCommand into account\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementItemEditor::ElementItemEditor (\fBQETElementEditor\fP * editor, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP \fBQETElementEditor\fP auquel cet editeur appartient 
+.br
+\fIparent\fP QWidget parent de cet editeur 
+.RE
+.PP
+
+.SS "ElementItemEditor::~ElementItemEditor ()\fC [inline]\fP, \fC [override]\fP"
+
+.SS "ElementItemEditor::ElementItemEditor (const \fBElementItemEditor\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBCustomElementPart\fP* ElementItemEditor::currentPart () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTerminalEditor\fP, \fBStyleEditor\fP, \fBArcEditor\fP, \fBLineEditor\fP, \fBEllipseEditor\fP, \fBRectangleEditor\fP, \fBTextEditor\fP, \fBDynamicTextFieldEditor\fP, and \fBPolygonEditor\fP\&.
+.SS "virtual QList<\fBCustomElementPart\fP*> ElementItemEditor::currentParts () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBTerminalEditor\fP, \fBStyleEditor\fP, \fBArcEditor\fP, \fBLineEditor\fP, \fBEllipseEditor\fP, \fBRectangleEditor\fP, \fBTextEditor\fP, \fBDynamicTextFieldEditor\fP, and \fBPolygonEditor\fP\&.
+.SS "void ElementItemEditor::detach ()\fC [virtual]\fP"
+Detache l'editeur de la primitive qu'il edite\&. Equivaut a setPart(0) 
+.PP
+\fBSee also\fP
+.RS 4
+\fBsetPart\fP 
+.RE
+.PP
+
+.SS "\fBQETElementEditor\fP * ElementItemEditor::elementEditor () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+le \fBQETElementEditor\fP auquel cet editeur appartient 
+.RE
+.PP
+
+.SS "\fBElementScene\fP * ElementItemEditor::elementScene () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+l'\fBElementScene\fP contenant les parties editees par cet editeur 
+.RE
+.PP
+
+.SS "QString ElementItemEditor::elementTypeName () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Le nom du type d'element edite 
+.RE
+.PP
+
+.SS "void ElementItemEditor::setElementTypeName (const QString & name)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Nom du type d'element edite 
+.RE
+.PP
+
+.SS "virtual bool ElementItemEditor::setPart (\fBCustomElementPart\fP *)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBRectangleEditor\fP, \fBTextEditor\fP, \fBDynamicTextFieldEditor\fP, \fBPolygonEditor\fP, \fBTerminalEditor\fP, \fBStyleEditor\fP, \fBArcEditor\fP, \fBLineEditor\fP, and \fBEllipseEditor\fP\&.
+.SS "virtual bool ElementItemEditor::setParts (QList< \fBCustomElementPart\fP * >)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBStyleEditor\fP, \fBTextEditor\fP, \fBDynamicTextFieldEditor\fP, \fBTerminalEditor\fP, \fBArcEditor\fP, \fBLineEditor\fP, \fBEllipseEditor\fP, and \fBRectangleEditor\fP\&.
+.SS "QUndoStack & ElementItemEditor::undoStack () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+la QUndoStack a utiliser pour les annulations 
+.RE
+.PP
+
+.SS "virtual void ElementItemEditor::updateForm ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBDynamicTextFieldEditor\fP, \fBPolygonEditor\fP, and \fBTextEditor\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQETElementEditor\fP* ElementItemEditor::element_editor\fC [private]\fP"
+
+.SS "QString ElementItemEditor::element_type_name\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

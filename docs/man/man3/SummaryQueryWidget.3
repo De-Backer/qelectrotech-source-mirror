@@ -1,0 +1,248 @@
+.TH "SummaryQueryWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SummaryQueryWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <summaryquerywidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSummaryQueryWidget\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBSummaryQueryWidget::SummaryQueryWidget\fP\&. "
+.ti -1c
+.RI "\fB~SummaryQueryWidget\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::~SummaryQueryWidget\fP\&. "
+.ti -1c
+.RI "QString \fBqueryStr\fP () const"
+.br
+.RI "\fBSummaryQueryWidget::queryStr\fP\&. "
+.ti -1c
+.RI "void \fBsetQuery\fP (const QString &query)"
+.br
+.RI "\fBSummaryQueryWidget::setQuery\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBmodelIdentifier\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_available_list_itemDoubleClicked\fP (QListWidgetItem *item)"
+.br
+.RI "\fBSummaryQueryWidget::on_m_available_list_itemDoubleClicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_choosen_list_itemDoubleClicked\fP (QListWidgetItem *item)"
+.br
+.RI "\fBSummaryQueryWidget::on_m_choosen_list_itemDoubleClicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_up_pb_clicked\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::on_m_up_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_add_pb_clicked\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::on_m_add_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_remove_pb_clicked\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::on_m_remove_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_down_pb_clicked\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::on_m_down_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_edit_sql_query_cb_clicked\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::on_m_edit_sql_query_cb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::reset\fP Clear this widget aka set to initial state\&. "
+.ti -1c
+.RI "void \fBsaveConfig\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::saveConfig\fP\&. "
+.ti -1c
+.RI "void \fBloadConfig\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::loadConfig\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpItems\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::setUpItems\fP\&. "
+.ti -1c
+.RI "void \fBfillSavedQuery\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::fillSavedQuery\fP Fill the combo box of the saved query\&. "
+.ti -1c
+.RI "void \fBupdateQueryLine\fP ()"
+.br
+.RI "\fBSummaryQueryWidget::updateQueryLine\fP\&. "
+.ti -1c
+.RI "QStringList \fBselectedKeys\fP () const"
+.br
+.RI "\fBSummaryQueryWidget::selectedKeys\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::SummaryQueryWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "QList< QListWidgetItem * > \fBm_items_list\fP"
+.br
+.ti -1c
+.RI "QString \fBm_custom_query\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SummaryQueryWidget::SummaryQueryWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBSummaryQueryWidget::SummaryQueryWidget\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SS "SummaryQueryWidget::~SummaryQueryWidget ()"
+
+.PP
+\fBSummaryQueryWidget::~SummaryQueryWidget\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SummaryQueryWidget::fillSavedQuery ()\fC [private]\fP"
+
+.PP
+\fBSummaryQueryWidget::fillSavedQuery\fP Fill the combo box of the saved query\&. 
+.SS "void SummaryQueryWidget::loadConfig ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSummaryQueryWidget::loadConfig\fP\&. 
+.SS "static QString SummaryQueryWidget::modelIdentifier ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "void SummaryQueryWidget::on_m_add_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSummaryQueryWidget::on_m_add_pb_clicked\fP\&. 
+.SS "void SummaryQueryWidget::on_m_available_list_itemDoubleClicked (QListWidgetItem * item)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSummaryQueryWidget::on_m_available_list_itemDoubleClicked\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+
+.SS "void SummaryQueryWidget::on_m_choosen_list_itemDoubleClicked (QListWidgetItem * item)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSummaryQueryWidget::on_m_choosen_list_itemDoubleClicked\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+
+.SS "void SummaryQueryWidget::on_m_down_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSummaryQueryWidget::on_m_down_pb_clicked\fP\&. 
+.SS "void SummaryQueryWidget::on_m_edit_sql_query_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSummaryQueryWidget::on_m_edit_sql_query_cb_clicked\fP\&. 
+.SS "void SummaryQueryWidget::on_m_remove_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSummaryQueryWidget::on_m_remove_pb_clicked\fP\&. 
+.SS "void SummaryQueryWidget::on_m_up_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSummaryQueryWidget::on_m_up_pb_clicked\fP\&. 
+.SS "QString SummaryQueryWidget::queryStr () const"
+
+.PP
+\fBSummaryQueryWidget::queryStr\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current query string 
+.RE
+.PP
+
+.SS "void SummaryQueryWidget::reset ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSummaryQueryWidget::reset\fP Clear this widget aka set to initial state\&. 
+.SS "void SummaryQueryWidget::saveConfig ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSummaryQueryWidget::saveConfig\fP\&. 
+.SS "QStringList SummaryQueryWidget::selectedKeys () const\fC [private]\fP"
+
+.PP
+\fBSummaryQueryWidget::selectedKeys\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void SummaryQueryWidget::setQuery (const QString & query)"
+
+.PP
+\fBSummaryQueryWidget::setQuery\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIquery\fP set the current query to query\&. If it's possible, rebuild the state of the widget from the query 
+.RE
+.PP
+
+.SS "void SummaryQueryWidget::setUpItems ()\fC [private]\fP"
+
+.PP
+\fBSummaryQueryWidget::setUpItems\fP\&. 
+.SS "void SummaryQueryWidget::updateQueryLine ()\fC [private]\fP"
+
+.PP
+\fBSummaryQueryWidget::updateQueryLine\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QString SummaryQueryWidget::m_custom_query\fC [private]\fP"
+
+.SS "QList<QListWidgetItem *> SummaryQueryWidget::m_items_list\fC [private]\fP"
+
+.SS "Ui::SummaryQueryWidget* SummaryQueryWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

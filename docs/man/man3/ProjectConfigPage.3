@@ -1,0 +1,157 @@
+.TH "ProjectConfigPage" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProjectConfigPage \- The \fBProjectConfigPage\fP class This class, derived from \fBConfigPage\fP, aims at providing the basic skeleton for a project configuration page\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <projectconfigpages\&.h>\fP
+.PP
+Inherits \fBConfigPage\fP\&.
+.PP
+Inherited by \fBProjectAutoNumConfigPage\fP, and \fBProjectMainConfigPage\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectConfigPage\fP (\fBQETProject\fP *, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ProjectConfigPage\fP () override"
+.br
+.ti -1c
+.RI "virtual \fBQETProject\fP * \fBproject\fP () const"
+.br
+.ti -1c
+.RI "virtual \fBQETProject\fP * \fBsetProject\fP (\fBQETProject\fP *\fBproject\fP, bool=true)"
+.br
+.RI "\fBProjectConfigPage::setProject\fP Set \fInew_project\fP as the project being edited by this page\&. "
+.ti -1c
+.RI "void \fBapplyConf\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBapplyProjectConf\fP ()=0"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBinitWidgets\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBinitLayout\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBreadValuesFromProject\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBadjustReadOnly\fP ()=0"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP"
+.br
+.RI "Currently edited project\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectConfigPage\fP (const \fBProjectConfigPage\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBProjectConfigPage\fP class This class, derived from \fBConfigPage\fP, aims at providing the basic skeleton for a project configuration page\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ProjectConfigPage::ProjectConfigPage (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Project this page is editing\&. 
+.br
+\fIparent\fP Parent QWidget 
+.RE
+.PP
+
+.SS "ProjectConfigPage::~ProjectConfigPage ()\fC [override]\fP"
+Destructor 
+.SS "ProjectConfigPage::ProjectConfigPage (const \fBProjectConfigPage\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void ProjectConfigPage::adjustReadOnly ()\fC [protected]\fP, \fC [pure virtual]\fP"
+Use this pure virtual method to adjust the 'read only' state of your page widgets according to the currently edited project\&. 
+.PP
+Implemented in \fBProjectAutoNumConfigPage\fP, and \fBProjectMainConfigPage\fP\&.
+.SS "void ProjectConfigPage::applyConf ()\fC [override]\fP, \fC [virtual]\fP"
+Apply the configuration after user input 
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "virtual void ProjectConfigPage::applyProjectConf ()\fC [pure virtual]\fP"
+Apply configuration to the project after user input\&. This method is automatically called when the \fBConfigDialog\fP is validated, and only if the project is both non-zero and not read-only\&. 
+.PP
+Implemented in \fBProjectAutoNumConfigPage\fP, and \fBProjectMainConfigPage\fP\&.
+.SS "void ProjectConfigPage::init ()\fC [protected]\fP, \fC [virtual]\fP"
+Initialize the page by calling \fBinitWidgets()\fP and \fBinitLayout()\fP\&. Also call \fBreadValuesFromProject()\fP and \fBadjustReadOnly()\fP if a non-zero project has been set\&. Typically, you should call this function in your subclass constructor\&. 
+.SS "virtual void ProjectConfigPage::initLayout ()\fC [protected]\fP, \fC [pure virtual]\fP"
+Use this pure virtual method to initialize your page layout\&. This method is always called after \fBinitWidgets()\fP\&. 
+.PP
+Implemented in \fBProjectAutoNumConfigPage\fP, and \fBProjectMainConfigPage\fP\&.
+.SS "virtual void ProjectConfigPage::initWidgets ()\fC [protected]\fP, \fC [pure virtual]\fP"
+Use this pure virtual method to initialize your page widgets\&. 
+.PP
+Implemented in \fBProjectAutoNumConfigPage\fP, and \fBProjectMainConfigPage\fP\&.
+.SS "\fBQETProject\fP * ProjectConfigPage::project () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the project being edited by this page 
+.RE
+.PP
+
+.SS "virtual void ProjectConfigPage::readValuesFromProject ()\fC [protected]\fP, \fC [pure virtual]\fP"
+Use this pure virtual method to fill widgets with project values\&. 
+.PP
+Implemented in \fBProjectAutoNumConfigPage\fP, and \fBProjectMainConfigPage\fP\&.
+.SS "\fBQETProject\fP * ProjectConfigPage::setProject (\fBQETProject\fP * new_project, bool read_values = \fCtrue\fP)\fC [virtual]\fP"
+
+.PP
+\fBProjectConfigPage::setProject\fP Set \fInew_project\fP as the project being edited by this page\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_project\fP : True to read values from the project into widgets before setting them read only accordingly, false otherwise\&. Defaults to true\&. 
+.br
+\fIread_values\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the former project 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQETProject\fP* ProjectConfigPage::m_project\fC [protected]\fP"
+
+.PP
+Currently edited project\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

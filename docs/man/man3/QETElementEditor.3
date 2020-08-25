@@ -1,0 +1,1008 @@
+.TH "QETElementEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETElementEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetelementeditor\&.h>\fP
+.PP
+Inherits \fBQETMainWindow\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddLine\fP ()"
+.br
+.RI "\fBQETElementEditor::addLine\fP Set line creation interface to scene\&. "
+.ti -1c
+.RI "void \fBaddRect\fP ()"
+.br
+.RI "\fBQETElementEditor::addRect\fP Set rectangle creation interface to scene\&. "
+.ti -1c
+.RI "void \fBaddEllipse\fP ()"
+.br
+.RI "\fBQETElementEditor::addEllipse\fP Set ellipse creation interface to scene\&. "
+.ti -1c
+.RI "void \fBaddPolygon\fP ()"
+.br
+.RI "\fBQETElementEditor::addPolygon\fP Set polygon creation interface to scene\&. "
+.ti -1c
+.RI "void \fBaddArc\fP ()"
+.br
+.RI "\fBQETElementEditor::addArc\fP Set arc creation interface to scene\&. "
+.ti -1c
+.RI "void \fBaddText\fP ()"
+.br
+.RI "\fBQETElementEditor::addText\fP Set text creation interface to scene\&. "
+.ti -1c
+.RI "void \fBaddTerminal\fP ()"
+.br
+.RI "\fBQETElementEditor::addTerminal\fP Set terminal creation interface to scene\&. "
+.ti -1c
+.RI "void \fBaddDynamicTextField\fP ()"
+.br
+.RI "\fBQETElementEditor::addDynamicTextField\fP Set dynamic text field creation interface to scene\&. "
+.ti -1c
+.RI "void \fBUncheckAddPrimitive\fP ()"
+.br
+.RI "\fBQETElementEditor::UncheckAddPrimitive\fP Uncheck all action related to primitive\&. "
+.ti -1c
+.RI "void \fBslot_new\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_open\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_openDxf\fP ()"
+.br
+.RI "\fBQETElementEditor::slot_openDxf\fP\&. "
+.ti -1c
+.RI "void \fBslot_openFile\fP ()"
+.br
+.ti -1c
+.RI "void \fBopenRecentFile\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBopenElement\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBslot_reload\fP ()"
+.br
+.RI "\fBQETElementEditor::slot_reload\fP Reload the element from the file or location\&. "
+.ti -1c
+.RI "bool \fBslot_save\fP ()"
+.br
+.RI "\fBQETElementEditor::slot_save\fP Save the current editing element\&. If the filepath or location is unknown, use save_as instead\&. "
+.ti -1c
+.RI "bool \fBslot_saveAs\fP ()"
+.br
+.RI "\fBQETElementEditor::slot_saveAs\fP Ask a location to user and save the current edited element to this location\&. "
+.ti -1c
+.RI "bool \fBslot_saveAsFile\fP ()"
+.br
+.RI "\fBQETElementEditor::slot_saveAsFile\fP Ask a file to user and save the current edited element to this file\&. "
+.ti -1c
+.RI "void \fBslot_setRubberBandToView\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_setNoDragToView\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_updateInformations\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_updateMenus\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_updateTitle\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_createPartsList\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_updatePartsList\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_updateSelectionFromPartsList\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcheckElement\fP ()"
+.br
+.RI "\fBQETElementEditor::checkElement\fP Do several check about element\&. If error is occurred return false\&. "
+.ti -1c
+.RI "void \fBpasteFromFile\fP ()"
+.br
+.ti -1c
+.RI "void \fBpasteFromElement\fP ()"
+.br
+.RI "\fBQETElementEditor::pasteFromElement\fP Ask an element to user, copy the xml definition of the element to the clipboard and call ElementView::PasteInArea\&. "
+.ti -1c
+.RI "void \fBupdateCurrentPartEditor\fP ()"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBsaveToLocation\fP (\fBElementsLocation\fP loc)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETElementEditor\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~QETElementEditor\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBsetNames\fP (const \fBNamesList\fP &)"
+.br
+.ti -1c
+.RI "void \fBsetLocation\fP (const \fBElementsLocation\fP &)"
+.br
+.RI "\fBQETElementEditor::setLocation\fP The new location to edit\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP \fBlocation\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetFileName\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBfileName\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBisReadOnly\fP () const"
+.br
+.ti -1c
+.RI "void \fBfromFile\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBfromLocation\fP (const \fBElementsLocation\fP &)"
+.br
+.RI "\fBQETElementEditor::fromLocation\fP Location of the element to edit\&. "
+.ti -1c
+.RI "bool \fBtoFile\fP (const QString &)"
+.br
+.RI "\fBQETElementEditor::toFile\fP Save to file the drawed element\&. "
+.ti -1c
+.RI "bool \fBtoLocation\fP (const \fBElementsLocation\fP &\fBlocation\fP)"
+.br
+.RI "\fBQETElementEditor::toLocation\fP Save the element to Location\&. "
+.ti -1c
+.RI "bool \fBisEditing\fP (const \fBElementsLocation\fP &)"
+.br
+.ti -1c
+.RI "bool \fBisEditing\fP (const QString &)"
+.br
+.ti -1c
+.RI "\fBElementScene\fP * \fBelementScene\fP () const"
+.br
+.ti -1c
+.RI "void \fBreadSettings\fP ()"
+.br
+.RI "\fBQETElementEditor::readSettings\fP Read settings\&. "
+.ti -1c
+.RI "void \fBwriteSettings\fP ()"
+.br
+.RI "\fBQETElementEditor::writeSettings\fP Write the settings\&. "
+.ti -1c
+.RI "void \fBcontextMenu\fP (QPoint p, QList< QAction * > actions=QList< QAction * >())"
+.br
+.RI "\fBQETElementEditor::contextMenu\fP Display a context menu, with all available action\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QPointF \fBpasteOffset\fP ()"
+.br
+.ti -1c
+.RI "static QString \fBgetOpenElementFileName\fP (QWidget *=nullptr, const QString &=QString())"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcloseEvent\fP (QCloseEvent *) override"
+.br
+.ti -1c
+.RI "void \fBfirstActivation\fP (QEvent *) override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETElementEditor\fP (const \fBQETElementEditor\fP &)"
+.br
+.ti -1c
+.RI "void \fBsetupActions\fP ()"
+.br
+.RI "\fBQETElementEditor::setupActions\fP Create action used in \fBElement\fP editor\&. "
+.ti -1c
+.RI "void \fBsetupMenus\fP ()"
+.br
+.RI "\fBQETElementEditor::setupMenus\fP\&. "
+.ti -1c
+.RI "void \fBsetupInterface\fP ()"
+.br
+.RI "\fBQETElementEditor::setupInterface\fP\&. "
+.ti -1c
+.RI "bool \fBcanClose\fP ()"
+.br
+.ti -1c
+.RI "QWidget * \fBclearToolsDock\fP ()"
+.br
+.ti -1c
+.RI "void \fBcopyAndPasteXml\fP (const QDomDocument &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBread_only\fP"
+.br
+.RI "whether the editor is 'read-only' "
+.ti -1c
+.RI "QMenu * \fBfile_menu\fP"
+.br
+.RI "menus "
+.ti -1c
+.RI "QMenu * \fBedit_menu\fP"
+.br
+.ti -1c
+.RI "QMenu * \fBpaste_from_menu\fP"
+.br
+.ti -1c
+.RI "QMenu * \fBdisplay_menu\fP"
+.br
+.ti -1c
+.RI "QMenu * \fBtools_menu\fP"
+.br
+.ti -1c
+.RI "\fBElementView\fP * \fBm_view\fP"
+.br
+.RI "view widget for the editing scene "
+.ti -1c
+.RI "\fBElementScene\fP * \fBm_elmt_scene\fP"
+.br
+.RI "editing scene "
+.ti -1c
+.RI "QDockWidget * \fBm_tools_dock\fP"
+.br
+.RI "container for widgets dedicated to primitive edition "
+.ti -1c
+.RI "QStackedWidget * \fBm_tools_dock_stack\fP"
+.br
+.RI "Stack of widgets for tools_dock\&. "
+.ti -1c
+.RI "QLabel * \fBm_default_informations\fP"
+.br
+.RI "label displayed when several primitives are selected "
+.ti -1c
+.RI "QHash< QString, \fBElementItemEditor\fP * > \fBm_editors\fP"
+.br
+.RI "Hash associating primitive names with their matching edition widget\&. "
+.ti -1c
+.RI "QDockWidget * \fBm_undo_dock\fP"
+.br
+.RI "container for the undo list "
+.ti -1c
+.RI "QDockWidget * \fBm_parts_dock\fP"
+.br
+.RI "Container for the list of existing primitives\&. "
+.ti -1c
+.RI "QListWidget * \fBm_parts_list\fP"
+.br
+.RI "List of primitives\&. "
+.ti -1c
+.RI "QAction * \fBnew_element\fP"
+.br
+.RI "actions for the 'file' menu "
+.ti -1c
+.RI "QAction * \fBopen\fP"
+.br
+.ti -1c
+.RI "QAction * \fBopen_dxf\fP"
+.br
+.ti -1c
+.RI "QAction * \fBopen_file\fP"
+.br
+.ti -1c
+.RI "QAction * \fBsave\fP"
+.br
+.ti -1c
+.RI "QAction * \fBsave_as\fP"
+.br
+.ti -1c
+.RI "QAction * \fBsave_as_file\fP"
+.br
+.ti -1c
+.RI "QAction * \fBreload\fP"
+.br
+.ti -1c
+.RI "QAction * \fBquit\fP"
+.br
+.ti -1c
+.RI "QAction * \fBselectall\fP"
+.br
+.RI "actions for the 'edit' menu "
+.ti -1c
+.RI "QAction * \fBdeselectall\fP"
+.br
+.ti -1c
+.RI "QAction * \fBinv_select\fP"
+.br
+.ti -1c
+.RI "QAction * \fBcut\fP"
+.br
+.ti -1c
+.RI "QAction * \fBcopy\fP"
+.br
+.ti -1c
+.RI "QAction * \fBpaste\fP"
+.br
+.ti -1c
+.RI "QAction * \fBpaste_in_area\fP"
+.br
+.ti -1c
+.RI "QAction * \fBpaste_from_file\fP"
+.br
+.ti -1c
+.RI "QAction * \fBpaste_from_elmt\fP"
+.br
+.ti -1c
+.RI "QAction * \fBundo\fP"
+.br
+.ti -1c
+.RI "QAction * \fBredo\fP"
+.br
+.ti -1c
+.RI "QAction * \fBedit_delete\fP"
+.br
+.ti -1c
+.RI "QAction * \fBedit_size_hs\fP"
+.br
+.ti -1c
+.RI "QAction * \fBedit_names\fP"
+.br
+.ti -1c
+.RI "QAction * \fBedit_author\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_edit_properties\fP"
+.br
+.ti -1c
+.RI "QToolBar * \fBparts_toolbar\fP"
+.br
+.RI "toolbars "
+.ti -1c
+.RI "QToolBar * \fBmain_toolbar\fP"
+.br
+.ti -1c
+.RI "QToolBar * \fBview_toolbar\fP"
+.br
+.ti -1c
+.RI "QToolBar * \fBdepth_toolbar\fP"
+.br
+.ti -1c
+.RI "QToolBar * \fBelement_toolbar\fP"
+.br
+.ti -1c
+.RI "QActionGroup * \fBparts\fP"
+.br
+.RI "Action group\&. "
+.ti -1c
+.RI "QActionGroup * \fBm_zoom_ag\fP"
+.br
+.ti -1c
+.RI "QActionGroup * \fBm_depth_action_group\fP"
+.br
+.ti -1c
+.RI "QString \fBmin_title\fP"
+.br
+.RI "minimum window title "
+.ti -1c
+.RI "QString \fBfilename_\fP"
+.br
+.RI "filename of the currently edited element "
+.ti -1c
+.RI "\fBElementsLocation\fP \fBlocation_\fP"
+.br
+.RI "location of the currently edited element "
+.ti -1c
+.RI "bool \fBopened_from_file\fP"
+.br
+.RI "whether the currently edited element comes from a file or a location "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents an element editor, allowing users to draw, change and configure a particular electrical element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QETElementEditor::QETElementEditor (QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP QWidget parent 
+.RE
+.PP
+
+.SS "QETElementEditor::~QETElementEditor ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "QETElementEditor::QETElementEditor (const \fBQETElementEditor\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QETElementEditor::addArc ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::addArc\fP Set arc creation interface to scene\&. 
+.SS "void QETElementEditor::addDynamicTextField ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::addDynamicTextField\fP Set dynamic text field creation interface to scene\&. 
+.SS "void QETElementEditor::addEllipse ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::addEllipse\fP Set ellipse creation interface to scene\&. 
+.SS "void QETElementEditor::addLine ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::addLine\fP Set line creation interface to scene\&. 
+.SS "void QETElementEditor::addPolygon ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::addPolygon\fP Set polygon creation interface to scene\&. 
+.SS "void QETElementEditor::addRect ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::addRect\fP Set rectangle creation interface to scene\&. 
+.SS "void QETElementEditor::addTerminal ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::addTerminal\fP Set terminal creation interface to scene\&. 
+.SS "void QETElementEditor::addText ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::addText\fP Set text creation interface to scene\&. 
+.SS "bool QETElementEditor::canClose ()\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si l'element peut etre ferme\&. Un element peut etre ferme s'il ne comporte aucune modification\&. Si l'element comporte des modifications, la question est posee a l'utilisateur\&. 
+.RE
+.PP
+
+.SS "bool QETElementEditor::checkElement ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::checkElement\fP Do several check about element\&. If error is occurred return false\&. Warning #1: \fBElement\fP haven't got terminal (except for report, because report must have one terminal and this checking is do below)
+.PP
+Check folio report element
+.PP
+Error folio report must have only one terminal
+.SS "QWidget * QETElementEditor::clearToolsDock ()\fC [private]\fP"
+Enleve et cache le widget affiche par le dock permettant d'editer les parties\&. 
+.PP
+\fBReturns\fP
+.RS 4
+le widget enleve, ou 0 s'il n'y avait pas de widget a enlever 
+.RE
+.PP
+
+.SS "void QETElementEditor::closeEvent (QCloseEvent * qce)\fC [override]\fP, \fC [protected]\fP"
+Permet de quitter l'editeur lors de la fermeture de la fenetre principale 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqce\fP Le QCloseEvent correspondant a l'evenement de fermeture 
+.RE
+.PP
+
+.SS "void QETElementEditor::contextMenu (QPoint p, QList< QAction * > actions = \fCQList<QAction*>()\fP)"
+
+.PP
+\fBQETElementEditor::contextMenu\fP Display a context menu, with all available action\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP : the pos of the menu, in screen coordinate 
+.br
+\fIactions\fP : a list of actions who can be prepended to the context menu\&. 
+.RE
+.PP
+
+.SS "void QETElementEditor::copyAndPasteXml (const QDomDocument & xml_document)\fC [private]\fP"
+Exporte le document XML xml_document vers le presse-papier puis declenche son collage dans l'editeur courant, avec selection de la zone de collage 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP Document XML a copier/coller 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBElementView::pasteInArea\fP 
+.RE
+.PP
+
+.SS "\fBElementScene\fP * QETElementEditor::elementScene () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the editing scene 
+.RE
+.PP
+
+.SS "QString QETElementEditor::fileName () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the filename of the currently edited element 
+.RE
+.PP
+
+.SS "void QETElementEditor::firstActivation (QEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Executed the first time the window editor is displayed\&. 
+.PP
+Reimplemented from \fBQETMainWindow\fP\&.
+.SS "void QETElementEditor::fromFile (const QString & filepath)"
+Charge un fichier 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP Chemin du fichier a charger 
+.RE
+.PP
+
+.SS "void QETElementEditor::fromLocation (const \fBElementsLocation\fP & location)"
+
+.PP
+\fBQETElementEditor::fromLocation\fP Location of the element to edit\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+
+.SS "QString QETElementEditor::getOpenElementFileName (QWidget * parent = \fCnullptr\fP, const QString & initial_dir = \fCQString()\fP)\fC [static]\fP"
+Demande a l'utilisateur d'ouvrir un fichier sense etre un element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP QWidget parent du dialogue d'ouverture de fichier 
+.br
+\fIinitial_dir\fP Repertoire a afficher initialement - si une chaine vide est fournie, \fBQETApp::customElementsDir()\fP sera utilise\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Le chemin du fichier choisi ou une chaine vide si l'utilisateur a clique sur le bouton 'Annuler'\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBQETApp::customElementsDir()\fP 
+.RE
+.PP
+
+.SS "bool QETElementEditor::isEditing (const \fBElementsLocation\fP & provided_location)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIprovided_location\fP Emplacement d'un element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si cet editeur est en train d'editer l'element dont l'emplacement est location, false sinon 
+.RE
+.PP
+
+.SS "bool QETElementEditor::isEditing (const QString & provided_filepath)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIprovided_filepath\fP Chemin d'un element sur un filesystem 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si cet editeur est en train d'editer l'element dont le chemin est filepath, false sinon 
+.RE
+.PP
+
+.SS "bool QETElementEditor::isReadOnly () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si l'editeur d'element est en mode lecture seule 
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP QETElementEditor::location () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the location of the currently edited element 
+.RE
+.PP
+
+.SS "void QETElementEditor::openElement (const QString & filepath)\fC [slot]\fP"
+Ouvre un fichier element dans un nouvel editeur Cette methode ne controle pas si le fichier est deja ouvert 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP Fichier a ouvrir 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBfromFile\fP 
+.PP
+\fBQETApp::openElementFiles\fP 
+.RE
+.PP
+
+.SS "void QETElementEditor::openRecentFile (const QString & filepath)\fC [slot]\fP"
+Slot utilise pour ouvrir un fichier recent\&. Transfere filepath au slot openElement seulement si cet editeur est actif 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP Fichier a ouvrir 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBopenElement\fP 
+.RE
+.PP
+
+.SS "void QETElementEditor::pasteFromElement ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::pasteFromElement\fP Ask an element to user, copy the xml definition of the element to the clipboard and call ElementView::PasteInArea\&. 
+.SS "void QETElementEditor::pasteFromFile ()\fC [slot]\fP"
+Demande un fichier a l'utilisateur, l'ouvre en tant que fichier element, met son contenu dans le presse-papiers, et appelle ElementView::PasteInArea 
+.SS "QPointF QETElementEditor::pasteOffset ()\fC [static]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+les decalages horizontaux et verticaux (sous la forme d'un point) a utiliser lors d'un copier/coller avec decalage\&. 
+.RE
+.PP
+
+.SS "void QETElementEditor::readSettings ()"
+
+.PP
+\fBQETElementEditor::readSettings\fP Read settings\&. 
+.SS "void QETElementEditor::saveToLocation (\fBElementsLocation\fP loc)\fC [signal]\fP"
+
+.SS "void QETElementEditor::setFileName (const QString & fn)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfn\fP Le nouveau nom de fichier de l'element edite 
+.RE
+.PP
+
+.SS "void QETElementEditor::setLocation (const \fBElementsLocation\fP & el)"
+
+.PP
+\fBQETElementEditor::setLocation\fP The new location to edit\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIel\fP 
+.RE
+.PP
+
+.SS "void QETElementEditor::setNames (const \fBNamesList\fP & nameslist)\fC [inline]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fInameslist\fP the new list of names for the currently edited element 
+.RE
+.PP
+
+.SS "void QETElementEditor::setReadOnly (bool ro)"
+specifie si l'editeur d'element doit etre en mode lecture seule 
+.PP
+\fBParameters\fP
+.RS 4
+\fIro\fP true pour activer le mode lecture seule, false pour le desactiver 
+.RE
+.PP
+
+.SS "void QETElementEditor::setupActions ()\fC [private]\fP"
+
+.PP
+\fBQETElementEditor::setupActions\fP Create action used in \fBElement\fP editor\&. 
+.SS "void QETElementEditor::setupInterface ()\fC [private]\fP"
+
+.PP
+\fBQETElementEditor::setupInterface\fP\&. 
+.SS "void QETElementEditor::setupMenus ()\fC [private]\fP"
+
+.PP
+\fBQETElementEditor::setupMenus\fP\&. 
+.SS "void QETElementEditor::slot_createPartsList ()\fC [slot]\fP"
+Remplit la liste des parties 
+.SS "void QETElementEditor::slot_new ()\fC [slot]\fP"
+Lance l'assistant de creation d'un nouvel element\&. 
+.SS "void QETElementEditor::slot_open ()\fC [slot]\fP"
+Ouvre un element 
+.SS "void QETElementEditor::slot_openDxf ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::slot_openDxf\fP\&. 
+.SS "void QETElementEditor::slot_openFile ()\fC [slot]\fP"
+Ouvre un fichier Demande un fichier a l'utilisateur et ouvre ce fichier 
+.SS "void QETElementEditor::slot_reload ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::slot_reload\fP Reload the element from the file or location\&. 
+.SS "bool QETElementEditor::slot_save ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::slot_save\fP Save the current editing element\&. If the filepath or location is unknown, use save_as instead\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if save with success 
+.RE
+.PP
+
+.SS "bool QETElementEditor::slot_saveAs ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::slot_saveAs\fP Ask a location to user and save the current edited element to this location\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if save with success 
+.RE
+.PP
+
+.SS "bool QETElementEditor::slot_saveAsFile ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::slot_saveAsFile\fP Ask a file to user and save the current edited element to this file\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if save with success 
+.RE
+.PP
+
+.SS "void QETElementEditor::slot_setNoDragToView ()\fC [slot]\fP"
+Passe l'editeur d'element en mode immobile (utilise pour la lecture seule) 
+.SS "void QETElementEditor::slot_setRubberBandToView ()\fC [slot]\fP"
+Passe l'editeur d'element en mode selection : le pointeur deplace les elements selectionnes et il est possible d'utiliser un rectangle de selection\&. 
+.SS "void QETElementEditor::slot_updateInformations ()\fC [slot]\fP"
+Met a jour la zone d'information et d'edition des primitives\&. Si plusieurs primitives sont selectionnees, seule leur quantite est affichee\&. Sinon, un widget d'edition approprie est mis en place\&. 
+.SS "void QETElementEditor::slot_updateMenus ()\fC [slot]\fP"
+Met a jour les menus 
+.SS "void QETElementEditor::slot_updatePartsList ()\fC [slot]\fP"
+Met a jour la selection dans la liste des parties 
+.SS "void QETElementEditor::slot_updateSelectionFromPartsList ()\fC [slot]\fP"
+Met a jour la selection des parties de l'element a partir de la liste des parties 
+.SS "void QETElementEditor::slot_updateTitle ()\fC [slot]\fP"
+Met a jour le titre de la fenetre 
+.SS "bool QETElementEditor::toFile (const QString & fn)"
+
+.PP
+\fBQETElementEditor::toFile\fP Save to file the drawed element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfn\fP : path of the file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+: true if succesfully save\&. 
+.RE
+.PP
+
+.SS "bool QETElementEditor::toLocation (const \fBElementsLocation\fP & location)"
+
+.PP
+\fBQETElementEditor::toLocation\fP Save the element to Location\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP : location where we must save the current element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if succesfully saved 
+.RE
+.PP
+
+.SS "void QETElementEditor::UncheckAddPrimitive ()\fC [slot]\fP"
+
+.PP
+\fBQETElementEditor::UncheckAddPrimitive\fP Uncheck all action related to primitive\&. 
+.SS "void QETElementEditor::updateCurrentPartEditor ()\fC [slot]\fP"
+Met a jour l'editeur de primitive actuellement visible\&. Si aucun editeur de primitive n'est visible, ce slot ne fait rien\&. 
+.SS "void QETElementEditor::writeSettings ()"
+
+.PP
+\fBQETElementEditor::writeSettings\fP Write the settings\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QAction * QETElementEditor::copy\fC [private]\fP"
+
+.SS "QAction* QETElementEditor::cut\fC [private]\fP"
+
+.SS "QToolBar * QETElementEditor::depth_toolbar\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::deselectall\fC [private]\fP"
+
+.SS "QMenu * QETElementEditor::display_menu\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::edit_author\fC [private]\fP"
+
+.SS "QAction* QETElementEditor::edit_delete\fC [private]\fP"
+
+.SS "QMenu * QETElementEditor::edit_menu\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::edit_names\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::edit_size_hs\fC [private]\fP"
+
+.SS "QToolBar * QETElementEditor::element_toolbar\fC [private]\fP"
+
+.SS "QMenu* QETElementEditor::file_menu\fC [private]\fP"
+
+.PP
+menus 
+.SS "QString QETElementEditor::filename_\fC [private]\fP"
+
+.PP
+filename of the currently edited element 
+.SS "QAction * QETElementEditor::inv_select\fC [private]\fP"
+
+.SS "\fBElementsLocation\fP QETElementEditor::location_\fC [private]\fP"
+
+.PP
+location of the currently edited element 
+.SS "QLabel* QETElementEditor::m_default_informations\fC [private]\fP"
+
+.PP
+label displayed when several primitives are selected 
+.SS "QActionGroup * QETElementEditor::m_depth_action_group\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::m_edit_properties\fC [private]\fP"
+
+.SS "QHash<QString, \fBElementItemEditor\fP *> QETElementEditor::m_editors\fC [private]\fP"
+
+.PP
+Hash associating primitive names with their matching edition widget\&. 
+.SS "\fBElementScene\fP* QETElementEditor::m_elmt_scene\fC [private]\fP"
+
+.PP
+editing scene 
+.SS "QDockWidget* QETElementEditor::m_parts_dock\fC [private]\fP"
+
+.PP
+Container for the list of existing primitives\&. 
+.SS "QListWidget* QETElementEditor::m_parts_list\fC [private]\fP"
+
+.PP
+List of primitives\&. 
+.SS "QDockWidget* QETElementEditor::m_tools_dock\fC [private]\fP"
+
+.PP
+container for widgets dedicated to primitive edition 
+.SS "QStackedWidget* QETElementEditor::m_tools_dock_stack\fC [private]\fP"
+
+.PP
+Stack of widgets for tools_dock\&. 
+.SS "QDockWidget* QETElementEditor::m_undo_dock\fC [private]\fP"
+
+.PP
+container for the undo list 
+.SS "\fBElementView\fP* QETElementEditor::m_view\fC [private]\fP"
+
+.PP
+view widget for the editing scene 
+.SS "QActionGroup * QETElementEditor::m_zoom_ag\fC [private]\fP"
+
+.SS "QToolBar * QETElementEditor::main_toolbar\fC [private]\fP"
+
+.SS "QString QETElementEditor::min_title\fC [private]\fP"
+
+.PP
+minimum window title 
+.SS "QAction* QETElementEditor::new_element\fC [private]\fP"
+
+.PP
+actions for the 'file' menu 
+.SS "QAction * QETElementEditor::open\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::open_dxf\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::open_file\fC [private]\fP"
+
+.SS "bool QETElementEditor::opened_from_file\fC [private]\fP"
+
+.PP
+whether the currently edited element comes from a file or a location 
+.SS "QActionGroup* QETElementEditor::parts\fC [private]\fP"
+
+.PP
+Action group\&. 
+.SS "QToolBar* QETElementEditor::parts_toolbar\fC [private]\fP"
+
+.PP
+toolbars 
+.SS "QAction * QETElementEditor::paste\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::paste_from_elmt\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::paste_from_file\fC [private]\fP"
+
+.SS "QMenu * QETElementEditor::paste_from_menu\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::paste_in_area\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::quit\fC [private]\fP"
+
+.SS "bool QETElementEditor::read_only\fC [private]\fP"
+
+.PP
+whether the editor is 'read-only' 
+.SS "QAction * QETElementEditor::redo\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::reload\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::save\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::save_as\fC [private]\fP"
+
+.SS "QAction * QETElementEditor::save_as_file\fC [private]\fP"
+
+.SS "QAction* QETElementEditor::selectall\fC [private]\fP"
+
+.PP
+actions for the 'edit' menu 
+.SS "QMenu * QETElementEditor::tools_menu\fC [private]\fP"
+
+.SS "QAction* QETElementEditor::undo\fC [private]\fP"
+
+.SS "QToolBar * QETElementEditor::view_toolbar\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,272 @@
+.TH "IntegrationMoveTitleBlockTemplatesHandler" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IntegrationMoveTitleBlockTemplatesHandler
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <integrationmovetemplateshandler\&.h>\fP
+.PP
+Inherits \fBMoveTitleBlockTemplatesHandler\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIntegrationMoveTitleBlockTemplatesHandler\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~IntegrationMoveTitleBlockTemplatesHandler\fP () override"
+.br
+.ti -1c
+.RI "\fBQET::Action\fP \fBtemplateAlreadyExists\fP (const \fBTitleBlockTemplateLocation\fP &src, const \fBTitleBlockTemplateLocation\fP &dst) override"
+.br
+.ti -1c
+.RI "\fBQET::Action\fP \fBerrorWithATemplate\fP (const \fBTitleBlockTemplateLocation\fP &, const QString &) override"
+.br
+.ti -1c
+.RI "QString \fBnameForRenamingOperation\fP () override"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBcorrectRadioButtons\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIntegrationMoveTitleBlockTemplatesHandler\fP (const \fBIntegrationMoveTitleBlockTemplatesHandler\fP &)"
+.br
+.ti -1c
+.RI "QString \fBdateString\fP () const"
+.br
+.ti -1c
+.RI "QString \fBnewNameForTemplate\fP (const \fBTitleBlockTemplateLocation\fP &)"
+.br
+.ti -1c
+.RI "\fBQET::Action\fP \fBaskUser\fP (const \fBTitleBlockTemplateLocation\fP &, const \fBTitleBlockTemplateLocation\fP &)"
+.br
+.ti -1c
+.RI "void \fBinitDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBradioButtonleftMargin\fP (QRadioButton *)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QWidget * \fBparent_widget_\fP"
+.br
+.RI "Widget used as parent to display dialogs\&. "
+.ti -1c
+.RI "QString \fBrename_\fP"
+.br
+.RI "Name to be used when renaming a title block template\&. "
+.ti -1c
+.RI "QDialog * \fBinteg_dialog_\fP"
+.br
+.RI "Dialog in case of conflict when integrating a title block template\&. "
+.ti -1c
+.RI "QLabel * \fBdialog_label_\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBdialog_vlayout_\fP"
+.br
+.ti -1c
+.RI "QGridLayout * \fBdialog_glayout\fP"
+.br
+.ti -1c
+.RI "QDialogButtonBox * \fBbuttons_\fP"
+.br
+.ti -1c
+.RI "QRadioButton * \fBuse_existing_template_\fP"
+.br
+.RI "Radio button the user may click to use the existing template and stop the integration\&. "
+.ti -1c
+.RI "QRadioButton * \fBintegrate_new_template_\fP"
+.br
+.RI "Radio button the user may click to integrate the template\&. "
+.ti -1c
+.RI "QRadioButton * \fBerase_template_\fP"
+.br
+.RI "Radio button the user may click for the integrated template to erase the existing one\&. "
+.ti -1c
+.RI "QRadioButton * \fBintegrate_both_\fP"
+.br
+.ti -1c
+.RI "QButtonGroup * \fBbutton_group1_\fP"
+.br
+.ti -1c
+.RI "QButtonGroup * \fBbutton_group2_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements the interface defined by \fBMoveTitleBlockTemplatesHandler\fP to ease the integration of title block templates from files-based collections into projects\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IntegrationMoveTitleBlockTemplatesHandler::IntegrationMoveTitleBlockTemplatesHandler (QWidget * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Qwidget used as parent when showing the user dialog\&. 
+.RE
+.PP
+
+.SS "IntegrationMoveTitleBlockTemplatesHandler::~IntegrationMoveTitleBlockTemplatesHandler ()\fC [override]\fP"
+Destructor 
+.SS "IntegrationMoveTitleBlockTemplatesHandler::IntegrationMoveTitleBlockTemplatesHandler (const \fBIntegrationMoveTitleBlockTemplatesHandler\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBQET::Action\fP IntegrationMoveTitleBlockTemplatesHandler::askUser (const \fBTitleBlockTemplateLocation\fP & src, const \fBTitleBlockTemplateLocation\fP & dst)\fC [private]\fP"
+Ask the use whether they wish to erase the already existing template, rename it or cancel the operation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsrc\fP Source title block template 
+.br
+\fIdst\fP Target title block template 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the user answer 
+.RE
+.PP
+
+.SS "void IntegrationMoveTitleBlockTemplatesHandler::correctRadioButtons ()\fC [private]\fP, \fC [slot]\fP"
+Ensure the dialog remains consistent\&. 
+.SS "QString IntegrationMoveTitleBlockTemplatesHandler::dateString () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the current date with a filename-friendly format 
+.RE
+.PP
+
+.SS "\fBQET::Action\fP IntegrationMoveTitleBlockTemplatesHandler::errorWithATemplate (const \fBTitleBlockTemplateLocation\fP & tbt, const QString & message)\fC [override]\fP, \fC [virtual]\fP"
+Display an error message related to a specific title block template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt\fP Problematic title block template 
+.br
+\fImessage\fP Error message\&. 
+.RE
+.PP
+
+.PP
+Implements \fBMoveTitleBlockTemplatesHandler\fP\&.
+.SS "void IntegrationMoveTitleBlockTemplatesHandler::initDialog ()\fC [private]\fP"
+Initialize the user dialog\&. 
+.SS "QString IntegrationMoveTitleBlockTemplatesHandler::nameForRenamingOperation ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name to be used when this object returns \fBQET::Rename\fP 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBQET::Action\fP 
+.RE
+.PP
+
+.PP
+Implements \fBMoveTitleBlockTemplatesHandler\fP\&.
+.SS "QString IntegrationMoveTitleBlockTemplatesHandler::newNameForTemplate (const \fBTitleBlockTemplateLocation\fP & tbt)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt\fP A title block template location 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a name to be used in order to duplicate the title block template\&. This name is based on the current date\&. 
+.RE
+.PP
+
+.SS "void IntegrationMoveTitleBlockTemplatesHandler::radioButtonleftMargin (QRadioButton * button)\fC [private]\fP"
+Increase the left margin of a radiob utton\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbutton\fP Radio button 
+.RE
+.PP
+
+.SS "\fBQET::Action\fP IntegrationMoveTitleBlockTemplatesHandler::templateAlreadyExists (const \fBTitleBlockTemplateLocation\fP & src, const \fBTitleBlockTemplateLocation\fP & dst)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsrc\fP Source template 
+.br
+\fIdst\fP Target template 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the action to be done if the target template already exists 
+.RE
+.PP
+
+.PP
+Implements \fBMoveTitleBlockTemplatesHandler\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QButtonGroup* IntegrationMoveTitleBlockTemplatesHandler::button_group1_\fC [private]\fP"
+
+.SS "QButtonGroup* IntegrationMoveTitleBlockTemplatesHandler::button_group2_\fC [private]\fP"
+
+.SS "QDialogButtonBox* IntegrationMoveTitleBlockTemplatesHandler::buttons_\fC [private]\fP"
+
+.SS "QGridLayout* IntegrationMoveTitleBlockTemplatesHandler::dialog_glayout\fC [private]\fP"
+
+.SS "QLabel* IntegrationMoveTitleBlockTemplatesHandler::dialog_label_\fC [private]\fP"
+
+.SS "QVBoxLayout* IntegrationMoveTitleBlockTemplatesHandler::dialog_vlayout_\fC [private]\fP"
+
+.SS "QRadioButton* IntegrationMoveTitleBlockTemplatesHandler::erase_template_\fC [private]\fP"
+
+.PP
+Radio button the user may click for the integrated template to erase the existing one\&. 
+.SS "QDialog* IntegrationMoveTitleBlockTemplatesHandler::integ_dialog_\fC [private]\fP"
+
+.PP
+Dialog in case of conflict when integrating a title block template\&. 
+.SS "QRadioButton* IntegrationMoveTitleBlockTemplatesHandler::integrate_both_\fC [private]\fP"
+
+.SS "QRadioButton* IntegrationMoveTitleBlockTemplatesHandler::integrate_new_template_\fC [private]\fP"
+
+.PP
+Radio button the user may click to integrate the template\&. 
+.SS "QWidget* IntegrationMoveTitleBlockTemplatesHandler::parent_widget_\fC [private]\fP"
+
+.PP
+Widget used as parent to display dialogs\&. 
+.SS "QString IntegrationMoveTitleBlockTemplatesHandler::rename_\fC [private]\fP"
+
+.PP
+Name to be used when renaming a title block template\&. 
+.SS "QRadioButton* IntegrationMoveTitleBlockTemplatesHandler::use_existing_template_\fC [private]\fP"
+
+.PP
+Radio button the user may click to use the existing template and stop the integration\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

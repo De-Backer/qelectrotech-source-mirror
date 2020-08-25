@@ -1,0 +1,166 @@
+.TH "PropertiesEditorWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PropertiesEditorWidget \- The \fBPropertiesEditorWidget\fP class This class extend QWidget method for have common way to edit propertie\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <propertieseditorwidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.PP
+Inherited by \fBAbstractElementPropertiesEditorWidget\fP, \fBGraphicsTablePropertiesEditor\fP, \fBImagePropertiesWidget\fP, \fBIndiTextPropertiesWidget\fP, \fBProjectDBModelPropertiesWidget\fP, and \fBShapeGraphicsItemPropertiesWidget\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPropertiesEditorWidget\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBPropertiesEditorWidget::PropertiesEditorWidget\fP Constructor\&. "
+.ti -1c
+.RI "virtual void \fBapply\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBreset\fP ()"
+.br
+.ti -1c
+.RI "virtual QUndoCommand * \fBassociatedUndo\fP () const"
+.br
+.RI "\fBPropertiesEditorWidget::associatedUndo\fP By default, return a nullptr\&. "
+.ti -1c
+.RI "virtual QString \fBtitle\fP () const"
+.br
+.RI "\fBPropertiesEditorWidget::title\fP\&. "
+.ti -1c
+.RI "virtual void \fBupdateUi\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBsetLiveEdit\fP (bool live_edit)"
+.br
+.RI "\fBPropertiesEditorWidget::setLiveEdit\fP Set the editor in live edit mode\&. When an editor is in live edit mode, every change is applied immediately (no need to call apply)\&. If live edit can be enable, return true, else false\&. By default this method do nothing and return false (live edit is disable)\&. Herited class of \fBPropertiesEditorWidget\fP must reimplemente this methode to manage the live edit mode\&. "
+.ti -1c
+.RI "bool \fBisLiveEdit\fP () const"
+.br
+.RI "\fBPropertiesEditorWidget::isLiveEdit\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBenableLiveEdit\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBdisableLiveEdit\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_live_edit\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBPropertiesEditorWidget\fP class This class extend QWidget method for have common way to edit propertie\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PropertiesEditorWidget::PropertiesEditorWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBPropertiesEditorWidget::PropertiesEditorWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void PropertiesEditorWidget::apply ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBMasterPropertiesWidget\fP, \fBLinkSingleElementWidget\fP, \fBElementInfoWidget\fP, \fBGraphicsTablePropertiesEditor\fP, \fBDynamicElementTextItemEditor\fP, \fBIndiTextPropertiesWidget\fP, \fBElementPropertiesWidget\fP, and \fBImagePropertiesWidget\fP\&.
+.SS "QUndoCommand * PropertiesEditorWidget::associatedUndo () const\fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorWidget::associatedUndo\fP By default, return a nullptr\&. 
+.PP
+\fBReturns\fP
+.RS 4
+nullptr 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBMasterPropertiesWidget\fP, \fBLinkSingleElementWidget\fP, \fBElementInfoWidget\fP, \fBShapeGraphicsItemPropertiesWidget\fP, \fBGraphicsTablePropertiesEditor\fP, \fBDynamicElementTextItemEditor\fP, \fBIndiTextPropertiesWidget\fP, and \fBImagePropertiesWidget\fP\&.
+.SS "virtual void PropertiesEditorWidget::disableLiveEdit ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBElementInfoWidget\fP\&.
+.SS "virtual void PropertiesEditorWidget::enableLiveEdit ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBElementInfoWidget\fP\&.
+.SS "bool PropertiesEditorWidget::isLiveEdit () const"
+
+.PP
+\fBPropertiesEditorWidget::isLiveEdit\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this editor is in live edit mode else return fasle\&. 
+.RE
+.PP
+
+.SS "virtual void PropertiesEditorWidget::reset ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBMasterPropertiesWidget\fP, \fBElementPropertiesWidget\fP, and \fBImagePropertiesWidget\fP\&.
+.SS "bool PropertiesEditorWidget::setLiveEdit (bool live_edit)\fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorWidget::setLiveEdit\fP Set the editor in live edit mode\&. When an editor is in live edit mode, every change is applied immediately (no need to call apply)\&. If live edit can be enable, return true, else false\&. By default this method do nothing and return false (live edit is disable)\&. Herited class of \fBPropertiesEditorWidget\fP must reimplemente this methode to manage the live edit mode\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlive_edit\fP true to enable live edit 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if live edit is enable, else false\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBMasterPropertiesWidget\fP, \fBLinkSingleElementWidget\fP, \fBShapeGraphicsItemPropertiesWidget\fP, \fBElementInfoWidget\fP, \fBGraphicsTablePropertiesEditor\fP, \fBIndiTextPropertiesWidget\fP, \fBDynamicElementTextItemEditor\fP, \fBElementPropertiesWidget\fP, and \fBImagePropertiesWidget\fP\&.
+.SS "QString PropertiesEditorWidget::title () const\fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorWidget::title\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the title of this editor 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBMasterPropertiesWidget\fP, \fBLinkSingleElementWidget\fP, \fBElementInfoWidget\fP, \fBShapeGraphicsItemPropertiesWidget\fP, and \fBDynamicElementTextItemEditor\fP\&.
+.SS "virtual void PropertiesEditorWidget::updateUi ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBIndiTextPropertiesWidget\fP, \fBElementInfoWidget\fP, \fBElementPropertiesWidget\fP, \fBShapeGraphicsItemPropertiesWidget\fP, and \fBImagePropertiesWidget\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool PropertiesEditorWidget::m_live_edit\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

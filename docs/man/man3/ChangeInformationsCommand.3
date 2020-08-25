@@ -1,0 +1,101 @@
+.TH "ChangeInformationsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChangeInformationsCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <editorcommands\&.h>\fP
+.PP
+Inherits \fBElementEditionCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeInformationsCommand\fP (\fBElementScene\fP *, const QString &, const QString &, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ChangeInformationsCommand\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "Annule le changement d'autorisation pour les connexions internes\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "Refait le changement d'autorisation pour les connexions internes\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeInformationsCommand\fP (const \fBChangeInformationsCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBold_informations_\fP"
+.br
+.RI "Former information\&. "
+.ti -1c
+.RI "QString \fBnew_informations_\fP"
+.br
+.RI "New information\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This command changes extra information carried by an electrical element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChangeInformationsCommand::ChangeInformationsCommand (\fBElementScene\fP * elmt, const QString & old_infos, const QString & new_infos, QUndoCommand * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP \fBElementScene\fP concernee 
+.br
+\fIold_infos\fP Informations complementaires precedentes 
+.br
+\fInew_infos\fP Nouvelles informations complementaires 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "ChangeInformationsCommand::~ChangeInformationsCommand ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "ChangeInformationsCommand::ChangeInformationsCommand (const \fBChangeInformationsCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChangeInformationsCommand::redo ()\fC [override]\fP"
+
+.PP
+Refait le changement d'autorisation pour les connexions internes\&. 
+.SS "void ChangeInformationsCommand::undo ()\fC [override]\fP"
+
+.PP
+Annule le changement d'autorisation pour les connexions internes\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QString ChangeInformationsCommand::new_informations_\fC [private]\fP"
+
+.PP
+New information\&. 
+.SS "QString ChangeInformationsCommand::old_informations_\fC [private]\fP"
+
+.PP
+Former information\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

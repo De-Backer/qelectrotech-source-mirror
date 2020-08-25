@@ -1,0 +1,641 @@
+.TH "SearchAndReplaceWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SearchAndReplaceWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <searchandreplacewidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSearchAndReplaceWidget\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBSearchAndReplaceWidget::SearchAndReplaceWidget\fP Constructor\&. "
+.ti -1c
+.RI "\fB~SearchAndReplaceWidget\fP () override"
+.br
+.RI "\fBSearchAndReplaceWidget::~SearchAndReplaceWidget\fP Destructor\&. "
+.ti -1c
+.RI "bool \fBevent\fP (QEvent *event) override"
+.br
+.RI "\fBSearchAndReplaceWidget::event\fP Reimplemented to clear the the lines edit and hide the advanced widgets, when this widget become hidden\&. "
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::clear\fP Clear the content of the search and replace line edit Clear all tree items in the tree widget (except the category items)\&. "
+.ti -1c
+.RI "void \fBsetEditor\fP (\fBQETDiagramEditor\fP *editor)"
+.br
+.RI "\fBSearchAndReplaceWidget::setEditor\fP Set the diagram editor of this widget\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_quit_button_clicked\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::on_m_quit_button_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_advanced_pb_toggled\fP (bool checked)"
+.br
+.ti -1c
+.RI "void \fBon_m_tree_widget_itemDoubleClicked\fP (QTreeWidgetItem *item, int column)"
+.br
+.ti -1c
+.RI "void \fBon_m_reload_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_tree_widget_currentItemChanged\fP (QTreeWidgetItem *current, QTreeWidgetItem *previous)"
+.br
+.ti -1c
+.RI "void \fBon_m_next_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_previous_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_folio_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_replace_pb_clicked\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::on_m_replace_pb_clicked\fP Replace the current selection\&. "
+.ti -1c
+.RI "void \fBon_m_replace_all_pb_clicked\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::on_m_replace_all_pb_clicked\fP Replace all checked item\&. "
+.ti -1c
+.RI "void \fBon_m_element_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_mode_cb_currentIndexChanged\fP (int index)"
+.br
+.RI "\fBSearchAndReplaceWidget::on_m_mode_cb_currentIndexChanged\fP Update the search when user change mode\&. "
+.ti -1c
+.RI "void \fBon_m_case_sensitive_cb_stateChanged\fP (int arg1)"
+.br
+.RI "\fBSearchAndReplaceWidget::on_m_case_sensitive_cb_stateChanged\fP Update the search when change the case sensitive\&. "
+.ti -1c
+.RI "void \fBon_m_conductor_pb_clicked\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::on_m_conductor_pb_clicked\fP Open a dialog to edit the condutor properties\&. "
+.ti -1c
+.RI "void \fBon_m_advanced_replace_pb_clicked\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::on_m_advanced_replace_pb_clicked\fP Open the advanced editor\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpTreeItems\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::setUpTreeItems\fP Set up the main tree widget items\&. "
+.ti -1c
+.RI "void \fBsetHideAdvanced\fP (bool hide)"
+.br
+.RI "\fBSearchAndReplaceWidget::setHideAdvanced\fP Hide advanced widgets\&. "
+.ti -1c
+.RI "void \fBfillItemsList\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::fillItemsList\fP Fill the tree\&. "
+.ti -1c
+.RI "void \fBaddElement\fP (\fBElement\fP *element)"
+.br
+.RI "\fBSearchAndReplaceWidget::addElement\fP Add a tree widget item for element\&. "
+.ti -1c
+.RI "void \fBsearch\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::search\fP Start the search\&. "
+.ti -1c
+.RI "void \fBsetVisibleAllParents\fP (QTreeWidgetItem *item, bool expend_parent=true)"
+.br
+.RI "\fBSearchAndReplaceWidget::setVisibleAllParents\fP Set visible all parents of item until the invisible root item\&. "
+.ti -1c
+.RI "QTreeWidgetItem * \fBnextItem\fP (QTreeWidgetItem *item=nullptr, QTreeWidgetItemIterator::IteratorFlag flags=QTreeWidgetItemIterator::All) const"
+.br
+.RI "\fBSearchAndReplaceWidget::nextItem\fP\&. "
+.ti -1c
+.RI "QTreeWidgetItem * \fBpreviousItem\fP (QTreeWidgetItem *item=nullptr, QTreeWidgetItemIterator::IteratorFlag flags=QTreeWidgetItemIterator::All) const"
+.br
+.RI "\fBSearchAndReplaceWidget::previousItem\fP\&. "
+.ti -1c
+.RI "void \fBupdateNextPreviousButtons\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::updateNextPreviousButtons\fP According to the current item, if there is a next or a previous item, we enable/disable the buttons next/previous item\&. "
+.ti -1c
+.RI "void \fBitemChanged\fP (QTreeWidgetItem *item, int column)"
+.br
+.RI "\fBSearchAndReplaceWidget::itemChanged\fP Reimplemented from QTreeWidget\&. Use to update the check state of items\&. "
+.ti -1c
+.RI "void \fBsetChildCheckState\fP (QTreeWidgetItem *item, Qt::CheckState check, bool deep=true)"
+.br
+.RI "\fBSearchAndReplaceWidget::setChildCheckState\fP\&. "
+.ti -1c
+.RI "void \fBupdateParentCheckState\fP (QTreeWidgetItem *item, bool all_parents=true)"
+.br
+.RI "\fBSearchAndReplaceWidget::updateParentCheckState\fP\&. "
+.ti -1c
+.RI "void \fBactivateNextChecked\fP ()"
+.br
+.RI "\fBSearchAndReplaceWidget::activateNextChecked\fP Activate the next checked (and visible) item\&. "
+.ti -1c
+.RI "QList< \fBDiagram\fP * > \fBselectedDiagram\fP () const"
+.br
+.RI "\fBSearchAndReplaceWidget::selectedDiagram\fP\&. "
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBselectedElement\fP () const"
+.br
+.RI "\fBSearchAndReplaceWidget::selectedElement\fP\&. "
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBselectedConductor\fP () const"
+.br
+.RI "\fBSearchAndReplaceWidget::selectedConductor\fP\&. "
+.ti -1c
+.RI "QList< \fBIndependentTextItem\fP * > \fBselectedText\fP () const"
+.br
+.RI "\fBSearchAndReplaceWidget::selectedText\fP\&. "
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QStringList \fBsearchTerms\fP (\fBDiagram\fP *diagram)"
+.br
+.RI "\fBSearchAndReplaceWidget::searchTerms\fP\&. "
+.ti -1c
+.RI "static QStringList \fBsearchTerms\fP (\fBElement\fP *element)"
+.br
+.RI "\fBSearchAndReplaceWidget::searchTerms\fP\&. "
+.ti -1c
+.RI "static QStringList \fBsearchTerms\fP (\fBConductor\fP *conductor)"
+.br
+.RI "\fBSearchAndReplaceWidget::searchTerms\fP\&. "
+.ti -1c
+.RI "static QStringList \fBsearchTerms\fP (QString str)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::SearchAndReplaceWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBQETDiagramEditor\fP * \fBm_editor\fP"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_root_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_folio_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_indi_text_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_elements_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_simple_elmt_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_master_elmt_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_slave_elmt_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_report_elmt_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_terminal_elmt_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_conductor_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "QList< QTreeWidgetItem * > \fBm_qtwi_elmts\fP"
+.br
+.ti -1c
+.RI "QList< QTreeWidgetItem * > \fBm_category_qtwi\fP"
+.br
+.ti -1c
+.RI "QHash< QTreeWidgetItem *, QPointer< \fBElement\fP > > \fBm_element_hash\fP"
+.br
+.ti -1c
+.RI "QHash< QTreeWidgetItem *, QPointer< \fBIndependentTextItem\fP > > \fBm_text_hash\fP"
+.br
+.ti -1c
+.RI "QHash< QTreeWidgetItem *, QPointer< \fBConductor\fP > > \fBm_conductor_hash\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBElement\fP > \fBm_highlighted_element\fP"
+.br
+.ti -1c
+.RI "QPointer< QGraphicsObject > \fBm_last_selected\fP"
+.br
+.ti -1c
+.RI "QHash< QTreeWidgetItem *, QPointer< \fBDiagram\fP > > \fBm_diagram_hash\fP"
+.br
+.ti -1c
+.RI "\fBSearchAndReplaceWorker\fP \fBm_worker\fP"
+.br
+.ti -1c
+.RI "\fBQWidgetAnimation\fP * \fBm_vertical_animation\fP"
+.br
+.ti -1c
+.RI "\fBQWidgetAnimation\fP * \fBm_horizontal_animation\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SearchAndReplaceWidget::SearchAndReplaceWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::SearchAndReplaceWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SS "SearchAndReplaceWidget::~SearchAndReplaceWidget ()\fC [override]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::~SearchAndReplaceWidget\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SearchAndReplaceWidget::activateNextChecked ()\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::activateNextChecked\fP Activate the next checked (and visible) item\&. 
+.SS "void SearchAndReplaceWidget::addElement (\fBElement\fP * element)\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::addElement\fP Add a tree widget item for element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::clear ()"
+
+.PP
+\fBSearchAndReplaceWidget::clear\fP Clear the content of the search and replace line edit Clear all tree items in the tree widget (except the category items)\&. 
+.SS "bool SearchAndReplaceWidget::event (QEvent * event)\fC [override]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::event\fP Reimplemented to clear the the lines edit and hide the advanced widgets, when this widget become hidden\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::fillItemsList ()\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::fillItemsList\fP Fill the tree\&. 
+.SS "void SearchAndReplaceWidget::itemChanged (QTreeWidgetItem * item, int column)\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::itemChanged\fP Reimplemented from QTreeWidget\&. Use to update the check state of items\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.br
+\fIcolumn\fP 
+.RE
+.PP
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::nextItem (QTreeWidgetItem * item = \fCnullptr\fP, QTreeWidgetItemIterator::IteratorFlag flags = \fCQTreeWidgetItemIterator::All\fP) const\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::nextItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP : find the next item from item, if item is nullptr, start the search for the root of the tree 
+.br
+\fIflags\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the next item according to flag or nullptr if there is not a next item 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::on_m_advanced_pb_toggled (bool checked)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void SearchAndReplaceWidget::on_m_advanced_replace_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::on_m_advanced_replace_pb_clicked\fP Open the advanced editor\&. 
+.SS "void SearchAndReplaceWidget::on_m_case_sensitive_cb_stateChanged (int arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::on_m_case_sensitive_cb_stateChanged\fP Update the search when change the case sensitive\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg1\fP 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::on_m_conductor_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::on_m_conductor_pb_clicked\fP Open a dialog to edit the condutor properties\&. 
+.SS "void SearchAndReplaceWidget::on_m_element_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void SearchAndReplaceWidget::on_m_folio_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void SearchAndReplaceWidget::on_m_mode_cb_currentIndexChanged (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::on_m_mode_cb_currentIndexChanged\fP Update the search when user change mode\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::on_m_next_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void SearchAndReplaceWidget::on_m_previous_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void SearchAndReplaceWidget::on_m_quit_button_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::on_m_quit_button_clicked\fP\&. 
+.SS "void SearchAndReplaceWidget::on_m_reload_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void SearchAndReplaceWidget::on_m_replace_all_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::on_m_replace_all_pb_clicked\fP Replace all checked item\&. 
+.SS "void SearchAndReplaceWidget::on_m_replace_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::on_m_replace_pb_clicked\fP Replace the current selection\&. 
+.SS "void SearchAndReplaceWidget::on_m_tree_widget_currentItemChanged (QTreeWidgetItem * current, QTreeWidgetItem * previous)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void SearchAndReplaceWidget::on_m_tree_widget_itemDoubleClicked (QTreeWidgetItem * item, int column)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::previousItem (QTreeWidgetItem * item = \fCnullptr\fP, QTreeWidgetItemIterator::IteratorFlag flags = \fCQTreeWidgetItemIterator::All\fP) const\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::previousItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP : find the previous item from item, if item is nullptr, start the search for the root of the tree 
+.br
+\fIflags\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the previous item according to flag or nullptr if there is not a previous item 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::search ()\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::search\fP Start the search\&. 
+.SS "QStringList SearchAndReplaceWidget::searchTerms (\fBConductor\fP * conductor)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::searchTerms\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+all QString use as terms for search\&. 
+.RE
+.PP
+
+.SS "QStringList SearchAndReplaceWidget::searchTerms (\fBDiagram\fP * diagram)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::searchTerms\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+All QStrings use as terms for search\&. 
+.RE
+.PP
+
+.SS "QStringList SearchAndReplaceWidget::searchTerms (\fBElement\fP * element)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::searchTerms\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+All QString use as terms for search 
+.RE
+.PP
+
+.SS "static QStringList SearchAndReplaceWidget::searchTerms (QString str)\fC [static]\fP, \fC [private]\fP"
+
+.SS "QList< \fBConductor\fP * > SearchAndReplaceWidget::selectedConductor () const\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::selectedConductor\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The list of visible and selected conductor in the tree widget 
+.RE
+.PP
+
+.SS "QList< \fBDiagram\fP * > SearchAndReplaceWidget::selectedDiagram () const\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::selectedDiagram\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The list of visible and selected diagram in the tree widget 
+.RE
+.PP
+
+.SS "QList< \fBElement\fP * > SearchAndReplaceWidget::selectedElement () const\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::selectedElement\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The list of visible and selected element in the tree widget 
+.RE
+.PP
+
+.SS "QList< \fBIndependentTextItem\fP * > SearchAndReplaceWidget::selectedText () const\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::selectedText\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The list of visible and selected independant text in the tree widget 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::setChildCheckState (QTreeWidgetItem * item, Qt::CheckState check, bool deep = \fCtrue\fP)\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::setChildCheckState\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP : Parent of the items to be evaluated 
+.br
+\fIcheck\fP : check state 
+.br
+\fIdeep\fP : if true, we evaluate every subchilds\&. 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::setEditor (\fBQETDiagramEditor\fP * editor)"
+
+.PP
+\fBSearchAndReplaceWidget::setEditor\fP Set the diagram editor of this widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::setHideAdvanced (bool hide)\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::setHideAdvanced\fP Hide advanced widgets\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhide\fP 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::setUpTreeItems ()\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::setUpTreeItems\fP Set up the main tree widget items\&. 
+.SS "void SearchAndReplaceWidget::setVisibleAllParents (QTreeWidgetItem * item, bool expend_parent = \fCtrue\fP)\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::setVisibleAllParents\fP Set visible all parents of item until the invisible root item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.br
+\fIexpend_parent\fP 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWidget::updateNextPreviousButtons ()\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::updateNextPreviousButtons\fP According to the current item, if there is a next or a previous item, we enable/disable the buttons next/previous item\&. 
+.SS "void SearchAndReplaceWidget::updateParentCheckState (QTreeWidgetItem * item, bool all_parents = \fCtrue\fP)\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWidget::updateParentCheckState\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP : a child item of the parent to be evaluated\&. 
+.br
+\fIall_parents\fP : if true, we evaluate every parents, until the root item\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QTreeWidgetItem *> SearchAndReplaceWidget::m_category_qtwi\fC [private]\fP"
+
+.SS "QHash<QTreeWidgetItem *, QPointer <\fBConductor\fP> > SearchAndReplaceWidget::m_conductor_hash\fC [private]\fP"
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::m_conductor_qtwi = nullptr\fC [private]\fP"
+
+.SS "QHash<QTreeWidgetItem *, QPointer <\fBDiagram\fP> > SearchAndReplaceWidget::m_diagram_hash\fC [private]\fP"
+
+.SS "\fBQETDiagramEditor\fP* SearchAndReplaceWidget::m_editor\fC [private]\fP"
+
+.SS "QHash<QTreeWidgetItem *, QPointer <\fBElement\fP> > SearchAndReplaceWidget::m_element_hash\fC [private]\fP"
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::m_elements_qtwi = nullptr\fC [private]\fP"
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::m_folio_qtwi = nullptr\fC [private]\fP"
+
+.SS "QPointer<\fBElement\fP> SearchAndReplaceWidget::m_highlighted_element\fC [private]\fP"
+
+.SS "\fBQWidgetAnimation\fP* SearchAndReplaceWidget::m_horizontal_animation\fC [private]\fP"
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::m_indi_text_qtwi = nullptr\fC [private]\fP"
+
+.SS "QPointer<QGraphicsObject> SearchAndReplaceWidget::m_last_selected\fC [private]\fP"
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::m_master_elmt_qtwi = nullptr\fC [private]\fP"
+
+.SS "QList<QTreeWidgetItem *> SearchAndReplaceWidget::m_qtwi_elmts\fC [private]\fP"
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::m_report_elmt_qtwi = nullptr\fC [private]\fP"
+
+.SS "QTreeWidgetItem* SearchAndReplaceWidget::m_root_qtwi = nullptr\fC [private]\fP"
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::m_simple_elmt_qtwi = nullptr\fC [private]\fP"
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::m_slave_elmt_qtwi = nullptr\fC [private]\fP"
+
+.SS "QTreeWidgetItem * SearchAndReplaceWidget::m_terminal_elmt_qtwi = nullptr\fC [private]\fP"
+
+.SS "QHash<QTreeWidgetItem *, QPointer <\fBIndependentTextItem\fP> > SearchAndReplaceWidget::m_text_hash\fC [private]\fP"
+
+.SS "\fBQWidgetAnimation\fP* SearchAndReplaceWidget::m_vertical_animation\fC [private]\fP"
+
+.SS "\fBSearchAndReplaceWorker\fP SearchAndReplaceWidget::m_worker\fC [private]\fP"
+
+.SS "Ui::SearchAndReplaceWidget* SearchAndReplaceWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

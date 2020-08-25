@@ -1,0 +1,155 @@
+.TH "ChangeZValueCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChangeZValueCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <editorcommands\&.h>\fP
+.PP
+Inherits \fBElementEditionCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeZValueCommand\fP (\fBElementScene\fP *, \fBQET::DepthOption\fP, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ChangeZValueCommand\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "Annule les changements de zValue\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "Refait les changements de zValue\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeZValueCommand\fP (const \fBChangeZValueCommand\fP &)"
+.br
+.ti -1c
+.RI "void \fBapplyBringForward\fP (const QList< QGraphicsItem * > &)"
+.br
+.ti -1c
+.RI "void \fBapplyRaise\fP (const QList< QGraphicsItem * > &)"
+.br
+.ti -1c
+.RI "void \fBapplyLower\fP (const QList< QGraphicsItem * > &)"
+.br
+.ti -1c
+.RI "void \fBapplySendBackward\fP (const QList< QGraphicsItem * > &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QHash< QGraphicsItem *, qreal > \fBundo_hash\fP"
+.br
+.RI "associates impacted primitives with their former zValues "
+.ti -1c
+.RI "QHash< QGraphicsItem *, qreal > \fBredo_hash\fP"
+.br
+.RI "associates impacted primitives with their new zValues "
+.ti -1c
+.RI "\fBQET::DepthOption\fP \fBm_option\fP"
+.br
+.RI "kind of treatment to apply "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This command changes the zValue of a set of primitives when editing an electrical element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChangeZValueCommand::ChangeZValueCommand (\fBElementScene\fP * elmt, \fBQET::DepthOption\fP o, QUndoCommand * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP \fBElementScene\fP concernee 
+.br
+\fIo\fP Option decrivant le type de traitement applique aux zValues des parties de l'element 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "ChangeZValueCommand::~ChangeZValueCommand ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "ChangeZValueCommand::ChangeZValueCommand (const \fBChangeZValueCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChangeZValueCommand::applyBringForward (const QList< QGraphicsItem * > & items_list)\fC [private]\fP"
+Amene les elements selectionnes au premier plan 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitems_list\fP Liste des elements (selectionnes et non selectionnes) 
+.RE
+.PP
+
+.SS "void ChangeZValueCommand::applyLower (const QList< QGraphicsItem * > & items_list)\fC [private]\fP"
+Descend les elements selectionnes d'un plan 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitems_list\fP Liste des elements (selectionnes et non selectionnes) 
+.RE
+.PP
+
+.SS "void ChangeZValueCommand::applyRaise (const QList< QGraphicsItem * > & items_list)\fC [private]\fP"
+Remonte les elements selectionnes d'un plan 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitems_list\fP Liste des elements (selectionnes et non selectionnes) 
+.RE
+.PP
+
+.SS "void ChangeZValueCommand::applySendBackward (const QList< QGraphicsItem * > & items_list)\fC [private]\fP"
+Envoie les elements selectionnes au fond 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitems_list\fP Liste des elements (selectionnes et non selectionnes) 
+.RE
+.PP
+
+.SS "void ChangeZValueCommand::redo ()\fC [override]\fP"
+
+.PP
+Refait les changements de zValue\&. 
+.SS "void ChangeZValueCommand::undo ()\fC [override]\fP"
+
+.PP
+Annule les changements de zValue\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQET::DepthOption\fP ChangeZValueCommand::m_option\fC [private]\fP"
+
+.PP
+kind of treatment to apply 
+.SS "QHash<QGraphicsItem *, qreal> ChangeZValueCommand::redo_hash\fC [private]\fP"
+
+.PP
+associates impacted primitives with their new zValues 
+.SS "QHash<QGraphicsItem *, qreal> ChangeZValueCommand::undo_hash\fC [private]\fP"
+
+.PP
+associates impacted primitives with their former zValues 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

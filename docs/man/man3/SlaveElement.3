@@ -1,0 +1,107 @@
+.TH "SlaveElement" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SlaveElement
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <slaveelement\&.h>\fP
+.PP
+Inherits \fBElement\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSlaveElement\fP (const \fBElementsLocation\fP &, QGraphicsItem *=nullptr, int *=nullptr)"
+.br
+.RI "\fBSlaveElement::SlaveElement\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~SlaveElement\fP () override"
+.br
+.RI "\fBSlaveElement::~SlaveElement\fP default destructor\&. "
+.ti -1c
+.RI "void \fBlinkToElement\fP (\fBElement\fP *elmt) override"
+.br
+.RI "\fBSlaveElement::linkToElement\fP Link this slave to another element For this class element must be a master\&. "
+.ti -1c
+.RI "void \fBunlinkAllElements\fP () override"
+.br
+.RI "\fBSlaveElement::unlinkAllElements\fP Unlink all of the element in the QList connected_elements\&. "
+.ti -1c
+.RI "void \fBunlinkElement\fP (\fBElement\fP *elmt) override"
+.br
+.RI "\fBSlaveElement::unlinkElement\fP Unlink the given elmt in parametre\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QGraphicsTextItem * \fBm_xref_item\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SlaveElement::SlaveElement (const \fBElementsLocation\fP & location, QGraphicsItem * qgi = \fCnullptr\fP, int * state = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBSlaveElement::SlaveElement\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP location of xml definition 
+.br
+\fIqgi\fP parent QGraphicItem 
+.br
+\fIstate\fP int used to know if the creation of element have error 
+.RE
+.PP
+
+.SS "SlaveElement::~SlaveElement ()\fC [override]\fP"
+
+.PP
+\fBSlaveElement::~SlaveElement\fP default destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SlaveElement::linkToElement (\fBElement\fP * elmt)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBSlaveElement::linkToElement\fP Link this slave to another element For this class element must be a master\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBElement\fP\&.
+.SS "void SlaveElement::unlinkAllElements ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBSlaveElement::unlinkAllElements\fP Unlink all of the element in the QList connected_elements\&. 
+.PP
+Reimplemented from \fBElement\fP\&.
+.SS "void SlaveElement::unlinkElement (\fBElement\fP * elmt)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBSlaveElement::unlinkElement\fP Unlink the given elmt in parametre\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBElement\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QGraphicsTextItem* SlaveElement::m_xref_item\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

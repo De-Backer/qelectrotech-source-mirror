@@ -1,0 +1,81 @@
+.TH "sources/qetxml.h" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qetxml.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QDomElement>\fP
+.br
+\fC#include <QPen>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBQETXML\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "QDomElement \fBQETXML::penToXml\fP (QDomDocument &parent_document, const QPen &pen)"
+.br
+.RI "\fBQETXML::penToXml\fP Write attribute of a QPen in xml element\&. "
+.ti -1c
+.RI "QPen \fBQETXML::penFromXml\fP (const QDomElement &element)"
+.br
+.RI "\fBQETXML::penFromXml\fP Build a QPen from a xml description\&. "
+.ti -1c
+.RI "QDomElement \fBQETXML::brushToXml\fP (QDomDocument &parent_document, const QBrush &brush)"
+.br
+.RI "\fBQETXML::brushToXml\fP Write attribute of a QBrush in xml element\&. "
+.ti -1c
+.RI "QBrush \fBQETXML::brushFromXml\fP (const QDomElement &element)"
+.br
+.RI "\fBQETXML::brushFromXml\fP Build a QBrush from a xml description\&. "
+.ti -1c
+.RI "QDomElement \fBQETXML::fileSystemDirToXmlCollectionDir\fP (QDomDocument &document, const QDir &dir, const QString &rename=QString())"
+.br
+.ti -1c
+.RI "QDomElement \fBQETXML::fileSystemElementToXmlCollectionElement\fP (QDomDocument &document, QFile &file, const QString &rename=QString())"
+.br
+.ti -1c
+.RI "bool \fBQETXML::writeXmlFile\fP (const QDomDocument &xml_document, const QString &file_path, QString *error_message=nullptr)"
+.br
+.RI "\fBQETXML::writeXmlFile\fP Export an XML document to an UTF-8 text file indented with 4 spaces, with LF end of lines and no BOM\&. "
+.ti -1c
+.RI "QDomElement \fBQETXML::textToDomElement\fP (QDomDocument &document, const QString &tag_name, const QString &value)"
+.br
+.RI "\fBQETXML::textToDomElement\fP Return a QDomElement, created from document, with tag name tag_name and text value\&. "
+.ti -1c
+.RI "QVector< QDomElement > \fBQETXML::directChild\fP (const QDomElement &element, const QString &tag_name)"
+.br
+.RI "\fBQETXML::directChild\fP\&. "
+.ti -1c
+.RI "QVector< QDomElement > \fBQETXML::subChild\fP (const QDomElement &element, const QString parent_tag_name, const QString &children_tag_name)"
+.br
+.RI "\fBQETXML::subChild\fP\&. "
+.ti -1c
+.RI "QDomElement \fBQETXML::marginsToXml\fP (QDomDocument &parent_document, const QMargins &margins)"
+.br
+.RI "\fBQETXML::marginsToXml\fP Save a QMargins to xml\&. the xml tag name is 'margins'\&. "
+.ti -1c
+.RI "QMargins \fBQETXML::marginsFromXml\fP (const QDomElement &element)"
+.br
+.RI "\fBQETXML::marginsFromXml\fP\&. "
+.ti -1c
+.RI "QDomElement \fBQETXML::modelHeaderDataToXml\fP (QDomDocument &parent_document, const QAbstractItemModel *model, QHash< int, QList< int >> horizontal_section_role, QHash< int, QList< int >> vertical_section_role)"
+.br
+.RI "\fBQETXML::modelHeaderDataToXml\fP Save to xml element all header data specified by horizontal_section_role and vertical_section_role\&. "
+.ti -1c
+.RI "void \fBQETXML::modelHeaderDataFromXml\fP (const QDomElement &element, QAbstractItemModel *model)"
+.br
+.RI "\fBQETXML::modelHeaderDataFromXml\fP Restore from xml modele header data\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,70 @@
+.TH "TerminalElement" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TerminalElement \- The \fBTerminalElement\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <terminalelement\&.h>\fP
+.PP
+Inherits \fBElement\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminalElement\fP (const \fBElementsLocation\fP &, QGraphicsItem *=nullptr, int *=nullptr)"
+.br
+.RI "\fBTerminalElement::TerminalElement\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~TerminalElement\fP () override"
+.br
+.ti -1c
+.RI "void \fBinitLink\fP (\fBQETProject\fP *project) override"
+.br
+.RI "\fBTerminalElement::initLink\fP\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBTerminalElement\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TerminalElement::TerminalElement (const \fBElementsLocation\fP & location, QGraphicsItem * qgi = \fCnullptr\fP, int * state = \fCnullptr\fP)"
+
+.PP
+\fBTerminalElement::TerminalElement\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP location of xml definition 
+.br
+\fIqgi\fP parent QGraphicItem 
+.br
+\fIstate\fP int used to know if the creation of element have error 
+.RE
+.PP
+
+.SS "TerminalElement::~TerminalElement ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TerminalElement::initLink (\fBQETProject\fP * project)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBTerminalElement::initLink\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBElement\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

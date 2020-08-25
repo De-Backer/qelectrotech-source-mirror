@@ -1,0 +1,8 @@
+<map id="Element::freezeLabel" name="Element::freezeLabel">
+<area shape="rect" id="node1" title="Element::freezeLabel Freeze this element label." alt="" coords="724,56,868,83"/>
+<area shape="rect" id="node2" href="$d3/d37/class_diagram.html#a0c17be8f3cacd92591e45539875851f4" title="Diagram::freezeElements Freeze every existent element label." alt="" coords="478,5,649,32"/>
+<area shape="rect" id="node3" href="$d5/d50/class_element.html#ad150be8a6e12e42ec579a80ea6d0b114" title="Element::freezeNewAddedElement Freeze this label if needed." alt="" coords="451,56,676,83"/>
+<area shape="rect" id="node6" href="$d3/d37/class_diagram.html#a07c3c8c645c9f4ccc0d9cde95745eab4" title="Diagram::unfreezeElements Unfreeze every existent element label." alt="" coords="471,107,655,133"/>
+<area shape="rect" id="node4" href="$de/d1f/class_diagram_event_add_element.html#af36a8f0e0220dfe7ba3430e99bb257b9" title="DiagramEventAddElement::addElement Add an element at the current pos en current rotation,..." alt="" coords="228,49,403,90"/>
+<area shape="rect" id="node5" href="$de/d1f/class_diagram_event_add_element.html#a83197f59aa1fe080ac85c7fc6124be53" title="DiagramEventAddElement::mouseReleaseEvent Right button finish this event (isRunning = false) and emit..." alt="" coords="5,49,180,90"/>
+</map>

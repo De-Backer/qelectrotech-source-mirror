@@ -1,0 +1,26 @@
+.TH "sources/qetgraphicsitem/ViewItem/projectdbmodel.h" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qetgraphicsitem/ViewItem/projectdbmodel.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QAbstractTableModel>\fP
+.br
+\fC#include <QPointer>\fP
+.br
+\fC#include <QDomElement>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBProjectDBModel\fP"
+.br
+.RI "The \fBProjectDBModel\fP class This model is intended to be use with the class \fBprojectDataBase\fP and is designed to be displayed by the class \fBQetGraphicsTableItem\fP (but can be use by other view class since it inherit from QAbstractTableModel)\&. This class should be sufficient to display the content of the project data base from a query set by the method void \fBProjectDBModel::setQuery(const QString &query)\fP\&. The indentifier method is used by widget editor to retrieve the good widget for edit the query\&. By defaut identifer return the string 'unknow'\&. You should use setIdentfier method to set your custom identifier\&. At the time this sentence is written, there is two identifier : nomenclature summary\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

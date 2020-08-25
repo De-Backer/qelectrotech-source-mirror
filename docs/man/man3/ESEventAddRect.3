@@ -1,0 +1,122 @@
+.TH "ESEventAddRect" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESEventAddRect
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eseventaddrect\&.h>\fP
+.PP
+Inherits \fBESEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESEventAddRect\fP (\fBElementScene\fP *scene)"
+.br
+.RI "\fBESEventAddRect::ESEventAddRect\fP\&. "
+.ti -1c
+.RI "\fB~ESEventAddRect\fP () override"
+.br
+.RI "\fBESEventAddRect::~ESEventAddRect\fP\&. "
+.ti -1c
+.RI "bool \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddRect::mousePressEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddRect::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddRect::mouseReleaseEvent\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPartRectangle\fP * \fBm_rect\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESEventAddRect::ESEventAddRect (\fBElementScene\fP * scene)"
+
+.PP
+\fBESEventAddRect::ESEventAddRect\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP 
+.RE
+.PP
+
+.SS "ESEventAddRect::~ESEventAddRect ()\fC [override]\fP"
+
+.PP
+\fBESEventAddRect::~ESEventAddRect\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ESEventAddRect::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddRect::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddRect::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddRect::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddRect::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddRect::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPartRectangle\fP* ESEventAddRect::m_rect\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

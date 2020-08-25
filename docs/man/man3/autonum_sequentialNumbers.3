@@ -1,0 +1,133 @@
+.TH "autonum::sequentialNumbers" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+autonum::sequentialNumbers
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <assignvariables\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsequentialNumbers\fP ()"
+.br
+.RI "\fBsequentialNumbers::sequentialNumbers\fP "
+.ti -1c
+.RI "\fBsequentialNumbers\fP (const \fBsequentialNumbers\fP &other)"
+.br
+.ti -1c
+.RI "\fB~sequentialNumbers\fP ()"
+.br
+.ti -1c
+.RI "\fBsequentialNumbers\fP & \fBoperator=\fP (const \fBsequentialNumbers\fP &other)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBsequentialNumbers\fP &other) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBsequentialNumbers\fP &other) const"
+.br
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &document, const QString &tag_name=QString('sequentialNumbers')) const"
+.br
+.RI "\fBsequentialNumbers::toXml\fP export this sequential numbers into a QDomElement\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &element)"
+.br
+.RI "\fBsequentialNumbers::fromXml\fP Import sequential values from a QDomElement "
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QStringList \fBunit\fP"
+.br
+.ti -1c
+.RI "QStringList \fBunit_folio\fP"
+.br
+.ti -1c
+.RI "QStringList \fBten\fP"
+.br
+.ti -1c
+.RI "QStringList \fBten_folio\fP"
+.br
+.ti -1c
+.RI "QStringList \fBhundred\fP"
+.br
+.ti -1c
+.RI "QStringList \fBhundred_folio\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "autonum::sequentialNumbers::sequentialNumbers ()"
+
+.PP
+\fBsequentialNumbers::sequentialNumbers\fP 
+.SS "autonum::sequentialNumbers::sequentialNumbers (const \fBsequentialNumbers\fP & other)"
+
+.SS "autonum::sequentialNumbers::~sequentialNumbers ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void autonum::sequentialNumbers::clear ()"
+
+.SS "void autonum::sequentialNumbers::fromXml (const QDomElement & element)"
+
+.PP
+\fBsequentialNumbers::fromXml\fP Import sequential values from a QDomElement 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.SS "bool autonum::sequentialNumbers::operator!= (const \fBsequentialNumbers\fP & other) const"
+
+.SS "\fBsequentialNumbers\fP & autonum::sequentialNumbers::operator= (const \fBsequentialNumbers\fP & other)"
+
+.SS "bool autonum::sequentialNumbers::operator== (const \fBsequentialNumbers\fP & other) const"
+
+.SS "QDomElement autonum::sequentialNumbers::toXml (QDomDocument & document, const QString & tag_name = \fCQString('sequentialNumbers')\fP) const"
+
+.PP
+\fBsequentialNumbers::toXml\fP export this sequential numbers into a QDomElement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP : QDomDocument used to create the QDomElement 
+.br
+\fItag_name\fP : the tag name used for the QDomElement\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A QDomElement, if this sequential have no value, the returned QDomELement is empty 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QStringList autonum::sequentialNumbers::hundred"
+
+.SS "QStringList autonum::sequentialNumbers::hundred_folio"
+
+.SS "QStringList autonum::sequentialNumbers::ten"
+
+.SS "QStringList autonum::sequentialNumbers::ten_folio"
+
+.SS "QStringList autonum::sequentialNumbers::unit"
+
+.SS "QStringList autonum::sequentialNumbers::unit_folio"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

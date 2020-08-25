@@ -1,0 +1,69 @@
+.TH "MoveTitleBlockTemplatesHandler" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MoveTitleBlockTemplatesHandler
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <movetemplateshandler\&.h>\fP
+.PP
+Inherits QObject\&.
+.PP
+Inherited by \fBIntegrationMoveTitleBlockTemplatesHandler\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMoveTitleBlockTemplatesHandler\fP (QObject *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~MoveTitleBlockTemplatesHandler\fP () override"
+.br
+.ti -1c
+.RI "virtual \fBQET::Action\fP \fBtemplateAlreadyExists\fP (const \fBTitleBlockTemplateLocation\fP &src, const \fBTitleBlockTemplateLocation\fP &dst)=0"
+.br
+.ti -1c
+.RI "virtual \fBQET::Action\fP \fBerrorWithATemplate\fP (const \fBTitleBlockTemplateLocation\fP &, const QString &)=0"
+.br
+.ti -1c
+.RI "virtual QString \fBnameForRenamingOperation\fP ()=0"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMoveTitleBlockTemplatesHandler\fP (const \fBMoveTitleBlockTemplatesHandler\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class defines the minimal interface required to implement an object able to handle a title block template move or copy\&. It is a Strategy pattern that embeds the copy/move error handling instead of the whole process\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MoveTitleBlockTemplatesHandler::MoveTitleBlockTemplatesHandler (QObject * = \fCnullptr\fP)\fC [inline]\fP"
+
+.SS "MoveTitleBlockTemplatesHandler::~MoveTitleBlockTemplatesHandler ()\fC [inline]\fP, \fC [override]\fP"
+
+.SS "MoveTitleBlockTemplatesHandler::MoveTitleBlockTemplatesHandler (const \fBMoveTitleBlockTemplatesHandler\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBQET::Action\fP MoveTitleBlockTemplatesHandler::errorWithATemplate (const \fBTitleBlockTemplateLocation\fP &, const QString &)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBIntegrationMoveTitleBlockTemplatesHandler\fP\&.
+.SS "virtual QString MoveTitleBlockTemplatesHandler::nameForRenamingOperation ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBIntegrationMoveTitleBlockTemplatesHandler\fP\&.
+.SS "virtual \fBQET::Action\fP MoveTitleBlockTemplatesHandler::templateAlreadyExists (const \fBTitleBlockTemplateLocation\fP & src, const \fBTitleBlockTemplateLocation\fP & dst)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBIntegrationMoveTitleBlockTemplatesHandler\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

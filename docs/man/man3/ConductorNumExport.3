@@ -1,0 +1,106 @@
+.TH "ConductorNumExport" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConductorNumExport \- The \fBConductorNumExport\fP class A class to export the num of conductors into a csv file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductornumexport\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorNumExport\fP (\fBQETProject\fP *project, QWidget *parent=nullptr)"
+.br
+.RI "\fBConductorNumExport::ConductorNumExport\fP\&. "
+.ti -1c
+.RI "bool \fBtoCsv\fP ()"
+.br
+.RI "\fBConductorNumExport::toCsv\fP Export the num of conductors into a csv file\&. "
+.ti -1c
+.RI "QString \fBwiresNum\fP () const"
+.br
+.RI "\fBConductorNumExport::wiresNum\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfillHash\fP ()"
+.br
+.RI "\fBConductorNumExport::fillHash\fP make/fill of m_hash\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP = nullptr"
+.br
+.ti -1c
+.RI "QHash< QString, int > \fBm_hash\fP"
+.br
+.ti -1c
+.RI "QWidget * \fBm_parent_widget\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBConductorNumExport\fP class A class to export the num of conductors into a csv file\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConductorNumExport::ConductorNumExport (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBConductorNumExport::ConductorNumExport\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : the project to export the conductors num 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ConductorNumExport::fillHash ()\fC [private]\fP"
+
+.PP
+\fBConductorNumExport::fillHash\fP make/fill of m_hash\&. 
+.SS "bool ConductorNumExport::toCsv ()"
+
+.PP
+\fBConductorNumExport::toCsv\fP Export the num of conductors into a csv file\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if suceesfully exported\&. 
+.RE
+.PP
+
+.SS "QString ConductorNumExport::wiresNum () const"
+
+.PP
+\fBConductorNumExport::wiresNum\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the wire num formated in csv 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QHash<QString, int> ConductorNumExport::m_hash\fC [private]\fP"
+
+.SS "QWidget* ConductorNumExport::m_parent_widget = nullptr\fC [private]\fP"
+
+.SS "\fBQETProject\fP* ConductorNumExport::m_project = nullptr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

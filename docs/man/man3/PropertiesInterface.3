@@ -1,0 +1,126 @@
+.TH "PropertiesInterface" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PropertiesInterface \- The \fBPropertiesInterface\fP class This class is an interface for have common way to use properties in QElectroTech\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <propertiesinterface\&.h>\fP
+.PP
+Inherited by \fBTerminalData\fP, and \fBXRefProperties\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPropertiesInterface\fP ()"
+.br
+.RI "\fBPropertiesInterface::PropertiesInterface\fP\&. "
+.ti -1c
+.RI "virtual \fB~PropertiesInterface\fP ()"
+.br
+.RI "\fBPropertiesInterface::~PropertiesInterface\fP\&. "
+.ti -1c
+.RI "virtual void \fBtoSettings\fP (QSettings &settings, const QString=QString()) const =0"
+.br
+.RI "toSettings Save properties to setting file\&. "
+.ti -1c
+.RI "virtual void \fBfromSettings\fP (const QSettings &settings, const QString=QString())=0"
+.br
+.RI "fromSettings load properties to setting file\&. "
+.ti -1c
+.RI "virtual QDomElement \fBtoXml\fP (QDomDocument &xml_document) const =0"
+.br
+.RI "toXml Save properties to xml element "
+.ti -1c
+.RI "virtual bool \fBfromXml\fP (const QDomElement &xml_element)=0"
+.br
+.RI "fromXml load properties to xml element "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBPropertiesInterface\fP class This class is an interface for have common way to use properties in QElectroTech\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PropertiesInterface::PropertiesInterface ()"
+
+.PP
+\fBPropertiesInterface::PropertiesInterface\fP\&. 
+.SS "PropertiesInterface::~PropertiesInterface ()\fC [virtual]\fP"
+
+.PP
+\fBPropertiesInterface::~PropertiesInterface\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void PropertiesInterface::fromSettings (const QSettings & settings, const QString = \fCQString()\fP)\fC [pure virtual]\fP"
+
+.PP
+fromSettings load properties to setting file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP : is use for prefix a word befor the name of each paramètre 
+.br
+\fIQString\fP 
+.RE
+.PP
+
+.PP
+Implemented in \fBXRefProperties\fP, and \fBTerminalData\fP\&.
+.SS "virtual bool PropertiesInterface::fromXml (const QDomElement & xml_element)\fC [pure virtual]\fP"
+
+.PP
+fromXml load properties to xml element 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true / false 
+.RE
+.PP
+
+.PP
+Implemented in \fBXRefProperties\fP, and \fBTerminalData\fP\&.
+.SS "virtual void PropertiesInterface::toSettings (QSettings & settings, const QString = \fCQString()\fP) const\fC [pure virtual]\fP"
+
+.PP
+toSettings Save properties to setting file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP : is use for prefix a word befor the name of each paramètre 
+.br
+\fIQString\fP 
+.RE
+.PP
+
+.PP
+Implemented in \fBXRefProperties\fP, and \fBTerminalData\fP\&.
+.SS "virtual QDomElement PropertiesInterface::toXml (QDomDocument & xml_document) const\fC [pure virtual]\fP"
+
+.PP
+toXml Save properties to xml element 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+QDomElement 
+.RE
+.PP
+
+.PP
+Implemented in \fBTerminalData\fP, and \fBXRefProperties\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

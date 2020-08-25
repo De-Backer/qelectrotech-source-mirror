@@ -1,0 +1,123 @@
+.TH "DiagramPosition" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramPosition
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramposition\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramPosition\fP (const QString &='', unsigned int=0)"
+.br
+.ti -1c
+.RI "virtual \fB~DiagramPosition\fP ()"
+.br
+.ti -1c
+.RI "QPointF \fBposition\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetPosition\fP (const QPointF &)"
+.br
+.ti -1c
+.RI "QString \fBtoString\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisOutOfBounds\fP () const"
+.br
+.ti -1c
+.RI "unsigned int \fBnumber\fP () const"
+.br
+.ti -1c
+.RI "QString \fBletter\fP () const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBletter_\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBnumber_\fP"
+.br
+.ti -1c
+.RI "QPointF \fBposition_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class stores the position of an electrical element on its parent diagram\&. While exact coordinates can be stored for convenience, the concept of diagram position as implemented by this class simply designates the intersection between a column and a row, e\&.g\&. B2 or C4\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramPosition::DiagramPosition (const QString & letter = \fC''\fP, unsigned int number = \fC0\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIletter\fP Lettre(s) composant la position 
+.br
+\fInumber\fP Numero composant la position Si une chaine entierement invalide ou vide, ou bien un 0 est passe en parametre, il en resulte un objet \fBDiagramPosition\fP invalide, dont la methode isOutOfBounds renverra true\&. 
+.RE
+.PP
+
+.SS "DiagramPosition::~DiagramPosition ()\fC [virtual]\fP"
+Destructeur 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool DiagramPosition::isOutOfBounds () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si l'element est en dehors des bords du schema 
+.RE
+.PP
+
+.SS "QString DiagramPosition::letter () const\fC [inline]\fP"
+
+.SS "unsigned int DiagramPosition::number () const\fC [inline]\fP"
+
+.SS "QPointF DiagramPosition::position () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+les coordonnees stockees dans cet objet, ou un QPointF nul sinon\&. 
+.RE
+.PP
+
+.SS "void DiagramPosition::setPosition (const QPointF & position)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP Position a stocker dans cet objet 
+.RE
+.PP
+
+.SS "QString DiagramPosition::toString ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+une representation textuelle de la position 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString DiagramPosition::letter_\fC [private]\fP"
+
+.SS "unsigned int DiagramPosition::number_\fC [private]\fP"
+
+.SS "QPointF DiagramPosition::position_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

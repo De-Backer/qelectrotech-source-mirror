@@ -1,0 +1,148 @@
+.TH "qdesigner_internal::RichTextEditorDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+qdesigner_internal::RichTextEditorDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <richtexteditor_p\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBapplyEditText\fP (const QString &)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRichTextEditorDialog\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~RichTextEditorDialog\fP () override"
+.br
+.ti -1c
+.RI "int \fBshowDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDefaultFont\fP (const QFont &font)"
+.br
+.ti -1c
+.RI "void \fBsetText\fP (const QString &\fBtext\fP)"
+.br
+.ti -1c
+.RI "QString \fBtext\fP (Qt::TextFormat format=Qt::AutoText) const"
+.br
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTabIndex\fP { \fBRichTextIndex\fP, \fBSourceIndex\fP }"
+.br
+.ti -1c
+.RI "enum \fBState\fP { \fBClean\fP, \fBRichTextChanged\fP, \fBSourceChanged\fP }"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBtabIndexChanged\fP (int newIndex)"
+.br
+.ti -1c
+.RI "void \fBrichTextChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBsourceChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_buttonBox_accepted\fP ()"
+.br
+.RI "\fBRichTextEditorDialog::on_buttonBox_accepted\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBRichTextEditor\fP * \fBm_editor\fP"
+.br
+.ti -1c
+.RI "QTextEdit * \fBm_text_edit\fP"
+.br
+.ti -1c
+.RI "QTabWidget * \fBm_tab_widget\fP"
+.br
+.ti -1c
+.RI "\fBState\fP \fBm_state\fP"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBqdesigner_internal::RichTextEditorDialog::State\fP\fC [private]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIClean \fP\fP
+.TP
+\fB\fIRichTextChanged \fP\fP
+.TP
+\fB\fISourceChanged \fP\fP
+.SS "enum \fBqdesigner_internal::RichTextEditorDialog::TabIndex\fP\fC [private]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIRichTextIndex \fP\fP
+.TP
+\fB\fISourceIndex \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "qdesigner_internal::RichTextEditorDialog::RichTextEditorDialog (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "qdesigner_internal::RichTextEditorDialog::~RichTextEditorDialog ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void qdesigner_internal::RichTextEditorDialog::applyEditText (const QString &)\fC [signal]\fP"
+
+.SS "void qdesigner_internal::RichTextEditorDialog::on_buttonBox_accepted ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBRichTextEditorDialog::on_buttonBox_accepted\fP\&. 
+.SS "void qdesigner_internal::RichTextEditorDialog::richTextChanged ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditorDialog::setDefaultFont (const QFont & font)"
+
+.SS "void qdesigner_internal::RichTextEditorDialog::setText (const QString & text)"
+
+.SS "int qdesigner_internal::RichTextEditorDialog::showDialog ()"
+
+.SS "void qdesigner_internal::RichTextEditorDialog::sourceChanged ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditorDialog::tabIndexChanged (int newIndex)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "QString qdesigner_internal::RichTextEditorDialog::text (Qt::TextFormat format = \fCQt::AutoText\fP) const"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBRichTextEditor\fP* qdesigner_internal::RichTextEditorDialog::m_editor\fC [private]\fP"
+
+.SS "\fBState\fP qdesigner_internal::RichTextEditorDialog::m_state\fC [private]\fP"
+
+.SS "QTabWidget* qdesigner_internal::RichTextEditorDialog::m_tab_widget\fC [private]\fP"
+
+.SS "QTextEdit* qdesigner_internal::RichTextEditorDialog::m_text_edit\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

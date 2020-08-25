@@ -1,0 +1,118 @@
+.TH "PasteDiagramCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PasteDiagramCommand \- The \fBPasteDiagramCommand\fP class This command pastes some content onto a particular diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPasteDiagramCommand\fP (\fBDiagram\fP *, const \fBDiagramContent\fP &, QUndoCommand *=nullptr)"
+.br
+.RI "\fBPasteDiagramCommand::PasteDiagramCommand\fP Constructor\&. "
+.ti -1c
+.RI "\fB~PasteDiagramCommand\fP () override"
+.br
+.RI "\fBPasteDiagramCommand::~PasteDiagramCommand\fP Destructor\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBPasteDiagramCommand::undo\fP Undo this command\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBPasteDiagramCommand::redo\fP Redo this commnand\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPasteDiagramCommand\fP (const \fBPasteDiagramCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramContent\fP \fBcontent\fP"
+.br
+.RI "pasted content "
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP"
+.br
+.RI "diagram content is pasted onto "
+.ti -1c
+.RI "int \fBfilter\fP"
+.br
+.RI "filter stating what kinds of items should be pasted "
+.ti -1c
+.RI "bool \fBfirst_redo\fP"
+.br
+.RI "prevent the first call to \fBredo()\fP "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBPasteDiagramCommand\fP class This command pastes some content onto a particular diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PasteDiagramCommand::PasteDiagramCommand (\fBDiagram\fP * dia, const \fBDiagramContent\fP & c, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBPasteDiagramCommand::PasteDiagramCommand\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdia\fP : diagram where we must to paste 
+.br
+\fIc\fP : content to past 
+.br
+\fIparent\fP : parent undo command 
+.RE
+.PP
+
+.SS "PasteDiagramCommand::~PasteDiagramCommand ()\fC [override]\fP"
+
+.PP
+\fBPasteDiagramCommand::~PasteDiagramCommand\fP Destructor\&. 
+.SS "PasteDiagramCommand::PasteDiagramCommand (const \fBPasteDiagramCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void PasteDiagramCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBPasteDiagramCommand::redo\fP Redo this commnand\&. 
+.SS "void PasteDiagramCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBPasteDiagramCommand::undo\fP Undo this command\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagramContent\fP PasteDiagramCommand::content\fC [private]\fP"
+
+.PP
+pasted content 
+.SS "\fBDiagram\fP* PasteDiagramCommand::diagram\fC [private]\fP"
+
+.PP
+diagram content is pasted onto 
+.SS "int PasteDiagramCommand::filter\fC [private]\fP"
+
+.PP
+filter stating what kinds of items should be pasted 
+.SS "bool PasteDiagramCommand::first_redo\fC [private]\fP"
+
+.PP
+prevent the first call to \fBredo()\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

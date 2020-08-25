@@ -1,0 +1,138 @@
+.TH "PasteTemplateCellsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PasteTemplateCellsCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatecommands\&.h>\fP
+.PP
+Inherits \fBTitleBlockTemplateCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPasteTemplateCellsCommand\fP (\fBTitleBlockTemplate\fP *, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~PasteTemplateCellsCommand\fP () override"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBaddPastedCell\fP (\fBTitleBlockCell\fP *, const \fBTitleBlockCell\fP &)"
+.br
+.ti -1c
+.RI "virtual void \fBaddErasedCell\fP (\fBTitleBlockCell\fP *, const \fBTitleBlockCell\fP &)"
+.br
+.ti -1c
+.RI "virtual void \fBaddCell\fP (\fBTitleBlockCell\fP *, const \fBTitleBlockCell\fP &, const \fBTitleBlockCell\fP &)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QHash< \fBTitleBlockCell\fP *, QPair< int, int > > \fBspans_before_\fP"
+.br
+.RI "Spans before operation\&. "
+.ti -1c
+.RI "QHash< \fBTitleBlockCell\fP *, \fBTitleBlockCell\fP > \fBpasted_cells_\fP"
+.br
+.RI "Pasted cells\&. "
+.ti -1c
+.RI "QHash< \fBTitleBlockCell\fP *, \fBTitleBlockCell\fP > \fBerased_cells_\fP"
+.br
+.RI "Existing cells impacted by the paste operation\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBupdateText\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPasteTemplateCellsCommand\fP (const \fBPasteTemplateCellsCommand\fP &)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents the action of pasting a cells set\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PasteTemplateCellsCommand::PasteTemplateCellsCommand (\fBTitleBlockTemplate\fP * tb_template, QUndoCommand * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fItb_template\fP Changed title block template 
+.br
+\fIparent\fP Parent command 
+.RE
+.PP
+
+.SS "PasteTemplateCellsCommand::~PasteTemplateCellsCommand ()\fC [override]\fP"
+Destructor 
+.SS "PasteTemplateCellsCommand::PasteTemplateCellsCommand (const \fBPasteTemplateCellsCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void PasteTemplateCellsCommand::addCell (\fBTitleBlockCell\fP * cell, const \fBTitleBlockCell\fP & before, const \fBTitleBlockCell\fP & after)\fC [virtual]\fP"
+This is a convenience function equivalent to: addErasedCell(cell, before) addPastedCell(cell, after) 
+.SS "void PasteTemplateCellsCommand::addErasedCell (\fBTitleBlockCell\fP * cell, const \fBTitleBlockCell\fP & former_cell_content)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP Pointer to the cell impacted by te paste operation 
+.br
+\fIformer_cell_content\fP Content of the cell before the paste operation 
+.RE
+.PP
+
+.SS "void PasteTemplateCellsCommand::addPastedCell (\fBTitleBlockCell\fP * cell, const \fBTitleBlockCell\fP & new_cell_content)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP Pointer to the cell impacted by te paste operation 
+.br
+\fInew_cell_content\fP Content pasted to the cell 
+.RE
+.PP
+
+.SS "void PasteTemplateCellsCommand::redo ()\fC [override]\fP"
+Redo a paste action\&. 
+.SS "void PasteTemplateCellsCommand::undo ()\fC [override]\fP"
+Undo a paste action\&. 
+.SS "void PasteTemplateCellsCommand::updateText ()\fC [protected]\fP, \fC [virtual]\fP"
+Update the label describing this command 
+.SH "Member Data Documentation"
+.PP 
+.SS "QHash<\fBTitleBlockCell\fP *, \fBTitleBlockCell\fP> PasteTemplateCellsCommand::erased_cells_"
+
+.PP
+Existing cells impacted by the paste operation\&. 
+.SS "QHash<\fBTitleBlockCell\fP *, \fBTitleBlockCell\fP> PasteTemplateCellsCommand::pasted_cells_"
+
+.PP
+Pasted cells\&. 
+.SS "QHash<\fBTitleBlockCell\fP *, QPair<int, int> > PasteTemplateCellsCommand::spans_before_"
+
+.PP
+Spans before operation\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,307 @@
+.TH "AbstractPartEllipse" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AbstractPartEllipse \- The \fBAbstractPartEllipse\fP class This is the base class for all ellipse based item like ellipse, circle, arc\&. This class only provide common method for edit the ellipse like rect that contain the ellipse\&. All coordinates is in item coordinate, except pos(), center(), centerX() and centerY() which are in parent coordinate (or scene if no parent)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <abstractpartellipse\&.h>\fP
+.PP
+Inherits \fBCustomElementGraphicPart\fP\&.
+.PP
+Inherited by \fBPartArc\fP, and \fBPartEllipse\fP\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBrectChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBstartAngleChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBspanAngleChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAbstractPartEllipse\fP (\fBQETElementEditor\fP *editor, QGraphicsItem *parent=nullptr)"
+.br
+.RI "\fBAbstractPartEllipse::AbstractPartEllipse\fP Constructor\&. "
+.ti -1c
+.RI "\fB~AbstractPartEllipse\fP () override"
+.br
+.RI "\fBAbstractPartEllipse::~AbstractPartEllipse\fP Destructor\&. "
+.ti -1c
+.RI "void \fBstartUserTransformation\fP (const QRectF &) override"
+.br
+.RI "\fBAbstractPartEllipse::startUserTransformation\fP Start the user-induced transformation, provided this primitive is contained within the initial_selection_rect bounding rectangle\&. "
+.ti -1c
+.RI "void \fBhandleUserTransformation\fP (const QRectF &, const QRectF &) override"
+.br
+.RI "\fBAbstractPartEllipse::handleUserTransformation\fP Handle the user-induced transformation from \fIinitial_selection_rect\fP to \fInew_selection_rect\fP\&. "
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBAbstractPartEllipse::boundingRect\fP Bounding rectangle this part can fit into\&. "
+.ti -1c
+.RI "QRectF \fBsceneGeometricRect\fP () const override"
+.br
+.RI "\fBAbstractPartEllipse::sceneGeometricRect\fP\&. "
+.ti -1c
+.RI "virtual QPointF \fBsceneTopLeft\fP () const"
+.br
+.RI "\fBAbstractPartEllipse::sceneTopLeft\fP\&. "
+.ti -1c
+.RI "QRectF \fBrect\fP () const"
+.br
+.RI "\fBAbstractPartEllipse::rect\fP Returns the item's ellipse geometry as a QRectF\&. "
+.ti -1c
+.RI "virtual void \fBsetRect\fP (const QRectF &\fBrect\fP)"
+.br
+.RI "\fBAbstractPartEllipse::setRect\fP Sets the item's ellipse geometry to rect\&. The rectangle's left edge defines the left edge of the ellipse, and the rectangle's top edge describes the top of the ellipse The height and width of the rectangle describe the height and width of the ellipse\&. "
+.ti -1c
+.RI "bool \fBisUseless\fP () const override"
+.br
+.RI "\fBAbstractPartEllipse::isUseless\fP\&. "
+.ti -1c
+.RI "int \fBstartAngle\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetStartAngle\fP (const int &start_angle)"
+.br
+.RI "\fBAbstractPartEllipse::setStartAngle\fP Sets the start angle for an ellipse segment to angle, which is in 16ths of a degree\&. This angle is used together with \fBspanAngle()\fP for representing an ellipse segment (a pie)\&. By default, the start angle is 0\&. "
+.ti -1c
+.RI "int \fBspanAngle\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetSpanAngle\fP (const int &span_angle)"
+.br
+.RI "\fBAbstractPartEllipse::setSpanAngle\fP Returns the span angle of an ellipse segment in 16ths of a degree\&. This angle is used together with \fBstartAngle()\fP for representing an ellipse segment (a pie)\&. By default, this function returns 5760 (360 * 16, a full ellipse)\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< QPointF > \fBsaved_points_\fP"
+.br
+.ti -1c
+.RI "QRectF \fBm_rect\fP"
+.br
+.ti -1c
+.RI "qreal \fBm_start_angle\fP"
+.br
+.ti -1c
+.RI "qreal \fBm_span_angle\fP"
+.br
+.ti -1c
+.RI "QVector< \fBQetGraphicsHandlerItem\fP * > \fBm_handler_vector\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "int \fBstartAngle\fP"
+.br
+.ti -1c
+.RI "int \fBspanAngle\fP"
+.br
+.ti -1c
+.RI "QRectF \fBrect\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAbstractPartEllipse\fP (const \fBAbstractPartEllipse\fP &)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBAbstractPartEllipse\fP class This is the base class for all ellipse based item like ellipse, circle, arc\&. This class only provide common method for edit the ellipse like rect that contain the ellipse\&. All coordinates is in item coordinate, except pos(), center(), centerX() and centerY() which are in parent coordinate (or scene if no parent)\&. 
+
+In several points, this class is a copy of QGraphicsEllipseItem with some change, (the use of Q_PROPERTY) to be easily used with \fBElement\fP editor\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AbstractPartEllipse::AbstractPartEllipse (\fBQETElementEditor\fP * editor, QGraphicsItem * parent = \fCnullptr\fP)"
+
+.PP
+\fBAbstractPartEllipse::AbstractPartEllipse\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP : \fBQETElementEditor\fP of this part 
+.br
+\fIparent\fP : parent item 
+.RE
+.PP
+
+.SS "AbstractPartEllipse::~AbstractPartEllipse ()\fC [override]\fP"
+
+.PP
+\fBAbstractPartEllipse::~AbstractPartEllipse\fP Destructor\&. 
+.SS "AbstractPartEllipse::AbstractPartEllipse (const \fBAbstractPartEllipse\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QRectF AbstractPartEllipse::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBAbstractPartEllipse::boundingRect\fP Bounding rectangle this part can fit into\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void AbstractPartEllipse::handleUserTransformation (const QRectF & initial_selection_rect, const QRectF & new_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBAbstractPartEllipse::handleUserTransformation\fP Handle the user-induced transformation from \fIinitial_selection_rect\fP to \fInew_selection_rect\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_selection_rect\fP 
+.br
+\fInew_selection_rect\fP 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "bool AbstractPartEllipse::isUseless () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBAbstractPartEllipse::isUseless\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this part is irrelevant and does not deserve to be Retained / registered\&. An ellipse is relevant when is rect is not null\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "QRectF AbstractPartEllipse::rect () const"
+
+.PP
+\fBAbstractPartEllipse::rect\fP Returns the item's ellipse geometry as a QRectF\&. 
+.SS "void AbstractPartEllipse::rectChanged ()\fC [signal]\fP"
+
+.SS "QRectF AbstractPartEllipse::sceneGeometricRect () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBAbstractPartEllipse::sceneGeometricRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the minimum, margin-less rectangle this part can fit into in scene coordinates\&. It is different from \fBboundingRect()\fP because it is not supposed to imply any margin, and it is different from shape because it is a regular rectangle, not a complex shape\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "QPointF AbstractPartEllipse::sceneTopLeft () const\fC [virtual]\fP"
+
+.PP
+\fBAbstractPartEllipse::sceneTopLeft\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+return the top left of rectangle, in scene coordinate 
+.RE
+.PP
+
+.SS "void AbstractPartEllipse::setRect (const QRectF & rect)\fC [virtual]\fP"
+
+.PP
+\fBAbstractPartEllipse::setRect\fP Sets the item's ellipse geometry to rect\&. The rectangle's left edge defines the left edge of the ellipse, and the rectangle's top edge describes the top of the ellipse The height and width of the rectangle describe the height and width of the ellipse\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrect\fP 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBPartArc\fP, and \fBPartEllipse\fP\&.
+.SS "void AbstractPartEllipse::setSpanAngle (const int & span_angle)\fC [virtual]\fP"
+
+.PP
+\fBAbstractPartEllipse::setSpanAngle\fP Returns the span angle of an ellipse segment in 16ths of a degree\&. This angle is used together with \fBstartAngle()\fP for representing an ellipse segment (a pie)\&. By default, this function returns 5760 (360 * 16, a full ellipse)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspan_angle\fP 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBPartArc\fP\&.
+.SS "void AbstractPartEllipse::setStartAngle (const int & start_angle)\fC [virtual]\fP"
+
+.PP
+\fBAbstractPartEllipse::setStartAngle\fP Sets the start angle for an ellipse segment to angle, which is in 16ths of a degree\&. This angle is used together with \fBspanAngle()\fP for representing an ellipse segment (a pie)\&. By default, the start angle is 0\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart_angle\fP 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBPartArc\fP\&.
+.SS "int AbstractPartEllipse::spanAngle () const\fC [inline]\fP"
+
+.SS "void AbstractPartEllipse::spanAngleChanged ()\fC [signal]\fP"
+
+.SS "int AbstractPartEllipse::startAngle () const\fC [inline]\fP"
+
+.SS "void AbstractPartEllipse::startAngleChanged ()\fC [signal]\fP"
+
+.SS "void AbstractPartEllipse::startUserTransformation (const QRectF & initial_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBAbstractPartEllipse::startUserTransformation\fP Start the user-induced transformation, provided this primitive is contained within the initial_selection_rect bounding rectangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_selection_rect\fP 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QVector<\fBQetGraphicsHandlerItem\fP *> AbstractPartEllipse::m_handler_vector\fC [protected]\fP"
+
+.SS "QRectF AbstractPartEllipse::m_rect\fC [protected]\fP"
+
+.SS "qreal AbstractPartEllipse::m_span_angle\fC [protected]\fP"
+
+.SS "qreal AbstractPartEllipse::m_start_angle\fC [protected]\fP"
+
+.SS "QList<QPointF> AbstractPartEllipse::saved_points_\fC [protected]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "QRectF AbstractPartEllipse::rect\fC [read]\fP, \fC [write]\fP"
+
+.SS "int AbstractPartEllipse::spanAngle\fC [read]\fP, \fC [write]\fP"
+
+.SS "int AbstractPartEllipse::startAngle\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

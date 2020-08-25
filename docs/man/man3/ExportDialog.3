@@ -1,0 +1,402 @@
+.TH "ExportDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExportDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <exportdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBExportDiagramLine\fP"
+.br
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBslot_correctWidth\fP (int)"
+.br
+.ti -1c
+.RI "void \fBslot_correctHeight\fP (int)"
+.br
+.ti -1c
+.RI "void \fBslot_keepRatioChanged\fP (int)"
+.br
+.ti -1c
+.RI "void \fBslot_resetSize\fP (int)"
+.br
+.ti -1c
+.RI "void \fBslot_export\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_changeUseBorder\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_checkDiagramsCount\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_changeFilesExtension\fP (bool=false)"
+.br
+.ti -1c
+.RI "void \fBslot_previewDiagram\fP (int)"
+.br
+.ti -1c
+.RI "void \fBslot_exportToClipBoard\fP (int)"
+.br
+.ti -1c
+.RI "void \fBslot_selectAllClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_deSelectAllClicked\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExportDialog\fP (\fBQETProject\fP *, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ExportDialog\fP () override"
+.br
+.ti -1c
+.RI "int \fBdiagramsToExportCount\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QPointF \fBrotation_transformed\fP (qreal, qreal, qreal, qreal, qreal)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExportDialog\fP (const \fBExportDialog\fP &)"
+.br
+.ti -1c
+.RI "QWidget * \fBinitDiagramsListPart\fP ()"
+.br
+.ti -1c
+.RI "void \fBsaveReloadDiagramParameters\fP (\fBDiagram\fP *, bool=true)"
+.br
+.ti -1c
+.RI "void \fBgenerateSvg\fP (\fBDiagram\fP *, int, int, bool, QIODevice &)"
+.br
+.ti -1c
+.RI "void \fBgenerateDxf\fP (\fBDiagram\fP *, int, int, bool, QString &)"
+.br
+.ti -1c
+.RI "QImage \fBgenerateImage\fP (\fBDiagram\fP *, int, int, bool)"
+.br
+.ti -1c
+.RI "void \fBexportDiagram\fP (\fBExportDiagramLine\fP *)"
+.br
+.ti -1c
+.RI "qreal \fBdiagramRatio\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "QSize \fBdiagramSize\fP (\fBDiagram\fP *)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QHash< int, \fBExportDialog::ExportDiagramLine\fP * > \fBdiagram_lines_\fP"
+.br
+.ti -1c
+.RI "QGridLayout * \fBdiagrams_list_layout_\fP"
+.br
+.ti -1c
+.RI "\fBExportPropertiesWidget\fP * \fBepw\fP"
+.br
+.ti -1c
+.RI "QDialogButtonBox * \fBbuttons\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBselectAll\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBdeSelectAll\fP"
+.br
+.ti -1c
+.RI "QSignalMapper * \fBpreview_mapper_\fP"
+.br
+.ti -1c
+.RI "QSignalMapper * \fBwidth_mapper_\fP"
+.br
+.ti -1c
+.RI "QSignalMapper * \fBheight_mapper_\fP"
+.br
+.ti -1c
+.RI "QSignalMapper * \fBratio_mapper_\fP"
+.br
+.ti -1c
+.RI "QSignalMapper * \fBreset_mapper_\fP"
+.br
+.ti -1c
+.RI "QSignalMapper * \fBclipboard_mapper_\fP"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a dialog enabling users to export 1 to n diagrams from a project as image files, with features like preview, copy to clipboard, resize, etc\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ExportDialog::ExportDialog (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Le projet a exporter 
+.br
+\fIparent\fP Le Widget parent de ce dialogue 
+.RE
+.PP
+
+.SS "ExportDialog::~ExportDialog ()\fC [override]\fP"
+Destructeur - ne fait rien 
+.SS "ExportDialog::ExportDialog (const \fBExportDialog\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "qreal ExportDialog::diagramRatio (\fBDiagram\fP * diagram)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Un schema 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le rapport largeur / hauteur du schema 
+.RE
+.PP
+
+.SS "QSize ExportDialog::diagramSize (\fBDiagram\fP * diagram)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Un schema 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+les dimensions du schema, en tenant compte du type d'export : cadre ou elements 
+.RE
+.PP
+
+.SS "int ExportDialog::diagramsToExportCount () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le nombre de schemas coches (donc a exporter) 
+.RE
+.PP
+
+.SS "void ExportDialog::exportDiagram (\fBExportDiagramLine\fP * diagram_line)\fC [private]\fP"
+Exporte un schema 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_line\fP La ligne decrivant le schema a exporter et la maniere de l'exporter 
+.RE
+.PP
+
+.SS "void ExportDialog::generateDxf (\fBDiagram\fP * diagram, int width, int height, bool keep_aspect_ratio, QString & file_path)\fC [private]\fP"
+Exporte le schema en DXF 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a exporter en DXF 
+.br
+\fIwidth\fP Largeur de l'export DXF 
+.br
+\fIheight\fP Hauteur de l'export DXF 
+.br
+\fIkeep_aspect_ratio\fP True pour conserver le ratio, false sinon 
+.br
+\fIfile_path\fP 
+.RE
+.PP
+
+.SS "QImage ExportDialog::generateImage (\fBDiagram\fP * diagram, int width, int height, bool keep_aspect_ratio)\fC [private]\fP"
+Genere l'image a exporter 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a exporter en SVG 
+.br
+\fIwidth\fP Largeur de l'export 
+.br
+\fIheight\fP Hauteur de l'export 
+.br
+\fIkeep_aspect_ratio\fP True pour conserver le ratio, false sinon 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+l'image a exporter 
+.RE
+.PP
+
+.SS "void ExportDialog::generateSvg (\fBDiagram\fP * diagram, int width, int height, bool keep_aspect_ratio, QIODevice & io_device)\fC [private]\fP"
+Exporte le schema en SVG 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a exporter en SVG 
+.br
+\fIwidth\fP Largeur de l'export SVG 
+.br
+\fIheight\fP Hauteur de l'export SVG 
+.br
+\fIkeep_aspect_ratio\fP True pour conserver le ratio, false sinon 
+.br
+\fIio_device\fP Peripherique de sortie pour le code SVG (souvent : un fichier) 
+.RE
+.PP
+
+.SS "QWidget * ExportDialog::initDiagramsListPart ()\fC [private]\fP"
+Met en place la liste des schemas 
+.PP
+\fBReturns\fP
+.RS 4
+Le widget representant la liste des schemas 
+.RE
+.PP
+
+.SS "QPointF ExportDialog::rotation_transformed (qreal px, qreal py, qreal origin_x, qreal origin_y, qreal angle)\fC [static]\fP"
+
+.SS "void ExportDialog::saveReloadDiagramParameters (\fBDiagram\fP * diagram, bool save = \fCtrue\fP)\fC [private]\fP"
+Sauve ou restaure les parametres du schema 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema dont on sauve ou restaure les parametres 
+.br
+\fIsave\fP true pour memoriser les parametres du schema et appliquer ceux definis par le formulaire, false pour restaurer les parametres 
+.RE
+.PP
+
+.SS "void ExportDialog::slot_changeFilesExtension (bool force_extension = \fCfalse\fP)\fC [slot]\fP"
+Modifie les extensions des fichiers en fonction du format selectionne 
+.PP
+\fBParameters\fP
+.RS 4
+\fIforce_extension\fP true pour ajouter l'extension si elle n'est pas presente, false pour se contenter de la modifier si elle est incorrecte\&. 
+.RE
+.PP
+
+.SS "void ExportDialog::slot_changeUseBorder ()\fC [slot]\fP"
+Slot appele lorsque l'utilisateur change la zone du schema qui doit etre exportee\&. Il faut alors ajuster les dimensions des schemas\&. 
+.SS "void ExportDialog::slot_checkDiagramsCount ()\fC [slot]\fP"
+Ce slot est appele quand un schema a ete coche ou decoche\&. Il active ou desactive le bouton 'Exporter' en fonction du nombre de schemas coches, et il garde au plus un schema coche si on exporte vers le presse-papier\&. 
+.SS "void ExportDialog::slot_correctHeight (int diagram_id)\fC [slot]\fP"
+Cette methode ajuste la hauteur d'un des schemas a exporter en fonction de sa largeur si et seulement si l'option 'Conserver les proportions' est activee pour ce schema\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_id\fP numero du schema concerne 
+.RE
+.PP
+
+.SS "void ExportDialog::slot_correctWidth (int diagram_id)\fC [slot]\fP"
+Cette methode ajuste la largeur d'un des schemas a exporter en fonction de sa hauteur si et seulement si l'option 'Conserver les proportions' est activee pour ce schema\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_id\fP numero du schema concerne 
+.RE
+.PP
+
+.SS "void ExportDialog::slot_deSelectAllClicked ()\fC [slot]\fP"
+
+.SS "void ExportDialog::slot_export ()\fC [slot]\fP"
+Slot effectuant les exports apres la validation du dialogue\&. 
+.SS "void ExportDialog::slot_exportToClipBoard (int diagram_id)\fC [slot]\fP"
+Cette methode exporte un schema vers le presse-papier 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_id\fP numero du schema a previsualiser 
+.RE
+.PP
+
+.SS "void ExportDialog::slot_keepRatioChanged (int diagram_id)\fC [slot]\fP"
+Prend en compte le fait qu'il faut desormais conserver ou non les proportions d'un des schemas 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_id\fP numero du schema concerne 
+.RE
+.PP
+
+.SS "void ExportDialog::slot_previewDiagram (int diagram_id)\fC [slot]\fP"
+Cette methode fait apparaitre un dialogue permettant de previsualiser un des schemas a exporter 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_id\fP numero du schema a previsualiser 
+.RE
+.PP
+
+.SS "void ExportDialog::slot_resetSize (int diagram_id)\fC [slot]\fP"
+Reinitialise les dimensions d'un des schemas 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_id\fP numero du schema concerne 
+.RE
+.PP
+
+.SS "void ExportDialog::slot_selectAllClicked ()\fC [slot]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QDialogButtonBox* ExportDialog::buttons\fC [private]\fP"
+
+.SS "QSignalMapper* ExportDialog::clipboard_mapper_\fC [private]\fP"
+
+.SS "QPushButton* ExportDialog::deSelectAll\fC [private]\fP"
+
+.SS "QHash<int, \fBExportDialog::ExportDiagramLine\fP *> ExportDialog::diagram_lines_\fC [private]\fP"
+
+.SS "QGridLayout* ExportDialog::diagrams_list_layout_\fC [private]\fP"
+
+.SS "\fBExportPropertiesWidget\fP* ExportDialog::epw\fC [private]\fP"
+
+.SS "QSignalMapper* ExportDialog::height_mapper_\fC [private]\fP"
+
+.SS "QSignalMapper* ExportDialog::preview_mapper_\fC [private]\fP"
+
+.SS "\fBQETProject\fP* ExportDialog::project_\fC [private]\fP"
+
+.SS "QSignalMapper* ExportDialog::ratio_mapper_\fC [private]\fP"
+
+.SS "QSignalMapper* ExportDialog::reset_mapper_\fC [private]\fP"
+
+.SS "QPushButton* ExportDialog::selectAll\fC [private]\fP"
+
+.SS "QSignalMapper* ExportDialog::width_mapper_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

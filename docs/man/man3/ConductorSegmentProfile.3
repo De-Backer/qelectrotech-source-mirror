@@ -1,0 +1,79 @@
+.TH "ConductorSegmentProfile" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConductorSegmentProfile
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductorsegmentprofile\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorSegmentProfile\fP (qreal l, bool ori=true)"
+.br
+.ti -1c
+.RI "\fBConductorSegmentProfile\fP (\fBConductorSegment\fP *segment)"
+.br
+.ti -1c
+.RI "virtual \fB~ConductorSegmentProfile\fP ()"
+.br
+.RI "Destructor\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "qreal \fBlength\fP"
+.br
+.RI "segment length "
+.ti -1c
+.RI "bool \fBisHorizontal\fP"
+.br
+.RI "segment orientation "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class embeds the profile (i\&.e\&. main characteristics) of a conductor segment\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConductorSegmentProfile::ConductorSegmentProfile (qreal l, bool ori = \fCtrue\fP)\fC [inline]\fP"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIl\fP segment length 
+.br
+\fIori\fP true if the segment is horizontal, false if it is vertical 
+.RE
+.PP
+
+.SS "ConductorSegmentProfile::ConductorSegmentProfile (\fBConductorSegment\fP * segment)\fC [inline]\fP"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsegment\fP Segment the profile should be copied from\&. 
+.RE
+.PP
+
+.SS "virtual ConductorSegmentProfile::~ConductorSegmentProfile ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Destructor\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool ConductorSegmentProfile::isHorizontal"
+
+.PP
+segment orientation 
+.SS "qreal ConductorSegmentProfile::length"
+
+.PP
+segment length 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

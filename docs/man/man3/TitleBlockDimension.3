@@ -1,0 +1,92 @@
+.TH "TitleBlockDimension" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockDimension
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dimension\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockDimension\fP (int, \fBQET::TitleBlockColumnLength\fP=\fBQET::Absolute\fP)"
+.br
+.ti -1c
+.RI "QString \fBtoString\fP () const"
+.br
+.ti -1c
+.RI "QString \fBtoShortString\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQET::TitleBlockColumnLength\fP \fBtype\fP"
+.br
+.RI "Kind of length\&. "
+.ti -1c
+.RI "int \fBvalue\fP"
+.br
+.RI "Numeric value\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This struct is a simple container associating a length with its type\&. 
+.PP
+\fBSee also\fP
+.RS 4
+TitleBlockColumnLength 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockDimension::TitleBlockDimension (int v, \fBQET::TitleBlockColumnLength\fP t = \fC\fBQET::Absolute\fP\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP Numeric value for this dimension 
+.br
+\fIt\fP Kind of length, determining how to interpret the numeric value 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QString TitleBlockDimension::toShortString () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+a string describing this dimension in a short format\&. 
+.RE
+.PP
+
+.SS "QString TitleBlockDimension::toString () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+a string describing this dimension in a human-readable format\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQET::TitleBlockColumnLength\fP TitleBlockDimension::type"
+
+.PP
+Kind of length\&. 
+.SS "int TitleBlockDimension::value"
+
+.PP
+Numeric value\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

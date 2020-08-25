@@ -1,0 +1,148 @@
+.TH "ElementsCategoryEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementsCategoryEditor \- The \fBElementsCategoryEditor\fP class This class provides a dialog to edit an existing category or create a new one\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementscategoryeditor\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBacceptCreation\fP ()"
+.br
+.RI "\fBElementsCategoryEditor::acceptCreation\fP Valid the creation of the category\&. "
+.ti -1c
+.RI "void \fBacceptUpdate\fP ()"
+.br
+.RI "\fBElementsCategoryEditor::acceptUpdate\fP Valid the update of the category\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsCategoryEditor\fP (const \fBElementsLocation\fP &location, bool edit=true, QWidget *parent=nullptr)"
+.br
+.RI "\fBElementsCategoryEditor::ElementsCategoryEditor\fP Constructor\&. "
+.ti -1c
+.RI "\fB~ElementsCategoryEditor\fP () override"
+.br
+.RI "\fBElementsCategoryEditor::~ElementsCategoryEditor\fP Destructor\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP \fBcreatedLocation\fP () const"
+.br
+.RI "\fBElementsCategoryEditor::createdLocation\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsCategoryEditor\fP (const \fBElementsCategoryEditor\fP &)"
+.br
+.ti -1c
+.RI "void \fBsetUpWidget\fP ()"
+.br
+.RI "\fBElementsCategoryEditor::setUpWidget\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QDialogButtonBox * \fBm_buttons\fP"
+.br
+.ti -1c
+.RI "\fBNameListWidget\fP * \fBm_names_list\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBm_file_name\fP"
+.br
+.ti -1c
+.RI "\fBQFileNameEdit\fP * \fBm_file_line_edit\fP"
+.br
+.ti -1c
+.RI "bool \fBm_edit_mode\fP"
+.br
+.ti -1c
+.RI "\fBElementsLocation\fP \fBm_location\fP"
+.br
+.ti -1c
+.RI "\fBElementsLocation\fP \fBm_created_location\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementsCategoryEditor\fP class This class provides a dialog to edit an existing category or create a new one\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementsCategoryEditor::ElementsCategoryEditor (const \fBElementsLocation\fP & location, bool edit = \fCtrue\fP, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBElementsCategoryEditor::ElementsCategoryEditor\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP : location of the category to edit, or parent directory/category for the creation of a new category 
+.br
+\fIedit\fP : true = edit mode, false = creation mode 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "ElementsCategoryEditor::~ElementsCategoryEditor ()\fC [override]\fP"
+
+.PP
+\fBElementsCategoryEditor::~ElementsCategoryEditor\fP Destructor\&. 
+.SS "ElementsCategoryEditor::ElementsCategoryEditor (const \fBElementsCategoryEditor\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementsCategoryEditor::acceptCreation ()\fC [slot]\fP"
+
+.PP
+\fBElementsCategoryEditor::acceptCreation\fP Valid the creation of the category\&. 
+.SS "void ElementsCategoryEditor::acceptUpdate ()\fC [slot]\fP"
+
+.PP
+\fBElementsCategoryEditor::acceptUpdate\fP Valid the update of the category\&. 
+.SS "\fBElementsLocation\fP ElementsCategoryEditor::createdLocation () const"
+
+.PP
+\fBElementsCategoryEditor::createdLocation\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the location of the created directory 
+.RE
+.PP
+
+.SS "void ElementsCategoryEditor::setUpWidget ()\fC [private]\fP"
+
+.PP
+\fBElementsCategoryEditor::setUpWidget\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QDialogButtonBox* ElementsCategoryEditor::m_buttons\fC [private]\fP"
+
+.SS "\fBElementsLocation\fP ElementsCategoryEditor::m_created_location\fC [private]\fP"
+
+.SS "bool ElementsCategoryEditor::m_edit_mode\fC [private]\fP"
+
+.SS "\fBQFileNameEdit\fP* ElementsCategoryEditor::m_file_line_edit\fC [private]\fP"
+
+.SS "QLabel* ElementsCategoryEditor::m_file_name\fC [private]\fP"
+
+.SS "\fBElementsLocation\fP ElementsCategoryEditor::m_location\fC [private]\fP"
+
+.SS "\fBNameListWidget\fP* ElementsCategoryEditor::m_names_list\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

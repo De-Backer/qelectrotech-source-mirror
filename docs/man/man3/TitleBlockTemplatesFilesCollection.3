@@ -1,0 +1,279 @@
+.TH "TitleBlockTemplatesFilesCollection" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplatesFilesCollection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatescollection\&.h>\fP
+.PP
+Inherits \fBTitleBlockTemplatesCollection\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplatesFilesCollection\fP (const QString &, QObject *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~TitleBlockTemplatesFilesCollection\fP () override"
+.br
+.ti -1c
+.RI "QString \fBpath\fP (const QString &=QString()) const"
+.br
+.ti -1c
+.RI "QStringList \fBtemplates\fP () override"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBgetTemplate\fP (const QString &) override"
+.br
+.ti -1c
+.RI "QDomElement \fBgetTemplateXmlDescription\fP (const QString &) override"
+.br
+.ti -1c
+.RI "bool \fBsetTemplateXmlDescription\fP (const QString &, const QDomElement &) override"
+.br
+.ti -1c
+.RI "void \fBremoveTemplate\fP (const QString &) override"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateLocation\fP \fBlocation\fP (const QString &=QString()) override"
+.br
+.ti -1c
+.RI "bool \fBhasFilePath\fP () override"
+.br
+.ti -1c
+.RI "QString \fBfilePath\fP () override"
+.br
+.ti -1c
+.RI "bool \fBisReadOnly\fP (const QString &=QString()) const override"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBtoTemplateName\fP (const QString &)"
+.br
+.ti -1c
+.RI "static QString \fBtoFileName\fP (const QString &)"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBfileSystemChanged\fP (const QString &str)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplatesFilesCollection\fP (const \fBTitleBlockTemplatesFilesCollection\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QFileSystemWatcher \fBwatcher_\fP"
+.br
+.RI "File System Watcher object to track the files changes made outside the application\&. "
+.ti -1c
+.RI "QDir \fBdir_\fP"
+.br
+.RI "Collection real directory\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This classe represents a simple abastraction layer for a file-based title block templates directory\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplatesFilesCollection::TitleBlockTemplatesFilesCollection (const QString & path, QObject * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path of the directory containing the collection 
+.br
+\fIparent\fP Parent QObject 
+.RE
+.PP
+
+.SS "TitleBlockTemplatesFilesCollection::~TitleBlockTemplatesFilesCollection ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockTemplatesFilesCollection::TitleBlockTemplatesFilesCollection (const \fBTitleBlockTemplatesFilesCollection\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QString TitleBlockTemplatesFilesCollection::filePath ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+The filesystem path where this files collection is actually stored\&. 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "void TitleBlockTemplatesFilesCollection::fileSystemChanged (const QString & str)\fC [private]\fP, \fC [slot]\fP"
+Handle the changes occuring on the file system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP Path of the directory that changed\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplate\fP * TitleBlockTemplatesFilesCollection::getTemplate (const QString & template_name)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the template which name is \fItemplate_name\fP, or 0 if the template could not be loaded\&. 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "QDomElement TitleBlockTemplatesFilesCollection::getTemplateXmlDescription (const QString & template_name)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of a template (which has to already exist) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the XML description for the \fItemplate_name\fP template, or a null QDomElement if no such template exists\&. 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "bool TitleBlockTemplatesFilesCollection::hasFilePath ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+always true since a files collection is always stored on a filesystem\&. 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "bool TitleBlockTemplatesFilesCollection::isReadOnly (const QString & template_name = \fCQString()\fP) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Either an empty QString to know whether the collection itself is read only, or a specific template name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the specified template is read only, false otherwise 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "\fBTitleBlockTemplateLocation\fP TitleBlockTemplatesFilesCollection::location (const QString & template_name = \fCQString()\fP)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of a template supposed to be contained within this collection\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "QString TitleBlockTemplatesFilesCollection::path (const QString & template_name = \fCQString()\fP) const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the canonical path of the directory hosting this collection\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplatesFilesCollection::removeTemplate (const QString & template_name)\fC [override]\fP, \fC [virtual]\fP"
+Remove the \fItemplate_name\fP template\&. 
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "bool TitleBlockTemplatesFilesCollection::setTemplateXmlDescription (const QString & template_name, const QDomElement & xml_element)\fC [override]\fP, \fC [virtual]\fP"
+Set the XML description of the \fItemplate_name\fP template to \fIxml_element\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of a template (which does not have to already exist) 
+.br
+\fIxml_element\fP XML element describing the template 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "QStringList TitleBlockTemplatesFilesCollection::templates ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the list of templates contained in this collection 
+.RE
+.PP
+
+.PP
+Implements \fBTitleBlockTemplatesCollection\fP\&.
+.SS "QString TitleBlockTemplatesFilesCollection::toFileName (const QString & template_name)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP A template name 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the file name for \fItemplate_name\fP 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplatesFilesCollection::toTemplateName (const QString & file_name)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_name\fP A file name 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the template name for \fIfile_name\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QDir TitleBlockTemplatesFilesCollection::dir_\fC [private]\fP"
+
+.PP
+Collection real directory\&. 
+.SS "QFileSystemWatcher TitleBlockTemplatesFilesCollection::watcher_\fC [private]\fP"
+
+.PP
+File System Watcher object to track the files changes made outside the application\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

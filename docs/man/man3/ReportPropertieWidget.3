@@ -1,0 +1,60 @@
+.TH "ReportPropertieWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReportPropertieWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <reportpropertiewidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReportPropertieWidget\fP (const QString &value, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ReportPropertieWidget\fP () override"
+.br
+.ti -1c
+.RI "void \fBtoSettings\fP (QSettings &settings, const QString &prefix)"
+.br
+.ti -1c
+.RI "void \fBsetReportProperties\fP (const QString &label)"
+.br
+.ti -1c
+.RI "QString \fBReportProperties\fP () const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ReportPropertieWidget * \fBui\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ReportPropertieWidget::ReportPropertieWidget (const QString & value, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "ReportPropertieWidget::~ReportPropertieWidget ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QString ReportPropertieWidget::ReportProperties () const"
+
+.SS "void ReportPropertieWidget::setReportProperties (const QString & label)"
+
+.SS "void ReportPropertieWidget::toSettings (QSettings & settings, const QString & prefix)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::ReportPropertieWidget* ReportPropertieWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

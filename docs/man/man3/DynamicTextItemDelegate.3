@@ -1,0 +1,72 @@
+.TH "DynamicTextItemDelegate" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DynamicTextItemDelegate
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dynamicelementtextmodel\&.h>\fP
+.PP
+Inherits QStyledItemDelegate\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDynamicTextItemDelegate\fP (QObject *parent=Q_NULLPTR)"
+.br
+.ti -1c
+.RI "QWidget * \fBcreateEditor\fP (QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override"
+.br
+.ti -1c
+.RI "void \fBsetModelData\fP (QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBeventFilter\fP (QObject *object, QEvent *event) override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QStringList \fBavailableInfo\fP (\fBDynamicElementTextItem\fP *deti) const"
+.br
+.RI "\fBDynamicTextItemDelegate::availableInfo\fP\&. "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DynamicTextItemDelegate::DynamicTextItemDelegate (QObject * parent = \fCQ_NULLPTR\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QStringList DynamicTextItemDelegate::availableInfo (\fBDynamicElementTextItem\fP * deti) const\fC [private]\fP"
+
+.PP
+\fBDynamicTextItemDelegate::availableInfo\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeti\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A list of available info of element 
+.RE
+.PP
+
+.SS "QWidget * DynamicTextItemDelegate::createEditor (QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index) const\fC [override]\fP"
+
+.SS "bool DynamicTextItemDelegate::eventFilter (QObject * object, QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void DynamicTextItemDelegate::setModelData (QWidget * editor, QAbstractItemModel * model, const QModelIndex & index) const\fC [override]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

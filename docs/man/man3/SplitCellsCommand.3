@@ -1,0 +1,156 @@
+.TH "SplitCellsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SplitCellsCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatecommands\&.h>\fP
+.PP
+Inherits \fBTitleBlockTemplateCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSplitCellsCommand\fP (const \fBTitleBlockTemplateCellsSet\fP &, \fBTitleBlockTemplate\fP *=nullptr, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~SplitCellsCommand\fP () override"
+.br
+.ti -1c
+.RI "bool \fBisValid\fP () const"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBcanSplit\fP (const \fBTitleBlockTemplateCellsSet\fP &splitted_cells, \fBTitleBlockTemplate\fP *tbtemplate)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockCell\fP * \fBspanning_cell_\fP"
+.br
+.RI "the cell spanning over the other ones "
+.ti -1c
+.RI "QSet< \fBTitleBlockCell\fP * > \fBspanned_cells_\fP"
+.br
+.RI "the spanned cells "
+.ti -1c
+.RI "int \fBrow_span_before_\fP"
+.br
+.RI "the row_span attribute of the spanning cell before splitting "
+.ti -1c
+.RI "int \fBcol_span_before_\fP"
+.br
+.RI "the col_span attribute of the spanning cell before splitting "
+.ti -1c
+.RI "int \fBapplied_row_span_before_\fP"
+.br
+.RI "the applied_row_span attribute of the spanning cell before splitting "
+.ti -1c
+.RI "int \fBapplied_col_span_before_\fP"
+.br
+.RI "the applied_col_span attribute of the spanning cell before splitting "
+.ti -1c
+.RI "int \fBspan_state_before_\fP"
+.br
+.RI "the span_state attribute of the spanning cell before splitting "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents the action of splitting a visual cell into at least two logical cells 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SplitCellsCommand::SplitCellsCommand (const \fBTitleBlockTemplateCellsSet\fP & splitted_cells, \fBTitleBlockTemplate\fP * tbtemplate = \fCnullptr\fP, QUndoCommand * parent = \fCnullptr\fP)"
+Construct a command object that acts on \fItbtemplate\fP in order to split \fIsplitted_cells\fP\&. Note: you should check the resulting object is valid using \fBisValid()\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsplitted_cells\fP Cell to be splitted\&. 
+.br
+\fItbtemplate\fP Modified title block template\&. 
+.br
+\fIparent\fP Parent QUndoCommand\&. 
+.RE
+.PP
+
+.SS "SplitCellsCommand::~SplitCellsCommand ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool SplitCellsCommand::canSplit (const \fBTitleBlockTemplateCellsSet\fP & splitted_cells, \fBTitleBlockTemplate\fP * tbtemplate)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsplitted_cells\fP Cell to be splitted\&. 
+.br
+\fItbtemplate\fP Modified title block template\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the split is feasible, false otherwise 
+.RE
+.PP
+
+.SS "bool SplitCellsCommand::isValid () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if this command object is valid and usable, false otherwise\&. 
+.RE
+.PP
+
+.SS "void SplitCellsCommand::redo ()\fC [override]\fP"
+Apply the split operation 
+.SS "void SplitCellsCommand::undo ()\fC [override]\fP"
+Undo the split operation 
+.SH "Member Data Documentation"
+.PP 
+.SS "int SplitCellsCommand::applied_col_span_before_\fC [private]\fP"
+
+.PP
+the applied_col_span attribute of the spanning cell before splitting 
+.SS "int SplitCellsCommand::applied_row_span_before_\fC [private]\fP"
+
+.PP
+the applied_row_span attribute of the spanning cell before splitting 
+.SS "int SplitCellsCommand::col_span_before_\fC [private]\fP"
+
+.PP
+the col_span attribute of the spanning cell before splitting 
+.SS "int SplitCellsCommand::row_span_before_\fC [private]\fP"
+
+.PP
+the row_span attribute of the spanning cell before splitting 
+.SS "int SplitCellsCommand::span_state_before_\fC [private]\fP"
+
+.PP
+the span_state attribute of the spanning cell before splitting 
+.SS "QSet<\fBTitleBlockCell\fP *> SplitCellsCommand::spanned_cells_\fC [private]\fP"
+
+.PP
+the spanned cells 
+.SS "\fBTitleBlockCell\fP* SplitCellsCommand::spanning_cell_\fC [private]\fP"
+
+.PP
+the cell spanning over the other ones 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

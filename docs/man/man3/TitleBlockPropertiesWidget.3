@@ -1,0 +1,349 @@
+.TH "TitleBlockPropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockPropertiesWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <titleblockpropertieswidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBset_auto_page_num\fP () const"
+.br
+.ti -1c
+.RI "void \fBopenAutoNumFolioEditor\fP (QString)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockPropertiesWidget\fP (const \fBTitleBlockProperties\fP &titleblock=\fBTitleBlockProperties\fP(), bool current_date=false, \fBQETProject\fP *project=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBTitleBlockPropertiesWidget::TitleBlockPropertiesWidget\fP default constructor\&. "
+.ti -1c
+.RI "\fBTitleBlockPropertiesWidget\fP (\fBTitleBlockTemplatesCollection\fP *tbt_collection, const \fBTitleBlockProperties\fP &titleblock=\fBTitleBlockProperties\fP(), bool current_date=false, \fBQETProject\fP *project=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBTitleBlockPropertiesWidget::TitleBlockPropertiesWidget\fP default constructor with tempalte list\&. "
+.ti -1c
+.RI "\fBTitleBlockPropertiesWidget\fP (QList< \fBTitleBlockTemplatesCollection\fP * > tbt_collection, const \fBTitleBlockProperties\fP &titleblock=\fBTitleBlockProperties\fP(), bool current_date=false, \fBQETProject\fP *project=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBTitleBlockPropertiesWidget::TitleBlockPropertiesWidget\fP Default constructor with several template collection\&. "
+.ti -1c
+.RI "\fB~TitleBlockPropertiesWidget\fP () override"
+.br
+.RI "\fBTitleBlockPropertiesWidget::~TitleBlockPropertiesWidget\fP destructor\&. "
+.ti -1c
+.RI "void \fBsetProperties\fP (const \fBTitleBlockProperties\fP &\fBproperties\fP)"
+.br
+.RI "\fBTitleBlockPropertiesWidget::setProperties\fP\&. "
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBproperties\fP () const"
+.br
+.RI "\fBTitleBlockPropertiesWidget::properties\fP\&. "
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBpropertiesAutoNum\fP (QString autoNum) const"
+.br
+.RI "\fBTitleBlockPropertiesWidget::properties\fP\&. "
+.ti -1c
+.RI "\fBTitleBlockTemplateLocation\fP \fBcurrentTitleBlockLocation\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetPropertiesWithAutoNum\fP (const \fBTitleBlockProperties\fP &\fBproperties\fP, QString autoNum)"
+.br
+.ti -1c
+.RI "void \fBsetTitleBlockTemplatesVisible\fP (const bool &visible)"
+.br
+.RI "\fBTitleBlockPropertiesWidget::setTitleBlockTemplatesVisible\fP if true, title block template combo box and menu button is visible\&. "
+.ti -1c
+.RI "void \fBsetReadOnly\fP (const bool &ro)"
+.br
+.RI "\fBTitleBlockPropertiesWidget::setReadOnly\fP if true, this widget is disable\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBeditCurrentTitleBlockTemplate\fP ()"
+.br
+.ti -1c
+.RI "void \fBduplicateCurrentTitleBlockTemplate\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateTemplateList\fP ()"
+.br
+.RI "\fBTitleBlockPropertiesWidget::updateTemplateList\fP Update the title block template list available in the combo box\&. "
+.ti -1c
+.RI "void \fBchangeCurrentTitleBlockTemplate\fP (int)"
+.br
+.RI "\fBTitleBlockPropertiesWidget::changeCurrentTitleBlockTemplate\fP Load the additionnal field of title block 'text'\&. "
+.ti -1c
+.RI "void \fBon_m_date_now_pb_clicked\fP ()"
+.br
+.RI "\fBTitleBlockPropertiesWidget::on_m_date_now_pb_clicked\fP Set the date to current date\&. "
+.ti -1c
+.RI "void \fBon_m_edit_autofolionum_pb_clicked\fP ()"
+.br
+.RI "\fBTitleBlockPropertiesWidget::on_m_edit_autofolionum_pb_clicked\fP Open Auto Folio Num dialog\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddCollection\fP (\fBTitleBlockTemplatesCollection\fP *tbt_collection)"
+.br
+.RI "\fBTitleBlockPropertiesWidget::addCollection\fP add a collection of title block available in the combo box\&. "
+.ti -1c
+.RI "QString \fBcurrentTitleBlockTemplateName\fP () const"
+.br
+.RI "\fBTitleBlockPropertiesWidget::currentTitleBlockTemplateName\fP\&. "
+.ti -1c
+.RI "void \fBinitDialog\fP (const bool &current_date, \fBQETProject\fP *project)"
+.br
+.RI "\fBTitleBlockPropertiesWidget::initDialog\fP Init this dialog\&. "
+.ti -1c
+.RI "int \fBgetIndexFor\fP (const QString &tbt_name, const \fBQET::QetCollection\fP collection) const"
+.br
+.RI "\fBTitleBlockPropertiesWidget::getIndexFor\fP Find the index of the combo box for the title block tbt_name available on the collection collection\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::TitleBlockPropertiesWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContextWidget\fP * \fBm_dcw\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_tbt_edit\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_tbt_duplicate\fP"
+.br
+.ti -1c
+.RI "QMenu * \fBm_tbt_menu\fP"
+.br
+.ti -1c
+.RI "QList< \fBTitleBlockTemplatesCollection\fP * > \fBm_tbt_collection_list\fP"
+.br
+.ti -1c
+.RI "QList< \fBQET::QetCollection\fP > \fBm_map_index_to_collection_type\fP"
+.br
+.ti -1c
+.RI "QList< QString > \fBkeys_2\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockPropertiesWidget::TitleBlockPropertiesWidget (const \fBTitleBlockProperties\fP & titleblock = \fC\fBTitleBlockProperties\fP()\fP, bool current_date = \fCfalse\fP, \fBQETProject\fP * project = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::TitleBlockPropertiesWidget\fP default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitleblock\fP properties to edit 
+.br
+\fIcurrent_date\fP if true, display the radio button 'current date' 
+.br
+\fIproject\fP : \fBQETProject\fP 
+.br
+\fIparent\fP parent widget 
+.RE
+.PP
+
+.SS "TitleBlockPropertiesWidget::TitleBlockPropertiesWidget (\fBTitleBlockTemplatesCollection\fP * tbt_collection, const \fBTitleBlockProperties\fP & titleblock = \fC\fBTitleBlockProperties\fP()\fP, bool current_date = \fCfalse\fP, \fBQETProject\fP * project = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::TitleBlockPropertiesWidget\fP default constructor with tempalte list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_collection\fP template list 
+.br
+\fItitleblock\fP properties to edit 
+.br
+\fIcurrent_date\fP if true, display the radio button 'current date' 
+.br
+\fIproject\fP : \fBQETProject\fP 
+.br
+\fIparent\fP parent widget 
+.RE
+.PP
+
+.SS "TitleBlockPropertiesWidget::TitleBlockPropertiesWidget (QList< \fBTitleBlockTemplatesCollection\fP * > tbt_collection, const \fBTitleBlockProperties\fP & titleblock = \fC\fBTitleBlockProperties\fP()\fP, bool current_date = \fCfalse\fP, \fBQETProject\fP * project = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::TitleBlockPropertiesWidget\fP Default constructor with several template collection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_collection\fP template list 
+.br
+\fItitleblock\fP properties to edit 
+.br
+\fIcurrent_date\fP if true, display the radio button 'current date' 
+.br
+\fIproject\fP : \fBQETProject\fP 
+.br
+\fIparent\fP parent widget 
+.RE
+.PP
+
+.SS "TitleBlockPropertiesWidget::~TitleBlockPropertiesWidget ()\fC [override]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::~TitleBlockPropertiesWidget\fP destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void TitleBlockPropertiesWidget::addCollection (\fBTitleBlockTemplatesCollection\fP * tbt_collection)\fC [private]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::addCollection\fP add a collection of title block available in the combo box\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_collection\fP 
+.RE
+.PP
+
+.SS "void TitleBlockPropertiesWidget::changeCurrentTitleBlockTemplate (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::changeCurrentTitleBlockTemplate\fP Load the additionnal field of title block 'text'\&. 
+.SS "\fBTitleBlockTemplateLocation\fP TitleBlockPropertiesWidget::currentTitleBlockLocation () const"
+
+.SS "QString TitleBlockPropertiesWidget::currentTitleBlockTemplateName () const\fC [private]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::currentTitleBlockTemplateName\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the current title block name 
+.RE
+.PP
+
+.SS "void TitleBlockPropertiesWidget::duplicateCurrentTitleBlockTemplate ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void TitleBlockPropertiesWidget::editCurrentTitleBlockTemplate ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "int TitleBlockPropertiesWidget::getIndexFor (const QString & tbt_name, const \fBQET::QetCollection\fP collection) const\fC [private]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::getIndexFor\fP Find the index of the combo box for the title block tbt_name available on the collection collection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_name\fP : title block name 
+.br
+\fIcollection\fP : title block collection 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the index of the title block or -1 if no match 
+.RE
+.PP
+
+.SS "void TitleBlockPropertiesWidget::initDialog (const bool & current_date, \fBQETProject\fP * project)\fC [private]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::initDialog\fP Init this dialog\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent_date\fP : true for display current date radio button 
+.br
+\fIproject\fP 
+.RE
+.PP
+
+.SS "void TitleBlockPropertiesWidget::on_m_date_now_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::on_m_date_now_pb_clicked\fP Set the date to current date\&. 
+.SS "void TitleBlockPropertiesWidget::on_m_edit_autofolionum_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::on_m_edit_autofolionum_pb_clicked\fP Open Auto Folio Num dialog\&. 
+.SS "void TitleBlockPropertiesWidget::openAutoNumFolioEditor (QString)\fC [signal]\fP"
+
+.SS "\fBTitleBlockProperties\fP TitleBlockPropertiesWidget::properties () const"
+
+.PP
+\fBTitleBlockPropertiesWidget::properties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the edited properties 
+.RE
+.PP
+
+.SS "\fBTitleBlockProperties\fP TitleBlockPropertiesWidget::propertiesAutoNum (QString autoNum) const"
+
+.PP
+\fBTitleBlockPropertiesWidget::properties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+return properties to enable folio autonum 
+.RE
+.PP
+
+.SS "void TitleBlockPropertiesWidget::set_auto_page_num () const\fC [signal]\fP"
+
+.SS "void TitleBlockPropertiesWidget::setProperties (const \fBTitleBlockProperties\fP & properties)"
+
+.PP
+\fBTitleBlockPropertiesWidget::setProperties\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperties\fP 
+.RE
+.PP
+
+.SS "void TitleBlockPropertiesWidget::setPropertiesWithAutoNum (const \fBTitleBlockProperties\fP & properties, QString autoNum)"
+
+.SS "void TitleBlockPropertiesWidget::setReadOnly (const bool & ro)"
+
+.PP
+\fBTitleBlockPropertiesWidget::setReadOnly\fP if true, this widget is disable\&. 
+.SS "void TitleBlockPropertiesWidget::setTitleBlockTemplatesVisible (const bool & visible)"
+
+.PP
+\fBTitleBlockPropertiesWidget::setTitleBlockTemplatesVisible\fP if true, title block template combo box and menu button is visible\&. 
+.SS "void TitleBlockPropertiesWidget::updateTemplateList ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBTitleBlockPropertiesWidget::updateTemplateList\fP Update the title block template list available in the combo box\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QString> TitleBlockPropertiesWidget::keys_2\fC [private]\fP"
+
+.SS "\fBDiagramContextWidget\fP* TitleBlockPropertiesWidget::m_dcw\fC [private]\fP"
+
+.SS "QList<\fBQET::QetCollection\fP> TitleBlockPropertiesWidget::m_map_index_to_collection_type\fC [private]\fP"
+
+.SS "QList<\fBTitleBlockTemplatesCollection\fP *> TitleBlockPropertiesWidget::m_tbt_collection_list\fC [private]\fP"
+
+.SS "QAction * TitleBlockPropertiesWidget::m_tbt_duplicate\fC [private]\fP"
+
+.SS "QAction* TitleBlockPropertiesWidget::m_tbt_edit\fC [private]\fP"
+
+.SS "QMenu* TitleBlockPropertiesWidget::m_tbt_menu\fC [private]\fP"
+
+.SS "Ui::TitleBlockPropertiesWidget* TitleBlockPropertiesWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

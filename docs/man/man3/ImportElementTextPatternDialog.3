@@ -1,0 +1,97 @@
+.TH "ImportElementTextPatternDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ImportElementTextPatternDialog \- The \fBImportElementTextPatternDialog\fP class A dialog use for ask user to select a element text pattern\&. This dialog is highly inspired from QInputDialog::getItem\&. In fact this the same + a check box\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <importelementtextpatterndialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBImportElementTextPatternDialog\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ImportElementTextPatternDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLabelText\fP (const QString &label)"
+.br
+.ti -1c
+.RI "void \fBsetComboBoxItems\fP (const QStringList &items)"
+.br
+.ti -1c
+.RI "QString \fBtextValue\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBgetItem\fP (QWidget *parent, const QString &title, const QString &label, const QStringList &items, bool *ok=nullptr, bool *erase=nullptr)"
+.br
+.RI "\fBImportElementTextPatternDialog::getItem\fP For all arguments see QInputDialog::getItem, except for erase, they store the state of the check box\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ImportElementTextPatternDialog * \fBui\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBImportElementTextPatternDialog\fP class A dialog use for ask user to select a element text pattern\&. This dialog is highly inspired from QInputDialog::getItem\&. In fact this the same + a check box\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ImportElementTextPatternDialog::ImportElementTextPatternDialog (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "ImportElementTextPatternDialog::~ImportElementTextPatternDialog ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QString ImportElementTextPatternDialog::getItem (QWidget * parent, const QString & title, const QString & label, const QStringList & items, bool * ok = \fCnullptr\fP, bool * erase = \fCnullptr\fP)\fC [static]\fP"
+
+.PP
+\fBImportElementTextPatternDialog::getItem\fP For all arguments see QInputDialog::getItem, except for erase, they store the state of the check box\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.br
+\fItitle\fP 
+.br
+\fIlabel\fP 
+.br
+\fIitems\fP 
+.br
+\fIok\fP 
+.br
+\fIerase\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void ImportElementTextPatternDialog::setComboBoxItems (const QStringList & items)"
+
+.SS "void ImportElementTextPatternDialog::setLabelText (const QString & label)"
+
+.SS "QString ImportElementTextPatternDialog::textValue () const"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::ImportElementTextPatternDialog* ImportElementTextPatternDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

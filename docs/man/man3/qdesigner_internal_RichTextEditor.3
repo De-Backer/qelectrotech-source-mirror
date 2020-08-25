@@ -1,0 +1,96 @@
+.TH "qdesigner_internal::RichTextEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+qdesigner_internal::RichTextEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits QTextEdit\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetFontBold\fP (bool b)"
+.br
+.ti -1c
+.RI "void \fBsetFontPointSize\fP (double)"
+.br
+.ti -1c
+.RI "void \fBsetText\fP (const QString &\fBtext\fP)"
+.br
+.ti -1c
+.RI "void \fBsetSimplifyRichText\fP (bool v)"
+.br
+.ti -1c
+.RI "QString \fBtext\fP (Qt::TextFormat format) const"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBstateChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBsimplifyRichTextChanged\fP (bool)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRichTextEditor\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "void \fBsetDefaultFont\fP (QFont font)"
+.br
+.ti -1c
+.RI "QToolBar * \fBcreateToolBar\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBsimplifyRichText\fP () const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_simplifyRichText\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "qdesigner_internal::RichTextEditor::RichTextEditor (QWidget * parent = \fCnullptr\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QToolBar * qdesigner_internal::RichTextEditor::createToolBar (QWidget * parent = \fCnullptr\fP)"
+
+.SS "void qdesigner_internal::RichTextEditor::setDefaultFont (QFont font)"
+
+.SS "void qdesigner_internal::RichTextEditor::setFontBold (bool b)\fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditor::setFontPointSize (double d)\fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditor::setSimplifyRichText (bool v)\fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditor::setText (const QString & text)\fC [slot]\fP"
+
+.SS "bool qdesigner_internal::RichTextEditor::simplifyRichText () const\fC [inline]\fP"
+
+.SS "void qdesigner_internal::RichTextEditor::simplifyRichTextChanged (bool)\fC [signal]\fP"
+
+.SS "void qdesigner_internal::RichTextEditor::stateChanged ()\fC [signal]\fP"
+
+.SS "QString qdesigner_internal::RichTextEditor::text (Qt::TextFormat format) const\fC [slot]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool qdesigner_internal::RichTextEditor::m_simplifyRichText\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

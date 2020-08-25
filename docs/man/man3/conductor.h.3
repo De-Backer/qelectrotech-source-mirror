@@ -1,0 +1,94 @@
+.TH "sources/qetgraphicsitem/conductor.h" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qetgraphicsitem/conductor.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'conductorproperties\&.h'\fP
+.br
+\fC#include <QGraphicsPathItem>\fP
+.br
+\fC#include 'assignvariables\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBConductor\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef QPair< QPointF, Qt::Corner > \fBConductorBend\fP"
+.br
+.ti -1c
+.RI "typedef QHash< Qt::Corner, \fBConductorProfile\fP > \fBConductorProfilesGroup\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductor\fP * \fBlonguestConductorInPotential\fP (\fBConductor\fP *conductor, bool all_diagram=false)"
+.br
+.RI "longuestConductorInPotential "
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBrelatedConductors\fP (const \fBConductor\fP *conductor)"
+.br
+.RI "relatedConductors "
+.ti -1c
+.RI "template<typename T > bool \fBisBetween\fP (const T a, const T b, const T c)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef QPair<QPointF, Qt::Corner> \fBConductorBend\fP"
+
+.SS "typedef QHash<Qt::Corner, \fBConductorProfile\fP> \fBConductorProfilesGroup\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > bool isBetween (const T a, const T b, const T c)"
+
+.SS "\fBConductor\fP* longuestConductorInPotential (\fBConductor\fP * conductor, bool all_diagram)"
+
+.PP
+longuestConductorInPotential 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP : a conductor in the potential to search 
+.br
+\fIall_diagram\fP : true -> search in the whole project, false -> search only in the diagram of conductor 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the longuest conductor in the same potential of conductor 
+.RE
+.PP
+
+.SS "QList<\fBConductor\fP *> relatedConductors (const \fBConductor\fP * conductor)"
+
+.PP
+relatedConductors 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+return all conductors who share the same terminals of conductor given as parametre, except conductor himself\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,73 @@
+.TH "AddItemCommand< QGI >" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AddItemCommand< QGI > \- The \fBAddItemCommand\fP class This command add an item in a diagram The item to add is template, but must be QGraphicsItem or derived\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAddItemCommand\fP (QGI item, \fBDiagram\fP *diagram, const QPointF &pos=QPointF(), QUndoCommand *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~AddItemCommand\fP () override"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QGI \fBm_item\fP"
+.br
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_pos\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename QGI>
+.br
+class AddItemCommand< QGI >"
+The \fBAddItemCommand\fP class This command add an item in a diagram The item to add is template, but must be QGraphicsItem or derived\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename QGI > \fBAddItemCommand\fP< QGI >::\fBAddItemCommand\fP (QGI item, \fBDiagram\fP * diagram, const QPointF & pos = \fCQPointF()\fP, QUndoCommand * parent = \fCnullptr\fP)\fC [inline]\fP"
+
+.SS "template<typename QGI > \fBAddItemCommand\fP< QGI >::~\fBAddItemCommand\fP ()\fC [inline]\fP, \fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename QGI > void \fBAddItemCommand\fP< QGI >::redo ()\fC [inline]\fP, \fC [override]\fP"
+
+.SS "template<typename QGI > void \fBAddItemCommand\fP< QGI >::undo ()\fC [inline]\fP, \fC [override]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename QGI > \fBDiagram\fP* \fBAddItemCommand\fP< QGI >::m_diagram\fC [private]\fP"
+
+.SS "template<typename QGI > QGI \fBAddItemCommand\fP< QGI >::m_item\fC [private]\fP"
+
+.SS "template<typename QGI > QPointF \fBAddItemCommand\fP< QGI >::m_pos\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

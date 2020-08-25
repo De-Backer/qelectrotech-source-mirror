@@ -1,0 +1,12 @@
+<map id="QETApp::quitQET" name="QETApp::quitQET">
+<area shape="rect" id="node1" title="QETApp::quitQET Request the closing of all windows; if the user accepts them, the application quits." alt="" coords="5,81,132,108"/>
+<area shape="rect" id="node2" href="$d7/df8/class_q_e_t_app.html#ad4a4eb0a86ed6453837dadb4387773e3" title="QETApp::closeEveryEditor Close all editors." alt="" coords="180,81,359,108"/>
+<area shape="rect" id="node3" href="$d7/df8/class_q_e_t_app.html#aaf263efb4214b869fa8eca929537fc30" title="QETApp::diagramEditors." alt="" coords="417,5,583,32"/>
+<area shape="rect" id="node5" href="$d7/df8/class_q_e_t_app.html#a90d6c468e52aaa77d31db9d1f16c0f42" title="QETApp::elementEditors." alt="" coords="417,56,583,83"/>
+<area shape="rect" id="node6" href="$d7/df8/class_q_e_t_app.html#a6be4484aa447132c5b44732279b0836c" title="QETApp::project." alt="" coords="441,107,559,133"/>
+<area shape="rect" id="node7" href="$d7/df8/class_q_e_t_app.html#a9a9b543030094c2ca90c4ff3a28c65ff" title="QETApp::restoreEveryEditor Restores all application windows in the systray." alt="" coords="407,157,593,184"/>
+<area shape="rect" id="node4" href="$d7/df8/class_q_e_t_app.html#a4122754c7d0aa3e11ee4a2bd91cb05ba" title="QETApp::instance." alt="" coords="682,31,810,57"/>
+<area shape="rect" id="node8" href="$d7/df8/class_q_e_t_app.html#a45d465c8236c472b17ccd7f07e315576" title="QETApp::restoreDiagramEditors Restore all schema editors in the systray." alt="" coords="641,107,851,133"/>
+<area shape="rect" id="node9" href="$d7/df8/class_q_e_t_app.html#a3dd0e30af47fbe5792fbbda2365728c3" title="QETApp::restoreElementEditors Restore all element editors in the systray." alt="" coords="642,157,850,184"/>
+<area shape="rect" id="node10" href="$d7/df8/class_q_e_t_app.html#ab13667bab139216c94bccaf21979581b" title="QETApp::restoreTitleBlockTemplateEditors Restore all known template editors." alt="" coords="657,209,835,250"/>
+</map>

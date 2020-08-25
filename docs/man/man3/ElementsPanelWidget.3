@@ -1,0 +1,378 @@
+.TH "ElementsPanelWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementsPanelWidget \- The \fBElementsPanelWidget\fP class This class embeds an elements panel under a toolbar providing various actions to manage elements\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementspanelwidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBopenDirectoryForSelectedItem\fP ()"
+.br
+.ti -1c
+.RI "void \fBcopyPathForSelectedItem\fP ()"
+.br
+.ti -1c
+.RI "void \fBreloadAndFilter\fP ()"
+.br
+.ti -1c
+.RI "void \fBactivateProject\fP ()"
+.br
+.ti -1c
+.RI "void \fBcloseProject\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditProjectProperties\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditDiagramProperties\fP ()"
+.br
+.ti -1c
+.RI "void \fBnewDiagram\fP ()"
+.br
+.ti -1c
+.RI "void \fBdeleteDiagram\fP ()"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUp\fP ()"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramDown\fP ()"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUpTop\fP ()"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUpx10\fP ()"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramDownx10\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddTitleBlockTemplate\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditTitleBlockTemplate\fP ()"
+.br
+.ti -1c
+.RI "void \fBremoveTitleBlockTemplate\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateButtons\fP ()"
+.br
+.ti -1c
+.RI "void \fBhandleContextMenu\fP (const QPoint &)"
+.br
+.ti -1c
+.RI "void \fBfilterEdited\fP (const QString &)"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBrequestForDiagram\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForProject\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForNewDiagram\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForProjectClosing\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForProjectPropertiesEdition\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForDiagramPropertiesEdition\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForDiagramDeletion\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForDiagramMoveUp\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForDiagramMoveDown\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForDiagramMoveUpTop\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForDiagramMoveUpx10\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBrequestForDiagramMoveDownx10\fP (\fBDiagram\fP *)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsPanelWidget\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ElementsPanelWidget\fP () override"
+.br
+.ti -1c
+.RI "\fBElementsPanel\fP & \fBelementsPanel\fP () const"
+.br
+.RI "\fBElementsPanelWidget::elementsPanel\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBkeyPressEvent\fP (QKeyEvent *e) override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsPanelWidget\fP (const \fBElementsPanelWidget\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsPanel\fP * \fBelements_panel\fP"
+.br
+.ti -1c
+.RI "QAction * \fBopen_directory\fP"
+.br
+.ti -1c
+.RI "QAction * \fBcopy_path\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_activate\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_close\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_edit_prop\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_prop_diagram\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_add_diagram\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_del_diagram\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_move_diagram_up\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_move_diagram_top\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_move_diagram_down\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_move_diagram_upx10\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprj_move_diagram_downx10\fP"
+.br
+.ti -1c
+.RI "QAction * \fBtbt_add\fP"
+.br
+.ti -1c
+.RI "QAction * \fBtbt_edit\fP"
+.br
+.ti -1c
+.RI "QAction * \fBtbt_remove\fP"
+.br
+.ti -1c
+.RI "QMenu * \fBcontext_menu\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBfilter_textfield\fP"
+.br
+.ti -1c
+.RI "QString \fBprevious_filter_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementsPanelWidget\fP class This class embeds an elements panel under a toolbar providing various actions to manage elements\&. 
+
+
+.PP
+\fBSee also\fP
+.RS 4
+\fBElementsPanel\fP 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementsPanelWidget::ElementsPanelWidget (QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Le QWidget parent de ce widget 
+.RE
+.PP
+
+.SS "ElementsPanelWidget::~ElementsPanelWidget ()\fC [override]\fP"
+Destructeur 
+.SS "ElementsPanelWidget::ElementsPanelWidget (const \fBElementsPanelWidget\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementsPanelWidget::activateProject ()\fC [slot]\fP"
+Emit the requestForProject signal with te selected project 
+.SS "void ElementsPanelWidget::addTitleBlockTemplate ()\fC [slot]\fP"
+Opens a template editor to create a new title block template\&. 
+.SS "void ElementsPanelWidget::closeProject ()\fC [slot]\fP"
+Emet le signal requestForProjectClosing avec le projet selectionne 
+.SS "void ElementsPanelWidget::copyPathForSelectedItem ()\fC [slot]\fP"
+Copy the full path to the file represented by the selected item to the clipboard\&. 
+.SS "void ElementsPanelWidget::deleteDiagram ()\fC [slot]\fP"
+Emet le signal requestForDiagramDeletion avec le schema selectionne 
+.SS "void ElementsPanelWidget::editDiagramProperties ()\fC [slot]\fP"
+Emet le signal requestForDiagramPropertiesEdition avec le schema selectionne 
+.SS "void ElementsPanelWidget::editProjectProperties ()\fC [slot]\fP"
+Emet le signal requestForProjectPropertiesEdition avec le projet selectionne 
+.SS "void ElementsPanelWidget::editTitleBlockTemplate ()\fC [slot]\fP"
+Opens an editor to edit the currently selected title block template, if any\&. 
+.SS "\fBElementsPanel\fP & ElementsPanelWidget::elementsPanel () const\fC [inline]\fP"
+
+.PP
+\fBElementsPanelWidget::elementsPanel\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The elements panel embedded within this widget\&. 
+.RE
+.PP
+
+.SS "void ElementsPanelWidget::filterEdited (const QString & next_text)\fC [slot]\fP"
+
+.SS "void ElementsPanelWidget::handleContextMenu (const QPoint & pos)\fC [slot]\fP"
+Gere le menu contextuel du panel d'elements 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP Position ou le menu contextuel a ete demande 
+.RE
+.PP
+
+.SS "void ElementsPanelWidget::keyPressEvent (QKeyEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Treat key press event inside elements panel widget 
+.SS "void ElementsPanelWidget::moveDiagramDown ()\fC [slot]\fP"
+Emet le signal requestForDiagramMoveDown avec le schema selectionne 
+.SS "void ElementsPanelWidget::moveDiagramDownx10 ()\fC [slot]\fP"
+Emet le signal requestForDiagramMoveDownx10 avec le schema selectionne 
+.SS "void ElementsPanelWidget::moveDiagramUp ()\fC [slot]\fP"
+Emet le signal requestForDiagramMoveUp avec le schema selectionne 
+.SS "void ElementsPanelWidget::moveDiagramUpTop ()\fC [slot]\fP"
+
+.PP
+.nf
+    Emet le signal requestForDiagramMoveUpTop avec le schema selectionne
+
+.fi
+.PP
+.IP "\(bu" 2
+
+.PP
+
+.SS "void ElementsPanelWidget::moveDiagramUpx10 ()\fC [slot]\fP"
+Emet le signal requestForDiagramMoveUpx10 avec le schema selectionne 
+.SS "void ElementsPanelWidget::newDiagram ()\fC [slot]\fP"
+Emet le signal requestForNewDiagram avec le projet selectionne 
+.SS "void ElementsPanelWidget::openDirectoryForSelectedItem ()\fC [slot]\fP"
+Require the desktop environment to open the directory containing the file represented by the selected item, if any\&. 
+.SS "void ElementsPanelWidget::reloadAndFilter ()\fC [slot]\fP"
+Recharge le panel d'elements 
+.SS "void ElementsPanelWidget::removeTitleBlockTemplate ()\fC [slot]\fP"
+Delete the currently selected title block template, if any\&. 
+.SS "void ElementsPanelWidget::requestForDiagram (\fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForDiagramDeletion (\fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForDiagramMoveDown (\fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForDiagramMoveDownx10 (\fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForDiagramMoveUp (\fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForDiagramMoveUpTop (\fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForDiagramMoveUpx10 (\fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForDiagramPropertiesEdition (\fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForNewDiagram (\fBQETProject\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForProject (\fBQETProject\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForProjectClosing (\fBQETProject\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::requestForProjectPropertiesEdition (\fBQETProject\fP *)\fC [signal]\fP"
+
+.SS "void ElementsPanelWidget::updateButtons ()\fC [slot]\fP"
+Met a jour les boutons afin d'assurer la coherence de l'interface 
+.SH "Member Data Documentation"
+.PP 
+.SS "QMenu* ElementsPanelWidget::context_menu\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::copy_path\fC [private]\fP"
+
+.SS "\fBElementsPanel\fP* ElementsPanelWidget::elements_panel\fC [private]\fP"
+
+.SS "QLineEdit* ElementsPanelWidget::filter_textfield\fC [private]\fP"
+
+.SS "QAction* ElementsPanelWidget::open_directory\fC [private]\fP"
+
+.SS "QString ElementsPanelWidget::previous_filter_\fC [private]\fP"
+
+.SS "QAction* ElementsPanelWidget::prj_activate\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::prj_add_diagram\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::prj_close\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::prj_del_diagram\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::prj_edit_prop\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::prj_move_diagram_down\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::prj_move_diagram_downx10\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::prj_move_diagram_top\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::prj_move_diagram_up\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::prj_move_diagram_upx10\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::prj_prop_diagram\fC [private]\fP"
+
+.SS "QAction* ElementsPanelWidget::tbt_add\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::tbt_edit\fC [private]\fP"
+
+.SS "QAction * ElementsPanelWidget::tbt_remove\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

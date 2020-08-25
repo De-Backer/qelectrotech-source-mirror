@@ -1,0 +1,82 @@
+.TH "TitleBlockTemplateDeleter" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateDeleter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatedeleter\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "bool \fBexec\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateDeleter\fP (const \fBTitleBlockTemplateLocation\fP &, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~TitleBlockTemplateDeleter\fP () override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateDeleter\fP (const \fBTitleBlockTemplateDeleter\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateLocation\fP \fBtemplate_location_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is an abstraction layer to delete an existing title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateDeleter::TitleBlockTemplateDeleter (const \fBTitleBlockTemplateLocation\fP & tbt_location, QWidget * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt_location\fP Location of the title block template to be deleted 
+.br
+\fIparent\fP Parent QWidget 
+.RE
+.PP
+
+.SS "TitleBlockTemplateDeleter::~TitleBlockTemplateDeleter ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockTemplateDeleter::TitleBlockTemplateDeleter (const \fBTitleBlockTemplateDeleter\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool TitleBlockTemplateDeleter::exec ()\fC [slot]\fP"
+Delete the title block template: check the provided location matches an existing template, interactively require confirmationfrom the user before actually proceeding to the deletion\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the deletion succeeded, false otherwise\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTitleBlockTemplateLocation\fP TitleBlockTemplateDeleter::template_location_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

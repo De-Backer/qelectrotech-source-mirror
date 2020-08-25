@@ -1,0 +1,129 @@
+.TH "autonum" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+autonum
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAssignVariables\fP"
+.br
+.RI "The \fBAssignVariables\fP class This class assign variable of a formula string\&. Return the final string used to be displayed from a formula string\&. "
+.ti -1c
+.RI "class \fBsequentialNumbers\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetSequentialToList\fP (QStringList &list, \fBNumerotationContext\fP &context, const QString &type)"
+.br
+.RI "setSequentialToList Append all sequential of type type owned by context in list "
+.ti -1c
+.RI "void \fBsetFolioSequentialToHash\fP (QStringList &list, QHash< QString, QStringList > &hash, const QString &autoNumName)"
+.br
+.RI "setFolioSequentialToHash Insert all value of list in hash with key autoNumName "
+.ti -1c
+.RI "void \fBsetSequential\fP (const QString &label, \fBsequentialNumbers\fP &seqStruct, \fBNumerotationContext\fP &context, \fBDiagram\fP *diagram, const QString &hashKey)"
+.br
+.RI "setSequential Fill seqStruct "
+.ti -1c
+.RI "QString \fBnumerotationContextToFormula\fP (const \fBNumerotationContext\fP &nc)"
+.br
+.RI "numerotationContextToFormula "
+.ti -1c
+.RI "QString \fBelementPrefixForLocation\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "elementPrefixForLocation "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "QString autonum::elementPrefixForLocation (const \fBElementsLocation\fP & location)"
+
+.PP
+elementPrefixForLocation 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the prefix for an element represented by location, prefix can be null\&. Search for a prefix only if location represent an element embedded in a project 
+.RE
+.PP
+
+.SS "QString autonum::numerotationContextToFormula (const \fBNumerotationContext\fP & nc)"
+
+.PP
+numerotationContextToFormula 
+.PP
+\fBParameters\fP
+.RS 4
+\fInc\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the numerotation context, converted to formula 
+.RE
+.PP
+
+.SS "void autonum::setFolioSequentialToHash (QStringList & list, QHash< QString, QStringList > & hash, const QString & autoNumName)"
+
+.PP
+setFolioSequentialToHash Insert all value of list in hash with key autoNumName 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlist\fP : list to get values from 
+.br
+\fIhash\fP : hash to have values inserted 
+.br
+\fIautoNumName\fP : name to use as key of hash 
+.RE
+.PP
+
+.SS "void autonum::setSequential (const QString & label, \fBsequentialNumbers\fP & seqStruct, \fBNumerotationContext\fP & context, \fBDiagram\fP * diagram, const QString & hashKey)"
+
+.PP
+setSequential Fill seqStruct 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlabel\fP : label of sequential to fill (sequ_, sequf_, seqt_, ect\&.\&.\&.\&.) 
+.br
+\fIseqStruct\fP : struct to fill 
+.br
+\fIcontext\fP : numerotation context use to know the current sequential num\&. 
+.br
+\fIdiagram\fP : diagram where the sequential occur, notably use when label is folio type (sequf_, seqtf_, seqhf_), to keep up to date the current sequential of folio\&. 
+.br
+\fIhashKey\fP : the hash key used to store the sequential for folio type\&. 
+.RE
+.PP
+
+.SS "void autonum::setSequentialToList (QStringList & list, \fBNumerotationContext\fP & context, const QString & type)"
+
+.PP
+setSequentialToList Append all sequential of type type owned by context in list 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlist\fP : list to have value inserted 
+.br
+\fIcontext\fP : numerotation context to retrieve value 
+.br
+\fItype\fP : type of sequential (unit, unitfolio, ten, tenfolio, hundred, hundredfolio) 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

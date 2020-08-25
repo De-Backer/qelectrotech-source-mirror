@@ -1,0 +1,109 @@
+.TH "MovePartsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MovePartsCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <editorcommands\&.h>\fP
+.PP
+Inherits \fBElementEditionCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMovePartsCommand\fP (const QPointF &, \fBElementScene\fP *, const QList< QGraphicsItem * > &, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~MovePartsCommand\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "Annule le deplacement\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "Refait le deplacement\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMovePartsCommand\fP (const \fBMovePartsCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< QGraphicsItem * > \fBmoved_parts\fP"
+.br
+.RI "List of moved primitives\&. "
+.ti -1c
+.RI "QPointF \fBmovement\fP"
+.br
+.RI "applied movement "
+.ti -1c
+.RI "bool \fBfirst_redo\fP"
+.br
+.RI "Prevent the first call to \fBredo()\fP "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This command moves primitives when editing an electrical element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MovePartsCommand::MovePartsCommand (const QPointF & m, \fBElementScene\fP * scene, const QList< QGraphicsItem * > & parts, QUndoCommand * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIm\fP Mouvement sous forme de QPointF 
+.br
+\fIscene\fP \fBElementScene\fP concernee 
+.br
+\fIparts\fP Liste des parties deplacees 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "MovePartsCommand::~MovePartsCommand ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "MovePartsCommand::MovePartsCommand (const \fBMovePartsCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void MovePartsCommand::redo ()\fC [override]\fP"
+
+.PP
+Refait le deplacement\&. 
+.SS "void MovePartsCommand::undo ()\fC [override]\fP"
+
+.PP
+Annule le deplacement\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool MovePartsCommand::first_redo\fC [private]\fP"
+
+.PP
+Prevent the first call to \fBredo()\fP 
+.SS "QList<QGraphicsItem *> MovePartsCommand::moved_parts\fC [private]\fP"
+
+.PP
+List of moved primitives\&. 
+.SS "QPointF MovePartsCommand::movement\fC [private]\fP"
+
+.PP
+applied movement 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

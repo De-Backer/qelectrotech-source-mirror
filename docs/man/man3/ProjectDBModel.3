@@ -1,0 +1,346 @@
+.TH "ProjectDBModel" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProjectDBModel \- The \fBProjectDBModel\fP class This model is intended to be use with the class \fBprojectDataBase\fP and is designed to be displayed by the class \fBQetGraphicsTableItem\fP (but can be use by other view class since it inherit from QAbstractTableModel)\&. This class should be sufficient to display the content of the project data base from a query set by the method void \fBProjectDBModel::setQuery(const QString &query)\fP\&. The indentifier method is used by widget editor to retrieve the good widget for edit the query\&. By defaut identifer return the string 'unknow'\&. You should use setIdentfier method to set your custom identifier\&. At the time this sentence is written, there is two identifier : nomenclature summary\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <projectdbmodel\&.h>\fP
+.PP
+Inherits QAbstractTableModel\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectDBModel\fP (\fBQETProject\fP *\fBproject\fP, QObject *parent=nullptr)"
+.br
+.RI "\fBProjectDBModel::ProjectDBModel\fP\&. "
+.ti -1c
+.RI "\fBProjectDBModel\fP (const \fBProjectDBModel\fP &other_model)"
+.br
+.RI "\fBProjectDBModel::ProjectDBModel\fP\&. "
+.ti -1c
+.RI "int \fBrowCount\fP (const QModelIndex &parent=QModelIndex()) const override"
+.br
+.RI "\fBProjectDBModel::rowCount\fP Reimplemented for QAbstractTableModel\&. "
+.ti -1c
+.RI "int \fBcolumnCount\fP (const QModelIndex &parent=QModelIndex()) const override"
+.br
+.RI "\fBProjectDBModel::columnCount\fP Reimplemented for QAbstractTableModel\&. "
+.ti -1c
+.RI "bool \fBsetHeaderData\fP (int section, Qt::Orientation orientation, const QVariant &value, int role=Qt::EditRole) override"
+.br
+.RI "\fBProjectDBModel::setHeaderData\fP Reimplemented from QAbstractTableModel\&. Only horizontal orientation is accepted\&. "
+.ti -1c
+.RI "QVariant \fBheaderData\fP (int section, Qt::Orientation orientation, int role=Qt::DisplayRole) const override"
+.br
+.RI "\fBProjectDBModel::headerData\fP Reimplemented from QAbstractTableModel\&. "
+.ti -1c
+.RI "bool \fBsetData\fP (const QModelIndex &index, const QVariant &value, int role=Qt::EditRole) override"
+.br
+.RI "\fBProjectDBModel::setData\fP Only store the data for the index 0\&.0\&. "
+.ti -1c
+.RI "QVariant \fBdata\fP (const QModelIndex &index, int role=Qt::DisplayRole) const override"
+.br
+.RI "\fBProjectDBModel::data\fP Reimplemented for QAbstractTableModel\&. "
+.ti -1c
+.RI "void \fBsetQuery\fP (const QString &setQuery)"
+.br
+.RI "\fBProjectDBModel::setQuery\fP Query the internall bd with query\&. "
+.ti -1c
+.RI "QString \fBqueryString\fP () const"
+.br
+.RI "\fBProjectDBModel::queryString\fP\&. "
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject\fP () const"
+.br
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &document) const"
+.br
+.RI "\fBProjectDBModel::toXml\fP Save the model to xml,since model can have unlimited data we only save few data (only these used by qelectrotech)\&. The query, all header data\&. and some data of index::(0,0)\&. All other data are not saved\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &element)"
+.br
+.RI "\fBProjectDBModel::fromXml\fP Restore the model from xml\&. "
+.ti -1c
+.RI "void \fBsetIdentifier\fP (const QString &\fBidentifier\fP)"
+.br
+.RI "\fBProjectDBModel::setIdentifier\fP Set the identifier of this model to identifier\&. "
+.ti -1c
+.RI "QString \fBidentifier\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBxmlTagName\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdataBaseUpdated\fP ()"
+.br
+.RI "\fBProjectDBModel::dataBaseUpdated\fP slot called when the project database is updated\&. "
+.ti -1c
+.RI "void \fBsetHeaderString\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillValue\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< \fBQETProject\fP > \fBm_project\fP"
+.br
+.ti -1c
+.RI "QString \fBm_query\fP"
+.br
+.ti -1c
+.RI "QVector< QStringList > \fBm_record\fP"
+.br
+.ti -1c
+.RI "QHash< int, QHash< int, QVariant > > \fBm_header_data\fP"
+.br
+.ti -1c
+.RI "QHash< int, QVariant > \fBm_index_0_0_data\fP"
+.br
+.ti -1c
+.RI "QString \fBm_identifier\fP = 'unknow'"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBProjectDBModel\fP class This model is intended to be use with the class \fBprojectDataBase\fP and is designed to be displayed by the class \fBQetGraphicsTableItem\fP (but can be use by other view class since it inherit from QAbstractTableModel)\&. This class should be sufficient to display the content of the project data base from a query set by the method void \fBProjectDBModel::setQuery(const QString &query)\fP\&. The indentifier method is used by widget editor to retrieve the good widget for edit the query\&. By defaut identifer return the string 'unknow'\&. You should use setIdentfier method to set your custom identifier\&. At the time this sentence is written, there is two identifier : nomenclature summary\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ProjectDBModel::ProjectDBModel (\fBQETProject\fP * project, QObject * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBProjectDBModel::ProjectDBModel\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP :project of this nomenclature 
+.br
+\fIparent\fP : parent QObject 
+.RE
+.PP
+
+.SS "ProjectDBModel::ProjectDBModel (const \fBProjectDBModel\fP & other_model)\fC [explicit]\fP"
+
+.PP
+\fBProjectDBModel::ProjectDBModel\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_model\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int ProjectDBModel::columnCount (const QModelIndex & parent = \fCQModelIndex()\fP) const\fC [override]\fP"
+
+.PP
+\fBProjectDBModel::columnCount\fP Reimplemented for QAbstractTableModel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QVariant ProjectDBModel::data (const QModelIndex & index, int role = \fCQt::DisplayRole\fP) const\fC [override]\fP"
+
+.PP
+\fBProjectDBModel::data\fP Reimplemented for QAbstractTableModel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.br
+\fIrole\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void ProjectDBModel::dataBaseUpdated ()\fC [private]\fP"
+
+.PP
+\fBProjectDBModel::dataBaseUpdated\fP slot called when the project database is updated\&. 
+.SS "void ProjectDBModel::fillValue ()\fC [private]\fP"
+
+.SS "void ProjectDBModel::fromXml (const QDomElement & element)"
+
+.PP
+\fBProjectDBModel::fromXml\fP Restore the model from xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.SS "QVariant ProjectDBModel::headerData (int section, Qt::Orientation orientation, int role = \fCQt::DisplayRole\fP) const\fC [override]\fP"
+
+.PP
+\fBProjectDBModel::headerData\fP Reimplemented from QAbstractTableModel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsection\fP 
+.br
+\fIorientation\fP 
+.br
+\fIrole\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QString ProjectDBModel::identifier () const\fC [inline]\fP"
+
+.SS "\fBQETProject\fP * ProjectDBModel::project () const"
+
+.SS "QString ProjectDBModel::queryString () const"
+
+.PP
+\fBProjectDBModel::queryString\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the current query used by this model 
+.RE
+.PP
+
+.SS "int ProjectDBModel::rowCount (const QModelIndex & parent = \fCQModelIndex()\fP) const\fC [override]\fP"
+
+.PP
+\fBProjectDBModel::rowCount\fP Reimplemented for QAbstractTableModel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool ProjectDBModel::setData (const QModelIndex & index, const QVariant & value, int role = \fCQt::EditRole\fP)\fC [override]\fP"
+
+.PP
+\fBProjectDBModel::setData\fP Only store the data for the index 0\&.0\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.br
+\fIvalue\fP 
+.br
+\fIrole\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool ProjectDBModel::setHeaderData (int section, Qt::Orientation orientation, const QVariant & value, int role = \fCQt::EditRole\fP)\fC [override]\fP"
+
+.PP
+\fBProjectDBModel::setHeaderData\fP Reimplemented from QAbstractTableModel\&. Only horizontal orientation is accepted\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsection\fP 
+.br
+\fIorientation\fP 
+.br
+\fIvalue\fP 
+.br
+\fIrole\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void ProjectDBModel::setHeaderString ()\fC [private]\fP"
+
+.SS "void ProjectDBModel::setIdentifier (const QString & identifier)"
+
+.PP
+\fBProjectDBModel::setIdentifier\fP Set the identifier of this model to identifier\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIidentifier\fP 
+.RE
+.PP
+
+.SS "void ProjectDBModel::setQuery (const QString & query)"
+
+.PP
+\fBProjectDBModel::setQuery\fP Query the internall bd with query\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIquery\fP 
+.RE
+.PP
+
+.SS "QDomElement ProjectDBModel::toXml (QDomDocument & document) const"
+
+.PP
+\fBProjectDBModel::toXml\fP Save the model to xml,since model can have unlimited data we only save few data (only these used by qelectrotech)\&. The query, all header data\&. and some data of index::(0,0)\&. All other data are not saved\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "static QString ProjectDBModel::xmlTagName ()\fC [inline]\fP, \fC [static]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QHash<int, QHash<int, QVariant> > ProjectDBModel::m_header_data\fC [private]\fP"
+
+.SS "QString ProjectDBModel::m_identifier = 'unknow'\fC [private]\fP"
+
+.SS "QHash<int, QVariant> ProjectDBModel::m_index_0_0_data\fC [private]\fP"
+
+.SS "QPointer<\fBQETProject\fP> ProjectDBModel::m_project\fC [private]\fP"
+
+.SS "QString ProjectDBModel::m_query\fC [private]\fP"
+
+.SS "QVector<QStringList> ProjectDBModel::m_record\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

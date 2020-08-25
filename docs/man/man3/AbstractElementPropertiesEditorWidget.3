@@ -1,0 +1,54 @@
+.TH "AbstractElementPropertiesEditorWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AbstractElementPropertiesEditorWidget \- The \fBAbstractElementPropertiesEditorWidget\fP class This class provide common method for all widget used to edit some properties of an element\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <abstractelementpropertieseditorwidget\&.h>\fP
+.PP
+Inherits \fBPropertiesEditorWidget\fP\&.
+.PP
+Inherited by \fBDynamicElementTextItemEditor\fP, \fBElementInfoWidget\fP, \fBElementPropertiesWidget\fP, \fBLinkSingleElementWidget\fP, and \fBMasterPropertiesWidget\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAbstractElementPropertiesEditorWidget\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "virtual void \fBsetElement\fP (\fBElement\fP *element)=0"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< \fBElement\fP > \fBm_element\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBAbstractElementPropertiesEditorWidget\fP class This class provide common method for all widget used to edit some properties of an element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AbstractElementPropertiesEditorWidget::AbstractElementPropertiesEditorWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void AbstractElementPropertiesEditorWidget::setElement (\fBElement\fP * element)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBMasterPropertiesWidget\fP, \fBLinkSingleElementWidget\fP, \fBElementInfoWidget\fP, \fBDynamicElementTextItemEditor\fP, and \fBElementPropertiesWidget\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QPointer<\fBElement\fP> AbstractElementPropertiesEditorWidget::m_element\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

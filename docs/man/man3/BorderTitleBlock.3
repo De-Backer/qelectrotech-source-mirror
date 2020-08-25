@@ -1,0 +1,1516 @@
+.TH "BorderTitleBlock" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BorderTitleBlock \- The \fBBorderTitleBlock\fP class This class represents the border and the titleblock which frame a particular electric diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <bordertitleblock\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBtitleBlockTemplateChanged\fP (const QString &)"
+.br
+.RI "\fBBorderTitleBlock::titleBlockTemplateChanged\fP This slot may be used to inform this class that the given title block template has changed\&. The title block-dedicated rendering cache will thus be flushed\&. "
+.ti -1c
+.RI "void \fBtitleBlockTemplateRemoved\fP (const QString &, const \fBTitleBlockTemplate\fP *=nullptr)"
+.br
+.RI "\fBBorderTitleBlock::titleBlockTemplateRemoved\fP This slot has to be used to inform this class that the given title block template is about to be removed and is no longer accessible\&. This class will either use the provided optional \fBTitleBlockTemplate\fP or the default title block provided by \fBQETApp::defaultTitleBlockTemplate()\fP "
+.ti -1c
+.RI "void \fBdisplayTitleBlock\fP (bool)"
+.br
+.RI "\fBBorderTitleBlock::displayTitleBlock\fP\&. "
+.ti -1c
+.RI "void \fBdisplayColumns\fP (bool)"
+.br
+.RI "\fBBorderTitleBlock::displayColumns\fP\&. "
+.ti -1c
+.RI "void \fBdisplayRows\fP (bool)"
+.br
+.RI "\fBBorderTitleBlock::displayRows\fP\&. "
+.ti -1c
+.RI "void \fBdisplayBorder\fP (bool)"
+.br
+.RI "\fBBorderTitleBlock::displayBorder\fP\&. "
+.ti -1c
+.RI "void \fBslot_setAutoPageNum\fP (QString)"
+.br
+.RI "\fBBorderTitleBlock::slot_setAutoPageNum\fP\&. "
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBborderChanged\fP (QRectF old_border, QRectF new_border)"
+.br
+.RI "borderChanged Signal emitted after the border has changed "
+.ti -1c
+.RI "void \fBdisplayChanged\fP ()"
+.br
+.RI "displayChanged Signal emitted after display options have changed "
+.ti -1c
+.RI "void \fBdiagramTitleChanged\fP (const QString &)"
+.br
+.RI "diagramTitleChanged Signal emitted after the title has changed "
+.ti -1c
+.RI "void \fBtitleBlockFolioChanged\fP (const QString &)"
+.br
+.RI "titleBlockFolioChanged Signal emitted after Folio has changed "
+.ti -1c
+.RI "void \fBneedFolioData\fP ()"
+.br
+.RI "needFolioData Signal emitted when the title block requires its data to be updated in order to generate the folio field\&. "
+.ti -1c
+.RI "void \fBneedTitleBlockTemplate\fP (const QString &)"
+.br
+.RI "needTitleBlockTemplate Signal emitted when this object needs to set a specific title block template\&. This object cannot handle the job since it does not know of its parent project\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBorderTitleBlock\fP (QObject *=nullptr)"
+.br
+.RI "\fBBorderTitleBlock::BorderTitleBlock\fP Simple constructor: build a border by recovering the dimensions in the application configuration\&. "
+.ti -1c
+.RI "\fB~BorderTitleBlock\fP () override"
+.br
+.RI "\fBBorderTitleBlock::~BorderTitleBlock\fP\&. "
+.ti -1c
+.RI "void \fBdraw\fP (QPainter *painter)"
+.br
+.RI "\fBBorderTitleBlock::draw\fP Draw the border and the titleblock\&. "
+.ti -1c
+.RI "void \fBdrawDxf\fP (int, int, bool, QString &, int)"
+.br
+.RI "\fBBorderTitleBlock::drawDxf\fP\&. "
+.ti -1c
+.RI "int \fBcolumnsCount\fP () const"
+.br
+.ti -1c
+.RI "qreal \fBcolumnsWidth\fP () const"
+.br
+.ti -1c
+.RI "qreal \fBcolumnsTotalWidth\fP () const"
+.br
+.ti -1c
+.RI "qreal \fBcolumnsHeaderHeight\fP () const"
+.br
+.ti -1c
+.RI "int \fBrowsCount\fP () const"
+.br
+.ti -1c
+.RI "qreal \fBrowsHeight\fP () const"
+.br
+.ti -1c
+.RI "qreal \fBrowsTotalHeight\fP () const"
+.br
+.ti -1c
+.RI "qreal \fBrowsHeaderWidth\fP () const"
+.br
+.ti -1c
+.RI "qreal \fBdiagramWidth\fP () const"
+.br
+.RI "diagramWidth "
+.ti -1c
+.RI "qreal \fBdiagramHeight\fP () const"
+.br
+.RI "diagramHeight "
+.ti -1c
+.RI "QRectF \fBtitleBlockRect\fP () const"
+.br
+.RI "\fBBorderTitleBlock::titleBlockRect\fP\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBtitleblockInformation\fP () const"
+.br
+.RI "\fBBorderTitleBlock::titleblockInformation\fP\&. "
+.ti -1c
+.RI "QRectF \fBborderAndTitleBlockRect\fP () const"
+.br
+.RI "\fBBorderTitleBlock::borderAndTitleBlockRect\fP\&. "
+.ti -1c
+.RI "QRectF \fBcolumnsRect\fP () const"
+.br
+.RI "\fBBorderTitleBlock::columnsRect\fP\&. "
+.ti -1c
+.RI "QRectF \fBrowsRect\fP () const"
+.br
+.RI "\fBBorderTitleBlock::rowsRect\fP\&. "
+.ti -1c
+.RI "QRectF \fBoutsideBorderRect\fP () const"
+.br
+.RI "\fBBorderTitleBlock::outsideBorderRect\fP\&. "
+.ti -1c
+.RI "QRectF \fBinsideBorderRect\fP () const"
+.br
+.RI "\fBBorderTitleBlock::insideBorderRect\fP\&. "
+.ti -1c
+.RI "QString \fBauthor\fP () const"
+.br
+.ti -1c
+.RI "QDate \fBdate\fP () const"
+.br
+.ti -1c
+.RI "QString \fBtitle\fP () const"
+.br
+.ti -1c
+.RI "QString \fBfolio\fP () const"
+.br
+.ti -1c
+.RI "QString \fBfinalfolio\fP () const"
+.br
+.ti -1c
+.RI "QString \fBplant\fP () const"
+.br
+.ti -1c
+.RI "QString \fBlocmach\fP () const"
+.br
+.ti -1c
+.RI "QString \fBindexrev\fP () const"
+.br
+.ti -1c
+.RI "QString \fBfileName\fP () const"
+.br
+.ti -1c
+.RI "QString \fBversion\fP () const"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBadditionalFields\fP () const"
+.br
+.ti -1c
+.RI "QString \fBautoPageNum\fP () const"
+.br
+.ti -1c
+.RI "int \fBfolioTotal\fP () const"
+.br
+.ti -1c
+.RI "bool \fBtitleBlockIsDisplayed\fP () const"
+.br
+.ti -1c
+.RI "bool \fBcolumnsAreDisplayed\fP () const"
+.br
+.ti -1c
+.RI "bool \fBrowsAreDisplayed\fP () const"
+.br
+.ti -1c
+.RI "bool \fBborderIsDisplayed\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetColumnsCount\fP (int)"
+.br
+.RI "\fBBorderTitleBlock::setColumnsCount\fP Allows you to change the number of columns\&. If this number of columns is less than the minimum required, it is this minimum which is used\&. "
+.ti -1c
+.RI "void \fBsetRowsCount\fP (int)"
+.br
+.RI "\fBBorderTitleBlock::setRowsCount\fP Allows you to change the number of lines\&. If this number of lines is lower than the minimum required, this function does nothing\&. "
+.ti -1c
+.RI "void \fBsetColumnsWidth\fP (const qreal &)"
+.br
+.RI "\fBBorderTitleBlock::setColumnsWidth\fP Change the width of the columns\&. If the width indicated is less than the minimum required, it is this minimum which is used\&. "
+.ti -1c
+.RI "void \fBsetRowsHeight\fP (const qreal &)"
+.br
+.RI "\fBBorderTitleBlock::setRowsHeight\fP Change the height of the lines\&. If the indicated height is lower than the minimum required, it is this minimum which is used\&. "
+.ti -1c
+.RI "void \fBsetColumnsHeaderHeight\fP (const qreal &)"
+.br
+.RI "\fBBorderTitleBlock::setColumnsHeaderHeight\fP Change the height of the headers containing the column numbers\&. This must remain between 5 and 50 px\&. "
+.ti -1c
+.RI "void \fBsetRowsHeaderWidth\fP (const qreal &)"
+.br
+.RI "\fBBorderTitleBlock::setRowsHeaderWidth\fP Change the width of the headers containing the line numbers\&. This must remain between 5 and 50 px\&. "
+.ti -1c
+.RI "void \fBsetDiagramHeight\fP (const qreal &)"
+.br
+.RI "\fBBorderTitleBlock::setDiagramHeight\fP This method tries to get as close as possible to the given height as a parameter by modifying the number of rows in progress\&. "
+.ti -1c
+.RI "\fBDiagramPosition\fP \fBconvertPosition\fP (const QPointF &)"
+.br
+.RI "\fBBorderTitleBlock::convertPosition\fP Convert a Point in cartesian coordinate (x : 12\&.5, 56\&.9) to a point in grid coordinate (ex : B2) "
+.ti -1c
+.RI "void \fBsetAuthor\fP (const QString &\fBauthor\fP)"
+.br
+.RI "\fBBorderTitleBlock::setAuthor\fP\&. "
+.ti -1c
+.RI "void \fBsetDate\fP (const QDate &\fBdate\fP)"
+.br
+.RI "\fBBorderTitleBlock::setDate\fP\&. "
+.ti -1c
+.RI "void \fBsetTitle\fP (const QString &\fBtitle\fP)"
+.br
+.RI "\fBBorderTitleBlock::setTitle\fP\&. "
+.ti -1c
+.RI "void \fBsetFolio\fP (const QString &\fBfolio\fP)"
+.br
+.RI "\fBBorderTitleBlock::setFolio\fP\&. "
+.ti -1c
+.RI "void \fBsetFolioData\fP (int, int, const QString &=nullptr, const \fBDiagramContext\fP &=\fBDiagramContext\fP())"
+.br
+.RI "\fBBorderTitleBlock::setFolioData\fP\&. "
+.ti -1c
+.RI "void \fBsetPlant\fP (const QString &\fBplant\fP)"
+.br
+.RI "\fBBorderTitleBlock::setPlant\fP\&. "
+.ti -1c
+.RI "void \fBsetLocMach\fP (const QString &\fBlocmach\fP)"
+.br
+.RI "\fBBorderTitleBlock::setLocMach\fP\&. "
+.ti -1c
+.RI "void \fBsetIndicerev\fP (const QString &\fBindexrev\fP)"
+.br
+.RI "\fBBorderTitleBlock::setIndicerev\fP\&. "
+.ti -1c
+.RI "void \fBsetFileName\fP (const QString &filename)"
+.br
+.RI "\fBBorderTitleBlock::setFileName\fP\&. "
+.ti -1c
+.RI "void \fBsetVersion\fP (const QString &\fBversion\fP)"
+.br
+.RI "\fBBorderTitleBlock::setVersion\fP\&. "
+.ti -1c
+.RI "void \fBsetAutoPageNum\fP (const QString &auto_page_num)"
+.br
+.RI "\fBBorderTitleBlock::setAutoPageNum\fP\&. "
+.ti -1c
+.RI "void \fBsetPreviousFolioNum\fP (const QString &previous)"
+.br
+.RI "\fBBorderTitleBlock::setPreviousFolioNum\fP\&. "
+.ti -1c
+.RI "void \fBsetNextFolioNum\fP (const QString &next)"
+.br
+.RI "\fBBorderTitleBlock::setNextFolioNum\fP\&. "
+.ti -1c
+.RI "void \fBtitleBlockToXml\fP (QDomElement &)"
+.br
+.RI "\fBBorderTitleBlock::titleBlockToXml\fP Exports the title block current values to XML\&. "
+.ti -1c
+.RI "void \fBtitleBlockFromXml\fP (const QDomElement &)"
+.br
+.RI "\fBBorderTitleBlock::titleBlockFromXml\fP Reads the title block values from XML\&. "
+.ti -1c
+.RI "void \fBborderToXml\fP (QDomElement &)"
+.br
+.RI "\fBBorderTitleBlock::borderToXml\fP Exports the border current settings to XML\&. "
+.ti -1c
+.RI "void \fBborderFromXml\fP (const QDomElement &)"
+.br
+.RI "\fBBorderTitleBlock::borderFromXml\fP Reads the border settings from XML\&. "
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBexportTitleBlock\fP ()"
+.br
+.RI "\fBBorderTitleBlock::exportTitleBlock\fP\&. "
+.ti -1c
+.RI "void \fBimportTitleBlock\fP (const \fBTitleBlockProperties\fP &)"
+.br
+.RI "\fBBorderTitleBlock::importTitleBlock\fP\&. "
+.ti -1c
+.RI "\fBBorderProperties\fP \fBexportBorder\fP ()"
+.br
+.RI "\fBBorderTitleBlock::exportBorder\fP\&. "
+.ti -1c
+.RI "void \fBimportBorder\fP (const \fBBorderProperties\fP &)"
+.br
+.RI "\fBBorderTitleBlock::importBorder\fP\&. "
+.ti -1c
+.RI "const \fBTitleBlockTemplate\fP * \fBtitleBlockTemplate\fP ()"
+.br
+.RI "\fBBorderTitleBlock::titleBlockTemplate\fP\&. "
+.ti -1c
+.RI "void \fBsetTitleBlockTemplate\fP (const \fBTitleBlockTemplate\fP *)"
+.br
+.RI "\fBBorderTitleBlock::setTitleBlockTemplate\fP\&. "
+.ti -1c
+.RI "QString \fBtitleBlockTemplateName\fP () const"
+.br
+.RI "\fBBorderTitleBlock::titleBlockTemplateName\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBorderTitleBlock\fP (const \fBBorderTitleBlock\fP &)"
+.br
+.ti -1c
+.RI "QRectF \fBtitleBlockRectForQPainter\fP () const"
+.br
+.RI "\fBBorderTitleBlock::titleBlockRectForQPainter\fP\&. "
+.ti -1c
+.RI "void \fBupdateRectangles\fP ()"
+.br
+.RI "\fBBorderTitleBlock::updateRectangles\fP This method update the diagram rect according to the value of rows and columns (number and size) "
+.ti -1c
+.RI "void \fBupdateDiagramContextForTitleBlock\fP (const \fBDiagramContext\fP &=\fBDiagramContext\fP())"
+.br
+.RI "\fBBorderTitleBlock::updateDiagramContextForTitleBlock\fP Update the informations given to the titleblock template by regenerating a \fBDiagramContext\fP object\&. "
+.ti -1c
+.RI "QString \fBincrementLetters\fP (const QString &)"
+.br
+.RI "\fBBorderTitleBlock::incrementLetters\fP increments string with Letters A to Z\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBbtb_author_\fP"
+.br
+.RI "titleblock author "
+.ti -1c
+.RI "QDate \fBbtb_date_\fP"
+.br
+.RI "titleblock date "
+.ti -1c
+.RI "QString \fBbtb_title_\fP"
+.br
+.RI "titleblock title "
+.ti -1c
+.RI "QString \fBbtb_folio_\fP"
+.br
+.RI "titleblock folio "
+.ti -1c
+.RI "QString \fBbtb_plant_\fP"
+.br
+.RI "titleblock plant "
+.ti -1c
+.RI "QString \fBbtb_locmach_\fP"
+.br
+.RI "titleblock locmach "
+.ti -1c
+.RI "QString \fBbtb_indexrev_\fP"
+.br
+.RI "titleblock index rev "
+.ti -1c
+.RI "QString \fBbtb_final_folio_\fP"
+.br
+.RI "titleblock final folio "
+.ti -1c
+.RI "QString \fBbtb_auto_page_num_\fP"
+.br
+.RI "titleblock auto page num "
+.ti -1c
+.RI "int \fBfolio_index_\fP"
+.br
+.RI "titleblock index "
+.ti -1c
+.RI "int \fBfolio_total_\fP"
+.br
+.RI "titleblock total "
+.ti -1c
+.RI "QString \fBbtb_filename_\fP"
+.br
+.RI "titleblock filename "
+.ti -1c
+.RI "QString \fBbtb_version_\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBadditional_fields_\fP"
+.br
+.RI "titleblock additional fields "
+.ti -1c
+.RI "Qt::Edge \fBm_edge\fP"
+.br
+.RI "titleblock edge "
+.ti -1c
+.RI "QString \fBm_next_folio_num\fP"
+.br
+.RI "titleblock next folio num "
+.ti -1c
+.RI "QString \fBm_previous_folio_num\fP"
+.br
+.RI "titleblock previous folio num "
+.ti -1c
+.RI "int \fBcolumns_count_\fP"
+.br
+.RI "columns count "
+.ti -1c
+.RI "qreal \fBcolumns_width_\fP"
+.br
+.RI "columns width "
+.ti -1c
+.RI "qreal \fBcolumns_header_height_\fP"
+.br
+.RI "columns header height "
+.ti -1c
+.RI "int \fBrows_count_\fP"
+.br
+.RI "rows count "
+.ti -1c
+.RI "qreal \fBrows_height_\fP"
+.br
+.RI "rows height "
+.ti -1c
+.RI "qreal \fBrows_header_width_\fP"
+.br
+.RI "rows header width "
+.ti -1c
+.RI "qreal \fBtitleblock_height_\fP"
+.br
+.ti -1c
+.RI "QRectF \fBdiagram_rect_\fP"
+.br
+.ti -1c
+.RI "bool \fBdisplay_titleblock_\fP"
+.br
+.ti -1c
+.RI "bool \fBdisplay_columns_\fP"
+.br
+.ti -1c
+.RI "bool \fBdisplay_rows_\fP"
+.br
+.ti -1c
+.RI "bool \fBdisplay_border_\fP"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateRenderer\fP * \fBm_titleblock_template_renderer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBBorderTitleBlock\fP class This class represents the border and the titleblock which frame a particular electric diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BorderTitleBlock::BorderTitleBlock (QObject * parent = \fCnullptr\fP)"
+
+.PP
+\fBBorderTitleBlock::BorderTitleBlock\fP Simple constructor: build a border by recovering the dimensions in the application configuration\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : 
+.RE
+.PP
+
+.SS "BorderTitleBlock::~BorderTitleBlock ()\fC [override]\fP"
+
+.PP
+\fBBorderTitleBlock::~BorderTitleBlock\fP\&. 
+.SS "BorderTitleBlock::BorderTitleBlock (const \fBBorderTitleBlock\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBDiagramContext\fP BorderTitleBlock::additionalFields () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block Additional Fields 
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::author () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block 'Author' field 
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::autoPageNum () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block 
+.RE
+.PP
+
+.SS "QRectF BorderTitleBlock::borderAndTitleBlockRect () const"
+
+.PP
+\fBBorderTitleBlock::borderAndTitleBlockRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the bounding rectangle of diagram and titleblock\&. It's like unite outsideBorderRect and titleBlockRect\&. The rect is in scene coordinate 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::borderChanged (QRectF old_border, QRectF new_border)\fC [signal]\fP"
+
+.PP
+borderChanged Signal emitted after the border has changed 
+.PP
+\fBParameters\fP
+.RS 4
+\fIold_border\fP Former border 
+.br
+\fInew_border\fP New border 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::borderFromXml (const QDomElement & xml_elmt)"
+
+.PP
+\fBBorderTitleBlock::borderFromXml\fP Reads the border settings from XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_elmt\fP the XML element values will be read from 
+.RE
+.PP
+
+.SS "bool BorderTitleBlock::borderIsDisplayed () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si la bordure est affichee, false sinon 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::borderToXml (QDomElement & xml_elmt)"
+
+.PP
+\fBBorderTitleBlock::borderToXml\fP Exports the border current settings to XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_elmt\fP the XML element attributes will be added to 
+.RE
+.PP
+
+.SS "bool BorderTitleBlock::columnsAreDisplayed () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si les entetes des colonnes sont affiches, false sinon 
+.RE
+.PP
+
+.SS "int BorderTitleBlock::columnsCount () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the number of columns 
+.RE
+.PP
+
+.SS "qreal BorderTitleBlock::columnsHeaderHeight () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the column headers height, in pixels 
+.RE
+.PP
+
+.SS "QRectF BorderTitleBlock::columnsRect () const"
+
+.PP
+\fBBorderTitleBlock::columnsRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The columns rect in scene coordinate\&. If column is not displayed, return a null QRectF 
+.RE
+.PP
+
+.SS "qreal BorderTitleBlock::columnsTotalWidth () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the total width of all columns, headers excluded 
+.RE
+.PP
+
+.SS "qreal BorderTitleBlock::columnsWidth () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the columns width, in pixels 
+.RE
+.PP
+
+.SS "\fBDiagramPosition\fP BorderTitleBlock::convertPosition (const QPointF & pos)"
+
+.PP
+\fBBorderTitleBlock::convertPosition\fP Convert a Point in cartesian coordinate (x : 12\&.5, 56\&.9) to a point in grid coordinate (ex : B2) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : position to convert 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the converted point in grid coordinate\&. 
+.RE
+.PP
+
+.SS "QDate BorderTitleBlock::date () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block 'Date' field 
+.RE
+.PP
+
+.SS "qreal BorderTitleBlock::diagramHeight () const\fC [inline]\fP"
+
+.PP
+diagramHeight 
+.PP
+\fBReturns\fP
+.RS 4
+the diagram height, i\&.e\&. the height of the border without title block 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::diagramTitleChanged (const QString &)\fC [signal]\fP"
+
+.PP
+diagramTitleChanged Signal emitted after the title has changed 
+.SS "qreal BorderTitleBlock::diagramWidth () const\fC [inline]\fP"
+
+.PP
+diagramWidth 
+.PP
+\fBReturns\fP
+.RS 4
+the diagram width, i\&.e\&. the width of the border without title block 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::displayBorder (bool db)\fC [slot]\fP"
+
+.PP
+\fBBorderTitleBlock::displayBorder\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdb\fP : true to display the border of the diagram, false otherwise 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+: if the border display is deactivated, the rows and columns will not be drawn\&. 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::displayChanged ()\fC [signal]\fP"
+
+.PP
+displayChanged Signal emitted after display options have changed 
+.SS "void BorderTitleBlock::displayColumns (bool dc)\fC [slot]\fP"
+
+.PP
+\fBBorderTitleBlock::displayColumns\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdc\fP : true to display the column headers, false otherwise 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::displayRows (bool dr)\fC [slot]\fP"
+
+.PP
+\fBBorderTitleBlock::displayRows\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdr\fP : true to display line headers, false otherwise 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::displayTitleBlock (bool di)\fC [slot]\fP"
+
+.PP
+\fBBorderTitleBlock::displayTitleBlock\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdi\fP : true to display the title block, false otherwise 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::draw (QPainter * painter)"
+
+.PP
+\fBBorderTitleBlock::draw\fP Draw the border and the titleblock\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP : QPainter to use for draw this\&. 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::drawDxf (int width, int height, bool keep_aspect_ratio, QString & file_path, int color)"
+
+.PP
+\fBBorderTitleBlock::drawDxf\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidth\fP 
+.br
+\fIheight\fP 
+.br
+\fIkeep_aspect_ratio\fP 
+.br
+\fIfile_path\fP 
+.br
+\fIcolor\fP 
+.RE
+.PP
+
+.SS "\fBBorderProperties\fP BorderTitleBlock::exportBorder ()"
+
+.PP
+\fBBorderTitleBlock::exportBorder\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+border properties 
+.RE
+.PP
+
+.SS "\fBTitleBlockProperties\fP BorderTitleBlock::exportTitleBlock ()"
+
+.PP
+\fBBorderTitleBlock::exportTitleBlock\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the properties of the titleblock 
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::fileName () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block 'File' field 
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::finalfolio () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block 'Folio' field as displayed 
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::folio () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block 'Folio' field 
+.RE
+.PP
+
+.SS "int BorderTitleBlock::folioTotal () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the total number of folios 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::importBorder (const \fBBorderProperties\fP & bp)"
+
+.PP
+\fBBorderTitleBlock::importBorder\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbp\fP : the new properties of the border 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::importTitleBlock (const \fBTitleBlockProperties\fP & ip)"
+
+.PP
+\fBBorderTitleBlock::importTitleBlock\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIip\fP the new properties of titleblock 
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::incrementLetters (const QString & string)\fC [private]\fP"
+
+.PP
+\fBBorderTitleBlock::incrementLetters\fP increments string with Letters A to Z\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string ++Letters eg:
+.IP "\(bu" 2
+A-> B
+.IP "\(bu" 2
+Z -> AA 
+.PP
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::indexrev () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the revision index block 'Folio' field 
+.RE
+.PP
+
+.SS "QRectF BorderTitleBlock::insideBorderRect () const"
+
+.PP
+\fBBorderTitleBlock::insideBorderRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The rect of the inside border, in other word, the drawing area\&. This method take care about if rows or columns are displayed or not\&. The rect is in scene coordinate 
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::locmach () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block 'Locmach' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::needFolioData ()\fC [signal]\fP"
+
+.PP
+needFolioData Signal emitted when the title block requires its data to be updated in order to generate the folio field\&. 
+.SS "void BorderTitleBlock::needTitleBlockTemplate (const QString &)\fC [signal]\fP"
+
+.PP
+needTitleBlockTemplate Signal emitted when this object needs to set a specific title block template\&. This object cannot handle the job since it does not know of its parent project\&. 
+.SS "QRectF BorderTitleBlock::outsideBorderRect () const"
+
+.PP
+\fBBorderTitleBlock::outsideBorderRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The rect of outside border (diagram with columns and rows) The rect is in scene coordinate 
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::plant () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block 'Plant' field 
+.RE
+.PP
+
+.SS "bool BorderTitleBlock::rowsAreDisplayed () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si les entetes des lignes sont affiches, false sinon 
+.RE
+.PP
+
+.SS "int BorderTitleBlock::rowsCount () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the number of rows 
+.RE
+.PP
+
+.SS "qreal BorderTitleBlock::rowsHeaderWidth () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+la rows header width, in pixels 
+.RE
+.PP
+
+.SS "qreal BorderTitleBlock::rowsHeight () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the rows height, in pixels 
+.RE
+.PP
+
+.SS "QRectF BorderTitleBlock::rowsRect () const"
+
+.PP
+\fBBorderTitleBlock::rowsRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The rows rect in scene coordinate\&. If row is not displayed, return a null QRectF 
+.RE
+.PP
+
+.SS "qreal BorderTitleBlock::rowsTotalHeight () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the total height of all rows, headers excluded 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setAuthor (const QString & author)"
+
+.PP
+\fBBorderTitleBlock::setAuthor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIauthor\fP the new value of the 'Author' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setAutoPageNum (const QString & auto_page_num)"
+
+.PP
+\fBBorderTitleBlock::setAutoPageNum\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIauto_page_num\fP the new value of the 'auto_page_num' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setColumnsCount (int nb_c)"
+
+.PP
+\fBBorderTitleBlock::setColumnsCount\fP Allows you to change the number of columns\&. If this number of columns is less than the minimum required, it is this minimum which is used\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInb_c\fP : new number of columns 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+minNbColumns() 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setColumnsHeaderHeight (const qreal & new_chh)"
+
+.PP
+\fBBorderTitleBlock::setColumnsHeaderHeight\fP Change the height of the headers containing the column numbers\&. This must remain between 5 and 50 px\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_chh\fP : new height of column headers 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setColumnsWidth (const qreal & new_cw)"
+
+.PP
+\fBBorderTitleBlock::setColumnsWidth\fP Change the width of the columns\&. If the width indicated is less than the minimum required, it is this minimum which is used\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_cw\fP : new column width 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+minColumnsWidth() 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setDate (const QDate & date)"
+
+.PP
+\fBBorderTitleBlock::setDate\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdate\fP the new value of the 'Date' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setDiagramHeight (const qreal & height)"
+
+.PP
+\fBBorderTitleBlock::setDiagramHeight\fP This method tries to get as close as possible to the given height as a parameter by modifying the number of rows in progress\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIheight\fP : 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setFileName (const QString & filename)"
+
+.PP
+\fBBorderTitleBlock::setFileName\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP the new value of the 'filename' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setFolio (const QString & folio)"
+
+.PP
+\fBBorderTitleBlock::setFolio\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfolio\fP the new value of the 'Folio' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setFolioData (int index, int total, const QString & autonum = \fCnullptr\fP, const \fBDiagramContext\fP & project_properties = \fC\fBDiagramContext\fP()\fP)"
+
+.PP
+\fBBorderTitleBlock::setFolioData\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP : schema number (from 1 to total) 
+.br
+\fItotal\fP : total number of diagrams in the project 
+.br
+\fIautonum\fP :
+.br
+\fIproject_properties\fP : Project-wide properties, to be merged with diagram-wide ones\&. 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setIndicerev (const QString & indexrev)"
+
+.PP
+\fBBorderTitleBlock::setIndicerev\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindexrev\fP the new value of the 'indexrev' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setLocMach (const QString & locmach)"
+
+.PP
+\fBBorderTitleBlock::setLocMach\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocmach\fP the new value of the 'locmach' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setNextFolioNum (const QString & next)"
+
+.PP
+\fBBorderTitleBlock::setNextFolioNum\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInext\fP the new value of the 'next-folio-num' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setPlant (const QString & plant)"
+
+.PP
+\fBBorderTitleBlock::setPlant\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIplant\fP the new value of the 'plant' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setPreviousFolioNum (const QString & previous)"
+
+.PP
+\fBBorderTitleBlock::setPreviousFolioNum\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprevious\fP the new value of the 'previous-folio-num' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setRowsCount (int nb_r)"
+
+.PP
+\fBBorderTitleBlock::setRowsCount\fP Allows you to change the number of lines\&. If this number of lines is lower than the minimum required, this function does nothing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInb_r\fP : new number of lines 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+minNbRows() 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setRowsHeaderWidth (const qreal & new_rhw)"
+
+.PP
+\fBBorderTitleBlock::setRowsHeaderWidth\fP Change the width of the headers containing the line numbers\&. This must remain between 5 and 50 px\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_rhw\fP : new width of line headers 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setRowsHeight (const qreal & new_rh)"
+
+.PP
+\fBBorderTitleBlock::setRowsHeight\fP Change the height of the lines\&. If the indicated height is lower than the minimum required, it is this minimum which is used\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_rh\fP : new row height 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+minRowsHeight() 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setTitle (const QString & title)"
+
+.PP
+\fBBorderTitleBlock::setTitle\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitle\fP the new value of the 'Title' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setTitleBlockTemplate (const \fBTitleBlockTemplate\fP * titleblock_template)"
+
+.PP
+\fBBorderTitleBlock::setTitleBlockTemplate\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitleblock_template\fP The new titleblock template to use to render the titleblock 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBTitleBlockTemplateRenderer::setTitleBlockTemplate()\fP 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::setVersion (const QString & version)"
+
+.PP
+\fBBorderTitleBlock::setVersion\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIversion\fP the new value of the 'version' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::slot_setAutoPageNum (QString pageAutoNum)\fC [slot]\fP"
+
+.PP
+\fBBorderTitleBlock::slot_setAutoPageNum\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpageAutoNum\fP : Set Page (Folio) Auto Num 
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::title () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block 'Title' field 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::titleBlockFolioChanged (const QString &)\fC [signal]\fP"
+
+.PP
+titleBlockFolioChanged Signal emitted after Folio has changed 
+.SS "void BorderTitleBlock::titleBlockFromXml (const QDomElement & xml_elmt)"
+
+.PP
+\fBBorderTitleBlock::titleBlockFromXml\fP Reads the title block values from XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_elmt\fP the XML element values will be read from 
+.RE
+.PP
+
+.SS "\fBDiagramContext\fP BorderTitleBlock::titleblockInformation () const"
+
+.PP
+\fBBorderTitleBlock::titleblockInformation\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "bool BorderTitleBlock::titleBlockIsDisplayed () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le cartouche est affiche, false sinon 
+.RE
+.PP
+
+.SS "QRectF BorderTitleBlock::titleBlockRect () const"
+
+.PP
+\fBBorderTitleBlock::titleBlockRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the rectangle of the titleblock in scene coordinate\&. 
+.RE
+.PP
+
+.SS "QRectF BorderTitleBlock::titleBlockRectForQPainter () const\fC [private]\fP"
+
+.PP
+\fBBorderTitleBlock::titleBlockRectForQPainter\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The title block rect to use with the QPainter in the method draw\&. The returned rect is alway horizontal (like displayed at the bottom of rect) only the top left change of pos according to the edge where the title block need to be displayed\&. Rect according to edge: Bottom : top left is at the bottom left edge of the diagram rect\&. Right : top left is at the bottom right of diagram rect\&. Befor use this rect you need to rotate the QPainter by -90° for snap the rect at the right edge of diagram\&. 
+.RE
+.PP
+
+.SS "const \fBTitleBlockTemplate\fP * BorderTitleBlock::titleBlockTemplate ()"
+
+.PP
+\fBBorderTitleBlock::titleBlockTemplate\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the titleblock template used to render the titleblock 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBTitleBlockTemplateRenderer::titleBlockTemplate()\fP 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::titleBlockTemplateChanged (const QString & template_name)\fC [slot]\fP"
+
+.PP
+\fBBorderTitleBlock::titleBlockTemplateChanged\fP This slot may be used to inform this class that the given title block template has changed\&. The title block-dedicated rendering cache will thus be flushed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP : Name of the title block template that has changed 
+.RE
+.PP
+
+.SS "QString BorderTitleBlock::titleBlockTemplateName () const"
+
+.PP
+\fBBorderTitleBlock::titleBlockTemplateName\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The name of the template used to render the titleblock\&. 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::titleBlockTemplateRemoved (const QString & removed_template_name, const \fBTitleBlockTemplate\fP * new_template = \fCnullptr\fP)\fC [slot]\fP"
+
+.PP
+\fBBorderTitleBlock::titleBlockTemplateRemoved\fP This slot has to be used to inform this class that the given title block template is about to be removed and is no longer accessible\&. This class will either use the provided optional \fBTitleBlockTemplate\fP or the default title block provided by \fBQETApp::defaultTitleBlockTemplate()\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIremoved_template_name\fP : Name of the title block template that has changed 
+.br
+\fInew_template\fP (Optional) title block template to use instead 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::titleBlockToXml (QDomElement & xml_elmt)"
+
+.PP
+\fBBorderTitleBlock::titleBlockToXml\fP Exports the title block current values to XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_elmt\fP the XML element attributes will be added to 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::updateDiagramContextForTitleBlock (const \fBDiagramContext\fP & initial_context = \fC\fBDiagramContext\fP()\fP)\fC [private]\fP"
+
+.PP
+\fBBorderTitleBlock::updateDiagramContextForTitleBlock\fP Update the informations given to the titleblock template by regenerating a \fBDiagramContext\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_context\fP : Base diagram context that will be overridden by diagram-wide values 
+.RE
+.PP
+
+.SS "void BorderTitleBlock::updateRectangles ()\fC [private]\fP"
+
+.PP
+\fBBorderTitleBlock::updateRectangles\fP This method update the diagram rect according to the value of rows and columns (number and size) 
+.SS "QString BorderTitleBlock::version () const\fC [inline]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the value of the title block Additional Fields 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagramContext\fP BorderTitleBlock::additional_fields_\fC [private]\fP"
+
+.PP
+titleblock additional fields 
+.SS "QString BorderTitleBlock::btb_author_\fC [private]\fP"
+
+.PP
+titleblock author 
+.SS "QString BorderTitleBlock::btb_auto_page_num_\fC [private]\fP"
+
+.PP
+titleblock auto page num 
+.SS "QDate BorderTitleBlock::btb_date_\fC [private]\fP"
+
+.PP
+titleblock date 
+.SS "QString BorderTitleBlock::btb_filename_\fC [private]\fP"
+
+.PP
+titleblock filename 
+.SS "QString BorderTitleBlock::btb_final_folio_\fC [private]\fP"
+
+.PP
+titleblock final folio 
+.SS "QString BorderTitleBlock::btb_folio_\fC [private]\fP"
+
+.PP
+titleblock folio 
+.SS "QString BorderTitleBlock::btb_indexrev_\fC [private]\fP"
+
+.PP
+titleblock index rev 
+.SS "QString BorderTitleBlock::btb_locmach_\fC [private]\fP"
+
+.PP
+titleblock locmach 
+.SS "QString BorderTitleBlock::btb_plant_\fC [private]\fP"
+
+.PP
+titleblock plant 
+.SS "QString BorderTitleBlock::btb_title_\fC [private]\fP"
+
+.PP
+titleblock title 
+.SS "QString BorderTitleBlock::btb_version_\fC [private]\fP"
+titleblock version 
+.SS "int BorderTitleBlock::columns_count_\fC [private]\fP"
+
+.PP
+columns count 
+.SS "qreal BorderTitleBlock::columns_header_height_\fC [private]\fP"
+
+.PP
+columns header height 
+.SS "qreal BorderTitleBlock::columns_width_\fC [private]\fP"
+
+.PP
+columns width 
+.SS "QRectF BorderTitleBlock::diagram_rect_\fC [private]\fP"
+
+.SS "bool BorderTitleBlock::display_border_\fC [private]\fP"
+
+.SS "bool BorderTitleBlock::display_columns_\fC [private]\fP"
+
+.SS "bool BorderTitleBlock::display_rows_\fC [private]\fP"
+
+.SS "bool BorderTitleBlock::display_titleblock_\fC [private]\fP"
+
+.SS "int BorderTitleBlock::folio_index_\fC [private]\fP"
+
+.PP
+titleblock index 
+.SS "int BorderTitleBlock::folio_total_\fC [private]\fP"
+
+.PP
+titleblock total 
+.SS "Qt::Edge BorderTitleBlock::m_edge\fC [private]\fP"
+
+.PP
+titleblock edge 
+.SS "QString BorderTitleBlock::m_next_folio_num\fC [private]\fP"
+
+.PP
+titleblock next folio num 
+.SS "QString BorderTitleBlock::m_previous_folio_num\fC [private]\fP"
+
+.PP
+titleblock previous folio num 
+.SS "\fBTitleBlockTemplateRenderer\fP* BorderTitleBlock::m_titleblock_template_renderer\fC [private]\fP"
+
+.SS "int BorderTitleBlock::rows_count_\fC [private]\fP"
+
+.PP
+rows count 
+.SS "qreal BorderTitleBlock::rows_header_width_\fC [private]\fP"
+
+.PP
+rows header width 
+.SS "qreal BorderTitleBlock::rows_height_\fC [private]\fP"
+
+.PP
+rows height 
+.SS "qreal BorderTitleBlock::titleblock_height_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

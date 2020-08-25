@@ -1,0 +1,137 @@
+.TH "ConductorAutoNumerotation" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConductorAutoNumerotation \- The \fBConductorAutoNumerotation\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductorautonumerotation\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorAutoNumerotation\fP (\fBConductor\fP *conductor, \fBDiagram\fP *diagram, QUndoCommand *undo_parent=nullptr)"
+.br
+.RI "\fBConductorAutoNumerotation::ConductorAutoNumerotation\fP Constructor of autonum, after create a class, call numerate to apply the autonum\&. When autonum is applyed, they do with an undo command added to the stack of diagram\&. If you give a parent_undo at constructor, the undo command create in this class have parent_undo for parent, and wasn't added to the stack of diagram (it's the responsabillty of the parent_undo) "
+.ti -1c
+.RI "void \fBnumerate\fP ()"
+.br
+.RI "\fBConductorAutoNumerotation::numerate\fP execute the automatic numerotation\&. "
+.ti -1c
+.RI "void \fBapplyText\fP (const QString &)"
+.br
+.RI "\fBConductorAutoNumerotation::applyText\fP apply the text t to conductor_ and all conductors at the same potential\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBnewProperties\fP (\fBDiagram\fP *diagram, \fBConductorProperties\fP &cp, \fBautonum::sequentialNumbers\fP &seq)"
+.br
+.RI "\fBConductorAutoNumerotation::newProperties\fP Create a new properties according to the current autonum rule of diagram\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBnumeratePotential\fP ()"
+.br
+.RI "\fBConductorAutoNumerotation::numeratePotential\fP Numerate a conductor on an existing potential\&. "
+.ti -1c
+.RI "void \fBnumerateNewConductor\fP ()"
+.br
+.RI "\fBConductorAutoNumerotation::numerateNewConductor\fP create and apply a new numerotation to m_conductor\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP"
+.br
+.ti -1c
+.RI "\fBConductor\fP * \fBm_conductor\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBconductor_list\fP"
+.br
+.ti -1c
+.RI "QUndoCommand * \fBm_parent_undo\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBConductorAutoNumerotation\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConductorAutoNumerotation::ConductorAutoNumerotation (\fBConductor\fP * conductor, \fBDiagram\fP * diagram, QUndoCommand * parent_undo = \fCnullptr\fP)"
+
+.PP
+\fBConductorAutoNumerotation::ConductorAutoNumerotation\fP Constructor of autonum, after create a class, call numerate to apply the autonum\&. When autonum is applyed, they do with an undo command added to the stack of diagram\&. If you give a parent_undo at constructor, the undo command create in this class have parent_undo for parent, and wasn't added to the stack of diagram (it's the responsabillty of the parent_undo) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP : the conductor to apply automatic numerotation 
+.br
+\fIdiagram\fP : the diagram of conductor 
+.br
+\fIparent_undo\fP : parent undo command 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ConductorAutoNumerotation::applyText (const QString & t)"
+
+.PP
+\fBConductorAutoNumerotation::applyText\fP apply the text t to conductor_ and all conductors at the same potential\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIt\fP : \fBConductor\fP text 
+.RE
+.PP
+
+.SS "void ConductorAutoNumerotation::newProperties (\fBDiagram\fP * diagram, \fBConductorProperties\fP & cp, \fBautonum::sequentialNumbers\fP & seq)\fC [static]\fP"
+
+.PP
+\fBConductorAutoNumerotation::newProperties\fP Create a new properties according to the current autonum rule of diagram\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : \fBDiagram\fP class 
+.br
+\fIcp\fP : \fBConductorProperties\fP 
+.br
+\fIseq\fP : sequentialNumbers 
+.RE
+.PP
+
+.SS "void ConductorAutoNumerotation::numerate ()"
+
+.PP
+\fBConductorAutoNumerotation::numerate\fP execute the automatic numerotation\&. 
+.SS "void ConductorAutoNumerotation::numerateNewConductor ()\fC [private]\fP"
+
+.PP
+\fBConductorAutoNumerotation::numerateNewConductor\fP create and apply a new numerotation to m_conductor\&. 
+.SS "void ConductorAutoNumerotation::numeratePotential ()\fC [private]\fP"
+
+.PP
+\fBConductorAutoNumerotation::numeratePotential\fP Numerate a conductor on an existing potential\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<\fBConductor\fP *> ConductorAutoNumerotation::conductor_list\fC [private]\fP"
+
+.SS "\fBConductor\fP* ConductorAutoNumerotation::m_conductor\fC [private]\fP"
+
+.SS "\fBDiagram\fP* ConductorAutoNumerotation::m_diagram\fC [private]\fP"
+
+.SS "QUndoCommand* ConductorAutoNumerotation::m_parent_undo\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,234 @@
+.TH "NewElementWizard" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NewElementWizard
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <newelementwizard\&.h>\fP
+.PP
+Inherits QWizard\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNewElementWizard\fP (QWidget *=nullptr, Qt::WindowFlags=Qt::Widget)"
+.br
+.ti -1c
+.RI "\fB~NewElementWizard\fP () override"
+.br
+.ti -1c
+.RI "void \fBpreselectedLocation\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "\fBNewElementWizard::preselectedLocation\fP Select item in the tree view represented by location,\&. "
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBWizardState\fP { \fBCategory\fP, \fBFilename\fP, \fBNames\fP }"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNewElementWizard\fP (const \fBNewElementWizard\fP &)"
+.br
+.ti -1c
+.RI "QWizardPage * \fBbuildStep1\fP ()"
+.br
+.RI "\fBNewElementWizard::buildStep1\fP\&. "
+.ti -1c
+.RI "QWizardPage * \fBbuildStep2\fP ()"
+.br
+.RI "\fBNewElementWizard::buildStep2\fP\&. "
+.ti -1c
+.RI "QWizardPage * \fBbuildStep3\fP ()"
+.br
+.RI "\fBNewElementWizard::buildStep3\fP\&. "
+.ti -1c
+.RI "bool \fBvalidStep1\fP ()"
+.br
+.RI "\fBNewElementWizard::validStep1\fP Valid the setp 1\&. "
+.ti -1c
+.RI "bool \fBvalidStep2\fP ()"
+.br
+.RI "\fBNewElementWizard::validStep2\fP Valid the step 2\&. "
+.ti -1c
+.RI "bool \fBvalidateCurrentPage\fP () override"
+.br
+.RI "\fBNewElementWizard::validateCurrentPage\fP\&. "
+.ti -1c
+.RI "void \fBcreateNewElement\fP ()"
+.br
+.RI "\fBNewElementWizard::createNewElement\fP Lauch an element editor for create the new element\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQFileNameEdit\fP * \fBm_qle_filename\fP"
+.br
+.ti -1c
+.RI "\fBNameListWidget\fP * \fBm_names_list\fP"
+.br
+.ti -1c
+.RI "QString \fBm_chosen_file\fP"
+.br
+.ti -1c
+.RI "QTreeView * \fBm_tree_view\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBElementsLocation\fP \fBm_chosen_location\fP"
+.br
+.ti -1c
+.RI "\fBElementsCollectionModel\fP * \fBm_model\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a wizard dialog enabling users to to specify the basic parameters of the electrical elements they intend to draw\&.
+.PP
+These parameters include:
+.IP "\(bu" 2
+the category the element should be saved to
+.IP "\(bu" 2
+the filename the element should be saved to
+.IP "\(bu" 2
+localized names 
+.PP
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBNewElementWizard::WizardState\fP\fC [private]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICategory \fP\fP
+.TP
+\fB\fIFilename \fP\fP
+.TP
+\fB\fINames \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NewElementWizard::NewElementWizard (QWidget * parent = \fCnullptr\fP, Qt::WindowFlags f = \fCQt::Widget\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP QWidget parent de ce dialogue 
+.br
+\fIf\fP flags pour le dialogue 
+.RE
+.PP
+
+.SS "NewElementWizard::~NewElementWizard ()\fC [override]\fP"
+Destructeur 
+.SS "NewElementWizard::NewElementWizard (const \fBNewElementWizard\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QWizardPage * NewElementWizard::buildStep1 ()\fC [private]\fP"
+
+.PP
+\fBNewElementWizard::buildStep1\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QWizardPage * NewElementWizard::buildStep2 ()\fC [private]\fP"
+
+.PP
+\fBNewElementWizard::buildStep2\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QWizardPage * NewElementWizard::buildStep3 ()\fC [private]\fP"
+
+.PP
+\fBNewElementWizard::buildStep3\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void NewElementWizard::createNewElement ()\fC [private]\fP"
+
+.PP
+\fBNewElementWizard::createNewElement\fP Lauch an element editor for create the new element\&. 
+.SS "void NewElementWizard::preselectedLocation (const \fBElementsLocation\fP & location)"
+
+.PP
+\fBNewElementWizard::preselectedLocation\fP Select item in the tree view represented by location,\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+
+.SS "bool NewElementWizard::validateCurrentPage ()\fC [override]\fP, \fC [private]\fP"
+
+.PP
+\fBNewElementWizard::validateCurrentPage\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the current step is valid 
+.RE
+.PP
+
+.SS "bool NewElementWizard::validStep1 ()\fC [private]\fP"
+
+.PP
+\fBNewElementWizard::validStep1\fP Valid the setp 1\&. 
+.PP
+\fBReturns\fP
+.RS 4
+trie if the step is valid\&. 
+.RE
+.PP
+
+.SS "bool NewElementWizard::validStep2 ()\fC [private]\fP"
+
+.PP
+\fBNewElementWizard::validStep2\fP Valid the step 2\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if step is valid 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString NewElementWizard::m_chosen_file\fC [private]\fP"
+
+.SS "\fBElementsLocation\fP NewElementWizard::m_chosen_location\fC [private]\fP"
+
+.SS "\fBElementsCollectionModel\fP* NewElementWizard::m_model = nullptr\fC [private]\fP"
+
+.SS "\fBNameListWidget\fP* NewElementWizard::m_names_list\fC [private]\fP"
+
+.SS "\fBQFileNameEdit\fP* NewElementWizard::m_qle_filename\fC [private]\fP"
+
+.SS "QTreeView* NewElementWizard::m_tree_view = nullptr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

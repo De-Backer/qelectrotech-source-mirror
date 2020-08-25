@@ -1,0 +1,180 @@
+.TH "DiagramsChooser" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramsChooser
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramschooser\&.h>\fP
+.PP
+Inherits QScrollArea\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateList\fP ()"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBselectionChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramsChooser\fP (\fBQETProject\fP *, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~DiagramsChooser\fP () override"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject\fP () const"
+.br
+.ti -1c
+.RI "QList< \fBDiagram\fP * > \fBselectedDiagrams\fP () const"
+.br
+.ti -1c
+.RI "QList< \fBDiagram\fP * > \fBnonSelectedDiagrams\fP () const"
+.br
+.ti -1c
+.RI "bool \fBdiagramIsSelected\fP (\fBDiagram\fP *const) const"
+.br
+.ti -1c
+.RI "void \fBsetSelectedDiagrams\fP (const QList< \fBDiagram\fP * > &, bool=true, bool=true)"
+.br
+.ti -1c
+.RI "void \fBsetSelectedAllDiagrams\fP (bool=true)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramsChooser\fP (const \fBDiagramsChooser\fP &)"
+.br
+.ti -1c
+.RI "void \fBbuildLayout\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject_\fP"
+.br
+.ti -1c
+.RI "QWidget * \fBwidget0_\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvlayout0_\fP"
+.br
+.ti -1c
+.RI "QHash< \fBDiagram\fP *, QCheckBox * > \fBdiagrams_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a widget which allows users to select 0 to n diagrams among those of a particular project\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramsChooser::DiagramsChooser (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Projet dont il faut afficher les schemas 
+.br
+\fIparent\fP QWidget parent de ce widget 
+.RE
+.PP
+
+.SS "DiagramsChooser::~DiagramsChooser ()\fC [override]\fP"
+Destructeur 
+.SS "DiagramsChooser::DiagramsChooser (const \fBDiagramsChooser\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramsChooser::buildLayout ()\fC [private]\fP"
+Met en place la disposition du widget 
+.SS "bool DiagramsChooser::diagramIsSelected (\fBDiagram\fP * const diagram) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Un schema cense etre present dans ce widget 
+.RE
+.PP
+
+.SS "QList< \fBDiagram\fP * > DiagramsChooser::nonSelectedDiagrams () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la liste des schemas qui ne sont pas selectionnes 
+.RE
+.PP
+
+.SS "\fBQETProject\fP * DiagramsChooser::project () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le projet dont ce widget affiche les schemas 
+.RE
+.PP
+
+.SS "QList< \fBDiagram\fP * > DiagramsChooser::selectedDiagrams () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la liste des schemas selectionnes 
+.RE
+.PP
+
+.SS "void DiagramsChooser::selectionChanged ()\fC [signal]\fP"
+
+.SS "void DiagramsChooser::setSelectedAllDiagrams (bool select = \fCtrue\fP)"
+Selectionne ou deselectionne tous les schemas 
+.PP
+\fBParameters\fP
+.RS 4
+\fIselect\fP true pour selectionne les schemas de la liste, false pour les deselectionner 
+.RE
+.PP
+
+.SS "void DiagramsChooser::setSelectedDiagrams (const QList< \fBDiagram\fP * > & diagrams_list, bool select = \fCtrue\fP, bool reset = \fCtrue\fP)"
+Selectionne les schemas contenus dans la liste diagrams_list 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagrams_list\fP Liste de schemas a selectionner 
+.br
+\fIselect\fP true pour selectionne les schemas de la liste, false pour les deselectionner 
+.br
+\fIreset\fP true pour deselectionner tous les schemas avant de selectionner ceux de la liste 
+.RE
+.PP
+
+.SS "void DiagramsChooser::updateList ()\fC [slot]\fP"
+Met a jour la liste des schemas du projet 
+.SH "Member Data Documentation"
+.PP 
+.SS "QHash<\fBDiagram\fP *, QCheckBox *> DiagramsChooser::diagrams_\fC [private]\fP"
+
+.SS "\fBQETProject\fP* DiagramsChooser::project_\fC [private]\fP"
+
+.SS "QVBoxLayout* DiagramsChooser::vlayout0_\fC [private]\fP"
+
+.SS "QWidget* DiagramsChooser::widget0_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

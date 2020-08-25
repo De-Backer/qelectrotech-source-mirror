@@ -1,0 +1,105 @@
+.TH "DiagramPropertiesEditorDockWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramPropertiesEditorDockWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagrampropertieseditordockwidget\&.h>\fP
+.PP
+Inherits \fBPropertiesEditorDockWidget\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramPropertiesEditorDockWidget\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBDiagramPropertiesEditorDockWidget::DiagramPropertiesEditorDockWidget\fP Constructor\&. "
+.ti -1c
+.RI "void \fBsetDiagram\fP (\fBDiagram\fP *diagram)"
+.br
+.RI "\fBDiagramPropertiesEditorDockWidget::setDiagram\fP Set the diagram to edit the selection\&. Connect the diagram signal \fBselectionChanged()\fP to this slot \fBselectionChanged()\fP; If diagram = nullptr, we just disconnect all signal and remove editor\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBselectionChanged\fP ()"
+.br
+.RI "\fBDiagramPropertiesEditorDockWidget::selectionChanged\fP The current selection of diagram was changed\&. We fill the dock with the appropriate \fBElementPropertiesWidget\fP of the current selection\&. "
+.ti -1c
+.RI "void \fBdiagramWasDeleted\fP ()"
+.br
+.RI "\fBDiagramPropertiesEditorDockWidget::diagramWasDeleted\fP Remove current editor and set m_diagram to nullptr\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBaddEditor\fP (\fBPropertiesEditorWidget\fP *editor, int index=0)"
+.br
+.ti -1c
+.RI "bool \fBremoveEditor\fP (\fBPropertiesEditorWidget\fP *editor)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP"
+.br
+.ti -1c
+.RI "int \fBm_edited_qgi_type\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramPropertiesEditorDockWidget::DiagramPropertiesEditorDockWidget (QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBDiagramPropertiesEditorDockWidget::DiagramPropertiesEditorDockWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool DiagramPropertiesEditorDockWidget::addEditor (\fBPropertiesEditorWidget\fP * editor, int index = \fC0\fP)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void DiagramPropertiesEditorDockWidget::diagramWasDeleted ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBDiagramPropertiesEditorDockWidget::diagramWasDeleted\fP Remove current editor and set m_diagram to nullptr\&. 
+.SS "bool DiagramPropertiesEditorDockWidget::removeEditor (\fBPropertiesEditorWidget\fP * editor)\fC [inline]\fP, \fC [private]\fP"
+
+.SS "void DiagramPropertiesEditorDockWidget::selectionChanged ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBDiagramPropertiesEditorDockWidget::selectionChanged\fP The current selection of diagram was changed\&. We fill the dock with the appropriate \fBElementPropertiesWidget\fP of the current selection\&. 
+.SS "void DiagramPropertiesEditorDockWidget::setDiagram (\fBDiagram\fP * diagram)"
+
+.PP
+\fBDiagramPropertiesEditorDockWidget::setDiagram\fP Set the diagram to edit the selection\&. Connect the diagram signal \fBselectionChanged()\fP to this slot \fBselectionChanged()\fP; If diagram = nullptr, we just disconnect all signal and remove editor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagram\fP* DiagramPropertiesEditorDockWidget::m_diagram\fC [private]\fP"
+
+.SS "int DiagramPropertiesEditorDockWidget::m_edited_qgi_type\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

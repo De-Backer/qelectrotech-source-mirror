@@ -1,0 +1,174 @@
+.TH "XRefPropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XRefPropertiesWidget \- The \fBXRefPropertiesWidget\fP class This class provide a widget to edit the \fBXRefProperties\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <xrefpropertieswidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXRefPropertiesWidget\fP (QHash< QString, \fBXRefProperties\fP > \fBproperties\fP=QHash< QString, \fBXRefProperties\fP >(), QWidget *parent=nullptr)"
+.br
+.RI "\fBXRefPropertiesWidget::XRefPropertiesWidget\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~XRefPropertiesWidget\fP () override"
+.br
+.RI "\fBXRefPropertiesWidget::~XRefPropertiesWidget\fP Default destructor\&. "
+.ti -1c
+.RI "void \fBsetProperties\fP (const QHash< QString, \fBXRefProperties\fP > &\fBproperties\fP)"
+.br
+.RI "\fBXRefPropertiesWidget::setProperties\fP set new properties for this widget\&. "
+.ti -1c
+.RI "QHash< QString, \fBXRefProperties\fP > \fBproperties\fP ()"
+.br
+.RI "\fBXRefPropertiesWidget::properties\fP\&. "
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool=true)"
+.br
+.RI "\fBXRefPropertiesWidget::setReadOnly\fP Set all of this widget disable if true\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateDisplay\fP ()"
+.br
+.RI "\fBXRefPropertiesWidget::updateDisplay\fP Update display with the curent displayed type\&. "
+.ti -1c
+.RI "void \fBtypeChanged\fP ()"
+.br
+.RI "\fBXRefPropertiesWidget::typeChanged\fP manage the save of the current properties, when the combo box of type change\&. "
+.ti -1c
+.RI "void \fBenableOffsetSB\fP (int i)"
+.br
+.RI "\fBXRefPropertiesWidget::enableOffsetSB\fP Enable Offset SB only if Snap to Footer is selected\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBbuildUi\fP ()"
+.br
+.RI "\fBXRefPropertiesWidget::buildUi\fP Build some widget of this ui\&. "
+.ti -1c
+.RI "void \fBsaveProperties\fP (int index)"
+.br
+.RI "\fBXRefPropertiesWidget::saveProperties\fP Save the properties of the type define at index of the combo box m_type_cb\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::XRefPropertiesWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "QHash< QString, \fBXRefProperties\fP > \fBm_properties\fP"
+.br
+.ti -1c
+.RI "int \fBm_previous_type_index\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBXRefPropertiesWidget\fP class This class provide a widget to edit the \fBXRefProperties\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "XRefPropertiesWidget::XRefPropertiesWidget (QHash< QString, \fBXRefProperties\fP > properties = \fCQHash <QString, \fBXRefProperties\fP>()\fP, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBXRefPropertiesWidget::XRefPropertiesWidget\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperties\fP properties to use 
+.br
+\fIparent\fP parent widget 
+.RE
+.PP
+
+.SS "XRefPropertiesWidget::~XRefPropertiesWidget ()\fC [override]\fP"
+
+.PP
+\fBXRefPropertiesWidget::~XRefPropertiesWidget\fP Default destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void XRefPropertiesWidget::buildUi ()\fC [private]\fP"
+
+.PP
+\fBXRefPropertiesWidget::buildUi\fP Build some widget of this ui\&. 
+.SS "void XRefPropertiesWidget::enableOffsetSB (int i)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBXRefPropertiesWidget::enableOffsetSB\fP Enable Offset SB only if Snap to Footer is selected\&. 
+.SS "QHash< QString, \fBXRefProperties\fP > XRefPropertiesWidget::properties ()"
+
+.PP
+\fBXRefPropertiesWidget::properties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the properties edited by this widget 
+.RE
+.PP
+
+.SS "void XRefPropertiesWidget::saveProperties (int index)\fC [private]\fP"
+
+.PP
+\fBXRefPropertiesWidget::saveProperties\fP Save the properties of the type define at index of the combo box m_type_cb\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+
+.SS "void XRefPropertiesWidget::setProperties (const QHash< QString, \fBXRefProperties\fP > & properties)"
+
+.PP
+\fBXRefPropertiesWidget::setProperties\fP set new properties for this widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperties\fP 
+.RE
+.PP
+
+.SS "void XRefPropertiesWidget::setReadOnly (bool ro = \fCtrue\fP)"
+
+.PP
+\fBXRefPropertiesWidget::setReadOnly\fP Set all of this widget disable if true\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIro\fP 
+.RE
+.PP
+
+.SS "void XRefPropertiesWidget::typeChanged ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBXRefPropertiesWidget::typeChanged\fP manage the save of the current properties, when the combo box of type change\&. 
+.SS "void XRefPropertiesWidget::updateDisplay ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBXRefPropertiesWidget::updateDisplay\fP Update display with the curent displayed type\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "int XRefPropertiesWidget::m_previous_type_index\fC [private]\fP"
+
+.SS "QHash<QString, \fBXRefProperties\fP> XRefPropertiesWidget::m_properties\fC [private]\fP"
+
+.SS "Ui::XRefPropertiesWidget* XRefPropertiesWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

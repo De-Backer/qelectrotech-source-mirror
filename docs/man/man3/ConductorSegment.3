@@ -1,0 +1,435 @@
+.TH "ConductorSegment" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConductorSegment
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductorsegment\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorSegment\fP (const QPointF &, const QPointF &, \fBConductorSegment\fP *=nullptr, \fBConductorSegment\fP *=nullptr)"
+.br
+.ti -1c
+.RI "virtual \fB~ConductorSegment\fP ()"
+.br
+.ti -1c
+.RI "void \fBmoveX\fP (const qreal &)"
+.br
+.ti -1c
+.RI "void \fBmoveY\fP (const qreal &)"
+.br
+.ti -1c
+.RI "\fBConductorSegment\fP * \fBpreviousSegment\fP () const"
+.br
+.ti -1c
+.RI "\fBConductorSegment\fP * \fBnextSegment\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhasPreviousSegment\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhasNextSegment\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetPreviousSegment\fP (\fBConductorSegment\fP *)"
+.br
+.ti -1c
+.RI "void \fBsetNextSegment\fP (\fBConductorSegment\fP *)"
+.br
+.ti -1c
+.RI "bool \fBisStatic\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisFirstSegment\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisLastSegment\fP () const"
+.br
+.ti -1c
+.RI "QPointF \fBfirstPoint\fP () const"
+.br
+.ti -1c
+.RI "QPointF \fBsecondPoint\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetFirstPoint\fP (const QPointF &)"
+.br
+.ti -1c
+.RI "void \fBsetSecondPoint\fP (const QPointF &)"
+.br
+.ti -1c
+.RI "QPointF \fBmiddle\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisHorizontal\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisVertical\fP () const"
+.br
+.ti -1c
+.RI "\fBQET::ConductorSegmentType\fP \fBtype\fP () const"
+.br
+.ti -1c
+.RI "qreal \fBlength\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisPoint\fP () const"
+.br
+.ti -1c
+.RI "bool \fBcanMove1stPointX\fP (const qreal &, qreal &) const"
+.br
+.ti -1c
+.RI "bool \fBcanMove2ndPointX\fP (const qreal &, qreal &) const"
+.br
+.ti -1c
+.RI "bool \fBcanMove1stPointY\fP (const qreal &, qreal &) const"
+.br
+.ti -1c
+.RI "bool \fBcanMove2ndPointY\fP (const qreal &, qreal &) const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorSegment\fP (const \fBConductorSegment\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorSegment\fP * \fBprevious_segment\fP"
+.br
+.ti -1c
+.RI "\fBConductorSegment\fP * \fBnext_segment\fP"
+.br
+.ti -1c
+.RI "QPointF \fBpoint1\fP"
+.br
+.ti -1c
+.RI "QPointF \fBpoint2\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a conductor segment\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConductorSegment::ConductorSegment (const QPointF & p1, const QPointF & p2, \fBConductorSegment\fP * cs1 = \fCnullptr\fP, \fBConductorSegment\fP * cs2 = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp1\fP Le point 
+.br
+\fIp2\fP 
+.br
+\fIcs1\fP Le segment precedent 
+.br
+\fIcs2\fP Le segment suivant 
+.RE
+.PP
+
+.SS "ConductorSegment::~ConductorSegment ()\fC [virtual]\fP"
+Destructeur - Relie le segment precedent au suivant 
+.SS "ConductorSegment::ConductorSegment (const \fBConductorSegment\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ConductorSegment::canMove1stPointX (const qreal & asked_dx, qreal & possible_dx) const"
+Permet de savoir s'il est possible de deplacer le premier point du segment sans creer d'incoherence\&. La valeur du mouvement maximum qu'il est possible de faire sans incoherence est stockee dans le second parametre\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIasked_dx\fP La valeur du mouvement demande 
+.br
+\fIpossible_dx\fP La valeur du mouvement possible (au maximum) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si le mouvement est possible ; false s'il doit etre limite 
+.RE
+.PP
+On ne bouge jamais le premier point d'un segment statique\&.
+.PP
+Si le segment precedent n'est pas statique, le mouvement est possible\&.
+.PP
+Si le segment precedent est vertical, le mouvement est possible : il induira la creation d'un segment horizontal supplementaire\&.
+.PP
+Il se peut que le mouvement doive etre limite de facon a ce que le segment statique conserve une taille minimale\&.
+.SS "bool ConductorSegment::canMove1stPointY (const qreal & asked_dy, qreal & possible_dy) const"
+Permet de savoir s'il est possible de deplacer le premier point du segment sans creer d'incoherence\&. La valeur du mouvement maximum qu'il est possible de faire sans incoherence est stockee dans le second parametre\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIasked_dy\fP La valeur du mouvement demande 
+.br
+\fIpossible_dy\fP La valeur du mouvement possible (au maximum) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si le mouvement est possible ; false s'il doit etre limite 
+.RE
+.PP
+On ne bouge jamais le premier point d'un segment statique\&.
+.PP
+Si le segment precedent n'est pas statique, le mouvement est possible\&.
+.PP
+Si le segment precedent est horizontal, le mouvement est possible : il induira la creation d'un segment vertical supplementaire\&.
+.PP
+Il se peut que le mouvement doive etre limite de facon a ce que le segment statique conserve une taille minimale\&.
+.SS "bool ConductorSegment::canMove2ndPointX (const qreal & asked_dx, qreal & possible_dx) const"
+Permet de savoir s'il est possible de deplacer le second point du segment sans creer d'incoherence\&. La valeur du mouvement maximum qu'il est possible de faire sans incoherence est stockee dans le second parametre\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIasked_dx\fP La valeur du mouvement demande 
+.br
+\fIpossible_dx\fP La valeur du mouvement possible (au maximum) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si le mouvement est possible ; false s'il doit etre limite 
+.RE
+.PP
+On ne modifie jamais l'abscisse du second point d'un segment statique\&.
+.PP
+Si le segment suivant n'est pas statique, le mouvement est possible\&.
+.PP
+Si le segment suivant est vertical, le mouvement est possible : il induira la creation d'un segment horizontal supplementaire\&.
+.PP
+Il se peut que le mouvement doive etre limite de facon a ce que le segment statique conserve une taille minimale\&.
+.SS "bool ConductorSegment::canMove2ndPointY (const qreal & asked_dy, qreal & possible_dy) const"
+Permet de savoir s'il est possible de deplacer le second point du segment sans creer d'incoherence\&. La valeur du mouvement maximum qu'il est possible de faire sans incoherence est stockee dans le second parametre\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIasked_dy\fP La valeur du mouvement demande 
+.br
+\fIpossible_dy\fP La valeur du mouvement possible (au maximum) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si le mouvement est possible ; false s'il doit etre limite 
+.RE
+.PP
+On ne modifie jamais l'abscisse du second point d'un segment statique\&.
+.PP
+Si le segment suivant n'est pas statique, le mouvement est possible\&.
+.PP
+Si le segment suivant est horizontal, le mouvement est possible : il induira la creation d'un segment vertical supplementaire\&.
+.PP
+Il se peut que le mouvement doive etre limite de facon a ce que le segment statique conserve une taille minimale\&.
+.SS "QPointF ConductorSegment::firstPoint () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le premier point du segment 
+.RE
+.PP
+
+.SS "bool ConductorSegment::hasNextSegment () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le segment a un segment suivant, false sinon 
+.RE
+.PP
+
+.SS "bool ConductorSegment::hasPreviousSegment () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le segment a un segment precedent, false sinon 
+.RE
+.PP
+
+.SS "bool ConductorSegment::isFirstSegment () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si ce segment est le premier du conducteur 
+.RE
+.PP
+
+.SS "bool ConductorSegment::isHorizontal () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le segment est horizontal, false sinon 
+.RE
+.PP
+
+.SS "bool ConductorSegment::isLastSegment () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si ce segment est le dernier du conducteur 
+.RE
+.PP
+
+.SS "bool ConductorSegment::isPoint () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si les deux points constituant le segment sont egaux 
+.RE
+.PP
+
+.SS "bool ConductorSegment::isStatic () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si ce segment est un segment statique, cad un segment relie a une borne 
+.RE
+.PP
+
+.SS "bool ConductorSegment::isVertical () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le segment est vertical, false sinon 
+.RE
+.PP
+
+.SS "qreal ConductorSegment::length () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+La longueur du conducteur 
+.RE
+.PP
+
+.SS "QPointF ConductorSegment::middle () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+Le centre du rectangle delimitant le conducteur 
+.RE
+.PP
+
+.SS "void ConductorSegment::moveX (const qreal & dx)"
+Gere les mouvements sur l'axe horizontal 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdx\fP taille du deplacement en pixels 
+.RE
+.PP
+
+.SS "void ConductorSegment::moveY (const qreal & dy)"
+Gere les mouvements sur l'axe vertical 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdy\fP taille du deplacement en pixels 
+.RE
+.PP
+
+.SS "\fBConductorSegment\fP * ConductorSegment::nextSegment () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+Le segment suivant 
+.RE
+.PP
+
+.SS "\fBConductorSegment\fP * ConductorSegment::previousSegment () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+Le segment precedent 
+.RE
+.PP
+
+.SS "QPointF ConductorSegment::secondPoint () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le second point du segment 
+.RE
+.PP
+
+.SS "void ConductorSegment::setFirstPoint (const QPointF & p)"
+Permet de changer la position du premier point du segment 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP La nouvelle position du premier point 
+.RE
+.PP
+
+.SS "void ConductorSegment::setNextSegment (\fBConductorSegment\fP * ns)"
+Change le segment suivant 
+.PP
+\fBParameters\fP
+.RS 4
+\fIns\fP Le nouveau segment suivant 
+.RE
+.PP
+
+.SS "void ConductorSegment::setPreviousSegment (\fBConductorSegment\fP * ps)"
+Change le segment precedent 
+.PP
+\fBParameters\fP
+.RS 4
+\fIps\fP Le nouveau segment precedent 
+.RE
+.PP
+
+.SS "void ConductorSegment::setSecondPoint (const QPointF & p)"
+Permet de changer la position du second point du segment 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP La nouvelle position du second point 
+.RE
+.PP
+
+.SS "\fBQET::ConductorSegmentType\fP ConductorSegment::type () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+\fBQET::Horizontal\fP si le segment est horizontal, \fBQET::Vertical\fP sinon 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBConductorSegment\fP* ConductorSegment::next_segment\fC [private]\fP"
+
+.SS "QPointF ConductorSegment::point1\fC [private]\fP"
+
+.SS "QPointF ConductorSegment::point2\fC [private]\fP"
+
+.SS "\fBConductorSegment\fP* ConductorSegment::previous_segment\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

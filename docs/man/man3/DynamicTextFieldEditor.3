@@ -1,0 +1,215 @@
+.TH "DynamicTextFieldEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DynamicTextFieldEditor \- The \fBDynamicTextFieldEditor\fP class This class provide a widget used to edit the property of a dynamic text field\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dynamictextfieldeditor\&.h>\fP
+.PP
+Inherits \fBElementItemEditor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDynamicTextFieldEditor\fP (\fBQETElementEditor\fP *editor, \fBPartDynamicTextField\fP *text_field=nullptr, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~DynamicTextFieldEditor\fP () override"
+.br
+.ti -1c
+.RI "bool \fBsetPart\fP (\fBCustomElementPart\fP *part) override"
+.br
+.RI "\fBDynamicTextFieldEditor::setPart\fP Set part as current edited part of this widget\&. "
+.ti -1c
+.RI "bool \fBsetParts\fP (QList< \fBCustomElementPart\fP * >) override"
+.br
+.ti -1c
+.RI "\fBCustomElementPart\fP * \fBcurrentPart\fP () const override"
+.br
+.RI "\fBDynamicTextFieldEditor::currentPart\fP\&. "
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBcurrentParts\fP () const override"
+.br
+.ti -1c
+.RI "void \fBupdateForm\fP () override"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_x_sb_editingFinished\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_y_sb_editingFinished\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_rotation_sb_editingFinished\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_user_text_le_editingFinished\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_size_sb_editingFinished\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_frame_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_width_sb_editingFinished\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_elmt_info_cb_activated\fP (const QString &arg1)"
+.br
+.ti -1c
+.RI "void \fBon_m_text_from_cb_activated\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBon_m_composite_text_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_alignment_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_font_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_color_kpb_changed\fP (const QColor &newColor)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfillInfoComboBox\fP ()"
+.br
+.RI "\fBDynamicTextFieldEditor::fillInfoComboBox\fP Fill the combo box 'element information'\&. "
+.ti -1c
+.RI "void \fBsetUpConnections\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisconnectConnections\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::DynamicTextFieldEditor * \fBui\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBPartDynamicTextField\fP > \fBm_text_field\fP"
+.br
+.ti -1c
+.RI "QList< \fBPartDynamicTextField\fP * > \fBm_parts\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_connection_list\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBDynamicTextFieldEditor\fP class This class provide a widget used to edit the property of a dynamic text field\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DynamicTextFieldEditor::DynamicTextFieldEditor (\fBQETElementEditor\fP * editor, \fBPartDynamicTextField\fP * text_field = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "DynamicTextFieldEditor::~DynamicTextFieldEditor ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCustomElementPart\fP * DynamicTextFieldEditor::currentPart () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDynamicTextFieldEditor::currentPart\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current edited part, note they can return nullptr if there is not a currently edited part\&. 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "QList< \fBCustomElementPart\fP * > DynamicTextFieldEditor::currentParts () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "void DynamicTextFieldEditor::disconnectConnections ()\fC [private]\fP"
+
+.SS "void DynamicTextFieldEditor::fillInfoComboBox ()\fC [private]\fP"
+
+.PP
+\fBDynamicTextFieldEditor::fillInfoComboBox\fP Fill the combo box 'element information'\&. 
+.SS "void DynamicTextFieldEditor::on_m_alignment_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_color_kpb_changed (const QColor & newColor)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_composite_text_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_elmt_info_cb_activated (const QString & arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_font_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_frame_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_rotation_sb_editingFinished ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_size_sb_editingFinished ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_text_from_cb_activated (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_user_text_le_editingFinished ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_width_sb_editingFinished ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_x_sb_editingFinished ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicTextFieldEditor::on_m_y_sb_editingFinished ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "bool DynamicTextFieldEditor::setPart (\fBCustomElementPart\fP * part)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDynamicTextFieldEditor::setPart\fP Set part as current edited part of this widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if part can be edited by this widget 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "bool DynamicTextFieldEditor::setParts (QList< \fBCustomElementPart\fP * > parts)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBElementItemEditor\fP\&.
+.SS "void DynamicTextFieldEditor::setUpConnections ()\fC [private]\fP"
+
+.SS "void DynamicTextFieldEditor::updateForm ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QMetaObject::Connection> DynamicTextFieldEditor::m_connection_list\fC [private]\fP"
+
+.SS "QList<\fBPartDynamicTextField\fP*> DynamicTextFieldEditor::m_parts\fC [private]\fP"
+
+.SS "QPointer<\fBPartDynamicTextField\fP> DynamicTextFieldEditor::m_text_field\fC [private]\fP"
+
+.SS "Ui::DynamicTextFieldEditor* DynamicTextFieldEditor::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

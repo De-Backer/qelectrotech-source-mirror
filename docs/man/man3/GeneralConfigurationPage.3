@@ -1,0 +1,151 @@
+.TH "GeneralConfigurationPage" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GeneralConfigurationPage
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <generalconfigurationpage\&.h>\fP
+.PP
+Inherits \fBConfigPage\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGeneralConfigurationPage\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBGeneralConfigurationPage::GeneralConfigurationPage\fP\&. "
+.ti -1c
+.RI "\fB~GeneralConfigurationPage\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBapplyConf\fP () override"
+.br
+.RI "\fBGeneralConfigurationPage::applyConf\fP Write all configuration in settings file\&. "
+.ti -1c
+.RI "virtual QString \fBtitle\fP () const override"
+.br
+.RI "\fBGeneralConfigurationPage::title\fP\&. "
+.ti -1c
+.RI "virtual QIcon \fBicon\fP () const override"
+.br
+.RI "\fBGeneralConfigurationPage::icon\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_font_pb_clicked\fP ()"
+.br
+.RI "\fBGeneralConfigurationPage::on_m_font_pb_clicked\fP Apply font to config\&. "
+.ti -1c
+.RI "void \fBon_m_dyn_text_font_pb_clicked\fP ()"
+.br
+.RI "GeneralConfigurationPage::m_dyn_text_font_pb_clicked Apply font to config\&. "
+.ti -1c
+.RI "void \fBon_m_common_elmt_path_cb_currentIndexChanged\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBon_m_custom_elmt_path_cb_currentIndexChanged\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBon_m_custom_tbt_path_cb_currentIndexChanged\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBon_m_indi_text_font_pb_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfillLang\fP ()"
+.br
+.RI "\fBGeneralConfigurationPage::fillLang\fP fill all available lang\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::GeneralConfigurationPage * \fBui\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GeneralConfigurationPage::GeneralConfigurationPage (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBGeneralConfigurationPage::GeneralConfigurationPage\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SS "GeneralConfigurationPage::~GeneralConfigurationPage ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void GeneralConfigurationPage::applyConf ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGeneralConfigurationPage::applyConf\fP Write all configuration in settings file\&. 
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "void GeneralConfigurationPage::fillLang ()\fC [private]\fP"
+
+.PP
+\fBGeneralConfigurationPage::fillLang\fP fill all available lang\&. 
+.SS "QIcon GeneralConfigurationPage::icon () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGeneralConfigurationPage::icon\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The icon of this page 
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "void GeneralConfigurationPage::on_m_common_elmt_path_cb_currentIndexChanged (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void GeneralConfigurationPage::on_m_custom_elmt_path_cb_currentIndexChanged (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void GeneralConfigurationPage::on_m_custom_tbt_path_cb_currentIndexChanged (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void GeneralConfigurationPage::on_m_dyn_text_font_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+GeneralConfigurationPage::m_dyn_text_font_pb_clicked Apply font to config\&. 
+.SS "void GeneralConfigurationPage::on_m_font_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBGeneralConfigurationPage::on_m_font_pb_clicked\fP Apply font to config\&. 
+.SS "void GeneralConfigurationPage::on_m_indi_text_font_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "QString GeneralConfigurationPage::title () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGeneralConfigurationPage::title\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The title of this page 
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::GeneralConfigurationPage* GeneralConfigurationPage::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

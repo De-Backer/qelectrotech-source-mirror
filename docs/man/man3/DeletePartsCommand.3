@@ -1,0 +1,93 @@
+.TH "DeletePartsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DeletePartsCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <editorcommands\&.h>\fP
+.PP
+Inherits \fBElementEditionCommand\fP\&.
+.PP
+Inherited by \fBCutPartsCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDeletePartsCommand\fP (\fBElementScene\fP *, const QList< QGraphicsItem * > &, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~DeletePartsCommand\fP () override"
+.br
+.RI "Destructeur : detruit egalement les parties supprimees\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "Restaure les parties supprimees\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "Supprime les parties\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDeletePartsCommand\fP (const \fBDeletePartsCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< QGraphicsItem * > \fBdeleted_parts\fP"
+.br
+.RI "Deleted primitives\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This command deletes one or several primitives/parts when editing an electrical element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DeletePartsCommand::DeletePartsCommand (\fBElementScene\fP * scene, const QList< QGraphicsItem * > & parts, QUndoCommand * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP \fBElementScene\fP concernee 
+.br
+\fIparts\fP Liste des parties supprimees 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "DeletePartsCommand::~DeletePartsCommand ()\fC [override]\fP"
+
+.PP
+Destructeur : detruit egalement les parties supprimees\&. 
+.SS "DeletePartsCommand::DeletePartsCommand (const \fBDeletePartsCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DeletePartsCommand::redo ()\fC [override]\fP"
+
+.PP
+Supprime les parties\&. 
+.SS "void DeletePartsCommand::undo ()\fC [override]\fP"
+
+.PP
+Restaure les parties supprimees\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QGraphicsItem *> DeletePartsCommand::deleted_parts\fC [private]\fP"
+
+.PP
+Deleted primitives\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

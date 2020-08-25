@@ -1,0 +1,18 @@
+<map id="ProjectAutoNumConfigPage::applyAutoNum" name="ProjectAutoNumConfigPage::applyAutoNum">
+<area shape="rect" id="node1" title="ProjectAutoNumConfigPage::applyAutoNum Apply auto folio numbering, New Folios or Selected Folios." alt="" coords="5,292,192,333"/>
+<area shape="rect" id="node2" href="$d6/dc5/class_q_e_t_project.html#a0a95cd46673a31f95909b6e460311316" title="QETProject::autoFolioNumberingNewFolios emit Signal to add new Diagram with autonum properties." alt="" coords="240,96,453,137"/>
+<area shape="rect" id="node3" href="$d6/dc5/class_q_e_t_project.html#aa4fe374010e837dad9cf8f7b477baa23" title="QETProject::autoFolioNumberingNewFolios." alt="" coords="240,161,453,203"/>
+<area shape="rect" id="node12" href="$dc/d2b/class_folio_autonumbering_w.html#a20beeec37741c95029f1a182abe74d64" title="FolioAutonumberingW::autoNumSelected returns the current autonum selected." alt="" coords="271,227,422,268"/>
+<area shape="rect" id="node13" href="$dc/d2b/class_folio_autonumbering_w.html#a2931deb30681c219829fb758d720b861" title="FolioAutonumberingW::fromFolio returns the current &quot;From Folio&quot; index." alt="" coords="533,336,683,377"/>
+<area shape="rect" id="node14" href="$dc/d2b/class_folio_autonumbering_w.html#afbb4de1da6e9c3595191128a82983dbb" title="FolioAutonumberingW::newFoliosNumber returns the number of folios to create." alt="" coords="271,409,422,451"/>
+<area shape="rect" id="node15" href="$d1/d10/class_project_config_page.html#a311372a968a70cfd714bb1b5427d9939" title=" " alt="" coords="277,475,416,516"/>
+<area shape="rect" id="node16" href="$dc/d2b/class_folio_autonumbering_w.html#aca866597ea32191be3add3bee178b610" title="FolioAutonumberingW::toFolio returns the current &quot;To Folio&quot; index." alt="" coords="271,292,422,333"/>
+<area shape="rect" id="node4" href="$d6/dc5/class_q_e_t_project.html#a2214c0035bcf3b63bd4f534e3b300f71" title="QETProject::addFolioAutoNum Add a new folio numerotation context. If key already exist,..." alt="" coords="507,219,709,246"/>
+<area shape="rect" id="node5" href="$d6/dc5/class_q_e_t_project.html#ab4d93c106722f84fe71e0492f76968e6" title="QETProject::folioAutoNum." alt="" coords="520,270,696,297"/>
+<area shape="rect" id="node6" href="$dc/dcb/class_numerotation_context_commands.html#aad44e5c7dfc1989f5651e3e09b285b90" title="NumerotationContextCommands::next." alt="" coords="501,37,715,79"/>
+<area shape="rect" id="node10" href="$d6/dc5/class_q_e_t_project.html#a04d0472582317a07aa88ded1f75e0499" title=" " alt="" coords="549,169,667,195"/>
+<area shape="rect" id="node11" href="$dc/dcb/class_numerotation_context_commands.html#a5b432c0f06a0fcee7c33cf3855c9df77" title="NumerotationContextCommands::toFinalString." alt="" coords="501,103,715,144"/>
+<area shape="rect" id="node7" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="796,5,943,47"/>
+<area shape="rect" id="node8" href="$dc/dcb/class_numerotation_context_commands.html#a8d31e00e3c510c67a59f5de6964ef54a" title="NumerotationContextCommands::setNumStrategy apply the good strategy relative to str." alt="" coords="763,71,976,112"/>
+<area shape="rect" id="node9" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="796,136,943,177"/>
+</map>

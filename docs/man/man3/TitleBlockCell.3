@@ -1,0 +1,360 @@
+.TH "TitleBlockCell" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockCell
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <titleblockcell\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTemplateCellType\fP { \fBEmptyCell\fP, \fBTextCell\fP, \fBLogoCell\fP }"
+.br
+.ti -1c
+.RI "enum \fBTemplateCellSpanState\fP { \fBDisabled\fP, \fBEnabled\fP, \fBRestricted\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockCell\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~TitleBlockCell\fP ()"
+.br
+.ti -1c
+.RI "\fBTemplateCellType\fP \fBtype\fP () const"
+.br
+.ti -1c
+.RI "int \fBhorizontalAlign\fP () const"
+.br
+.ti -1c
+.RI "int \fBverticalAlign\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetAttribute\fP (const QString &, const QVariant &)"
+.br
+.ti -1c
+.RI "QVariant \fBattribute\fP (const QString &)"
+.br
+.ti -1c
+.RI "bool \fBspans\fP () const"
+.br
+.ti -1c
+.RI "void \fBloadContentFromCell\fP (const \fBTitleBlockCell\fP &)"
+.br
+.ti -1c
+.RI "void \fBloadContentFromXml\fP (const QDomElement &)"
+.br
+.ti -1c
+.RI "void \fBsaveContentToXml\fP (QDomElement &)"
+.br
+.RI "\fBTitleBlockCell::saveContentToXml\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBattributeName\fP (const QString &)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTemplateCellType\fP \fBcell_type\fP"
+.br
+.RI "Cell type: empty, text, logo? "
+.ti -1c
+.RI "int \fBnum_row\fP"
+.br
+.RI "y coordinate of the cell within its parent title block template grid "
+.ti -1c
+.RI "int \fBnum_col\fP"
+.br
+.RI "x coordinate of the cell within its parent title block template grid "
+.ti -1c
+.RI "int \fBrow_span\fP"
+.br
+.RI "number of extra rows spanned by this cell "
+.ti -1c
+.RI "int \fBcol_span\fP"
+.br
+.RI "number of extra columns spanned by this cell "
+.ti -1c
+.RI "int \fBspan_state\fP"
+.br
+.RI "how should row_span and col_span be applied given other cells in the parent template "
+.ti -1c
+.RI "int \fBapplied_row_span\fP"
+.br
+.RI "Actually applied row span\&. "
+.ti -1c
+.RI "int \fBapplied_col_span\fP"
+.br
+.RI "Actually applied column span\&. "
+.ti -1c
+.RI "\fBTitleBlockCell\fP * \fBspanner_cell\fP"
+.br
+.RI "Cell spanning this cell, if any\&. "
+.ti -1c
+.RI "QString \fBvalue_name\fP"
+.br
+.RI "name of the cell; not displayed when the title block template is rendered "
+.ti -1c
+.RI "\fBNamesList\fP \fBvalue\fP"
+.br
+.RI "Text displayed by the cell\&. "
+.ti -1c
+.RI "\fBNamesList\fP \fBlabel\fP"
+.br
+.RI "Label displayed by the cell\&. "
+.ti -1c
+.RI "bool \fBdisplay_label\fP"
+.br
+.RI "Whether to display the label or not\&. "
+.ti -1c
+.RI "int \fBalignment\fP"
+.br
+.RI "Where the label+text should be displayed within the visual cell\&. "
+.ti -1c
+.RI "int \fBfont_size\fP"
+.br
+.RI "Font size the text should be rendered with\&. "
+.ti -1c
+.RI "bool \fBhadjust\fP"
+.br
+.RI "Whether to reduce the font size if the text does not fit in the cell\&. "
+.ti -1c
+.RI "QString \fBlogo_reference\fP"
+.br
+.RI "Logo displayed by this cell, it it is a logo cell\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is a container for the various parameters of a titleblock cell 
+.PP
+\fBSee also\fP
+.RS 4
+TitleBlockColumnLength 
+.RE
+.PP
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBTitleBlockCell::TemplateCellSpanState\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIDisabled \fP\fP
+the cell span parameters should not applied at all 
+.TP
+\fB\fIEnabled \fP\fP
+the cell span parameters should be applied without restriction 
+.TP
+\fB\fIRestricted \fP\fP
+the cell span parameters should be applied with some restrictions 
+.SS "enum \fBTitleBlockCell::TemplateCellType\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIEmptyCell \fP\fP
+.TP
+\fB\fITextCell \fP\fP
+.TP
+\fB\fILogoCell \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockCell::TitleBlockCell ()"
+Constructor 
+.SS "TitleBlockCell::~TitleBlockCell ()\fC [virtual]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "QVariant TitleBlockCell::attribute (const QString & attribute)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIattribute\fP Name of the cell attribute which value is wanted 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the value of the required attribute 
+.RE
+.PP
+
+.SS "QString TitleBlockCell::attributeName (const QString & attribute)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIattribute\fP Name of the cell attribute which we want the human, translated name 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the human, translated name for this attribute\&. 
+.RE
+.PP
+
+.SS "int TitleBlockCell::horizontalAlign () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the horizontal alignment of this cell 
+.RE
+.PP
+
+.SS "void TitleBlockCell::loadContentFromCell (const \fBTitleBlockCell\fP & other_cell)"
+Copy the content of another cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother_cell\fP Another cell 
+.RE
+.PP
+
+.SS "void TitleBlockCell::loadContentFromXml (const QDomElement & cell_element)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell_element\fP XML element from which cell content will be read 
+.RE
+.PP
+
+.SS "void TitleBlockCell::saveContentToXml (QDomElement & cell_elmt)"
+
+.PP
+\fBTitleBlockCell::saveContentToXml\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell_elmt\fP : XML element to which cell content will be exported 
+.RE
+.PP
+
+.SS "void TitleBlockCell::setAttribute (const QString & attribute, const QVariant & attr_value)"
+Set the new value \fIattr_value\fP to the attribute named \fIattribute\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattribute\fP Name of the cell attribute which value is to be changed 
+.br
+\fIattr_value\fP New value of the changed attribute 
+.RE
+.PP
+
+.SS "bool TitleBlockCell::spans () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if this cell spans over other cells, false otherwise\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockCell::TemplateCellType\fP TitleBlockCell::type () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the type of this cell 
+.RE
+.PP
+
+.SS "int TitleBlockCell::verticalAlign () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the vertical alignment of this cell 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int TitleBlockCell::alignment"
+
+.PP
+Where the label+text should be displayed within the visual cell\&. 
+.SS "int TitleBlockCell::applied_col_span"
+
+.PP
+Actually applied column span\&. 
+.SS "int TitleBlockCell::applied_row_span"
+
+.PP
+Actually applied row span\&. 
+.SS "\fBTemplateCellType\fP TitleBlockCell::cell_type"
+
+.PP
+Cell type: empty, text, logo? 
+.SS "int TitleBlockCell::col_span"
+
+.PP
+number of extra columns spanned by this cell 
+.SS "bool TitleBlockCell::display_label"
+
+.PP
+Whether to display the label or not\&. 
+.SS "int TitleBlockCell::font_size"
+
+.PP
+Font size the text should be rendered with\&. 
+.SS "bool TitleBlockCell::hadjust"
+
+.PP
+Whether to reduce the font size if the text does not fit in the cell\&. 
+.SS "\fBNamesList\fP TitleBlockCell::label"
+
+.PP
+Label displayed by the cell\&. 
+.SS "QString TitleBlockCell::logo_reference"
+
+.PP
+Logo displayed by this cell, it it is a logo cell\&. 
+.SS "int TitleBlockCell::num_col"
+
+.PP
+x coordinate of the cell within its parent title block template grid 
+.SS "int TitleBlockCell::num_row"
+
+.PP
+y coordinate of the cell within its parent title block template grid 
+.SS "int TitleBlockCell::row_span"
+
+.PP
+number of extra rows spanned by this cell 
+.SS "int TitleBlockCell::span_state"
+
+.PP
+how should row_span and col_span be applied given other cells in the parent template 
+.SS "\fBTitleBlockCell\fP* TitleBlockCell::spanner_cell"
+
+.PP
+Cell spanning this cell, if any\&. 
+.SS "\fBNamesList\fP TitleBlockCell::value"
+
+.PP
+Text displayed by the cell\&. 
+.SS "QString TitleBlockCell::value_name"
+
+.PP
+name of the cell; not displayed when the title block template is rendered 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

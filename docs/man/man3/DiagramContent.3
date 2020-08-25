@@ -1,0 +1,367 @@
+.TH "DiagramContent" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramContent
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcontent\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFilter\fP { \fBElements\fP = 1, \fBTextFields\fP = 2, \fBElementTextFields\fP = 4, \fBImages\fP = 8, \fBConductorsToMove\fP = 16, \fBConductorsToUpdate\fP = 32, \fBOtherConductors\fP = 64, \fBAnyConductor\fP = 112, \fBShapes\fP = 128, \fBTextGroup\fP = 256, \fBTables\fP = 512, \fBAll\fP = 1023, \fBSelectedOnly\fP = 1024 }"
+.br
+.RI "Used to filter the different items carried by this container\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramContent\fP ()"
+.br
+.RI "\fBDiagramContent::DiagramContent\fP\&. "
+.ti -1c
+.RI "\fBDiagramContent\fP (\fBDiagram\fP *diagram, bool selected=true)"
+.br
+.RI "\fBDiagramContent::DiagramContent\fP Constructor\&. "
+.ti -1c
+.RI "\fB~DiagramContent\fP ()"
+.br
+.ti -1c
+.RI "QList< \fBDiagramTextItem\fP * > \fBselectedTexts\fP () const"
+.br
+.RI "\fBDiagramContent::selectedTexts\fP\&. "
+.ti -1c
+.RI "QList< \fBElementTextItemGroup\fP * > \fBselectedTextsGroup\fP () const"
+.br
+.RI "\fBDiagramContent::selectedTextsGroup\fP\&. "
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBconductors\fP (int=\fBAnyConductor\fP) const"
+.br
+.RI "\fBDiagramContent::conductors\fP\&. "
+.ti -1c
+.RI "bool \fBhasDeletableItems\fP () const"
+.br
+.RI "\fBDiagramContent::hasDeletableItems\fP\&. "
+.ti -1c
+.RI "bool \fBhasCopiableItems\fP () const"
+.br
+.RI "\fBDiagramContent::hasCopiableItems\fP\&. "
+.ti -1c
+.RI "QList< QGraphicsItem * > \fBitems\fP (int=\fBAll\fP) const"
+.br
+.RI "\fBDiagramContent::items\fP\&. "
+.ti -1c
+.RI "QString \fBsentence\fP (int=\fBAll\fP) const"
+.br
+.RI "\fBDiagramContent::sentence\fP\&. "
+.ti -1c
+.RI "int \fBcount\fP (int=\fBAll\fP) const"
+.br
+.RI "\fBDiagramContent::count\fP\&. "
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "\fBDiagramContent::clear\fP Remove all items from the diagram content\&. "
+.ti -1c
+.RI "int \fBremoveNonMovableItems\fP ()"
+.br
+.RI "\fBDiagramContent::removeNonMovableItems\fP Remove all non movable item\&. "
+.ti -1c
+.RI "\fBDiagramContent\fP & \fBoperator+=\fP (const \fBDiagramContent\fP &other)"
+.br
+.ti -1c
+.RI "bool \fBpotentialIsManaged\fP (QList< \fBConductor\fP * >\fBconductors\fP)"
+.br
+.RI "\fBDiagramContent::potentialIsManaged\fP\&. "
+.ti -1c
+.RI "bool \fBhasTextEditing\fP ()"
+.br
+.RI "\fBDiagramContent::hasTextEditing\fP\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBm_elements\fP"
+.br
+.ti -1c
+.RI "QSet< \fBIndependentTextItem\fP * > \fBm_text_fields\fP"
+.br
+.ti -1c
+.RI "QSet< \fBDiagramImageItem\fP * > \fBm_images\fP"
+.br
+.ti -1c
+.RI "QSet< \fBQetShapeItem\fP * > \fBm_shapes\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBm_conductors_to_update\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBm_conductors_to_move\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBm_other_conductors\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBm_potential_conductors\fP"
+.br
+.ti -1c
+.RI "QSet< \fBDynamicElementTextItem\fP * > \fBm_element_texts\fP"
+.br
+.ti -1c
+.RI "QSet< \fBElementTextItemGroup\fP * > \fBm_texts_groups\fP"
+.br
+.ti -1c
+.RI "QList< QGraphicsItem * > \fBm_selected_items\fP"
+.br
+.ti -1c
+.RI "QVector< \fBQetGraphicsTableItem\fP * > \fBm_tables\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a container that makes the transmission of diagram content to other functions/methods easier\&. The different kind of items are made available through a handful of filter-aware methods\&. Considering selected elements are to be moved, the filter notably distinguishes conductors to be moved from those to be updated\&. Please note this container does not systematically contains a whole diagram: it may describe only a part of it, e\&.g\&. selected items\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBDiagramContent::Filter\fP"
+
+.PP
+Used to filter the different items carried by this container\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIElements \fP\fP
+.TP
+\fB\fITextFields \fP\fP
+.TP
+\fB\fIElementTextFields \fP\fP
+.TP
+\fB\fIImages \fP\fP
+.TP
+\fB\fIConductorsToMove \fP\fP
+.TP
+\fB\fIConductorsToUpdate \fP\fP
+.TP
+\fB\fIOtherConductors \fP\fP
+.TP
+\fB\fIAnyConductor \fP\fP
+.TP
+\fB\fIShapes \fP\fP
+.TP
+\fB\fITextGroup \fP\fP
+.TP
+\fB\fITables \fP\fP
+.TP
+\fB\fIAll \fP\fP
+.TP
+\fB\fISelectedOnly \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramContent::DiagramContent ()"
+
+.PP
+\fBDiagramContent::DiagramContent\fP\&. 
+.SS "DiagramContent::DiagramContent (\fBDiagram\fP * diagram, bool selected = \fCtrue\fP)"
+
+.PP
+\fBDiagramContent::DiagramContent\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : Construct a diagramContent and fill it with the selected item of diagram 
+.br
+\fIselected\fP : this diagramcontent get only selected items if true\&. 
+.RE
+.PP
+
+.SS "DiagramContent::~DiagramContent ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramContent::clear ()"
+
+.PP
+\fBDiagramContent::clear\fP Remove all items from the diagram content\&. 
+.SS "QList< \fBConductor\fP * > DiagramContent::conductors (int filter = \fC\fBAnyConductor\fP\fP) const"
+
+.PP
+\fBDiagramContent::conductors\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilter\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Every conductors according to the filter 
+.RE
+.PP
+
+.SS "int DiagramContent::count (int filter = \fC\fBAll\fP\fP) const"
+
+.PP
+\fBDiagramContent::count\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilter\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of items, according to filter 
+.RE
+.PP
+
+.SS "bool DiagramContent::hasCopiableItems () const"
+
+.PP
+\fBDiagramContent::hasCopiableItems\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this diagram content have copiable items\&. 
+.RE
+.PP
+
+.SS "bool DiagramContent::hasDeletableItems () const"
+
+.PP
+\fBDiagramContent::hasDeletableItems\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this diagram content have deletable item The deletable items correspond to the selected items of diagram at the moment of the creation of this \fBDiagramContent\fP, with the constructor : DiagramContent::DiagramContent(Diagram *diagram) 
+.RE
+.PP
+
+.SS "bool DiagramContent::hasTextEditing ()"
+
+.PP
+\fBDiagramContent::hasTextEditing\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if handle a text currently in editing intercation 
+.RE
+.PP
+
+.SS "QList< QGraphicsItem * > DiagramContent::items (int filter = \fC\fBAll\fP\fP) const"
+
+.PP
+\fBDiagramContent::items\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilter\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The items of this diagram content according to filter 
+.RE
+.PP
+
+.SS "\fBDiagramContent\fP & DiagramContent::operator+= (const \fBDiagramContent\fP & other)"
+
+.SS "bool DiagramContent::potentialIsManaged (QList< \fBConductor\fP * > conductors)"
+
+.PP
+\fBDiagramContent::potentialIsManaged\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductors\fP a list of conductors at the same potential\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true, if m_potential_conductors already have a conductor of this potential\&. 
+.RE
+.PP
+
+.SS "int DiagramContent::removeNonMovableItems ()"
+
+.PP
+\fBDiagramContent::removeNonMovableItems\fP Remove all non movable item\&. 
+.PP
+\fBReturns\fP
+.RS 4
+: return the numbers of removed item 
+.RE
+.PP
+
+.SS "QList< \fBDiagramTextItem\fP * > DiagramContent::selectedTexts () const"
+
+.PP
+\fBDiagramContent::selectedTexts\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a list of every selected texts (every kind of texts) Note that the returned list of texts, correspond to the selected texts at the moment of the creation of this \fBDiagramContent\fP, with the constructor : DiagramContent::DiagramContent(Diagram *diagram) 
+.RE
+.PP
+
+.SS "QList< \fBElementTextItemGroup\fP * > DiagramContent::selectedTextsGroup () const"
+
+.PP
+\fBDiagramContent::selectedTextsGroup\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a list of selected texts group Note that the returned list of texts group, correspond to the selected texts group at the moment of the creation of this \fBDiagramContent\fP, with the constructor : DiagramContent::DiagramContent(Diagram *diagram) 
+.RE
+.PP
+
+.SS "QString DiagramContent::sentence (int filter = \fC\fBAll\fP\fP) const"
+
+.PP
+\fBDiagramContent::sentence\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilter\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A string that describe the items of the diagram content according to filter\&. Exemple : X elements, Y conductors etc\&.\&.\&.\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<\fBConductor\fP *> DiagramContent::m_conductors_to_move"
+
+.SS "QList<\fBConductor\fP *> DiagramContent::m_conductors_to_update"
+
+.SS "QSet<\fBDynamicElementTextItem\fP *> DiagramContent::m_element_texts"
+
+.SS "QList<\fBElement\fP *> DiagramContent::m_elements"
+
+.SS "QSet<\fBDiagramImageItem\fP *> DiagramContent::m_images"
+
+.SS "QList<\fBConductor\fP *> DiagramContent::m_other_conductors"
+
+.SS "QList<\fBConductor\fP *> DiagramContent::m_potential_conductors"
+
+.SS "QList<QGraphicsItem *> DiagramContent::m_selected_items"
+
+.SS "QSet<\fBQetShapeItem\fP *> DiagramContent::m_shapes"
+
+.SS "QVector<\fBQetGraphicsTableItem\fP *> DiagramContent::m_tables"
+
+.SS "QSet<\fBIndependentTextItem\fP *> DiagramContent::m_text_fields"
+
+.SS "QSet<\fBElementTextItemGroup\fP *> DiagramContent::m_texts_groups"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

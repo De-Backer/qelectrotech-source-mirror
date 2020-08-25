@@ -1,0 +1,98 @@
+.TH "QetGraphicsTableFactory" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QetGraphicsTableFactory \- The \fBQetGraphicsTableFactory\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetgraphicstablefactory\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQetGraphicsTableFactory\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBcreateAndAddNomenclature\fP (\fBDiagram\fP *diagram)"
+.br
+.RI "\fBQetGraphicsTableFactory::createAndAddNomenclature\fP Open a dialog for ask user the config of the table, create a nomenclature table and add it to diagram\&. "
+.ti -1c
+.RI "static void \fBcreateAndAddSummary\fP (\fBDiagram\fP *diagram)"
+.br
+.RI "\fBQetGraphicsTableFactory::createAndAddSummary\fP Open a dialog for ask user the config of the table, create a summary table and add it to diagram\&. "
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBcreate\fP (\fBDiagram\fP *diagram, \fBAddTableDialog\fP *dialog)"
+.br
+.ti -1c
+.RI "static \fBQetGraphicsTableItem\fP * \fBnewTable\fP (\fBDiagram\fP *diagram, \fBAddTableDialog\fP *dialog, \fBQetGraphicsTableItem\fP *previous_table=nullptr)"
+.br
+.RI "\fBQetGraphicsTableFactory::newTable\fP Create a new table \&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBQetGraphicsTableFactory\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QetGraphicsTableFactory::QetGraphicsTableFactory ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QetGraphicsTableFactory::create (\fBDiagram\fP * diagram, \fBAddTableDialog\fP * dialog)\fC [static]\fP, \fC [private]\fP"
+
+.SS "void QetGraphicsTableFactory::createAndAddNomenclature (\fBDiagram\fP * diagram)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsTableFactory::createAndAddNomenclature\fP Open a dialog for ask user the config of the table, create a nomenclature table and add it to diagram\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP 
+.RE
+.PP
+
+.SS "void QetGraphicsTableFactory::createAndAddSummary (\fBDiagram\fP * diagram)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsTableFactory::createAndAddSummary\fP Open a dialog for ask user the config of the table, create a summary table and add it to diagram\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP 
+.RE
+.PP
+
+.SS "\fBQetGraphicsTableItem\fP * QetGraphicsTableFactory::newTable (\fBDiagram\fP * diagram, \fBAddTableDialog\fP * dialog, \fBQetGraphicsTableItem\fP * previous_table = \fCnullptr\fP)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBQetGraphicsTableFactory::newTable\fP Create a new table \&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : \fBDiagram\fP where we must add the new table\&. 
+.br
+\fIdialog\fP : dialog conf, it's used to setup the model\&. 
+.br
+\fIprevious_table\fP : If you know that the new table will have a previous table and you already now the previous table, set it now they will improve time needed for creating the new table by avoiding to create a new model\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the new table 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

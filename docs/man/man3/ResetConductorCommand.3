@@ -1,0 +1,97 @@
+.TH "ResetConductorCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ResetConductorCommand \- The \fBResetConductorCommand\fP class This command resets conductor paths\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBResetConductorCommand\fP (const QHash< \fBConductor\fP *, \fBConductorProfilesGroup\fP > &, QUndoCommand *=nullptr)"
+.br
+.RI "\fBResetConductorCommand::ResetConductorCommand\fP\&. "
+.ti -1c
+.RI "\fB~ResetConductorCommand\fP () override"
+.br
+.RI "\fBResetConductorCommand::~ResetConductorCommand\fP\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBResetConductorCommand::undo\fP\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBResetConductorCommand::redo\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBResetConductorCommand\fP (const \fBResetConductorCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QHash< \fBConductor\fP *, \fBConductorProfilesGroup\fP > \fBconductors_profiles\fP"
+.br
+.RI "impacted conductors along with their former profiles "
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBResetConductorCommand\fP class This command resets conductor paths\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ResetConductorCommand::ResetConductorCommand (const QHash< \fBConductor\fP *, \fBConductorProfilesGroup\fP > & cp, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBResetConductorCommand::ResetConductorCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcp\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "ResetConductorCommand::~ResetConductorCommand ()\fC [override]\fP"
+
+.PP
+\fBResetConductorCommand::~ResetConductorCommand\fP\&. 
+.SS "ResetConductorCommand::ResetConductorCommand (const \fBResetConductorCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ResetConductorCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBResetConductorCommand::redo\fP\&. 
+.SS "void ResetConductorCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBResetConductorCommand::undo\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QHash<\fBConductor\fP *, \fBConductorProfilesGroup\fP> ResetConductorCommand::conductors_profiles\fC [private]\fP"
+
+.PP
+impacted conductors along with their former profiles 
+.SS "\fBDiagram\fP* ResetConductorCommand::diagram\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

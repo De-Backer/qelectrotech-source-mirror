@@ -1,0 +1,245 @@
+.TH "GraphicsTablePropertiesEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GraphicsTablePropertiesEditor \- The \fBGraphicsTablePropertiesEditor\fP class This widget is used to edit the property of both \fBQetGraphicsTableItem\fP and \fBQetGraphicsHeaderItem\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <graphicstablepropertieseditor\&.h>\fP
+.PP
+Inherits \fBPropertiesEditorWidget\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGraphicsTablePropertiesEditor\fP (\fBQetGraphicsTableItem\fP *table=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::GraphicsTablePropertiesEditor\fP\&. "
+.ti -1c
+.RI "\fB~GraphicsTablePropertiesEditor\fP () override"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::~GraphicsTablePropertiesEditor\fP\&. "
+.ti -1c
+.RI "void \fBsetTable\fP (\fBQetGraphicsTableItem\fP *table)"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::setTable\fP Set the table to be edited\&. "
+.ti -1c
+.RI "virtual void \fBapply\fP () override"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::apply\fP Apply the current edition\&. "
+.ti -1c
+.RI "QUndoCommand * \fBassociatedUndo\fP () const override"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::associatedUndo\fP\&. "
+.ti -1c
+.RI "virtual bool \fBsetLiveEdit\fP (bool live_edit) override"
+.br
+.RI "\fBPropertiesEditorWidget::setLiveEdit\fP Set the editor in live edit mode\&. When an editor is in live edit mode, every change is applied immediately (no need to call apply)\&. If live edit can be enable, return true, else false\&. By default this method do nothing and return false (live edit is disable)\&. Herited class of \fBPropertiesEditorWidget\fP must reimplemente this methode to manage the live edit mode\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_header_font_pb_clicked\fP ()"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::on_m_header_font_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_table_font_pb_clicked\fP ()"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::on_m_table_font_pb_clicked\fP\&. "
+.ti -1c
+.RI "virtual void \fBupdateUi\fP () override"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::updateUi\fP\&. "
+.ti -1c
+.RI "void \fBupdateInfoLabel\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_table_name_le_textEdited\fP (const QString &arg1)"
+.br
+.ti -1c
+.RI "void \fBon_m_previous_table_cb_activated\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBon_m_previous_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_next_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_auto_geometry_pb_clicked\fP ()"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::on_m_auto_geometry_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_apply_geometry_to_linked_table_pb_clicked\fP ()"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::on_m_apply_geometry_to_linked_table_pb_clicked\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpEditConnection\fP ()"
+.br
+.RI "\fBGraphicsTablePropertiesEditor::setUpEditConnection\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::GraphicsTablePropertiesEditor * \fBui\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBQetGraphicsTableItem\fP > \fBm_table_item\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_connect_list\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_edit_connection\fP"
+.br
+.ti -1c
+.RI "QButtonGroup * \fBm_header_button_group\fP = nullptr"
+.br
+.ti -1c
+.RI "QButtonGroup * \fBm_table_button_group\fP = nullptr"
+.br
+.ti -1c
+.RI "QWidget * \fBm_current_model_editor\fP = nullptr"
+.br
+.ti -1c
+.RI "QVector< \fBQetGraphicsTableItem\fP * > \fBm_other_table_vector\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBGraphicsTablePropertiesEditor\fP class This widget is used to edit the property of both \fBQetGraphicsTableItem\fP and \fBQetGraphicsHeaderItem\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GraphicsTablePropertiesEditor::GraphicsTablePropertiesEditor (\fBQetGraphicsTableItem\fP * table = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBGraphicsTablePropertiesEditor::GraphicsTablePropertiesEditor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItable\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "GraphicsTablePropertiesEditor::~GraphicsTablePropertiesEditor ()\fC [override]\fP"
+
+.PP
+\fBGraphicsTablePropertiesEditor::~GraphicsTablePropertiesEditor\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void GraphicsTablePropertiesEditor::apply ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGraphicsTablePropertiesEditor::apply\fP Apply the current edition\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "QUndoCommand * GraphicsTablePropertiesEditor::associatedUndo () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBGraphicsTablePropertiesEditor::associatedUndo\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the undo command associated to the edition 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void GraphicsTablePropertiesEditor::on_m_apply_geometry_to_linked_table_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBGraphicsTablePropertiesEditor::on_m_apply_geometry_to_linked_table_pb_clicked\fP\&. 
+.SS "void GraphicsTablePropertiesEditor::on_m_auto_geometry_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBGraphicsTablePropertiesEditor::on_m_auto_geometry_pb_clicked\fP\&. 
+.SS "void GraphicsTablePropertiesEditor::on_m_header_font_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBGraphicsTablePropertiesEditor::on_m_header_font_pb_clicked\fP\&. 
+.SS "void GraphicsTablePropertiesEditor::on_m_next_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void GraphicsTablePropertiesEditor::on_m_previous_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void GraphicsTablePropertiesEditor::on_m_previous_table_cb_activated (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void GraphicsTablePropertiesEditor::on_m_table_font_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBGraphicsTablePropertiesEditor::on_m_table_font_pb_clicked\fP\&. 
+.SS "void GraphicsTablePropertiesEditor::on_m_table_name_le_textEdited (const QString & arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "bool GraphicsTablePropertiesEditor::setLiveEdit (bool live_edit)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorWidget::setLiveEdit\fP Set the editor in live edit mode\&. When an editor is in live edit mode, every change is applied immediately (no need to call apply)\&. If live edit can be enable, return true, else false\&. By default this method do nothing and return false (live edit is disable)\&. Herited class of \fBPropertiesEditorWidget\fP must reimplemente this methode to manage the live edit mode\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlive_edit\fP true to enable live edit 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if live edit is enable, else false\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void GraphicsTablePropertiesEditor::setTable (\fBQetGraphicsTableItem\fP * table)"
+
+.PP
+\fBGraphicsTablePropertiesEditor::setTable\fP Set the table to be edited\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItable\fP 
+.RE
+.PP
+
+.SS "void GraphicsTablePropertiesEditor::setUpEditConnection ()\fC [private]\fP"
+
+.PP
+\fBGraphicsTablePropertiesEditor::setUpEditConnection\fP\&. 
+.SS "void GraphicsTablePropertiesEditor::updateInfoLabel ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void GraphicsTablePropertiesEditor::updateUi ()\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+
+.PP
+\fBGraphicsTablePropertiesEditor::updateUi\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QMetaObject::Connection> GraphicsTablePropertiesEditor::m_connect_list\fC [private]\fP"
+
+.SS "QWidget* GraphicsTablePropertiesEditor::m_current_model_editor = nullptr\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> GraphicsTablePropertiesEditor::m_edit_connection\fC [private]\fP"
+
+.SS "QButtonGroup* GraphicsTablePropertiesEditor::m_header_button_group = nullptr\fC [private]\fP"
+
+.SS "QVector<\fBQetGraphicsTableItem\fP *> GraphicsTablePropertiesEditor::m_other_table_vector\fC [private]\fP"
+
+.SS "QButtonGroup * GraphicsTablePropertiesEditor::m_table_button_group = nullptr\fC [private]\fP"
+
+.SS "QPointer<\fBQetGraphicsTableItem\fP> GraphicsTablePropertiesEditor::m_table_item\fC [private]\fP"
+
+.SS "Ui::GraphicsTablePropertiesEditor* GraphicsTablePropertiesEditor::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

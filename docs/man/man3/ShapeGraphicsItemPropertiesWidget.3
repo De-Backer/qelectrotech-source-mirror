@@ -1,0 +1,237 @@
+.TH "ShapeGraphicsItemPropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ShapeGraphicsItemPropertiesWidget \- The \fBShapeGraphicsItemPropertiesWidget\fP class Provide a widget to edit the properties of a \fBQetShapeItem\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <shapegraphicsitempropertieswidget\&.h>\fP
+.PP
+Inherits \fBPropertiesEditorWidget\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBapply\fP () override"
+.br
+.RI "\fBShapeGraphicsItemPropertiesWidget::apply\fP Apply the current change, by pushing an undo command to the undo stack of the shape diagram\&. "
+.ti -1c
+.RI "void \fBreset\fP () override"
+.br
+.RI "\fBShapeGraphicsItemPropertiesWidget::reset\fP Reset the change\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBShapeGraphicsItemPropertiesWidget\fP (\fBQetShapeItem\fP *item, QWidget *parent=nullptr)"
+.br
+.RI "\fBShapeGraphicsItemPropertiesWidget::ShapeGraphicsItemPropertiesWidget\fP Constructor\&. "
+.ti -1c
+.RI "\fBShapeGraphicsItemPropertiesWidget\fP (QList< \fBQetShapeItem\fP * > items_list, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ShapeGraphicsItemPropertiesWidget\fP () override"
+.br
+.RI "\fBShapeGraphicsItemPropertiesWidget::~ShapeGraphicsItemPropertiesWidget\fP Destructor\&. "
+.ti -1c
+.RI "void \fBsetItem\fP (\fBQetShapeItem\fP *shape)"
+.br
+.RI "\fBShapeGraphicsItemPropertiesWidget::setItem\fP Set shape as the current edited item\&. "
+.ti -1c
+.RI "void \fBsetItems\fP (QList< \fBQetShapeItem\fP * > shapes_list)"
+.br
+.RI "\fBShapeGraphicsItemPropertiesWidget::setItems\fP Set a list of shapes to be edited\&. "
+.ti -1c
+.RI "QUndoCommand * \fBassociatedUndo\fP () const override"
+.br
+.RI "\fBShapeGraphicsItemPropertiesWidget::associatedUndo\fP\&. "
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.RI "\fBPropertiesEditorWidget::title\fP\&. "
+.ti -1c
+.RI "void \fBupdateUi\fP () override"
+.br
+.RI "\fBShapeGraphicsItemPropertiesWidget::updateUi\fP\&. "
+.ti -1c
+.RI "bool \fBsetLiveEdit\fP (bool live_edit) override"
+.br
+.RI "\fBShapeGraphicsItemPropertiesWidget::setLiveEdit\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_lock_pos_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_color_kpb_changed\fP (const QColor &newColor)"
+.br
+.ti -1c
+.RI "void \fBon_m_brush_color_kpb_changed\fP (const QColor &newColor)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpEditConnection\fP ()"
+.br
+.RI "\fBShapeGraphicsItemPropertiesWidget::setUpEditConnection\fP Disconnect the previous connection, and reconnect the connection between the editors widgets and void \fBShapeGraphicsItemPropertiesWidget::apply\fP function\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ShapeGraphicsItemPropertiesWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBQetShapeItem\fP * \fBm_shape\fP"
+.br
+.ti -1c
+.RI "QList< QPointer< \fBQetShapeItem\fP > > \fBm_shapes_list\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_connect_list\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_edit_connection\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBShapeGraphicsItemPropertiesWidget\fP class Provide a widget to edit the properties of a \fBQetShapeItem\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ShapeGraphicsItemPropertiesWidget::ShapeGraphicsItemPropertiesWidget (\fBQetShapeItem\fP * item, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBShapeGraphicsItemPropertiesWidget::ShapeGraphicsItemPropertiesWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP : shape to edit 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "ShapeGraphicsItemPropertiesWidget::ShapeGraphicsItemPropertiesWidget (QList< \fBQetShapeItem\fP * > items_list, QWidget * parent = \fCnullptr\fP)"
+
+.SS "ShapeGraphicsItemPropertiesWidget::~ShapeGraphicsItemPropertiesWidget ()\fC [override]\fP"
+
+.PP
+\fBShapeGraphicsItemPropertiesWidget::~ShapeGraphicsItemPropertiesWidget\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ShapeGraphicsItemPropertiesWidget::apply ()\fC [override]\fP, \fC [slot]\fP"
+
+.PP
+\fBShapeGraphicsItemPropertiesWidget::apply\fP Apply the current change, by pushing an undo command to the undo stack of the shape diagram\&. 
+.SS "QUndoCommand * ShapeGraphicsItemPropertiesWidget::associatedUndo () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBShapeGraphicsItemPropertiesWidget::associatedUndo\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+an undo command that represent the change edited by this widget\&. The returned undo command is a \fBQPropertyUndoCommand\fP with the properties 'pen'\&. If there isn't change, return nullptr 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ShapeGraphicsItemPropertiesWidget::on_m_brush_color_kpb_changed (const QColor & newColor)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ShapeGraphicsItemPropertiesWidget::on_m_color_kpb_changed (const QColor & newColor)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ShapeGraphicsItemPropertiesWidget::on_m_lock_pos_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ShapeGraphicsItemPropertiesWidget::reset ()\fC [override]\fP, \fC [slot]\fP"
+
+.PP
+\fBShapeGraphicsItemPropertiesWidget::reset\fP Reset the change\&. 
+.SS "void ShapeGraphicsItemPropertiesWidget::setItem (\fBQetShapeItem\fP * shape)"
+
+.PP
+\fBShapeGraphicsItemPropertiesWidget::setItem\fP Set shape as the current edited item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshape\fP 
+.RE
+.PP
+
+.SS "void ShapeGraphicsItemPropertiesWidget::setItems (QList< \fBQetShapeItem\fP * > shapes_list)"
+
+.PP
+\fBShapeGraphicsItemPropertiesWidget::setItems\fP Set a list of shapes to be edited\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIshapes_list\fP 
+.RE
+.PP
+
+.SS "bool ShapeGraphicsItemPropertiesWidget::setLiveEdit (bool live_edit)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBShapeGraphicsItemPropertiesWidget::setLiveEdit\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlive_edit\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+always true 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ShapeGraphicsItemPropertiesWidget::setUpEditConnection ()\fC [private]\fP"
+
+.PP
+\fBShapeGraphicsItemPropertiesWidget::setUpEditConnection\fP Disconnect the previous connection, and reconnect the connection between the editors widgets and void \fBShapeGraphicsItemPropertiesWidget::apply\fP function\&. 
+.SS "QString ShapeGraphicsItemPropertiesWidget::title () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorWidget::title\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the title of this editor 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ShapeGraphicsItemPropertiesWidget::updateUi ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBShapeGraphicsItemPropertiesWidget::updateUi\fP\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QMetaObject::Connection> ShapeGraphicsItemPropertiesWidget::m_connect_list\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> ShapeGraphicsItemPropertiesWidget::m_edit_connection\fC [private]\fP"
+
+.SS "\fBQetShapeItem\fP* ShapeGraphicsItemPropertiesWidget::m_shape\fC [private]\fP"
+
+.SS "QList<QPointer<\fBQetShapeItem\fP> > ShapeGraphicsItemPropertiesWidget::m_shapes_list\fC [private]\fP"
+
+.SS "Ui::ShapeGraphicsItemPropertiesWidget* ShapeGraphicsItemPropertiesWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

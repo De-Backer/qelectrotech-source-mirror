@@ -1,0 +1,207 @@
+.TH "PolygonEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PolygonEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <polygoneditor\&.h>\fP
+.PP
+Inherits \fBElementItemEditor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPolygonEditor\fP (\fBQETElementEditor\fP *editor, \fBPartPolygon\fP *part=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBPolygonEditor::PolygonEditor\fP\&. "
+.ti -1c
+.RI "\fB~PolygonEditor\fP () override"
+.br
+.RI "\fBPolygonEditor::~PolygonEditor\fP\&. "
+.ti -1c
+.RI "bool \fBsetPart\fP (\fBCustomElementPart\fP *part) override"
+.br
+.RI "\fBPolygonEditor::setPart\fP\&. "
+.ti -1c
+.RI "\fBCustomElementPart\fP * \fBcurrentPart\fP () const override"
+.br
+.RI "\fBPolygonEditor::currentPart\fP\&. "
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBcurrentParts\fP () const override"
+.br
+.ti -1c
+.RI "void \fBupdateForm\fP () override"
+.br
+.RI "\fBPolygonEditor::updateForm\fP Update the widget\&. "
+.ti -1c
+.RI "QVector< QPointF > \fBpointsFromTree\fP ()"
+.br
+.RI "\fBPolygonEditor::pointsFromTree\fP\&. "
+.ti -1c
+.RI "bool \fBeventFilter\fP (QObject *watched, QEvent *event) override"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_close_polygon_cb_stateChanged\fP (int arg1)"
+.br
+.RI "\fBPolygonEditor::on_m_close_polygon_cb_stateChanged\fP\&. "
+.ti -1c
+.RI "void \fBon_m_points_list_tree_itemChanged\fP (QTreeWidgetItem *item, int column)"
+.br
+.RI "\fBPolygonEditor::on_m_points_list_tree_itemChanged\fP Update the polygon according to the current value of the tree editor\&. "
+.ti -1c
+.RI "void \fBon_m_points_list_tree_itemSelectionChanged\fP ()"
+.br
+.RI "\fBPolygonEditor::on_m_points_list_tree_itemSelectionChanged\fP Used to change the color of the current selected point\&. "
+.ti -1c
+.RI "void \fBon_m_add_point_action_triggered\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_remove_point_action_triggered\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpChangeConnections\fP ()"
+.br
+.RI "setUpChangeConnections Setup the connection from the line(s) to the widget, to update it when the line(s) are changed (moved \&.\&.\&.) "
+.ti -1c
+.RI "void \fBdisconnectChangeConnections\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::PolygonEditor * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBStyleEditor\fP * \fBm_style\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBPartPolygon\fP * \fBm_part\fP = nullptr"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_change_connections\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PolygonEditor::PolygonEditor (\fBQETElementEditor\fP * editor, \fBPartPolygon\fP * part = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBPolygonEditor::PolygonEditor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP 
+.br
+\fIpart\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "PolygonEditor::~PolygonEditor ()\fC [override]\fP"
+
+.PP
+\fBPolygonEditor::~PolygonEditor\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCustomElementPart\fP * PolygonEditor::currentPart () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPolygonEditor::currentPart\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the curent edited part 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "QList< \fBCustomElementPart\fP * > PolygonEditor::currentParts () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "void PolygonEditor::disconnectChangeConnections ()\fC [private]\fP"
+
+.SS "bool PolygonEditor::eventFilter (QObject * watched, QEvent * event)\fC [override]\fP"
+
+.SS "void PolygonEditor::on_m_add_point_action_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void PolygonEditor::on_m_close_polygon_cb_stateChanged (int arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBPolygonEditor::on_m_close_polygon_cb_stateChanged\fP\&. 
+.SS "void PolygonEditor::on_m_points_list_tree_itemChanged (QTreeWidgetItem * item, int column)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBPolygonEditor::on_m_points_list_tree_itemChanged\fP Update the polygon according to the current value of the tree editor\&. 
+.SS "void PolygonEditor::on_m_points_list_tree_itemSelectionChanged ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBPolygonEditor::on_m_points_list_tree_itemSelectionChanged\fP Used to change the color of the current selected point\&. 
+.SS "void PolygonEditor::on_m_remove_point_action_triggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "QVector< QPointF > PolygonEditor::pointsFromTree ()"
+
+.PP
+\fBPolygonEditor::pointsFromTree\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the point of polygon from the current value of the tree editor if part coordinate\&. 
+.RE
+.PP
+
+.SS "bool PolygonEditor::setPart (\fBCustomElementPart\fP * new_part)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPolygonEditor::setPart\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_part\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "void PolygonEditor::setUpChangeConnections ()\fC [private]\fP"
+
+.PP
+setUpChangeConnections Setup the connection from the line(s) to the widget, to update it when the line(s) are changed (moved \&.\&.\&.) 
+.SS "void PolygonEditor::updateForm ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPolygonEditor::updateForm\fP Update the widget\&. 
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QMetaObject::Connection> PolygonEditor::m_change_connections\fC [private]\fP"
+
+.SS "\fBPartPolygon\fP* PolygonEditor::m_part = nullptr\fC [private]\fP"
+
+.SS "\fBStyleEditor\fP* PolygonEditor::m_style = nullptr\fC [private]\fP"
+
+.SS "Ui::PolygonEditor* PolygonEditor::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

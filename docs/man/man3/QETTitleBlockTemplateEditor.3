@@ -1,0 +1,729 @@
+.TH "QETTitleBlockTemplateEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETTitleBlockTemplateEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qettemplateeditor\&.h>\fP
+.PP
+Inherits \fBQETMainWindow\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBreadSettings\fP ()"
+.br
+.RI "\fBQETTitleBlockTemplateEditor::readSettings\fP Read settings\&. "
+.ti -1c
+.RI "void \fBwriteSettings\fP ()"
+.br
+.RI "\fBQETTitleBlockTemplateEditor::writeSettings\fP Write the settings\&. "
+.ti -1c
+.RI "void \fBselectedCellsChanged\fP (const QList< \fBTitleBlockCell\fP * > &)"
+.br
+.ti -1c
+.RI "void \fBduplicateCurrentLocation\fP ()"
+.br
+.ti -1c
+.RI "bool \fBedit\fP (const \fBTitleBlockTemplateLocation\fP &)"
+.br
+.ti -1c
+.RI "bool \fBedit\fP (\fBQETProject\fP *, const QString &)"
+.br
+.ti -1c
+.RI "bool \fBedit\fP (const QString &)"
+.br
+.ti -1c
+.RI "bool \fBeditCopyOf\fP (const \fBTitleBlockTemplate\fP *)"
+.br
+.ti -1c
+.RI "bool \fBedit\fP (\fBTitleBlockTemplate\fP *)"
+.br
+.ti -1c
+.RI "void \fBeditLogos\fP ()"
+.br
+.ti -1c
+.RI "void \fBnewTemplate\fP ()"
+.br
+.ti -1c
+.RI "void \fBopen\fP ()"
+.br
+.ti -1c
+.RI "void \fBopenFromFile\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsave\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsaveAs\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsaveAsFile\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBquit\fP ()"
+.br
+.ti -1c
+.RI "void \fBsavePreviewWidthToApplicationSettings\fP (int, int)"
+.br
+.RI "\fBQETTitleBlockTemplateEditor::savePreviewWidthToApplicationSettings\fP Save the new preview width to application settings\&. "
+.ti -1c
+.RI "void \fBeditTemplateInformation\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETTitleBlockTemplateEditor\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~QETTitleBlockTemplateEditor\fP () override"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateLocation\fP \fBlocation\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisEditing\fP (const QString &ilepath)"
+.br
+.ti -1c
+.RI "void \fBsetOpenForDuplication\fP (bool)"
+.br
+.RI "\fBQETTitleBlockTemplateEditor::setOpenForDuplication\fP\&. "
+.ti -1c
+.RI "bool \fBopenForDuplication\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBcanClose\fP ()"
+.br
+.ti -1c
+.RI "void \fBfirstActivation\fP (QEvent *) override"
+.br
+.ti -1c
+.RI "void \fBcloseEvent\fP (QCloseEvent *) override"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateLocation\fP \fBgetTitleBlockTemplateLocationFromUser\fP (const QString &=QString(), bool existing_only=true)"
+.br
+.ti -1c
+.RI "void \fBpushCellUndoCommand\fP (\fBModifyTitleBlockCellCommand\fP *)"
+.br
+.ti -1c
+.RI "void \fBpushGridUndoCommand\fP (\fBTitleBlockTemplateCommand\fP *)"
+.br
+.ti -1c
+.RI "void \fBpushUndoCommand\fP (QUndoCommand *)"
+.br
+.ti -1c
+.RI "void \fBupdateEditorTitle\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateActions\fP ()"
+.br
+.ti -1c
+.RI "bool \fBsaveAs\fP (const \fBTitleBlockTemplateLocation\fP &)"
+.br
+.ti -1c
+.RI "bool \fBsaveAs\fP (const QString &)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETTitleBlockTemplateEditor\fP (const \fBQETTitleBlockTemplateEditor\fP &)"
+.br
+.ti -1c
+.RI "void \fBinitActions\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitMenus\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitToolbars\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitWidgets\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitLogoManager\fP ()"
+.br
+.ti -1c
+.RI "QString \fBcurrentlyEditedTitle\fP () const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QMenu * \fBfile_menu_\fP"
+.br
+.RI "menus TODO "
+.ti -1c
+.RI "QMenu * \fBedit_menu_\fP"
+.br
+.ti -1c
+.RI "QMenu * \fBdisplay_menu_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBnew_\fP"
+.br
+.RI "actions "
+.ti -1c
+.RI "QAction * \fBopen_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBopen_from_file_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBsave_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBsave_as_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBsave_as_file_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBquit_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBundo_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBredo_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBcut_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBcopy_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBpaste_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBedit_logos_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBedit_info_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBadd_row_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBadd_col_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBmerge_cells_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBsplit_cell_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBzoom_in_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBzoom_out_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBzoom_fit_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBzoom_reset_\fP"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateLocation\fP \fBlocation_\fP"
+.br
+.RI "Location of the currently edited template\&. "
+.ti -1c
+.RI "QString \fBfilepath_\fP"
+.br
+.RI "Filepath of the currently edited template, if opened from a file\&. "
+.ti -1c
+.RI "bool \fBopened_from_file_\fP"
+.br
+.RI "Whether to consider the location or the filepath\&. "
+.ti -1c
+.RI "bool \fBread_only_\fP"
+.br
+.RI "whether the currently edited template is considered read only "
+.ti -1c
+.RI "bool \fBduplicate_\fP"
+.br
+.ti -1c
+.RI "bool \fBfirst_activation_\fP"
+.br
+.RI "Used to track the first activation of the editor main window\&. "
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBtb_template_\fP"
+.br
+.RI "Template Object edited\&. "
+.ti -1c
+.RI "QGraphicsScene * \fBtemplate_edition_area_scene_\fP"
+.br
+.RI "Template preview\&. "
+.ti -1c
+.RI "\fBTitleBlockTemplateView\fP * \fBtemplate_edition_area_view_\fP"
+.br
+.ti -1c
+.RI "QDockWidget * \fBtemplate_cell_editor_dock_widget_\fP"
+.br
+.RI "Individual cell widget edition\&. "
+.ti -1c
+.RI "\fBTitleBlockTemplateCellWidget\fP * \fBtemplate_cell_editor_widget_\fP"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateLogoManager\fP * \fBlogo_manager_\fP"
+.br
+.RI "Logo manager widget\&. "
+.ti -1c
+.RI "QUndoStack * \fBundo_stack_\fP"
+.br
+.RI "Undo interface\&. "
+.ti -1c
+.RI "QUndoView * \fBundo_view_\fP"
+.br
+.ti -1c
+.RI "QDockWidget * \fBundo_dock_widget_\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class implements the main window of QElectroTech's titleblock template editor\&. This editor aims at allowing users to easily create their own title block templates\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QETTitleBlockTemplateEditor::QETTitleBlockTemplateEditor (QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP parent QWidget of this window 
+.RE
+.PP
+
+.SS "QETTitleBlockTemplateEditor::~QETTitleBlockTemplateEditor ()\fC [override]\fP"
+Destructor 
+.SS "QETTitleBlockTemplateEditor::QETTitleBlockTemplateEditor (const \fBQETTitleBlockTemplateEditor\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool QETTitleBlockTemplateEditor::canClose ()\fC [protected]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if the currently edited template can be closed\&. A template can be closed if it has not been modified\&. If the template has been modified, this method asks the user what he wants to do\&. 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::closeEvent (QCloseEvent * qce)\fC [override]\fP, \fC [protected]\fP"
+Handle the closing of the main window 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqce\fP The QCloseEvent event 
+.RE
+.PP
+
+.SS "QString QETTitleBlockTemplateEditor::currentlyEditedTitle () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+a string describing what is being edited, along with [Changed] or [Read only] tags\&. Useful to compose the window title\&. 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::duplicateCurrentLocation ()\fC [slot]\fP"
+Ask the user for a new template name in order to duplicate the currently edited template\&. 
+.SS "bool QETTitleBlockTemplateEditor::edit (const QString & file_path)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_path\fP Path of the template file to edit\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+false if a problem occurred while opening the template, true otherwise\&. 
+.RE
+.PP
+TODO the file opening failed, warn the user?
+.PP
+TODO the file editing failed, warn the user?
+.SS "bool QETTitleBlockTemplateEditor::edit (const \fBTitleBlockTemplateLocation\fP & location)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP Location of the tile block template to be edited\&. 
+.RE
+.PP
+TODO The TBT does not exist, manage error
+.SS "bool QETTitleBlockTemplateEditor::edit (\fBQETProject\fP * project, const QString & template_name)\fC [slot]\fP"
+Edit the given template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Parent project of the template to edit\&. 
+.br
+\fItemplate_name\fP Name of the template to edit within its parent project\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if this editor was able to edit the given template, false otherwise 
+.RE
+.PP
+TODO The TBT does not exist, manage error
+.SS "bool QETTitleBlockTemplateEditor::edit (\fBTitleBlockTemplate\fP * tbt)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt\fP Title block template to be directly edited 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+false if a problem occurred while opening the template, true otherwise\&. 
+.RE
+.PP
+
+.SS "bool QETTitleBlockTemplateEditor::editCopyOf (const \fBTitleBlockTemplate\fP * tbt)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt\fP Title block template to be edited 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+false if a problem occurred while opening the template, true otherwise\&. 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::editLogos ()\fC [slot]\fP"
+Launches the logo manager widget, which allows the user to manage the logos embedded within the edited template\&. 
+.SS "void QETTitleBlockTemplateEditor::editTemplateInformation ()\fC [slot]\fP"
+Edit extra information attached to the template\&. 
+.SS "void QETTitleBlockTemplateEditor::firstActivation (QEvent * event)\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Object describing the received event\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBQETMainWindow\fP\&.
+.SS "\fBTitleBlockTemplateLocation\fP QETTitleBlockTemplateEditor::getTitleBlockTemplateLocationFromUser (const QString & title = \fCQString()\fP, bool existing_only = \fCtrue\fP)\fC [private]\fP, \fC [slot]\fP"
+Ask the user for a title block template location 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitle\fP Title displayed by the dialog window 
+.br
+\fIexisting_only\fP True for the user to be forced to choose an existing template, false if he may specify the template name 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The location chosen by the user, or an empty \fBTitleBlockTemplateLocation\fP if the user cancelled the dialog 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::initActions ()\fC [private]\fP"
+Initialize the various actions\&. 
+.SS "void QETTitleBlockTemplateEditor::initLogoManager ()\fC [private]\fP"
+Initialize the logo manager 
+.SS "void QETTitleBlockTemplateEditor::initMenus ()\fC [private]\fP"
+Initialize the various menus\&. 
+.SS "void QETTitleBlockTemplateEditor::initToolbars ()\fC [private]\fP"
+Initalize toolbars\&. 
+.SS "void QETTitleBlockTemplateEditor::initWidgets ()\fC [private]\fP"
+Initialize layouts and widgets 
+.SS "bool QETTitleBlockTemplateEditor::isEditing (const QString & filepath)"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if the provided filepath matches the currently edited template\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP path of a title block template on the filesystem 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplateLocation\fP QETTitleBlockTemplateEditor::location () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the location of the currently edited template 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::newTemplate ()\fC [slot]\fP"
+Launch a new title block template editor\&. 
+.SS "void QETTitleBlockTemplateEditor::open ()\fC [slot]\fP"
+Ask the user to choose a title block template from the known collections then open it for edition\&. 
+.SS "bool QETTitleBlockTemplateEditor::openForDuplication () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if this editor will prompt the user for a new template name as soon as the window appears in order to duplicate the edited one\&. 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::openFromFile ()\fC [slot]\fP"
+Ask the user to choose a file supposed to contain a title block template, then open it for edition\&. 
+.SS "void QETTitleBlockTemplateEditor::pushCellUndoCommand (\fBModifyTitleBlockCellCommand\fP * command)\fC [private]\fP, \fC [slot]\fP"
+Configure an undo Command before adding it to the undo stack\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP to be added to the undo stack 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::pushGridUndoCommand (\fBTitleBlockTemplateCommand\fP * command)\fC [private]\fP, \fC [slot]\fP"
+Add an undo Command to the undo stack\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP QUndoCommand to be added to the undo stack 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::pushUndoCommand (QUndoCommand * command)\fC [private]\fP, \fC [slot]\fP"
+Add an undo Command to the undo stack\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP QUndoCommand to be added to the undo stack 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::quit ()\fC [slot]\fP"
+Close the current editor\&. 
+.SS "void QETTitleBlockTemplateEditor::readSettings ()\fC [slot]\fP"
+
+.PP
+\fBQETTitleBlockTemplateEditor::readSettings\fP Read settings\&. 
+.SS "bool QETTitleBlockTemplateEditor::save ()\fC [slot]\fP"
+Save the currently edited title block template back to its parent project\&. 
+.SS "bool QETTitleBlockTemplateEditor::saveAs ()\fC [slot]\fP"
+Ask the user where he wishes to save the currently edited template\&. 
+.SS "bool QETTitleBlockTemplateEditor::saveAs (const QString & filepath)\fC [private]\fP, \fC [slot]\fP"
+Save the template in the provided filepath\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBTitleBlockTemplate::saveToXmlFile()\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP location Location where the title block template should be saved\&. 
+.RE
+.PP
+
+.SS "bool QETTitleBlockTemplateEditor::saveAs (const \fBTitleBlockTemplateLocation\fP & location)\fC [private]\fP, \fC [slot]\fP"
+Save the template under the provided location\&. 
+.PP
+\fBSee also\fP
+.RS 4
+QETProject::setTemplateXmlDescription() 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP Location where the title block template should be saved\&. 
+.RE
+.PP
+
+.SS "bool QETTitleBlockTemplateEditor::saveAsFile ()\fC [slot]\fP"
+Ask the user where on the filesystem he wishes to save the currently edited template\&. 
+.SS "void QETTitleBlockTemplateEditor::savePreviewWidthToApplicationSettings (int former_preview_width, int new_preview_width)\fC [slot]\fP"
+
+.PP
+\fBQETTitleBlockTemplateEditor::savePreviewWidthToApplicationSettings\fP Save the new preview width to application settings\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformer_preview_width\fP : former_preview_width Unused, former preview width 
+.br
+\fInew_preview_width\fP : new_preview_width New preview width 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::selectedCellsChanged (const QList< \fBTitleBlockCell\fP * > & selected_cells)\fC [slot]\fP"
+Update various things when user changes the selected cells\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIselected_cells\fP List of selected cells\&. 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::setOpenForDuplication (bool duplicate)"
+
+.PP
+\fBQETTitleBlockTemplateEditor::setOpenForDuplication\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIduplicate\fP : true for this editor to prompt the user for a new template name as soon as the window appears in order to duplicate the edited one\&. 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::setReadOnly (bool read_only)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIread_only\fP True to restrict this editor to visualization of the currently edited template, false to allow full edition\&. 
+.RE
+.PP
+
+.SS "void QETTitleBlockTemplateEditor::updateActions ()\fC [private]\fP, \fC [slot]\fP"
+Ensure the user interface remains consistent by enabling or disabling adequate actions\&. 
+.SS "void QETTitleBlockTemplateEditor::updateEditorTitle ()\fC [private]\fP, \fC [slot]\fP"
+Set the title of this editor\&. 
+.SS "void QETTitleBlockTemplateEditor::writeSettings ()\fC [slot]\fP"
+
+.PP
+\fBQETTitleBlockTemplateEditor::writeSettings\fP Write the settings\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QAction * QETTitleBlockTemplateEditor::add_col_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::add_row_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::copy_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::cut_\fC [private]\fP"
+
+.SS "QMenu * QETTitleBlockTemplateEditor::display_menu_\fC [private]\fP"
+
+.SS "bool QETTitleBlockTemplateEditor::duplicate_\fC [private]\fP"
+Whether to ask the user a new template name when the window appears in order to rename the edited template\&. 
+.SS "QAction * QETTitleBlockTemplateEditor::edit_info_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::edit_logos_\fC [private]\fP"
+
+.SS "QMenu * QETTitleBlockTemplateEditor::edit_menu_\fC [private]\fP"
+
+.SS "QMenu* QETTitleBlockTemplateEditor::file_menu_\fC [private]\fP"
+
+.PP
+menus TODO 
+.SS "QString QETTitleBlockTemplateEditor::filepath_\fC [private]\fP"
+
+.PP
+Filepath of the currently edited template, if opened from a file\&. 
+.SS "bool QETTitleBlockTemplateEditor::first_activation_\fC [private]\fP"
+
+.PP
+Used to track the first activation of the editor main window\&. 
+.SS "\fBTitleBlockTemplateLocation\fP QETTitleBlockTemplateEditor::location_\fC [private]\fP"
+
+.PP
+Location of the currently edited template\&. 
+.SS "\fBTitleBlockTemplateLogoManager\fP* QETTitleBlockTemplateEditor::logo_manager_\fC [private]\fP"
+
+.PP
+Logo manager widget\&. 
+.SS "QAction * QETTitleBlockTemplateEditor::merge_cells_\fC [private]\fP"
+
+.SS "QAction* QETTitleBlockTemplateEditor::new_\fC [private]\fP"
+
+.PP
+actions 
+.SS "QAction * QETTitleBlockTemplateEditor::open_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::open_from_file_\fC [private]\fP"
+
+.SS "bool QETTitleBlockTemplateEditor::opened_from_file_\fC [private]\fP"
+
+.PP
+Whether to consider the location or the filepath\&. 
+.SS "QAction * QETTitleBlockTemplateEditor::paste_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::quit_\fC [private]\fP"
+
+.SS "bool QETTitleBlockTemplateEditor::read_only_\fC [private]\fP"
+
+.PP
+whether the currently edited template is considered read only 
+.SS "QAction * QETTitleBlockTemplateEditor::redo_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::save_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::save_as_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::save_as_file_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::split_cell_\fC [private]\fP"
+
+.SS "\fBTitleBlockTemplate\fP* QETTitleBlockTemplateEditor::tb_template_\fC [private]\fP"
+
+.PP
+Template Object edited\&. 
+.SS "QDockWidget* QETTitleBlockTemplateEditor::template_cell_editor_dock_widget_\fC [private]\fP"
+
+.PP
+Individual cell widget edition\&. 
+.SS "\fBTitleBlockTemplateCellWidget\fP* QETTitleBlockTemplateEditor::template_cell_editor_widget_\fC [private]\fP"
+
+.SS "QGraphicsScene* QETTitleBlockTemplateEditor::template_edition_area_scene_\fC [private]\fP"
+
+.PP
+Template preview\&. 
+.SS "\fBTitleBlockTemplateView\fP* QETTitleBlockTemplateEditor::template_edition_area_view_\fC [private]\fP"
+
+.SS "QAction* QETTitleBlockTemplateEditor::undo_\fC [private]\fP"
+
+.SS "QDockWidget* QETTitleBlockTemplateEditor::undo_dock_widget_\fC [private]\fP"
+
+.SS "QUndoStack* QETTitleBlockTemplateEditor::undo_stack_\fC [private]\fP"
+
+.PP
+Undo interface\&. 
+.SS "QUndoView* QETTitleBlockTemplateEditor::undo_view_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::zoom_fit_\fC [private]\fP"
+
+.SS "QAction* QETTitleBlockTemplateEditor::zoom_in_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::zoom_out_\fC [private]\fP"
+
+.SS "QAction * QETTitleBlockTemplateEditor::zoom_reset_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,320 @@
+.TH "SearchAndReplaceWorker" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SearchAndReplaceWorker \- The \fBSearchAndReplaceWorker\fP class This class is the worker use to change properties when use the search and replace function of \fBQET\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <searchandreplaceworker\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSearchAndReplaceWorker\fP ()"
+.br
+.ti -1c
+.RI "void \fBreplaceDiagram\fP (QList< \fBDiagram\fP * > diagram_list)"
+.br
+.RI "\fBSearchAndReplaceWorker::replaceDiagram\fP Replace all properties of each diagram in diagram_list, by the current titleblock propertie of this worker\&. "
+.ti -1c
+.RI "void \fBreplaceDiagram\fP (\fBDiagram\fP *diagram)"
+.br
+.ti -1c
+.RI "void \fBreplaceElement\fP (QList< \fBElement\fP * > list)"
+.br
+.RI "\fBSearchAndReplaceWorker::replaceElement\fP Replace all properties of each elements in list All element must belong to the same project, if not this function do nothing\&. All change are made through a undo command append to undo list of the project\&. "
+.ti -1c
+.RI "void \fBreplaceElement\fP (\fBElement\fP *element)"
+.br
+.ti -1c
+.RI "void \fBreplaceIndiText\fP (QList< \fBIndependentTextItem\fP * > list)"
+.br
+.RI "\fBSearchAndReplaceWorker::replaceIndiText\fP Replace all displayed text of independent text of list Each must belong to the same project, if not this function do nothing\&. "
+.ti -1c
+.RI "void \fBreplaceIndiText\fP (\fBIndependentTextItem\fP *text)"
+.br
+.ti -1c
+.RI "void \fBreplaceConductor\fP (QList< \fBConductor\fP * > list)"
+.br
+.RI "\fBSearchAndReplaceWorker::replaceConductor\fP Replace all properties of each conductor in list All conductor must belong to the same project, if not this function do nothing\&. All change are made through a undo command append to undo list of the project\&. "
+.ti -1c
+.RI "void \fBreplaceConductor\fP (\fBConductor\fP *conductor)"
+.br
+.ti -1c
+.RI "void \fBreplaceAdvanced\fP (QList< \fBDiagram\fP * > diagrams=QList< \fBDiagram\fP * >(), QList< \fBElement\fP * > elements=QList< \fBElement\fP * >(), QList< \fBIndependentTextItem\fP * > texts=QList< \fBIndependentTextItem\fP * >(), QList< \fBConductor\fP * > conductors=QList< \fBConductor\fP * >())"
+.br
+.RI "\fBSearchAndReplaceWorker::replaceAdvanced\fP Apply the change of text according to the current advancedStruct All items in the 4 list must belong to the same \fBQETProject\fP, if not this function do nothing\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBeraseText\fP ()"
+.br
+.ti -1c
+.RI "static QDate \fBeraseDate\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsetupLineEdit\fP (QLineEdit *l, QCheckBox *cb, QString str)"
+.br
+.RI "\fBSearchAndReplaceWorker::setupLineEdit\fP With search and replace, when the variable to edit is a text, the editor is always the same no matter if it is for a folio, element or conductor\&. The editor is a QLineEdit to edit the text and checkbox to erase the text if checked\&. This function fill the editor, from the current string\&. "
+.ti -1c
+.RI "static \fBConductorProperties\fP \fBinvalidConductorProperties\fP ()"
+.br
+.ti -1c
+.RI "static \fBConductorProperties\fP \fBapplyChange\fP (const \fBConductorProperties\fP &original, const \fBConductorProperties\fP &change)"
+.br
+.RI "\fBSearchAndReplaceWorker::applyChange\fP\&. "
+.ti -1c
+.RI "static QString \fBapplyChange\fP (const QString &original, const QString &change)"
+.br
+.RI "\fBSearchAndReplaceWorker::applyChange\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBreplaceAdvanced\fP (\fBDiagram\fP *diagram)"
+.br
+.RI "\fBSearchAndReplaceWorker::replaceAdvanced\fP\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBreplaceAdvanced\fP (\fBElement\fP *element)"
+.br
+.RI "\fBSearchAndReplaceWorker::replaceAdvanced\fP\&. "
+.ti -1c
+.RI "\fBConductorProperties\fP \fBreplaceAdvanced\fP (\fBConductor\fP *conductor)"
+.br
+.RI "\fBSearchAndReplaceWorker::replaceAdvanced\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBm_titleblock_properties\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBm_element_context\fP"
+.br
+.ti -1c
+.RI "QString \fBm_indi_text\fP"
+.br
+.ti -1c
+.RI "\fBConductorProperties\fP \fBm_conductor_properties\fP"
+.br
+.ti -1c
+.RI "\fBadvancedReplaceStruct\fP \fBm_advanced_struct\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBSearchAndReplaceWidget\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBSearchAndReplaceWorker\fP class This class is the worker use to change properties when use the search and replace function of \fBQET\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SearchAndReplaceWorker::SearchAndReplaceWorker ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBConductorProperties\fP SearchAndReplaceWorker::applyChange (const \fBConductorProperties\fP & original, const \fBConductorProperties\fP & change)\fC [static]\fP"
+
+.PP
+\fBSearchAndReplaceWorker::applyChange\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoriginal\fP : the original properties 
+.br
+\fIchange\fP : the change properties, to be merged with original 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a new conductor properties with the change applyed\&. 
+.RE
+.PP
+
+.SS "QString SearchAndReplaceWorker::applyChange (const QString & original, const QString & change)\fC [static]\fP"
+
+.PP
+\fBSearchAndReplaceWorker::applyChange\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoriginal\fP : the original string 
+.br
+\fIchange\fP : the changed string: 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the string to be use in the properties 
+.RE
+.PP
+
+.SS "static QDate SearchAndReplaceWorker::eraseDate ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static QString SearchAndReplaceWorker::eraseText ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "\fBConductorProperties\fP SearchAndReplaceWorker::invalidConductorProperties ()\fC [static]\fP"
+
+.SS "\fBConductorProperties\fP SearchAndReplaceWorker::replaceAdvanced (\fBConductor\fP * conductor)\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWorker::replaceAdvanced\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the conductor properties with the change applied, according to the state of m_advanced_struct 
+.RE
+.PP
+
+.SS "\fBTitleBlockProperties\fP SearchAndReplaceWorker::replaceAdvanced (\fBDiagram\fP * diagram)\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWorker::replaceAdvanced\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the titleblock properties with the change applied, according to the state of m_advanced_struct 
+.RE
+.PP
+
+.SS "\fBDiagramContext\fP SearchAndReplaceWorker::replaceAdvanced (\fBElement\fP * element)\fC [private]\fP"
+
+.PP
+\fBSearchAndReplaceWorker::replaceAdvanced\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The diagram context with the change applied, according to the state of m_advanced_struct 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWorker::replaceAdvanced (QList< \fBDiagram\fP * > diagrams = \fCQList<\fBDiagram\fP *>()\fP, QList< \fBElement\fP * > elements = \fCQList<\fBElement\fP *>()\fP, QList< \fBIndependentTextItem\fP * > texts = \fCQList<\fBIndependentTextItem\fP *>()\fP, QList< \fBConductor\fP * > conductors = \fCQList<\fBConductor\fP *>()\fP)"
+
+.PP
+\fBSearchAndReplaceWorker::replaceAdvanced\fP Apply the change of text according to the current advancedStruct All items in the 4 list must belong to the same \fBQETProject\fP, if not this function do nothing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagrams\fP : 
+.br
+\fIelements\fP : 
+.br
+\fItexts\fP : 
+.br
+\fIconductors\fP : 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWorker::replaceConductor (\fBConductor\fP * conductor)"
+
+.SS "void SearchAndReplaceWorker::replaceConductor (QList< \fBConductor\fP * > list)"
+
+.PP
+\fBSearchAndReplaceWorker::replaceConductor\fP Replace all properties of each conductor in list All conductor must belong to the same project, if not this function do nothing\&. All change are made through a undo command append to undo list of the project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlist\fP 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWorker::replaceDiagram (\fBDiagram\fP * diagram)"
+
+.SS "void SearchAndReplaceWorker::replaceDiagram (QList< \fBDiagram\fP * > diagram_list)"
+
+.PP
+\fBSearchAndReplaceWorker::replaceDiagram\fP Replace all properties of each diagram in diagram_list, by the current titleblock propertie of this worker\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_list\fP : list of diagram to be changed, all diagrams must belong to the same project; 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWorker::replaceElement (\fBElement\fP * element)"
+
+.SS "void SearchAndReplaceWorker::replaceElement (QList< \fBElement\fP * > list)"
+
+.PP
+\fBSearchAndReplaceWorker::replaceElement\fP Replace all properties of each elements in list All element must belong to the same project, if not this function do nothing\&. All change are made through a undo command append to undo list of the project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlist\fP 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWorker::replaceIndiText (\fBIndependentTextItem\fP * text)"
+
+.SS "void SearchAndReplaceWorker::replaceIndiText (QList< \fBIndependentTextItem\fP * > list)"
+
+.PP
+\fBSearchAndReplaceWorker::replaceIndiText\fP Replace all displayed text of independent text of list Each must belong to the same project, if not this function do nothing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlist\fP 
+.RE
+.PP
+
+.SS "void SearchAndReplaceWorker::setupLineEdit (QLineEdit * l, QCheckBox * cb, QString str)\fC [static]\fP"
+
+.PP
+\fBSearchAndReplaceWorker::setupLineEdit\fP With search and replace, when the variable to edit is a text, the editor is always the same no matter if it is for a folio, element or conductor\&. The editor is a QLineEdit to edit the text and checkbox to erase the text if checked\&. This function fill the editor, from the current string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIl\fP 
+.br
+\fIcb\fP 
+.br
+\fIstr\fP 
+.RE
+.PP
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBSearchAndReplaceWidget\fP\fC [friend]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBadvancedReplaceStruct\fP SearchAndReplaceWorker::m_advanced_struct\fC [private]\fP"
+
+.SS "\fBConductorProperties\fP SearchAndReplaceWorker::m_conductor_properties\fC [private]\fP"
+
+.SS "\fBDiagramContext\fP SearchAndReplaceWorker::m_element_context\fC [private]\fP"
+
+.SS "QString SearchAndReplaceWorker::m_indi_text\fC [private]\fP"
+
+.SS "\fBTitleBlockProperties\fP SearchAndReplaceWorker::m_titleblock_properties\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

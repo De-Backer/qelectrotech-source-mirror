@@ -1,0 +1,146 @@
+.TH "ElementCollectionHandler" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementCollectionHandler \- The \fBElementCollectionHandler\fP class Provide several method to copy element or directory from a collection to another collection\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementcollectionhandler\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementCollectionHandler\fP ()"
+.br
+.RI "\fBElementCollectionHandler::ElementCollectionHandler\fP\&. "
+.ti -1c
+.RI "\fB~ElementCollectionHandler\fP ()"
+.br
+.ti -1c
+.RI "\fBElementsLocation\fP \fBcopy\fP (\fBElementsLocation\fP &source, \fBElementsLocation\fP &destination)"
+.br
+.RI "\fBElementCollectionHandler::copy\fP Copy the content of collection represented by source to the collection represented by destination\&. Destination must be a directory, else the copy do nothing and return a null ElementLocation if destination have an item with the same name of source, a dialog ask to user what to do\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP \fBcreateDir\fP (\fBElementsLocation\fP &parent, const QString &name, const \fBNamesList\fP &name_list)"
+.br
+.RI "\fBElementCollectionHandler::createDir\fP Create a directorie with name as child of parent\&. Parent must be a directory\&. "
+.ti -1c
+.RI "bool \fBimportFromProject\fP (\fBQETProject\fP *project, \fBElementsLocation\fP &location)"
+.br
+.RI "\fBElementCollectionHandler::importFromProject\fP Import the element represented by location to the embedded collection of project at the same path\&. location must represente an element owned by a project embedded collection\&. "
+.ti -1c
+.RI "bool \fBsetNames\fP (\fBElementsLocation\fP &location, const \fBNamesList\fP &name_list)"
+.br
+.RI "\fBElementCollectionHandler::setNames\fP Set the names stored in name_list as the names of the item represented by location\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBECHStrategy\fP * \fBm_strategy\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementCollectionHandler\fP class Provide several method to copy element or directory from a collection to another collection\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementCollectionHandler::ElementCollectionHandler ()"
+
+.PP
+\fBElementCollectionHandler::ElementCollectionHandler\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget\fP 
+.RE
+.PP
+
+.SS "ElementCollectionHandler::~ElementCollectionHandler ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBElementsLocation\fP ElementCollectionHandler::copy (\fBElementsLocation\fP & source, \fBElementsLocation\fP & destination)"
+
+.PP
+\fBElementCollectionHandler::copy\fP Copy the content of collection represented by source to the collection represented by destination\&. Destination must be a directory, else the copy do nothing and return a null ElementLocation if destination have an item with the same name of source, a dialog ask to user what to do\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsource\fP 
+.br
+\fIdestination\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP ElementCollectionHandler::createDir (\fBElementsLocation\fP & parent, const QString & name, const \fBNamesList\fP & name_list)"
+
+.PP
+\fBElementCollectionHandler::createDir\fP Create a directorie with name as child of parent\&. Parent must be a directory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : parent of the dir to create 
+.br
+\fIname\fP : name of directorie to create 
+.br
+\fIname_list\fP : translations of the directorie name 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+: \fBElementsLocation\fP that represent the new directorie, location can be null if an error was occurred 
+.RE
+.PP
+
+.SS "bool ElementCollectionHandler::importFromProject (\fBQETProject\fP * project, \fBElementsLocation\fP & location)"
+
+.PP
+\fBElementCollectionHandler::importFromProject\fP Import the element represented by location to the embedded collection of project at the same path\&. location must represente an element owned by a project embedded collection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : project where copy the element 
+.br
+\fIlocation\fP : location to copy 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if import with success 
+.RE
+.PP
+
+.SS "bool ElementCollectionHandler::setNames (\fBElementsLocation\fP & location, const \fBNamesList\fP & name_list)"
+
+.PP
+\fBElementCollectionHandler::setNames\fP Set the names stored in name_list as the names of the item represented by location\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP : location to change the names 
+.br
+\fIname_list\fP : \fBNamesList\fP to use 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+return true if success 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBECHStrategy\fP* ElementCollectionHandler::m_strategy = nullptr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

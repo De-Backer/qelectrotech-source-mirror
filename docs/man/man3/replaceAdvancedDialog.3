@@ -1,0 +1,115 @@
+.TH "replaceAdvancedDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+replaceAdvancedDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <replaceadvanceddialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBreplaceAdvancedDialog\fP (\fBadvancedReplaceStruct\fP advanced, QWidget *parent=nullptr)"
+.br
+.RI "\fBreplaceAdvancedDialog::replaceAdvancedDialog\fP "
+.ti -1c
+.RI "\fB~replaceAdvancedDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetAdvancedStruct\fP (\fBadvancedReplaceStruct\fP advanced)"
+.br
+.RI "\fBreplaceAdvancedDialog::setAdvancedStruct\fP Set the edited advanced struct "
+.ti -1c
+.RI "\fBadvancedReplaceStruct\fP \fBadvancedStruct\fP () const"
+.br
+.RI "\fBreplaceAdvancedDialog::advancedStruct\fP "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_who_cb_currentIndexChanged\fP (int index)"
+.br
+.RI "\fBreplaceAdvancedDialog::on_m_who_cb_currentIndexChanged\fP "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfillWhatComboBox\fP (int index)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::replaceAdvancedDialog * \fBui\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "replaceAdvancedDialog::replaceAdvancedDialog (\fBadvancedReplaceStruct\fP advanced, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBreplaceAdvancedDialog::replaceAdvancedDialog\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIadvanced\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "replaceAdvancedDialog::~replaceAdvancedDialog ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBadvancedReplaceStruct\fP replaceAdvancedDialog::advancedStruct () const"
+
+.PP
+\fBreplaceAdvancedDialog::advancedStruct\fP 
+.PP
+\fBReturns\fP
+.RS 4
+the edited advanced struct 
+.RE
+.PP
+
+.SS "void replaceAdvancedDialog::fillWhatComboBox (int index)\fC [private]\fP"
+
+.SS "void replaceAdvancedDialog::on_m_who_cb_currentIndexChanged (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBreplaceAdvancedDialog::on_m_who_cb_currentIndexChanged\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+
+.SS "void replaceAdvancedDialog::setAdvancedStruct (\fBadvancedReplaceStruct\fP advanced)"
+
+.PP
+\fBreplaceAdvancedDialog::setAdvancedStruct\fP Set the edited advanced struct 
+.PP
+\fBParameters\fP
+.RS 4
+\fIadvanced\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::replaceAdvancedDialog* replaceAdvancedDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

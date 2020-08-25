@@ -1,0 +1,37 @@
+<map id="DiagramTextItem::setFont" name="DiagramTextItem::setFont">
+<area shape="rect" id="node1" title=" " alt="" coords="1533,231,1708,258"/>
+<area shape="rect" id="node2" href="$d4/dbd/class_diagram_text_item.html#a2d70f2704345f37b6ea53a2a552c0354" title="DiagramTextItem::build Build this item with default value." alt="" coords="1316,13,1473,39"/>
+<area shape="rect" id="node4" href="$d0/d59/class_dynamic_element_text_item.html#a6524afa5a7599a20abe5fa4a6b11fe67" title="DynamicElementTextItem::DynamicElementTextItem Constructor." alt="" coords="1304,64,1485,105"/>
+<area shape="rect" id="node5" href="$dc/d1c/class_independent_text_item.html#a0a8467ef11a270401223e88f706575a9" title=" " alt="" coords="1323,129,1467,171"/>
+<area shape="rect" id="node6" href="$d0/d59/class_dynamic_element_text_item.html#ab5b363836fc16f3007145c691fec914a" title="DynamicElementTextItem::fromXml Import this text from xml." alt="" coords="1308,195,1481,236"/>
+<area shape="rect" id="node9" href="$d5/d50/class_element.html#a904453810089404ad88dc7ad1d99a441" title="Element::fromXml Import the parameters of this element from a xml document. When call this function e..." alt="" coords="1078,307,1205,334"/>
+<area shape="rect" id="node15" href="$dc/d1c/class_independent_text_item.html#a0fa67ecab4a071ea289e5ee8b9bc6380" title=" " alt="" coords="1319,363,1471,404"/>
+<area shape="rect" id="node16" href="$d5/d50/class_element.html#a986ebd80d8930def013e94f3ca8c8cdb" title="Element::parseInput Parse the input (old text field) the parsed input are converted to dynamic text f..." alt="" coords="1325,261,1464,287"/>
+<area shape="rect" id="node17" href="$da/d7f/class_conductor.html#a23f980cf7a29cfe55378b504ecfecde1" title="Conductor::setProperties Set property as current property of conductor." alt="" coords="1311,570,1479,597"/>
+<area shape="rect" id="node3" href="$d4/dbd/class_diagram_text_item.html#adc8f960c724842e52385037c8a2dc09c" title="DiagramTextItem::DiagramTextItem." alt="" coords="1052,5,1231,47"/>
+<area shape="rect" id="node7" href="$d6/dfc/class_import_element_text_pattern.html#ab5ee9f26fdbf4ec21dc4f853fe45ac30" title="ImportElementTextPattern::apply Apply the user choice." alt="" coords="1054,140,1229,181"/>
+<area shape="rect" id="node11" href="$d5/d50/class_element.html#a3636c0bffbfe918f48a44c58044a5381" title="Element::parseDynamicText Create the dynamic text field describ in dom_element." alt="" coords="1048,206,1235,233"/>
+<area shape="rect" id="node8" href="$d6/dfc/class_import_element_text_pattern.html#a95c6943c345304d7858f4daded820cbf" title=" " alt="" coords="779,140,962,181"/>
+<area shape="rect" id="node10" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="807,307,935,334"/>
+<area shape="rect" id="node12" href="$d5/d50/class_element.html#a89723eed743ef8077a2e25322bd3e8b4" title="Element::parseElement Parse the element of the xml description of this element." alt="" coords="792,231,949,258"/>
+<area shape="rect" id="node13" href="$d5/d50/class_element.html#a26daf036ef51d92d37c14171f59ef10e" title="Element::buildFromXml Build this element from an xml description." alt="" coords="535,231,693,258"/>
+<area shape="rect" id="node14" href="$d5/d50/class_element.html#a5ecb4a8b8a296bf3a5bb90cb66fe6d49" title="Element::Element." alt="" coords="295,231,420,258"/>
+<area shape="rect" id="node18" href="$da/d7f/class_conductor.html#a76859ff778f0d9af3ca6d7bc84c26e6d" title="Conductor::Conductor Default constructor." alt="" coords="1066,723,1217,750"/>
+<area shape="rect" id="node19" href="$d0/d37/class_conductor_creator.html#a4aa5d2cbe62a6859c9ab61e1692e9b34" title="ConductorCreator::ConductorCreator Create an electrical potential between all terminals of terminals_..." alt="" coords="1045,775,1238,816"/>
+<area shape="rect" id="node20" href="$d9/d75/class_elements_mover.html#a4bb22e4688e765c78053bf25855d6159" title="ElementsMover::endMovement Ended the current movement by creating an undo added to the undostack of t..." alt="" coords="513,771,715,798"/>
+<area shape="rect" id="node25" href="$da/d7f/class_conductor.html#a74db48e53dcea4e31d4b16b8c6bc7ce7" title="Conductor::fromXml Load the conductor and her information from xml element." alt="" coords="1072,541,1211,567"/>
+<area shape="rect" id="node26" href="$dc/d46/class_terminal.html#ab63e726d6df8b96acf0c427e7f8f1fd9" title="Terminal::mouseReleaseEvent." alt="" coords="515,374,713,401"/>
+<area shape="rect" id="node27" href="$de/d1d/class_conductor_auto_numerotation.html#aec981865ae357c33c7aaf72f18922239" title="ConductorAutoNumerotation::numerateNewConductor create and apply a new numerotation to m_conductor." alt="" coords="1048,475,1235,516"/>
+<area shape="rect" id="node32" href="$de/d1d/class_conductor_auto_numerotation.html#a42ef087c8e73f62a579b57358fa36f6a" title="ConductorAutoNumerotation::numeratePotential Numerate a conductor on an existing potential." alt="" coords="1048,409,1235,451"/>
+<area shape="rect" id="node33" href="$d8/db3/class_delete_q_graphics_item_command.html#a0412a1c778fa2488cc5dca37c63bda93" title="DeleteQGraphicsItemCommand::setPotentialsOfRemovedElements This function creates new conductors (if n..." alt="" coords="1027,592,1256,633"/>
+<area shape="rect" id="node35" href="$da/d7f/class_conductor.html#aa1955dfad47e46a874d83fa606269e8a" title="Conductor::setPropertiesToPotential." alt="" coords="1055,657,1227,699"/>
+<area shape="rect" id="node21" href="$d3/d37/class_diagram.html#a1866d6dd7f4ea039f0c134f2b4c54576" title="Diagram::keyReleaseEvent This event is managed by diagram event interface if any. Else move selected ..." alt="" coords="268,771,447,798"/>
+<area shape="rect" id="node22" href="$d7/db5/class_qet_graphics_item.html#a0fa30ec87bac9208747d0f9cafb37f0f" title="QetGraphicsItem::mouseReleaseEvent handle mouse release click." alt="" coords="250,823,465,864"/>
+<area shape="rect" id="node24" href="$d4/dbd/class_diagram_text_item.html#a0e364e18f1103e62eafbcd43c675f36c" title="DiagramTextItem::mouseReleaseEvent." alt="" coords="249,705,465,747"/>
+<area shape="rect" id="node23" href="$d5/d50/class_element.html#a8dd07f73b39bcd0f76dcc212339838ae" title="Element::mouseReleaseEvent." alt="" coords="5,830,201,857"/>
+<area shape="rect" id="node28" href="$de/d1d/class_conductor_auto_numerotation.html#a16e41eafdceb149b65e164cbe91d5c9a" title="ConductorAutoNumerotation::numerate execute the automatic numerotation." alt="" coords="777,467,964,508"/>
+<area shape="rect" id="node29" href="$de/d1f/class_diagram_event_add_element.html#af36a8f0e0220dfe7ba3430e99bb257b9" title="DiagramEventAddElement::addElement Add an element at the current pos en current rotation,..." alt="" coords="527,523,701,564"/>
+<area shape="rect" id="node31" href="$d5/dcc/class_multi_paste_dialog.html#a2d6de36192586c285fb858a2ab367878" title=" " alt="" coords="529,457,699,499"/>
+<area shape="rect" id="node30" href="$de/d1f/class_diagram_event_add_element.html#a83197f59aa1fe080ac85c7fc6124be53" title="DiagramEventAddElement::mouseReleaseEvent Right button finish this event (isRunning = false) and emit..." alt="" coords="270,523,445,564"/>
+<area shape="rect" id="node34" href="$d8/db3/class_delete_q_graphics_item_command.html#a2aad9ad3ae508a9d1f662845607123c2" title="DeleteQGraphicsItemCommand::DeleteQGraphicsItemCommand." alt="" coords="763,592,979,633"/>
+</map>

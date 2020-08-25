@@ -1,0 +1,278 @@
+.TH "ElementInfoWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementInfoWidget \- The \fBElementInfoWidget\fP class this class is a widget to edit an element informations\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementinfowidget\&.h>\fP
+.PP
+Inherits \fBAbstractElementPropertiesEditorWidget\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementInfoWidget\fP (\fBElement\fP *elmt, QWidget *parent=nullptr)"
+.br
+.RI "\fBElementInfoWidget::ElementInfoWidget\fP Constructor\&. "
+.ti -1c
+.RI "\fB~ElementInfoWidget\fP () override"
+.br
+.RI "\fBElementInfoWidget::~ElementInfoWidget\fP Destructor\&. "
+.ti -1c
+.RI "void \fBsetElement\fP (\fBElement\fP *element) override"
+.br
+.RI "\fBElementInfoWidget::setElement\fP Set element to be the edited element\&. "
+.ti -1c
+.RI "void \fBapply\fP () override"
+.br
+.RI "\fBElementInfoWidget::apply\fP Apply the new information with a new undo command (got with method associatedUndo) pushed to the stack of element project\&. "
+.ti -1c
+.RI "QUndoCommand * \fBassociatedUndo\fP () const override"
+.br
+.RI "\fBElementInfoWidget::associatedUndo\fP If the edited info is different of the actual element info, return a QUndoCommand with the change\&. If no change return nullptr;\&. "
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.RI "\fBPropertiesEditorWidget::title\fP\&. "
+.ti -1c
+.RI "bool \fBsetLiveEdit\fP (bool live_edit) override"
+.br
+.RI "\fBElementInfoWidget::setLiveEdit\fP\&. "
+.ti -1c
+.RI "void \fBupdateUi\fP () override"
+.br
+.RI "\fBElementInfoWidget::updateUi\fP fill information fetch in m_element_info to the corresponding line edit\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBcurrentInfo\fP () const"
+.br
+.RI "\fBElementInfoWidget::currentInfo\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBevent\fP (QEvent *event) override"
+.br
+.RI "\fBElementInfoWidget::event\fP Reimplemented from QWidget::event Only give focus to the first line edit at first activation\&. After send the event to QWidget\&. "
+.ti -1c
+.RI "void \fBenableLiveEdit\fP () override"
+.br
+.RI "\fBElementInfoWidget::enableLiveEdit\fP Enable the live edit mode\&. "
+.ti -1c
+.RI "void \fBdisableLiveEdit\fP () override"
+.br
+.RI "\fBElementInfoWidget::disableLiveEdit\fP disable the live edit mode\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBfirstActivated\fP ()"
+.br
+.RI "\fBElementInfoWidget::firstActivated\fP Slot activated when this widget is show\&. Set the focus to the first line edit provided by this widget\&. "
+.ti -1c
+.RI "void \fBelementInfoChange\fP ()"
+.br
+.RI "\fBElementInfoWidget::elementInfoChange\fP This slot is called when m_element::elementInformation change\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBbuildInterface\fP ()"
+.br
+.RI "\fBElementInfoWidget::buildInterface\fP Build the widget\&. "
+.ti -1c
+.RI "\fBElementInfoPartWidget\fP * \fBinfoPartWidgetForKey\fP (const QString &key) const"
+.br
+.RI "\fBElementInfoWidget::infoPartWidgetForKey\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ElementInfoWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "QList< \fBElementInfoPartWidget\fP * > \fBm_eipw_list\fP"
+.br
+.ti -1c
+.RI "bool \fBm_first_activation\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBElementInfoWidget\fP class this class is a widget to edit an element informations\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementInfoWidget::ElementInfoWidget (\fBElement\fP * elmt, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBElementInfoWidget::ElementInfoWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP element to edit information 
+.br
+\fIparent\fP parent widget 
+.RE
+.PP
+
+.SS "ElementInfoWidget::~ElementInfoWidget ()\fC [override]\fP"
+
+.PP
+\fBElementInfoWidget::~ElementInfoWidget\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementInfoWidget::apply ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementInfoWidget::apply\fP Apply the new information with a new undo command (got with method associatedUndo) pushed to the stack of element project\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "QUndoCommand * ElementInfoWidget::associatedUndo () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementInfoWidget::associatedUndo\fP If the edited info is different of the actual element info, return a QUndoCommand with the change\&. If no change return nullptr;\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ElementInfoWidget::buildInterface ()\fC [private]\fP"
+
+.PP
+\fBElementInfoWidget::buildInterface\fP Build the widget\&. 
+.SS "\fBDiagramContext\fP ElementInfoWidget::currentInfo () const"
+
+.PP
+\fBElementInfoWidget::currentInfo\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the info currently edited 
+.RE
+.PP
+
+.SS "void ElementInfoWidget::disableLiveEdit ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementInfoWidget::disableLiveEdit\fP disable the live edit mode\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ElementInfoWidget::elementInfoChange ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementInfoWidget::elementInfoChange\fP This slot is called when m_element::elementInformation change\&. 
+.SS "void ElementInfoWidget::enableLiveEdit ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementInfoWidget::enableLiveEdit\fP Enable the live edit mode\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "bool ElementInfoWidget::event (QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementInfoWidget::event\fP Reimplemented from QWidget::event Only give focus to the first line edit at first activation\&. After send the event to QWidget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void ElementInfoWidget::firstActivated ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBElementInfoWidget::firstActivated\fP Slot activated when this widget is show\&. Set the focus to the first line edit provided by this widget\&. 
+.SS "\fBElementInfoPartWidget\fP * ElementInfoWidget::infoPartWidgetForKey (const QString & key) const\fC [private]\fP"
+
+.PP
+\fBElementInfoWidget::infoPartWidgetForKey\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the \fBElementInfoPartWidget\fP with key key, if not found return nullptr; 
+.RE
+.PP
+
+.SS "void ElementInfoWidget::setElement (\fBElement\fP * element)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementInfoWidget::setElement\fP Set element to be the edited element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.PP
+Implements \fBAbstractElementPropertiesEditorWidget\fP\&.
+.SS "bool ElementInfoWidget::setLiveEdit (bool live_edit)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementInfoWidget::setLiveEdit\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlive_edit\fP true : enable the live edit mode, false disable 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+always true; 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "QString ElementInfoWidget::title () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorWidget::title\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the title of this editor 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ElementInfoWidget::updateUi ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementInfoWidget::updateUi\fP fill information fetch in m_element_info to the corresponding line edit\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<\fBElementInfoPartWidget\fP *> ElementInfoWidget::m_eipw_list\fC [private]\fP"
+
+.SS "bool ElementInfoWidget::m_first_activation\fC [private]\fP"
+
+.SS "Ui::ElementInfoWidget* ElementInfoWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,78 @@
+.TH "NewConductorPotentialSelector" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NewConductorPotentialSelector \- The \fBNewConductorPotentialSelector\fP class Use for get the conductor propertie when two potentials is linked by a conductor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBAbstractPotentialSelector\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNewConductorPotentialSelector\fP (\fBConductor\fP *conductor)"
+.br
+.ti -1c
+.RI "bool \fBisValid\fP () const override"
+.br
+.ti -1c
+.RI "void \fBgetPotential\fP (\fBTerminal\fP *terminal, \fBautonum::sequentialNumbers\fP &seq_num, int &number, QList< \fBConductorProperties\fP > &properties_list, QList< \fBConductor\fP * > &c_list)"
+.br
+.RI "getPotential Get the conductor propertie of the potential at terminal, and the number of wire in this potential\&. "
+.ti -1c
+.RI "\fB~NewConductorPotentialSelector\fP () override"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_is_valid\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBNewConductorPotentialSelector\fP class Use for get the conductor propertie when two potentials is linked by a conductor\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NewConductorPotentialSelector::NewConductorPotentialSelector (\fBConductor\fP * conductor)\fC [inline]\fP"
+
+.SS "NewConductorPotentialSelector::~NewConductorPotentialSelector ()\fC [inline]\fP, \fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void NewConductorPotentialSelector::getPotential (\fBTerminal\fP * terminal, \fBautonum::sequentialNumbers\fP & seq_num, int & number, QList< \fBConductorProperties\fP > & properties_list, QList< \fBConductor\fP * > & c_list)\fC [inline]\fP"
+
+.PP
+getPotential Get the conductor propertie of the potential at terminal, and the number of wire in this potential\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIterminal\fP 
+.br
+\fIseq_num\fP 
+.br
+\fInumber\fP 
+.br
+\fIproperties_list\fP 
+.br
+\fIc_list\fP 
+.RE
+.PP
+
+.SS "bool NewConductorPotentialSelector::isValid () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBAbstractPotentialSelector\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool NewConductorPotentialSelector::m_is_valid\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

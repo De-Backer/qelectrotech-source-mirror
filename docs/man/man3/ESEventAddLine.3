@@ -1,0 +1,126 @@
+.TH "ESEventAddLine" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESEventAddLine \- The \fBESEventAddLine\fP class This ESEvent manage creation of line in a \fBElementScene\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eseventaddline\&.h>\fP
+.PP
+Inherits \fBESEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESEventAddLine\fP (\fBElementScene\fP *scene)"
+.br
+.RI "\fBESEventAddLine::ESEventAddLine\fP Constructor\&. "
+.ti -1c
+.RI "\fB~ESEventAddLine\fP () override"
+.br
+.RI "\fBESEventAddLine::~ESEventAddLine\fP destructor\&. "
+.ti -1c
+.RI "bool \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddLine::mousePressEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddLine::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddLine::mouseReleaseEvent\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPartLine\fP * \fBm_line\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBESEventAddLine\fP class This ESEvent manage creation of line in a \fBElementScene\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESEventAddLine::ESEventAddLine (\fBElementScene\fP * scene)"
+
+.PP
+\fBESEventAddLine::ESEventAddLine\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP : scene where we operate this action 
+.RE
+.PP
+
+.SS "ESEventAddLine::~ESEventAddLine ()\fC [override]\fP"
+
+.PP
+\fBESEventAddLine::~ESEventAddLine\fP destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ESEventAddLine::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddLine::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddLine::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddLine::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddLine::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddLine::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPartLine\fP* ESEventAddLine::m_line\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

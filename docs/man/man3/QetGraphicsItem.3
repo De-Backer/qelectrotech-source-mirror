@@ -1,0 +1,244 @@
+.TH "QetGraphicsItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QetGraphicsItem
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetgraphicsitem\&.h>\fP
+.PP
+Inherits QGraphicsObject\&.
+.PP
+Inherited by \fBDiagramImageItem\fP, \fBElement\fP, \fBQetGraphicsTableItem\fP, and \fBQetShapeItem\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQetGraphicsItem\fP (QGraphicsItem *parent=nullptr)"
+.br
+.RI "\fBQetGraphicsItem::QetGraphicsItem\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~QetGraphicsItem\fP () override=0"
+.br
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetPos\fP (const QPointF &p)"
+.br
+.ti -1c
+.RI "virtual void \fBsetPos\fP (qreal x, qreal y)"
+.br
+.ti -1c
+.RI "virtual bool \fBisMovable\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetMovable\fP (bool movable)"
+.br
+.ti -1c
+.RI "virtual void \fBeditProperty\fP ()"
+.br
+.ti -1c
+.RI "virtual QString \fBname\fP () const"
+.br
+.ti -1c
+.RI "\fBQET::GraphicsItemState\fP \fBstate\fP () const"
+.br
+.RI "\fBQetGraphicsItem::state\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBQetGraphicsItem::mouseReleaseEvent\fP handle mouse release click\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBis_movable_\fP"
+.br
+.ti -1c
+.RI "bool \fBm_first_move\fP"
+.br
+.ti -1c
+.RI "bool \fBsnap_to_grid_\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_mouse_to_origin_movement\fP"
+.br
+.ti -1c
+.RI "\fBQET::GraphicsItemState\fP \fBm_state\fP = QET:: GIOK"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QetGraphicsItem::QetGraphicsItem (QGraphicsItem * parent = \fCnullptr\fP)"
+
+.PP
+\fBQetGraphicsItem::QetGraphicsItem\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : Parent Item 
+.RE
+.PP
+
+.SS "QetGraphicsItem::~QetGraphicsItem ()\fC [override]\fP, \fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBDiagram\fP * QetGraphicsItem::diagram () const"
+
+.PP
+.nf
+  @brief QetGraphicsItem::diagram
+
+.fi
+.PP
+ return the diagram of this item 
+.SS "virtual void QetGraphicsItem::editProperty ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBElement\fP, \fBQetShapeItem\fP, and \fBDiagramImageItem\fP\&.
+.SS "virtual bool QetGraphicsItem::isMovable () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.SS "void QetGraphicsItem::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+.nf
+  @brief QetGraphicsItem::mouseDoubleClickEvent
+
+.fi
+.PP
+ handle the mouse double click 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void QetGraphicsItem::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+.nf
+  @brief QetGraphicsItem::mouseMoveEvent
+
+.fi
+.PP
+ handle mouse movement 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void QetGraphicsItem::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+.nf
+  @brief QetGraphicsItem::mousePressEvent
+
+.fi
+.PP
+ handle the mouse click 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void QetGraphicsItem::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBQetGraphicsItem::mouseReleaseEvent\fP handle mouse release click\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "virtual QString QetGraphicsItem::name () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBElement\fP, \fBQetShapeItem\fP, and \fBDiagramImageItem\fP\&.
+.SS "virtual void QetGraphicsItem::setMovable (bool movable)\fC [inline]\fP, \fC [virtual]\fP"
+
+.SS "void QetGraphicsItem::setPos (const QPointF & p)\fC [virtual]\fP"
+
+.PP
+.nf
+  @brief QetGraphicsItem::setPos
+
+.fi
+.PP
+ set the position of the item to p 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP the new position of item 
+.RE
+.PP
+
+.SS "void QetGraphicsItem::setPos (qreal x, qreal y)\fC [virtual]\fP"
+
+.PP
+.nf
+  @brief QetGraphicsItem::setPos
+
+.fi
+.PP
+ set the position of the item 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP new abscisse of item 
+.br
+\fIy\fP new ordonne of item 
+.RE
+.PP
+
+.SS "\fBQET::GraphicsItemState\fP QetGraphicsItem::state () const"
+
+.PP
+\fBQetGraphicsItem::state\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the current state of this item 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool QetGraphicsItem::is_movable_\fC [protected]\fP"
+
+.SS "bool QetGraphicsItem::m_first_move\fC [protected]\fP"
+
+.SS "QPointF QetGraphicsItem::m_mouse_to_origin_movement\fC [protected]\fP"
+
+.SS "\fBQET::GraphicsItemState\fP QetGraphicsItem::m_state = QET:: GIOK\fC [protected]\fP"
+
+.SS "bool QetGraphicsItem::snap_to_grid_\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,165 @@
+.TH "ProjectMainConfigPage" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProjectMainConfigPage
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <projectconfigpages\&.h>\fP
+.PP
+Inherits \fBProjectConfigPage\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectMainConfigPage\fP (\fBQETProject\fP *, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ProjectMainConfigPage\fP () override"
+.br
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.ti -1c
+.RI "QIcon \fBicon\fP () const override"
+.br
+.ti -1c
+.RI "void \fBapplyProjectConf\fP () override"
+.br
+.ti -1c
+.RI "QString \fBprojectTitle\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitWidgets\fP () override"
+.br
+.ti -1c
+.RI "void \fBinitLayout\fP () override"
+.br
+.ti -1c
+.RI "void \fBreadValuesFromProject\fP () override"
+.br
+.ti -1c
+.RI "void \fBadjustReadOnly\fP () override"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QLabel * \fBtitle_label_\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBtitle_value_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBtitle_information_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBproject_variables_label_\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContextWidget\fP * \fBproject_variables_\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectMainConfigPage\fP (const \fBProjectMainConfigPage\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This page enables users to configure the main properties of a project\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ProjectMainConfigPage::ProjectMainConfigPage (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Project this page is editing\&. 
+.br
+\fIparent\fP Parent QWidget 
+.RE
+.PP
+
+.SS "ProjectMainConfigPage::~ProjectMainConfigPage ()\fC [override]\fP"
+Destructor 
+.SS "ProjectMainConfigPage::ProjectMainConfigPage (const \fBProjectMainConfigPage\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ProjectMainConfigPage::adjustReadOnly ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Set the content of this page read only if the project is read only, editable if the project is editable\&. 
+.PP
+Implements \fBProjectConfigPage\fP\&.
+.SS "void ProjectMainConfigPage::applyProjectConf ()\fC [override]\fP, \fC [virtual]\fP"
+Apply the configuration after user input 
+.PP
+Implements \fBProjectConfigPage\fP\&.
+.SS "QIcon ProjectMainConfigPage::icon () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the icon for this page 
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "void ProjectMainConfigPage::initLayout ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Initialize the layout of this page\&. 
+.PP
+Implements \fBProjectConfigPage\fP\&.
+.SS "void ProjectMainConfigPage::initWidgets ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Initialize widgets displayed by the page\&. 
+.PP
+Implements \fBProjectConfigPage\fP\&.
+.SS "QString ProjectMainConfigPage::projectTitle () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the project title entered by the user 
+.RE
+.PP
+
+.SS "void ProjectMainConfigPage::readValuesFromProject ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Read properties from the edited project then fill widgets with them\&. 
+.PP
+Implements \fBProjectConfigPage\fP\&.
+.SS "QString ProjectMainConfigPage::title () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the title for this page 
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagramContextWidget\fP* ProjectMainConfigPage::project_variables_\fC [protected]\fP"
+
+.SS "QLabel* ProjectMainConfigPage::project_variables_label_\fC [protected]\fP"
+
+.SS "QLabel* ProjectMainConfigPage::title_information_\fC [protected]\fP"
+
+.SS "QLabel* ProjectMainConfigPage::title_label_\fC [protected]\fP"
+
+.SS "QLineEdit* ProjectMainConfigPage::title_value_\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

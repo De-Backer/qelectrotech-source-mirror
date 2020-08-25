@@ -1,0 +1,52 @@
+<map id="QETApp::configDir" name="QETApp::configDir">
+<area shape="rect" id="node1" title="QETApp::configDir Return the QET configuration folder, i.e. the path to the folder in which QET will ..." alt="" coords="1053,1035,1184,1062"/>
+<area shape="rect" id="node2" href="$d6/dfc/class_import_element_text_pattern.html#ab5ee9f26fdbf4ec21dc4f853fe45ac30" title="ImportElementTextPattern::apply Apply the user choice." alt="" coords="821,416,995,457"/>
+<area shape="rect" id="node3" href="$d6/dfc/class_import_element_text_pattern.html#a95c6943c345304d7858f4daded820cbf" title=" " alt="" coords="569,188,752,229"/>
+<area shape="rect" id="node4" href="$d7/df8/class_q_e_t_app.html#a0991c2c64acf67c4bea937c8de80aaac" title="QETApp::customElementsDir." alt="" coords="811,539,1005,566"/>
+<area shape="rect" id="node18" href="$d7/df8/class_q_e_t_app.html#a3de92048c4f09d0e936c0b561c7b8c0a" title="QETApp::initConfiguration Reads and takes into account the configuration of the application...." alt="" coords="574,699,747,726"/>
+<area shape="rect" id="node19" href="$d7/df8/class_q_e_t_app.html#afb6be0d7c2334375dce4ea9414bc029a" title="QETApp::QETApp." alt="" coords="325,758,453,785"/>
+<area shape="rect" id="node26" href="$d7/df8/class_q_e_t_app.html#aaa607877c66d4a7004c0b56327d8fbb4" title="QETApp::customTitleBlockTemplatesDir." alt="" coords="818,801,998,843"/>
+<area shape="rect" id="node33" href="$df/d0a/main_8cpp.html#a60cab391eab4513bb27fa19fd905d63c" title="delete_old_log_files delete old log files" alt="" coords="840,985,976,1011"/>
+<area shape="rect" id="node35" href="$d1/df8/class_export_element_text_pattern.html#ae5826375665c58c5e41d038e28c17f09" title="ExportElementTextPattern::ExportElementTextPattern Constructor." alt="" coords="816,919,1000,960"/>
+<area shape="rect" id="node36" href="$d7/d32/class_summary_query_widget.html#a99bac00f00648996c621671ba823616e" title="SummaryQueryWidget::fillSavedQuery Fill the combo box of the saved query." alt="" coords="830,1217,986,1259"/>
+<area shape="rect" id="node38" href="$da/d9a/class_add_table_dialog.html#aa59935e486fa89f43a107f26c1aae247" title=" " alt="" coords="823,1596,993,1637"/>
+<area shape="rect" id="node40" href="$d3/da7/class_element_query_widget.html#aee57ea988dd5d923a6de2d7aac6031c8" title="ElementQueryWidget::fillSavedQuery Fill the combobox of saved queries." alt="" coords="835,1087,981,1128"/>
+<area shape="rect" id="node41" href="$d7/d32/class_summary_query_widget.html#ad4dc4c7ff2cbc68c449d3026b678ebd5" title="SummaryQueryWidget::loadConfig." alt="" coords="830,1152,986,1193"/>
+<area shape="rect" id="node42" href="$da/d9a/class_add_table_dialog.html#ad407e7aa07c0cbf195ac0149d7301ebb" title=" " alt="" coords="817,1494,999,1521"/>
+<area shape="rect" id="node43" href="$df/d0a/main_8cpp.html#a0c89947a98e84f4423c0b19b443f5d46" title="myMessageOutput for debugging" alt="" coords="842,1035,974,1062"/>
+<area shape="rect" id="node44" href="$d3/da7/class_element_query_widget.html#a713bf742bdb8285756762a0d29ab093a" title="ElementQueryWidget::on_m_load_pb_clicked Load a query from nomenclature.json file." alt="" coords="827,1348,989,1389"/>
+<area shape="rect" id="node45" href="$d3/da7/class_element_query_widget.html#aea0b0747b68d16b417a1d25f64a4338f" title="ElementQueryWidget::on_m_save_current_conf_pb_clicked Save the actual query to nomenclature...." alt="" coords="835,1414,981,1470"/>
+<area shape="rect" id="node46" href="$d7/d32/class_summary_query_widget.html#a862ccebd3d58b527acff93c03d92960a" title="SummaryQueryWidget::saveConfig." alt="" coords="830,1283,986,1324"/>
+<area shape="rect" id="node47" href="$da/d9a/class_add_table_dialog.html#afd24419d84a77cb33b9eedd33dcfc676" title=" " alt="" coords="815,1545,1001,1571"/>
+<area shape="rect" id="node48" href="$d7/df8/class_q_e_t_app.html#a56af62495bc4fffc1e725f63e6213d59" title="QETApp::useSystemPalette Change the application palette." alt="" coords="815,867,1001,894"/>
+<area shape="rect" id="node5" href="$d7/df8/class_q_e_t_app.html#aad457f9e9a4fa9fbec00d0929f2bae75" title="QETApp::customElementsDirN like QString QETApp::customElementsDir but without &quot;/&quot; at the end." alt="" coords="559,254,763,281"/>
+<area shape="rect" id="node12" href="$d1/ddb/namespaceautonum.html#a969f519c92630c7d3101eef321107036" title="elementPrefixForLocation" alt="" coords="571,349,750,391"/>
+<area shape="rect" id="node14" href="$d9/de5/class_q_e_t_element_editor.html#ac64c71edfb6a2821a7d94da62c9a6860" title=" " alt="" coords="567,415,755,456"/>
+<area shape="rect" id="node17" href="$d9/de5/class_q_e_t_element_editor.html#ae413707c4a7360e3e853b14d8cb9b046" title=" " alt="" coords="309,473,469,515"/>
+<area shape="rect" id="node20" href="$d7/df8/class_q_e_t_app.html#a482bb7bb0acbd645b617044abd995ec5" title="QETApp::realPath Allows you to know the absolute path of the * .elmt file corresponding to a symbolic..." alt="" coords="597,649,724,675"/>
+<area shape="rect" id="node23" href="$d9/de5/class_q_e_t_element_editor.html#a90d9019381d82b772d65a2a3b3f912a5" title="QETElementEditor::slot_saveAsFile Ask a file to user and save the current edited element to this file..." alt="" coords="581,532,741,573"/>
+<area shape="rect" id="node25" href="$d7/df8/class_q_e_t_app.html#af6ea40b266fa54bcb13c7f44c00258c4" title="QETApp::symbolicPath Build the symbolic path (of the type custom: // tools_pervers / sado_maso / cont..." alt="" coords="581,598,740,625"/>
+<area shape="rect" id="node6" href="$d0/d7f/class_elements_collection_model.html#aa1a30d6845b0475e6d9e35cd9012aeb5" title="ElementsCollectionModel::addCustomCollection Add the custom elements collection to this model." alt="" coords="304,188,475,229"/>
+<area shape="rect" id="node7" href="$d0/dc5/class_file_element_collection_item.html#af36294f5117a61b50fb03349609e2c66" title="FileElementCollectionItem::isCollectionRoot." alt="" coords="302,305,477,347"/>
+<area shape="rect" id="node8" href="$d0/dc5/class_file_element_collection_item.html#af9909a21a5a5264ea2edd9848a8a9c3b" title="FileElementCollectionItem::localName." alt="" coords="25,276,200,317"/>
+<area shape="rect" id="node9" href="$d0/dc5/class_file_element_collection_item.html#a7f2574fc1cbf73aaa49f32210f83f711" title="FileElementCollectionItem::isCustomCollection." alt="" coords="302,5,477,47"/>
+<area shape="rect" id="node10" href="$d5/dd7/class_elements_location.html#a46be056a8f7cb0ea8d492b52ced09c45" title="ElementsLocation::isCustomCollection." alt="" coords="294,71,485,112"/>
+<area shape="rect" id="node11" href="$d5/dd7/class_elements_location.html#a955183399b1be3317bb5a9df6bebe94a" title="ElementsLocation::setPath Set the path of this item. The path can be relative to a collection (start ..." alt="" coords="300,137,479,163"/>
+<area shape="rect" id="node13" href="$d5/d50/class_element.html#a5ecb4a8b8a296bf3a5bb90cb66fe6d49" title="Element::Element." alt="" coords="327,371,452,398"/>
+<area shape="rect" id="node15" href="$d9/de5/class_q_e_t_element_editor.html#a80f25a6260aa7770538a1b7c16dada82" title=" " alt="" coords="278,422,501,449"/>
+<area shape="rect" id="node16" href="$d9/de5/class_q_e_t_element_editor.html#a189af314c90841b9fa405ee0fc7f0fb5" title="QETElementEditor::setupActions Create action used in Element editor." alt="" coords="5,510,220,537"/>
+<area shape="rect" id="node21" href="$d1/d9a/class_q_e_t_title_block_template_editor.html#a7d1ea60340c30fb026c321011f946fff" title=" " alt="" coords="292,692,487,733"/>
+<area shape="rect" id="node22" href="$d9/de5/class_q_e_t_element_editor.html#a13d6caecd56a20a958f7872f9caee2a5" title=" " alt="" coords="295,641,484,667"/>
+<area shape="rect" id="node24" href="$d9/de5/class_q_e_t_element_editor.html#a8b9b36985a13464aae88c3926f75a9be" title="QETElementEditor::slot_save Save the current editing element. If the filepath or location is unknown,..." alt="" coords="292,590,487,617"/>
+<area shape="rect" id="node27" href="$d7/df8/class_q_e_t_app.html#a01e92e95dee20e424ada0c3cd7a181f9" title="QETApp::customTitleBlockTemplatesCollection." alt="" coords="571,984,751,1025"/>
+<area shape="rect" id="node31" href="$d1/d9a/class_q_e_t_title_block_template_editor.html#a241eaf4445a4b0f84597af61eb5d5cbb" title=" " alt="" coords="563,801,758,843"/>
+<area shape="rect" id="node32" href="$d1/d9a/class_q_e_t_title_block_template_editor.html#a877a40ab63273557f9bea97215ade781" title=" " alt="" coords="563,867,758,908"/>
+<area shape="rect" id="node28" href="$d7/df8/class_q_e_t_app.html#aa0597e8a16987fc505a89d4944efd6a5" title="QETApp::availableTitleBlockTemplatesCollections." alt="" coords="296,925,483,967"/>
+<area shape="rect" id="node29" href="$d9/de0/class_new_diagram_page.html#afefe3a754b20e6dab40c27edb4f5368c" title="NewDiagramPage::NewDiagramPage Default constructor." alt="" coords="268,991,511,1018"/>
+<area shape="rect" id="node30" href="$db/d79/class_elements_panel.html#ada5643d1ecd83378e28271ab41b44dca" title="ElementsPanel::reload Reload the elements tree." alt="" coords="313,1042,466,1069"/>
+<area shape="rect" id="node34" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main Main function of QElectroTech" alt="" coords="635,1115,686,1142"/>
+<area shape="rect" id="node37" href="$d7/d32/class_summary_query_widget.html#a7ad2b17500ae4580a78193379c9a4f08" title="SummaryQueryWidget::SummaryQueryWidget." alt="" coords="579,1217,743,1259"/>
+<area shape="rect" id="node39" href="$da/d9a/class_add_table_dialog.html#a9a9691ee5eca984f00c5a3cc51ac909d" title="AddTableDialog::AddTableDialog." alt="" coords="573,1537,748,1579"/>
+<area shape="rect" id="node49" href="$d0/d2a/class_general_configuration_page.html#adc503b113b2bb8803e2a516ac5584ed6" title="GeneralConfigurationPage::applyConf Write all configuration in settings file." alt="" coords="573,1049,748,1091"/>
+<area shape="rect" id="node50" href="$d7/df8/class_q_e_t_app.html#a1645a337c93bee6460c74ebe080e688c" title="QETApp::initStyle Setup the gui style." alt="" coords="597,933,724,959"/>
+</map>

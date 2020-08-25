@@ -1,0 +1,217 @@
+.TH "ModifyTemplateDimension" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModifyTemplateDimension
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatecommands\&.h>\fP
+.PP
+Inherits \fBTitleBlockTemplateCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModifyTemplateDimension\fP (\fBTitleBlockTemplate\fP *=nullptr, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ModifyTemplateDimension\fP () override"
+.br
+.ti -1c
+.RI "int \fBindex\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetIndex\fP (int)"
+.br
+.ti -1c
+.RI "int \fBtype\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetType\fP (bool)"
+.br
+.ti -1c
+.RI "\fBTitleBlockDimension\fP \fBdimensionBefore\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDimensionBefore\fP (const \fBTitleBlockDimension\fP &)"
+.br
+.ti -1c
+.RI "\fBTitleBlockDimension\fP \fBdimensionAfter\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDimensionAfter\fP (const \fBTitleBlockDimension\fP &)"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModifyTemplateDimension\fP (const \fBModifyTemplateDimension\fP &)"
+.br
+.ti -1c
+.RI "void \fBupdateText\fP ()"
+.br
+.ti -1c
+.RI "void \fBapply\fP (const \fBTitleBlockDimension\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBindex_\fP"
+.br
+.RI "Index of the resized row/column\&. "
+.ti -1c
+.RI "bool \fBtype_\fP"
+.br
+.RI "true for a row, false for a column "
+.ti -1c
+.RI "\fBTitleBlockDimension\fP \fBbefore_\fP"
+.br
+.RI "Size of the row/column before it is changed\&. "
+.ti -1c
+.RI "\fBTitleBlockDimension\fP \fBafter_\fP"
+.br
+.RI "Size of the row/column after it is changed\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents the action of changing the width/height of a specific row/column within a title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModifyTemplateDimension::ModifyTemplateDimension (\fBTitleBlockTemplate\fP * tbtemplate = \fCnullptr\fP, QUndoCommand * parent = \fCnullptr\fP)"
+Construct a default \fBModifyTemplateDimension\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbtemplate\fP Modified title block template 
+.br
+\fIparent\fP Parent QUndoCommand 
+.RE
+.PP
+
+.SS "ModifyTemplateDimension::~ModifyTemplateDimension ()\fC [override]\fP"
+Destructor 
+.SS "ModifyTemplateDimension::ModifyTemplateDimension (const \fBModifyTemplateDimension\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModifyTemplateDimension::apply (const \fBTitleBlockDimension\fP & dimension)\fC [private]\fP"
+Applies a given size to the row/column 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdimension\fP Size to apply 
+.RE
+.PP
+
+.SS "\fBTitleBlockDimension\fP ModifyTemplateDimension::dimensionAfter () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the dimension of the row/column after it is resized 
+.RE
+.PP
+
+.SS "\fBTitleBlockDimension\fP ModifyTemplateDimension::dimensionBefore () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the dimension of the row/column before it is resized 
+.RE
+.PP
+
+.SS "int ModifyTemplateDimension::index () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the index of the resized row/column 
+.RE
+.PP
+
+.SS "void ModifyTemplateDimension::redo ()\fC [override]\fP"
+Resize the row/column\&. 
+.SS "void ModifyTemplateDimension::setDimensionAfter (const \fBTitleBlockDimension\fP & dimension)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdimension\fP the dimension of the row/column after it is resized 
+.RE
+.PP
+
+.SS "void ModifyTemplateDimension::setDimensionBefore (const \fBTitleBlockDimension\fP & dimension)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdimension\fP the dimension of the row/column before it is resized 
+.RE
+.PP
+
+.SS "void ModifyTemplateDimension::setIndex (int index)"
+Set the index of the resized row/column\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP Index of the resized row/column\&. 
+.RE
+.PP
+
+.SS "void ModifyTemplateDimension::setType (bool type)"
+Indicates whether this object resizes a row or a column\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP true if this object is about resizing a row, false for a column\&. 
+.RE
+.PP
+
+.SS "int ModifyTemplateDimension::type () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if this object is about resizing a row, false for a column\&. 
+.RE
+.PP
+
+.SS "void ModifyTemplateDimension::undo ()\fC [override]\fP"
+Restore the previous size of the row/column\&. 
+.SS "void ModifyTemplateDimension::updateText ()\fC [private]\fP"
+Update the text describing what the command does\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTitleBlockDimension\fP ModifyTemplateDimension::after_\fC [private]\fP"
+
+.PP
+Size of the row/column after it is changed\&. 
+.SS "\fBTitleBlockDimension\fP ModifyTemplateDimension::before_\fC [private]\fP"
+
+.PP
+Size of the row/column before it is changed\&. 
+.SS "int ModifyTemplateDimension::index_\fC [private]\fP"
+
+.PP
+Index of the resized row/column\&. 
+.SS "bool ModifyTemplateDimension::type_\fC [private]\fP"
+
+.PP
+true for a row, false for a column 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

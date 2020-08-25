@@ -1,0 +1,62 @@
+.TH "CutDiagramCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CutDiagramCommand \- The \fBCutDiagramCommand\fP class This command cuts content from a particular diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcommands\&.h>\fP
+.PP
+Inherits \fBDeleteQGraphicsItemCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCutDiagramCommand\fP (\fBDiagram\fP *, const \fBDiagramContent\fP &, QUndoCommand *=nullptr)"
+.br
+.RI "\fBCutDiagramCommand::CutDiagramCommand\fP Constructeur\&. "
+.ti -1c
+.RI "\fB~CutDiagramCommand\fP () override"
+.br
+.RI "\fBCutDiagramCommand::~CutDiagramCommand\fP Destructeur\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCutDiagramCommand\fP (const \fBCutDiagramCommand\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBCutDiagramCommand\fP class This command cuts content from a particular diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CutDiagramCommand::CutDiagramCommand (\fBDiagram\fP * dia, const \fBDiagramContent\fP & content, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBCutDiagramCommand::CutDiagramCommand\fP Constructeur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdia\fP Schema dont on coupe des elements et conducteurs 
+.br
+\fIcontent\fP Contenu coupe 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "CutDiagramCommand::~CutDiagramCommand ()\fC [override]\fP"
+
+.PP
+\fBCutDiagramCommand::~CutDiagramCommand\fP Destructeur\&. 
+.SS "CutDiagramCommand::CutDiagramCommand (const \fBCutDiagramCommand\fP &)\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,116 @@
+.TH "ChangeBorderCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChangeBorderCommand \- The \fBChangeBorderCommand\fP class This command changes the border properties of a particular diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeBorderCommand\fP (\fBDiagram\fP *, const \fBBorderProperties\fP &, const \fBBorderProperties\fP &, QUndoCommand *=nullptr)"
+.br
+.RI "\fBChangeBorderCommand::ChangeBorderCommand\fP Constructeur\&. "
+.ti -1c
+.RI "\fB~ChangeBorderCommand\fP () override"
+.br
+.RI "\fBChangeBorderCommand::~ChangeBorderCommand\fP Destructeur\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBChangeBorderCommand::undo\fP Annule les changements apportes au schema\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBChangeBorderCommand::redo\fP Refait les changements apportes au schema\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBBorderProperties\fP \fBold_properties\fP"
+.br
+.RI "properties before the change "
+.ti -1c
+.RI "\fBBorderProperties\fP \fBnew_properties\fP"
+.br
+.RI "properties after the change "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeBorderCommand\fP (const \fBChangeBorderCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP"
+.br
+.RI "modified diagram "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBChangeBorderCommand\fP class This command changes the border properties of a particular diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChangeBorderCommand::ChangeBorderCommand (\fBDiagram\fP * dia, const \fBBorderProperties\fP & old_bp, const \fBBorderProperties\fP & new_bp, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBChangeBorderCommand::ChangeBorderCommand\fP Constructeur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdia\fP Schema modifie 
+.br
+\fIold_bp\fP Anciennes proprietes du cadre du schema 
+.br
+\fInew_bp\fP Nouvelles proprietes du cadre du schema 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "ChangeBorderCommand::~ChangeBorderCommand ()\fC [override]\fP"
+
+.PP
+\fBChangeBorderCommand::~ChangeBorderCommand\fP Destructeur\&. 
+.SS "ChangeBorderCommand::ChangeBorderCommand (const \fBChangeBorderCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChangeBorderCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBChangeBorderCommand::redo\fP Refait les changements apportes au schema\&. 
+.SS "void ChangeBorderCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBChangeBorderCommand::undo\fP Annule les changements apportes au schema\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagram\fP* ChangeBorderCommand::diagram\fC [private]\fP"
+
+.PP
+modified diagram 
+.SS "\fBBorderProperties\fP ChangeBorderCommand::new_properties"
+
+.PP
+properties after the change 
+.SS "\fBBorderProperties\fP ChangeBorderCommand::old_properties"
+
+.PP
+properties before the change 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

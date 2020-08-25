@@ -1,0 +1,36 @@
+<map id="ECHSToXml::copy" name="ECHSToXml::copy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,1152,137,1179"/>
+<area shape="rect" id="node2" href="$d5/dd7/class_elements_location.html#af60688342bf5c70c8619e77c5f6232e0" title="ElementsLocation::collectionPath Return the path of the represented element relative to collection if..." alt="" coords="1187,351,1403,377"/>
+<area shape="rect" id="node4" href="$df/dd9/class_xml_element_collection.html#a6466ca65d9e3aa286e498d5dddf90f78" title="XmlElementCollection::copy Copy the content represented by source (an element or a directory) to dest..." alt="" coords="211,1043,361,1085"/>
+<area shape="rect" id="node10" href="$d5/dd7/class_elements_location.html#ac2abfa03dc55587f20447005b69b765e" title="ElementLocation::fileName." alt="" coords="934,321,1121,348"/>
+<area shape="rect" id="node14" href="$d5/dd7/class_elements_location.html#a97b6a38a44ef4434ad6cfefe7fe669fd" title="ElementsLocation::projectCollectionPath." alt="" coords="941,150,1114,191"/>
+<area shape="rect" id="node21" href="$d5/dd7/class_elements_location.html#ac1b1937396c17a87da0936abab0e54dd" title="ElementsLocation::projectCollection." alt="" coords="681,1031,855,1073"/>
+<area shape="rect" id="node29" href="$d5/dd7/class_elements_location.html#acfded834f9b1e5b0fc2b0933a107ff1e" title="ElementsLocation::exist." alt="" coords="687,1148,849,1175"/>
+<area shape="rect" id="node31" href="$d5/dd7/class_elements_location.html#a86f6d84916123008ed9b90dac81eeda5" title="ElementsLocation::isDirectory." alt="" coords="928,1316,1127,1343"/>
+<area shape="rect" id="node32" href="$d5/dd7/class_elements_location.html#ade366028c25fbe20a2b54c4186a37183" title="ElementsLocation::isProject." alt="" coords="435,516,620,543"/>
+<area shape="rect" id="node33" href="$dd/d7e/class_rename_dialog.html#ae99a625d200da5a056bcacd9b23577fe" title=" " alt="" coords="199,1380,373,1407"/>
+<area shape="rect" id="node34" href="$dd/d7e/class_rename_dialog.html#a130a9785bb043b53a1c670472b4e41bc" title=" " alt="" coords="185,1431,387,1457"/>
+<area shape="rect" id="node3" href="$d5/dd7/class_elements_location.html#ac46aeb57416fc91e16266fc937a02810" title="ElementsLocation::path." alt="" coords="1477,269,1635,296"/>
+<area shape="rect" id="node5" href="$df/dd9/class_xml_element_collection.html#a94e7303abced9b0484aa7e2a192e82f2" title="XmlElementCollection::copyDirectory Copy the directory represented by source to destination...." alt="" coords="452,567,603,609"/>
+<area shape="rect" id="node7" href="$df/dd9/class_xml_element_collection.html#a380da7f5ccba9f21d6f1d0f5ee40b4ff" title="XmlElementCollection::copyElement Copy the element represented by source to destination (must be a di..." alt="" coords="693,651,843,693"/>
+<area shape="rect" id="node19" href="$d5/dd7/class_elements_location.html#a45f9e8dbe179a42f73a8ea0625bddc7e" title="ElementsLocation::isElement." alt="" coords="1199,1131,1391,1157"/>
+<area shape="rect" id="node6" href="$df/dd9/class_xml_element_collection.html#a5cb901cc25363fdd9e5f8e77661f49d3" title="XmlElementCollection::child If parent_element have child element with an attribute name = child_name,..." alt="" coords="1481,786,1631,827"/>
+<area shape="rect" id="node8" href="$df/dd9/class_xml_element_collection.html#a21d7a45d847c560734ee73ca5dd9c3d3" title="XmlElementCollection::directory." alt="" coords="1219,866,1370,907"/>
+<area shape="rect" id="node9" href="$df/dd9/class_xml_element_collection.html#acd7dcecea45b62258579598d3782610d" title="XmlElementCollection::element." alt="" coords="1219,673,1370,714"/>
+<area shape="rect" id="node12" href="$d5/dd7/class_elements_location.html#a5d08aed111ae277d92d65193d496e0d8" title="ElementsLocation::fileSystemPath." alt="" coords="916,945,1139,972"/>
+<area shape="rect" id="node13" href="$d5/dd7/class_elements_location.html#a9bb48a1e0d52bec51f37b8df599c51fe" title="ElementsLocation::isFileSystem." alt="" coords="1212,263,1377,305"/>
+<area shape="rect" id="node20" href="$dd/d7e/namespace_q_e_t_x_m_l.html#a0b055af99ac5a2c9012974f976faa26a" title=" " alt="" coords="668,357,868,398"/>
+<area shape="rect" id="node22" href="$d5/dd7/class_elements_location.html#a955183399b1be3317bb5a9df6bebe94a" title="ElementsLocation::setPath Set the path of this item. The path can be relative to a collection (start ..." alt="" coords="1205,81,1384,108"/>
+<area shape="rect" id="node11" href="$dd/d7e/namespace_q_e_t_x_m_l.html#a0a04d30015c59abfeafcf5922a526ac0" title=" " alt="" coords="930,677,1125,718"/>
+<area shape="rect" id="node17" href="$d5/dd7/class_elements_location.html#a00a4e9b223af42e8350f3d823d0dddc4" title="ElementsLocation::xml." alt="" coords="950,895,1105,921"/>
+<area shape="rect" id="node15" href="$d7/df8/class_q_e_t_app.html#a69a31da8f6a67539cfcbed0e903c1671" title="QETApp::projectId." alt="" coords="1230,157,1359,184"/>
+<area shape="rect" id="node16" href="$d7/df8/class_q_e_t_app.html#a6be4484aa447132c5b44732279b0836c" title="QETApp::project." alt="" coords="1497,157,1615,184"/>
+<area shape="rect" id="node18" href="$d6/dc5/class_q_e_t_project.html#a6e182aa14ce7c48753e6be355ebbdb5f" title="QETProject::embeddedCollection." alt="" coords="1192,1039,1397,1081"/>
+<area shape="rect" id="node23" href="$d7/df8/class_q_e_t_app.html#aa1d76144001acd7736b11f78b0dee649" title="QETApp::commonElementsDirN like QString QETApp::commonElementsDir but without &quot;/&quot; at the end." alt="" coords="1451,5,1661,32"/>
+<area shape="rect" id="node25" href="$d7/df8/class_q_e_t_app.html#aad457f9e9a4fa9fbec00d0929f2bae75" title="QETApp::customElementsDirN like QString QETApp::customElementsDir but without &quot;/&quot; at the end." alt="" coords="1454,56,1658,83"/>
+<area shape="rect" id="node28" href="$d5/dd7/class_elements_location.html#aca8d214a0d7569264c514dc0e302fca5" title="ElementsLocation::project." alt="" coords="1469,107,1643,133"/>
+<area shape="rect" id="node24" href="$d7/df8/class_q_e_t_app.html#a63b7129a16de541f941e880e4c82e0b4" title="QETApp::commonElementsDir." alt="" coords="1709,5,1911,32"/>
+<area shape="rect" id="node26" href="$d7/df8/class_q_e_t_app.html#a0991c2c64acf67c4bea937c8de80aaac" title="QETApp::customElementsDir." alt="" coords="1713,56,1907,83"/>
+<area shape="rect" id="node27" href="$d7/df8/class_q_e_t_app.html#a19c87f4f930f26f4fc60118fa5a79b8f" title="QETApp::configDir Return the QET configuration folder, i.e. the path to the folder in which QET will ..." alt="" coords="1959,56,2089,83"/>
+<area shape="rect" id="node30" href="$df/dd9/class_xml_element_collection.html#a7f27796160cb849693b029979c0d5eaf" title="XmlElementCollection::exist Return true if the path path exist in this collection." alt="" coords="952,1250,1103,1291"/>
+</map>

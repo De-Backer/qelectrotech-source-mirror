@@ -1,0 +1,203 @@
+.TH "DynamicElementTextItemEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DynamicElementTextItemEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dynamicelementtextitemeditor\&.h>\fP
+.PP
+Inherits \fBAbstractElementPropertiesEditorWidget\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDynamicElementTextItemEditor\fP (\fBElement\fP *element, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~DynamicElementTextItemEditor\fP () override"
+.br
+.ti -1c
+.RI "void \fBsetElement\fP (\fBElement\fP *element) override"
+.br
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.RI "\fBPropertiesEditorWidget::title\fP\&. "
+.ti -1c
+.RI "bool \fBsetLiveEdit\fP (bool live_edit) override"
+.br
+.RI "\fBPropertiesEditorWidget::setLiveEdit\fP Set the editor in live edit mode\&. When an editor is in live edit mode, every change is applied immediately (no need to call apply)\&. If live edit can be enable, return true, else false\&. By default this method do nothing and return false (live edit is disable)\&. Herited class of \fBPropertiesEditorWidget\fP must reimplemente this methode to manage the live edit mode\&. "
+.ti -1c
+.RI "void \fBapply\fP () override"
+.br
+.ti -1c
+.RI "void \fBsetCurrentText\fP (\fBDynamicElementTextItem\fP *text)"
+.br
+.RI "\fBDynamicElementTextItemEditor::setCurrentText\fP Expand and select the item for text text\&. "
+.ti -1c
+.RI "void \fBsetCurrentGroup\fP (\fBElementTextItemGroup\fP *group)"
+.br
+.RI "\fBDynamicElementTextItemEditor::setCurrentGroup\fP Expand and select the item for group group\&. "
+.ti -1c
+.RI "QUndoCommand * \fBassociatedUndo\fP () const override"
+.br
+.RI "\fBPropertiesEditorWidget::associatedUndo\fP By default, return a nullptr\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_add_text_clicked\fP ()"
+.br
+.RI "\fBDynamicElementTextItemEditor::on_m_add_text_clicked\fP Add a new dynamic text\&. "
+.ti -1c
+.RI "void \fBon_m_remove_selection_clicked\fP ()"
+.br
+.RI "\fBDynamicElementTextItemEditor::on_m_remove_selection_clicked\fP Remove the selected item\&. "
+.ti -1c
+.RI "void \fBon_m_add_group_clicked\fP ()"
+.br
+.RI "\fBDynamicElementTextItemEditor::on_m_add_group_clicked\fP Add a new group\&. "
+.ti -1c
+.RI "void \fBon_m_tree_view_clicked\fP (const QModelIndex &index)"
+.br
+.ti -1c
+.RI "void \fBon_m_export_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_import_pb_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdataEdited\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::DynamicElementTextItemEditor * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBDynamicElementTextModel\fP * \fBm_model\fP = nullptr"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DynamicElementTextItemEditor::DynamicElementTextItemEditor (\fBElement\fP * element, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "DynamicElementTextItemEditor::~DynamicElementTextItemEditor ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DynamicElementTextItemEditor::apply ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "QUndoCommand * DynamicElementTextItemEditor::associatedUndo () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorWidget::associatedUndo\fP By default, return a nullptr\&. 
+.PP
+\fBReturns\fP
+.RS 4
+nullptr 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void DynamicElementTextItemEditor::dataEdited ()\fC [private]\fP"
+
+.SS "void DynamicElementTextItemEditor::on_m_add_group_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBDynamicElementTextItemEditor::on_m_add_group_clicked\fP Add a new group\&. 
+.SS "void DynamicElementTextItemEditor::on_m_add_text_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBDynamicElementTextItemEditor::on_m_add_text_clicked\fP Add a new dynamic text\&. 
+.SS "void DynamicElementTextItemEditor::on_m_export_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicElementTextItemEditor::on_m_import_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicElementTextItemEditor::on_m_remove_selection_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBDynamicElementTextItemEditor::on_m_remove_selection_clicked\fP Remove the selected item\&. 
+.SS "void DynamicElementTextItemEditor::on_m_tree_view_clicked (const QModelIndex & index)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void DynamicElementTextItemEditor::setCurrentGroup (\fBElementTextItemGroup\fP * group)"
+
+.PP
+\fBDynamicElementTextItemEditor::setCurrentGroup\fP Expand and select the item for group group\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItemEditor::setCurrentText (\fBDynamicElementTextItem\fP * text)"
+
+.PP
+\fBDynamicElementTextItemEditor::setCurrentText\fP Expand and select the item for text text\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItemEditor::setElement (\fBElement\fP * element)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBAbstractElementPropertiesEditorWidget\fP\&.
+.SS "bool DynamicElementTextItemEditor::setLiveEdit (bool live_edit)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorWidget::setLiveEdit\fP Set the editor in live edit mode\&. When an editor is in live edit mode, every change is applied immediately (no need to call apply)\&. If live edit can be enable, return true, else false\&. By default this method do nothing and return false (live edit is disable)\&. Herited class of \fBPropertiesEditorWidget\fP must reimplemente this methode to manage the live edit mode\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlive_edit\fP true to enable live edit 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if live edit is enable, else false\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "QString DynamicElementTextItemEditor::title () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPropertiesEditorWidget::title\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the title of this editor 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDynamicElementTextModel\fP* DynamicElementTextItemEditor::m_model = nullptr\fC [private]\fP"
+
+.SS "Ui::DynamicElementTextItemEditor* DynamicElementTextItemEditor::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

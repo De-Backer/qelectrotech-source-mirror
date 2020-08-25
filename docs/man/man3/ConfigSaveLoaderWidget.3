@@ -1,0 +1,92 @@
+.TH "ConfigSaveLoaderWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConfigSaveLoaderWidget \- The \fBConfigSaveLoaderWidget\fP class This group box provide 4 widget: A combo box with the available config\&. A push button to load the selected config of combo box A line edit to edit the text of the config to save A push button to save the config\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configsaveloaderwidget\&.h>\fP
+.PP
+Inherits QGroupBox\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBloadClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBsaveClicked\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigSaveLoaderWidget\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ConfigSaveLoaderWidget\fP ()"
+.br
+.ti -1c
+.RI "QString \fBselectedText\fP () const"
+.br
+.ti -1c
+.RI "QString \fBtext\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddItem\fP (QString \fBtext\fP)"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_load_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_save_pb_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ConfigSaveLoaderWidget * \fBui\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBConfigSaveLoaderWidget\fP class This group box provide 4 widget: A combo box with the available config\&. A push button to load the selected config of combo box A line edit to edit the text of the config to save A push button to save the config\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConfigSaveLoaderWidget::ConfigSaveLoaderWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "ConfigSaveLoaderWidget::~ConfigSaveLoaderWidget ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ConfigSaveLoaderWidget::addItem (QString text)"
+
+.SS "void ConfigSaveLoaderWidget::loadClicked ()\fC [signal]\fP"
+
+.SS "void ConfigSaveLoaderWidget::on_m_load_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ConfigSaveLoaderWidget::on_m_save_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ConfigSaveLoaderWidget::saveClicked ()\fC [signal]\fP"
+
+.SS "QString ConfigSaveLoaderWidget::selectedText () const"
+
+.SS "QString ConfigSaveLoaderWidget::text () const"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::ConfigSaveLoaderWidget* ConfigSaveLoaderWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

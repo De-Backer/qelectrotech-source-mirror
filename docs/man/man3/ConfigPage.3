@@ -1,0 +1,87 @@
+.TH "ConfigPage" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConfigPage
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configpage\&.h>\fP
+.PP
+Inherits QWidget\&.
+.PP
+Inherited by \fBExportConfigPage\fP, \fBGeneralConfigurationPage\fP, \fBNewDiagramPage\fP, \fBPrintConfigPage\fP, and \fBProjectConfigPage\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigPage\fP (QWidget *parent)"
+.br
+.ti -1c
+.RI "\fB~ConfigPage\fP () override"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "virtual void \fBapplyConf\fP ()=0"
+.br
+.RI "Apply the configuration after user input\&. "
+.ti -1c
+.RI "virtual QString \fBtitle\fP () const =0"
+.br
+.ti -1c
+.RI "virtual QIcon \fBicon\fP () const =0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This abstract class specifies methods all derived classes should implement\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConfigPage::ConfigPage (QWidget * parent)\fC [inline]\fP"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Parent QWidget 
+.RE
+.PP
+
+.SS "ConfigPage::~ConfigPage ()\fC [inline]\fP, \fC [override]\fP"
+
+.PP
+Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void ConfigPage::applyConf ()\fC [pure virtual]\fP"
+
+.PP
+Apply the configuration after user input\&. 
+.PP
+Implemented in \fBPrintConfigPage\fP, \fBExportConfigPage\fP, \fBNewDiagramPage\fP, \fBProjectConfigPage\fP, and \fBGeneralConfigurationPage\fP\&.
+.SS "virtual QIcon ConfigPage::icon () const\fC [pure virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the configuration page icon 
+.RE
+.PP
+
+.PP
+Implemented in \fBProjectAutoNumConfigPage\fP, \fBPrintConfigPage\fP, \fBProjectMainConfigPage\fP, \fBExportConfigPage\fP, \fBNewDiagramPage\fP, and \fBGeneralConfigurationPage\fP\&.
+.SS "virtual QString ConfigPage::title () const\fC [pure virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the configuration page title 
+.RE
+.PP
+
+.PP
+Implemented in \fBProjectAutoNumConfigPage\fP, \fBPrintConfigPage\fP, \fBProjectMainConfigPage\fP, \fBExportConfigPage\fP, \fBNewDiagramPage\fP, and \fBGeneralConfigurationPage\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,158 @@
+.TH "Machine_info" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Machine_info \- The \fBMachine_info\fP class This class hold information from your PC\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <machine_info\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBPc\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMachine_info\fP (QObject *parent=nullptr)"
+.br
+.RI "\fBMachine_info::Machine_info\fP\&. "
+.ti -1c
+.RI "int32_t \fBi_max_screen_width\fP ()"
+.br
+.RI "\fBMachine_info::i_max_screen_width\fP\&. "
+.ti -1c
+.RI "int32_t \fBi_max_screen_height\fP ()"
+.br
+.RI "\fBMachine_info::i_max_screen_height\fP\&. "
+.ti -1c
+.RI "QString \fBcompilation_info\fP ()"
+.br
+.RI "\fBMachine_info::compilation_info\fP\&. "
+.ti -1c
+.RI "void \fBsend_info_to_debug\fP ()"
+.br
+.RI "\fBMachine_info::send_info_to_debug\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit_get_Screen_info\fP ()"
+.br
+.RI "\fBMachine_info::init_get_Screen_info\fP Finds the largest screen and saves the values\&. "
+.ti -1c
+.RI "void \fBinit_get_cpu_info\fP ()"
+.br
+.RI "\fBMachine_info::init_get_cpu_info\fP\&. "
+.ti -1c
+.RI "void \fBinit_get_cpu_info_linux\fP ()"
+.br
+.RI "\fBMachine_info::init_get_cpu_info_linux\fP\&. "
+.ti -1c
+.RI "void \fBinit_get_cpu_info_winnt\fP ()"
+.br
+.RI "\fBMachine_info::init_get_cpu_info_winnt\fP\&. "
+.ti -1c
+.RI "void \fBinit_get_cpu_info_macos\fP ()"
+.br
+.RI "\fBMachine_info::init_get_cpu_info_macos\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBMachine_info::Pc\fP \fBpc\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBMachine_info\fP class This class hold information from your PC\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Machine_info::Machine_info (QObject * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBMachine_info::Machine_info\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QString Machine_info::compilation_info ()"
+
+.PP
+\fBMachine_info::compilation_info\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+compilation_info 
+.RE
+.PP
+
+.SS "int32_t Machine_info::i_max_screen_height ()"
+
+.PP
+\fBMachine_info::i_max_screen_height\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+max screen height 
+.RE
+.PP
+
+.SS "int32_t Machine_info::i_max_screen_width ()"
+
+.PP
+\fBMachine_info::i_max_screen_width\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+max screen width 
+.RE
+.PP
+
+.SS "void Machine_info::init_get_cpu_info ()\fC [private]\fP"
+
+.PP
+\fBMachine_info::init_get_cpu_info\fP\&. 
+.SS "void Machine_info::init_get_cpu_info_linux ()\fC [private]\fP"
+
+.PP
+\fBMachine_info::init_get_cpu_info_linux\fP\&. 
+.SS "void Machine_info::init_get_cpu_info_macos ()\fC [private]\fP"
+
+.PP
+\fBMachine_info::init_get_cpu_info_macos\fP\&. 
+.SS "void Machine_info::init_get_cpu_info_winnt ()\fC [private]\fP"
+
+.PP
+\fBMachine_info::init_get_cpu_info_winnt\fP\&. 
+.SS "void Machine_info::init_get_Screen_info ()\fC [private]\fP"
+
+.PP
+\fBMachine_info::init_get_Screen_info\fP Finds the largest screen and saves the values\&. 
+.SS "void Machine_info::send_info_to_debug ()"
+
+.PP
+\fBMachine_info::send_info_to_debug\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "struct \fBMachine_info::Pc\fP Machine_info::pc\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

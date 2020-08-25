@@ -1,0 +1,9 @@
+<map id="ConductorProperties::fromXml" name="ConductorProperties::fromXml">
+<area shape="rect" id="node1" title="ConductorProperties::fromXml Import conductor propertie, from the attribute of the xml element &#39;e&#39;." alt="" coords="943,49,1085,90"/>
+<area shape="rect" id="node2" href="$da/d7f/class_conductor.html#a74db48e53dcea4e31d4b16b8c6bc7ce7" title="Conductor::fromXml Load the conductor and her information from xml element." alt="" coords="702,5,841,32"/>
+<area shape="rect" id="node3" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="707,56,835,83"/>
+<area shape="rect" id="node4" href="$d6/dc5/class_q_e_t_project.html#aac00125dba7199e52cd335e33017f041" title="QETProject::readDefaultPropertiesXml load default properties for new diagram, found in the xml of thi..." alt="" coords="648,107,895,133"/>
+<area shape="rect" id="node5" href="$d6/dc5/class_q_e_t_project.html#ad9a09b5d1756ddc11c5eed75bb3738c6" title="QETProject::readProjectXml Read and make the project from an xml description." alt="" coords="413,107,600,133"/>
+<area shape="rect" id="node6" href="$d6/dc5/class_q_e_t_project.html#a260924555b97e401594c9ae6d6733281" title="QETProject::openFile." alt="" coords="219,107,365,133"/>
+<area shape="rect" id="node7" href="$d6/dc5/class_q_e_t_project.html#ab739141bacf11150129e65eaa11a0946" title="QETProject::QETProject Construct a project from a .qet file." alt="" coords="5,107,171,133"/>
+</map>

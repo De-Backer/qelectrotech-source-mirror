@@ -1,0 +1,24 @@
+<map id="QETApp::initSystemTray" name="QETApp::initSystemTray">
+<area shape="rect" id="node1" title="QETApp::initSystemTray Build the icon in the systray and its menu." alt="" coords="5,309,172,336"/>
+<area shape="rect" id="node2" href="$d7/df8/class_q_e_t_app.html#a80bacf5d04549e56c087f36ef4521b17" title="QETApp::newDiagramEditor launches a new schema editor." alt="" coords="229,5,416,32"/>
+<area shape="rect" id="node3" href="$d7/df8/class_q_e_t_app.html#a092edf81512d7d76d3ff666ba4149952" title="QETApp::newElementEditor launches a new element editor." alt="" coords="230,56,415,83"/>
+<area shape="rect" id="node4" href="$d7/df8/class_q_e_t_app.html#ab7629e111e3386bd0210410b27dae4b4" title="QETApp::quitQET Request the closing of all windows; if the user accepts them, the application quits." alt="" coords="259,563,386,589"/>
+<area shape="rect" id="node10" href="$d7/df8/class_q_e_t_app.html#a9a9b543030094c2ca90c4ff3a28c65ff" title="QETApp::restoreEveryEditor Restores all application windows in the systray." alt="" coords="740,433,927,460"/>
+<area shape="rect" id="node11" href="$d7/df8/class_q_e_t_app.html#a45d465c8236c472b17ccd7f07e315576" title="QETApp::restoreDiagramEditors Restore all schema editors in the systray." alt="" coords="985,232,1195,259"/>
+<area shape="rect" id="node12" href="$d7/df8/class_q_e_t_app.html#a3dd0e30af47fbe5792fbbda2365728c3" title="QETApp::restoreElementEditors Restore all element editors in the systray." alt="" coords="986,421,1194,448"/>
+<area shape="rect" id="node13" href="$d7/df8/class_q_e_t_app.html#ab13667bab139216c94bccaf21979581b" title="QETApp::restoreTitleBlockTemplateEditors Restore all known template editors." alt="" coords="1001,490,1179,531"/>
+<area shape="rect" id="node14" href="$d7/df8/class_q_e_t_app.html#ac8be66f2c900ac16273bcf7de9a28606" title="QETApp::reduceDiagramEditors Minimize all schema editors in the systray." alt="" coords="729,208,937,235"/>
+<area shape="rect" id="node15" href="$d7/df8/class_q_e_t_app.html#ab7f50399e1867f159620c0cd065e9465" title="QETApp::reduceElementEditors Minimize all element editors in systray." alt="" coords="730,280,937,307"/>
+<area shape="rect" id="node16" href="$d7/df8/class_q_e_t_app.html#a2d52dd94889af1af6606b8271df11c30" title="QETApp::reduceEveryEditor Minimizes all application windows in the systray." alt="" coords="484,309,671,336"/>
+<area shape="rect" id="node17" href="$d7/df8/class_q_e_t_app.html#a50f1fe4a6b14517b7b080a4d6395df7f" title="QETApp::reduceTitleBlockTemplateEditors Reduce all known template editors." alt="" coords="745,342,921,383"/>
+<area shape="rect" id="node18" href="$d7/df8/class_q_e_t_app.html#a8a0469879dd47563b7d78fb9723019fa" title="QETApp::setSplashScreenStep Changes the text of the splash screen and takes events into account...." alt="" coords="220,613,425,640"/>
+<area shape="rect" id="node19" href="$d7/df8/class_q_e_t_app.html#a8582759af690b7c4931d399743047347" title="QETApp::systray Manages QSystemTrayIcon related events." alt="" coords="261,664,384,691"/>
+<area shape="rect" id="node5" href="$d7/df8/class_q_e_t_app.html#ad4a4eb0a86ed6453837dadb4387773e3" title="QETApp::closeEveryEditor Close all editors." alt="" coords="488,563,667,589"/>
+<area shape="rect" id="node6" href="$d7/df8/class_q_e_t_app.html#aaf263efb4214b869fa8eca929537fc30" title="QETApp::diagramEditors." alt="" coords="750,613,917,640"/>
+<area shape="rect" id="node8" href="$d7/df8/class_q_e_t_app.html#a90d6c468e52aaa77d31db9d1f16c0f42" title="QETApp::elementEditors." alt="" coords="750,664,917,691"/>
+<area shape="rect" id="node9" href="$d7/df8/class_q_e_t_app.html#a6be4484aa447132c5b44732279b0836c" title="QETApp::project." alt="" coords="774,563,893,589"/>
+<area shape="rect" id="node7" href="$d7/df8/class_q_e_t_app.html#a4122754c7d0aa3e11ee4a2bd91cb05ba" title="QETApp::instance." alt="" coords="1026,664,1154,691"/>
+<area shape="rect" id="node20" href="$d7/df8/class_q_e_t_app.html#a72e49a435160bf1c2a82a83d2d5a84eb" title="QETApp::buildSystemTrayMenu builds the icon menu in the systray." alt="" coords="473,715,681,741"/>
+<area shape="rect" id="node21" href="$d7/df8/class_q_e_t_app.html#aebdea2b24369ab7c14d709e9efd7cfdf" title="QETApp::fetchWindowStats Updates the booleans concerning the state of the windows." alt="" coords="740,715,927,741"/>
+<area shape="rect" id="node22" href="$d7/df8/class_q_e_t_app.html#a7bc66f689621e241214a14cc4263e86a" title="QETApp::titleBlockTemplateEditors." alt="" coords="740,766,927,807"/>
+</map>

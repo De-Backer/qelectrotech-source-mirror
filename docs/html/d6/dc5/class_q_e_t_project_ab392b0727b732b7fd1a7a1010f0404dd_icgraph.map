@@ -1,0 +1,33 @@
+<map id="QETProject::diagrams" name="QETProject::diagrams">
+<area shape="rect" id="node1" title=" " alt="" coords="1012,413,1163,439"/>
+<area shape="rect" id="node2" href="$d5/dfb/class_project_auto_num_config_page.html#a20a3c308e3d94af8f2116e9e5c1175b5" title="ProjectAutoNumConfigPage::applyAutoManagement Apply Management Options in Selected Folios." alt="" coords="754,5,941,47"/>
+<area shape="rect" id="node5" href="$df/d20/class_element_provider.html#a7a8e9632bb5ad1b78fde897847e22f3e" title="ElementProvider::ElementProvider Constructor." alt="" coords="760,71,935,112"/>
+<area shape="rect" id="node6" href="$d1/d69/class_conductor_num_export.html#a115b53898d395a855a3b875810100eb5" title="ConductorNumExport::fillHash make/fill of m_hash." alt="" coords="773,136,922,177"/>
+<area shape="rect" id="node8" href="$d3/d0d/class_search_and_replace_widget.html#a701b08dddd07ce8bef3c3cf368fa7640" title="SearchAndReplaceWidget::fillItemsList Fill the tree." alt="" coords="760,201,935,243"/>
+<area shape="rect" id="node12" href="$d6/df6/class_project_view.html#a899319c2b6ea33ff945ab6b8759b2a38" title="ProjectView::loadDiagrams Load diagrams of project. We create a diagram view for each diagram,..." alt="" coords="758,267,937,294"/>
+<area shape="rect" id="node15" href="$d7/d44/class_auto_numbering_management_w.html#a139bee6e3f404ebf12d433e44ca0efa6" title="AutoNumberingManagementW::on_m_apply_folios_rb_clicked Set From Folios Combobox." alt="" coords="747,318,947,374"/>
+<area shape="rect" id="node16" href="$dc/d2b/class_folio_autonumbering_w.html#a5f8728734f4039c2ddf20c7934ca4afd" title="FolioAutonumberingW::on_m_autonumber_tabs_rb_clicked Enable From ComboBox, fill From ComboBox." alt="" coords="763,398,932,454"/>
+<area shape="rect" id="node19" href="$dc/d2b/class_folio_autonumbering_w.html#a85c1830226f34181fb99139402450a13" title="FolioAutonumberingW::on_m_from_cb_currentIndexChanged Enable To ComboBox." alt="" coords="750,478,945,534"/>
+<area shape="rect" id="node20" href="$d7/d44/class_auto_numbering_management_w.html#a0d1873654d96bee0aaebd1975b122a64" title="AutoNumberingManagementW::on_m_from_folios_cb_currentIndexChanged Set To Folios Combobox." alt="" coords="731,558,964,614"/>
+<area shape="rect" id="node21" href="$d6/dc5/class_q_e_t_project.html#aa6ab11517671dc9e288da42555dc79d6" title="QETProject::readDiagramsXml Load the diagrams from the xml description of the project...." alt="" coords="747,638,948,665"/>
+<area shape="rect" id="node25" href="$d0/dcb/class_q_e_t_diagram_editor.html#a6448cdc59c55224bee47909e744d0277" title="QETDiagramEditor::setUpActions Set up all Qaction." alt="" coords="738,689,957,715"/>
+<area shape="rect" id="node27" href="$d6/dc5/class_q_e_t_project.html#a567af7debe75adb7a799c7d4f0cddca0" title=" " alt="" coords="761,739,934,766"/>
+<area shape="rect" id="node31" href="$d6/dc5/class_q_e_t_project.html#ab7eb80a8f952cdc9d92c5daa6d041871" title=" " alt="" coords="756,791,939,832"/>
+<area shape="rect" id="node3" href="$d5/dfb/class_project_auto_num_config_page.html#a97671ef9bfedf51f699a35958fcedd2d" title="ProjectAutoNumConfigPage::buildConnections setup some connections." alt="" coords="481,5,668,47"/>
+<area shape="rect" id="node4" href="$d5/dfb/class_project_auto_num_config_page.html#a35956aa12f79b55e32366f18fb4da87d" title="ProjectAutoNumConfigPage::ProjectAutoNumConfigPage Default constructor." alt="" coords="224,5,419,47"/>
+<area shape="rect" id="node7" href="$d1/d69/class_conductor_num_export.html#a89229bd9268396ea502d2084fdee93c0" title="ConductorNumExport::ConductorNumExport." alt="" coords="496,71,653,112"/>
+<area shape="rect" id="node9" href="$d3/d0d/class_search_and_replace_widget.html#af8e3c2c7471cd5f5e531ea3fa6c32ff6" title="SearchAndReplaceWidget::event Reimplemented to clear the the lines edit and hide the advanced widgets..." alt="" coords="487,136,662,177"/>
+<area shape="rect" id="node10" href="$d3/d0d/class_search_and_replace_widget.html#ac51644bfefba78b49728c044ff53b7e4" title=" " alt="" coords="487,201,662,243"/>
+<area shape="rect" id="node11" href="$d3/d0d/class_search_and_replace_widget.html#ae05416b7c7a8e7994102425f3492eae6" title="SearchAndReplaceWidget::on_m_replace_all_pb_clicked Replace all checked item." alt="" coords="234,193,409,249"/>
+<area shape="rect" id="node13" href="$d6/df6/class_project_view.html#a79d3edf1becbdf2ef84a604aa5ab1975" title="ProjectView::setProject Set the project display by the project view." alt="" coords="495,270,654,297"/>
+<area shape="rect" id="node14" href="$d6/df6/class_project_view.html#a92b14ca3695dc24da5dca2e351f889dd" title=" " alt="" coords="237,273,406,299"/>
+<area shape="rect" id="node17" href="$dc/d2b/class_folio_autonumbering_w.html#aced97b687a8b5c421482b4d52b01bd95" title="FolioAutonumberingW::updateFolioList update Folio List in From and To ComboBox." alt="" coords="499,405,650,447"/>
+<area shape="rect" id="node18" href="$dc/d2b/class_folio_autonumbering_w.html#a5a0c31ebafa9c991b1f5d9e0a44777cf" title="SelectAutonumW::on_buttonBox_clicked Action on buttonBox clicked." alt="" coords="243,405,400,447"/>
+<area shape="rect" id="node22" href="$d6/dc5/class_q_e_t_project.html#ad9a09b5d1756ddc11c5eed75bb3738c6" title="QETProject::readProjectXml Read and make the project from an xml description." alt="" coords="481,630,668,657"/>
+<area shape="rect" id="node23" href="$d6/dc5/class_q_e_t_project.html#a260924555b97e401594c9ae6d6733281" title="QETProject::openFile." alt="" coords="248,630,395,657"/>
+<area shape="rect" id="node24" href="$d6/dc5/class_q_e_t_project.html#ab739141bacf11150129e65eaa11a0946" title="QETProject::QETProject Construct a project from a .qet file." alt="" coords="8,630,173,657"/>
+<area shape="rect" id="node26" href="$d0/dcb/class_q_e_t_diagram_editor.html#a5cdbfffca55038045ec0d040e047c429" title="QETDiagramEditor::QETDiagramEditor Constructor." alt="" coords="467,681,683,723"/>
+<area shape="rect" id="node28" href="$d6/dc5/class_q_e_t_project.html#a6116cc7be3567be59304f0e6b4f6a391" title="QETProject::unusedElements." alt="" coords="477,747,672,774"/>
+<area shape="rect" id="node29" href="$df/dd9/class_xml_element_collection.html#a9a6494c57108aad17a791bfbe7bd3615" title="XmlElementCollection::cleanUnusedElement Remove elements in this collection which is not used in the ..." alt="" coords="244,740,399,781"/>
+<area shape="rect" id="node30" href="$d6/df6/class_project_view.html#a6c85d53cd53f54b86832858061445ee9" title=" " alt="" coords="5,747,176,774"/>
+</map>

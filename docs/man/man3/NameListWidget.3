@@ -1,0 +1,148 @@
+.TH "NameListWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NameListWidget \- The \fBNameListWidget\fP class Provide a widget for let user define localized string;\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <namelistwidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNameListWidget\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~NameListWidget\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddLine\fP ()"
+.br
+.RI "\fBNameListWidget::addLine\fP Add a new line to the name list widget\&. "
+.ti -1c
+.RI "void \fBsetNames\fP (const \fBNamesList\fP &name_list)"
+.br
+.RI "\fBNameListWidget::setNames\fP Set the current names of this dialog from name_list\&. "
+.ti -1c
+.RI "\fBNamesList\fP \fBnames\fP () const"
+.br
+.RI "\fBNameListWidget::names\fP\&. "
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool ro)"
+.br
+.RI "\fBNameListWidget::setReadOnly\fP Set this dialog to read only or not\&. "
+.ti -1c
+.RI "bool \fBisEmpty\fP () const"
+.br
+.RI "\fBNameListWidget::isEmpty\fP\&. "
+.ti -1c
+.RI "void \fBsetClipboardValue\fP (QHash< QString, QString > value)"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_clipboard_cb_activated\fP (int index)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclean\fP ()"
+.br
+.RI "\fBNameListWidget::clean\fP Clean the lists of names by removing the emtpy lines\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::NameListWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "bool \fBm_read_only\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBNameListWidget\fP class Provide a widget for let user define localized string;\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NameListWidget::NameListWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "NameListWidget::~NameListWidget ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void NameListWidget::addLine ()"
+
+.PP
+\fBNameListWidget::addLine\fP Add a new line to the name list widget\&. 
+.SS "void NameListWidget::clean ()\fC [private]\fP"
+
+.PP
+\fBNameListWidget::clean\fP Clean the lists of names by removing the emtpy lines\&. 
+.SS "bool NameListWidget::isEmpty () const"
+
+.PP
+\fBNameListWidget::isEmpty\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if empty\&. An empty dialog, is a dialog without any edited lang\&. 
+.RE
+.PP
+
+.SS "\fBNamesList\fP NameListWidget::names () const"
+
+.PP
+\fBNameListWidget::names\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the current name list edited by this dialog 
+.RE
+.PP
+
+.SS "void NameListWidget::on_m_clipboard_cb_activated (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void NameListWidget::setClipboardValue (QHash< QString, QString > value)"
+
+.SS "void NameListWidget::setNames (const \fBNamesList\fP & name_list)"
+
+.PP
+\fBNameListWidget::setNames\fP Set the current names of this dialog from name_list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname_list\fP 
+.RE
+.PP
+
+.SS "void NameListWidget::setReadOnly (bool ro)"
+
+.PP
+\fBNameListWidget::setReadOnly\fP Set this dialog to read only or not\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIro\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool NameListWidget::m_read_only = false\fC [private]\fP"
+
+.SS "Ui::NameListWidget* NameListWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

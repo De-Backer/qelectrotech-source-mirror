@@ -1,0 +1,137 @@
+.TH "TitleBlockTemplateCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatecommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.PP
+Inherited by \fBCutTemplateCellsCommand\fP, \fBMergeCellsCommand\fP, \fBModifyTemplateDimension\fP, \fBModifyTemplateGridCommand\fP, \fBPasteTemplateCellsCommand\fP, and \fBSplitCellsCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateCommand\fP (\fBTitleBlockTemplate\fP *=nullptr, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~TitleBlockTemplateCommand\fP () override"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBtitleBlockTemplate\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetTitleBlockTemplate\fP (\fBTitleBlockTemplate\fP *)"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateView\fP * \fBview\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetView\fP (\fBTitleBlockTemplateView\fP *)"
+.br
+.ti -1c
+.RI "void \fBrefreshView\fP ()"
+.br
+.ti -1c
+.RI "void \fBrefreshLayout\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBtbtemplate_\fP"
+.br
+.RI "Modified TitleBlock Template\&. "
+.ti -1c
+.RI "\fBTitleBlockTemplateView\fP * \fBview_\fP"
+.br
+.RI "This class may trigger a view update\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateCommand\fP (const \fBTitleBlockTemplateCommand\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is a base class for any UndoCommand that needs to work with a title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateCommand::TitleBlockTemplateCommand (\fBTitleBlockTemplate\fP * tbtemplate = \fCnullptr\fP, QUndoCommand * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbtemplate\fP Modified title block template 
+.br
+\fIparent\fP Parent QUndoCommand 
+.RE
+.PP
+
+.SS "TitleBlockTemplateCommand::~TitleBlockTemplateCommand ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockTemplateCommand::TitleBlockTemplateCommand (const \fBTitleBlockTemplateCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TitleBlockTemplateCommand::refreshLayout ()"
+Refresh the view, including layout reloading, if any\&. 
+.SS "void TitleBlockTemplateCommand::refreshView ()"
+Refresh the view, if any\&. 
+.SS "void TitleBlockTemplateCommand::setTitleBlockTemplate (\fBTitleBlockTemplate\fP * tbtemplate)"
+Set the modified title block template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbtemplate\fP New modified title block template\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCommand::setView (\fBTitleBlockTemplateView\fP * view)"
+Set the view to be updated after the template modification 
+.PP
+\fBParameters\fP
+.RS 4
+\fIview\fP the view to be updated after the template modification 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplate\fP * TitleBlockTemplateCommand::titleBlockTemplate () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the modified title block template\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplateView\fP * TitleBlockTemplateCommand::view () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the view to be updated after the template modification 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTitleBlockTemplate\fP* TitleBlockTemplateCommand::tbtemplate_\fC [protected]\fP"
+
+.PP
+Modified TitleBlock Template\&. 
+.SS "\fBTitleBlockTemplateView\fP* TitleBlockTemplateCommand::view_\fC [protected]\fP"
+
+.PP
+This class may trigger a view update\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

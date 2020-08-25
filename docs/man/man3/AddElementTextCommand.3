@@ -1,0 +1,87 @@
+.TH "AddElementTextCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AddElementTextCommand \- The \fBAddElementTextCommand\fP class Manage the adding of element text\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <addelementtextcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAddElementTextCommand\fP (\fBElement\fP *element, \fBDynamicElementTextItem\fP *deti, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBAddElementTextCommand::AddElementTextCommand\fP\&. "
+.ti -1c
+.RI "\fB~AddElementTextCommand\fP () override"
+.br
+.RI "\fBAddElementTextCommand::~AddElementTextCommand\fP\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBAddElementTextCommand::undo\fP\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBAddElementTextCommand::redo\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElement\fP * \fBm_element\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBDynamicElementTextItem\fP * \fBm_text\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBAddElementTextCommand\fP class Manage the adding of element text\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AddElementTextCommand::AddElementTextCommand (\fBElement\fP * element, \fBDynamicElementTextItem\fP * deti, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBAddElementTextCommand::AddElementTextCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.br
+\fIdeti\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "AddElementTextCommand::~AddElementTextCommand ()\fC [override]\fP"
+
+.PP
+\fBAddElementTextCommand::~AddElementTextCommand\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void AddElementTextCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBAddElementTextCommand::redo\fP\&. 
+.SS "void AddElementTextCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBAddElementTextCommand::undo\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElement\fP* AddElementTextCommand::m_element = nullptr\fC [private]\fP"
+
+.SS "\fBDynamicElementTextItem\fP* AddElementTextCommand::m_text = nullptr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

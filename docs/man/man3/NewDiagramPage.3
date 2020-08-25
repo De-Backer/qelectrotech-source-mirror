@@ -1,0 +1,211 @@
+.TH "NewDiagramPage" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NewDiagramPage \- The \fBNewDiagramPage\fP class This configuration page enables users to define the properties of new diagrams to come\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configpages\&.h>\fP
+.PP
+Inherits \fBConfigPage\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBchangeToAutoFolioTab\fP ()"
+.br
+.RI "\fBNewDiagramPage::changeToAutoFolioTab\fP Set the current tab to Autonum\&. "
+.ti -1c
+.RI "void \fBsetFolioAutonum\fP (QString)"
+.br
+.RI "\fBNewDiagramPage::setFolioAutonum\fP Set temporary TBP to use in auto folio num\&. "
+.ti -1c
+.RI "void \fBsaveCurrentTbp\fP ()"
+.br
+.RI "\fBNewDiagramPage::saveCurrentTbp\fP Save current TBP to retrieve after auto folio num\&. "
+.ti -1c
+.RI "void \fBloadSavedTbp\fP ()"
+.br
+.RI "\fBNewDiagramPage::loadSavedTbp\fP Retrieve saved auto folio num\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNewDiagramPage\fP (\fBQETProject\fP *project=nullptr, QWidget *=nullptr, \fBProjectPropertiesDialog\fP *teste=nullptr)"
+.br
+.RI "\fBNewDiagramPage::NewDiagramPage\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~NewDiagramPage\fP () override"
+.br
+.RI "\fBNewDiagramPage::~NewDiagramPage\fP\&. "
+.ti -1c
+.RI "void \fBapplyConf\fP () override"
+.br
+.RI "\fBNewDiagramPage::applyConf\fP Apply conf for this page\&. If there is a project, save in the project, else save to the default conf of QElectroTech\&. "
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.RI "\fBNewDiagramPage::title\fP\&. "
+.ti -1c
+.RI "QIcon \fBicon\fP () const override"
+.br
+.RI "\fBNewDiagramPage::icon\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNewDiagramPage\fP (const \fBNewDiagramPage\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectPropertiesDialog\fP * \fBppd_\fP"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP"
+.br
+.RI "Project to edit propertie\&. "
+.ti -1c
+.RI "\fBBorderPropertiesWidget\fP * \fBbpw\fP"
+.br
+.RI "Widget to edit default diagram dimensions\&. "
+.ti -1c
+.RI "\fBTitleBlockPropertiesWidget\fP * \fBipw\fP"
+.br
+.RI "Widget to edit default title block properties\&. "
+.ti -1c
+.RI "\fBConductorPropertiesWidget\fP * \fBm_cpw\fP"
+.br
+.RI "Widget to edit default conductor properties\&. "
+.ti -1c
+.RI "\fBReportPropertieWidget\fP * \fBrpw\fP"
+.br
+.RI "Widget to edit default report label\&. "
+.ti -1c
+.RI "\fBXRefPropertiesWidget\fP * \fBxrefpw\fP"
+.br
+.RI "Widget to edit default xref properties\&. "
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBsavedTbp\fP"
+.br
+.RI "Used to save current TBP and retrieve later\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBNewDiagramPage\fP class This configuration page enables users to define the properties of new diagrams to come\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NewDiagramPage::NewDiagramPage (\fBQETProject\fP * project = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP, \fBProjectPropertiesDialog\fP * ppd = \fCnullptr\fP)"
+
+.PP
+\fBNewDiagramPage::NewDiagramPage\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : \fBQETProject\fP 
+.br
+\fIparent\fP : QWidget 
+.br
+\fIppd\fP : \fBProjectPropertiesDialog\fP 
+.RE
+.PP
+
+.SS "NewDiagramPage::~NewDiagramPage ()\fC [override]\fP"
+
+.PP
+\fBNewDiagramPage::~NewDiagramPage\fP\&. 
+.SS "NewDiagramPage::NewDiagramPage (const \fBNewDiagramPage\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void NewDiagramPage::applyConf ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBNewDiagramPage::applyConf\fP Apply conf for this page\&. If there is a project, save in the project, else save to the default conf of QElectroTech\&. 
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "void NewDiagramPage::changeToAutoFolioTab ()\fC [slot]\fP"
+
+.PP
+\fBNewDiagramPage::changeToAutoFolioTab\fP Set the current tab to Autonum\&. 
+.SS "QIcon NewDiagramPage::icon () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBNewDiagramPage::icon\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+icon of this page 
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "void NewDiagramPage::loadSavedTbp ()\fC [slot]\fP"
+
+.PP
+\fBNewDiagramPage::loadSavedTbp\fP Retrieve saved auto folio num\&. 
+.SS "void NewDiagramPage::saveCurrentTbp ()\fC [slot]\fP"
+
+.PP
+\fBNewDiagramPage::saveCurrentTbp\fP Save current TBP to retrieve after auto folio num\&. 
+.SS "void NewDiagramPage::setFolioAutonum (QString autoNum)\fC [slot]\fP"
+
+.PP
+\fBNewDiagramPage::setFolioAutonum\fP Set temporary TBP to use in auto folio num\&. 
+.SS "QString NewDiagramPage::title () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBNewDiagramPage::title\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+title of this page 
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBBorderPropertiesWidget\fP* NewDiagramPage::bpw\fC [private]\fP"
+
+.PP
+Widget to edit default diagram dimensions\&. 
+.SS "\fBTitleBlockPropertiesWidget\fP* NewDiagramPage::ipw\fC [private]\fP"
+
+.PP
+Widget to edit default title block properties\&. 
+.SS "\fBConductorPropertiesWidget\fP* NewDiagramPage::m_cpw\fC [private]\fP"
+
+.PP
+Widget to edit default conductor properties\&. 
+.SS "\fBQETProject\fP* NewDiagramPage::m_project\fC [private]\fP"
+
+.PP
+Project to edit propertie\&. 
+.SS "\fBProjectPropertiesDialog\fP* NewDiagramPage::ppd_\fC [private]\fP"
+
+.SS "\fBReportPropertieWidget\fP* NewDiagramPage::rpw\fC [private]\fP"
+
+.PP
+Widget to edit default report label\&. 
+.SS "\fBTitleBlockProperties\fP NewDiagramPage::savedTbp\fC [private]\fP"
+
+.PP
+Used to save current TBP and retrieve later\&. 
+.SS "\fBXRefPropertiesWidget\fP* NewDiagramPage::xrefpw\fC [private]\fP"
+
+.PP
+Widget to edit default xref properties\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,37 @@
+<map id="QETProject::elementAutoNum" name="QETProject::elementAutoNum">
+<area shape="rect" id="node1" title="QETProject::elementAutoNum." alt="" coords="2539,340,2737,366"/>
+<area shape="rect" id="node2" href="$d5/d18/class_auto_numbering_dock_widget.html#a0bd37e44821da341e7d2d944b99d0f73" title="AutoNumberingDockWidget::elementAutoNumChanged Add new or remove element auto num from combobox." alt="" coords="2305,120,2489,162"/>
+<area shape="rect" id="node19" href="$d3/d37/class_diagram.html#a3c47d70020b2c9ba2802c6b8e28d031e" title="Diagram::loadElmtFolioSeq This class loads all folio sequential variables related to the current auto..." alt="" coords="2307,252,2488,278"/>
+<area shape="rect" id="node23" href="$d5/dcc/class_multi_paste_dialog.html#a2d6de36192586c285fb858a2ab367878" title=" " alt="" coords="2312,303,2483,344"/>
+<area shape="rect" id="node24" href="$d5/dfb/class_project_auto_num_config_page.html#a5fb9e1f187b280730e3da5d816fade0f" title="ProjectAutoNumConfigPage::readValuesFromProject Read value stored on project, and update display." alt="" coords="2065,355,2252,396"/>
+<area shape="rect" id="node26" href="$d5/d18/class_auto_numbering_dock_widget.html#a61b66f21a400d2702266599ed8fe1474" title="AutoNumberingDockWidget::setContext Add all itens to comboboxes." alt="" coords="2305,186,2489,227"/>
+<area shape="rect" id="node27" href="$d5/d50/class_element.html#abe6bac8645077e5a9a8000cdbd6ad680" title="Element::setUpFormula Set up the formula used to create the label of this element." alt="" coords="2318,488,2477,514"/>
+<area shape="rect" id="node30" href="$d5/dfb/class_project_auto_num_config_page.html#aaaf686f5e2c3a353a1f526d6be67ca2e" title="ProjectAutoNumConfigPage::updateContextElement Display the current selected context for element." alt="" coords="2304,420,2491,462"/>
+<area shape="rect" id="node32" href="$d6/dc5/class_q_e_t_project.html#aa7f53150e9b18242287787f1b39684bd" title="QETProject::writeDefaultPropertiesXml Export all defaults properties used by a new diagram and his co..." alt="" coords="2314,542,2481,583"/>
+<area shape="rect" id="node3" href="$d5/d18/class_auto_numbering_dock_widget.html#a83986b60077988e3b60326eeb9c29bb1" title="AutoNumberingDockWidget::setProject." alt="" coords="2067,120,2251,162"/>
+<area shape="rect" id="node4" href="$d0/dcb/class_q_e_t_diagram_editor.html#a9931c6eca981ed7c9e2aeabbaff92955" title=" " alt="" coords="1077,157,1280,184"/>
+<area shape="rect" id="node15" href="$d0/dcb/class_q_e_t_diagram_editor.html#a0373a056f6c8f72d20e22d4b68baa085" title="QETDiagramEditor::slot_updateAutoNumDock Update Auto Num Dock Widget when changing Project." alt="" coords="1835,80,1997,122"/>
+<area shape="rect" id="node5" href="$d0/dcb/class_q_e_t_diagram_editor.html#a86cf5010be07acd6d6f43b7683ca613d" title="QETDiagramEditor::newProject Create a new project with an empty diagram." alt="" coords="818,165,1023,192"/>
+<area shape="rect" id="node8" href="$d0/dcb/class_q_e_t_diagram_editor.html#ac0a13bc46957605f522e223e547ed8c0" title=" " alt="" coords="825,230,1016,271"/>
+<area shape="rect" id="node12" href="$d0/dcb/class_q_e_t_diagram_editor.html#a2fe552f78a1bb13cfda6468e7cd9e519" title="QETDiagramEditor::openBackupFiles." alt="" coords="815,99,1027,140"/>
+<area shape="rect" id="node6" href="$d0/dcb/class_q_e_t_diagram_editor.html#a6448cdc59c55224bee47909e744d0277" title="QETDiagramEditor::setUpActions Set up all Qaction." alt="" coords="269,174,488,201"/>
+<area shape="rect" id="node7" href="$d0/dcb/class_q_e_t_diagram_editor.html#a5cdbfffca55038045ec0d040e047c429" title="QETDiagramEditor::QETDiagramEditor Constructor." alt="" coords="5,167,221,208"/>
+<area shape="rect" id="node9" href="$d0/dcb/class_q_e_t_diagram_editor.html#a76dcd4cfbae4747517dd7a3c97bc90e8" title=" " alt="" coords="547,200,756,226"/>
+<area shape="rect" id="node10" href="$d0/dcb/class_q_e_t_diagram_editor.html#ae0cadf44d6cf5c847b7922d7bcb0bd78" title=" " alt="" coords="536,301,767,328"/>
+<area shape="rect" id="node11" href="$d0/dcb/class_q_e_t_diagram_editor.html#abb4438980a9115346f80585265d80206" title="QETDiagramEditor::setUpMenu." alt="" coords="275,301,482,328"/>
+<area shape="rect" id="node13" href="$d7/df8/class_q_e_t_app.html#a4b209f6de933a11e442f5e36960aac12" title="QETApp::checkBackupFiles Check for backup files. If backup was found, open a dialog and ask user what..." alt="" coords="558,98,745,125"/>
+<area shape="rect" id="node14" href="$d7/df8/class_q_e_t_app.html#afb6be0d7c2334375dce4ea9414bc029a" title="QETApp::QETApp." alt="" coords="315,98,443,125"/>
+<area shape="rect" id="node16" href="$d0/dcb/class_q_e_t_diagram_editor.html#a64ffde2786bbcc65ce6bce408fe6b52d" title="QETDiagramEditor::slot_updateActions Manage actions." alt="" coords="1609,70,1771,111"/>
+<area shape="rect" id="node17" href="$d0/dcb/class_q_e_t_diagram_editor.html#a3be88c784663a179de52a2b1ab23c255" title="QETDiagramEditor::addProjectView Add a new project view to workspace and build the connection between..." alt="" coords="1331,106,1561,133"/>
+<area shape="rect" id="node18" href="$d0/dcb/class_q_e_t_diagram_editor.html#aee0920f8696cca7c1d2697debea9a3e5" title="QETDiagramEditor::subWindowActivated Slot used to update menu and undo stack when subwindows of MDIar..." alt="" coords="1075,48,1283,90"/>
+<area shape="rect" id="node20" href="$d3/d37/class_diagram.html#a3a51ca00d34d4d198b1ab7768522846f" title="Diagram::Diagram Constructor." alt="" coords="2095,188,2223,214"/>
+<area shape="rect" id="node21" href="$d7/d9c/class_diagram_view.html#aa7ddeae989deaf45dc87f9b4614152c0" title=" " alt="" coords="2066,238,2251,265"/>
+<area shape="rect" id="node22" href="$d5/d18/class_auto_numbering_dock_widget.html#a705a0108c6676697b02cf324abc9388c" title="AutoNumberingDockWidget::on_m_element_cb_activated Set new element AutoNum." alt="" coords="2061,290,2256,331"/>
+<area shape="rect" id="node25" href="$d5/dfb/class_project_auto_num_config_page.html#a35956aa12f79b55e32366f18fb4da87d" title="ProjectAutoNumConfigPage::ProjectAutoNumConfigPage Default constructor." alt="" coords="1819,387,2013,428"/>
+<area shape="rect" id="node28" href="$de/d1f/class_diagram_event_add_element.html#af36a8f0e0220dfe7ba3430e99bb257b9" title="DiagramEventAddElement::addElement Add an element at the current pos en current rotation,..." alt="" coords="2071,486,2246,527"/>
+<area shape="rect" id="node29" href="$de/d1f/class_diagram_event_add_element.html#a83197f59aa1fe080ac85c7fc6124be53" title="DiagramEventAddElement::mouseReleaseEvent Right button finish this event (isRunning = false) and emit..." alt="" coords="1829,486,2003,527"/>
+<area shape="rect" id="node31" href="$d5/dfb/class_project_auto_num_config_page.html#a97671ef9bfedf51f699a35958fcedd2d" title="ProjectAutoNumConfigPage::buildConnections setup some connections." alt="" coords="2065,420,2252,462"/>
+<area shape="rect" id="node33" href="$d6/dc5/class_q_e_t_project.html#ae129e97abb00d4817218a3ee8d0345da" title="QETProject::toXml." alt="" coords="2093,552,2224,578"/>
+<area shape="rect" id="node34" href="$d6/dc5/class_q_e_t_project.html#a0fbf1fb78e6aefeb7f19421ce4941e39" title="QETProject::write Save the project in a file." alt="" coords="1853,552,1979,578"/>
+<area shape="rect" id="node35" href="$d6/dc5/class_q_e_t_project.html#a68eec4aacae1e1ab8526d6e191f6847d" title="QETProject::writeBackup Write a backup file of this project, in the case that QET crash." alt="" coords="1831,602,2001,629"/>
+</map>

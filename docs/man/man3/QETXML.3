@@ -1,0 +1,291 @@
+.TH "QETXML" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETXML
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "QDomElement \fBpenToXml\fP (QDomDocument &parent_document, const QPen &pen)"
+.br
+.RI "\fBQETXML::penToXml\fP Write attribute of a QPen in xml element\&. "
+.ti -1c
+.RI "QPen \fBpenFromXml\fP (const QDomElement &element)"
+.br
+.RI "\fBQETXML::penFromXml\fP Build a QPen from a xml description\&. "
+.ti -1c
+.RI "QDomElement \fBbrushToXml\fP (QDomDocument &parent_document, const QBrush &brush)"
+.br
+.RI "\fBQETXML::brushToXml\fP Write attribute of a QBrush in xml element\&. "
+.ti -1c
+.RI "QBrush \fBbrushFromXml\fP (const QDomElement &element)"
+.br
+.RI "\fBQETXML::brushFromXml\fP Build a QBrush from a xml description\&. "
+.ti -1c
+.RI "QDomElement \fBfileSystemDirToXmlCollectionDir\fP (QDomDocument &document, const QDir &dir, const QString &rename=QString())"
+.br
+.ti -1c
+.RI "QDomElement \fBfileSystemElementToXmlCollectionElement\fP (QDomDocument &document, QFile &file, const QString &rename=QString())"
+.br
+.ti -1c
+.RI "bool \fBwriteXmlFile\fP (const QDomDocument &xml_document, const QString &file_path, QString *error_message=nullptr)"
+.br
+.RI "\fBQETXML::writeXmlFile\fP Export an XML document to an UTF-8 text file indented with 4 spaces, with LF end of lines and no BOM\&. "
+.ti -1c
+.RI "QDomElement \fBtextToDomElement\fP (QDomDocument &document, const QString &tag_name, const QString &value)"
+.br
+.RI "\fBQETXML::textToDomElement\fP Return a QDomElement, created from document, with tag name tag_name and text value\&. "
+.ti -1c
+.RI "QVector< QDomElement > \fBdirectChild\fP (const QDomElement &element, const QString &tag_name)"
+.br
+.RI "\fBQETXML::directChild\fP\&. "
+.ti -1c
+.RI "QVector< QDomElement > \fBsubChild\fP (const QDomElement &element, const QString parent_tag_name, const QString &children_tag_name)"
+.br
+.RI "\fBQETXML::subChild\fP\&. "
+.ti -1c
+.RI "QDomElement \fBmarginsToXml\fP (QDomDocument &parent_document, const QMargins &margins)"
+.br
+.RI "\fBQETXML::marginsToXml\fP Save a QMargins to xml\&. the xml tag name is 'margins'\&. "
+.ti -1c
+.RI "QMargins \fBmarginsFromXml\fP (const QDomElement &element)"
+.br
+.RI "\fBQETXML::marginsFromXml\fP\&. "
+.ti -1c
+.RI "QDomElement \fBmodelHeaderDataToXml\fP (QDomDocument &parent_document, const QAbstractItemModel *model, QHash< int, QList< int >> horizontal_section_role, QHash< int, QList< int >> vertical_section_role)"
+.br
+.RI "\fBQETXML::modelHeaderDataToXml\fP Save to xml element all header data specified by horizontal_section_role and vertical_section_role\&. "
+.ti -1c
+.RI "void \fBmodelHeaderDataFromXml\fP (const QDomElement &element, QAbstractItemModel *model)"
+.br
+.RI "\fBQETXML::modelHeaderDataFromXml\fP Restore from xml modele header data\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This namespace contain some function to use xml with \fBQET\fP\&. 
+.SH "Function Documentation"
+.PP 
+.SS "QBrush QETXML::brushFromXml (const QDomElement & element)"
+
+.PP
+\fBQETXML::brushFromXml\fP Build a QBrush from a xml description\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP : the QDomElement that describe the pen 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the created brush\&. If element is null or tagName isn't 'brush' return a default constructed QBrush 
+.RE
+.PP
+
+.SS "QDomElement QETXML::brushToXml (QDomDocument & parent_document, const QBrush & brush)"
+
+.PP
+\fBQETXML::brushToXml\fP Write attribute of a QBrush in xml element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_document\fP : parent document for create the QDomElement 
+.br
+\fIbrush\fP : the brush to store 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A QDomElement with the attribute stored\&. The tagName of QDomeElement is 'brush'\&. 
+.RE
+.PP
+
+.SS "QVector< QDomElement > QETXML::directChild (const QDomElement & element, const QString & tag_name)"
+
+.PP
+\fBQETXML::directChild\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.br
+\fItag_name\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+All direct child of element with the tag name tag_name 
+.RE
+.PP
+
+.SS "QDomElement QETXML::fileSystemDirToXmlCollectionDir (QDomDocument & document, const QDir & dir, const QString & rename = \fCQString()\fP)"
+
+.SS "QDomElement QETXML::fileSystemElementToXmlCollectionElement (QDomDocument & document, QFile & file, const QString & rename = \fCQString()\fP)"
+
+.SS "QMargins QETXML::marginsFromXml (const QDomElement & element)"
+
+.PP
+\fBQETXML::marginsFromXml\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a QMargins from an xml description\&. The tag name must ne 'margins' 
+.RE
+.PP
+
+.SS "QDomElement QETXML::marginsToXml (QDomDocument & parent_document, const QMargins & margins)"
+
+.PP
+\fBQETXML::marginsToXml\fP Save a QMargins to xml\&. the xml tag name is 'margins'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_document\fP 
+.br
+\fImargins\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void QETXML::modelHeaderDataFromXml (const QDomElement & element, QAbstractItemModel * model)"
+
+.PP
+\fBQETXML::modelHeaderDataFromXml\fP Restore from xml modele header data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.br
+\fImodel\fP 
+.RE
+.PP
+
+.SS "QDomElement QETXML::modelHeaderDataToXml (QDomDocument & parent_document, const QAbstractItemModel * model, QHash< int, QList< int >> horizontal_section_role, QHash< int, QList< int >> vertical_section_role)"
+
+.PP
+\fBQETXML::modelHeaderDataToXml\fP Save to xml element all header data specified by horizontal_section_role and vertical_section_role\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_document\fP 
+.br
+\fImodel\fP 
+.br
+\fIhorizontal_section_role\fP : key as header section and value as list of roles to save in xml 
+.br
+\fIvertical_section_role\fP :key as header section and value as list of roles to save in xml 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QPen QETXML::penFromXml (const QDomElement & element)"
+
+.PP
+\fBQETXML::penFromXml\fP Build a QPen from a xml description\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP : The QDomElement that describe the pen 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the created pen\&. If element is null or tagName isn't 'pen' return a default constructed QPen 
+.RE
+.PP
+
+.SS "QDomElement QETXML::penToXml (QDomDocument & parent_document, const QPen & pen)"
+
+.PP
+\fBQETXML::penToXml\fP Write attribute of a QPen in xml element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_document\fP : parent document for create the QDomElement 
+.br
+\fIpen\fP : the pen to store 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+: A QDomElement with the attribute stored\&. The tagName of QDomeElement is 'pen'\&. 
+.RE
+.PP
+
+.SS "QVector< QDomElement > QETXML::subChild (const QDomElement & element, const QString parent_tag_name, const QString & children_tag_name)"
+
+.PP
+\fBQETXML::subChild\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.br
+\fIparent_tag_name\fP 
+.br
+\fIchildren_tag_name\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+When given an xml dom element element, returns a vector of all children dom_elements tagged children_tag_name nested in the parent dom elements tagged parent_tag_name, themselves children of the dom element element\&. 
+.RE
+.PP
+
+.SS "QDomElement QETXML::textToDomElement (QDomDocument & document, const QString & tag_name, const QString & value)"
+
+.PP
+\fBQETXML::textToDomElement\fP Return a QDomElement, created from document, with tag name tag_name and text value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP 
+.br
+\fItag_name\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a QDomElement, created from document 
+.RE
+.PP
+
+.SS "bool QETXML::writeXmlFile (const QDomDocument & xml_document, const QString & file_path, QString * error_message = \fCnullptr\fP)"
+
+.PP
+\fBQETXML::writeXmlFile\fP Export an XML document to an UTF-8 text file indented with 4 spaces, with LF end of lines and no BOM\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP : An XML document to be exported 
+.br
+\fIfile_path\fP : Path to the file to be written 
+.br
+\fIerror_message\fP : If non-zero, will contain an error message explaining what happened when this function returns false\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+false if an error occurred, true otherwise 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

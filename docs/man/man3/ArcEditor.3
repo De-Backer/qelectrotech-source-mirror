@@ -1,0 +1,247 @@
+.TH "ArcEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ArcEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <arceditor\&.h>\fP
+.PP
+Inherits \fBElementItemEditor\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateArcS\fP ()"
+.br
+.RI "\fBArcEditor::updateArcS\fP Update the start angle of the arc according to the edited value\&. "
+.ti -1c
+.RI "void \fBupdateArcA\fP ()"
+.br
+.RI "\fBArcEditor::updateArcA\fP Update the span angle of the arc according to the edited value\&. "
+.ti -1c
+.RI "void \fBupdateArcRectX\fP ()"
+.br
+.RI "ArcEditor::updateArcRect Update the geometrie of the rect that define this arc according the the edited values\&. "
+.ti -1c
+.RI "void \fBupdateArcRectY\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateArcRectH\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateArcRectV\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateForm\fP () override"
+.br
+.RI "\fBArcEditor::updateForm\fP Update the value of the widgets\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBArcEditor\fP (\fBQETElementEditor\fP *, \fBPartArc\fP *=nullptr, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ArcEditor\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "bool \fBsetPart\fP (\fBCustomElementPart\fP *) override"
+.br
+.RI "\fBArcEditor::setPart\fP Specifie to this editor the part to edit\&. Note that an editor can accept or refuse to edit a part\&. This editor accept only partArc\&. "
+.ti -1c
+.RI "bool \fBsetParts\fP (QList< \fBCustomElementPart\fP * > parts) override"
+.br
+.ti -1c
+.RI "\fBCustomElementPart\fP * \fBcurrentPart\fP () const override"
+.br
+.RI "\fBArcEditor::currentPart\fP\&. "
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBcurrentParts\fP () const override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBArcEditor\fP (const \fBArcEditor\fP &)"
+.br
+.ti -1c
+.RI "void \fBactiveConnections\fP (bool)"
+.br
+.RI "\fBArcEditor::activeConnections\fP Enable/disable connection between editor widget and slot editingFinished True == enable | false == disable\&. "
+.ti -1c
+.RI "void \fBsetUpChangeConnections\fP ()"
+.br
+.RI "setUpChangeConnections Setup the connection from the arc(s) to the widget, to update it when the arc(s) are changed (moved \&.\&.\&.) "
+.ti -1c
+.RI "void \fBdisconnectChangeConnections\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPartArc\fP * \fBpart\fP"
+.br
+.ti -1c
+.RI "\fBStyleEditor\fP * \fBstyle_\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBx\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBy\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBh\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBv\fP"
+.br
+.ti -1c
+.RI "QSpinBox * \fBangle\fP"
+.br
+.ti -1c
+.RI "QSpinBox * \fBstart_angle\fP"
+.br
+.ti -1c
+.RI "bool \fBm_locked\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_change_connections\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a widget to edit elliptical arcs within the element editor\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ArcEditor::ArcEditor (\fBQETElementEditor\fP * editor, \fBPartArc\fP * arc = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP L'editeur d'element concerne 
+.br
+\fIarc\fP L'arc a editer 
+.br
+\fIparent\fP le Widget parent 
+.RE
+.PP
+
+.SS "ArcEditor::~ArcEditor ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "ArcEditor::ArcEditor (const \fBArcEditor\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ArcEditor::activeConnections (bool active)\fC [private]\fP"
+
+.PP
+\fBArcEditor::activeConnections\fP Enable/disable connection between editor widget and slot editingFinished True == enable | false == disable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIactive\fP 
+.RE
+.PP
+
+.SS "\fBCustomElementPart\fP * ArcEditor::currentPart () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBArcEditor::currentPart\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the curent edited part, or 0 if there is no edited part 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "QList< \fBCustomElementPart\fP * > ArcEditor::currentParts () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "void ArcEditor::disconnectChangeConnections ()\fC [private]\fP"
+
+.SS "bool ArcEditor::setPart (\fBCustomElementPart\fP * new_part)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBArcEditor::setPart\fP Specifie to this editor the part to edit\&. Note that an editor can accept or refuse to edit a part\&. This editor accept only partArc\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_part\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "bool ArcEditor::setParts (QList< \fBCustomElementPart\fP * > parts)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBElementItemEditor\fP\&.
+.SS "void ArcEditor::setUpChangeConnections ()\fC [private]\fP"
+
+.PP
+setUpChangeConnections Setup the connection from the arc(s) to the widget, to update it when the arc(s) are changed (moved \&.\&.\&.) 
+.SS "void ArcEditor::updateArcA ()\fC [slot]\fP"
+
+.PP
+\fBArcEditor::updateArcA\fP Update the span angle of the arc according to the edited value\&. 
+.SS "void ArcEditor::updateArcRectH ()\fC [slot]\fP"
+
+.SS "void ArcEditor::updateArcRectV ()\fC [slot]\fP"
+
+.SS "void ArcEditor::updateArcRectX ()\fC [slot]\fP"
+
+.PP
+ArcEditor::updateArcRect Update the geometrie of the rect that define this arc according the the edited values\&. 
+.SS "void ArcEditor::updateArcRectY ()\fC [slot]\fP"
+
+.SS "void ArcEditor::updateArcS ()\fC [slot]\fP"
+
+.PP
+\fBArcEditor::updateArcS\fP Update the start angle of the arc according to the edited value\&. 
+.SS "void ArcEditor::updateForm ()\fC [override]\fP, \fC [slot]\fP"
+
+.PP
+\fBArcEditor::updateForm\fP Update the value of the widgets\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QSpinBox* ArcEditor::angle\fC [private]\fP"
+
+.SS "QDoubleSpinBox * ArcEditor::h\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> ArcEditor::m_change_connections\fC [private]\fP"
+
+.SS "bool ArcEditor::m_locked\fC [private]\fP"
+
+.SS "\fBPartArc\fP* ArcEditor::part\fC [private]\fP"
+
+.SS "QSpinBox * ArcEditor::start_angle\fC [private]\fP"
+
+.SS "\fBStyleEditor\fP* ArcEditor::style_\fC [private]\fP"
+
+.SS "QDoubleSpinBox * ArcEditor::v\fC [private]\fP"
+
+.SS "QDoubleSpinBox* ArcEditor::x\fC [private]\fP"
+
+.SS "QDoubleSpinBox * ArcEditor::y\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

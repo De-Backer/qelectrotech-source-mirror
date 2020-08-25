@@ -1,0 +1,149 @@
+.TH "QGIManager" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QGIManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qgimanager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQGIManager\fP (QGraphicsScene *)"
+.br
+.ti -1c
+.RI "virtual \fB~QGIManager\fP ()"
+.br
+.ti -1c
+.RI "void \fBmanage\fP (QGraphicsItem *)"
+.br
+.ti -1c
+.RI "void \fBrelease\fP (QGraphicsItem *)"
+.br
+.ti -1c
+.RI "void \fBmanage\fP (const QList< QGraphicsItem * > &)"
+.br
+.ti -1c
+.RI "void \fBrelease\fP (const QList< QGraphicsItem * > &)"
+.br
+.ti -1c
+.RI "void \fBsetDestroyQGIOnDelete\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBmanages\fP (QGraphicsItem *) const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQGIManager\fP (const \fBQGIManager\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QGraphicsScene * \fBscene\fP"
+.br
+.ti -1c
+.RI "QHash< QGraphicsItem *, int > \fBqgi_manager\fP"
+.br
+.ti -1c
+.RI "bool \fBdestroy_qgi_on_delete\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a QGraphicsItem manager, which can delete QGraphicsItem as soon as there is no reference to them anymore\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QGIManager::QGIManager (QGraphicsScene * sc)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsc\fP QGraphicsScene a utiliser pour gerer au mieux les QGraphicsItem 
+.RE
+.PP
+
+.SS "QGIManager::~QGIManager ()\fC [virtual]\fP"
+Destructeur Lors de sa destruction, le QGI Manager detruit les QGraphicsItem restants si ceux-ci n'appartiennent pas a la scene ; ce comportement peut etre change avec la methode setDestroyQGIOnDelete 
+.PP
+\fBSee also\fP
+.RS 4
+\fBsetDestroyQGIOnDelete\fP 
+.RE
+.PP
+
+.SS "QGIManager::QGIManager (const \fBQGIManager\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QGIManager::manage (const QList< QGraphicsItem * > & qgis)"
+Demande au \fBQGIManager\fP de gerer plusieurs QGI 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqgis\fP QGraphicsItems a gerer 
+.RE
+.PP
+
+.SS "void QGIManager::manage (QGraphicsItem * qgi)"
+Demande au \fBQGIManager\fP de gerer un QGI 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqgi\fP QGraphicsItem a gerer 
+.RE
+.PP
+
+.SS "bool QGIManager::manages (QGraphicsItem * qgi) const"
+Permet de savoir si ce \fBQGIManager\fP gere ou non un item donne 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqgi\fP QGraphicsItem dont il faut verifier la presence 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si l'item est gere, false sinon 
+.RE
+.PP
+
+.SS "void QGIManager::release (const QList< QGraphicsItem * > & qgis)"
+Indique au \fBQGIManager\fP que pour chaque QGI fourni, une reference vers celui-ci a ete detruite\&. S'il n'y a plus de references vers un QGI et que celui-ci n'est pas present sur la scene de ce \fBQGIManager\fP, alors il sera detruit\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqgis\fP QGraphicsItems a ne plus gerer 
+.RE
+.PP
+
+.SS "void QGIManager::release (QGraphicsItem * qgi)"
+Indique au \fBQGIManager\fP qu'une reference vers un QGI a ete detruite S'il n'y a plus de references vers ce QGI et que celui-ci n'est pas present sur la scene de ce \fBQGIManager\fP, alors il sera detruit\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqgi\fP QGraphicsItem a ne plus gerer 
+.RE
+.PP
+
+.SS "void QGIManager::setDestroyQGIOnDelete (bool b)"
+Indique au \fBQGIManager\fP de detruire les QGraphicsItem restants lors de sa destruction si ceux-ci n'appartiennent pas a la scene 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool QGIManager::destroy_qgi_on_delete\fC [private]\fP"
+
+.SS "QHash<QGraphicsItem *, int> QGIManager::qgi_manager\fC [private]\fP"
+
+.SS "QGraphicsScene* QGIManager::scene\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

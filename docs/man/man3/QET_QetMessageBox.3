@@ -1,0 +1,68 @@
+.TH "QET::QetMessageBox" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QET::QetMessageBox
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "QMessageBox::StandardButton \fBcritical\fP (QWidget *, const QString &, const QString &, QMessageBox::StandardButtons=QMessageBox::Ok, QMessageBox::StandardButton=QMessageBox::NoButton)"
+.br
+.ti -1c
+.RI "QMessageBox::StandardButton \fBinformation\fP (QWidget *, const QString &, const QString &, QMessageBox::StandardButtons=QMessageBox::Ok, QMessageBox::StandardButton=QMessageBox::NoButton)"
+.br
+.ti -1c
+.RI "QMessageBox::StandardButton \fBquestion\fP (QWidget *, const QString &, const QString &, QMessageBox::StandardButtons=QMessageBox::Ok, QMessageBox::StandardButton=QMessageBox::NoButton)"
+.br
+.ti -1c
+.RI "QMessageBox::StandardButton \fBwarning\fP (QWidget *, const QString &, const QString &, QMessageBox::StandardButtons=QMessageBox::Ok, QMessageBox::StandardButton=QMessageBox::NoButton)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This namespace defines static methods behaving in a very similar way to some static methods from the QMessageBox Qt class\&. The behavior is expected to be the same under X11 and Windows\&. However, under MacOS, when a parent widget is provided, these methodes ensure the dialog box is 'window modal' and has the Qt:Sheet flag, thus enabling a better MacOS integration\&. 
+.SH "Function Documentation"
+.PP 
+.SS "QMessageBox::StandardButton QET::QetMessageBox::critical (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = \fCQMessageBox::Ok\fP, QMessageBox::StandardButton defaultButton = \fCQMessageBox::NoButton\fP)"
+
+.PP
+\fBSee also\fP
+.RS 4
+Documentation Qt pour QMessageBox::critical 
+.RE
+.PP
+
+.SS "QMessageBox::StandardButton QET::QetMessageBox::information (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = \fCQMessageBox::Ok\fP, QMessageBox::StandardButton defaultButton = \fCQMessageBox::NoButton\fP)"
+
+.PP
+\fBSee also\fP
+.RS 4
+Documentation Qt pour QMessageBox::information 
+.RE
+.PP
+
+.SS "QMessageBox::StandardButton QET::QetMessageBox::question (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = \fCQMessageBox::Ok\fP, QMessageBox::StandardButton defaultButton = \fCQMessageBox::NoButton\fP)"
+
+.PP
+\fBSee also\fP
+.RS 4
+Documentation Qt pour QMessageBox::question 
+.RE
+.PP
+
+.SS "QMessageBox::StandardButton QET::QetMessageBox::warning (QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = \fCQMessageBox::Ok\fP, QMessageBox::StandardButton defaultButton = \fCQMessageBox::NoButton\fP)"
+
+.PP
+\fBSee also\fP
+.RS 4
+Documentation Qt pour QMessageBox::warning 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

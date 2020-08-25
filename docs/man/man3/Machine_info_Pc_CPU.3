@@ -1,0 +1,40 @@
+.TH "Machine_info::Pc::CPU" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Machine_info::Pc::CPU
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <machine_info\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBinfo\fP"
+.br
+.ti -1c
+.RI "QString \fBArchitecture\fP"
+.br
+.ti -1c
+.RI "int32_t \fBThreadCount\fP =QThread::idealThreadCount()"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "QString Machine_info::Pc::CPU::Architecture"
+\fBInitial value:\fP
+.PP
+.nf
+=QString(
+                                        QSysInfo::currentCpuArchitecture())
+.fi
+.SS "QString Machine_info::Pc::CPU::info"
+
+.SS "int32_t Machine_info::Pc::CPU::ThreadCount =QThread::idealThreadCount()"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

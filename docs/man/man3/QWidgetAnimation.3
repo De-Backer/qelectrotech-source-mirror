@@ -1,0 +1,196 @@
+.TH "QWidgetAnimation" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QWidgetAnimation \- The \fBQWidgetAnimation\fP class This class animate the show and hide function of a QWidget\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qwidgetanimation\&.h>\fP
+.PP
+Inherits QPropertyAnimation\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBBehavior\fP { \fBminimumSizeHint\fP, \fBavailableSpace\fP, \fBlastSize\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQWidgetAnimation\fP (QWidget *widget, Qt::Orientation orientation, \fBQWidgetAnimation::Behavior\fP behavior=\fBQWidgetAnimation::minimumSizeHint\fP, int duration=250)"
+.br
+.RI "\fBQWidgetAnimation::QWidgetAnimation\fP\&. "
+.ti -1c
+.RI "void \fBwidgetToSubtract\fP (QVector< QWidget * > widgets)"
+.br
+.RI "\fBQWidgetAnimation::widgetToSubtract\fP Widget to subtract the size when the behavior is availableSpace\&. "
+.ti -1c
+.RI "void \fBshow\fP ()"
+.br
+.RI "\fBQWidgetAnimation::show\fP show the widget\&. "
+.ti -1c
+.RI "void \fBhide\fP ()"
+.br
+.RI "\fBQWidgetAnimation::hide\fP Hide the widget\&. "
+.ti -1c
+.RI "void \fBsetHidden\fP (bool hidden)"
+.br
+.RI "\fBQWidgetAnimation::setHidden\fP true hide, false show\&. "
+.ti -1c
+.RI "void \fBsetLastShowSize\fP (int size)"
+.br
+.RI "\fBQWidgetAnimation::setLastShowSize\fP Force the last show size value to size\&. "
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBcurrentState\fP { \fBShowing\fP, \fBHidding\fP, \fBFinish\fP }"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Qt::Orientation \fBm_orientation\fP = Qt::Horizontal"
+.br
+.ti -1c
+.RI "QVector< QWidget * > \fBm_widget_to_substract\fP"
+.br
+.ti -1c
+.RI "QWidget * \fBm_widget\fP"
+.br
+.ti -1c
+.RI "QSize \fBm_maximum\fP"
+.br
+.ti -1c
+.RI "QRect \fBm_last_rect\fP"
+.br
+.ti -1c
+.RI "\fBQWidgetAnimation::Behavior\fP \fBm_behavior\fP = Behavior::minimumSizeHint"
+.br
+.ti -1c
+.RI "\fBQWidgetAnimation::currentState\fP \fBm_state\fP = \fBQWidgetAnimation::Finish\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBQWidgetAnimation\fP class This class animate the show and hide function of a QWidget\&. 
+
+The role of behavior is to calcul as best the animation process when widget is show\&. Because this class don't change the current and final size of the widget but her maximum size during the animation process, we must to know in advance the final size of the widget\&. Behavior minimumSizeHint : the final size of the widget will be his minimum size hint\&. Behavior availableSpace : the final size of widget will be the available size of her parent\&. Since parent can have other widgets you can add a QVector of widget to subtract of the final size\&. Because we suppose the animated widget will take the maximum available space, we subtract the minimum size hint of widgets in QVector\&. Behavior lastSize : The widget will have the same size as the last time he was showed\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBQWidgetAnimation::Behavior\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIminimumSizeHint \fP\fP
+.TP
+\fB\fIavailableSpace \fP\fP
+.TP
+\fB\fIlastSize \fP\fP
+.SS "enum \fBQWidgetAnimation::currentState\fP\fC [private]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIShowing \fP\fP
+.TP
+\fB\fIHidding \fP\fP
+.TP
+\fB\fIFinish \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QWidgetAnimation::QWidgetAnimation (QWidget * widget, Qt::Orientation orientation, \fBQWidgetAnimation::Behavior\fP behavior = \fC\fBQWidgetAnimation::minimumSizeHint\fP\fP, int duration = \fC250\fP)"
+
+.PP
+\fBQWidgetAnimation::QWidgetAnimation\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget\fP : widget to animate 
+.br
+\fIorientation\fP : animate widget horizontally or vertically 
+.br
+\fIbehavior\fP : 
+.br
+\fIduration\fP : the duration of animation 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+void QVariantAnimation::setDuration(int msecs) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QWidgetAnimation::hide ()"
+
+.PP
+\fBQWidgetAnimation::hide\fP Hide the widget\&. 
+.SS "void QWidgetAnimation::setHidden (bool hidden)"
+
+.PP
+\fBQWidgetAnimation::setHidden\fP true hide, false show\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhidden\fP 
+.RE
+.PP
+
+.SS "void QWidgetAnimation::setLastShowSize (int size)"
+
+.PP
+\fBQWidgetAnimation::setLastShowSize\fP Force the last show size value to size\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP 
+.RE
+.PP
+
+.SS "void QWidgetAnimation::show ()"
+
+.PP
+\fBQWidgetAnimation::show\fP show the widget\&. 
+.SS "void QWidgetAnimation::widgetToSubtract (QVector< QWidget * > widgets)"
+
+.PP
+\fBQWidgetAnimation::widgetToSubtract\fP Widget to subtract the size when the behavior is availableSpace\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidgets\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQWidgetAnimation::Behavior\fP QWidgetAnimation::m_behavior = Behavior::minimumSizeHint\fC [private]\fP"
+
+.SS "QRect QWidgetAnimation::m_last_rect\fC [private]\fP"
+
+.SS "QSize QWidgetAnimation::m_maximum\fC [private]\fP"
+
+.SS "Qt::Orientation QWidgetAnimation::m_orientation = Qt::Horizontal\fC [private]\fP"
+
+.SS "\fBQWidgetAnimation::currentState\fP QWidgetAnimation::m_state = \fBQWidgetAnimation::Finish\fP\fC [private]\fP"
+
+.SS "QWidget* QWidgetAnimation::m_widget\fC [private]\fP"
+
+.SS "QVector<QWidget *> QWidgetAnimation::m_widget_to_substract\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

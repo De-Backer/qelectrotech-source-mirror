@@ -1,0 +1,725 @@
+.TH "ProjectView" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProjectView \- The \fBProjectView\fP class This class provides a widget displaying the diagrams of a particular project using tabs\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <projectview\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBremoveDiagram\fP (\fBDiagramView\fP *)"
+.br
+.RI "\fBProjectView::removeDiagram\fP Remove a diagram (folio) of the project\&. "
+.ti -1c
+.RI "void \fBremoveDiagram\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBshowDiagram\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBshowDiagram\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBeditProjectProperties\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditCurrentDiagramProperties\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditDiagramProperties\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBeditDiagramProperties\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUp\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUp\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramDown\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramDown\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUpTop\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUpTop\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUpx10\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUpx10\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramDownx10\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramDownx10\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBprintProject\fP ()"
+.br
+.ti -1c
+.RI "void \fBexportProject\fP ()"
+.br
+.ti -1c
+.RI "\fBQETResult\fP \fBsave\fP ()"
+.br
+.ti -1c
+.RI "\fBQETResult\fP \fBsaveAs\fP ()"
+.br
+.ti -1c
+.RI "\fBQETResult\fP \fBdoSave\fP ()"
+.br
+.ti -1c
+.RI "int \fBcleanProject\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateWindowTitle\fP ()"
+.br
+.RI "\fBProjectView::updateWindowTitle\fP Update the project view title\&. "
+.ti -1c
+.RI "void \fBupdateTabTitle\fP (\fBDiagramView\fP *)"
+.br
+.RI "\fBProjectView::updateTabTitle\fP Update the title of the tab which display the diagram view\&. "
+.ti -1c
+.RI "void \fBupdateAllTabsTitle\fP ()"
+.br
+.RI "\fBProjectView::updateAllTabsTitle\fP Update all tabs title\&. "
+.ti -1c
+.RI "void \fBtabMoved\fP (int, int)"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBdiagramAdded\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBdiagramRemoved\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBdiagramActivated\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBprojectClosed\fP (\fBProjectView\fP *)"
+.br
+.ti -1c
+.RI "void \fBerrorEncountered\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBfindElementRequired\fP (const \fBElementsLocation\fP &)"
+.br
+.ti -1c
+.RI "void \fBeditElementRequired\fP (const \fBElementsLocation\fP &)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectView\fP (\fBQETProject\fP *, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ProjectView\fP () override"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetProject\fP (\fBQETProject\fP *)"
+.br
+.RI "\fBProjectView::setProject\fP Set the project display by the project view\&. "
+.ti -1c
+.RI "QList< \fBDiagramView\fP * > \fBdiagram_views\fP () const"
+.br
+.ti -1c
+.RI "\fBDiagramView\fP * \fBcurrentDiagram\fP () const"
+.br
+.RI "\fBProjectView::currentDiagram\fP\&. "
+.ti -1c
+.RI "void \fBcloseEvent\fP (QCloseEvent *) override"
+.br
+.ti -1c
+.RI "void \fBchangeTabUp\fP ()"
+.br
+.RI "change current diagramview to previous tab "
+.ti -1c
+.RI "void \fBchangeTabDown\fP ()"
+.br
+.RI "change current diagramview to next folio "
+.ti -1c
+.RI "void \fBchangeFirstTab\fP ()"
+.br
+.RI "change current diagramview to first tab "
+.ti -1c
+.RI "void \fBchangeLastTab\fP ()"
+.br
+.RI "change current diagramview to last tab "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBtabChanged\fP (int)"
+.br
+.RI "\fBProjectView::tabChanged\fP Manage the tab change\&. If tab_id == -1 (there is no diagram opened), we display the fallback widget\&. "
+.ti -1c
+.RI "void \fBtabDoubleClicked\fP (int)"
+.br
+.ti -1c
+.RI "void \fBsetDisplayFallbackWidget\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBadjustReadOnlyState\fP ()"
+.br
+.ti -1c
+.RI "void \fBdiagramAdded\fP (\fBDiagram\fP *diagram)"
+.br
+.RI "\fBProjectView::diagramAdded\fP Slot called when qetproject emit diagramAdded\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectView\fP (const \fBProjectView\fP &)"
+.br
+.ti -1c
+.RI "void \fBinitActions\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitWidgets\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitLayout\fP ()"
+.br
+.ti -1c
+.RI "void \fBloadDiagrams\fP ()"
+.br
+.RI "\fBProjectView::loadDiagrams\fP Load diagrams of project\&. We create a diagram view for each diagram, and add it to the project view\&. "
+.ti -1c
+.RI "\fBDiagramView\fP * \fBfindDiagram\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "\fBDiagramView\fP * \fBnextDiagram\fP ()"
+.br
+.ti -1c
+.RI "\fBDiagramView\fP * \fBpreviousDiagram\fP ()"
+.br
+.ti -1c
+.RI "\fBDiagramView\fP * \fBfirstDiagram\fP ()"
+.br
+.ti -1c
+.RI "\fBDiagramView\fP * \fBlastDiagram\fP ()"
+.br
+.ti -1c
+.RI "void \fBrebuildDiagramsMap\fP ()"
+.br
+.ti -1c
+.RI "bool \fBtryClosing\fP ()"
+.br
+.ti -1c
+.RI "bool \fBtryClosingElementEditors\fP ()"
+.br
+.ti -1c
+.RI "int \fBtryClosingDiagrams\fP ()"
+.br
+.RI "\fBProjectView::tryClosingDiagrams\fP try to close this project, if diagram or project option are changed a dialog ask if user want to save the modification\&. "
+.ti -1c
+.RI "QString \fBaskUserForFilePath\fP (bool=true)"
+.br
+.ti -1c
+.RI "\fBQETResult\fP \fBnoProjectResult\fP () const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QAction * \fBm_add_new_diagram\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_first_view\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_end_view\fP"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBlayout_\fP"
+.br
+.ti -1c
+.RI "QWidget * \fBfallback_widget_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBfallback_label_\fP"
+.br
+.ti -1c
+.RI "QTabWidget * \fBm_tab\fP"
+.br
+.ti -1c
+.RI "QMap< int, \fBDiagramView\fP * > \fBm_diagram_ids\fP"
+.br
+.ti -1c
+.RI "int \fBm_previous_tab_index\fP = \-1"
+.br
+.ti -1c
+.RI "QList< \fBDiagramView\fP * > \fBm_diagram_view_list\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBProjectView\fP class This class provides a widget displaying the diagrams of a particular project using tabs\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ProjectView::ProjectView (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP projet a visualiser 
+.br
+\fIparent\fP Widget parent 
+.RE
+.PP
+
+.SS "ProjectView::~ProjectView ()\fC [override]\fP"
+Destructeur Supprime les \fBDiagramView\fP embarquees 
+.SS "ProjectView::ProjectView (const \fBProjectView\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ProjectView::adjustReadOnlyState ()\fC [private]\fP, \fC [slot]\fP"
+Effectue les actions necessaires lorsque le projet visualise entre ou sort du mode lecture seule\&. 
+.SS "QString ProjectView::askUserForFilePath (bool assign = \fCtrue\fP)\fC [private]\fP"
+Ask the user to provide a file path in which the currently edited project will be saved\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIassign\fP When true, assign the provided filepath to the project through setFilePath()\&. Defaults to true\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the file path, or an empty string if none were provided 
+.RE
+.PP
+
+.SS "void ProjectView::changeFirstTab ()"
+
+.PP
+change current diagramview to first tab 
+.SS "void ProjectView::changeLastTab ()"
+
+.PP
+change current diagramview to last tab 
+.SS "void ProjectView::changeTabDown ()"
+
+.PP
+change current diagramview to next folio 
+.SS "void ProjectView::changeTabUp ()"
+
+.PP
+change current diagramview to previous tab 
+.SS "int ProjectView::cleanProject ()\fC [slot]\fP"
+Allow the user to clean the project, which includes: deleting unused title block templates deleting unused elements deleting empty categories 
+.PP
+\fBReturns\fP
+.RS 4
+an integer value above zero if elements and/or categories were cleaned\&. 
+.RE
+.PP
+
+.SS "void ProjectView::closeEvent (QCloseEvent * qce)\fC [override]\fP"
+Gere la fermeture du schema\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqce\fP Le QCloseEvent decrivant l'evenement 
+.RE
+.PP
+
+.SS "\fBDiagramView\fP * ProjectView::currentDiagram () const"
+
+.PP
+\fBProjectView::currentDiagram\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current active diagram view or nullptr if there isn't diagramView in this project view\&. 
+.RE
+.PP
+
+.SS "QList< \fBDiagramView\fP * > ProjectView::diagram_views () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la liste des schemas ouverts dans le projet 
+.RE
+.PP
+
+.SS "void ProjectView::diagramActivated (\fBDiagramView\fP *)\fC [signal]\fP"
+
+.SS "void ProjectView::diagramAdded (\fBDiagram\fP * diagram)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBProjectView::diagramAdded\fP Slot called when qetproject emit diagramAdded\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP 
+.RE
+.PP
+
+.SS "void ProjectView::diagramAdded (\fBDiagramView\fP *)\fC [signal]\fP"
+
+.SS "void ProjectView::diagramRemoved (\fBDiagramView\fP *)\fC [signal]\fP"
+
+.SS "\fBQETResult\fP ProjectView::doSave ()\fC [slot]\fP"
+Save project content, then write the project file\&. May call saveAs if no filepath was provided before\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a \fBQETResult\fP object reflecting the situation; note that a valid \fBQETResult\fP object is returned if the operation was cancelled\&. 
+.RE
+.PP
+
+.SS "void ProjectView::editCurrentDiagramProperties ()\fC [slot]\fP"
+Edite les proprietes du schema courant 
+.SS "void ProjectView::editDiagramProperties (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Edite les proprietes du schema diagram 
+.SS "void ProjectView::editDiagramProperties (\fBDiagramView\fP * diagram_view)\fC [slot]\fP"
+Edite les proprietes du schema diagram_view 
+.SS "void ProjectView::editElementRequired (const \fBElementsLocation\fP &)\fC [signal]\fP"
+
+.SS "void ProjectView::editProjectProperties ()\fC [slot]\fP"
+Enable the user to edit properties of the current project through a configuration dialog\&. 
+.SS "void ProjectView::errorEncountered (const QString &)\fC [signal]\fP"
+
+.SS "void ProjectView::exportProject ()\fC [slot]\fP"
+Exporte le schema\&. 
+.SS "\fBDiagramView\fP * ProjectView::findDiagram (\fBDiagram\fP * diagram)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a trouver 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le \fBDiagramView\fP correspondant au schema passe en parametre, ou 0 si le schema n'est pas trouve 
+.RE
+.PP
+
+.SS "void ProjectView::findElementRequired (const \fBElementsLocation\fP &)\fC [signal]\fP"
+
+.SS "\fBDiagramView\fP * ProjectView::firstDiagram ()\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+first folio of current project 
+.RE
+.PP
+
+.SS "void ProjectView::initActions ()\fC [private]\fP"
+Initialize actions for this widget\&. 
+.SS "void ProjectView::initLayout ()\fC [private]\fP"
+Initialize layout for this widget\&. 
+.SS "void ProjectView::initWidgets ()\fC [private]\fP"
+Initialize child widgets for this widget\&. 
+.SS "\fBDiagramView\fP * ProjectView::lastDiagram ()\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+last folio of current project 
+.RE
+.PP
+
+.SS "void ProjectView::loadDiagrams ()\fC [private]\fP"
+
+.PP
+\fBProjectView::loadDiagrams\fP Load diagrams of project\&. We create a diagram view for each diagram, and add it to the project view\&. 
+.SS "void ProjectView::moveDiagramDown (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Deplace le schema diagram vers le bas / la droite 
+.SS "void ProjectView::moveDiagramDown (\fBDiagramView\fP * diagram_view)\fC [slot]\fP"
+Deplace le schema diagram_view vers le bas / la droite 
+.SS "void ProjectView::moveDiagramDownx10 (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Deplace le schema diagram vers le bas / la droite x10 
+.SS "void ProjectView::moveDiagramDownx10 (\fBDiagramView\fP * diagram_view)\fC [slot]\fP"
+Deplace le schema diagram_view vers le bas / la droite x10 
+.SS "void ProjectView::moveDiagramUp (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Deplace le schema diagram vers le haut / la gauche 
+.SS "void ProjectView::moveDiagramUp (\fBDiagramView\fP * diagram_view)\fC [slot]\fP"
+Deplace le schema diagram_view vers le haut / la gauche 
+.SS "void ProjectView::moveDiagramUpTop (\fBDiagram\fP * diagram)\fC [slot]\fP"
+
+.SS "void ProjectView::moveDiagramUpTop (\fBDiagramView\fP * diagram_view)\fC [slot]\fP"
+
+.SS "void ProjectView::moveDiagramUpx10 (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Deplace le schema diagram vers le haut / la gauche x10 
+.SS "void ProjectView::moveDiagramUpx10 (\fBDiagramView\fP * diagram_view)\fC [slot]\fP"
+Deplace le schema diagram_view vers le haut / la gauche x10 
+.SS "\fBDiagramView\fP * ProjectView::nextDiagram ()\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+next folio of current diagramview 
+.RE
+.PP
+
+.SS "\fBQETResult\fP ProjectView::noProjectResult () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the \fBQETResult\fP object to be returned when it appears this project view is not associated to any project\&. 
+.RE
+.PP
+
+.SS "\fBDiagramView\fP * ProjectView::previousDiagram ()\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+previous folio of current diagramview 
+.RE
+.PP
+
+.SS "void ProjectView::printProject ()\fC [slot]\fP"
+Ce slot demarre un dialogue permettant a l'utilisateur de parametrer et de lancer l'impression de toute ou partie du projet\&. 
+.SS "\fBQETProject\fP * ProjectView::project ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+le projet actuellement visualise par le \fBProjectView\fP 
+.RE
+.PP
+
+.SS "void ProjectView::projectClosed (\fBProjectView\fP *)\fC [signal]\fP"
+
+.SS "void ProjectView::rebuildDiagramsMap ()\fC [private]\fP"
+Reconstruit la map associant les index des onglets avec les \fBDiagramView\fP 
+.SS "void ProjectView::removeDiagram (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Enleve un schema du \fBProjectView\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a enlever 
+.RE
+.PP
+
+.SS "void ProjectView::removeDiagram (\fBDiagramView\fP * diagram_view)\fC [slot]\fP"
+
+.PP
+\fBProjectView::removeDiagram\fP Remove a diagram (folio) of the project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_view\fP : diagram view to remove 
+.RE
+.PP
+
+.SS "\fBQETResult\fP ProjectView::save ()\fC [slot]\fP"
+Save project properties along with all modified diagrams\&. 
+.PP
+\fBSee also\fP
+.RS 4
+filePath() 
+.PP
+setFilePath() 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a \fBQETResult\fP object reflecting the situation 
+.RE
+.PP
+
+.SS "\fBQETResult\fP ProjectView::saveAs ()\fC [slot]\fP"
+Ask users for a filepath in order to save the project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoptions\fP May be used to specify what should be saved; defaults to all modified diagrams\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a \fBQETResult\fP object reflecting the situation; note that a valid \fBQETResult\fP object is returned if the operation was cancelled\&. 
+.RE
+.PP
+
+.SS "void ProjectView::setDisplayFallbackWidget (bool fallback)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfallback\fP true pour afficher le widget de fallback, false pour afficher les onglets\&. Le widget de Fallback est le widget affiche lorsque le projet ne comporte aucun schema\&. 
+.RE
+.PP
+
+.SS "void ProjectView::setProject (\fBQETProject\fP * project)"
+
+.PP
+\fBProjectView::setProject\fP Set the project display by the project view\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.RE
+.PP
+
+.SS "void ProjectView::showDiagram (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Active l'onglet adequat pour afficher le schema passe en parametre 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a afficher 
+.RE
+.PP
+
+.SS "void ProjectView::showDiagram (\fBDiagramView\fP * diagram)\fC [slot]\fP"
+Active l'onglet adequat pour afficher le schema passe en parametre 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a afficher 
+.RE
+.PP
+
+.SS "void ProjectView::tabChanged (int tab_id)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBProjectView::tabChanged\fP Manage the tab change\&. If tab_id == -1 (there is no diagram opened), we display the fallback widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItab_id\fP 
+.RE
+.PP
+
+.SS "void ProjectView::tabDoubleClicked (int tab_id)\fC [private]\fP, \fC [slot]\fP"
+Gere le double-clic sur un onglet : edite les proprietes du schema 
+.PP
+\fBParameters\fP
+.RS 4
+\fItab_id\fP Index de l'onglet concerne 
+.RE
+.PP
+
+.SS "void ProjectView::tabMoved (int from, int to)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP Index de l'onglet avant le deplacement 
+.br
+\fIto\fP Index de l'onglet apres le deplacement 
+.RE
+.PP
+
+.SS "bool ProjectView::tryClosing ()\fC [private]\fP"
+Cette methode essaye de fermer successivement les editeurs d'element puis les schemas du projet\&. L'utilisateur peut refuser de fermer un schema ou un editeur\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true si tout a pu etre ferme, false sinon 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBtryClosingElementEditors()\fP 
+.PP
+\fBtryClosingDiagrams()\fP 
+.RE
+.PP
+
+.SS "int ProjectView::tryClosingDiagrams ()\fC [private]\fP"
+
+.PP
+\fBProjectView::tryClosingDiagrams\fP try to close this project, if diagram or project option are changed a dialog ask if user want to save the modification\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the answer of dialog or discard if no change\&. 
+.RE
+.PP
+
+.SS "bool ProjectView::tryClosingElementEditors ()\fC [private]\fP"
+Un projet comporte des elements integres\&. Cette methode ferme les editeurs d'elements associes a ce projet\&. L'utilisateur peut refuser la fermeture d'un editeur d'element\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true si tous les editeurs d'element ont pu etre fermes, false sinon 
+.RE
+.PP
+
+.SS "void ProjectView::updateAllTabsTitle ()\fC [slot]\fP"
+
+.PP
+\fBProjectView::updateAllTabsTitle\fP Update all tabs title\&. 
+.SS "void ProjectView::updateTabTitle (\fBDiagramView\fP * diagram_view)\fC [slot]\fP"
+
+.PP
+\fBProjectView::updateTabTitle\fP Update the title of the tab which display the diagram view\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_view\fP : The diagram view\&. 
+.RE
+.PP
+
+.SS "void ProjectView::updateWindowTitle ()\fC [slot]\fP"
+
+.PP
+\fBProjectView::updateWindowTitle\fP Update the project view title\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QLabel* ProjectView::fallback_label_\fC [private]\fP"
+
+.SS "QWidget* ProjectView::fallback_widget_\fC [private]\fP"
+
+.SS "QVBoxLayout* ProjectView::layout_\fC [private]\fP"
+
+.SS "QAction* ProjectView::m_add_new_diagram\fC [private]\fP"
+
+.SS "QMap<int, \fBDiagramView\fP *> ProjectView::m_diagram_ids\fC [private]\fP"
+
+.SS "QList<\fBDiagramView\fP *> ProjectView::m_diagram_view_list\fC [private]\fP"
+
+.SS "QAction * ProjectView::m_end_view\fC [private]\fP"
+
+.SS "QAction * ProjectView::m_first_view\fC [private]\fP"
+
+.SS "int ProjectView::m_previous_tab_index = \-1\fC [private]\fP"
+
+.SS "\fBQETProject\fP* ProjectView::m_project\fC [private]\fP"
+
+.SS "QTabWidget* ProjectView::m_tab\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

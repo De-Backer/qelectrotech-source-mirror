@@ -1,0 +1,143 @@
+.TH "ElementTextsMover" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementTextsMover
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementtextsmover\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementTextsMover\fP ()"
+.br
+.RI "\fBElementTextsMover::ElementTextsMover\fP\&. "
+.ti -1c
+.RI "bool \fBisReady\fP () const"
+.br
+.RI "\fBElementTextsMover::isReady\fP\&. "
+.ti -1c
+.RI "int \fBbeginMovement\fP (\fBDiagram\fP *diagram, QGraphicsItem *driver_item=nullptr)"
+.br
+.RI "\fBElementTextsMover::beginMovement\fP Begin a movement\&. "
+.ti -1c
+.RI "void \fBcontinueMovement\fP (QGraphicsSceneMouseEvent *event)"
+.br
+.ti -1c
+.RI "void \fBendMovement\fP ()"
+.br
+.RI "\fBElementTextsMover::endMovement\fP Finish the movement by pushing an undo command to the parent diagram of text item\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementTextsMover\fP (const \fBElementTextsMover\fP &)"
+.br
+.ti -1c
+.RI "QString \fBundoText\fP () const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_movement_running\fP = false"
+.br
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP = nullptr"
+.br
+.ti -1c
+.RI "QGraphicsItem * \fBm_movement_driver\fP = nullptr"
+.br
+.ti -1c
+.RI "QHash< \fBDiagramTextItem\fP *, QPointF > \fBm_texts_hash\fP"
+.br
+.ti -1c
+.RI "QHash< QGraphicsItemGroup *, QPointF > \fBm_grps_hash\fP"
+.br
+.ti -1c
+.RI "QHash< QGraphicsItem *, QPointF > \fBm_items_hash\fP"
+.br
+.ti -1c
+.RI "int \fBm_text_count\fP = 0"
+.br
+.ti -1c
+.RI "int \fBm_group_count\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class manages the interactive movement of element text items on a particular diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementTextsMover::ElementTextsMover ()"
+
+.PP
+\fBElementTextsMover::ElementTextsMover\fP\&. 
+.SS "ElementTextsMover::ElementTextsMover (const \fBElementTextsMover\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int ElementTextsMover::beginMovement (\fBDiagram\fP * diagram, QGraphicsItem * driver_item = \fCnullptr\fP)"
+
+.PP
+\fBElementTextsMover::beginMovement\fP Begin a movement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : diagram where the movement is apply 
+.br
+\fIdriver_item\fP : item moved by the mouse 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+: the number of moved text (driver_item include), or -1 if this \fBElementTextsMover\fP can't begin a movement 
+.RE
+.PP
+
+.SS "void ElementTextsMover::continueMovement (QGraphicsSceneMouseEvent * event)"
+
+.SS "void ElementTextsMover::endMovement ()"
+
+.PP
+\fBElementTextsMover::endMovement\fP Finish the movement by pushing an undo command to the parent diagram of text item\&. 
+.SS "bool ElementTextsMover::isReady () const"
+
+.PP
+\fBElementTextsMover::isReady\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this \fBElementTextsMover\fP is ready to process a new movement\&. False if this \fBElementTextsMover\fP is actually process a movement 
+.RE
+.PP
+
+.SS "QString ElementTextsMover::undoText () const\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagram\fP* ElementTextsMover::m_diagram = nullptr\fC [private]\fP"
+
+.SS "int ElementTextsMover::m_group_count = 0\fC [private]\fP"
+
+.SS "QHash<QGraphicsItemGroup *, QPointF> ElementTextsMover::m_grps_hash\fC [private]\fP"
+
+.SS "QHash<QGraphicsItem *, QPointF> ElementTextsMover::m_items_hash\fC [private]\fP"
+
+.SS "QGraphicsItem* ElementTextsMover::m_movement_driver = nullptr\fC [private]\fP"
+
+.SS "bool ElementTextsMover::m_movement_running = false\fC [private]\fP"
+
+.SS "int ElementTextsMover::m_text_count = 0\fC [private]\fP"
+
+.SS "QHash<\fBDiagramTextItem\fP *, QPointF> ElementTextsMover::m_texts_hash\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

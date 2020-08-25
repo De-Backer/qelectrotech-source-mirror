@@ -1,0 +1,264 @@
+.TH "StyleEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+StyleEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <styleeditor\&.h>\fP
+.PP
+Inherits \fBElementItemEditor\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateForm\fP () override"
+.br
+.RI "\fBStyleEditor::updateForm\fP Update the edition form according to the value of edited part(s) "
+.ti -1c
+.RI "void \fBupdatePartAntialiasing\fP ()"
+.br
+.RI "Update antialiasing with undo command\&. "
+.ti -1c
+.RI "void \fBupdatePartColor\fP ()"
+.br
+.RI "Update color with undo command\&. "
+.ti -1c
+.RI "void \fBupdatePartLineStyle\fP ()"
+.br
+.RI "Update style with undo command\&. "
+.ti -1c
+.RI "void \fBupdatePartLineWeight\fP ()"
+.br
+.RI "Update weight with undo command\&. "
+.ti -1c
+.RI "void \fBupdatePartFilling\fP ()"
+.br
+.RI "Update color filling with undo command\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStyleEditor\fP (\fBQETElementEditor\fP *, \fBCustomElementGraphicPart\fP *=nullptr, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~StyleEditor\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "bool \fBsetPart\fP (\fBCustomElementPart\fP *) override"
+.br
+.RI "\fBStyleEditor::setPart\fP Set the part to edit by this editor\&. Note : editor can accept or refuse to edit a part\&. "
+.ti -1c
+.RI "bool \fBsetParts\fP (QList< \fBCustomElementPart\fP * >) override"
+.br
+.RI "\fBStyleEditor::setParts\fP Set several parts to edit by this editor\&. Note : editor can accept or refuse to edit several parts\&. "
+.ti -1c
+.RI "\fBCustomElementPart\fP * \fBcurrentPart\fP () const override"
+.br
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBcurrentParts\fP () const override"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBisStyleEditable\fP (QList< \fBCustomElementPart\fP * > cep_list)"
+.br
+.RI "\fBStyleEditor::isStyleEditable\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStyleEditor\fP (const \fBStyleEditor\fP &)"
+.br
+.ti -1c
+.RI "void \fBactiveConnections\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBmakeUndo\fP (const QString &undo_text, const char *property_name, const QVariant &new_value)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCustomElementGraphicPart\fP * \fBpart\fP"
+.br
+.ti -1c
+.RI "QList< \fBCustomElementGraphicPart\fP * > \fBm_part_list\fP"
+.br
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBm_cep_list\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBantialiasing\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBfilling_color\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBoutline_color\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBsize_weight\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBline_style\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a widget to edit styles (color, pen style and thickness, filling, antialiasing) common to most primitives within the element editor\&. Its appendWidget() method makes the insertion of another widget below it easier\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "StyleEditor::StyleEditor (\fBQETElementEditor\fP * editor, \fBCustomElementGraphicPart\fP * p = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP L'editeur d'element concerne 
+.br
+\fIp\fP La partie a editer 
+.br
+\fIparent\fP le Widget parent 
+.RE
+.PP
+
+.SS "StyleEditor::~StyleEditor ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "StyleEditor::StyleEditor (const \fBStyleEditor\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void StyleEditor::activeConnections (bool active)\fC [private]\fP"
+Active ou desactive les connexionx signaux/slots entre les widgets internes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIactive\fP true pour activer les connexions, false pour les desactiver 
+.RE
+.PP
+
+.SS "\fBCustomElementPart\fP * StyleEditor::currentPart () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+la primitive actuellement editee, ou 0 si ce widget n'en edite pas 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "QList< \fBCustomElementPart\fP * > StyleEditor::currentParts () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "bool StyleEditor::isStyleEditable (QList< \fBCustomElementPart\fP * > cep_list)\fC [static]\fP"
+
+.PP
+\fBStyleEditor::isStyleEditable\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcep_list\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if all of the content of cep_list can be edited by style editor, else return false\&. 
+.RE
+.PP
+
+.SS "void StyleEditor::makeUndo (const QString & undo_text, const char * property_name, const QVariant & new_value)\fC [private]\fP"
+
+.SS "bool StyleEditor::setPart (\fBCustomElementPart\fP * new_part)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBStyleEditor::setPart\fP Set the part to edit by this editor\&. Note : editor can accept or refuse to edit a part\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_part\fP : part to edit 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if editor accept to edit this \fBCustomElementPart\fP otherwise false 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "bool StyleEditor::setParts (QList< \fBCustomElementPart\fP * > part_list)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBStyleEditor::setParts\fP Set several parts to edit by this editor\&. Note : editor can accept or refuse to edit several parts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart_list\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if every customeElementPart stored in part_list can be edited by this part editor, otherwise return false (see \fBStyleEditor::isStyleEditable\fP) 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBElementItemEditor\fP\&.
+.SS "void StyleEditor::updateForm ()\fC [override]\fP, \fC [slot]\fP"
+
+.PP
+\fBStyleEditor::updateForm\fP Update the edition form according to the value of edited part(s) 
+.SS "void StyleEditor::updatePartAntialiasing ()\fC [slot]\fP"
+
+.PP
+Update antialiasing with undo command\&. 
+.SS "void StyleEditor::updatePartColor ()\fC [slot]\fP"
+
+.PP
+Update color with undo command\&. 
+.SS "void StyleEditor::updatePartFilling ()\fC [slot]\fP"
+
+.PP
+Update color filling with undo command\&. 
+.SS "void StyleEditor::updatePartLineStyle ()\fC [slot]\fP"
+
+.PP
+Update style with undo command\&. 
+.SS "void StyleEditor::updatePartLineWeight ()\fC [slot]\fP"
+
+.PP
+Update weight with undo command\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QCheckBox* StyleEditor::antialiasing\fC [private]\fP"
+
+.SS "QComboBox* StyleEditor::filling_color\fC [private]\fP"
+
+.SS "QComboBox * StyleEditor::line_style\fC [private]\fP"
+
+.SS "QList<\fBCustomElementPart\fP *> StyleEditor::m_cep_list\fC [private]\fP"
+
+.SS "QList<\fBCustomElementGraphicPart\fP *> StyleEditor::m_part_list\fC [private]\fP"
+
+.SS "QComboBox * StyleEditor::outline_color\fC [private]\fP"
+
+.SS "\fBCustomElementGraphicPart\fP* StyleEditor::part\fC [private]\fP"
+
+.SS "QComboBox * StyleEditor::size_weight\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

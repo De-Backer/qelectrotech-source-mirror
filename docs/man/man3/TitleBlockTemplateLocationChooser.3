@@ -1,0 +1,194 @@
+.TH "TitleBlockTemplateLocationChooser" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateLocationChooser
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatelocationchooser\&.h>\fP
+.PP
+Inherits QWidget\&.
+.PP
+Inherited by \fBTitleBlockTemplateLocationSaver\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateLocationChooser\fP (const \fBTitleBlockTemplateLocation\fP &, QWidget *=nullptr)"
+.br
+.RI "\fBTitleBlockTemplateLocationChooser::TitleBlockTemplateLocationChooser\fP Constructor\&. "
+.ti -1c
+.RI "\fB~TitleBlockTemplateLocationChooser\fP () override"
+.br
+.ti -1c
+.RI "virtual \fBTitleBlockTemplateLocation\fP \fBlocation\fP () const"
+.br
+.ti -1c
+.RI "virtual \fBTitleBlockTemplatesCollection\fP * \fBcollection\fP () const"
+.br
+.ti -1c
+.RI "virtual QString \fBname\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetLocation\fP (const \fBTitleBlockTemplateLocation\fP &)"
+.br
+.in -1c
+.SS "Protected Slots"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBupdateCollections\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBupdateTemplates\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "virtual int \fBindexForCollection\fP (\fBTitleBlockTemplatesCollection\fP *) const"
+.br
+.RI "\fBTitleBlockTemplateLocationChooser::indexForCollection\fP\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QFormLayout * \fBform_layout_\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBcollections_\fP"
+.br
+.ti -1c
+.RI "QHash< int, \fBTitleBlockTemplatesCollection\fP * > \fBcollections_index_\fP"
+.br
+.RI "Collections index within the combo box\&. "
+.ti -1c
+.RI "QComboBox * \fBtemplates_\fP"
+.br
+.RI "Existing templates combo box\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateLocationChooser\fP (const \fBTitleBlockTemplateLocationChooser\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is a widget that allows the user to choose a target title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateLocationChooser::TitleBlockTemplateLocationChooser (const \fBTitleBlockTemplateLocation\fP & location, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBTitleBlockTemplateLocationChooser::TitleBlockTemplateLocationChooser\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP : Initial location displayed by the widget 
+.br
+\fIparent\fP : Parent QWidget 
+.RE
+.PP
+
+.SS "TitleBlockTemplateLocationChooser::~TitleBlockTemplateLocationChooser ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockTemplateLocationChooser::TitleBlockTemplateLocationChooser (const \fBTitleBlockTemplateLocationChooser\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBTitleBlockTemplatesCollection\fP * TitleBlockTemplateLocationChooser::collection () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the currently selected collection 
+.RE
+.PP
+
+.SS "int TitleBlockTemplateLocationChooser::indexForCollection (\fBTitleBlockTemplatesCollection\fP * coll) const\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBTitleBlockTemplateLocationChooser::indexForCollection\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcoll\fP : A Title block templates collection which we want to know the index within the combo box of this dialog\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1 if the collection is unknown to this dialog, or the index of \fIcoll\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateLocationChooser::init ()\fC [protected]\fP"
+Initialize this widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP Initial location displayed by the widget 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplateLocation\fP TitleBlockTemplateLocationChooser::location () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the current location 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplateLocationChooser::name () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the currently selected/entered name 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTitleBlockTemplateLocationSaver\fP\&.
+.SS "void TitleBlockTemplateLocationChooser::setLocation (const \fBTitleBlockTemplateLocation\fP & location)\fC [virtual]\fP"
+Set the location displayed by this widget 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP to be displayed by this widget 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTitleBlockTemplateLocationSaver\fP\&.
+.SS "void TitleBlockTemplateLocationChooser::updateCollections ()\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+Update the collections list 
+.SS "void TitleBlockTemplateLocationChooser::updateTemplates ()\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+Update the templates list according to the selected collection\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QComboBox* TitleBlockTemplateLocationChooser::collections_\fC [protected]\fP"
+Collections combo box 
+.SS "QHash<int, \fBTitleBlockTemplatesCollection\fP *> TitleBlockTemplateLocationChooser::collections_index_\fC [protected]\fP"
+
+.PP
+Collections index within the combo box\&. 
+.SS "QFormLayout* TitleBlockTemplateLocationChooser::form_layout_\fC [protected]\fP"
+
+.SS "QComboBox* TitleBlockTemplateLocationChooser::templates_\fC [protected]\fP"
+
+.PP
+Existing templates combo box\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

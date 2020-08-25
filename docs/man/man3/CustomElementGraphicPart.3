@@ -1,0 +1,1121 @@
+.TH "CustomElementGraphicPart" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CustomElementGraphicPart \- The \fBCustomElementGraphicPart\fP class This class is the base for all home-made primitive like line, rectangle, ellipse etc\&.\&.\&.\&. It provides methods and enums to manage style attributes available for primitive (color, pen style, etc\&.\&.\&.)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <customelementgraphicpart\&.h>\fP
+.PP
+Inherits QGraphicsObject, and \fBCustomElementPart\fP\&.
+.PP
+Inherited by \fBAbstractPartEllipse\fP, \fBPartLine\fP, \fBPartPolygon\fP, \fBPartRectangle\fP, and \fBPartTerminal\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBLineStyle\fP { \fBNormalStyle\fP, \fBDashedStyle\fP, \fBDottedStyle\fP, \fBDashdottedStyle\fP }"
+.br
+.ti -1c
+.RI "enum \fBLineWeight\fP { \fBNoneWeight\fP, \fBThinWeight\fP, \fBNormalWeight\fP, \fBUltraWeight\fP, \fBBigWeight\fP }"
+.br
+.ti -1c
+.RI "enum \fBFilling\fP { \fBNoneFilling\fP, \fBBlackFilling\fP, \fBWhiteFilling\fP, \fBGreenFilling\fP, \fBRedFilling\fP, \fBBlueFilling\fP, \fBGrayFilling\fP, \fBBrunFilling\fP, \fBYellowFilling\fP, \fBCyanFilling\fP, \fBMagentaFilling\fP, \fBLightgrayFilling\fP, \fBOrangeFilling\fP, \fBPurpleFilling\fP, \fBHTMLPinkPinkFilling\fP, \fBHTMLPinkLightPinkFilling\fP, \fBHTMLPinkHotPinkFilling\fP, \fBHTMLPinkDeepPinkFilling\fP, \fBHTMLPinkPaleVioletRedFilling\fP, \fBHTMLPinkMediumVioletRedFilling\fP, \fBHTMLRedLightSalmonFilling\fP, \fBHTMLRedSalmonFilling\fP, \fBHTMLRedDarkSalmonFilling\fP, \fBHTMLRedLightCoralFilling\fP, \fBHTMLRedIndianRedFilling\fP, \fBHTMLRedCrimsonFilling\fP, \fBHTMLRedFirebrickFilling\fP, \fBHTMLRedDarkRedFilling\fP, \fBHTMLRedRedFilling\fP, \fBHTMLOrangeOrangeRedFilling\fP, \fBHTMLOrangeTomatoFilling\fP, \fBHTMLOrangeCoralFilling\fP, \fBHTMLOrangeDarkOrangeFilling\fP, \fBHTMLOrangeOrangeFilling\fP, \fBHTMLYellowYellowFilling\fP, \fBHTMLYellowLightYellowFilling\fP, \fBHTMLYellowLemonChiffonFilling\fP, \fBHTMLYellowLightGoldenrodYellowFilling\fP, \fBHTMLYellowPapayaWhipFilling\fP, \fBHTMLYellowMoccasinFilling\fP, \fBHTMLYellowPeachPuffFilling\fP, \fBHTMLYellowPaleGoldenrodFilling\fP, \fBHTMLYellowKhakiFilling\fP, \fBHTMLYellowDarkKhakiFilling\fP, \fBHTMLYellowGoldFilling\fP, \fBHTMLBrownCornsilkFilling\fP, \fBHTMLBrownBlanchedAlmondFilling\fP, \fBHTMLBrownBisqueFilling\fP, \fBHTMLBrownNavajoWhiteFilling\fP, \fBHTMLBrownWheatFilling\fP, \fBHTMLBrownBurlywoodFilling\fP, \fBHTMLBrownTanFilling\fP, \fBHTMLBrownRosyBrownFilling\fP, \fBHTMLBrownSandyBrownFilling\fP, \fBHTMLBrownGoldenrodFilling\fP, \fBHTMLBrownDarkGoldenrodFilling\fP, \fBHTMLBrownPeruFilling\fP, \fBHTMLBrownChocolateFilling\fP, \fBHTMLBrownSaddleBrownFilling\fP, \fBHTMLBrownSiennaFilling\fP, \fBHTMLBrownBrownFilling\fP, \fBHTMLBrownMaroonFilling\fP, \fBHTMLGreenDarkOliveGreenFilling\fP, \fBHTMLGreenOliveFilling\fP, \fBHTMLGreenOliveDrabFilling\fP, \fBHTMLGreenYellowGreenFilling\fP, \fBHTMLGreenLimeGreenFilling\fP, \fBHTMLGreenLimeFilling\fP, \fBHTMLGreenLawnGreenFilling\fP, \fBHTMLGreenChartreuseFilling\fP, \fBHTMLGreenGreenYellowFilling\fP, \fBHTMLGreenSpringGreenFilling\fP, \fBHTMLGreenMediumSpringGreenFilling\fP, \fBHTMLGreenLightGreenFilling\fP, \fBHTMLGreenPaleGreenFilling\fP, \fBHTMLGreenDarkSeaGreenFilling\fP, \fBHTMLGreenMediumAquamarineFilling\fP, \fBHTMLGreenMediumSeaGreenFilling\fP, \fBHTMLGreenSeaGreenFilling\fP, \fBHTMLGreenForestGreenFilling\fP, \fBHTMLGreenGreenFilling\fP, \fBHTMLGreenDarkGreenFilling\fP, \fBHTMLCyanAquaFilling\fP, \fBHTMLCyanCyanFilling\fP, \fBHTMLCyanLightCyanFilling\fP, \fBHTMLCyanPaleTurquoiseFilling\fP, \fBHTMLCyanAquamarineFilling\fP, \fBHTMLCyanTurquoiseFilling\fP, \fBHTMLCyanMediumTurquoiseFilling\fP, \fBHTMLCyanDarkTurquoiseFilling\fP, \fBHTMLCyanLightSeaGreenFilling\fP, \fBHTMLCyanCadetBlueFilling\fP, \fBHTMLCyanDarkCyanFilling\fP, \fBHTMLCyanTealFilling\fP, \fBHTMLBlueLightSteelBlueFilling\fP, \fBHTMLBluePowderBlueFilling\fP, \fBHTMLBlueLightBlueFilling\fP, \fBHTMLBlueSkyBlueFilling\fP, \fBHTMLBlueLightSkyBlueFilling\fP, \fBHTMLBlueDeepSkyBlueFilling\fP, \fBHTMLBlueDodgerBlueFilling\fP, \fBHTMLBlueCornflowerBlueFilling\fP, \fBHTMLBlueSteelBlueFilling\fP, \fBHTMLBlueRoyalBlueFilling\fP, \fBHTMLBlueBlueFilling\fP, \fBHTMLBlueMediumBlueFilling\fP, \fBHTMLBlueDarkBlueFilling\fP, \fBHTMLBlueNavyFilling\fP, \fBHTMLBlueMidnightBlueFilling\fP, \fBHTMLPurpleLavenderFilling\fP, \fBHTMLPurpleThistleFilling\fP, \fBHTMLPurplePlumFilling\fP, \fBHTMLPurpleVioletFilling\fP, \fBHTMLPurpleOrchidFilling\fP, \fBHTMLPurpleFuchsiaFilling\fP, \fBHTMLPurpleMagentaFilling\fP, \fBHTMLPurpleMediumOrchidFilling\fP, \fBHTMLPurpleMediumPurpleFilling\fP, \fBHTMLPurpleBlueVioletFilling\fP, \fBHTMLPurpleDarkVioletFilling\fP, \fBHTMLPurpleDarkOrchidFilling\fP, \fBHTMLPurpleDarkMagentaFilling\fP, \fBHTMLPurplePurpleFilling\fP, \fBHTMLPurpleIndigoFilling\fP, \fBHTMLPurpleDarkSlateBlueFilling\fP, \fBHTMLPurpleSlateBlueFilling\fP, \fBHTMLPurpleMediumSlateBlueFilling\fP, \fBHTMLWhiteWhiteFilling\fP, \fBHTMLWhiteSnowFilling\fP, \fBHTMLWhiteHoneydewFilling\fP, \fBHTMLWhiteMintCreamFilling\fP, \fBHTMLWhiteAzureFilling\fP, \fBHTMLWhiteAliceBlueFilling\fP, \fBHTMLWhiteGhostWhiteFilling\fP, \fBHTMLWhiteWhiteSmokeFilling\fP, \fBHTMLWhiteSeashellFilling\fP, \fBHTMLWhiteBeigeFilling\fP, \fBHTMLWhiteOldLaceFilling\fP, \fBHTMLWhiteFloralWhiteFilling\fP, \fBHTMLWhiteIvoryFilling\fP, \fBHTMLWhiteAntiqueWhiteFilling\fP, \fBHTMLWhiteLinenFilling\fP, \fBHTMLWhiteLavenderBlushFilling\fP, \fBHTMLWhiteMistyRoseFilling\fP, \fBHTMLGrayGainsboroFilling\fP, \fBHTMLGrayLightGrayFilling\fP, \fBHTMLGraySilverFilling\fP, \fBHTMLGrayDarkGrayFilling\fP, \fBHTMLGrayGrayFilling\fP, \fBHTMLGrayDimGrayFilling\fP, \fBHTMLGrayLightSlateGrayFilling\fP, \fBHTMLGraySlateGrayFilling\fP, \fBHTMLGrayDarkSlateGrayFilling\fP, \fBHTMLGrayBlackFilling\fP, \fBHorFilling\fP, \fBVerFilling\fP, \fBBdiagFilling\fP, \fBFdiagFilling\fP }"
+.br
+.ti -1c
+.RI "enum \fBColor\fP { \fBBlackColor\fP, \fBWhiteColor\fP, \fBGreenColor\fP, \fBRedColor\fP, \fBBlueColor\fP, \fBGrayColor\fP, \fBBrunColor\fP, \fBYellowColor\fP, \fBCyanColor\fP, \fBMagentaColor\fP, \fBLightgrayColor\fP, \fBOrangeColor\fP, \fBPurpleColor\fP, \fBHTMLPinkPinkColor\fP, \fBHTMLPinkLightPinkColor\fP, \fBHTMLPinkHotPinkColor\fP, \fBHTMLPinkDeepPinkColor\fP, \fBHTMLPinkPaleVioletRedColor\fP, \fBHTMLPinkMediumVioletRedColor\fP, \fBHTMLRedLightSalmonColor\fP, \fBHTMLRedSalmonColor\fP, \fBHTMLRedDarkSalmonColor\fP, \fBHTMLRedLightCoralColor\fP, \fBHTMLRedIndianRedColor\fP, \fBHTMLRedCrimsonColor\fP, \fBHTMLRedFirebrickColor\fP, \fBHTMLRedDarkRedColor\fP, \fBHTMLRedRedColor\fP, \fBHTMLOrangeOrangeRedColor\fP, \fBHTMLOrangeTomatoColor\fP, \fBHTMLOrangeCoralColor\fP, \fBHTMLOrangeDarkOrangeColor\fP, \fBHTMLOrangeOrangeColor\fP, \fBHTMLYellowYellowColor\fP, \fBHTMLYellowLightYellowColor\fP, \fBHTMLYellowLemonChiffonColor\fP, \fBHTMLYellowLightGoldenrodYellowColor\fP, \fBHTMLYellowPapayaWhipColor\fP, \fBHTMLYellowMoccasinColor\fP, \fBHTMLYellowPeachPuffColor\fP, \fBHTMLYellowPaleGoldenrodColor\fP, \fBHTMLYellowKhakiColor\fP, \fBHTMLYellowDarkKhakiColor\fP, \fBHTMLYellowGoldColor\fP, \fBHTMLBrownCornsilkColor\fP, \fBHTMLBrownBlanchedAlmondColor\fP, \fBHTMLBrownBisqueColor\fP, \fBHTMLBrownNavajoWhiteColor\fP, \fBHTMLBrownWheatColor\fP, \fBHTMLBrownBurlywoodColor\fP, \fBHTMLBrownTanColor\fP, \fBHTMLBrownRosyBrownColor\fP, \fBHTMLBrownSandyBrownColor\fP, \fBHTMLBrownGoldenrodColor\fP, \fBHTMLBrownDarkGoldenrodColor\fP, \fBHTMLBrownPeruColor\fP, \fBHTMLBrownChocolateColor\fP, \fBHTMLBrownSaddleBrownColor\fP, \fBHTMLBrownSiennaColor\fP, \fBHTMLBrownBrownColor\fP, \fBHTMLBrownMaroonColor\fP, \fBHTMLGreenDarkOliveGreenColor\fP, \fBHTMLGreenOliveColor\fP, \fBHTMLGreenOliveDrabColor\fP, \fBHTMLGreenYellowGreenColor\fP, \fBHTMLGreenLimeGreenColor\fP, \fBHTMLGreenLimeColor\fP, \fBHTMLGreenLawnGreenColor\fP, \fBHTMLGreenChartreuseColor\fP, \fBHTMLGreenGreenYellowColor\fP, \fBHTMLGreenSpringGreenColor\fP, \fBHTMLGreenMediumSpringGreenColor\fP, \fBHTMLGreenLightGreenColor\fP, \fBHTMLGreenPaleGreenColor\fP, \fBHTMLGreenDarkSeaGreenColor\fP, \fBHTMLGreenMediumAquamarineColor\fP, \fBHTMLGreenMediumSeaGreenColor\fP, \fBHTMLGreenSeaGreenColor\fP, \fBHTMLGreenForestGreenColor\fP, \fBHTMLGreenGreenColor\fP, \fBHTMLGreenDarkGreenColor\fP, \fBHTMLCyanAquaColor\fP, \fBHTMLCyanCyanColor\fP, \fBHTMLCyanLightCyanColor\fP, \fBHTMLCyanPaleTurquoiseColor\fP, \fBHTMLCyanAquamarineColor\fP, \fBHTMLCyanTurquoiseColor\fP, \fBHTMLCyanMediumTurquoiseColor\fP, \fBHTMLCyanDarkTurquoiseColor\fP, \fBHTMLCyanLightSeaGreenColor\fP, \fBHTMLCyanCadetBlueColor\fP, \fBHTMLCyanDarkCyanColor\fP, \fBHTMLCyanTealColor\fP, \fBHTMLBlueLightSteelBlueColor\fP, \fBHTMLBluePowderBlueColor\fP, \fBHTMLBlueLightBlueColor\fP, \fBHTMLBlueSkyBlueColor\fP, \fBHTMLBlueLightSkyBlueColor\fP, \fBHTMLBlueDeepSkyBlueColor\fP, \fBHTMLBlueDodgerBlueColor\fP, \fBHTMLBlueCornflowerBlueColor\fP, \fBHTMLBlueSteelBlueColor\fP, \fBHTMLBlueRoyalBlueColor\fP, \fBHTMLBlueBlueColor\fP, \fBHTMLBlueMediumBlueColor\fP, \fBHTMLBlueDarkBlueColor\fP, \fBHTMLBlueNavyColor\fP, \fBHTMLBlueMidnightBlueColor\fP, \fBHTMLPurpleLavenderColor\fP, \fBHTMLPurpleThistleColor\fP, \fBHTMLPurplePlumColor\fP, \fBHTMLPurpleVioletColor\fP, \fBHTMLPurpleOrchidColor\fP, \fBHTMLPurpleFuchsiaColor\fP, \fBHTMLPurpleMagentaColor\fP, \fBHTMLPurpleMediumOrchidColor\fP, \fBHTMLPurpleMediumPurpleColor\fP, \fBHTMLPurpleBlueVioletColor\fP, \fBHTMLPurpleDarkVioletColor\fP, \fBHTMLPurpleDarkOrchidColor\fP, \fBHTMLPurpleDarkMagentaColor\fP, \fBHTMLPurplePurpleColor\fP, \fBHTMLPurpleIndigoColor\fP, \fBHTMLPurpleDarkSlateBlueColor\fP, \fBHTMLPurpleSlateBlueColor\fP, \fBHTMLPurpleMediumSlateBlueColor\fP, \fBHTMLWhiteWhiteColor\fP, \fBHTMLWhiteSnowColor\fP, \fBHTMLWhiteHoneydewColor\fP, \fBHTMLWhiteMintCreamColor\fP, \fBHTMLWhiteAzureColor\fP, \fBHTMLWhiteAliceBlueColor\fP, \fBHTMLWhiteGhostWhiteColor\fP, \fBHTMLWhiteWhiteSmokeColor\fP, \fBHTMLWhiteSeashellColor\fP, \fBHTMLWhiteBeigeColor\fP, \fBHTMLWhiteOldLaceColor\fP, \fBHTMLWhiteFloralWhiteColor\fP, \fBHTMLWhiteIvoryColor\fP, \fBHTMLWhiteAntiqueWhiteColor\fP, \fBHTMLWhiteLinenColor\fP, \fBHTMLWhiteLavenderBlushColor\fP, \fBHTMLWhiteMistyRoseColor\fP, \fBHTMLGrayGainsboroColor\fP, \fBHTMLGrayLightGrayColor\fP, \fBHTMLGraySilverColor\fP, \fBHTMLGrayDarkGrayColor\fP, \fBHTMLGrayGrayColor\fP, \fBHTMLGrayDimGrayColor\fP, \fBHTMLGrayLightSlateGrayColor\fP, \fBHTMLGraySlateGrayColor\fP, \fBHTMLGrayDarkSlateGrayColor\fP, \fBHTMLGrayBlackColor\fP, \fBNoneColor\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCustomElementGraphicPart\fP (\fBQETElementEditor\fP *editor, QGraphicsItem *parent=nullptr)"
+.br
+.RI "\fBCustomElementGraphicPart::CustomElementGraphicPart\fP Default constructor\&. By default, item is selectable, send geometry change (Qt > 4\&.6), accept mouse left button and accept hover event\&. "
+.ti -1c
+.RI "\fB~CustomElementGraphicPart\fP () override"
+.br
+.RI "\fBCustomElementGraphicPart::~CustomElementGraphicPart\fP Destructor\&. "
+.ti -1c
+.RI "\fBLineStyle\fP \fBlineStyle\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetLineStyle\fP (const \fBLineStyle\fP ls)"
+.br
+.RI "\fBCustomElementGraphicPart::setLineStyle\fP Set line style to ls\&. "
+.ti -1c
+.RI "\fBLineWeight\fP \fBlineWeight\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetLineWeight\fP (const \fBLineWeight\fP lw)"
+.br
+.RI "\fBCustomElementGraphicPart::setLineWeight\fP Set line weight to lw\&. "
+.ti -1c
+.RI "qreal \fBpenWeight\fP () const"
+.br
+.RI "\fBCustomElementGraphicPart::penWeight\fP\&. "
+.ti -1c
+.RI "\fBFilling\fP \fBfilling\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetFilling\fP (const \fBFilling\fP f)"
+.br
+.RI "\fBCustomElementGraphicPart::setFilling\fP Set filling to f\&. "
+.ti -1c
+.RI "\fBColor\fP \fBcolor\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetColor\fP (const \fBColor\fP c)"
+.br
+.RI "\fBCustomElementGraphicPart::setColor\fP Set color to c\&. "
+.ti -1c
+.RI "bool \fBantialiased\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetAntialiased\fP (const bool b)"
+.br
+.RI "\fBCustomElementGraphicPart::setAntialiased\fP Set antialias to b\&. "
+.ti -1c
+.RI "void \fBsetProperty\fP (const char *\fBname\fP, const QVariant &value) override"
+.br
+.ti -1c
+.RI "QVariant \fBproperty\fP (const char *\fBname\fP) const override"
+.br
+.ti -1c
+.RI "virtual QPainterPath \fBshadowShape\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetHandlerColor\fP (QPointF, const QColor &)"
+.br
+.ti -1c
+.RI "virtual void \fBresetAllHandlerColor\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdrawCross\fP (const QPointF &center, QPainter *painter)"
+.br
+.RI "\fBCustomElementGraphicPart::drawCross\fP Draw a cross at pos center\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstylesToXml\fP (QDomElement &) const"
+.br
+.RI "\fBCustomElementGraphicPart::stylesToXml\fP Write the curent style to xml element\&. The style are stored like this: name-of-style:value;name-of-style:value Each style separate by ; and name-style/value are separate by : "
+.ti -1c
+.RI "void \fBstylesFromXml\fP (const QDomElement &)"
+.br
+.RI "\fBCustomElementGraphicPart::stylesFromXml\fP Read the style used by this, from a xml element\&. "
+.ti -1c
+.RI "void \fBresetStyles\fP ()"
+.br
+.RI "\fBCustomElementGraphicPart::resetStyles\fP Reset the curent style to default, same style of default constructor\&. "
+.ti -1c
+.RI "void \fBapplyStylesToQPainter\fP (QPainter &) const"
+.br
+.RI "\fBCustomElementGraphicPart::applyStylesToQPainter\fP Apply the current style to the QPainter\&. "
+.ti -1c
+.RI "void \fBdrawShadowShape\fP (QPainter *painter)"
+.br
+.RI "\fBCustomElementGraphicPart::drawShadowShape\fP Draw a transparent blue shadow arround the shape of this item\&. The QPainterPathStroker used to draw shadows have a width of SHADOWS_HEIGHT Be carefull if penWeight of this item is to 0 the outline of strock is bigger of 0\&.5\&. "
+.ti -1c
+.RI "QVariant \fBitemChange\fP (GraphicsItemChange change, const QVariant &value) override"
+.br
+.RI "\fBCustomElementGraphicPart::itemChange\fP Reimplemented from QGraphicsObject\&. If the item position change call \fBupdateCurrentPartEditor()\fP the change is always send to QGraphicsObject\&. "
+.ti -1c
+.RI "void \fBhoverEnterEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBCustomElementGraphicPart::hoverEnterEvent\fP Reimplemented from QGraphicsObject\&. Set m_hovered to true\&. "
+.ti -1c
+.RI "void \fBhoverLeaveEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBCustomElementGraphicPart::hoverLeaveEvent\fP Reimplemented from QGraphicsObject\&. Set m_hovered to false\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_hovered\fP"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBLineStyle\fP \fBline_style\fP"
+.br
+.ti -1c
+.RI "\fBLineWeight\fP \fBline_weight\fP"
+.br
+.ti -1c
+.RI "\fBFilling\fP \fBfilling\fP"
+.br
+.ti -1c
+.RI "\fBColor\fP \fBcolor\fP"
+.br
+.ti -1c
+.RI "bool \fBantialias\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBLineStyle\fP \fB_linestyle\fP"
+.br
+.ti -1c
+.RI "\fBLineWeight\fP \fB_lineweight\fP"
+.br
+.ti -1c
+.RI "\fBFilling\fP \fB_filling\fP"
+.br
+.ti -1c
+.RI "\fBColor\fP \fB_color\fP"
+.br
+.ti -1c
+.RI "bool \fB_antialiased\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_origin_pos\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBCustomElementGraphicPart\fP class This class is the base for all home-made primitive like line, rectangle, ellipse etc\&.\&.\&.\&. It provides methods and enums to manage style attributes available for primitive (color, pen style, etc\&.\&.\&.) 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBCustomElementGraphicPart::Color\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBlackColor \fP\fP
+.TP
+\fB\fIWhiteColor \fP\fP
+.TP
+\fB\fIGreenColor \fP\fP
+.TP
+\fB\fIRedColor \fP\fP
+.TP
+\fB\fIBlueColor \fP\fP
+.TP
+\fB\fIGrayColor \fP\fP
+.TP
+\fB\fIBrunColor \fP\fP
+.TP
+\fB\fIYellowColor \fP\fP
+.TP
+\fB\fICyanColor \fP\fP
+.TP
+\fB\fIMagentaColor \fP\fP
+.TP
+\fB\fILightgrayColor \fP\fP
+.TP
+\fB\fIOrangeColor \fP\fP
+.TP
+\fB\fIPurpleColor \fP\fP
+.TP
+\fB\fIHTMLPinkPinkColor \fP\fP
+.TP
+\fB\fIHTMLPinkLightPinkColor \fP\fP
+.TP
+\fB\fIHTMLPinkHotPinkColor \fP\fP
+.TP
+\fB\fIHTMLPinkDeepPinkColor \fP\fP
+.TP
+\fB\fIHTMLPinkPaleVioletRedColor \fP\fP
+.TP
+\fB\fIHTMLPinkMediumVioletRedColor \fP\fP
+.TP
+\fB\fIHTMLRedLightSalmonColor \fP\fP
+.TP
+\fB\fIHTMLRedSalmonColor \fP\fP
+.TP
+\fB\fIHTMLRedDarkSalmonColor \fP\fP
+.TP
+\fB\fIHTMLRedLightCoralColor \fP\fP
+.TP
+\fB\fIHTMLRedIndianRedColor \fP\fP
+.TP
+\fB\fIHTMLRedCrimsonColor \fP\fP
+.TP
+\fB\fIHTMLRedFirebrickColor \fP\fP
+.TP
+\fB\fIHTMLRedDarkRedColor \fP\fP
+.TP
+\fB\fIHTMLRedRedColor \fP\fP
+.TP
+\fB\fIHTMLOrangeOrangeRedColor \fP\fP
+.TP
+\fB\fIHTMLOrangeTomatoColor \fP\fP
+.TP
+\fB\fIHTMLOrangeCoralColor \fP\fP
+.TP
+\fB\fIHTMLOrangeDarkOrangeColor \fP\fP
+.TP
+\fB\fIHTMLOrangeOrangeColor \fP\fP
+.TP
+\fB\fIHTMLYellowYellowColor \fP\fP
+.TP
+\fB\fIHTMLYellowLightYellowColor \fP\fP
+.TP
+\fB\fIHTMLYellowLemonChiffonColor \fP\fP
+.TP
+\fB\fIHTMLYellowLightGoldenrodYellowColor \fP\fP
+.TP
+\fB\fIHTMLYellowPapayaWhipColor \fP\fP
+.TP
+\fB\fIHTMLYellowMoccasinColor \fP\fP
+.TP
+\fB\fIHTMLYellowPeachPuffColor \fP\fP
+.TP
+\fB\fIHTMLYellowPaleGoldenrodColor \fP\fP
+.TP
+\fB\fIHTMLYellowKhakiColor \fP\fP
+.TP
+\fB\fIHTMLYellowDarkKhakiColor \fP\fP
+.TP
+\fB\fIHTMLYellowGoldColor \fP\fP
+.TP
+\fB\fIHTMLBrownCornsilkColor \fP\fP
+.TP
+\fB\fIHTMLBrownBlanchedAlmondColor \fP\fP
+.TP
+\fB\fIHTMLBrownBisqueColor \fP\fP
+.TP
+\fB\fIHTMLBrownNavajoWhiteColor \fP\fP
+.TP
+\fB\fIHTMLBrownWheatColor \fP\fP
+.TP
+\fB\fIHTMLBrownBurlywoodColor \fP\fP
+.TP
+\fB\fIHTMLBrownTanColor \fP\fP
+.TP
+\fB\fIHTMLBrownRosyBrownColor \fP\fP
+.TP
+\fB\fIHTMLBrownSandyBrownColor \fP\fP
+.TP
+\fB\fIHTMLBrownGoldenrodColor \fP\fP
+.TP
+\fB\fIHTMLBrownDarkGoldenrodColor \fP\fP
+.TP
+\fB\fIHTMLBrownPeruColor \fP\fP
+.TP
+\fB\fIHTMLBrownChocolateColor \fP\fP
+.TP
+\fB\fIHTMLBrownSaddleBrownColor \fP\fP
+.TP
+\fB\fIHTMLBrownSiennaColor \fP\fP
+.TP
+\fB\fIHTMLBrownBrownColor \fP\fP
+.TP
+\fB\fIHTMLBrownMaroonColor \fP\fP
+.TP
+\fB\fIHTMLGreenDarkOliveGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenOliveColor \fP\fP
+.TP
+\fB\fIHTMLGreenOliveDrabColor \fP\fP
+.TP
+\fB\fIHTMLGreenYellowGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenLimeGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenLimeColor \fP\fP
+.TP
+\fB\fIHTMLGreenLawnGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenChartreuseColor \fP\fP
+.TP
+\fB\fIHTMLGreenGreenYellowColor \fP\fP
+.TP
+\fB\fIHTMLGreenSpringGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenMediumSpringGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenLightGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenPaleGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenDarkSeaGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenMediumAquamarineColor \fP\fP
+.TP
+\fB\fIHTMLGreenMediumSeaGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenSeaGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenForestGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenGreenColor \fP\fP
+.TP
+\fB\fIHTMLGreenDarkGreenColor \fP\fP
+.TP
+\fB\fIHTMLCyanAquaColor \fP\fP
+.TP
+\fB\fIHTMLCyanCyanColor \fP\fP
+.TP
+\fB\fIHTMLCyanLightCyanColor \fP\fP
+.TP
+\fB\fIHTMLCyanPaleTurquoiseColor \fP\fP
+.TP
+\fB\fIHTMLCyanAquamarineColor \fP\fP
+.TP
+\fB\fIHTMLCyanTurquoiseColor \fP\fP
+.TP
+\fB\fIHTMLCyanMediumTurquoiseColor \fP\fP
+.TP
+\fB\fIHTMLCyanDarkTurquoiseColor \fP\fP
+.TP
+\fB\fIHTMLCyanLightSeaGreenColor \fP\fP
+.TP
+\fB\fIHTMLCyanCadetBlueColor \fP\fP
+.TP
+\fB\fIHTMLCyanDarkCyanColor \fP\fP
+.TP
+\fB\fIHTMLCyanTealColor \fP\fP
+.TP
+\fB\fIHTMLBlueLightSteelBlueColor \fP\fP
+.TP
+\fB\fIHTMLBluePowderBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueLightBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueSkyBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueLightSkyBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueDeepSkyBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueDodgerBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueCornflowerBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueSteelBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueRoyalBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueMediumBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueDarkBlueColor \fP\fP
+.TP
+\fB\fIHTMLBlueNavyColor \fP\fP
+.TP
+\fB\fIHTMLBlueMidnightBlueColor \fP\fP
+.TP
+\fB\fIHTMLPurpleLavenderColor \fP\fP
+.TP
+\fB\fIHTMLPurpleThistleColor \fP\fP
+.TP
+\fB\fIHTMLPurplePlumColor \fP\fP
+.TP
+\fB\fIHTMLPurpleVioletColor \fP\fP
+.TP
+\fB\fIHTMLPurpleOrchidColor \fP\fP
+.TP
+\fB\fIHTMLPurpleFuchsiaColor \fP\fP
+.TP
+\fB\fIHTMLPurpleMagentaColor \fP\fP
+.TP
+\fB\fIHTMLPurpleMediumOrchidColor \fP\fP
+.TP
+\fB\fIHTMLPurpleMediumPurpleColor \fP\fP
+.TP
+\fB\fIHTMLPurpleBlueVioletColor \fP\fP
+.TP
+\fB\fIHTMLPurpleDarkVioletColor \fP\fP
+.TP
+\fB\fIHTMLPurpleDarkOrchidColor \fP\fP
+.TP
+\fB\fIHTMLPurpleDarkMagentaColor \fP\fP
+.TP
+\fB\fIHTMLPurplePurpleColor \fP\fP
+.TP
+\fB\fIHTMLPurpleIndigoColor \fP\fP
+.TP
+\fB\fIHTMLPurpleDarkSlateBlueColor \fP\fP
+.TP
+\fB\fIHTMLPurpleSlateBlueColor \fP\fP
+.TP
+\fB\fIHTMLPurpleMediumSlateBlueColor \fP\fP
+.TP
+\fB\fIHTMLWhiteWhiteColor \fP\fP
+.TP
+\fB\fIHTMLWhiteSnowColor \fP\fP
+.TP
+\fB\fIHTMLWhiteHoneydewColor \fP\fP
+.TP
+\fB\fIHTMLWhiteMintCreamColor \fP\fP
+.TP
+\fB\fIHTMLWhiteAzureColor \fP\fP
+.TP
+\fB\fIHTMLWhiteAliceBlueColor \fP\fP
+.TP
+\fB\fIHTMLWhiteGhostWhiteColor \fP\fP
+.TP
+\fB\fIHTMLWhiteWhiteSmokeColor \fP\fP
+.TP
+\fB\fIHTMLWhiteSeashellColor \fP\fP
+.TP
+\fB\fIHTMLWhiteBeigeColor \fP\fP
+.TP
+\fB\fIHTMLWhiteOldLaceColor \fP\fP
+.TP
+\fB\fIHTMLWhiteFloralWhiteColor \fP\fP
+.TP
+\fB\fIHTMLWhiteIvoryColor \fP\fP
+.TP
+\fB\fIHTMLWhiteAntiqueWhiteColor \fP\fP
+.TP
+\fB\fIHTMLWhiteLinenColor \fP\fP
+.TP
+\fB\fIHTMLWhiteLavenderBlushColor \fP\fP
+.TP
+\fB\fIHTMLWhiteMistyRoseColor \fP\fP
+.TP
+\fB\fIHTMLGrayGainsboroColor \fP\fP
+.TP
+\fB\fIHTMLGrayLightGrayColor \fP\fP
+.TP
+\fB\fIHTMLGraySilverColor \fP\fP
+.TP
+\fB\fIHTMLGrayDarkGrayColor \fP\fP
+.TP
+\fB\fIHTMLGrayGrayColor \fP\fP
+.TP
+\fB\fIHTMLGrayDimGrayColor \fP\fP
+.TP
+\fB\fIHTMLGrayLightSlateGrayColor \fP\fP
+.TP
+\fB\fIHTMLGraySlateGrayColor \fP\fP
+.TP
+\fB\fIHTMLGrayDarkSlateGrayColor \fP\fP
+.TP
+\fB\fIHTMLGrayBlackColor \fP\fP
+.TP
+\fB\fINoneColor \fP\fP
+.SS "enum \fBCustomElementGraphicPart::Filling\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINoneFilling \fP\fP
+.TP
+\fB\fIBlackFilling \fP\fP
+.TP
+\fB\fIWhiteFilling \fP\fP
+.TP
+\fB\fIGreenFilling \fP\fP
+.TP
+\fB\fIRedFilling \fP\fP
+.TP
+\fB\fIBlueFilling \fP\fP
+.TP
+\fB\fIGrayFilling \fP\fP
+.TP
+\fB\fIBrunFilling \fP\fP
+.TP
+\fB\fIYellowFilling \fP\fP
+.TP
+\fB\fICyanFilling \fP\fP
+.TP
+\fB\fIMagentaFilling \fP\fP
+.TP
+\fB\fILightgrayFilling \fP\fP
+.TP
+\fB\fIOrangeFilling \fP\fP
+.TP
+\fB\fIPurpleFilling \fP\fP
+.TP
+\fB\fIHTMLPinkPinkFilling \fP\fP
+.TP
+\fB\fIHTMLPinkLightPinkFilling \fP\fP
+.TP
+\fB\fIHTMLPinkHotPinkFilling \fP\fP
+.TP
+\fB\fIHTMLPinkDeepPinkFilling \fP\fP
+.TP
+\fB\fIHTMLPinkPaleVioletRedFilling \fP\fP
+.TP
+\fB\fIHTMLPinkMediumVioletRedFilling \fP\fP
+.TP
+\fB\fIHTMLRedLightSalmonFilling \fP\fP
+.TP
+\fB\fIHTMLRedSalmonFilling \fP\fP
+.TP
+\fB\fIHTMLRedDarkSalmonFilling \fP\fP
+.TP
+\fB\fIHTMLRedLightCoralFilling \fP\fP
+.TP
+\fB\fIHTMLRedIndianRedFilling \fP\fP
+.TP
+\fB\fIHTMLRedCrimsonFilling \fP\fP
+.TP
+\fB\fIHTMLRedFirebrickFilling \fP\fP
+.TP
+\fB\fIHTMLRedDarkRedFilling \fP\fP
+.TP
+\fB\fIHTMLRedRedFilling \fP\fP
+.TP
+\fB\fIHTMLOrangeOrangeRedFilling \fP\fP
+.TP
+\fB\fIHTMLOrangeTomatoFilling \fP\fP
+.TP
+\fB\fIHTMLOrangeCoralFilling \fP\fP
+.TP
+\fB\fIHTMLOrangeDarkOrangeFilling \fP\fP
+.TP
+\fB\fIHTMLOrangeOrangeFilling \fP\fP
+.TP
+\fB\fIHTMLYellowYellowFilling \fP\fP
+.TP
+\fB\fIHTMLYellowLightYellowFilling \fP\fP
+.TP
+\fB\fIHTMLYellowLemonChiffonFilling \fP\fP
+.TP
+\fB\fIHTMLYellowLightGoldenrodYellowFilling \fP\fP
+.TP
+\fB\fIHTMLYellowPapayaWhipFilling \fP\fP
+.TP
+\fB\fIHTMLYellowMoccasinFilling \fP\fP
+.TP
+\fB\fIHTMLYellowPeachPuffFilling \fP\fP
+.TP
+\fB\fIHTMLYellowPaleGoldenrodFilling \fP\fP
+.TP
+\fB\fIHTMLYellowKhakiFilling \fP\fP
+.TP
+\fB\fIHTMLYellowDarkKhakiFilling \fP\fP
+.TP
+\fB\fIHTMLYellowGoldFilling \fP\fP
+.TP
+\fB\fIHTMLBrownCornsilkFilling \fP\fP
+.TP
+\fB\fIHTMLBrownBlanchedAlmondFilling \fP\fP
+.TP
+\fB\fIHTMLBrownBisqueFilling \fP\fP
+.TP
+\fB\fIHTMLBrownNavajoWhiteFilling \fP\fP
+.TP
+\fB\fIHTMLBrownWheatFilling \fP\fP
+.TP
+\fB\fIHTMLBrownBurlywoodFilling \fP\fP
+.TP
+\fB\fIHTMLBrownTanFilling \fP\fP
+.TP
+\fB\fIHTMLBrownRosyBrownFilling \fP\fP
+.TP
+\fB\fIHTMLBrownSandyBrownFilling \fP\fP
+.TP
+\fB\fIHTMLBrownGoldenrodFilling \fP\fP
+.TP
+\fB\fIHTMLBrownDarkGoldenrodFilling \fP\fP
+.TP
+\fB\fIHTMLBrownPeruFilling \fP\fP
+.TP
+\fB\fIHTMLBrownChocolateFilling \fP\fP
+.TP
+\fB\fIHTMLBrownSaddleBrownFilling \fP\fP
+.TP
+\fB\fIHTMLBrownSiennaFilling \fP\fP
+.TP
+\fB\fIHTMLBrownBrownFilling \fP\fP
+.TP
+\fB\fIHTMLBrownMaroonFilling \fP\fP
+.TP
+\fB\fIHTMLGreenDarkOliveGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenOliveFilling \fP\fP
+.TP
+\fB\fIHTMLGreenOliveDrabFilling \fP\fP
+.TP
+\fB\fIHTMLGreenYellowGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenLimeGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenLimeFilling \fP\fP
+.TP
+\fB\fIHTMLGreenLawnGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenChartreuseFilling \fP\fP
+.TP
+\fB\fIHTMLGreenGreenYellowFilling \fP\fP
+.TP
+\fB\fIHTMLGreenSpringGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenMediumSpringGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenLightGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenPaleGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenDarkSeaGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenMediumAquamarineFilling \fP\fP
+.TP
+\fB\fIHTMLGreenMediumSeaGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenSeaGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenForestGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenGreenFilling \fP\fP
+.TP
+\fB\fIHTMLGreenDarkGreenFilling \fP\fP
+.TP
+\fB\fIHTMLCyanAquaFilling \fP\fP
+.TP
+\fB\fIHTMLCyanCyanFilling \fP\fP
+.TP
+\fB\fIHTMLCyanLightCyanFilling \fP\fP
+.TP
+\fB\fIHTMLCyanPaleTurquoiseFilling \fP\fP
+.TP
+\fB\fIHTMLCyanAquamarineFilling \fP\fP
+.TP
+\fB\fIHTMLCyanTurquoiseFilling \fP\fP
+.TP
+\fB\fIHTMLCyanMediumTurquoiseFilling \fP\fP
+.TP
+\fB\fIHTMLCyanDarkTurquoiseFilling \fP\fP
+.TP
+\fB\fIHTMLCyanLightSeaGreenFilling \fP\fP
+.TP
+\fB\fIHTMLCyanCadetBlueFilling \fP\fP
+.TP
+\fB\fIHTMLCyanDarkCyanFilling \fP\fP
+.TP
+\fB\fIHTMLCyanTealFilling \fP\fP
+.TP
+\fB\fIHTMLBlueLightSteelBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBluePowderBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueLightBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueSkyBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueLightSkyBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueDeepSkyBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueDodgerBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueCornflowerBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueSteelBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueRoyalBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueMediumBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueDarkBlueFilling \fP\fP
+.TP
+\fB\fIHTMLBlueNavyFilling \fP\fP
+.TP
+\fB\fIHTMLBlueMidnightBlueFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleLavenderFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleThistleFilling \fP\fP
+.TP
+\fB\fIHTMLPurplePlumFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleVioletFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleOrchidFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleFuchsiaFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleMagentaFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleMediumOrchidFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleMediumPurpleFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleBlueVioletFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleDarkVioletFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleDarkOrchidFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleDarkMagentaFilling \fP\fP
+.TP
+\fB\fIHTMLPurplePurpleFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleIndigoFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleDarkSlateBlueFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleSlateBlueFilling \fP\fP
+.TP
+\fB\fIHTMLPurpleMediumSlateBlueFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteWhiteFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteSnowFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteHoneydewFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteMintCreamFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteAzureFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteAliceBlueFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteGhostWhiteFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteWhiteSmokeFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteSeashellFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteBeigeFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteOldLaceFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteFloralWhiteFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteIvoryFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteAntiqueWhiteFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteLinenFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteLavenderBlushFilling \fP\fP
+.TP
+\fB\fIHTMLWhiteMistyRoseFilling \fP\fP
+.TP
+\fB\fIHTMLGrayGainsboroFilling \fP\fP
+.TP
+\fB\fIHTMLGrayLightGrayFilling \fP\fP
+.TP
+\fB\fIHTMLGraySilverFilling \fP\fP
+.TP
+\fB\fIHTMLGrayDarkGrayFilling \fP\fP
+.TP
+\fB\fIHTMLGrayGrayFilling \fP\fP
+.TP
+\fB\fIHTMLGrayDimGrayFilling \fP\fP
+.TP
+\fB\fIHTMLGrayLightSlateGrayFilling \fP\fP
+.TP
+\fB\fIHTMLGraySlateGrayFilling \fP\fP
+.TP
+\fB\fIHTMLGrayDarkSlateGrayFilling \fP\fP
+.TP
+\fB\fIHTMLGrayBlackFilling \fP\fP
+.TP
+\fB\fIHorFilling \fP\fP
+.TP
+\fB\fIVerFilling \fP\fP
+.TP
+\fB\fIBdiagFilling \fP\fP
+.TP
+\fB\fIFdiagFilling \fP\fP
+.SS "enum \fBCustomElementGraphicPart::LineStyle\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINormalStyle \fP\fP
+.TP
+\fB\fIDashedStyle \fP\fP
+.TP
+\fB\fIDottedStyle \fP\fP
+.TP
+\fB\fIDashdottedStyle \fP\fP
+.SS "enum \fBCustomElementGraphicPart::LineWeight\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINoneWeight \fP\fP
+.TP
+\fB\fIThinWeight \fP\fP
+.TP
+\fB\fINormalWeight \fP\fP
+.TP
+\fB\fIUltraWeight \fP\fP
+.TP
+\fB\fIBigWeight \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CustomElementGraphicPart::CustomElementGraphicPart (\fBQETElementEditor\fP * editor, QGraphicsItem * parent = \fCnullptr\fP)"
+
+.PP
+\fBCustomElementGraphicPart::CustomElementGraphicPart\fP Default constructor\&. By default, item is selectable, send geometry change (Qt > 4\&.6), accept mouse left button and accept hover event\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP QETElement editor that belong this\&. 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "CustomElementGraphicPart::~CustomElementGraphicPart ()\fC [override]\fP"
+
+.PP
+\fBCustomElementGraphicPart::~CustomElementGraphicPart\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool CustomElementGraphicPart::antialiased () const\fC [inline]\fP"
+
+.SS "void CustomElementGraphicPart::applyStylesToQPainter (QPainter & painter) const\fC [protected]\fP"
+
+.PP
+\fBCustomElementGraphicPart::applyStylesToQPainter\fP Apply the current style to the QPainter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.RE
+.PP
+
+.SS "\fBColor\fP CustomElementGraphicPart::color () const\fC [inline]\fP"
+
+.SS "void CustomElementGraphicPart::drawCross (const QPointF & center, QPainter * painter)\fC [static]\fP"
+
+.PP
+\fBCustomElementGraphicPart::drawCross\fP Draw a cross at pos center\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcenter\fP : center of cross 
+.br
+\fIpainter\fP : painter to use for draw cross, the painter state is restored at end of this method\&. 
+.RE
+.PP
+
+.SS "void CustomElementGraphicPart::drawShadowShape (QPainter * painter)\fC [protected]\fP"
+
+.PP
+\fBCustomElementGraphicPart::drawShadowShape\fP Draw a transparent blue shadow arround the shape of this item\&. The QPainterPathStroker used to draw shadows have a width of SHADOWS_HEIGHT Be carefull if penWeight of this item is to 0 the outline of strock is bigger of 0\&.5\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP : painter to use for draw this shadows 
+.RE
+.PP
+
+.SS "\fBFilling\fP CustomElementGraphicPart::filling () const\fC [inline]\fP"
+
+.SS "void CustomElementGraphicPart::hoverEnterEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBCustomElementGraphicPart::hoverEnterEvent\fP Reimplemented from QGraphicsObject\&. Set m_hovered to true\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void CustomElementGraphicPart::hoverLeaveEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBCustomElementGraphicPart::hoverLeaveEvent\fP Reimplemented from QGraphicsObject\&. Set m_hovered to false\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "QVariant CustomElementGraphicPart::itemChange (GraphicsItemChange change, const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBCustomElementGraphicPart::itemChange\fP Reimplemented from QGraphicsObject\&. If the item position change call \fBupdateCurrentPartEditor()\fP the change is always send to QGraphicsObject\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the returned value of QGraphicsObject::itemChange 
+.RE
+.PP
+
+.SS "\fBLineStyle\fP CustomElementGraphicPart::lineStyle () const\fC [inline]\fP"
+
+.SS "\fBLineWeight\fP CustomElementGraphicPart::lineWeight () const\fC [inline]\fP"
+
+.SS "void CustomElementGraphicPart::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void CustomElementGraphicPart::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void CustomElementGraphicPart::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "qreal CustomElementGraphicPart::penWeight () const"
+
+.PP
+\fBCustomElementGraphicPart::penWeight\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the weight of pen 
+.RE
+.PP
+
+.SS "QVariant CustomElementGraphicPart::property (const char * name) const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Get the current value of a specific primitive property 
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "virtual void CustomElementGraphicPart::resetAllHandlerColor ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPartPolygon\fP\&.
+.SS "void CustomElementGraphicPart::resetStyles ()\fC [protected]\fP"
+
+.PP
+\fBCustomElementGraphicPart::resetStyles\fP Reset the curent style to default, same style of default constructor\&. 
+.SS "void CustomElementGraphicPart::setAntialiased (const bool b)"
+
+.PP
+\fBCustomElementGraphicPart::setAntialiased\fP Set antialias to b\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIb\fP 
+.RE
+.PP
+
+.SS "void CustomElementGraphicPart::setColor (const \fBColor\fP c)"
+
+.PP
+\fBCustomElementGraphicPart::setColor\fP Set color to c\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP 
+.RE
+.PP
+
+.SS "void CustomElementGraphicPart::setFilling (const \fBFilling\fP f)"
+
+.PP
+\fBCustomElementGraphicPart::setFilling\fP Set filling to f\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP 
+.RE
+.PP
+
+.SS "virtual void CustomElementGraphicPart::setHandlerColor (QPointF, const QColor &)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBPartPolygon\fP\&.
+.SS "void CustomElementGraphicPart::setLineStyle (const \fBLineStyle\fP ls)"
+
+.PP
+\fBCustomElementGraphicPart::setLineStyle\fP Set line style to ls\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIls\fP 
+.RE
+.PP
+
+.SS "void CustomElementGraphicPart::setLineWeight (const \fBLineWeight\fP lw)"
+
+.PP
+\fBCustomElementGraphicPart::setLineWeight\fP Set line weight to lw\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlw\fP 
+.RE
+.PP
+
+.SS "void CustomElementGraphicPart::setProperty (const char * name, const QVariant & value)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Set a specific property of the primitive 
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "virtual QPainterPath CustomElementGraphicPart::shadowShape () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPartLine\fP, \fBPartRectangle\fP, \fBPartPolygon\fP, \fBPartTerminal\fP, \fBPartArc\fP, and \fBPartEllipse\fP\&.
+.SS "void CustomElementGraphicPart::stylesFromXml (const QDomElement & qde)\fC [protected]\fP"
+
+.PP
+\fBCustomElementGraphicPart::stylesFromXml\fP Read the style used by this, from a xml element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqde\fP : QDomElement used to read the style 
+.RE
+.PP
+
+.SS "void CustomElementGraphicPart::stylesToXml (QDomElement & qde) const\fC [protected]\fP"
+
+.PP
+\fBCustomElementGraphicPart::stylesToXml\fP Write the curent style to xml element\&. The style are stored like this: name-of-style:value;name-of-style:value Each style separate by ; and name-style/value are separate by : 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqde\fP : QDOmElement used to write the style\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool CustomElementGraphicPart::_antialiased\fC [private]\fP"
+
+.SS "\fBColor\fP CustomElementGraphicPart::_color\fC [private]\fP"
+
+.SS "\fBFilling\fP CustomElementGraphicPart::_filling\fC [private]\fP"
+
+.SS "\fBLineStyle\fP CustomElementGraphicPart::_linestyle\fC [private]\fP"
+
+.SS "\fBLineWeight\fP CustomElementGraphicPart::_lineweight\fC [private]\fP"
+
+.SS "bool CustomElementGraphicPart::m_hovered\fC [protected]\fP"
+
+.SS "QPointF CustomElementGraphicPart::m_origin_pos\fC [private]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "bool CustomElementGraphicPart::antialias\fC [read]\fP, \fC [write]\fP"
+
+.SS "\fBColor\fP CustomElementGraphicPart::color\fC [read]\fP, \fC [write]\fP"
+
+.SS "\fBFilling\fP CustomElementGraphicPart::filling\fC [read]\fP, \fC [write]\fP"
+
+.SS "\fBLineStyle\fP CustomElementGraphicPart::line_style\fC [read]\fP, \fC [write]\fP"
+
+.SS "\fBLineWeight\fP CustomElementGraphicPart::line_weight\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

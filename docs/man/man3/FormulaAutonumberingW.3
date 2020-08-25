@@ -1,0 +1,128 @@
+.TH "FormulaAutonumberingW" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FormulaAutonumberingW
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <formulaautonumberingw\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBapplyPressed\fP ()"
+.br
+.ti -1c
+.RI "void \fBtextChanged\fP (QString)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFormulaAutonumberingW\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~FormulaAutonumberingW\fP () override"
+.br
+.ti -1c
+.RI "QString \fBformula\fP ()"
+.br
+.RI "\fBFormulaAutonumberingW::formula\fP\&. "
+.ti -1c
+.RI "void \fBsetContext\fP (const QString &)"
+.br
+.RI "\fBFormulaAutonumberingW::setContext\fP\&. "
+.ti -1c
+.RI "void \fBclearContext\fP ()"
+.br
+.RI "\fBFormulaAutonumberingW::clearContext\fP\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::FormulaAutonumberingW * \fBui\fP"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_formula_le_textChanged\fP (QString)"
+.br
+.RI "\fBFormulaAutonumberingW::on_m_formula_le_textChanged\fP Update Apply Button\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBformula_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements the element autonumbering widget\&. It loads the current formula applied to new elements and allows the user to overwrite it with a new formula\&. Formula is added while parsing label in customelement\&.cpp 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "FormulaAutonumberingW::FormulaAutonumberingW (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+Constructor 
+.SS "FormulaAutonumberingW::~FormulaAutonumberingW ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void FormulaAutonumberingW::applyPressed ()\fC [signal]\fP"
+
+.SS "void FormulaAutonumberingW::clearContext ()"
+
+.PP
+\fBFormulaAutonumberingW::clearContext\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclear\fP formula line edit text 
+.RE
+.PP
+
+.SS "QString FormulaAutonumberingW::formula ()"
+
+.PP
+\fBFormulaAutonumberingW::formula\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+formula to be stored into project 
+.RE
+.PP
+
+.SS "void FormulaAutonumberingW::on_m_formula_le_textChanged (QString text)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBFormulaAutonumberingW::on_m_formula_le_textChanged\fP Update Apply Button\&. 
+.SS "void FormulaAutonumberingW::setContext (const QString & formula)"
+
+.PP
+\fBFormulaAutonumberingW::setContext\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformula\fP to be inserted into context 
+.RE
+.PP
+
+.SS "void FormulaAutonumberingW::textChanged (QString)\fC [signal]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString FormulaAutonumberingW::formula_\fC [private]\fP"
+
+.SS "Ui::FormulaAutonumberingW* FormulaAutonumberingW::ui"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,69 @@
+.TH "DiagramEventAddText" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramEventAddText \- The \fBDiagramEventAddText\fP class This diagram event handle the creation of a new text in a diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagrameventaddtext\&.h>\fP
+.PP
+Inherits \fBDiagramEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramEventAddText\fP (\fBDiagram\fP *diagram)"
+.br
+.RI "\fBDiagramEventAddText::DiagramEventAddText\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~DiagramEventAddText\fP () override"
+.br
+.RI "\fBDiagramEventAddText::~DiagramEventAddText\fP\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddText::mousePressEvent\fP\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBDiagramEventAddText\fP class This diagram event handle the creation of a new text in a diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramEventAddText::DiagramEventAddText (\fBDiagram\fP * diagram)"
+
+.PP
+\fBDiagramEventAddText::DiagramEventAddText\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : the diagram where this event must operate 
+.RE
+.PP
+
+.SS "DiagramEventAddText::~DiagramEventAddText ()\fC [override]\fP"
+
+.PP
+\fBDiagramEventAddText::~DiagramEventAddText\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramEventAddText::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddText::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP : event of mouse press event\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

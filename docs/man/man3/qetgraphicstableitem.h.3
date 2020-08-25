@@ -1,0 +1,28 @@
+.TH "sources/qetgraphicsitem/ViewItem/qetgraphicstableitem.h" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qetgraphicsitem/ViewItem/qetgraphicstableitem.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QFont>\fP
+.br
+\fC#include 'qetgraphicsitem\&.h'\fP
+.br
+\fC#include 'qetapp\&.h'\fP
+.br
+\fC#include 'QetGraphicsItemModeler/qetgraphicshandleritem\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBQetGraphicsTableItem\fP"
+.br
+.RI "The \fBQetGraphicsTableItem\fP class This item display a table destined to represent the content of a QAbstractItemModel The table have a few parameters to edit her visual aspect\&. Margins, to edit the margin between the cell and the text\&. Text font\&. Text alignment in the cell These three parameters are not settable directly with the table but trough the model to be displayed by the table\&. The table search these parameters only in the index(0,0) for all the table\&. By consequence, set data in other index than 0,0 is useless also these parameter can't be set individually for each cell\&. The margins is stored in the model in index Qt::UserRole+1 and for value a QString\&. See \fBQETUtils::marginsFromString\fP and \fBQETUtils::marginsToString\fP\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

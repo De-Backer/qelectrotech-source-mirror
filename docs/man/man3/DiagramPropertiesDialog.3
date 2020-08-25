@@ -1,0 +1,102 @@
+.TH "DiagramPropertiesDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramPropertiesDialog \- The \fBDiagramPropertiesDialog\fP class This dialog open a windows for edit properties of a diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagrampropertiesdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBeditAutonum\fP ()"
+.br
+.RI "\fBDiagramPropertiesDialog::editAutonum\fP Open conductor autonum editor\&. "
+.ti -1c
+.RI "void \fBeditAutoFolioNum\fP ()"
+.br
+.RI "\fBDiagramPropertiesDialog::editAutonum\fP Open folio autonum editor\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramPropertiesDialog\fP (\fBDiagram\fP *diagram, QWidget *parent=nullptr)"
+.br
+.RI "\fBDiagramPropertiesDialog::DiagramPropertiesDialog\fP Deafult constructor\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdiagramPropertiesDialog\fP (\fBDiagram\fP *diagram, QWidget *parent=nullptr)"
+.br
+.RI "\fBDiagramPropertiesDialog::diagramPropertiesDialog\fP Static method to get a \fBDiagramPropertiesDialog\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP"
+.br
+.ti -1c
+.RI "\fBConductorPropertiesWidget\fP * \fBm_cpw\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBDiagramPropertiesDialog\fP class This dialog open a windows for edit properties of a diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramPropertiesDialog::DiagramPropertiesDialog (\fBDiagram\fP * diagram, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBDiagramPropertiesDialog::DiagramPropertiesDialog\fP Deafult constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : diagram to edit properties 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+TODO implement an undo command to allow the user to undo/redo this action
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramPropertiesDialog::diagramPropertiesDialog (\fBDiagram\fP * diagram, QWidget * parent = \fCnullptr\fP)\fC [static]\fP"
+
+.PP
+\fBDiagramPropertiesDialog::diagramPropertiesDialog\fP Static method to get a \fBDiagramPropertiesDialog\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : diagram to edit properties 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "void DiagramPropertiesDialog::editAutoFolioNum ()\fC [slot]\fP"
+
+.PP
+\fBDiagramPropertiesDialog::editAutonum\fP Open folio autonum editor\&. 
+.SS "void DiagramPropertiesDialog::editAutonum ()\fC [slot]\fP"
+
+.PP
+\fBDiagramPropertiesDialog::editAutonum\fP Open conductor autonum editor\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBConductorPropertiesWidget\fP* DiagramPropertiesDialog::m_cpw\fC [private]\fP"
+
+.SS "\fBDiagram\fP* DiagramPropertiesDialog::m_diagram\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

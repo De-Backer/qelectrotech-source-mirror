@@ -1,0 +1,114 @@
+.TH "BorderPropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BorderPropertiesWidget \- The \fBBorderPropertiesWidget\fP class this widget edit the properties of a border\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <borderpropertieswidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBorderPropertiesWidget\fP (const \fBBorderProperties\fP &bp, QWidget *parent=nullptr)"
+.br
+.RI "\fBBorderPropertiesWidget::BorderPropertiesWidget\fP default constructor\&. "
+.ti -1c
+.RI "\fB~BorderPropertiesWidget\fP () override"
+.br
+.RI "\fBBorderPropertiesWidget::~BorderPropertiesWidget\fP default destructor\&. "
+.ti -1c
+.RI "void \fBsetProperties\fP (const \fBBorderProperties\fP &bp)"
+.br
+.RI "\fBBorderPropertiesWidget::setProperties\fP Set the current properties to edit\&. "
+.ti -1c
+.RI "const \fBBorderProperties\fP & \fBproperties\fP ()"
+.br
+.RI "\fBBorderPropertiesWidget::properties\fP\&. "
+.ti -1c
+.RI "void \fBsetReadOnly\fP (const bool &ro)"
+.br
+.RI "\fBBorderPropertiesWidget::setReadOnly\fP Enable or disable this widget\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::BorderPropertiesWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBBorderProperties\fP \fBm_properties\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBBorderPropertiesWidget\fP class this widget edit the properties of a border\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BorderPropertiesWidget::BorderPropertiesWidget (const \fBBorderProperties\fP & bp, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBBorderPropertiesWidget::BorderPropertiesWidget\fP default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbp\fP properties 
+.br
+\fIparent\fP paretn widget 
+.RE
+.PP
+
+.SS "BorderPropertiesWidget::~BorderPropertiesWidget ()\fC [override]\fP"
+
+.PP
+\fBBorderPropertiesWidget::~BorderPropertiesWidget\fP default destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "const \fBBorderProperties\fP & BorderPropertiesWidget::properties ()"
+
+.PP
+\fBBorderPropertiesWidget::properties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the edited border properties 
+.RE
+.PP
+
+.SS "void BorderPropertiesWidget::setProperties (const \fBBorderProperties\fP & bp)"
+
+.PP
+\fBBorderPropertiesWidget::setProperties\fP Set the current properties to edit\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbp\fP properties to edit 
+.RE
+.PP
+
+.SS "void BorderPropertiesWidget::setReadOnly (const bool & ro)"
+
+.PP
+\fBBorderPropertiesWidget::setReadOnly\fP Enable or disable this widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIro\fP true-disable / false-enable 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBBorderProperties\fP BorderPropertiesWidget::m_properties\fC [private]\fP"
+
+.SS "Ui::BorderPropertiesWidget* BorderPropertiesWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

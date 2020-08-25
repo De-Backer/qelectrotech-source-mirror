@@ -1,0 +1,199 @@
+.TH "AutoNumberingDockWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AutoNumberingDockWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <autonumberingdockwidget\&.h>\fP
+.PP
+Inherits QDockWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetActive\fP ()"
+.br
+.RI "\fBAutoNumberingDockWidget::setActive\fP Set current used autonumberings\&. "
+.ti -1c
+.RI "void \fBsetConductorActive\fP (\fBDiagramView\fP *)"
+.br
+.RI "\fBAutoNumberingDockWidget::setConductorActive\fP\&. "
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBfolioAutoNumChanged\fP (QString)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAutoNumberingDockWidget\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBAutoNumberingDockWidget::AutoNumberingDockWidget\fP Constructor\&. "
+.ti -1c
+.RI "\fB~AutoNumberingDockWidget\fP () override"
+.br
+.RI "\fBAutoNumberingDockWidget::~AutoNumberingDockWidget\fP Destructor\&. "
+.ti -1c
+.RI "void \fBsetContext\fP ()"
+.br
+.RI "\fBAutoNumberingDockWidget::setContext\fP Add all itens to comboboxes\&. "
+.ti -1c
+.RI "void \fBsetProject\fP (\fBQETProject\fP *, \fBProjectView\fP *)"
+.br
+.RI "\fBAutoNumberingDockWidget::setProject\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_conductor_cb_activated\fP (int)"
+.br
+.RI "\fBAutoNumberingDockWidget::on_m_conductor_cb_activated\fP Set new conductor AutoNum\&. "
+.ti -1c
+.RI "void \fBon_m_element_cb_activated\fP (int)"
+.br
+.RI "\fBAutoNumberingDockWidget::on_m_element_cb_activated\fP Set new element AutoNum\&. "
+.ti -1c
+.RI "void \fBon_m_folio_cb_activated\fP (int)"
+.br
+.RI "\fBAutoNumberingDockWidget::on_m_folio_cb_activated\fP Set new folio AutoNum\&. "
+.ti -1c
+.RI "void \fBconductorAutoNumChanged\fP ()"
+.br
+.RI "\fBAutoNumberingDockWidget::conductorAutoNumChanged\fP Add new or remove conductor auto num from combobox\&. "
+.ti -1c
+.RI "void \fBelementAutoNumChanged\fP ()"
+.br
+.RI "\fBAutoNumberingDockWidget::elementAutoNumChanged\fP Add new or remove element auto num from combobox\&. "
+.ti -1c
+.RI "void \fBfolioAutoNumChanged\fP ()"
+.br
+.RI "\fBAutoNumberingDockWidget::folioAutoNumChanged\fP Add new or remove folio auto num from combobox\&. "
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "\fBAutoNumberingDockWidget::clear\fP Remove all combo box values\&. "
+.ti -1c
+.RI "void \fBprojectClosed\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_configure_pb_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::AutoNumberingDockWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBProjectView\fP * \fBm_project_view\fP = nullptr"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AutoNumberingDockWidget::AutoNumberingDockWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::AutoNumberingDockWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "AutoNumberingDockWidget::~AutoNumberingDockWidget ()\fC [override]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::~AutoNumberingDockWidget\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void AutoNumberingDockWidget::clear ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::clear\fP Remove all combo box values\&. 
+.SS "void AutoNumberingDockWidget::conductorAutoNumChanged ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::conductorAutoNumChanged\fP Add new or remove conductor auto num from combobox\&. 
+.SS "void AutoNumberingDockWidget::elementAutoNumChanged ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::elementAutoNumChanged\fP Add new or remove element auto num from combobox\&. 
+.SS "void AutoNumberingDockWidget::folioAutoNumChanged ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::folioAutoNumChanged\fP Add new or remove folio auto num from combobox\&. 
+.SS "void AutoNumberingDockWidget::folioAutoNumChanged (QString)\fC [signal]\fP"
+
+.SS "void AutoNumberingDockWidget::on_m_conductor_cb_activated (int)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::on_m_conductor_cb_activated\fP Set new conductor AutoNum\&. 
+.SS "void AutoNumberingDockWidget::on_m_configure_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void AutoNumberingDockWidget::on_m_element_cb_activated (int)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::on_m_element_cb_activated\fP Set new element AutoNum\&. 
+.SS "void AutoNumberingDockWidget::on_m_folio_cb_activated (int)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::on_m_folio_cb_activated\fP Set new folio AutoNum\&. 
+.SS "void AutoNumberingDockWidget::projectClosed ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void AutoNumberingDockWidget::setActive ()\fC [slot]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::setActive\fP Set current used autonumberings\&. 
+.SS "void AutoNumberingDockWidget::setConductorActive (\fBDiagramView\fP * dv)\fC [slot]\fP"
+
+.PP
+\fBAutoNumberingDockWidget::setConductorActive\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdv\fP activated diagramview 
+.RE
+.PP
+
+.SS "void AutoNumberingDockWidget::setContext ()"
+
+.PP
+\fBAutoNumberingDockWidget::setContext\fP Add all itens to comboboxes\&. 
+.SS "void AutoNumberingDockWidget::setProject (\fBQETProject\fP * project, \fBProjectView\fP * projectview)"
+
+.PP
+\fBAutoNumberingDockWidget::setProject\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP project to be setted 
+.br
+\fIprojectview\fP projectview to be setted assign Project and \fBProjectView\fP, connect all signals and setContext 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQETProject\fP* AutoNumberingDockWidget::m_project = nullptr\fC [private]\fP"
+
+.SS "\fBProjectView\fP* AutoNumberingDockWidget::m_project_view = nullptr\fC [private]\fP"
+
+.SS "Ui::AutoNumberingDockWidget* AutoNumberingDockWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

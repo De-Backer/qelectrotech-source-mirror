@@ -1,0 +1,94 @@
+.TH "ReplaceElementDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReplaceElementDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <replaceelementdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReplaceElementDialog\fP (\fBDiagramContext\fP \fBcontext\fP, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ReplaceElementDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetContext\fP (\fBDiagramContext\fP \fBcontext\fP)"
+.br
+.RI "\fBReplaceElementDialog::setContext\fP Set the current diagram context to be edited\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBcontext\fP () const"
+.br
+.RI "\fBReplaceElementDialog::context\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBbuildWidget\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ReplaceElementDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "QList< \fBElementInfoPartWidget\fP * > \fBm_eipw_list\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBm_context\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ReplaceElementDialog::ReplaceElementDialog (\fBDiagramContext\fP context, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "ReplaceElementDialog::~ReplaceElementDialog ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ReplaceElementDialog::buildWidget ()\fC [private]\fP"
+
+.SS "\fBDiagramContext\fP ReplaceElementDialog::context () const"
+
+.PP
+\fBReplaceElementDialog::context\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The edited diagram context 
+.RE
+.PP
+
+.SS "void ReplaceElementDialog::setContext (\fBDiagramContext\fP context)"
+
+.PP
+\fBReplaceElementDialog::setContext\fP Set the current diagram context to be edited\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontext\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagramContext\fP ReplaceElementDialog::m_context\fC [private]\fP"
+
+.SS "QList<\fBElementInfoPartWidget\fP *> ReplaceElementDialog::m_eipw_list\fC [private]\fP"
+
+.SS "Ui::ReplaceElementDialog* ReplaceElementDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

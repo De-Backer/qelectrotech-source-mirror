@@ -1,0 +1,128 @@
+.TH "autonum::AssignVariables" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+autonum::AssignVariables \- The \fBAssignVariables\fP class This class assign variable of a formula string\&. Return the final string used to be displayed from a formula string\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <assignvariables\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBformulaToLabel\fP (QString formula, \fBsequentialNumbers\fP &seqStruct, \fBDiagram\fP *diagram, const \fBElement\fP *elmt=nullptr)"
+.br
+.RI "\fBAssignVariables::formulaToLabel\fP Return the formula with variable assigned (ready to be displayed) "
+.ti -1c
+.RI "static QString \fBreplaceVariable\fP (const QString &formula, const \fBDiagramContext\fP &dc)"
+.br
+.RI "\fBAssignVariables::replaceVariable\fP Replace the variables in formula in form %{my-var} to the corresponding value stored in dc\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAssignVariables\fP (const QString &formula, const \fBsequentialNumbers\fP &seqStruct, \fBDiagram\fP *diagram, const \fBElement\fP *elmt=nullptr)"
+.br
+.ti -1c
+.RI "void \fBassignTitleBlockVar\fP ()"
+.br
+.ti -1c
+.RI "void \fBassignProjectVar\fP ()"
+.br
+.ti -1c
+.RI "void \fBassignSequence\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP = nullptr"
+.br
+.ti -1c
+.RI "QString \fBm_arg_formula\fP"
+.br
+.ti -1c
+.RI "QString \fBm_assigned_label\fP"
+.br
+.ti -1c
+.RI "\fBsequentialNumbers\fP \fBm_seq_struct\fP"
+.br
+.ti -1c
+.RI "const \fBElement\fP * \fBm_element\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBAssignVariables\fP class This class assign variable of a formula string\&. Return the final string used to be displayed from a formula string\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "autonum::AssignVariables::AssignVariables (const QString & formula, const \fBsequentialNumbers\fP & seqStruct, \fBDiagram\fP * diagram, const \fBElement\fP * elmt = \fCnullptr\fP)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void autonum::AssignVariables::assignProjectVar ()\fC [private]\fP"
+
+.SS "void autonum::AssignVariables::assignSequence ()\fC [private]\fP"
+
+.SS "void autonum::AssignVariables::assignTitleBlockVar ()\fC [private]\fP"
+
+.SS "QString autonum::AssignVariables::formulaToLabel (QString formula, \fBsequentialNumbers\fP & seqStruct, \fBDiagram\fP * diagram, const \fBElement\fP * elmt = \fCnullptr\fP)\fC [static]\fP"
+
+.PP
+\fBAssignVariables::formulaToLabel\fP Return the formula with variable assigned (ready to be displayed) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformula\fP - the formula to work 
+.br
+\fIseqStruct\fP - struct where is stocked int values (struct is passed as a reference and modified by this static method) 
+.br
+\fIdiagram\fP - the diagram where occure the formula\&. 
+.br
+\fIelmt\fP - parent element (if any) of the formula 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the string with variable assigned\&. 
+.RE
+.PP
+
+.SS "QString autonum::AssignVariables::replaceVariable (const QString & formula, const \fBDiagramContext\fP & dc)\fC [static]\fP"
+
+.PP
+\fBAssignVariables::replaceVariable\fP Replace the variables in formula in form %{my-var} to the corresponding value stored in dc\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformula\fP 
+.br
+\fIdc\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString autonum::AssignVariables::m_arg_formula\fC [private]\fP"
+
+.SS "QString autonum::AssignVariables::m_assigned_label\fC [private]\fP"
+
+.SS "\fBDiagram\fP* autonum::AssignVariables::m_diagram = nullptr\fC [private]\fP"
+
+.SS "const \fBElement\fP* autonum::AssignVariables::m_element = nullptr\fC [private]\fP"
+
+.SS "\fBsequentialNumbers\fP autonum::AssignVariables::m_seq_struct\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

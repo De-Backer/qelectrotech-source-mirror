@@ -1,0 +1,82 @@
+.TH "MarginsEditDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MarginsEditDialog \- The \fBMarginsEditDialog\fP class A simple dialog to edit QMargins\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <marginseditdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMarginsEditDialog\fP (QMargins \fBmargins\fP=QMargins(), QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~MarginsEditDialog\fP ()"
+.br
+.ti -1c
+.RI "QMargins \fBmargins\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QMargins \fBgetMargins\fP (QMargins \fBmargins\fP=QMargins(), bool *accepted=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBMarginsEditDialog::getMargins\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::MarginsEditDialog * \fBui\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBMarginsEditDialog\fP class A simple dialog to edit QMargins\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MarginsEditDialog::MarginsEditDialog (QMargins margins = \fCQMargins()\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "MarginsEditDialog::~MarginsEditDialog ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QMargins MarginsEditDialog::getMargins (QMargins margins = \fCQMargins()\fP, bool * accepted = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [static]\fP"
+
+.PP
+\fBMarginsEditDialog::getMargins\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImargins\fP : margins to set by default 
+.br
+\fIaccepted\fP : bool to know if dialog is accepted 
+.br
+\fIparent\fP : parent widget\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The a margins with the edited value if dialog is accepted or a default constructed QMargins() if dialog is rejected 
+.RE
+.PP
+
+.SS "QMargins MarginsEditDialog::margins () const"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::MarginsEditDialog* MarginsEditDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

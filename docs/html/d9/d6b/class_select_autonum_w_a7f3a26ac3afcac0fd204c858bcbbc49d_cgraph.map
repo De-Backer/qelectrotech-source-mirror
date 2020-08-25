@@ -1,0 +1,16 @@
+<map id="SelectAutonumW::on_m_next_pb_clicked" name="SelectAutonumW::on_m_next_pb_clicked">
+<area shape="rect" id="node1" title="SelectAutonumW::on_m_next_pb_clicked Increase NumerotationContext." alt="" coords="5,220,151,261"/>
+<area shape="rect" id="node2" href="$d9/d6b/class_select_autonum_w.html#a8c2fca95c3dc62fc782cc20e54b4d50c" title="SelectAutonumW::applyEnable enable/disable the apply button." alt="" coords="635,85,837,111"/>
+<area shape="rect" id="node10" href="$d9/d6b/class_select_autonum_w.html#af82d1f8f21508374a51d83c3c485b4a6" title="SelectAutonumW::toNumContext." alt="" coords="1121,253,1337,279"/>
+<area shape="rect" id="node11" href="$dc/dcb/class_numerotation_context_commands.html#aad44e5c7dfc1989f5651e3e09b285b90" title="NumerotationContextCommands::next." alt="" coords="1123,304,1336,345"/>
+<area shape="rect" id="node13" href="$d9/d6b/class_select_autonum_w.html#a00ae9d850bd595f73d969ae74f454b92" title="SelectAutonumW::setContext build the context of current diagram selected in the diagram_chooser Qcomb..." alt="" coords="199,173,393,199"/>
+<area shape="rect" id="node3" href="$d9/d6b/class_select_autonum_w.html#a99695ced8b153e2318d7a884b1f9af87" title="SelectAutonumW::contextToFormula Apply formula to ElementAutonumbering Widget." alt="" coords="885,77,1073,119"/>
+<area shape="rect" id="node4" href="$d3/d00/class_formula_autonumbering_w.html#a0f175edf01957690bd58e0245b3ce5e4" title="FormulaAutonumberingW::clearContext." alt="" coords="1145,5,1314,47"/>
+<area shape="rect" id="node5" href="$d1/ddb/namespaceautonum.html#ac5013eb6df6a472f5b2676d51b579da8" title="numerotationContextToFormula" alt="" coords="1129,136,1330,177"/>
+<area shape="rect" id="node8" href="$d3/d00/class_formula_autonumbering_w.html#a2c5716a3443c5dababf2ba7e73fa8820" title="FormulaAutonumberingW::setContext." alt="" coords="1145,71,1314,112"/>
+<area shape="rect" id="node6" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="1419,249,1565,291"/>
+<area shape="rect" id="node7" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="1419,184,1565,225"/>
+<area shape="rect" id="node9" href="$d3/d00/class_formula_autonumbering_w.html#a1e1c322230b4a7da4ee5dd9a8a0530e2" title="FormulaAutonumberingW::formula." alt="" coords="1407,71,1577,112"/>
+<area shape="rect" id="node12" href="$dc/dcb/class_numerotation_context_commands.html#a8d31e00e3c510c67a59f5de6964ef54a" title="NumerotationContextCommands::setNumStrategy apply the good strategy relative to str." alt="" coords="1385,315,1599,356"/>
+<area shape="rect" id="node14" href="$d9/d6b/class_select_autonum_w.html#a030b1096bda9fba46cd40fbecf4c4d2a" title="SelectAutonumW::on_add_button_clicked Action on add_button, add a NumPartEditor." alt="" coords="441,136,587,177"/>
+</map>

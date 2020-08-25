@@ -1,0 +1,316 @@
+.TH "ConductorPropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConductorPropertiesWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductorpropertieswidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdatePreview\fP (bool b=true)"
+.br
+.RI "\fBConductorPropertiesWidget::updatePreview\fP Update the preview for single lien\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorPropertiesWidget\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBConductorPropertiesWidget::ConductorPropertiesWidget\fP Constructor\&. "
+.ti -1c
+.RI "\fBConductorPropertiesWidget\fP (const \fBConductorProperties\fP &\fBproperties\fP, QWidget *parent=nullptr)"
+.br
+.RI "\fBConductorPropertiesWidget::ConductorPropertiesWidget\fP Constructor with properties\&. "
+.ti -1c
+.RI "\fB~ConductorPropertiesWidget\fP () override"
+.br
+.RI "\fBConductorPropertiesWidget::~ConductorPropertiesWidget\fP destructor\&. "
+.ti -1c
+.RI "void \fBsetProperties\fP (const \fBConductorProperties\fP &\fBproperties\fP)"
+.br
+.RI "\fBConductorPropertiesWidget::setProperties\fP Set the properties\&. "
+.ti -1c
+.RI "\fBConductorProperties\fP \fBproperties\fP () const"
+.br
+.RI "\fBConductorPropertiesWidget::properties\fP\&. "
+.ti -1c
+.RI "void \fBsetReadOnly\fP (const bool &ro)"
+.br
+.RI "\fBConductorPropertiesWidget::setReadOnly\fP\&. "
+.ti -1c
+.RI "void \fBaddAutonumWidget\fP (QWidget *widget)"
+.br
+.RI "\fBConductorPropertiesWidget::addAutonumWidget\fP\&. "
+.ti -1c
+.RI "void \fBsetHiddenOneTextPerFolio\fP (const bool &hide)"
+.br
+.RI "\fBConductorPropertiesWidget::setHiddenOneTextPerFolio\fP\&. "
+.ti -1c
+.RI "void \fBsetDisabledShowText\fP (const bool &disable=true)"
+.br
+.RI "\fBConductorPropertiesWidget::setDisabledShowText\fP\&. "
+.ti -1c
+.RI "void \fBsetHiddenAvailableAutonum\fP (const bool &hide)"
+.br
+.RI "\fBConductorPropertiesWidget::setHiddenAvailableAutonum\fP Hide the label, combo box and push button of available autonum\&. "
+.ti -1c
+.RI "QComboBox * \fBautonumComboBox\fP () const"
+.br
+.ti -1c
+.RI "QPushButton * \fBeditAutonumPushButton\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBevent\fP (QEvent *event) override"
+.br
+.RI "\fBConductorPropertiesWidget::event\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_earth_cb_toggled\fP (bool checked)"
+.br
+.RI "\fBConductorPropertiesWidget::on_m_earth_cb_toggled\fP Update the widget when toggled\&. "
+.ti -1c
+.RI "void \fBon_m_neutral_cb_toggled\fP (bool checked)"
+.br
+.RI "\fBConductorPropertiesWidget::on_m_neutral_cb_toggled\fP Update the widget when toggled\&. "
+.ti -1c
+.RI "void \fBon_m_update_preview_pb_clicked\fP ()"
+.br
+.RI "\fBConductorPropertiesWidget::on_m_update_preview_pb_clicked\fP Update the preview of single line\&. m_update_preview_pb is a no used button and hidden, his role is only to centralize signal from various widget to edit single ligne properties, for update the preview\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitWidget\fP ()"
+.br
+.RI "\fBConductorPropertiesWidget::initWidget\fP\&. "
+.ti -1c
+.RI "void \fBsetConductorType\fP (\fBConductorProperties::ConductorType\fP type)"
+.br
+.RI "\fBConductorPropertiesWidget::setConductorType\fP Update this widget to the new conductor type\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ConductorPropertiesWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBConductorProperties\fP \fBm_properties\fP"
+.br
+.ti -1c
+.RI "\fBQTextOrientationSpinBoxWidget\fP * \fBm_verti_select\fP"
+.br
+.ti -1c
+.RI "\fBQTextOrientationSpinBoxWidget\fP * \fBm_horiz_select\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConductorPropertiesWidget::ConductorPropertiesWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBConductorPropertiesWidget::ConductorPropertiesWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : paretn widget 
+.RE
+.PP
+
+.SS "ConductorPropertiesWidget::ConductorPropertiesWidget (const \fBConductorProperties\fP & properties, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBConductorPropertiesWidget::ConductorPropertiesWidget\fP Constructor with properties\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperties\fP : properties to edit 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "ConductorPropertiesWidget::~ConductorPropertiesWidget ()\fC [override]\fP"
+
+.PP
+\fBConductorPropertiesWidget::~ConductorPropertiesWidget\fP destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ConductorPropertiesWidget::addAutonumWidget (QWidget * widget)"
+
+.PP
+\fBConductorPropertiesWidget::addAutonumWidget\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget\fP 
+.RE
+.PP
+
+.SS "QComboBox * ConductorPropertiesWidget::autonumComboBox () const"
+
+.SS "QPushButton * ConductorPropertiesWidget::editAutonumPushButton () const"
+
+.SS "bool ConductorPropertiesWidget::event (QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductorPropertiesWidget::event\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void ConductorPropertiesWidget::initWidget ()\fC [private]\fP"
+
+.PP
+\fBConductorPropertiesWidget::initWidget\fP\&. 
+.SS "void ConductorPropertiesWidget::on_m_earth_cb_toggled (bool checked)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBConductorPropertiesWidget::on_m_earth_cb_toggled\fP Update the widget when toggled\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchecked\fP 
+.RE
+.PP
+
+.SS "void ConductorPropertiesWidget::on_m_neutral_cb_toggled (bool checked)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBConductorPropertiesWidget::on_m_neutral_cb_toggled\fP Update the widget when toggled\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchecked\fP 
+.RE
+.PP
+
+.SS "void ConductorPropertiesWidget::on_m_update_preview_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBConductorPropertiesWidget::on_m_update_preview_pb_clicked\fP Update the preview of single line\&. m_update_preview_pb is a no used button and hidden, his role is only to centralize signal from various widget to edit single ligne properties, for update the preview\&. 
+.SS "\fBConductorProperties\fP ConductorPropertiesWidget::properties () const"
+
+.PP
+\fBConductorPropertiesWidget::properties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the edited properties 
+.RE
+.PP
+
+.SS "void ConductorPropertiesWidget::setConductorType (\fBConductorProperties::ConductorType\fP type)\fC [private]\fP"
+
+.PP
+\fBConductorPropertiesWidget::setConductorType\fP Update this widget to the new conductor type\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP 
+.RE
+.PP
+
+.SS "void ConductorPropertiesWidget::setDisabledShowText (const bool & disable = \fCtrue\fP)"
+
+.PP
+\fBConductorPropertiesWidget::setDisabledShowText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdisable\fP 
+.RE
+.PP
+
+.SS "void ConductorPropertiesWidget::setHiddenAvailableAutonum (const bool & hide)"
+
+.PP
+\fBConductorPropertiesWidget::setHiddenAvailableAutonum\fP Hide the label, combo box and push button of available autonum\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhide\fP 
+.RE
+.PP
+
+.SS "void ConductorPropertiesWidget::setHiddenOneTextPerFolio (const bool & hide)"
+
+.PP
+\fBConductorPropertiesWidget::setHiddenOneTextPerFolio\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhide\fP 
+.RE
+.PP
+
+.SS "void ConductorPropertiesWidget::setProperties (const \fBConductorProperties\fP & properties)"
+
+.PP
+\fBConductorPropertiesWidget::setProperties\fP Set the properties\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperties\fP 
+.RE
+.PP
+
+.SS "void ConductorPropertiesWidget::setReadOnly (const bool & ro)"
+
+.PP
+\fBConductorPropertiesWidget::setReadOnly\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIro\fP if true this widget is disabled 
+.RE
+.PP
+
+.SS "void ConductorPropertiesWidget::updatePreview (bool b = \fCtrue\fP)\fC [slot]\fP"
+
+.PP
+\fBConductorPropertiesWidget::updatePreview\fP Update the preview for single lien\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIb\fP true: update from the value displayed by this widget false: update from the properties given at the constructor of this widget 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQTextOrientationSpinBoxWidget\fP * ConductorPropertiesWidget::m_horiz_select\fC [private]\fP"
+
+.SS "\fBConductorProperties\fP ConductorPropertiesWidget::m_properties\fC [private]\fP"
+
+.SS "\fBQTextOrientationSpinBoxWidget\fP* ConductorPropertiesWidget::m_verti_select\fC [private]\fP"
+
+.SS "Ui::ConductorPropertiesWidget* ConductorPropertiesWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

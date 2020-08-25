@@ -1,0 +1,313 @@
+.TH "QETArguments" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETArguments
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetarguments\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETArguments\fP (QObject *=nullptr)"
+.br
+.ti -1c
+.RI "\fBQETArguments\fP (const QList< QString > &, QObject *=nullptr)"
+.br
+.ti -1c
+.RI "\fBQETArguments\fP (const \fBQETArguments\fP &)"
+.br
+.ti -1c
+.RI "\fBQETArguments\fP & \fBoperator=\fP (const \fBQETArguments\fP &)"
+.br
+.ti -1c
+.RI "\fB~QETArguments\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBsetArguments\fP (const QList< QString > &)"
+.br
+.ti -1c
+.RI "virtual QList< QString > \fBarguments\fP () const"
+.br
+.ti -1c
+.RI "virtual QList< QString > \fBfiles\fP () const"
+.br
+.ti -1c
+.RI "virtual QList< QString > \fBprojectFiles\fP () const"
+.br
+.ti -1c
+.RI "virtual QList< QString > \fBelementFiles\fP () const"
+.br
+.ti -1c
+.RI "virtual QList< QString > \fBtitleBlockTemplateFiles\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBlangDirSpecified\fP () const"
+.br
+.ti -1c
+.RI "virtual QString \fBlangDir\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBprintHelpRequested\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBprintLicenseRequested\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBprintVersionRequested\fP () const"
+.br
+.ti -1c
+.RI "virtual QList< QString > \fBoptions\fP () const"
+.br
+.ti -1c
+.RI "virtual QList< QString > \fBunknownOptions\fP () const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBparseArguments\fP (const QList< QString > &)"
+.br
+.ti -1c
+.RI "void \fBhandleFileArgument\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBhandleOptionArgument\fP (const QString &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< QString > \fBproject_files_\fP"
+.br
+.ti -1c
+.RI "QList< QString > \fBelement_files_\fP"
+.br
+.ti -1c
+.RI "QList< QString > \fBtbt_files_\fP"
+.br
+.ti -1c
+.RI "QList< QString > \fBoptions_\fP"
+.br
+.ti -1c
+.RI "QList< QString > \fBunknown_options_\fP"
+.br
+.ti -1c
+.RI "QString \fBlang_dir_\fP"
+.br
+.ti -1c
+.RI "bool \fBprint_help_\fP"
+.br
+.ti -1c
+.RI "bool \fBprint_license_\fP"
+.br
+.ti -1c
+.RI "bool \fBprint_version_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a set of arguments the application has received as parameters\&. Initialized from a list of strings, an instance of this class provides access to the differents options and files given on the command line\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QETArguments::QETArguments (QObject * parent = \fCnullptr\fP)"
+Constructeur par defaut Cree un objet sans argument\&. 
+.SS "QETArguments::QETArguments (const QList< QString > & args, QObject * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargs\fP Arguments a analyser et memoriser 
+.br
+\fIparent\fP QObject parent 
+.RE
+.PP
+
+.SS "QETArguments::QETArguments (const \fBQETArguments\fP & qet_arguments)"
+Constructeur de copie - la copie reprend le parent de l'original 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqet_arguments\fP Objet a copier 
+.RE
+.PP
+
+.SS "QETArguments::~QETArguments ()\fC [override]\fP"
+Destructeur 
+.SH "Member Function Documentation"
+.PP 
+.SS "QList< QString > QETArguments::arguments () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+tous les arguments (projets et elements) passes en parametres dans l'ordre suivant : options connues puis inconnues, fichiers de types projet puis element\&. 
+.RE
+.PP
+
+.SS "void QETArguments::clear ()\fC [private]\fP"
+Oublie tous les arguments de cet objet 
+.SS "QList< QString > QETArguments::elementFiles () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+les fichiers de type element 
+.RE
+.PP
+
+.SS "QList< QString > QETArguments::files () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+tous les fichiers (projets et elements) passes en parametres\&. Les fichiers de type projet viennent avant les fichiers de type element\&. 
+.RE
+.PP
+
+.SS "void QETArguments::handleFileArgument (const QString & file)\fC [private]\fP"
+Gere les arguments correspondant a un fichier existant\&. 
+.SS "void QETArguments::handleOptionArgument (const QString & option)\fC [private]\fP"
+Gere les arguments correspondant potentiellement a une option\&. Les options reconnues sont : --common-elements-dir= --common-tbt-dir --config-dir= --lang-dir= --help --version -v --license 
+.SS "QString QETArguments::langDir () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+le dossier de langue specifie par l'utilisateur\&. Si l'utilisateur n'en a pas specifie, une chaine vide est retournee\&. 
+.RE
+.PP
+
+.SS "bool QETArguments::langDirSpecified () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si l'utilisateur a specifie un dossier pour les fichiers de langue 
+.RE
+.PP
+
+.SS "\fBQETArguments\fP & QETArguments::operator= (const \fBQETArguments\fP & qet_arguments)"
+Operateur d'affectation - la copie ne reprend pas le parent de l'original 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqet_arguments\fP Objet a copier 
+.RE
+.PP
+
+.SS "QList< QString > QETArguments::options () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+les options reconnues 
+.RE
+.PP
+
+.SS "void QETArguments::parseArguments (const QList< QString > & arguments)\fC [private]\fP"
+Analyse des arguments et les retient dans cet objet\&. Si cet objet contenait deja des arguments, ceux-ci sont oublies\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarguments\fP Arguments a analyser 
+.RE
+.PP
+
+.SS "bool QETArguments::printHelpRequested () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si les arguments comportent une demande d'affichage de l'aide, false sinon 
+.RE
+.PP
+
+.SS "bool QETArguments::printLicenseRequested () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si les arguments comportent une demande d'affichage de la licence, false sinon 
+.RE
+.PP
+
+.SS "bool QETArguments::printVersionRequested () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si les arguments comportent une demande d'affichage de la version, false sinon 
+.RE
+.PP
+
+.SS "QList< QString > QETArguments::projectFiles () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+les fichiers de type projet 
+.RE
+.PP
+
+.SS "void QETArguments::setArguments (const QList< QString > & args)\fC [virtual]\fP"
+Definit les arguments de cet objet\&. Si cet objet contenait deja des arguments, ceux-ci sont oublies\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargs\fP Arguments a analyser et memoriser 
+.RE
+.PP
+
+.SS "QList< QString > QETArguments::titleBlockTemplateFiles () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+title block template files 
+.RE
+.PP
+
+.SS "QList< QString > QETArguments::unknownOptions () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+les options non reconnues 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QString> QETArguments::element_files_\fC [private]\fP"
+
+.SS "QString QETArguments::lang_dir_\fC [private]\fP"
+
+.SS "QList<QString> QETArguments::options_\fC [private]\fP"
+
+.SS "bool QETArguments::print_help_\fC [private]\fP"
+
+.SS "bool QETArguments::print_license_\fC [private]\fP"
+
+.SS "bool QETArguments::print_version_\fC [private]\fP"
+
+.SS "QList<QString> QETArguments::project_files_\fC [private]\fP"
+
+.SS "QList<QString> QETArguments::tbt_files_\fC [private]\fP"
+
+.SS "QList<QString> QETArguments::unknown_options_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

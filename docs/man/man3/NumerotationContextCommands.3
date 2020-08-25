@@ -1,0 +1,120 @@
+.TH "NumerotationContextCommands" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NumerotationContextCommands \- The \fBNumerotationContextCommands\fP class this class provide methods to handle content of \fBNumerotationContext\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <numerotationcontextcommands\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNumerotationContextCommands\fP (const \fBNumerotationContext\fP &, \fBDiagram\fP *=nullptr)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fB~NumerotationContextCommands\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBnext\fP ()"
+.br
+.RI "\fBNumerotationContextCommands::next\fP\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBprevious\fP ()"
+.br
+.RI "\fBNumerotationContextCommands::previous\fP\&. "
+.ti -1c
+.RI "QString \fBtoRepresentedString\fP ()"
+.br
+.RI "NumerotationContextCommands::toFinalString\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetNumStrategy\fP (const QString &)"
+.br
+.RI "\fBNumerotationContextCommands::setNumStrategy\fP apply the good strategy relative to str\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram_\fP"
+.br
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBcontext_\fP"
+.br
+.ti -1c
+.RI "\fBNumStrategy\fP * \fBstrategy_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBNumerotationContextCommands\fP class this class provide methods to handle content of \fBNumerotationContext\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NumerotationContextCommands::NumerotationContextCommands (const \fBNumerotationContext\fP & nc, \fBDiagram\fP * d = \fCnullptr\fP)"
+
+.PP
+Constructor\&. 
+.SS "NumerotationContextCommands::~NumerotationContextCommands ()"
+
+.PP
+Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBNumerotationContext\fP NumerotationContextCommands::next ()"
+
+.PP
+\fBNumerotationContextCommands::next\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the next numerotation context 
+.RE
+.PP
+
+.SS "\fBNumerotationContext\fP NumerotationContextCommands::previous ()"
+
+.PP
+\fBNumerotationContextCommands::previous\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the previous numerotation context 
+.RE
+.PP
+
+.SS "void NumerotationContextCommands::setNumStrategy (const QString & str)\fC [private]\fP"
+
+.PP
+\fBNumerotationContextCommands::setNumStrategy\fP apply the good strategy relative to str\&. 
+.SS "QString NumerotationContextCommands::toRepresentedString ()"
+
+.PP
+NumerotationContextCommands::toFinalString\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the string represented by the numerotation context 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBNumerotationContext\fP NumerotationContextCommands::context_\fC [private]\fP"
+
+.SS "\fBDiagram\fP* NumerotationContextCommands::diagram_\fC [private]\fP"
+
+.SS "\fBNumStrategy\fP* NumerotationContextCommands::strategy_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

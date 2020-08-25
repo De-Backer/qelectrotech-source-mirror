@@ -1,0 +1,1056 @@
+.TH "sources/qeticons.cpp" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qeticons.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'qeticons\&.h'\fP
+.br
+\fC#include <QApplication>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBQET\fP"
+.br
+.ti -1c
+.RI " \fBQET::Icons\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "QIcon \fBQET::Icons::Add\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::AddFolio\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Allowed\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ApplicationExit\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ArrowLeft\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ArrowLeftDouble\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ArrowRight\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ArrowRightDouble\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Autoconnect\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::BringForward\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Cancel\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Conductor\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ConductorEdit\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ConductorSettings\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Configure\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ConfigureToolbars\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::IC_CopyFile\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DefaultConductor\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DiagramAdd\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Diagram\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DiagramBg\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DiagramDelete\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DialogCancel\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DialogInformation\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DialogOk\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentClose\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentExport\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentSpreadsheet\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentImport\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentNew\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentOpen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentOpenRecent\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentPrint\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentPrintFrame\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentSave\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentSaveAll\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::DocumentSaveAs\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::East\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditClear\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditClearLocationBar\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditCopy\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditCut\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditDelete\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditPaste\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditRedo\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditRename\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditSelectAll\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditSelectInvert\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditSelectNone\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditTableCellMerge\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditTableCellSplit\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditTableDeleteColumn\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditTableDeleteRow\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditTableInsertColumnLeft\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditTableInsertColumnRight\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditTableInsertRowAbove\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditTableInsertRowUnder\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditText\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EditUndo\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Element\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ElementDelete\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ElementEdit\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ElementNew\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ElementSmall\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EndLineCircle\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EndLineDiamond\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EndLineNone\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EndLineSimple\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EndLineTriangle\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::EPS\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Folder\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::FolderDelete\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::FolderEdit\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::FolderNew\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::FolderOnlyThis\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::FolderOpen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::FolderProperties\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::FolderShowAll\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Forbidden\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::FullScreenEnter\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::FullScreenExit\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::GoBottom\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::GoDown\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::GoDownDouble\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::GoTop\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::GoUp\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::GoUpDouble\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Ground\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Grid\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Hide\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Home\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::HotSpot\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::InsertImage\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Lower\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::IC_MoveFile\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Names\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Neutral\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::NewDiagram\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::North\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ObjectLocked\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ObjectRotateRight\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ObjectUnlocked\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Orientations\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PartArc\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PartCircle\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PartEllipse\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PartLine\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PartPolygon\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PartRectangle\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PartSelect\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PartText\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PartTextField\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PDF\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Phase\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PrintAllPages\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Printer\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PrintLandscape\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PrintPortrait\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::PrintTwoPages\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Project\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ProjectClose\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ProjectNew\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Projects\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ProjectFile\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ProjectFileGP\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ProjectProperties\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::QETIcon\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::QETLogo\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::QETOxygenLogo\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::QtLogo\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Raise\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Remove\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Restore\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::RunDxf\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::SendBackward\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Settings\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::SinglePage\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::South\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Start\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::TableOfContent\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::Terminal\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::TitleBlock\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::TitleBlockBottom\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::TitleBlockRight\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::TransformRotate\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::UserInformations\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ViewFitWidth\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ViewFitWindow\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ViewMove\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ViewRefresh\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::West\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::WindowNew\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::XmlTextFile\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ZoomDraw\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ZoomFitBest\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ZoomIn\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ZoomOriginal\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ZoomOut\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::adding_image\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::resize_image\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ar\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::br\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::catalonia\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::cs\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::de\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::da\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::gr\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::en\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::es\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::fr\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::hr\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::hu\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::it\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::jp\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::pl\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::pt\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ro\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ru\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::sl\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::nl\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::no\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::be\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::tr\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::translation\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::listDrawings\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::AutoNum\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::TerminalStrip\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::QETManual\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::QETDonate\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::QETDownload\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::QETVideo\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::super\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::sub\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::textGroup\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ElementMaster\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ElementSlave\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::FolioXrefComing\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ElementTerminal\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorBrown\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorGray\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorOrange\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorPurple\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPinkPink\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPinkLightPink\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPinkHotPink\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPinkDeepPink\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPinkPaleVioletRed\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPinkMediumVioletRed\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLRedLightSalmon\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLRedSalmon\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLRedDarkSalmon\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLRedLightCoral\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLRedIndianRed\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLRedCrimson\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLRedFirebrick\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLRedDarkRed\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLRedRed\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLOrangeOrangeRed\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLOrangeTomato\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLOrangeCoral\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLOrangeDarkOrange\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLOrangeOrange\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowYellow\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowLightYellow\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowLemonChiffon\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowLightGoldenrodYellow\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowPapayaWhip\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowMoccasin\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowPeachPuff\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowPaleGoldenrod\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowKhaki\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowDarkKhaki\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLYellowGold\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownCornsilk\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownBlanchedAlmond\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownBisque\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownNavajoWhite\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownWheat\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownBurlywood\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownTan\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownRosyBrown\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownSandyBrown\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownGoldenrod\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownDarkGoldenrod\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownPeru\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownChocolate\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownSaddleBrown\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownSienna\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownBrown\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBrownMaroon\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenDarkOliveGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenOlive\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenOliveDrab\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenYellowGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenLimeGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenLime\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenLawnGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenChartreuse\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenGreenYellow\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenSpringGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenMediumSpringGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenLightGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenPaleGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenDarkSeaGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenMediumAquamarine\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenMediumSeaGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenSeaGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenForestGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGreenDarkGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanAqua\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanCyan\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanLightCyan\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanPaleTurquoise\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanAquamarine\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanTurquoise\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanMediumTurquoise\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanDarkTurquoise\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanLightSeaGreen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanCadetBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanDarkCyan\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLCyanTeal\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueLightSteelBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBluePowderBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueLightBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueSkyBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueLightSkyBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueDeepSkyBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueDodgerBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueCornflowerBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueSteelBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueRoyalBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueMediumBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueDarkBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueNavy\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLBlueMidnightBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleLavender\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleThistle\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurplePlum\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleViolet\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleOrchid\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleFuchsia\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleMagenta\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleMediumOrchid\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleMediumPurple\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleBlueViolet\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleDarkViolet\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleDarkOrchid\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleDarkMagenta\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurplePurple\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleIndigo\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleDarkSlateBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleSlateBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLPurpleMediumSlateBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteWhite\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteSnow\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteHoneydew\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteMintCream\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteAzure\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteAliceBlue\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteGhostWhite\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteWhiteSmoke\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteSeashell\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteBeige\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteOldLace\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteFloralWhite\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteIvory\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteAntiqueWhite\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteLinen\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteLavenderBlush\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLWhiteMistyRose\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGrayGainsboro\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGrayLightGray\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGraySilver\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGrayDarkGray\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGrayGray\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGrayDimGray\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGrayLightSlateGray\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGraySlateGray\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGrayDarkSlateGray\fP"
+.br
+.ti -1c
+.RI "QIcon \fBQET::Icons::ColorHTMLGrayBlack\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

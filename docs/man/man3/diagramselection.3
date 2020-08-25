@@ -1,0 +1,101 @@
+.TH "diagramselection" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+diagramselection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramselection\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdiagramselection\fP (\fBQETProject\fP *prj, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~diagramselection\fP () override"
+.br
+.ti -1c
+.RI "QList< \fBDiagram\fP * > \fBlist_of_DiagramSelected\fP ()"
+.br
+.RI "get list of Diagrams is selected "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_tableDiagram_customContextMenuRequested\fP (const QPoint &pos)"
+.br
+.RI "contextMenuRequested "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBload_TableDiagram\fP ()"
+.br
+.RI "load all Diagrams of project in table "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::diagramselection * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBprj_\fP"
+.br
+.ti -1c
+.RI "QList< \fBDiagram\fP * > \fBlist_diagram_\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "diagramselection::diagramselection (\fBQETProject\fP * prj, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "diagramselection::~diagramselection ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QList< \fBDiagram\fP * > diagramselection::list_of_DiagramSelected ()"
+
+.PP
+get list of Diagrams is selected 
+.PP
+\fBReturns\fP
+.RS 4
+this list of Diagrams 
+.RE
+.PP
+
+.SS "void diagramselection::load_TableDiagram ()\fC [private]\fP"
+
+.PP
+load all Diagrams of project in table 
+.SS "void diagramselection::on_tableDiagram_customContextMenuRequested (const QPoint & pos)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+contextMenuRequested 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<\fBDiagram\fP *> diagramselection::list_diagram_\fC [private]\fP"
+
+.SS "\fBQETProject\fP* diagramselection::prj_\fC [private]\fP"
+
+.SS "Ui::diagramselection* diagramselection::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

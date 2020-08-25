@@ -1,0 +1,125 @@
+.TH "ChangeDiagramTextCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChangeDiagramTextCommand \- The \fBChangeDiagramTextCommand\fP class This commad modifies a text item\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeDiagramTextCommand\fP (\fBDiagramTextItem\fP *, const QString &before, const QString &after, QUndoCommand *=nullptr)"
+.br
+.RI "\fBChangeDiagramTextCommand::ChangeDiagramTextCommand\fP Constructeur\&. "
+.ti -1c
+.RI "\fB~ChangeDiagramTextCommand\fP () override"
+.br
+.RI "\fBChangeDiagramTextCommand::~ChangeDiagramTextCommand\fP destructeur\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBChangeDiagramTextCommand::undo\fP annule la modification de texte\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBChangeDiagramTextCommand::redo\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeDiagramTextCommand\fP (const \fBChangeDiagramTextCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramTextItem\fP * \fBtext_item\fP"
+.br
+.RI "modified text item "
+.ti -1c
+.RI "QString \fBtext_before\fP"
+.br
+.RI "former text "
+.ti -1c
+.RI "QString \fBtext_after\fP"
+.br
+.RI "new text "
+.ti -1c
+.RI "bool \fBfirst_redo\fP"
+.br
+.RI "prevent the first call to \fBredo()\fP "
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBChangeDiagramTextCommand\fP class This commad modifies a text item\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChangeDiagramTextCommand::ChangeDiagramTextCommand (\fBDiagramTextItem\fP * dti, const QString & before, const QString & after, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBChangeDiagramTextCommand::ChangeDiagramTextCommand\fP Constructeur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdti\fP Champ de texte modifie 
+.br
+\fIbefore\fP texte avant 
+.br
+\fIafter\fP texte apres 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "ChangeDiagramTextCommand::~ChangeDiagramTextCommand ()\fC [override]\fP"
+
+.PP
+\fBChangeDiagramTextCommand::~ChangeDiagramTextCommand\fP destructeur\&. 
+.SS "ChangeDiagramTextCommand::ChangeDiagramTextCommand (const \fBChangeDiagramTextCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChangeDiagramTextCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBChangeDiagramTextCommand::redo\fP\&. 
+.SS "void ChangeDiagramTextCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBChangeDiagramTextCommand::undo\fP annule la modification de texte\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagram\fP* ChangeDiagramTextCommand::diagram\fC [private]\fP"
+
+.SS "bool ChangeDiagramTextCommand::first_redo\fC [private]\fP"
+
+.PP
+prevent the first call to \fBredo()\fP 
+.SS "QString ChangeDiagramTextCommand::text_after\fC [private]\fP"
+
+.PP
+new text 
+.SS "QString ChangeDiagramTextCommand::text_before\fC [private]\fP"
+
+.PP
+former text 
+.SS "\fBDiagramTextItem\fP* ChangeDiagramTextCommand::text_item\fC [private]\fP"
+
+.PP
+modified text item 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

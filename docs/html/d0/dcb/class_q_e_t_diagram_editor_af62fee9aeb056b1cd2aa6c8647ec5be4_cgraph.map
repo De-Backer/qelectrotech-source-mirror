@@ -1,0 +1,27 @@
+<map id="QETDiagramEditor::diagramWasAdded" name="QETDiagramEditor::diagramWasAdded">
+<area shape="rect" id="node1" title="QETDiagramEditor::diagramWasAdded Manage the adding of diagram view in a project." alt="" coords="5,385,192,427"/>
+<area shape="rect" id="node2" href="$d7/d9c/class_diagram_view.html#a8c062e9be49d4f8f5c43322fceed60ca" title=" " alt="" coords="747,189,901,215"/>
+<area shape="rect" id="node3" href="$d0/dcb/class_q_e_t_diagram_editor.html#a43dd077bb92419e3545fd224ab975e69" title="QETDiagramEditor::selectionChanged This slot is called when a diagram selection was changed." alt="" coords="240,385,432,427"/>
+<area shape="rect" id="node25" href="$d0/dcb/class_q_e_t_diagram_editor.html#a3274df50981531c70f3968a1956578e6" title="QETDiagramEditor::slot_updateModeActions Manage action who need an opened diagram or project to be up..." alt="" coords="497,756,659,797"/>
+<area shape="rect" id="node4" href="$d0/dcb/class_q_e_t_diagram_editor.html#a6b9a7510de88d3601de38bee2df32393" title=" " alt="" coords="734,756,914,797"/>
+<area shape="rect" id="node6" href="$d5/dca/class_diagram_properties_editor_dock_widget.html#ad6112f798cc01272ce9d78ff99e2f577" title="DiagramPropertiesEditorDockWidget::setDiagram Set the diagram to edit the selection...." alt="" coords="480,103,676,144"/>
+<area shape="rect" id="node14" href="$d0/dcb/class_q_e_t_diagram_editor.html#a80ea63e3ecc120146769dbaa0424cd60" title="QETDiagramEditor::slot_updateComplexActions Manage the actions who need some conditions to be enable ..." alt="" coords="496,436,660,477"/>
+<area shape="rect" id="node5" href="$d0/dcb/class_q_e_t_diagram_editor.html#abbfa920179fe7d449248664d5d2f6318" title=" " alt="" coords="980,785,1160,827"/>
+<area shape="rect" id="node7" href="$d1/d62/class_properties_editor_dock_widget.html#a9b29c00de84f66eec6f055ae79dead8e" title="PropertiesEditorDockWidget::clear Remove all editor present in this dock and delete it...." alt="" coords="976,17,1164,59"/>
+<area shape="rect" id="node8" href="$d5/dca/class_diagram_properties_editor_dock_widget.html#a3a91c00e9526f1d850ca3034ddaf38f4" title="DiagramPropertiesEditorDockWidget::diagramWasDeleted Remove current editor and set m_diagram to nullp..." alt="" coords="726,5,922,47"/>
+<area shape="rect" id="node9" href="$d5/dca/class_diagram_properties_editor_dock_widget.html#a944ff03e48b2ec5eb782b6657b448eef" title="DiagramPropertiesEditorDockWidget::selectionChanged The current selection of diagram was changed...." alt="" coords="726,123,922,164"/>
+<area shape="rect" id="node10" href="$d5/dca/class_diagram_properties_editor_dock_widget.html#a938b1ed907a90d270256b0c6879f3688" title=" " alt="" coords="972,83,1168,124"/>
+<area shape="rect" id="node12" href="$d1/d62/class_properties_editor_dock_widget.html#a117655f73513d5aaa3c639bd0a987d9c" title="PropertiesEditorDockWidget::editors." alt="" coords="976,148,1164,189"/>
+<area shape="rect" id="node13" href="$dd/d8f/namespace_properties_editor_factory.html#a87a612d1e132d0483fdf0b042285f1c4" title="PropertiesEditorFactory::propertiesEditor." alt="" coords="989,213,1151,255"/>
+<area shape="rect" id="node11" href="$d1/d62/class_properties_editor_dock_widget.html#aa301a916fcb2533e225c6cce196e2c81" title="PropertiesEditorDockWidget::addEditor Add an editor in this dock at index in the main vertical layout..." alt="" coords="1216,83,1404,124"/>
+<area shape="rect" id="node15" href="$d3/d37/class_diagram.html#a3328159058b0dde27937f8fb5f382afc" title="Diagram::canRotateSelection." alt="" coords="727,523,921,550"/>
+<area shape="rect" id="node16" href="$d9/db9/class_diagram_content.html#a69545c3ec624bc931c6a0bcfca0f7fa6" title="DiagramContent::count." alt="" coords="746,574,902,601"/>
+<area shape="rect" id="node17" href="$d9/db9/class_diagram_content.html#ae7b1d44cef7432219ff99e1f37896480" title="DiagramContent::hasCopiableItems." alt="" coords="726,625,922,667"/>
+<area shape="rect" id="node18" href="$d9/db9/class_diagram_content.html#af18ab6d2c6cc94d9eca665e7b6d2d27e" title="DiagramContent::hasDeletableItems." alt="" coords="724,691,924,732"/>
+<area shape="rect" id="node19" href="$d3/d37/class_diagram.html#ab576e6398fe6d00cd92d6bbf9300f7b6" title="Diagram::isReadOnly." alt="" coords="751,239,897,266"/>
+<area shape="rect" id="node20" href="$d9/db9/class_diagram_content.html#a278da70e11e9a9db67db1bcdcf0f69f0" title="DiagramContent::items." alt="" coords="746,290,902,317"/>
+<area shape="rect" id="node22" href="$d3/d37/class_diagram.html#a1253bcb8fcf0fba76f07748664ecc38f" title="Diagram::selectedConductors." alt="" coords="727,341,921,367"/>
+<area shape="rect" id="node23" href="$d9/db9/class_diagram_content.html#a07b00c1d896f49e0a79774b299820e62" title="DiagramContent::selectedTexts." alt="" coords="737,392,911,433"/>
+<area shape="rect" id="node24" href="$d9/db9/class_diagram_content.html#a130a17e319c37be54f453613f75448cc" title="DiagramContent::selectedTextsGroup." alt="" coords="737,457,911,499"/>
+<area shape="rect" id="node21" href="$d9/db9/class_diagram_content.html#a469693789e1268cbfae9486b240da1a3" title="DiagramContent::conductors." alt="" coords="976,290,1164,317"/>
+</map>

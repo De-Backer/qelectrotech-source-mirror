@@ -1,0 +1,599 @@
+.TH "DynamicElementTextModel" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DynamicElementTextModel \- The \fBDynamicElementTextModel\fP class A model to use with QtView\&. This model display and can edit the value of dynamic text of an element\&. Set the delegate \fBDynamicTextItemDelegate\fP as delegate of this model\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dynamicelementtextmodel\&.h>\fP
+.PP
+Inherits QStandardItemModel\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBValueType\fP { \fBtextFrom\fP =1, \fBuserText\fP, \fBinfoText\fP, \fBcompositeText\fP, \fBtxtAlignment\fP, \fBsize\fP, \fBfont\fP, \fBcolor\fP, \fBpos\fP, \fBframe\fP, \fBrotation\fP, \fBtextWidth\fP, \fBgrpAlignment\fP, \fBgrpPos\fP, \fBgrpRotation\fP, \fBgrpVAdjust\fP, \fBgrpName\fP, \fBgrpHoldBottom\fP, \fBgrpFrame\fP }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBdataChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDynamicElementTextModel\fP (\fBElement\fP *element, QObject *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~DynamicElementTextModel\fP () override"
+.br
+.ti -1c
+.RI "bool \fBindexIsInGroup\fP (const QModelIndex &index) const"
+.br
+.RI "\fBDynamicElementTextModel::indexIsInGroup\fP\&. "
+.ti -1c
+.RI "\fBDynamicElementTextItem\fP * \fBtextFromIndex\fP (const QModelIndex &index) const"
+.br
+.RI "\fBDynamicElementTextModel::textFromIndex\fP\&. "
+.ti -1c
+.RI "\fBDynamicElementTextItem\fP * \fBtextFromItem\fP (QStandardItem *item) const"
+.br
+.RI "\fBDynamicElementTextModel::textFromItem\fP\&. "
+.ti -1c
+.RI "QModelIndex \fBindexFromText\fP (\fBDynamicElementTextItem\fP *text) const"
+.br
+.RI "\fBDynamicElementTextModel::indexFromText\fP\&. "
+.ti -1c
+.RI "QUndoCommand * \fBundoForEditedText\fP (\fBDynamicElementTextItem\fP *deti, QUndoCommand *parent_undo=nullptr) const"
+.br
+.RI "\fBDynamicElementTextModel::undoForEditedText\fP\&. "
+.ti -1c
+.RI "QUndoCommand * \fBundoForEditedGroup\fP (\fBElementTextItemGroup\fP *group, QUndoCommand *parent_undo=nullptr) const"
+.br
+.RI "\fBDynamicElementTextModel::undoForEditedGroup\fP\&. "
+.ti -1c
+.RI "\fBElementTextItemGroup\fP * \fBgroupFromIndex\fP (const QModelIndex &index) const"
+.br
+.RI "\fBDynamicElementTextModel::groupFromIndex\fP\&. "
+.ti -1c
+.RI "\fBElementTextItemGroup\fP * \fBgroupFromItem\fP (QStandardItem *item) const"
+.br
+.RI "\fBDynamicElementTextModel::groupFromItem\fP\&. "
+.ti -1c
+.RI "QModelIndex \fBindexFromGroup\fP (\fBElementTextItemGroup\fP *group) const"
+.br
+.RI "\fBDynamicElementTextModel::indexFromGroup\fP\&. "
+.ti -1c
+.RI "bool \fBindexIsText\fP (const QModelIndex &index) const"
+.br
+.RI "\fBDynamicElementTextModel::indexIsText\fP\&. "
+.ti -1c
+.RI "bool \fBindexIsGroup\fP (const QModelIndex &index) const"
+.br
+.RI "\fBDynamicElementTextModel::indexIsGroup\fP\&. "
+.ti -1c
+.RI "bool \fBcanDropMimeData\fP (const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) const override"
+.br
+.ti -1c
+.RI "bool \fBdropMimeData\fP (const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override"
+.br
+.RI "\fBDynamicElementTextModel::dropMimeData\fP\&. "
+.ti -1c
+.RI "QMimeData * \fBmimeData\fP (const QModelIndexList &indexes) const override"
+.br
+.ti -1c
+.RI "QStringList \fBmimeTypes\fP () const override"
+.br
+.RI "\fBDynamicElementTextModel::mimeTypes\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QList< QStandardItem * > \fBitemsForText\fP (\fBDynamicElementTextItem\fP *deti)"
+.br
+.RI "\fBDynamicElementTextModel::itemsForText\fP\&. "
+.ti -1c
+.RI "void \fBaddText\fP (\fBDynamicElementTextItem\fP *deti)"
+.br
+.RI "\fBDynamicElementTextModel::addText\fP\&. "
+.ti -1c
+.RI "void \fBremoveText\fP (\fBDynamicElementTextItem\fP *deti)"
+.br
+.RI "\fBDynamicElementTextModel::removeText\fP\&. "
+.ti -1c
+.RI "void \fBaddGroup\fP (\fBElementTextItemGroup\fP *group)"
+.br
+.RI "DynamicElementTextModel::AddGroup Add a text item group to this model\&. "
+.ti -1c
+.RI "void \fBremoveGroup\fP (\fBElementTextItemGroup\fP *group)"
+.br
+.RI "\fBDynamicElementTextModel::removeGroup\fP Remove the text item group from this model\&. "
+.ti -1c
+.RI "void \fBaddTextToGroup\fP (\fBDynamicElementTextItem\fP *deti, \fBElementTextItemGroup\fP *group)"
+.br
+.RI "DynamicElementTextModel::textAddedToGroup Add the text text to the group group\&. "
+.ti -1c
+.RI "void \fBremoveTextFromGroup\fP (\fBDynamicElementTextItem\fP *deti, \fBElementTextItemGroup\fP *group)"
+.br
+.ti -1c
+.RI "void \fBenableSourceText\fP (\fBDynamicElementTextItem\fP *deti, \fBDynamicElementTextItem::TextFrom\fP tf)"
+.br
+.RI "\fBDynamicElementTextModel::enableSourceText\fP Enable the good field, according to the current source of text, for the edited text deti\&. "
+.ti -1c
+.RI "void \fBenableGroupRotationAndPos\fP (\fBElementTextItemGroup\fP *group)"
+.br
+.RI "DynamicElementTextModel::enableGroupRotation Enable/disable the item 'group rotation' according the option hold to bottom\&. "
+.ti -1c
+.RI "void \fBitemDataChanged\fP (QStandardItem *qsi)"
+.br
+.ti -1c
+.RI "void \fBsetConnection\fP (\fBDynamicElementTextItem\fP *deti, bool set)"
+.br
+.RI "\fBDynamicElementTextModel::setConnection\fP Set up the connection for deti to keep up to date the data of this model and the text\&. Is notably use with the use of QUndoCommand\&. "
+.ti -1c
+.RI "void \fBsetConnection\fP (\fBElementTextItemGroup\fP *group, bool set)"
+.br
+.RI "\fBDynamicElementTextModel::setConnection\fP Set up the connection for group to keep up to date the data of this model and the group\&. Is notably use with the use of QUndoCommand\&. "
+.ti -1c
+.RI "void \fBupdateDataFromText\fP (\fBDynamicElementTextItem\fP *deti, \fBDynamicElementTextModel::ValueType\fP type)"
+.br
+.ti -1c
+.RI "void \fBupdateDataFromGroup\fP (\fBElementTextItemGroup\fP *group, \fBDynamicElementTextModel::ValueType\fP type)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< \fBElement\fP > \fBm_element\fP"
+.br
+.ti -1c
+.RI "QHash< \fBDynamicElementTextItem\fP *, QStandardItem * > \fBm_texts_list\fP"
+.br
+.ti -1c
+.RI "QHash< \fBElementTextItemGroup\fP *, QStandardItem * > \fBm_groups_list\fP"
+.br
+.ti -1c
+.RI "QHash< \fBDynamicElementTextItem\fP *, QList< QMetaObject::Connection > > \fBm_hash_text_connect\fP"
+.br
+.ti -1c
+.RI "QHash< \fBElementTextItemGroup\fP *, QList< QMetaObject::Connection > > \fBm_hash_group_connect\fP"
+.br
+.ti -1c
+.RI "bool \fBm_block_dataChanged\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBDynamicElementTextModel\fP class A model to use with QtView\&. This model display and can edit the value of dynamic text of an element\&. Set the delegate \fBDynamicTextItemDelegate\fP as delegate of this model\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBDynamicElementTextModel::ValueType\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fItextFrom \fP\fP
+.TP
+\fB\fIuserText \fP\fP
+.TP
+\fB\fIinfoText \fP\fP
+.TP
+\fB\fIcompositeText \fP\fP
+.TP
+\fB\fItxtAlignment \fP\fP
+.TP
+\fB\fIsize \fP\fP
+.TP
+\fB\fIfont \fP\fP
+.TP
+\fB\fIcolor \fP\fP
+.TP
+\fB\fIpos \fP\fP
+.TP
+\fB\fIframe \fP\fP
+.TP
+\fB\fIrotation \fP\fP
+.TP
+\fB\fItextWidth \fP\fP
+.TP
+\fB\fIgrpAlignment \fP\fP
+.TP
+\fB\fIgrpPos \fP\fP
+.TP
+\fB\fIgrpRotation \fP\fP
+.TP
+\fB\fIgrpVAdjust \fP\fP
+.TP
+\fB\fIgrpName \fP\fP
+.TP
+\fB\fIgrpHoldBottom \fP\fP
+.TP
+\fB\fIgrpFrame \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DynamicElementTextModel::DynamicElementTextModel (\fBElement\fP * element, QObject * parent = \fCnullptr\fP)"
+
+.SS "DynamicElementTextModel::~DynamicElementTextModel ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DynamicElementTextModel::addGroup (\fBElementTextItemGroup\fP * group)\fC [private]\fP"
+
+.PP
+DynamicElementTextModel::AddGroup Add a text item group to this model\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextModel::addText (\fBDynamicElementTextItem\fP * deti)\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextModel::addText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeti\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextModel::addTextToGroup (\fBDynamicElementTextItem\fP * deti, \fBElementTextItemGroup\fP * group)\fC [private]\fP"
+
+.PP
+DynamicElementTextModel::textAddedToGroup Add the text text to the group group\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeti\fP 
+.br
+\fIgroup\fP 
+.RE
+.PP
+
+.SS "bool DynamicElementTextModel::canDropMimeData (const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent) const\fC [override]\fP"
+
+.SS "void DynamicElementTextModel::dataChanged ()\fC [signal]\fP"
+
+.SS "bool DynamicElementTextModel::dropMimeData (const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent)\fC [override]\fP"
+
+.PP
+\fBDynamicElementTextModel::dropMimeData\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP 
+.br
+\fIaction\fP 
+.br
+\fIrow\fP 
+.br
+\fIcolumn\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+In any case return false, for overwrite the default behavior of model\&. 
+.RE
+.PP
+
+.SS "void DynamicElementTextModel::enableGroupRotationAndPos (\fBElementTextItemGroup\fP * group)\fC [private]\fP"
+
+.PP
+DynamicElementTextModel::enableGroupRotation Enable/disable the item 'group rotation' according the option hold to bottom\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextModel::enableSourceText (\fBDynamicElementTextItem\fP * deti, \fBDynamicElementTextItem::TextFrom\fP tf)\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextModel::enableSourceText\fP Enable the good field, according to the current source of text, for the edited text deti\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeti\fP 
+.br
+\fItf\fP 
+.RE
+.PP
+
+.SS "\fBElementTextItemGroup\fP * DynamicElementTextModel::groupFromIndex (const QModelIndex & index) const"
+
+.PP
+\fBDynamicElementTextModel::groupFromIndex\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the group associated with index\&. Return value can be nullptr Index can be a child of an index associated with a group and can be the column 0 or 1\&. 
+.RE
+.PP
+
+.SS "\fBElementTextItemGroup\fP * DynamicElementTextModel::groupFromItem (QStandardItem * item) const"
+
+.PP
+\fBDynamicElementTextModel::groupFromItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the group associated with item\&. Return value can be nullptr item can be a child of an item associated with a group and can be the column 0 or 1\&. 
+.RE
+.PP
+
+.SS "QModelIndex DynamicElementTextModel::indexFromGroup (\fBElementTextItemGroup\fP * group) const"
+
+.PP
+\fBDynamicElementTextModel::indexFromGroup\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The index associated to the group group or a default QModelIndex if not match 
+.RE
+.PP
+
+.SS "QModelIndex DynamicElementTextModel::indexFromText (\fBDynamicElementTextItem\fP * text) const"
+
+.PP
+\fBDynamicElementTextModel::indexFromText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the QModelIndex for text, or a default QModelIndex if not match 
+.RE
+.PP
+
+.SS "bool DynamicElementTextModel::indexIsGroup (const QModelIndex & index) const"
+
+.PP
+\fBDynamicElementTextModel::indexIsGroup\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if index represente a group, both for the column 0 and 1\&. Return false if index is a child of an index associated to a group\&. 
+.RE
+.PP
+
+.SS "bool DynamicElementTextModel::indexIsInGroup (const QModelIndex & index) const"
+
+.PP
+\fBDynamicElementTextModel::indexIsInGroup\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the index represent a group or an item in a group 
+.RE
+.PP
+
+.SS "bool DynamicElementTextModel::indexIsText (const QModelIndex & index) const"
+
+.PP
+\fBDynamicElementTextModel::indexIsText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if index represente a text, both for the column 0 and 1\&. Return false if index is a child of an index associated to a text\&. 
+.RE
+.PP
+
+.SS "void DynamicElementTextModel::itemDataChanged (QStandardItem * qsi)\fC [private]\fP"
+
+.SS "QList< QStandardItem * > DynamicElementTextModel::itemsForText (\fBDynamicElementTextItem\fP * deti)\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextModel::itemsForText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeti\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The items for the text deti, if the text deti is already managed by this model the returned list is empty The returned items haven't got the same number of childs if the text is in a group or not\&. 
+.RE
+.PP
+
+.SS "QMimeData * DynamicElementTextModel::mimeData (const QModelIndexList & indexes) const\fC [override]\fP"
+
+.SS "QStringList DynamicElementTextModel::mimeTypes () const\fC [override]\fP"
+
+.PP
+\fBDynamicElementTextModel::mimeTypes\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void DynamicElementTextModel::removeGroup (\fBElementTextItemGroup\fP * group)\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextModel::removeGroup\fP Remove the text item group from this model\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextModel::removeText (\fBDynamicElementTextItem\fP * deti)\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextModel::removeText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeti\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextModel::removeTextFromGroup (\fBDynamicElementTextItem\fP * deti, \fBElementTextItemGroup\fP * group)\fC [private]\fP"
+
+.SS "void DynamicElementTextModel::setConnection (\fBDynamicElementTextItem\fP * deti, bool set)\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextModel::setConnection\fP Set up the connection for deti to keep up to date the data of this model and the text\&. Is notably use with the use of QUndoCommand\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeti\fP - text to setup connection 
+.br
+\fIset\fP - true = set connection - false unset connection 
+.RE
+.PP
+
+.SS "void DynamicElementTextModel::setConnection (\fBElementTextItemGroup\fP * group, bool set)\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextModel::setConnection\fP Set up the connection for group to keep up to date the data of this model and the group\&. Is notably use with the use of QUndoCommand\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP group to setup the connection 
+.br
+\fIset\fP true = set connection - false unset connection 
+.RE
+.PP
+
+.SS "\fBDynamicElementTextItem\fP * DynamicElementTextModel::textFromIndex (const QModelIndex & index) const"
+
+.PP
+\fBDynamicElementTextModel::textFromIndex\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the text associated with index\&. Returned value can be nullptr Index can be a child of an index associated with a text and can be the column 0 or 1\&. 
+.RE
+.PP
+
+.SS "\fBDynamicElementTextItem\fP * DynamicElementTextModel::textFromItem (QStandardItem * item) const"
+
+.PP
+\fBDynamicElementTextModel::textFromItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the text associated with item\&. Return value can be nullptr item can be a child of an item associated with a text and can be the column 0 or 1\&. Note can return nullptr 
+.RE
+.PP
+
+.SS "QUndoCommand * DynamicElementTextModel::undoForEditedGroup (\fBElementTextItemGroup\fP * group, QUndoCommand * parent_undo = \fCnullptr\fP) const"
+
+.PP
+\fBDynamicElementTextModel::undoForEditedGroup\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgroup\fP 
+.br
+\fIparent_undo\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A QUndoCommand that describe all changes made for group\&. Each change made for group is append as a child of the returned QUndoCommand\&. In other word, if the returned QUndoCommand have no child, that mean there is no change\&. 
+.RE
+.PP
+
+.SS "QUndoCommand * DynamicElementTextModel::undoForEditedText (\fBDynamicElementTextItem\fP * deti, QUndoCommand * parent_undo = \fCnullptr\fP) const"
+
+.PP
+\fBDynamicElementTextModel::undoForEditedText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdeti\fP 
+.br
+\fIparent_undo\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A QUndoCommand that describe all changes made for deti\&. Each change made for deti is append as a child of the returned QUndoCommand\&. In other word, if the returned QUndoCommand have no child, that mean there is no change\&. 
+.RE
+.PP
+
+.SS "void DynamicElementTextModel::updateDataFromGroup (\fBElementTextItemGroup\fP * group, \fBDynamicElementTextModel::ValueType\fP type)\fC [private]\fP"
+
+.SS "void DynamicElementTextModel::updateDataFromText (\fBDynamicElementTextItem\fP * deti, \fBDynamicElementTextModel::ValueType\fP type)\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool DynamicElementTextModel::m_block_dataChanged = false\fC [private]\fP"
+
+.SS "QPointer<\fBElement\fP> DynamicElementTextModel::m_element\fC [private]\fP"
+
+.SS "QHash<\fBElementTextItemGroup\fP *, QStandardItem *> DynamicElementTextModel::m_groups_list\fC [private]\fP"
+
+.SS "QHash<\fBElementTextItemGroup\fP *, QList<QMetaObject::Connection> > DynamicElementTextModel::m_hash_group_connect\fC [private]\fP"
+
+.SS "QHash<\fBDynamicElementTextItem\fP *, QList<QMetaObject::Connection> > DynamicElementTextModel::m_hash_text_connect\fC [private]\fP"
+
+.SS "QHash<\fBDynamicElementTextItem\fP *, QStandardItem *> DynamicElementTextModel::m_texts_list\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

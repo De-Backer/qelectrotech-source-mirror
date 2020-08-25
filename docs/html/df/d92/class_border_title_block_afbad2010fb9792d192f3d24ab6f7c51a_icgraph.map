@@ -1,0 +1,23 @@
+<map id="BorderTitleBlock::titleBlockTemplateName" name="BorderTitleBlock::titleBlockTemplateName">
+<area shape="rect" id="node1" title="BorderTitleBlock::titleBlockTemplateName." alt="" coords="1435,345,1615,387"/>
+<area shape="rect" id="node2" href="$df/d92/class_border_title_block.html#af7ff69f6cf7cceebed9457f86c7eafd7" title="BorderTitleBlock::exportTitleBlock." alt="" coords="1196,164,1359,205"/>
+<area shape="rect" id="node15" href="$d3/d37/class_diagram.html#af87e5123e10b006838a3eaed5c73c979" title="Diagram::setTitleBlockTemplate Set the template to use to render the title block of this diagram." alt="" coords="912,373,1120,399"/>
+<area shape="rect" id="node17" href="$df/d92/class_border_title_block.html#a1c40a21151209696bd04a3877caea563" title="BorderTitleBlock::titleBlockTemplateChanged This slot may be used to inform this class that the given..." alt="" coords="1187,236,1367,277"/>
+<area shape="rect" id="node18" href="$d3/d37/class_diagram.html#a8b8adc0527fee497c9a329643ae8e461" title="Diagram::titleBlockTemplateChanged This slot may be used to inform the diagram object that the given ..." alt="" coords="923,295,1109,336"/>
+<area shape="rect" id="node19" href="$df/d92/class_border_title_block.html#ac78a89774dd652a8fa3bffa11da39c68" title="BorderTitleBlock::titleBlockTemplateRemoved This slot has to be used to inform this class that the gi..." alt="" coords="1187,404,1367,445"/>
+<area shape="rect" id="node20" href="$d3/d37/class_diagram.html#ab0cb2dee8dab5bd6ea141122de2384db" title="Diagram::titleBlockTemplateRemoved This slot has to be be used to inform this class that the given ti..." alt="" coords="923,449,1109,491"/>
+<area shape="rect" id="node21" href="$d3/d37/class_diagram.html#a575ef3296a1bd2c39bac55d08d668f2b" title="Diagram::usesTitleBlockTemplate." alt="" coords="1168,521,1387,547"/>
+<area shape="rect" id="node3" href="$d7/d9c/class_diagram_view.html#a693cda43ac88d056c78df1abd938a654" title="DiagramView::handleTitleBlockDrop Handle the dropEvent that contain data of a titleblock." alt="" coords="931,229,1101,271"/>
+<area shape="rect" id="node5" href="$dd/d41/class_search_and_replace_worker.html#a8f18f9c652479c13b075c8618383477e" title="SearchAndReplaceWorker::replaceAdvanced." alt="" coords="929,33,1103,75"/>
+<area shape="rect" id="node6" href="$d3/d0d/class_search_and_replace_widget.html#a73062ad59dea670b01f9e4475a2592fe" title="SearchAndReplaceWidget::searchTerms." alt="" coords="929,99,1103,140"/>
+<area shape="rect" id="node12" href="$df/d92/class_border_title_block.html#ab61cc41d6ee33d11428f481ee8ff9f5b" title="BorderTitleBlock::titleBlockToXml Exports the title block current values to XML." alt="" coords="926,164,1106,205"/>
+<area shape="rect" id="node4" href="$d7/d9c/class_diagram_view.html#aaafc031a8acad3902341476567b01a71" title=" " alt="" coords="694,237,859,263"/>
+<area shape="rect" id="node7" href="$d3/d0d/class_search_and_replace_widget.html#a544083e81fd897eeda7c8d0f9560eccc" title="SearchAndReplaceWidget::addElement Add a tree widget item for element." alt="" coords="689,101,864,143"/>
+<area shape="rect" id="node8" href="$d3/d0d/class_search_and_replace_widget.html#a701b08dddd07ce8bef3c3cf368fa7640" title="SearchAndReplaceWidget::fillItemsList Fill the tree." alt="" coords="459,71,633,112"/>
+<area shape="rect" id="node9" href="$d3/d0d/class_search_and_replace_widget.html#af8e3c2c7471cd5f5e531ea3fa6c32ff6" title="SearchAndReplaceWidget::event Reimplemented to clear the the lines edit and hide the advanced widgets..." alt="" coords="228,5,403,47"/>
+<area shape="rect" id="node10" href="$d3/d0d/class_search_and_replace_widget.html#ac51644bfefba78b49728c044ff53b7e4" title=" " alt="" coords="228,71,403,112"/>
+<area shape="rect" id="node11" href="$d3/d0d/class_search_and_replace_widget.html#ae05416b7c7a8e7994102425f3492eae6" title="SearchAndReplaceWidget::on_m_replace_all_pb_clicked Replace all checked item." alt="" coords="5,63,180,119"/>
+<area shape="rect" id="node13" href="$d3/d37/class_diagram.html#a504d4e59ccf7d02638606463462945a1" title="Diagram::toXml Exports all or part of the schema." alt="" coords="720,171,833,198"/>
+<area shape="rect" id="node14" href="$d5/dcc/class_multi_paste_dialog.html#a9f60c5bd510d7961de088f75f0eeb92d" title=" " alt="" coords="451,164,641,205"/>
+<area shape="rect" id="node16" href="$d3/d37/class_diagram.html#a3a51ca00d34d4d198b1ab7768522846f" title="Diagram::Diagram Constructor." alt="" coords="713,373,841,399"/>
+</map>

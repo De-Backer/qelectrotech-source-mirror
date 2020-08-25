@@ -1,0 +1,111 @@
+.TH "ModelIndexCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelIndexCommand \- The \fBModelIndexCommand\fP class Change a data of an index of QAbstractItemModel\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <itemmodelcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModelIndexCommand\fP (QAbstractItemModel *model, const QModelIndex &index, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBModelIndexCommand::ModelIndexCommand\fP\&. "
+.ti -1c
+.RI "void \fBsetData\fP (const QVariant &value, int role=Qt::DisplayRole)"
+.br
+.RI "\fBModelIndexCommand::setData\fP\&. "
+.ti -1c
+.RI "virtual void \fBredo\fP () override"
+.br
+.RI "\fBModelIndexCommand::redo\fP Reimplemented from QUndoCommand\&. "
+.ti -1c
+.RI "virtual void \fBundo\fP () override"
+.br
+.RI "\fBModelIndexCommand::undo\fP Reimplemented from QUndoCommand\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< QAbstractItemModel > \fBm_model\fP"
+.br
+.ti -1c
+.RI "QModelIndex \fBm_index\fP"
+.br
+.ti -1c
+.RI "QVariant \fBm_old_value\fP"
+.br
+.ti -1c
+.RI "QVariant \fBm_new_value\fP"
+.br
+.ti -1c
+.RI "int \fBm_role\fP =0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBModelIndexCommand\fP class Change a data of an index of QAbstractItemModel\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelIndexCommand::ModelIndexCommand (QAbstractItemModel * model, const QModelIndex & index, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBModelIndexCommand::ModelIndexCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodel\fP 
+.br
+\fIindex\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelIndexCommand::redo ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBModelIndexCommand::redo\fP Reimplemented from QUndoCommand\&. 
+.SS "void ModelIndexCommand::setData (const QVariant & value, int role = \fCQt::DisplayRole\fP)"
+
+.PP
+\fBModelIndexCommand::setData\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP 
+.br
+\fIrole\fP 
+.RE
+.PP
+
+.SS "void ModelIndexCommand::undo ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBModelIndexCommand::undo\fP Reimplemented from QUndoCommand\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QModelIndex ModelIndexCommand::m_index\fC [private]\fP"
+
+.SS "QPointer<QAbstractItemModel> ModelIndexCommand::m_model\fC [private]\fP"
+
+.SS "QVariant ModelIndexCommand::m_new_value\fC [private]\fP"
+
+.SS "QVariant ModelIndexCommand::m_old_value\fC [private]\fP"
+
+.SS "int ModelIndexCommand::m_role =0\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,148 @@
+.TH "PastePartsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PastePartsCommand \- The \fBPastePartsCommand\fP class Undo command for paste element primitive in an element editor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pastepartscommand\&.h>\fP
+.PP
+Inherits \fBElementEditionCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPastePartsCommand\fP (\fBElementView\fP *view, const \fBElementContent\fP &content_to_paste, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBPastePartsCommand::PastePartsCommand\fP\&. "
+.ti -1c
+.RI "\fB~PastePartsCommand\fP () override"
+.br
+.RI "\fBPastePartsCommand::~PastePartsCommand\fP\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBPastePartsCommand::undo\fP\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBPastePartsCommand::redo\fP\&. "
+.ti -1c
+.RI "virtual void \fBsetOffset\fP (int old_offset_paste_count, const QPointF &old_start_top_left_corner, int new_offset_paste_count, const QPointF &new_start_top_left_corner)"
+.br
+.RI "\fBPastePartsCommand::setOffset\fP Describe the offset to use with this undo command\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPastePartsCommand\fP (const \fBPastePartsCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElementContent\fP \fBm_pasted_content\fP"
+.br
+.ti -1c
+.RI "int \fBm_old_offset_paste_count\fP"
+.br
+.ti -1c
+.RI "int \fBm_new_offset_paste_count\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_old_start_top_left_corner\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_new_start_top_left_corner\fP"
+.br
+.ti -1c
+.RI "bool \fBm_uses_offset\fP = false"
+.br
+.ti -1c
+.RI "bool \fBm_first_redo\fP = true"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBPastePartsCommand\fP class Undo command for paste element primitive in an element editor\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PastePartsCommand::PastePartsCommand (\fBElementView\fP * view, const \fBElementContent\fP & content_to_paste, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBPastePartsCommand::PastePartsCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIview\fP : view where this command work 
+.br
+\fIcontent_to_paste\fP : content to paste 
+.br
+\fIparent\fP : parent undo command 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+all terminal stored in content_to_paste get a new uuid in the constructor of this class to avoid have several terminal of an element with the same uuid\&. 
+.RE
+.PP
+
+.SS "PastePartsCommand::~PastePartsCommand ()\fC [override]\fP"
+
+.PP
+\fBPastePartsCommand::~PastePartsCommand\fP\&. 
+.SS "PastePartsCommand::PastePartsCommand (const \fBPastePartsCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void PastePartsCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBPastePartsCommand::redo\fP\&. 
+.SS "void PastePartsCommand::setOffset (int old_offset_paste_count, const QPointF & old_start_top_left_corner, int new_offset_paste_count, const QPointF & new_start_top_left_corner)\fC [virtual]\fP"
+
+.PP
+\fBPastePartsCommand::setOffset\fP Describe the offset to use with this undo command\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIold_offset_paste_count\fP 
+.br
+\fIold_start_top_left_corner\fP 
+.br
+\fInew_offset_paste_count\fP 
+.br
+\fInew_start_top_left_corner\fP 
+.RE
+.PP
+
+.SS "void PastePartsCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBPastePartsCommand::undo\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool PastePartsCommand::m_first_redo = true\fC [private]\fP"
+
+.SS "int PastePartsCommand::m_new_offset_paste_count\fC [private]\fP"
+
+.SS "QPointF PastePartsCommand::m_new_start_top_left_corner\fC [private]\fP"
+
+.SS "int PastePartsCommand::m_old_offset_paste_count\fC [private]\fP"
+
+.SS "QPointF PastePartsCommand::m_old_start_top_left_corner\fC [private]\fP"
+
+.SS "\fBElementContent\fP PastePartsCommand::m_pasted_content\fC [private]\fP"
+
+.SS "bool PastePartsCommand::m_uses_offset = false\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

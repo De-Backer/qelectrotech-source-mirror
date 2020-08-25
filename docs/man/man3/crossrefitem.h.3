@@ -1,0 +1,28 @@
+.TH "sources/qetgraphicsitem/crossrefitem.h" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qetgraphicsitem/crossrefitem.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QGraphicsObject>\fP
+.br
+\fC#include <QPicture>\fP
+.br
+\fC#include <QMultiMap>\fP
+.br
+\fC#include 'properties/xrefproperties\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCrossRefItem\fP"
+.br
+.RI "The \fBCrossRefItem\fP class This clas provide an item, for show the cross reference, like the contacts linked to a coil\&. The item setpos automaticaly when parent move\&. All slave displayed in cross ref will be updated when folio position change in the project\&. It's the responsability of the master element to informe displayed slave are moved, by calling the slot updateLabel By default master element is the parent graphics item of this Xref, but if the Xref must be snap to the label of master, the label become the parent of this Xref\&. This behavior can be changed at anytime by calling setProperties\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

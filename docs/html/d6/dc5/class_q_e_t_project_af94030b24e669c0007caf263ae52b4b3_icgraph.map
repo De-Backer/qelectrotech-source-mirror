@@ -1,0 +1,52 @@
+<map id="QETProject::undoStack" name="QETProject::undoStack">
+<area shape="rect" id="node1" title=" " alt="" coords="752,283,911,309"/>
+<area shape="rect" id="node2" href="$d6/df6/class_project_view.html#acbed001629fe7b8abf90713de409ad32" title=" " alt="" coords="545,31,688,57"/>
+<area shape="rect" id="node5" href="$dd/d41/class_search_and_replace_worker.html#a464740f100cd5a0717e8f68d81ddaf4e" title="SearchAndReplaceWorker::replaceAdvanced Apply the change of text according to the current advancedStr..." alt="" coords="529,275,704,317"/>
+<area shape="rect" id="node8" href="$dd/d41/class_search_and_replace_worker.html#a6738afbb4289152c9428c88053ef1f6f" title="SearchAndReplaceWorker::replaceConductor Replace all properties of each conductor in list All conduct..." alt="" coords="529,210,704,251"/>
+<area shape="rect" id="node10" href="$dd/d41/class_search_and_replace_worker.html#a8f85b91f168cb0021d8d672839ef6e60" title="SearchAndReplaceWorker::replaceDiagram Replace all properties of each diagram in diagram_list,..." alt="" coords="529,145,704,186"/>
+<area shape="rect" id="node12" href="$dd/d41/class_search_and_replace_worker.html#a36a5ec3e636f9ae1f494814c846b2d68" title="SearchAndReplaceWorker::replaceElement Replace all properties of each elements in list All element mu..." alt="" coords="529,406,704,447"/>
+<area shape="rect" id="node14" href="$dd/d41/class_search_and_replace_worker.html#ab72652c5eae34388d579fd87cc9fb298" title="SearchAndReplaceWorker::replaceIndiText Replace all displayed text of independent text of list Each m..." alt="" coords="529,341,704,382"/>
+<area shape="rect" id="node16" href="$d3/d37/class_diagram.html#aadc97c48501180ecd35ce25a8ebf161d" title="Diagram::undoStack." alt="" coords="546,1303,687,1329"/>
+<area shape="rect" id="node3" href="$d6/df6/class_project_view.html#a9a84549d5cda99fbd521e8155657999f" title=" " alt="" coords="315,56,441,83"/>
+<area shape="rect" id="node4" href="$d6/df6/class_project_view.html#accc3af4cb71a7dcf6b0a271cf1fa4657" title=" " alt="" coords="307,5,449,32"/>
+<area shape="rect" id="node6" href="$d3/d0d/class_search_and_replace_widget.html#ae05416b7c7a8e7994102425f3492eae6" title="SearchAndReplaceWidget::on_m_replace_all_pb_clicked Replace all checked item." alt="" coords="291,304,465,360"/>
+<area shape="rect" id="node7" href="$d3/d0d/class_search_and_replace_widget.html#a1d0aba92bf33ca8332d20381dc4ae0b2" title="SearchAndReplaceWidget::on_m_replace_pb_clicked Replace the current selection." alt="" coords="289,238,467,279"/>
+<area shape="rect" id="node9" href="$dd/d41/class_search_and_replace_worker.html#a7d56beb72f0991c45ce2d430652f3aea" title=" " alt="" coords="291,173,465,214"/>
+<area shape="rect" id="node11" href="$dd/d41/class_search_and_replace_worker.html#a791a7b1f22bfdcb0a97bf8014a623dbc" title=" " alt="" coords="291,107,465,149"/>
+<area shape="rect" id="node13" href="$dd/d41/class_search_and_replace_worker.html#ab944ee00c1c4df17231576dc956a1c01" title=" " alt="" coords="291,450,465,491"/>
+<area shape="rect" id="node15" href="$dd/d41/class_search_and_replace_worker.html#a5e94796267e501a70d1d888f15f12740" title=" " alt="" coords="291,385,465,426"/>
+<area shape="rect" id="node17" href="$dd/de5/class_image_properties_widget.html#a0a1520cb8676359b78c6cb6fb2fb3d11" title="ImagePropertiesWidget::apply Apply the change." alt="" coords="299,2058,457,2099"/>
+<area shape="rect" id="node19" href="$d7/d45/class_indi_text_properties_widget.html#a12cc6487bfad90679b828486d411b73d" title="IndiTextPropertiesWidget::apply Apply the current edition through a QUndoCommand pushed to the undo s..." alt="" coords="293,515,463,557"/>
+<area shape="rect" id="node22" href="$da/dd2/class_shape_graphics_item_properties_widget.html#a35137dd71e19b8e8a10d5f243cb39cbb" title="ShapeGraphicsItemPropertiesWidget::apply Apply the current change, by pushing an undo command to the ..." alt="" coords="279,621,477,662"/>
+<area shape="rect" id="node26" href="$d6/dfc/class_import_element_text_pattern.html#ab5ee9f26fdbf4ec21dc4f853fe45ac30" title="ImportElementTextPattern::apply Apply the user choice." alt="" coords="291,689,465,730"/>
+<area shape="rect" id="node28" href="$de/d1d/class_conductor_auto_numerotation.html#a0a3ae857616b75f7148d053c0faf78db" title="ConductorAutoNumerotation::applyText apply the text t to conductor_ and all conductors at the same po..." alt="" coords="285,754,471,795"/>
+<area shape="rect" id="node30" href="$d3/d37/class_diagram.html#a75a5531e88b84f63a4bf9af1e1768803" title="Diagram::changeZValue Change the Z value of the current selected item, according to option." alt="" coords="297,820,459,847"/>
+<area shape="rect" id="node32" href="$d0/d37/class_conductor_creator.html#a4aa5d2cbe62a6859c9ab61e1692e9b34" title="ConductorCreator::ConductorCreator Create an electrical potential between all terminals of terminals_..." alt="" coords="281,1002,475,1043"/>
+<area shape="rect" id="node33" href="$da/d7f/class_conductor.html#a6ce9bc6c9c6f6fad3c96322a1776eeb3" title="Conductor::displayedTextChanged Update the properties (text) of this conductor and other conductors a..." alt="" coords="293,1067,463,1109"/>
+<area shape="rect" id="node34" href="$d2/d1b/class_element_texts_mover.html#a6b2555c614d508d192c0e78721714e56" title="ElementTextsMover::endMovement Finish the movement by pushing an undo command to the parent diagram o..." alt="" coords="305,1133,451,1174"/>
+<area shape="rect" id="node35" href="$dc/d1c/class_independent_text_item.html#ae0d04cc2460ddadd8d968222b461c7d4" title=" " alt="" coords="306,1198,450,1239"/>
+<area shape="rect" id="node36" href="$d7/d15/class_qet_graphics_table_item.html#a68f4c5f54a09844dd9b2500def1eec70" title=" " alt="" coords="283,1263,473,1305"/>
+<area shape="rect" id="node37" href="$d1/d09/class_qet_shape_item.html#a966639644f9a78527086b2f19c669fa1" title="QetShapeItem::handlerMouseReleaseEvent." alt="" coords="281,1329,475,1370"/>
+<area shape="rect" id="node38" href="$d7/d9c/class_diagram_view.html#a693cda43ac88d056c78df1abd938a654" title="DiagramView::handleTitleBlockDrop Handle the dropEvent that contain data of a titleblock." alt="" coords="293,1394,463,1435"/>
+<area shape="rect" id="node39" href="$d1/d09/class_qet_shape_item.html#aa3dd0413cf1198f79af6cf1a19c497d7" title=" " alt="" coords="289,1460,467,1487"/>
+<area shape="rect" id="node40" href="$dd/df7/class_element_text_item_group.html#ac7c0d61b2d71fec0c96567061b222b7c" title="ElementTextItemGroup::keyPressEvent." alt="" coords="300,1511,456,1553"/>
+<area shape="rect" id="node41" href="$d3/d37/class_diagram.html#a1304d75039e5950b8de9900f6bc476c1" title="Diagram::keyPressEvent This event is managed by diagram event interface if any. Else move selected el..." alt="" coords="295,1577,461,1604"/>
+<area shape="rect" id="node42" href="$dc/dbc/class_diagram_event_add_shape.html#a87a20e34d02e2bddba77ccfe21b47495" title="DiagramEventAddShape::mouseDoubleClickEvent Action when mouse button is double clicked." alt="" coords="291,1629,465,1670"/>
+<area shape="rect" id="node43" href="$dc/dbc/class_diagram_event_add_shape.html#a0282b185c26a1811fb40c25b40ec051c" title="DiagramEventAddShape::mousePressEvent Action when mouse is pressed." alt="" coords="296,1694,460,1735"/>
+<area shape="rect" id="node44" href="$d0/d43/class_potential_selector_dialog.html#a3a86a6633d137c5ab156f146489b07f0" title="PotentialSelectorDialog::on_buttonBox_accepted Action when user click on OK button." alt="" coords="293,1759,463,1801"/>
+<area shape="rect" id="node45" href="$d5/dcc/class_multi_paste_dialog.html#a2d6de36192586c285fb858a2ab367878" title=" " alt="" coords="293,1825,463,1866"/>
+<area shape="rect" id="node46" href="$da/d6b/class_conductor_properties_dialog.html#a2345b73499b5756d9b3941dda9ad6f37" title="ConductorPropertiesDialog::PropertiesDialog Static method for open and apply properties." alt="" coords="289,1890,467,1931"/>
+<area shape="rect" id="node47" href="$d1/d09/class_qet_shape_item.html#a8744337475c24bd24a583ba567306599" title=" " alt="" coords="285,1956,471,1983"/>
+<area shape="rect" id="node48" href="$d0/dcb/class_q_e_t_diagram_editor.html#a987ebabb93612156d88e90168f44184d" title=" " alt="" coords="275,871,481,913"/>
+<area shape="rect" id="node49" href="$d0/dcb/class_q_e_t_diagram_editor.html#a4622b50c709a803ce7f98eeb732c9dc7" title="QETDiagramEditor::selectionGroupTriggered This slot is called when an action should be made on the cu..." alt="" coords="282,937,474,978"/>
+<area shape="rect" id="node50" href="$d3/d37/class_diagram.html#af3844176b56309e7589562b28ceca6dc" title="Diagram::~Diagram Destructor." alt="" coords="310,2007,446,2033"/>
+<area shape="rect" id="node18" href="$dd/de5/class_image_properties_widget.html#a7410a98c8c1aa656e7a33be31813111f" title="ImagePropertiesWidget::setLiveEdit." alt="" coords="37,2058,195,2099"/>
+<area shape="rect" id="node20" href="$d7/d45/class_indi_text_properties_widget.html#ac16a70329350e02166b97753a6d89a97" title=" " alt="" coords="31,473,201,514"/>
+<area shape="rect" id="node21" href="$d7/d45/class_indi_text_properties_widget.html#aa533fbb43aa78182736aca2d8d2b60bd" title="IndiTextPropertiesWidget::setUpEditConnection Disconnect the previous connection, and reconnect the c..." alt="" coords="31,407,201,449"/>
+<area shape="rect" id="node23" href="$da/dd2/class_shape_graphics_item_properties_widget.html#a4f61935a7ab9fc2ced765628238d4d2b" title=" " alt="" coords="17,539,215,595"/>
+<area shape="rect" id="node24" href="$da/dd2/class_shape_graphics_item_properties_widget.html#a5c7a8be23a78deb0f55d1a6d8ea67f4d" title=" " alt="" coords="5,619,227,661"/>
+<area shape="rect" id="node25" href="$da/dd2/class_shape_graphics_item_properties_widget.html#a684b627c912416cf4b8dcc57d8665bf0" title="ShapeGraphicsItemPropertiesWidget::setUpEditConnection Disconnect the previous connection,..." alt="" coords="17,685,215,726"/>
+<area shape="rect" id="node27" href="$d6/dfc/class_import_element_text_pattern.html#a95c6943c345304d7858f4daded820cbf" title=" " alt="" coords="25,750,207,791"/>
+<area shape="rect" id="node29" href="$de/d1d/class_conductor_auto_numerotation.html#aec981865ae357c33c7aaf72f18922239" title="ConductorAutoNumerotation::numerateNewConductor create and apply a new numerotation to m_conductor." alt="" coords="23,815,209,857"/>
+<area shape="rect" id="node31" href="$d0/dcb/class_q_e_t_diagram_editor.html#a6448cdc59c55224bee47909e744d0277" title="QETDiagramEditor::setUpActions Set up all Qaction." alt="" coords="7,881,225,908"/>
+</map>

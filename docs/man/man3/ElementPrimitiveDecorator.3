@@ -1,0 +1,611 @@
+.TH "ElementPrimitiveDecorator" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementPrimitiveDecorator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementprimitivedecorator\&.h>\fP
+.PP
+Inherits QGraphicsObject\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 2200 }"
+.br
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBadjust\fP ()"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBactionFinished\fP (\fBElementEditionCommand\fP *)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementPrimitiveDecorator\fP (QGraphicsItem *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ElementPrimitiveDecorator\fP () override"
+.br
+.ti -1c
+.RI "QRectF \fBinternalBoundingRect\fP () const"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *=nullptr) override"
+.br
+.RI "\fBElementPrimitiveDecorator::paint\fP Paint the contents of an item in local coordinates, using \fIpainter\fP, with respect to \fIoption\fP and\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "void \fBsetItems\fP (const QList< QGraphicsItem * > &)"
+.br
+.ti -1c
+.RI "void \fBsetItems\fP (const QList< \fBCustomElementPart\fP * > &)"
+.br
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBitems\fP () const"
+.br
+.ti -1c
+.RI "QList< QGraphicsItem * > \fBgraphicsItems\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *) override"
+.br
+.ti -1c
+.RI "void \fBkeyPressEvent\fP (QKeyEvent *) override"
+.br
+.RI "\fBElementPrimitiveDecorator::keyPressEvent\fP\&. "
+.ti -1c
+.RI "void \fBkeyReleaseEvent\fP (QKeyEvent *) override"
+.br
+.RI "\fBElementPrimitiveDecorator::keyReleaseEvent\fP\&. "
+.ti -1c
+.RI "QPointF \fBdeltaForRoundScaling\fP (const QRectF &, const QRectF &, qreal)"
+.br
+.ti -1c
+.RI "QPointF \fBsnapConstPointToGrid\fP (const QPointF &) const"
+.br
+.ti -1c
+.RI "void \fBsnapPointToGrid\fP (QPointF &) const"
+.br
+.ti -1c
+.RI "bool \fBmustSnapToGrid\fP (QGraphicsSceneMouseEvent *)"
+.br
+.ti -1c
+.RI "\fBQET::ScalingMethod\fP \fBscalingMethod\fP (QGraphicsSceneMouseEvent *)"
+.br
+.ti -1c
+.RI "QVariant \fBitemChange\fP (GraphicsItemChange change, const QVariant &value) override"
+.br
+.RI "\fBElementPrimitiveDecorator::itemChange\fP\&. "
+.ti -1c
+.RI "bool \fBsceneEventFilter\fP (QGraphicsItem *watched, QEvent *event) override"
+.br
+.RI "\fBElementPrimitiveDecorator::sceneEventFilter\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBsaveOriginalBoundingRect\fP ()"
+.br
+.ti -1c
+.RI "void \fBadjustEffectiveBoundingRect\fP ()"
+.br
+.ti -1c
+.RI "void \fBstartMovement\fP ()"
+.br
+.ti -1c
+.RI "void \fBapplyMovementToRect\fP (int, const QPointF &, QRectF &)"
+.br
+.ti -1c
+.RI "\fBCustomElementPart\fP * \fBsingleItem\fP () const"
+.br
+.ti -1c
+.RI "void \fBtranslateItems\fP (const QPointF &)"
+.br
+.ti -1c
+.RI "void \fBscaleItems\fP (const QRectF &, const QRectF &)"
+.br
+.ti -1c
+.RI "QRectF \fBgetSceneBoundingRect\fP (QGraphicsItem *) const"
+.br
+.ti -1c
+.RI "QVector< QPointF > \fBgetResizingsPoints\fP () const"
+.br
+.ti -1c
+.RI "void \fBadjusteHandlerPos\fP ()"
+.br
+.RI "\fBElementPrimitiveDecorator::adjusteHandlerPos\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMousePressEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBElementPrimitiveDecorator::handlerMousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMouseMoveEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBElementPrimitiveDecorator::handlerMouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMouseReleaseEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBElementPrimitiveDecorator::handlerMouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "void \fBaddHandler\fP ()"
+.br
+.RI "\fBElementPrimitiveDecorator::addHandler\fP Add handlers for this item\&. "
+.ti -1c
+.RI "void \fBremoveHandler\fP ()"
+.br
+.RI "\fBElementPrimitiveDecorator::removeHandler\fP Remove the handlers of this item\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBdecorated_items_\fP"
+.br
+.ti -1c
+.RI "QRectF \fBeffective_bounding_rect_\fP"
+.br
+.RI "actual, effective bounding rect -- never shrinks "
+.ti -1c
+.RI "QRectF \fBoriginal_bounding_rect_\fP"
+.br
+.RI "original bounding rect "
+.ti -1c
+.RI "QRectF \fBmodified_bounding_rect_\fP"
+.br
+.RI "new bounding rect, after the user moved or resized items "
+.ti -1c
+.RI "int \fBcurrent_operation_square_\fP"
+.br
+.ti -1c
+.RI "int \fBgrid_step_x_\fP"
+.br
+.RI "Grid horizontal step\&. "
+.ti -1c
+.RI "int \fBgrid_step_y_\fP"
+.br
+.RI "Grid horizontal step\&. "
+.ti -1c
+.RI "QPointF \fBfirst_pos_\fP"
+.br
+.RI "First point involved within the current resizing operation\&. "
+.ti -1c
+.RI "QPointF \fBlatest_pos_\fP"
+.br
+.RI "Latest point involved within the current resizing operation\&. "
+.ti -1c
+.RI "QPointF \fBmouse_offset_\fP"
+.br
+.RI "Offset between the mouse position and the point to be snapped to grid when moving selection\&. "
+.ti -1c
+.RI "bool \fBmoving_by_keys_\fP"
+.br
+.RI "Whether we are currently moving our decorated items using the arrow keys\&. "
+.ti -1c
+.RI "QPointF \fBkeys_movement_\fP"
+.br
+.RI "Movement applied to our decorated items using the arrow keys\&. "
+.ti -1c
+.RI "QVector< \fBQetGraphicsHandlerItem\fP * > \fBm_handler_vector\fP"
+.br
+.ti -1c
+.RI "int \fBm_vector_index\fP = \-1"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a decorator rendered above selected items so users can manipulate (move, resize, \&.\&.\&.) them\&.
+.PP
+The implementation considers four kinds of bounding rects:
+.IP "\(bu" 2
+the actual, effective bounding rect as returned by the \fBboundingRect()\fP method
+.IP "\(bu" 2
+the original bounding rect, i\&.e\&. the rect containing all selected items at the beginning of operations (or after a command object was generated)
+.IP "\(bu" 2
+the new bounding rect, after the user moved or resized items
+.IP "\(bu" 2
+the former bounding rect, due to implementation details 
+.PP
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementPrimitiveDecorator::ElementPrimitiveDecorator (QGraphicsItem * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Parent QGraphicsItem 
+.RE
+.PP
+
+.SS "ElementPrimitiveDecorator::~ElementPrimitiveDecorator ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementPrimitiveDecorator::actionFinished (\fBElementEditionCommand\fP *)\fC [signal]\fP"
+
+.SS "void ElementPrimitiveDecorator::addHandler ()\fC [private]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::addHandler\fP Add handlers for this item\&. 
+.SS "void ElementPrimitiveDecorator::adjust ()\fC [slot]\fP"
+Adjust the visual decorator according to the currently assigned items\&. It is notably called by \fBsetItems()\fP\&. 
+.SS "void ElementPrimitiveDecorator::adjustEffectiveBoundingRect ()\fC [private]\fP"
+Adjust the effective bounding rect\&. This method should be called after the modified_bouding_rect_ attribute was modified\&. 
+.SS "void ElementPrimitiveDecorator::adjusteHandlerPos ()\fC [private]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::adjusteHandlerPos\fP\&. 
+.SS "void ElementPrimitiveDecorator::applyMovementToRect (int movement_type, const QPointF & movement, QRectF & rect)\fC [private]\fP"
+Apply the movement described by \fImovement_type\fP and \fImovement\fP to \fIrect\fP\&. 
+.SS "QRectF ElementPrimitiveDecorator::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the outer bounds of the decorator as a rectangle\&. 
+.RE
+.PP
+
+.SS "QPointF ElementPrimitiveDecorator::deltaForRoundScaling (const QRectF & original, const QRectF & current, qreal epsilon)\fC [protected]\fP"
+Receive two rects, assuming they share a common corner and current is a \fIscaled\fP version of \fIoriginal\fP\&. Calculate the scale ratios implied by this assumption, round them to the nearest multiple of \fIepsilon\fP, then return the horizontal and vertical offsets to be applied in order to pass from \fIcurrent\fP to \fIoriginal\fP scaled by the rounded factors\&. This method can be used to adjust a mouse movement so that it inputs a round scaling operation\&. 
+.SS "QVector< QPointF > ElementPrimitiveDecorator::getResizingsPoints () const\fC [private]\fP"
+
+.SS "QRectF ElementPrimitiveDecorator::getSceneBoundingRect (QGraphicsItem * item) const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the bounding rectangle of \fIitem\fP, in scene coordinates 
+.RE
+.PP
+
+.SS "QList< QGraphicsItem * > ElementPrimitiveDecorator::graphicsItems () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the list of items this decorator is supposed to manipulate 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::handlerMouseMoveEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::handlerMouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::handlerMousePressEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::handlerMousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::handlerMouseReleaseEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::handlerMouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::init ()\fC [private]\fP"
+Initialize an \fBElementPrimitiveDecorator\fP 
+.SS "QRectF ElementPrimitiveDecorator::internalBoundingRect () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the internal bouding rect, i\&.e\&. the smallest rectangle containing the bounding rectangle of every selected item\&. 
+.RE
+.PP
+
+.SS "QVariant ElementPrimitiveDecorator::itemChange (GraphicsItemChange change, const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::itemChange\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QList< \fBCustomElementPart\fP * > ElementPrimitiveDecorator::items () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the list of items this decorator is supposed to manipulate 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::keyPressEvent (QKeyEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::keyPressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+QGraphicsItem::keyPressEvent 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::keyReleaseEvent (QKeyEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::keyReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+QGraphicsItem::keyReleaseEvent 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+Handle event generated when the mouse is moved and the decorator is the mouse grabber item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Object describing the mouse event 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+QGraphicsScene::mouseGrabberItem() 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+Handle event generated when mouse buttons are pressed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Object describing the mouse event 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+Handle event generated when a mouse buttons are releaseis moved and the decorator is the mouse grabber item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Object describing the mouse event 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+QGraphicsScene::mouseGrabberItem() 
+.RE
+.PP
+
+.SS "bool ElementPrimitiveDecorator::mustSnapToGrid (QGraphicsSceneMouseEvent * event)\fC [protected]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+whether the current operation should take the grid into account according to the state of the provided \fIevent\fP 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = \fCnullptr\fP)\fC [override]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::paint\fP Paint the contents of an item in local coordinates, using \fIpainter\fP, with respect to \fIoption\fP and\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP : 
+.br
+\fIoption\fP : The option parameter provides style options for the item, such as its state, exposed area and its level-of-detail hints\&. 
+.br
+\fIwidget\fP : The widget argument is optional\&. If provided, it points to the widget that is being painted on; otherwise, it is 0\&. For cached painting, widget is always 0\&. 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::removeHandler ()\fC [private]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::removeHandler\fP Remove the handlers of this item\&. 
+.SS "void ElementPrimitiveDecorator::saveOriginalBoundingRect ()\fC [private]\fP"
+Save the original bounding rectangle\&. 
+.SS "void ElementPrimitiveDecorator::scaleItems (const QRectF & original_rect, const QRectF & new_rect)\fC [private]\fP"
+Scale the managed items, provided they originally fit within \fIoriginal_rect\fP and they should now fit \fInew_rect\fP 
+.SS "\fBQET::ScalingMethod\fP ElementPrimitiveDecorator::scalingMethod (QGraphicsSceneMouseEvent * event)\fC [protected]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Mouse event during the scale operations -- simply passed to \fBmustSnapToGrid()\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the scaling method to be used for the currently decorated items\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBQET::ScalingMethod\fP 
+.PP
+\fBmustSnapToGrid()\fP 
+.RE
+.PP
+
+.SS "bool ElementPrimitiveDecorator::sceneEventFilter (QGraphicsItem * watched, QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementPrimitiveDecorator::sceneEventFilter\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwatched\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::setItems (const QList< \fBCustomElementPart\fP * > & items)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIitems\fP the new list of items this decorator is suposed to manipulate\&. 
+.RE
+.PP
+
+.SS "void ElementPrimitiveDecorator::setItems (const QList< QGraphicsItem * > & items)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIitems\fP the new list of items this decorator is suposed to manipulate\&. 
+.RE
+.PP
+
+.SS "\fBCustomElementPart\fP * ElementPrimitiveDecorator::singleItem () const\fC [private]\fP"
+
+.SS "QPointF ElementPrimitiveDecorator::snapConstPointToGrid (const QPointF & point) const\fC [protected]\fP"
+Round the coordinates of \fIpoint\fP so it is snapped to the grid defined by the grid_step_x_ and grid_step_y_ attributes\&. 
+.SS "void ElementPrimitiveDecorator::snapPointToGrid (QPointF & point) const\fC [protected]\fP"
+Round the coordinates of \fIpoint\fP so it is snapped to the grid defined by the grid_step_x_ and grid_step_y_ attributes\&. 
+.SS "void ElementPrimitiveDecorator::startMovement ()\fC [private]\fP"
+Start a movement (i\&.e\&. either a move or scaling operation) 
+.SS "void ElementPrimitiveDecorator::translateItems (const QPointF & movement)\fC [private]\fP"
+Translated the managed items by the \fImovement\fP 
+.SS "int ElementPrimitiveDecorator::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int ElementPrimitiveDecorator::current_operation_square_\fC [private]\fP"
+Index of the square leading the current operation (resizing, etc\&.) or -1 if no operation is occurring, -2 for a move operation\&. 
+.SS "QList<\fBCustomElementPart\fP *> ElementPrimitiveDecorator::decorated_items_\fC [private]\fP"
+
+.SS "QRectF ElementPrimitiveDecorator::effective_bounding_rect_\fC [private]\fP"
+
+.PP
+actual, effective bounding rect -- never shrinks 
+.SS "QPointF ElementPrimitiveDecorator::first_pos_\fC [private]\fP"
+
+.PP
+First point involved within the current resizing operation\&. 
+.SS "int ElementPrimitiveDecorator::grid_step_x_\fC [private]\fP"
+
+.PP
+Grid horizontal step\&. 
+.SS "int ElementPrimitiveDecorator::grid_step_y_\fC [private]\fP"
+
+.PP
+Grid horizontal step\&. 
+.SS "QPointF ElementPrimitiveDecorator::keys_movement_\fC [private]\fP"
+
+.PP
+Movement applied to our decorated items using the arrow keys\&. 
+.SS "QPointF ElementPrimitiveDecorator::latest_pos_\fC [private]\fP"
+
+.PP
+Latest point involved within the current resizing operation\&. 
+.SS "QVector<\fBQetGraphicsHandlerItem\fP *> ElementPrimitiveDecorator::m_handler_vector\fC [private]\fP"
+
+.SS "int ElementPrimitiveDecorator::m_vector_index = \-1\fC [private]\fP"
+
+.SS "QRectF ElementPrimitiveDecorator::modified_bounding_rect_\fC [private]\fP"
+
+.PP
+new bounding rect, after the user moved or resized items 
+.SS "QPointF ElementPrimitiveDecorator::mouse_offset_\fC [private]\fP"
+
+.PP
+Offset between the mouse position and the point to be snapped to grid when moving selection\&. 
+.SS "bool ElementPrimitiveDecorator::moving_by_keys_\fC [private]\fP"
+
+.PP
+Whether we are currently moving our decorated items using the arrow keys\&. 
+.SS "QRectF ElementPrimitiveDecorator::original_bounding_rect_\fC [private]\fP"
+
+.PP
+original bounding rect 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

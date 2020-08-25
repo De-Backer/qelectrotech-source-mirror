@@ -1,0 +1,224 @@
+.TH "IndiTextPropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IndiTextPropertiesWidget \- The \fBIndiTextPropertiesWidget\fP class This widget is used to edit the properties of one or several independent text item\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <inditextpropertieswidget\&.h>\fP
+.PP
+Inherits \fBPropertiesEditorWidget\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIndiTextPropertiesWidget\fP (\fBIndependentTextItem\fP *text=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBIndiTextPropertiesWidget::IndiTextPropertiesWidget\fP\&. "
+.ti -1c
+.RI "\fBIndiTextPropertiesWidget\fP (QList< \fBIndependentTextItem\fP * > text_list, QWidget *parent=nullptr)"
+.br
+.RI "\fBIndiTextPropertiesWidget::IndiTextPropertiesWidget\fP\&. "
+.ti -1c
+.RI "\fB~IndiTextPropertiesWidget\fP () override"
+.br
+.RI "\fBIndiTextPropertiesWidget::~IndiTextPropertiesWidget\fP\&. "
+.ti -1c
+.RI "void \fBsetText\fP (\fBIndependentTextItem\fP *text)"
+.br
+.RI "\fBIndiTextPropertiesWidget::setText\fP\&. "
+.ti -1c
+.RI "void \fBsetText\fP (QList< \fBIndependentTextItem\fP * > text_list)"
+.br
+.ti -1c
+.RI "void \fBapply\fP () override"
+.br
+.RI "\fBIndiTextPropertiesWidget::apply\fP Apply the current edition through a QUndoCommand pushed to the undo stack of text's diagram\&. "
+.ti -1c
+.RI "bool \fBsetLiveEdit\fP (bool live_edit) override"
+.br
+.RI "\fBIndiTextPropertiesWidget::setLiveEdit\fP\&. "
+.ti -1c
+.RI "QUndoCommand * \fBassociatedUndo\fP () const override"
+.br
+.RI "\fBIndiTextPropertiesWidget::associatedUndo\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_advanced_editor_pb_clicked\fP ()"
+.br
+.RI "\fBIndiTextPropertiesWidget::on_m_advanced_editor_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_break_html_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_font_pb_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpEditConnection\fP ()"
+.br
+.RI "\fBIndiTextPropertiesWidget::setUpEditConnection\fP Disconnect the previous connection, and reconnect the connection between the editors widgets and void \fBIndiTextPropertiesWidget::apply\fP function\&. "
+.ti -1c
+.RI "void \fBupdateUi\fP () override"
+.br
+.RI "\fBIndiTextPropertiesWidget::updateUi\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::IndiTextPropertiesWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBIndependentTextItem\fP > \fBm_text\fP"
+.br
+.ti -1c
+.RI "QList< QPointer< \fBIndependentTextItem\fP > > \fBm_text_list\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_connect_list\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_edit_connection\fP"
+.br
+.ti -1c
+.RI "QFont \fBm_selected_font\fP"
+.br
+.ti -1c
+.RI "bool \fBm_font_is_selected\fP = false"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBIndiTextPropertiesWidget\fP class This widget is used to edit the properties of one or several independent text item\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IndiTextPropertiesWidget::IndiTextPropertiesWidget (\fBIndependentTextItem\fP * text = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBIndiTextPropertiesWidget::IndiTextPropertiesWidget\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP : the text to edit 
+.br
+\fIparent\fP : the parent widget of this widget 
+.RE
+.PP
+
+.SS "IndiTextPropertiesWidget::IndiTextPropertiesWidget (QList< \fBIndependentTextItem\fP * > text_list, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBIndiTextPropertiesWidget::IndiTextPropertiesWidget\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext_list\fP : a list of texts to edit 
+.br
+\fIparent\fP : the parent widget of this widget 
+.RE
+.PP
+
+.SS "IndiTextPropertiesWidget::~IndiTextPropertiesWidget ()\fC [override]\fP"
+
+.PP
+\fBIndiTextPropertiesWidget::~IndiTextPropertiesWidget\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void IndiTextPropertiesWidget::apply ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBIndiTextPropertiesWidget::apply\fP Apply the current edition through a QUndoCommand pushed to the undo stack of text's diagram\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "QUndoCommand * IndiTextPropertiesWidget::associatedUndo () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBIndiTextPropertiesWidget::associatedUndo\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void IndiTextPropertiesWidget::on_m_advanced_editor_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBIndiTextPropertiesWidget::on_m_advanced_editor_pb_clicked\fP\&. 
+.SS "void IndiTextPropertiesWidget::on_m_break_html_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void IndiTextPropertiesWidget::on_m_font_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "bool IndiTextPropertiesWidget::setLiveEdit (bool live_edit)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBIndiTextPropertiesWidget::setLiveEdit\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlive_edit\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void IndiTextPropertiesWidget::setText (\fBIndependentTextItem\fP * text)"
+
+.PP
+\fBIndiTextPropertiesWidget::setText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP : set text as edited text 
+.RE
+.PP
+
+.SS "void IndiTextPropertiesWidget::setText (QList< \fBIndependentTextItem\fP * > text_list)"
+
+.SS "void IndiTextPropertiesWidget::setUpEditConnection ()\fC [private]\fP"
+
+.PP
+\fBIndiTextPropertiesWidget::setUpEditConnection\fP Disconnect the previous connection, and reconnect the connection between the editors widgets and void \fBIndiTextPropertiesWidget::apply\fP function\&. 
+.SS "void IndiTextPropertiesWidget::updateUi ()\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+\fBIndiTextPropertiesWidget::updateUi\fP\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QMetaObject::Connection> IndiTextPropertiesWidget::m_connect_list\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> IndiTextPropertiesWidget::m_edit_connection\fC [private]\fP"
+
+.SS "bool IndiTextPropertiesWidget::m_font_is_selected = false\fC [private]\fP"
+
+.SS "QFont IndiTextPropertiesWidget::m_selected_font\fC [private]\fP"
+
+.SS "QPointer<\fBIndependentTextItem\fP> IndiTextPropertiesWidget::m_text\fC [private]\fP"
+
+.SS "QList<QPointer<\fBIndependentTextItem\fP> > IndiTextPropertiesWidget::m_text_list\fC [private]\fP"
+
+.SS "Ui::IndiTextPropertiesWidget* IndiTextPropertiesWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

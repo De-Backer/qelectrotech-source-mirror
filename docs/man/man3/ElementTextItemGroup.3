@@ -1,0 +1,586 @@
+.TH "ElementTextItemGroup" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementTextItemGroup \- The \fBElementTextItemGroup\fP class This class represent a group of element text Texts in the group can be aligned left / center /right\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementtextitemgroup\&.h>\fP
+.PP
+Inherits QObject, and QGraphicsItemGroup\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBrotationChanged\fP (qreal)"
+.br
+.ti -1c
+.RI "void \fBverticalAdjustmentChanged\fP (int)"
+.br
+.ti -1c
+.RI "void \fBalignmentChanged\fP (Qt::Alignment)"
+.br
+.ti -1c
+.RI "void \fBnameChanged\fP (QString)"
+.br
+.ti -1c
+.RI "void \fBholdToBottomPageChanged\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBxChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fByChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBframeChanged\fP (bool \fBframe\fP)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementTextItemGroup\fP (const QString &\fBname\fP, \fBElement\fP *parent)"
+.br
+.RI "\fBElementTextItemGroup::ElementTextItemGroup\fP\&. "
+.ti -1c
+.RI "\fB~ElementTextItemGroup\fP () override"
+.br
+.ti -1c
+.RI "void \fBaddToGroup\fP (QGraphicsItem *item)"
+.br
+.RI "\fBElementTextItemGroup::addToGroup\fP\&. "
+.ti -1c
+.RI "void \fBremoveFromGroup\fP (QGraphicsItem *item)"
+.br
+.RI "\fBElementTextItemGroup::removeFromGroup\fP\&. "
+.ti -1c
+.RI "void \fBblockAlignmentUpdate\fP (bool block)"
+.br
+.RI "\fBElementTextItemGroup::blockAlignmentUpdate\fP If true, the texts in this group are never aligned, moved, rotated etc\&.\&.\&. the texts stay as it was, until blockAlignmentUpdate is set to false\&. "
+.ti -1c
+.RI "void \fBsetAlignment\fP (Qt::Alignment alignement)"
+.br
+.RI "ElementTextItemGroup::setAlignement Set the alignement of this group\&. "
+.ti -1c
+.RI "Qt::Alignment \fBalignment\fP () const"
+.br
+.ti -1c
+.RI "void \fBupdateAlignment\fP ()"
+.br
+.RI "\fBElementTextItemGroup::setAlignment\fP Update the alignement of the items in this group, according to the current alignement\&. "
+.ti -1c
+.RI "int \fBverticalAdjustment\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetVerticalAdjustment\fP (int v)"
+.br
+.RI "\fBElementTextItemGroup::setVerticalAdjustment\fP Set the value of the vertical adjustment to v\&. The vertical adjutment is use to adjust the space between the texts of this group\&. "
+.ti -1c
+.RI "void \fBsetName\fP (QString \fBname\fP)"
+.br
+.RI "\fBElementTextItemGroup::setName\fP\&. "
+.ti -1c
+.RI "QString \fBname\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetHoldToBottomPage\fP (bool hold)"
+.br
+.ti -1c
+.RI "bool \fBholdToBottomPage\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetFrame\fP (const bool \fBframe\fP)"
+.br
+.ti -1c
+.RI "bool \fBframe\fP () const"
+.br
+.ti -1c
+.RI "QList< \fBDynamicElementTextItem\fP * > \fBtexts\fP () const"
+.br
+.RI "\fBElementTextItemGroup::texts\fP\&. "
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP () const"
+.br
+.RI "\fBElementTextItemGroup::diagram\fP\&. "
+.ti -1c
+.RI "\fBElement\fP * \fBparentElement\fP () const"
+.br
+.RI "\fBElementTextItemGroup::parentElement\fP\&. "
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &dom_document) const"
+.br
+.RI "\fBElementTextItemGroup::toXml\fP Export data of this group to xml\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (QDomElement &dom_element)"
+.br
+.RI "\fBElementTextItemGroup::fromXml\fP Import data of this group from xml\&. "
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override"
+.br
+.RI "\fBElementTextItemGroup::paint\fP\&. "
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBElementTextItemGroup::boundingRect\fP\&. "
+.ti -1c
+.RI "void \fBsetRotation\fP (qreal angle)"
+.br
+.ti -1c
+.RI "void \fBsetPos\fP (const QPointF &\fBpos\fP)"
+.br
+.ti -1c
+.RI "void \fBsetPos\fP (qreal x, qreal y)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBxmlTaggName\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBElementTextItemGroup::mousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBElementTextItemGroup::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBElementTextItemGroup::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBkeyPressEvent\fP (QKeyEvent *event) override"
+.br
+.RI "\fBElementTextItemGroup::keyPressEvent\fP\&. "
+.ti -1c
+.RI "void \fBhoverEnterEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.ti -1c
+.RI "void \fBhoverLeaveEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "QPointF \fBpos\fP"
+.br
+.ti -1c
+.RI "qreal \fBrotation\fP"
+.br
+.ti -1c
+.RI "int \fBverticalAdjustment\fP"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBalignment\fP"
+.br
+.ti -1c
+.RI "QString \fBname\fP"
+.br
+.ti -1c
+.RI "bool \fBholdToBottomPage\fP"
+.br
+.ti -1c
+.RI "bool \fBframe\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateXref\fP ()"
+.br
+.ti -1c
+.RI "void \fBadjustSlaveXrefPos\fP ()"
+.br
+.ti -1c
+.RI "void \fBautoPos\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Qt::Alignment \fBm_alignment\fP = Qt::AlignJustify"
+.br
+.ti -1c
+.RI "QString \fBm_name\fP"
+.br
+.ti -1c
+.RI "bool \fBm_first_move\fP = true"
+.br
+.ti -1c
+.RI "bool \fBm_hold_to_bottom_of_page\fP = false"
+.br
+.ti -1c
+.RI "bool \fBm_block_alignment_update\fP = false"
+.br
+.ti -1c
+.RI "bool \fBm_frame\fP = false"
+.br
+.ti -1c
+.RI "QPointF \fBm_initial_position\fP"
+.br
+.ti -1c
+.RI "int \fBm_vertical_adjustment\fP = 0"
+.br
+.ti -1c
+.RI "\fBCrossRefItem\fP * \fBm_Xref_item\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBElement\fP * \fBm_parent_element\fP = nullptr"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_update_slave_Xref_connection\fP"
+.br
+.ti -1c
+.RI "QGraphicsTextItem * \fBm_slave_Xref_item\fP = nullptr"
+.br
+.ti -1c
+.RI "QMetaObject::Connection \fBm_XrefChanged_timer\fP"
+.br
+.ti -1c
+.RI "QMetaObject::Connection \fBm_linked_changed_timer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementTextItemGroup\fP class This class represent a group of element text Texts in the group can be aligned left / center /right\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementTextItemGroup::ElementTextItemGroup (const QString & name, \fBElement\fP * parent)"
+
+.PP
+\fBElementTextItemGroup::ElementTextItemGroup\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP : 
+.br
+\fIparent\fP : 
+.RE
+.PP
+
+.SS "ElementTextItemGroup::~ElementTextItemGroup ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementTextItemGroup::addToGroup (QGraphicsItem * item)"
+
+.PP
+\fBElementTextItemGroup::addToGroup\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+
+.SS "void ElementTextItemGroup::adjustSlaveXrefPos ()\fC [private]\fP"
+
+.SS "Qt::Alignment ElementTextItemGroup::alignment () const"
+
+.SS "void ElementTextItemGroup::alignmentChanged (Qt::Alignment)\fC [signal]\fP"
+
+.SS "void ElementTextItemGroup::autoPos ()\fC [private]\fP"
+
+.SS "void ElementTextItemGroup::blockAlignmentUpdate (bool block)"
+
+.PP
+\fBElementTextItemGroup::blockAlignmentUpdate\fP If true, the texts in this group are never aligned, moved, rotated etc\&.\&.\&. the texts stay as it was, until blockAlignmentUpdate is set to false\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIblock\fP 
+.RE
+.PP
+
+.SS "QRectF ElementTextItemGroup::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBElementTextItemGroup::boundingRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "\fBDiagram\fP * ElementTextItemGroup::diagram () const"
+
+.PP
+\fBElementTextItemGroup::diagram\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The diagram of this group, or nullptr if this group is not in a diagram 
+.RE
+.PP
+
+.SS "bool ElementTextItemGroup::frame () const"
+
+.SS "void ElementTextItemGroup::frameChanged (bool frame)\fC [signal]\fP"
+
+.SS "void ElementTextItemGroup::fromXml (QDomElement & dom_element)"
+
+.PP
+\fBElementTextItemGroup::fromXml\fP Import data of this group from xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_element\fP 
+.RE
+.PP
+
+.SS "bool ElementTextItemGroup::holdToBottomPage () const\fC [inline]\fP"
+
+.SS "void ElementTextItemGroup::holdToBottomPageChanged (bool)\fC [signal]\fP"
+
+.SS "void ElementTextItemGroup::hoverEnterEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void ElementTextItemGroup::hoverLeaveEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void ElementTextItemGroup::keyPressEvent (QKeyEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementTextItemGroup::keyPressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void ElementTextItemGroup::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void ElementTextItemGroup::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementTextItemGroup::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void ElementTextItemGroup::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementTextItemGroup::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void ElementTextItemGroup::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementTextItemGroup::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "QString ElementTextItemGroup::name () const\fC [inline]\fP"
+
+.SS "void ElementTextItemGroup::nameChanged (QString)\fC [signal]\fP"
+
+.SS "void ElementTextItemGroup::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)\fC [override]\fP"
+
+.PP
+\fBElementTextItemGroup::paint\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.br
+\fIoption\fP 
+.br
+\fIwidget\fP 
+.RE
+.PP
+
+.SS "\fBElement\fP * ElementTextItemGroup::parentElement () const"
+
+.PP
+\fBElementTextItemGroup::parentElement\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The parent element of this group or nullptr 
+.RE
+.PP
+
+.SS "void ElementTextItemGroup::removeFromGroup (QGraphicsItem * item)"
+
+.PP
+\fBElementTextItemGroup::removeFromGroup\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.RE
+.PP
+
+.SS "void ElementTextItemGroup::rotationChanged (qreal)\fC [signal]\fP"
+
+.SS "void ElementTextItemGroup::setAlignment (Qt::Alignment alignement)"
+
+.PP
+ElementTextItemGroup::setAlignement Set the alignement of this group\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIalignement\fP 
+.RE
+.PP
+
+.SS "void ElementTextItemGroup::setFrame (const bool frame)"
+
+.SS "void ElementTextItemGroup::setHoldToBottomPage (bool hold)"
+
+.SS "void ElementTextItemGroup::setName (QString name)"
+
+.PP
+\fBElementTextItemGroup::setName\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Set the name of this group 
+.RE
+.PP
+
+.SS "void ElementTextItemGroup::setPos (const QPointF & pos)"
+
+.SS "void ElementTextItemGroup::setPos (qreal x, qreal y)"
+
+.SS "void ElementTextItemGroup::setRotation (qreal angle)"
+
+.SS "void ElementTextItemGroup::setVerticalAdjustment (int v)"
+
+.PP
+\fBElementTextItemGroup::setVerticalAdjustment\fP Set the value of the vertical adjustment to v\&. The vertical adjutment is use to adjust the space between the texts of this group\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP 
+.RE
+.PP
+
+.SS "QList< \fBDynamicElementTextItem\fP * > ElementTextItemGroup::texts () const"
+
+.PP
+\fBElementTextItemGroup::texts\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Every texts in this group 
+.RE
+.PP
+
+.SS "QDomElement ElementTextItemGroup::toXml (QDomDocument & dom_document) const"
+
+.PP
+\fBElementTextItemGroup::toXml\fP Export data of this group to xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_document\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void ElementTextItemGroup::updateAlignment ()"
+
+.PP
+\fBElementTextItemGroup::setAlignment\fP Update the alignement of the items in this group, according to the current alignement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIalignement\fP 
+.RE
+.PP
+
+.SS "void ElementTextItemGroup::updateXref ()\fC [private]\fP"
+
+.SS "int ElementTextItemGroup::verticalAdjustment () const\fC [inline]\fP"
+
+.SS "void ElementTextItemGroup::verticalAdjustmentChanged (int)\fC [signal]\fP"
+
+.SS "void ElementTextItemGroup::xChanged ()\fC [signal]\fP"
+
+.SS "static QString ElementTextItemGroup::xmlTaggName ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "void ElementTextItemGroup::yChanged ()\fC [signal]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Qt::Alignment ElementTextItemGroup::m_alignment = Qt::AlignJustify\fC [private]\fP"
+
+.SS "bool ElementTextItemGroup::m_block_alignment_update = false\fC [private]\fP"
+
+.SS "bool ElementTextItemGroup::m_first_move = true\fC [private]\fP"
+
+.SS "bool ElementTextItemGroup::m_frame = false\fC [private]\fP"
+
+.SS "bool ElementTextItemGroup::m_hold_to_bottom_of_page = false\fC [private]\fP"
+
+.SS "QPointF ElementTextItemGroup::m_initial_position\fC [private]\fP"
+
+.SS "QMetaObject::Connection ElementTextItemGroup::m_linked_changed_timer\fC [private]\fP"
+
+.SS "QString ElementTextItemGroup::m_name\fC [private]\fP"
+
+.SS "\fBElement\fP* ElementTextItemGroup::m_parent_element = nullptr\fC [private]\fP"
+
+.SS "QGraphicsTextItem* ElementTextItemGroup::m_slave_Xref_item = nullptr\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> ElementTextItemGroup::m_update_slave_Xref_connection\fC [private]\fP"
+
+.SS "int ElementTextItemGroup::m_vertical_adjustment = 0\fC [private]\fP"
+
+.SS "\fBCrossRefItem\fP* ElementTextItemGroup::m_Xref_item = nullptr\fC [private]\fP"
+
+.SS "QMetaObject::Connection ElementTextItemGroup::m_XrefChanged_timer\fC [private]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "Qt::Alignment ElementTextItemGroup::alignment\fC [read]\fP, \fC [write]\fP"
+
+.SS "bool ElementTextItemGroup::frame\fC [read]\fP, \fC [write]\fP"
+
+.SS "bool ElementTextItemGroup::holdToBottomPage\fC [read]\fP, \fC [write]\fP"
+
+.SS "QString ElementTextItemGroup::name\fC [read]\fP, \fC [write]\fP"
+
+.SS "QPointF ElementTextItemGroup::pos\fC [read]\fP, \fC [write]\fP"
+
+.SS "qreal ElementTextItemGroup::rotation\fC [read]\fP, \fC [write]\fP"
+
+.SS "int ElementTextItemGroup::verticalAdjustment\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

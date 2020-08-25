@@ -1,0 +1,171 @@
+.TH "DialogWaiting" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DialogWaiting
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dialogwaiting\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDialogWaiting\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBDialogWaiting::DialogWaiting\fP\&. "
+.ti -1c
+.RI "\fB~DialogWaiting\fP () override"
+.br
+.RI "\fBDialogWaiting::~DialogWaiting\fP\&. "
+.ti -1c
+.RI "void \fBsetProgressBar\fP (int val)"
+.br
+.RI "\fBDialogWaiting::setProgressBar\fP\&. "
+.ti -1c
+.RI "void \fBsetProgressBarRange\fP (int min, int max)"
+.br
+.RI "\fBDialogWaiting::setProgressBarRange\fP\&. "
+.ti -1c
+.RI "void \fBsetProgressReset\fP ()"
+.br
+.RI "\fBDialogWaiting::setProgressReset\fP, clear progressBar and reset\&. "
+.ti -1c
+.RI "void \fBsetTitle\fP (const QString &val)"
+.br
+.RI "\fBDialogWaiting::setTitle\fP of action\&. "
+.ti -1c
+.RI "void \fBsetDetail\fP (const QString &val)"
+.br
+.RI "\fBDialogWaiting::setDetail\fP of action\&. "
+.ti -1c
+.RI "int \fBprogressBarValue\fP () const"
+.br
+.RI "\fBDialogWaiting::progressBarValue\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBDialogWaiting\fP * \fBinstance\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "static bool \fBhasInstance\fP ()"
+.br
+.ti -1c
+.RI "static void \fBdropInstance\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::DialogWaiting * \fBui\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBDialogWaiting\fP * \fBm_static_dialog\fP = nullptr"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DialogWaiting::DialogWaiting (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBDialogWaiting::DialogWaiting\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SS "DialogWaiting::~DialogWaiting ()\fC [override]\fP"
+
+.PP
+\fBDialogWaiting::~DialogWaiting\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static void DialogWaiting::dropInstance ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static bool DialogWaiting::hasInstance ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static \fBDialogWaiting\fP* DialogWaiting::instance (QWidget * parent = \fCnullptr\fP)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "int DialogWaiting::progressBarValue () const"
+
+.PP
+\fBDialogWaiting::progressBarValue\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current vcalue of the progress bar 
+.RE
+.PP
+
+.SS "void DialogWaiting::setDetail (const QString & val)"
+
+.PP
+\fBDialogWaiting::setDetail\fP of action\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIval\fP is the string of detail action 
+.RE
+.PP
+
+.SS "void DialogWaiting::setProgressBar (int val)"
+
+.PP
+\fBDialogWaiting::setProgressBar\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIval\fP is the progressBar value 
+.RE
+.PP
+
+.SS "void DialogWaiting::setProgressBarRange (int min, int max)"
+
+.PP
+\fBDialogWaiting::setProgressBarRange\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImin\fP is the minimum of progressBar 
+.br
+\fImax\fP is the maximun of progressBar 
+.RE
+.PP
+
+.SS "void DialogWaiting::setProgressReset ()"
+
+.PP
+\fBDialogWaiting::setProgressReset\fP, clear progressBar and reset\&. 
+.SS "void DialogWaiting::setTitle (const QString & val)"
+
+.PP
+\fBDialogWaiting::setTitle\fP of action\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIval\fP is the string of action 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDialogWaiting\fP * DialogWaiting::m_static_dialog = nullptr\fC [static]\fP, \fC [private]\fP"
+
+.SS "Ui::DialogWaiting* DialogWaiting::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

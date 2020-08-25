@@ -1,0 +1,52 @@
+<map id="QETProject::addNewDiagram" name="QETProject::addNewDiagram">
+<area shape="rect" id="node1" title="QETProject::addNewDiagram Add a new diagram in project at position pos." alt="" coords="5,703,200,729"/>
+<area shape="rect" id="node2" href="$d6/dc5/class_q_e_t_project.html#ae0a665031afdee208609327d787dc3b1" title="QETProject::addDiagram Add a diagram in this project." alt="" coords="263,396,429,423"/>
+<area shape="rect" id="node16" href="$d6/dc5/class_q_e_t_project.html#ae5044dca70341ec110e84b738952d05e" title="DEFAULT PROPERTIES." alt="" coords="259,565,433,606"/>
+<area shape="rect" id="node17" href="$d6/dc5/class_q_e_t_project.html#ab0d498e1b398969630cd569ca7535f80" title=" " alt="" coords="248,630,444,671"/>
+<area shape="rect" id="node18" href="$d6/dc5/class_q_e_t_project.html#a0ee151a44be349d43417695fcaa6a88c" title=" " alt="" coords="265,695,427,737"/>
+<area shape="rect" id="node19" href="$df/d92/class_border_title_block.html#a32a8794d18eca27cc627f2c4027250c6" title="BorderTitleBlock::importBorder." alt="" coords="265,761,427,802"/>
+<area shape="rect" id="node33" href="$df/d92/class_border_title_block.html#a6a937fb3d147ca6b76ad52fcac040c05" title="BorderTitleBlock::importTitleBlock." alt="" coords="265,1197,427,1238"/>
+<area shape="rect" id="node50" href="$d6/dc5/class_q_e_t_project.html#aae99a71249123116c24ea5d8e435de71" title="QETProject::isReadOnly." alt="" coords="264,1263,428,1289"/>
+<area shape="rect" id="node3" href="$d5/d7f/classproject_data_base.html#a87e36426b802049610db0d2bdbf9f8a0" title=" " alt="" coords="494,93,691,120"/>
+<area shape="rect" id="node7" href="$d6/dc5/class_q_e_t_project.html#a113392389e518c47bd1a5bd797b9f109" title=" " alt="" coords="497,350,689,391"/>
+<area shape="rect" id="node14" href="$d6/dc5/class_q_e_t_project.html#a9d544ae13f012979a6ea2dfa74eb1d67" title=" " alt="" coords="501,426,684,467"/>
+<area shape="rect" id="node4" href="$d7/df8/class_q_e_t_app.html#a6dcf05d56c1e351444a481c30a57bb3a" title="QETApp::diagramInfoKeys." alt="" coords="760,5,936,32"/>
+<area shape="rect" id="node5" href="$df/d92/class_border_title_block.html#a137662075a0bdae6801b05eb9b538745" title="BorderTitleBlock::titleblockInformation." alt="" coords="759,57,937,98"/>
+<area shape="rect" id="node6" href="$d3/d37/class_diagram.html#abb9eb4e6dbe6f6367aa644610a097ab2" title="Diagram::uuid." alt="" coords="797,123,899,149"/>
+<area shape="rect" id="node8" href="$db/dfb/class_diagram_context.html#a523b81ff2dfbcf73e304a55ccdc58c1b" title=" " alt="" coords="759,357,937,384"/>
+<area shape="rect" id="node9" href="$d6/dc5/class_q_e_t_project.html#a5bd24c3f623183ebf6f8f964118d2e6b" title=" " alt="" coords="777,408,919,435"/>
+<area shape="rect" id="node10" href="$d6/dc5/class_q_e_t_project.html#ab4d93c106722f84fe71e0492f76968e6" title="QETProject::folioAutoNum." alt="" coords="760,459,936,485"/>
+<area shape="rect" id="node11" href="$dc/dcb/class_numerotation_context_commands.html#aad44e5c7dfc1989f5651e3e09b285b90" title="NumerotationContextCommands::next." alt="" coords="741,174,955,215"/>
+<area shape="rect" id="node12" href="$d6/dc5/class_q_e_t_project.html#a04d0472582317a07aa88ded1f75e0499" title=" " alt="" coords="789,240,907,267"/>
+<area shape="rect" id="node13" href="$dc/dcb/class_numerotation_context_commands.html#a5b432c0f06a0fcee7c33cf3855c9df77" title="NumerotationContextCommands::toFinalString." alt="" coords="741,291,955,333"/>
+<area shape="rect" id="node15" href="$d6/dc5/class_q_e_t_project.html#a4daf9c5e852f1033bbc37eb5ed51a7cc" title=" " alt="" coords="757,510,939,551"/>
+<area shape="rect" id="node20" href="$df/d92/class_border_title_block.html#a4c31aa3f4003d6c5cfb4efacbfa6c512" title="BorderTitleBlock::displayColumns." alt="" coords="509,957,676,998"/>
+<area shape="rect" id="node21" href="$df/d92/class_border_title_block.html#ad7f79c50edd4c943368caf3a43829d2b" title="BorderTitleBlock::displayRows." alt="" coords="492,513,693,540"/>
+<area shape="rect" id="node22" href="$df/d92/class_border_title_block.html#a99592b672eabb626322afd8d123c6cbc" title="BorderTitleBlock::setColumnsCount Allows you to change the number of columns. If this number of colum..." alt="" coords="495,565,691,606"/>
+<area shape="rect" id="node25" href="$df/d92/class_border_title_block.html#a6320e811c305fcb602922aed8bb86c9d" title="BorderTitleBlock::setColumnsHeaderHeight Change the height of the headers containing the column numbe..." alt="" coords="495,695,691,737"/>
+<area shape="rect" id="node26" href="$df/d92/class_border_title_block.html#a300797fce97fab966a763f480b683e7f" title="BorderTitleBlock::setColumnsWidth Change the width of the columns. If the width indicated is less tha..." alt="" coords="495,761,691,802"/>
+<area shape="rect" id="node28" href="$df/d92/class_border_title_block.html#a72a0fbbde5b1cb78de2d3fa9bba4f072" title="BorderTitleBlock::setRowsCount Allows you to change the number of lines. If this number of lines is l..." alt="" coords="503,826,682,867"/>
+<area shape="rect" id="node30" href="$df/d92/class_border_title_block.html#abf692c10316187d0415ecda89dd0e018" title="BorderTitleBlock::setRowsHeaderWidth Change the width of the headers containing the line numbers...." alt="" coords="503,630,682,671"/>
+<area shape="rect" id="node31" href="$df/d92/class_border_title_block.html#a298a1f7fd508657af32d2f5a87814405" title="BorderTitleBlock::setRowsHeight Change the height of the lines. If the indicated height is lower than..." alt="" coords="503,891,682,933"/>
+<area shape="rect" id="node23" href="$df/d92/class_border_title_block.html#aee0fe66b0f44c0379344dd257eef1de4" title=" " alt="" coords="761,575,935,617"/>
+<area shape="rect" id="node24" href="$df/d92/class_border_title_block.html#a9d95b0343e1382b06344aa45063ca7ef" title="BorderTitleBlock::updateRectangles This method update the diagram rect according to the value of rows..." alt="" coords="765,695,931,737"/>
+<area shape="rect" id="node27" href="$df/d92/class_border_title_block.html#af38649a1abd3a73a7f8026382330541c" title=" " alt="" coords="761,761,935,802"/>
+<area shape="rect" id="node29" href="$df/d92/class_border_title_block.html#ad17bd13289ef524249a24058ed02a255" title=" " alt="" coords="753,833,943,860"/>
+<area shape="rect" id="node32" href="$df/d92/class_border_title_block.html#a92a59aec4ce6210e9d80781e770626df" title=" " alt="" coords="752,899,944,925"/>
+<area shape="rect" id="node34" href="$df/d92/class_border_title_block.html#aaffba5bd6f4f22471dfc6dac1ca1091d" title="BorderTitleBlock::setAuthor." alt="" coords="501,1175,684,1201"/>
+<area shape="rect" id="node36" href="$df/d92/class_border_title_block.html#a036300965749656927461dba7ff0a613" title="BorderTitleBlock::setAutoPageNum." alt="" coords="507,1226,678,1267"/>
+<area shape="rect" id="node37" href="$df/d92/class_border_title_block.html#a229b295b1f451ea6b9579ce97dab1e35" title="BorderTitleBlock::setDate." alt="" coords="507,1292,679,1319"/>
+<area shape="rect" id="node39" href="$df/d92/class_border_title_block.html#aef6ef9fd4c0a8189cb9dc83b9df09bc6" title="BorderTitleBlock::setFileName." alt="" coords="493,1343,693,1369"/>
+<area shape="rect" id="node40" href="$df/d92/class_border_title_block.html#a84eeb614160d236cb27df501815b0003" title="BorderTitleBlock::setFolio." alt="" coords="507,1393,679,1420"/>
+<area shape="rect" id="node42" href="$df/d92/class_border_title_block.html#ae2a11c789e18b3d2655df2fb7d72fda3" title="BorderTitleBlock::setIndicerev." alt="" coords="494,1444,691,1471"/>
+<area shape="rect" id="node44" href="$df/d92/class_border_title_block.html#a2d4c444b3ad79861c003eba6867a54e9" title="BorderTitleBlock::setLocMach." alt="" coords="494,1495,691,1521"/>
+<area shape="rect" id="node46" href="$df/d92/class_border_title_block.html#a52372b3d6102693c8ff2081c76d8d5c6" title="BorderTitleBlock::setPlant." alt="" coords="505,1023,680,1049"/>
+<area shape="rect" id="node48" href="$df/d92/class_border_title_block.html#add5b8f1f123f28094109d0396fa679c9" title="BorderTitleBlock::setTitle." alt="" coords="508,1073,677,1100"/>
+<area shape="rect" id="node49" href="$df/d92/class_border_title_block.html#a86324719730b733964a2df5a359022bc" title="BorderTitleBlock::setVersion." alt="" coords="499,1124,686,1151"/>
+<area shape="rect" id="node35" href="$df/d92/class_border_title_block.html#ac1b23e114bc6405dc9458b87822e30e3" title=" " alt="" coords="767,1175,929,1201"/>
+<area shape="rect" id="node38" href="$df/d92/class_border_title_block.html#af4f6e39703a96bbad7a66d543d06459b" title=" " alt="" coords="773,1292,923,1319"/>
+<area shape="rect" id="node41" href="$df/d92/class_border_title_block.html#af3ad97fdae613bac5d29b7c5750fd6ec" title=" " alt="" coords="773,1393,923,1420"/>
+<area shape="rect" id="node43" href="$df/d92/class_border_title_block.html#a97f7fc56e25453acc763a200f89f971d" title=" " alt="" coords="761,1444,935,1471"/>
+<area shape="rect" id="node45" href="$df/d92/class_border_title_block.html#a4bb10e5a498bd9fff74fa20dfdcb3405" title=" " alt="" coords="761,1495,935,1521"/>
+<area shape="rect" id="node47" href="$df/d92/class_border_title_block.html#a395b9693b6b6391584da1fc884b5df08" title=" " alt="" coords="771,1023,925,1049"/>
+</map>

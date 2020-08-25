@@ -1,0 +1,220 @@
+.TH "TerminalEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TerminalEditor \- The \fBTerminalEditor\fP class This class provides a widget to edit terminals within the element editor\&. The class is capable to change the values of multiple parts of the same time\&. The displayed values are from the first selected element\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <terminaleditor\&.h>\fP
+.PP
+Inherits \fBElementItemEditor\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateTerminalO\fP ()"
+.br
+.RI "Met a jour l'orientation de la borne et cree un objet d'annulation\&. "
+.ti -1c
+.RI "void \fBupdateXPos\fP ()"
+.br
+.RI "\fBTerminalEditor::updateXPos\fP\&. "
+.ti -1c
+.RI "void \fBupdateYPos\fP ()"
+.br
+.RI "\fBTerminalEditor::updateYPos\fP\&. "
+.ti -1c
+.RI "void \fBupdateForm\fP () override"
+.br
+.RI "update Number and name, create cancel object "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminalEditor\fP (\fBQETElementEditor\fP *, QList< \fBPartTerminal\fP * > &terms, QWidget *=nullptr)"
+.br
+.RI "\fBTerminalEditor::TerminalEditor\fP Constructeur\&. "
+.ti -1c
+.RI "\fBTerminalEditor\fP (\fBQETElementEditor\fP *, QWidget *=nullptr)"
+.br
+.RI "\fBTerminalEditor::TerminalEditor\fP\&. "
+.ti -1c
+.RI "\fB~TerminalEditor\fP () override"
+.br
+.RI "\fBTerminalEditor::~TerminalEditor\fP Destructeur\&. "
+.ti -1c
+.RI "bool \fBsetPart\fP (\fBCustomElementPart\fP *) override"
+.br
+.ti -1c
+.RI "bool \fBsetParts\fP (QList< \fBCustomElementPart\fP * > parts) override"
+.br
+.ti -1c
+.RI "\fBCustomElementPart\fP * \fBcurrentPart\fP () const override"
+.br
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBcurrentParts\fP () const override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminalEditor\fP (const \fBTerminalEditor\fP &)"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.RI "\fBTerminalEditor::init\fP\&. "
+.ti -1c
+.RI "void \fBactiveConnections\fP (bool)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBPartTerminal\fP * > \fBm_terminals\fP"
+.br
+.ti -1c
+.RI "\fBPartTerminal\fP * \fBm_part\fP {nullptr}"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBqle_x\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBqle_y\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBorientation\fP"
+.br
+.ti -1c
+.RI "bool \fBm_locked\fP {false}"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBTerminalEditor\fP class This class provides a widget to edit terminals within the element editor\&. The class is capable to change the values of multiple parts of the same time\&. The displayed values are from the first selected element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TerminalEditor::TerminalEditor (\fBQETElementEditor\fP * editor, QList< \fBPartTerminal\fP * > & terms, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBTerminalEditor::TerminalEditor\fP Constructeur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP : L'editeur d'element concerne 
+.br
+\fIterms\fP : La borne a editer 
+.br
+\fIparent\fP : QWidget parent de ce widget 
+.RE
+.PP
+
+.SS "TerminalEditor::TerminalEditor (\fBQETElementEditor\fP * editor, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBTerminalEditor::TerminalEditor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "TerminalEditor::~TerminalEditor ()\fC [override]\fP"
+
+.PP
+\fBTerminalEditor::~TerminalEditor\fP Destructeur\&. 
+.SS "TerminalEditor::TerminalEditor (const \fBTerminalEditor\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TerminalEditor::activeConnections (bool active)\fC [private]\fP"
+Active ou desactive les connexionx signaux/slots entre les widgets internes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIactive\fP true pour activer les connexions, false pour les desactiver 
+.RE
+.PP
+
+.SS "\fBCustomElementPart\fP * TerminalEditor::currentPart () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+la primitive actuellement editee, ou 0 si ce widget n'en edite pas 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "QList< \fBCustomElementPart\fP * > TerminalEditor::currentParts () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "void TerminalEditor::init ()\fC [private]\fP"
+
+.PP
+\fBTerminalEditor::init\fP\&. 
+.SS "bool TerminalEditor::setPart (\fBCustomElementPart\fP * new_part)\fC [override]\fP, \fC [virtual]\fP"
+Permet de specifier a cet editeur quelle primitive il doit editer\&. A noter qu'un editeur peut accepter ou refuser d'editer une primitive\&. L'editeur de borne acceptera d'editer la primitive new_part s'il s'agit d'un objet de la classe \fBPartTerminal\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_part\fP Nouvelle primitive a editer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si l'editeur a accepter d'editer la primitive, false sinon 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "bool TerminalEditor::setParts (QList< \fBCustomElementPart\fP * > parts)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBElementItemEditor\fP\&.
+.SS "void TerminalEditor::updateForm ()\fC [override]\fP, \fC [slot]\fP"
+
+.PP
+update Number and name, create cancel object Met a jour le formulaire d'edition 
+.SS "void TerminalEditor::updateTerminalO ()\fC [slot]\fP"
+
+.PP
+Met a jour l'orientation de la borne et cree un objet d'annulation\&. 
+.SS "void TerminalEditor::updateXPos ()\fC [slot]\fP"
+
+.PP
+\fBTerminalEditor::updateXPos\fP\&. 
+.SS "void TerminalEditor::updateYPos ()\fC [slot]\fP"
+
+.PP
+\fBTerminalEditor::updateYPos\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool TerminalEditor::m_locked {false}\fC [private]\fP"
+
+.SS "\fBPartTerminal\fP* TerminalEditor::m_part {nullptr}\fC [private]\fP"
+
+.SS "QList<\fBPartTerminal\fP *> TerminalEditor::m_terminals\fC [private]\fP"
+
+.SS "QComboBox* TerminalEditor::orientation\fC [private]\fP"
+
+.SS "QDoubleSpinBox* TerminalEditor::qle_x\fC [private]\fP"
+
+.SS "QDoubleSpinBox * TerminalEditor::qle_y\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

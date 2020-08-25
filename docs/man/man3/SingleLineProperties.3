@@ -1,0 +1,277 @@
+.TH "SingleLineProperties" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SingleLineProperties \- The \fBSingleLineProperties\fP class This class represents the properties of a singleline conductor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductorproperties\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSingleLineProperties\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~SingleLineProperties\fP ()"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBsetPhasesCount\fP (int)"
+.br
+.ti -1c
+.RI "unsigned short int \fBphasesCount\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisPen\fP () const"
+.br
+.ti -1c
+.RI "void \fBdraw\fP (QPainter *, \fBQET::ConductorSegmentType\fP, const QRectF &)"
+.br
+.ti -1c
+.RI "void \fBtoXml\fP (QDomElement &) const"
+.br
+.ti -1c
+.RI "void \fBfromXml\fP (QDomElement &)"
+.br
+.ti -1c
+.RI "void \fBtoSettings\fP (QSettings &, const QString &=QString()) const"
+.br
+.ti -1c
+.RI "void \fBfromSettings\fP (QSettings &, const QString &=QString())"
+.br
+.ti -1c
+.RI "int \fBoperator==\fP (const \fBSingleLineProperties\fP &) const"
+.br
+.ti -1c
+.RI "int \fBoperator!=\fP (const \fBSingleLineProperties\fP &) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBhasGround\fP"
+.br
+.RI "Whether the singleline conductor should display the ground symbol\&. "
+.ti -1c
+.RI "bool \fBhasNeutral\fP"
+.br
+.RI "Whether the singleline conductor should display the neutral symbol\&. "
+.ti -1c
+.RI "bool \fBis_pen\fP"
+.br
+.RI "Protective Earth Neutral: visually merge neutral and ground\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdrawGround\fP (QPainter *, \fBQET::ConductorSegmentType\fP, QPointF, qreal)"
+.br
+.ti -1c
+.RI "void \fBdrawNeutral\fP (QPainter *, \fBQET::ConductorSegmentType\fP, QPointF, qreal)"
+.br
+.ti -1c
+.RI "void \fBdrawPen\fP (QPainter *, \fBQET::ConductorSegmentType\fP, QPointF, qreal)"
+.br
+.RI "\fBSingleLineProperties::drawPen\fP Draw the PEN (Protective Earth Neutral) symbol using \fIpainter\fP at position \fIcenter\fP, using a size hint of \fIsize\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned short int \fBphases\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBSingleLineProperties\fP class This class represents the properties of a singleline conductor\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SingleLineProperties::SingleLineProperties ()"
+Constructeur par defaut 
+.SS "SingleLineProperties::~SingleLineProperties ()\fC [virtual]\fP"
+
+.PP
+Destructeur\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SingleLineProperties::draw (QPainter * painter, \fBQET::ConductorSegmentType\fP direction, const QRectF & rect)"
+Dessine les symboles propres a un conducteur unifilaire 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP QPainter a utiliser pour dessiner les symboles 
+.br
+\fIdirection\fP direction du segment sur lequel les symboles apparaitront 
+.br
+\fIrect\fP rectangle englobant le dessin ; utilise pour specifier a la fois la position et la taille du dessin 
+.RE
+.PP
+
+.SS "void SingleLineProperties::drawGround (QPainter * painter, \fBQET::ConductorSegmentType\fP direction, QPointF center, qreal size)\fC [private]\fP"
+Dessine le segment correspondant au symbole de la terre sur un conducteur unifilaire 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP QPainter a utiliser pour dessiner le segment 
+.br
+\fIdirection\fP direction du segment sur lequel le symbole apparaitra 
+.br
+\fIcenter\fP centre du segment 
+.br
+\fIsize\fP taille du segment 
+.RE
+.PP
+
+.SS "void SingleLineProperties::drawNeutral (QPainter * painter, \fBQET::ConductorSegmentType\fP direction, QPointF center, qreal size)\fC [private]\fP"
+Dessine le cercle correspondant au symbole du neutre sur un conducteur unifilaire 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP QPainter a utiliser pour dessiner le segment 
+.br
+\fIdirection\fP direction du segment sur lequel le symbole apparaitra 
+.br
+\fIcenter\fP centre du cercle 
+.br
+\fIsize\fP diametre du cercle 
+.RE
+.PP
+
+.SS "void SingleLineProperties::drawPen (QPainter * painter, \fBQET::ConductorSegmentType\fP direction, QPointF center, qreal size)\fC [private]\fP"
+
+.PP
+\fBSingleLineProperties::drawPen\fP Draw the PEN (Protective Earth Neutral) symbol using \fIpainter\fP at position \fIcenter\fP, using a size hint of \fIsize\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.br
+\fIdirection\fP : Indicate the direction of the underlying conductor segment 
+.br
+\fIcenter\fP 
+.br
+\fIsize\fP 
+.RE
+.PP
+
+.SS "void SingleLineProperties::fromSettings (QSettings & settings, const QString & prefix = \fCQString()\fP)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP Parametres a lire 
+.br
+\fIprefix\fP prefix a ajouter devant les noms des parametres 
+.RE
+.PP
+
+.SS "void SingleLineProperties::fromXml (QDomElement & e)"
+Importe les parametres du conducteur unifilaire a partir des attributs XML de l'element e 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP \fBElement\fP XML dont les attributs seront lus 
+.RE
+.PP
+
+.SS "bool SingleLineProperties::isPen () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if the singleline conductor should be drawn using the PEN (Protective Earth Neutral) representation and if it features the ground and the neutral\&. 
+.RE
+.PP
+
+.SS "int SingleLineProperties::operator!= (const \fBSingleLineProperties\fP & other) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP l'autre ensemble de proprietes avec lequel il faut effectuer la comparaison 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si les deux ensembles de proprietes sont differents, false sinon 
+.RE
+.PP
+
+.SS "int SingleLineProperties::operator== (const \fBSingleLineProperties\fP & other) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP l'autre ensemble de proprietes avec lequel il faut effectuer la comparaison 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si les deux ensembles de proprietes sont identiques, false sinon 
+.RE
+.PP
+
+.SS "unsigned short int SingleLineProperties::phasesCount ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+le nombre de phases (0, 1, 2, ou 3) 
+.RE
+.PP
+
+.SS "void SingleLineProperties::setPhasesCount (int n)"
+Definit le nombre de phases (0, 1, 2, ou 3) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP Nombre de phases 
+.RE
+.PP
+
+.SS "void SingleLineProperties::toSettings (QSettings & settings, const QString & prefix = \fCQString()\fP) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP Parametres a ecrire 
+.br
+\fIprefix\fP prefix a ajouter devant les noms des parametres 
+.RE
+.PP
+
+.SS "void SingleLineProperties::toXml (QDomElement & e) const"
+Exporte les parametres du conducteur unifilaire sous formes d'attributs XML ajoutes a l'element e\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP \fBElement\fP XML auquel seront ajoutes des attributs 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool SingleLineProperties::hasGround"
+
+.PP
+Whether the singleline conductor should display the ground symbol\&. 
+.SS "bool SingleLineProperties::hasNeutral"
+
+.PP
+Whether the singleline conductor should display the neutral symbol\&. 
+.SS "bool SingleLineProperties::is_pen"
+
+.PP
+Protective Earth Neutral: visually merge neutral and ground\&. 
+.SS "unsigned short int SingleLineProperties::phases\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

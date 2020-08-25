@@ -1,0 +1,14 @@
+<map id="Diagram::loadElmtFolioSeq" name="Diagram::loadElmtFolioSeq">
+<area shape="rect" id="node1" title="Diagram::loadElmtFolioSeq This class loads all folio sequential variables related to the current auto..." alt="" coords="5,173,187,200"/>
+<area shape="rect" id="node2" href="$d6/dc5/class_q_e_t_project.html#a5f2695dde0cbf9679a55ad9a7954e14a" title="QETProject::addElementAutoNum Add a new element numerotation context. If key already exist,..." alt="" coords="235,5,456,32"/>
+<area shape="rect" id="node3" href="$d6/dc5/class_q_e_t_project.html#a25728f248bd542c6c4a909f049581a34" title="QETProject::elementAutoNum." alt="" coords="246,56,445,83"/>
+<area shape="rect" id="node4" href="$d6/dc5/class_q_e_t_project.html#ad9020cd9cd747e25149a052f9f42dee8" title="QETProject::elementCurrentAutoNum." alt="" coords="252,107,439,149"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#a7608fde21b2501b184030d2752ae9930" title="Diagram::insertFolioSeqHash This class inserts a stringlist containing all sequential variables relat..." alt="" coords="248,224,443,251"/>
+<area shape="rect" id="node9" href="$d3/d37/class_diagram.html#aea7457d56b24e4f319000c89d4cb61dc" title="Diagram::title." alt="" coords="527,283,627,309"/>
+<area shape="rect" id="node11" href="$d3/d37/class_diagram.html#a03afc2727f07934756b660ba30e4dde5" title="Diagram::loadFolioSeqHash This class loads all folio sequential variables related to the current auto..." alt="" coords="253,173,438,200"/>
+<area shape="rect" id="node12" href="$d3/d37/class_diagram.html#a8a2a4a08dce92d0eed86f94077e9cc84" title="Diagram::project." alt="" coords="286,325,405,352"/>
+<area shape="rect" id="node6" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="504,86,651,127"/>
+<area shape="rect" id="node7" href="$d7/db7/class_numerotation_context.html#a406974f628b4f50a036de70804ab7cd4" title="NumerotationContext::replaceValue This class replaces the current NC field value with content." alt="" coords="504,151,651,193"/>
+<area shape="rect" id="node8" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="504,217,651,258"/>
+<area shape="rect" id="node10" href="$df/d92/class_border_title_block.html#ae83cb12cf27875a22b05492cbcbcd5f3" title=" " alt="" coords="699,283,845,309"/>
+</map>

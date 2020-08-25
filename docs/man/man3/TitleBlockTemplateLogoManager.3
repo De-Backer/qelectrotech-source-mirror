@@ -1,0 +1,325 @@
+.TH "TitleBlockTemplateLogoManager" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateLogoManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatelogomanager\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBlogosChanged\fP (const \fBTitleBlockTemplate\fP *)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateLogoManager\fP (\fBTitleBlockTemplate\fP *, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~TitleBlockTemplateLogoManager\fP () override"
+.br
+.ti -1c
+.RI "QString \fBcurrentLogo\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisReadOnly\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBemitLogosChangedSignal\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateLogoInformations\fP (QListWidgetItem *, QListWidgetItem *)"
+.br
+.ti -1c
+.RI "void \fBaddLogo\fP ()"
+.br
+.ti -1c
+.RI "void \fBexportLogo\fP ()"
+.br
+.ti -1c
+.RI "void \fBremoveLogo\fP ()"
+.br
+.ti -1c
+.RI "void \fBrenameLogo\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitWidgets\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillView\fP ()"
+.br
+.ti -1c
+.RI "QSize \fBiconsize\fP () const"
+.br
+.ti -1c
+.RI "QString \fBconfirmLogoName\fP (const QString &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBmanaged_template_\fP"
+.br
+.RI "title block template which this class manages logos "
+.ti -1c
+.RI "QVBoxLayout * \fBvlayout0_\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvlayout1_\fP"
+.br
+.RI "vertical layouts "
+.ti -1c
+.RI "QHBoxLayout * \fBhlayout0_\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhlayout1_\fP"
+.br
+.RI "horizontal layouts "
+.ti -1c
+.RI "QLabel * \fBlogos_label_\fP"
+.br
+.RI "simple displayed label "
+.ti -1c
+.RI "QListWidget * \fBlogos_view_\fP"
+.br
+.RI "area showing the logos "
+.ti -1c
+.RI "QPushButton * \fBadd_button_\fP"
+.br
+.RI "button to add a new logo "
+.ti -1c
+.RI "QPushButton * \fBexport_button_\fP"
+.br
+.RI "button to export an embedded logo "
+.ti -1c
+.RI "QPushButton * \fBdelete_button_\fP"
+.br
+.RI "button to delete an embedded logo "
+.ti -1c
+.RI "QGroupBox * \fBlogo_box_\fP"
+.br
+.RI "current logo properties box "
+.ti -1c
+.RI "QLabel * \fBlogo_name_label_\fP"
+.br
+.RI "'name:' label "
+.ti -1c
+.RI "QLineEdit * \fBlogo_name_\fP"
+.br
+.RI "current logo name "
+.ti -1c
+.RI "QPushButton * \fBrename_button_\fP"
+.br
+.RI "button to rename the current logo "
+.ti -1c
+.RI "QLabel * \fBlogo_type_\fP"
+.br
+.RI "current logo type "
+.ti -1c
+.RI "QDialogButtonBox * \fBbuttons_\fP"
+.br
+.RI "ok/cancel buttons "
+.ti -1c
+.RI "QDir \fBopen_dialog_dir_\fP"
+.br
+.RI "last opened directory "
+.ti -1c
+.RI "bool \fBread_only_\fP"
+.br
+.RI "Whether this logo manager should allow logo edition (renaming, addition, deletion) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This widget allows users to manage (list, add, edit, delete) logos embedded within a title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateLogoManager::TitleBlockTemplateLogoManager (\fBTitleBlockTemplate\fP * managed_template, QWidget * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fImanaged_template\fP Title block template this widget manages logos for\&. 
+.br
+\fIparent\fP Parent QWidget\&. 
+.RE
+.PP
+
+.SS "TitleBlockTemplateLogoManager::~TitleBlockTemplateLogoManager ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void TitleBlockTemplateLogoManager::addLogo ()\fC [private]\fP, \fC [slot]\fP"
+Ask the user for a filepath, and add it as a new logo in the managed template\&. 
+.SS "QString TitleBlockTemplateLogoManager::confirmLogoName (const QString & initial_name)\fC [private]\fP"
+When adding a logo, it may occur its name is already used by another pre-existing logo\&. This method asks users whether they want to erase the existing logo, change the initial name or simply cancel the operation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_name\fP Initial name of the logo to be added 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Either a null QString if the user cancelled the operation, or the name to be used when adding the logo\&. 
+.RE
+.PP
+TODO prevent the user from entering an empty name
+.SS "QString TitleBlockTemplateLogoManager::currentLogo () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name of the currently selected logo, or a null QString if none is selected\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateLogoManager::emitLogosChangedSignal ()\fC [protected]\fP"
+Emit the \fBlogosChanged()\fP signal\&. 
+.SS "void TitleBlockTemplateLogoManager::exportLogo ()\fC [private]\fP, \fC [slot]\fP"
+Export the currently selected logo 
+.SS "void TitleBlockTemplateLogoManager::fillView ()\fC [private]\fP"
+Update the logos display\&. 
+.SS "QSize TitleBlockTemplateLogoManager::iconsize () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the icon size to display the logos embedded within the managed template\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateLogoManager::initWidgets ()\fC [private]\fP"
+Initialize widgets composing the Logo manager 
+.SS "bool TitleBlockTemplateLogoManager::isReadOnly () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+Whether this logo manager should allow logo edition (renaming, addition, deletion)\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateLogoManager::logosChanged (const \fBTitleBlockTemplate\fP *)\fC [signal]\fP"
+
+.SS "void TitleBlockTemplateLogoManager::removeLogo ()\fC [private]\fP, \fC [slot]\fP"
+Delete the currently selected logo\&. 
+.SS "void TitleBlockTemplateLogoManager::renameLogo ()\fC [private]\fP, \fC [slot]\fP"
+Rename currently selected logo\&. 
+.SS "void TitleBlockTemplateLogoManager::setReadOnly (bool read_only)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIread_only\fP Whether this logo manager should allow logo edition (renaming, addition, deletion) 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateLogoManager::updateLogoInformations (QListWidgetItem * current, QListWidgetItem * previous)\fC [private]\fP, \fC [slot]\fP"
+Update the displayed informations relative to the currently selected logo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurrent\fP Newly selected logo item 
+.br
+\fIprevious\fP Previously selected logo item 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QPushButton* TitleBlockTemplateLogoManager::add_button_\fC [private]\fP"
+
+.PP
+button to add a new logo 
+.SS "QDialogButtonBox* TitleBlockTemplateLogoManager::buttons_\fC [private]\fP"
+
+.PP
+ok/cancel buttons 
+.SS "QPushButton* TitleBlockTemplateLogoManager::delete_button_\fC [private]\fP"
+
+.PP
+button to delete an embedded logo 
+.SS "QPushButton* TitleBlockTemplateLogoManager::export_button_\fC [private]\fP"
+
+.PP
+button to export an embedded logo 
+.SS "QHBoxLayout* TitleBlockTemplateLogoManager::hlayout0_\fC [private]\fP"
+
+.SS "QHBoxLayout * TitleBlockTemplateLogoManager::hlayout1_\fC [private]\fP"
+
+.PP
+horizontal layouts 
+.SS "QGroupBox* TitleBlockTemplateLogoManager::logo_box_\fC [private]\fP"
+
+.PP
+current logo properties box 
+.SS "QLineEdit* TitleBlockTemplateLogoManager::logo_name_\fC [private]\fP"
+
+.PP
+current logo name 
+.SS "QLabel* TitleBlockTemplateLogoManager::logo_name_label_\fC [private]\fP"
+
+.PP
+'name:' label 
+.SS "QLabel* TitleBlockTemplateLogoManager::logo_type_\fC [private]\fP"
+
+.PP
+current logo type 
+.SS "QLabel* TitleBlockTemplateLogoManager::logos_label_\fC [private]\fP"
+
+.PP
+simple displayed label 
+.SS "QListWidget* TitleBlockTemplateLogoManager::logos_view_\fC [private]\fP"
+
+.PP
+area showing the logos 
+.SS "\fBTitleBlockTemplate\fP* TitleBlockTemplateLogoManager::managed_template_\fC [private]\fP"
+
+.PP
+title block template which this class manages logos 
+.SS "QDir TitleBlockTemplateLogoManager::open_dialog_dir_\fC [private]\fP"
+
+.PP
+last opened directory 
+.SS "bool TitleBlockTemplateLogoManager::read_only_\fC [private]\fP"
+
+.PP
+Whether this logo manager should allow logo edition (renaming, addition, deletion) 
+.SS "QPushButton* TitleBlockTemplateLogoManager::rename_button_\fC [private]\fP"
+
+.PP
+button to rename the current logo 
+.SS "QVBoxLayout* TitleBlockTemplateLogoManager::vlayout0_\fC [private]\fP"
+
+.SS "QVBoxLayout * TitleBlockTemplateLogoManager::vlayout1_\fC [private]\fP"
+
+.PP
+vertical layouts 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,257 @@
+.TH "TitleBlockTemplateRenderer" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateRenderer \- The \fBTitleBlockTemplateRenderer\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <titleblocktemplaterenderer\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateRenderer\fP (QObject *=nullptr)"
+.br
+.RI "\fBTitleBlockTemplateRenderer::TitleBlockTemplateRenderer\fP Constructor\&. "
+.ti -1c
+.RI "\fB~TitleBlockTemplateRenderer\fP () override"
+.br
+.RI "\fBTitleBlockTemplateRenderer::~TitleBlockTemplateRenderer\fP Destructor\&. "
+.ti -1c
+.RI "const \fBTitleBlockTemplate\fP * \fBtitleBlockTemplate\fP () const"
+.br
+.RI "\fBTitleBlockTemplateRenderer::titleBlockTemplate\fP\&. "
+.ti -1c
+.RI "void \fBsetTitleBlockTemplate\fP (const \fBTitleBlockTemplate\fP *)"
+.br
+.RI "\fBTitleBlockTemplateRenderer::setTitleBlockTemplate\fP\&. "
+.ti -1c
+.RI "void \fBsetContext\fP (const \fBDiagramContext\fP &\fBcontext\fP)"
+.br
+.RI "\fBTitleBlockTemplateRenderer::setContext\fP\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBcontext\fP () const"
+.br
+.RI "\fBTitleBlockTemplateRenderer::context\fP\&. "
+.ti -1c
+.RI "int \fBheight\fP () const"
+.br
+.RI "\fBTitleBlockTemplateRenderer::height\fP\&. "
+.ti -1c
+.RI "void \fBrender\fP (QPainter *, int)"
+.br
+.RI "\fBTitleBlockTemplateRenderer::render\fP Render the titleblock\&. "
+.ti -1c
+.RI "void \fBrenderDxf\fP (QRectF &, int, QString &, int)"
+.br
+.RI "\fBTitleBlockTemplateRenderer::renderDxf\fP\&. "
+.ti -1c
+.RI "void \fBinvalidateRenderedTemplate\fP ()"
+.br
+.RI "\fBTitleBlockTemplateRenderer::invalidateRenderedTemplate\fP Invalidates the previous rendering of the template by resetting the internal QPicture\&. "
+.ti -1c
+.RI "void \fBsetUseCache\fP (bool)"
+.br
+.RI "\fBTitleBlockTemplateRenderer::setUseCache\fP\&. "
+.ti -1c
+.RI "bool \fBuseCache\fP () const"
+.br
+.RI "\fBTitleBlockTemplateRenderer::useCache\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrenderToQPicture\fP (int)"
+.br
+.RI "\fBTitleBlockTemplateRenderer::renderToQPicture\fP Renders the titleblock to the internal QPicture\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBTitleBlockTemplate\fP * \fBm_titleblock_template\fP"
+.br
+.ti -1c
+.RI "bool \fBm_use_cache\fP"
+.br
+.ti -1c
+.RI "QPicture \fBm_rendered_template\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBm_context\fP"
+.br
+.ti -1c
+.RI "int \fBm_last_known_titleblock_width\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBTitleBlockTemplateRenderer\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateRenderer::TitleBlockTemplateRenderer (QObject * parent = \fCnullptr\fP)"
+
+.PP
+\fBTitleBlockTemplateRenderer::TitleBlockTemplateRenderer\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : Parent QObject of this renderer 
+.RE
+.PP
+
+.SS "TitleBlockTemplateRenderer::~TitleBlockTemplateRenderer ()\fC [override]\fP"
+
+.PP
+\fBTitleBlockTemplateRenderer::~TitleBlockTemplateRenderer\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBDiagramContext\fP TitleBlockTemplateRenderer::context () const"
+
+.PP
+\fBTitleBlockTemplateRenderer::context\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the current diagram context use when render the titleblock 
+.RE
+.PP
+
+.SS "int TitleBlockTemplateRenderer::height () const"
+
+.PP
+\fBTitleBlockTemplateRenderer::height\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the height of the rendered template, or -1 if no template has been set for this renderer\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBTitleBlockTemplate::height()\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateRenderer::invalidateRenderedTemplate ()"
+
+.PP
+\fBTitleBlockTemplateRenderer::invalidateRenderedTemplate\fP Invalidates the previous rendering of the template by resetting the internal QPicture\&. 
+.SS "void TitleBlockTemplateRenderer::render (QPainter * provided_painter, int titleblock_width)"
+
+.PP
+\fBTitleBlockTemplateRenderer::render\fP Render the titleblock\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprovided_painter\fP : QPainter to use to render the titleblock\&. 
+.br
+\fItitleblock_width\fP : The total width of the titleblock to render 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateRenderer::renderDxf (QRectF & title_block_rect, int titleblock_width, QString & file_path, int color)"
+
+.PP
+\fBTitleBlockTemplateRenderer::renderDxf\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitle_block_rect\fP 
+.br
+\fItitleblock_width\fP 
+.br
+\fIfile_path\fP 
+.br
+\fIcolor\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateRenderer::renderToQPicture (int titleblock_width)\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplateRenderer::renderToQPicture\fP Renders the titleblock to the internal QPicture\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitleblock_width\fP : Width of the titleblock to render 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateRenderer::setContext (const \fBDiagramContext\fP & context)"
+
+.PP
+\fBTitleBlockTemplateRenderer::setContext\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontext\fP : Context to use when rendering the titleblock 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateRenderer::setTitleBlockTemplate (const \fBTitleBlockTemplate\fP * titleblock_template)"
+
+.PP
+\fBTitleBlockTemplateRenderer::setTitleBlockTemplate\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitleblock_template\fP : TitleBlock template to render\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateRenderer::setUseCache (bool use_cache)"
+
+.PP
+\fBTitleBlockTemplateRenderer::setUseCache\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIuse_cache\fP : true for this renderer to use its QPicture-based cache, false otherwise\&. 
+.RE
+.PP
+
+.SS "const \fBTitleBlockTemplate\fP * TitleBlockTemplateRenderer::titleBlockTemplate () const"
+
+.PP
+\fBTitleBlockTemplateRenderer::titleBlockTemplate\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the titleblock template used for the rendering 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplateRenderer::useCache () const"
+
+.PP
+\fBTitleBlockTemplateRenderer::useCache\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this renderer uses its QPicture-based cache, false otherwise\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagramContext\fP TitleBlockTemplateRenderer::m_context\fC [private]\fP"
+
+.SS "int TitleBlockTemplateRenderer::m_last_known_titleblock_width\fC [private]\fP"
+
+.SS "QPicture TitleBlockTemplateRenderer::m_rendered_template\fC [private]\fP"
+
+.SS "const \fBTitleBlockTemplate\fP* TitleBlockTemplateRenderer::m_titleblock_template\fC [private]\fP"
+
+.SS "bool TitleBlockTemplateRenderer::m_use_cache\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

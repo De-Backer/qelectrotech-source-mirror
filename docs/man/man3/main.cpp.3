@@ -1,0 +1,86 @@
+.TH "sources/main.cpp" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/main.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'qetapp\&.h'\fP
+.br
+\fC#include 'singleapplication\&.h'\fP
+.br
+\fC#include 'qet\&.h'\fP
+.br
+\fC#include 'macosxopenevent\&.h'\fP
+.br
+\fC#include 'machine_info\&.h'\fP
+.br
+\fC#include <QStyleFactory>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmyMessageOutput\fP (QtMsgType type, const QMessageLogContext &context, const QString &msg)"
+.br
+.RI "myMessageOutput for debugging "
+.ti -1c
+.RI "void \fBdelete_old_log_files\fP (int days)"
+.br
+.RI "delete_old_log_files delete old log files "
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.RI "main Main function of QElectroTech "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void delete_old_log_files (int days)"
+
+.PP
+delete_old_log_files delete old log files 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdays\fP : max days old 
+.RE
+.PP
+
+.SS "int main (int argc, char ** argv)"
+
+.PP
+main Main function of QElectroTech 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP : number of parameters 
+.br
+\fIargv\fP : parameters 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+exit code 
+.RE
+.PP
+
+.SS "void myMessageOutput (QtMsgType type, const QMessageLogContext & context, const QString & msg)"
+
+.PP
+myMessageOutput for debugging 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP : the messages that can be sent to a message handler 
+.br
+\fIcontext\fP : were? wat? 
+.br
+\fImsg\fP : Message 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

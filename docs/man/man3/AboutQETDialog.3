@@ -1,0 +1,162 @@
+.TH "AboutQETDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AboutQETDialog \- The \fBAboutQETDialog\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <aboutqetdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAboutQETDialog\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBAboutQETDialog::AboutQETDialog\fP\&. "
+.ti -1c
+.RI "\fB~AboutQETDialog\fP ()"
+.br
+.RI "\fBAboutQETDialog::~AboutQETDialog\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetAbout\fP ()"
+.br
+.RI "\fBAboutQETDialog::setAbout\fP\&. "
+.ti -1c
+.RI "void \fBsetAuthors\fP ()"
+.br
+.RI "\fBAboutQETDialog::setAuthors\fP\&. "
+.ti -1c
+.RI "void \fBsetTranslators\fP ()"
+.br
+.RI "\fBAboutQETDialog::setTranslators\fP\&. "
+.ti -1c
+.RI "void \fBsetContributors\fP ()"
+.br
+.RI "\fBAboutQETDialog::setContributors\fP\&. "
+.ti -1c
+.RI "void \fBsetVersion\fP ()"
+.br
+.RI "\fBAboutQETDialog::setVersion\fP\&. "
+.ti -1c
+.RI "void \fBsetLibraries\fP ()"
+.br
+.RI "\fBAboutQETDialog::setLibraries\fP\&. "
+.ti -1c
+.RI "void \fBsetLicence\fP ()"
+.br
+.RI "\fBAboutQETDialog::setLicence\fP\&. "
+.ti -1c
+.RI "void \fBaddAuthor\fP (QLabel *label, const QString &name, const QString &email, const QString &work)"
+.br
+.RI "\fBAboutQETDialog::addAuthor\fP Adds a person to the list of authors\&. "
+.ti -1c
+.RI "void \fBaddLibrary\fP (QLabel *label, const QString &name, const QString &link)"
+.br
+.RI "\fBAboutQETDialog::addLibrary\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::AboutQETDialog * \fBui\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBAboutQETDialog\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AboutQETDialog::AboutQETDialog (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBAboutQETDialog::AboutQETDialog\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SS "AboutQETDialog::~AboutQETDialog ()"
+
+.PP
+\fBAboutQETDialog::~AboutQETDialog\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void AboutQETDialog::addAuthor (QLabel * label, const QString & name, const QString & email, const QString & work)\fC [private]\fP"
+
+.PP
+\fBAboutQETDialog::addAuthor\fP Adds a person to the list of authors\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlabel\fP : QLabel which will add the person 
+.br
+\fIname\fP : Name of person 
+.br
+\fIemail\fP : E-mail address of the person 
+.br
+\fIwork\fP : Function / work done by the person 
+.RE
+.PP
+
+.SS "void AboutQETDialog::addLibrary (QLabel * label, const QString & name, const QString & link)\fC [private]\fP"
+
+.PP
+\fBAboutQETDialog::addLibrary\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlabel\fP 
+.br
+\fIname\fP 
+.br
+\fIlink\fP 
+.RE
+.PP
+
+.SS "void AboutQETDialog::setAbout ()\fC [private]\fP"
+
+.PP
+\fBAboutQETDialog::setAbout\fP\&. 
+.SS "void AboutQETDialog::setAuthors ()\fC [private]\fP"
+
+.PP
+\fBAboutQETDialog::setAuthors\fP\&. 
+.SS "void AboutQETDialog::setContributors ()\fC [private]\fP"
+
+.PP
+\fBAboutQETDialog::setContributors\fP\&. 
+.SS "void AboutQETDialog::setLibraries ()\fC [private]\fP"
+
+.PP
+\fBAboutQETDialog::setLibraries\fP\&. 
+.SS "void AboutQETDialog::setLicence ()\fC [private]\fP"
+
+.PP
+\fBAboutQETDialog::setLicence\fP\&. 
+.SS "void AboutQETDialog::setTranslators ()\fC [private]\fP"
+
+.PP
+\fBAboutQETDialog::setTranslators\fP\&. 
+.SS "void AboutQETDialog::setVersion ()\fC [private]\fP"
+
+.PP
+\fBAboutQETDialog::setVersion\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::AboutQETDialog* AboutQETDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

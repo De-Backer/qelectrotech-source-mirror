@@ -1,0 +1,366 @@
+.TH "QTextOrientationWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QTextOrientationWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qtextorientationwidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetOrientation\fP (const double &)"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBorientationChanged\fP (double)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQTextOrientationWidget\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~QTextOrientationWidget\fP () override"
+.br
+.ti -1c
+.RI "double \fBorientation\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetFont\fP (const QFont &)"
+.br
+.ti -1c
+.RI "QFont \fBfont\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDisplayText\fP (bool)"
+.br
+.ti -1c
+.RI "bool \fBtextDisplayed\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetUsableTexts\fP (const QStringList &)"
+.br
+.ti -1c
+.RI "QStringList \fBusableTexts\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisReadOnly\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QSize \fBsizeHint\fP () const override"
+.br
+.ti -1c
+.RI "int \fBheightForWidth\fP (int) const override"
+.br
+.ti -1c
+.RI "void \fBpaintEvent\fP (QPaintEvent *) override"
+.br
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QMouseEvent *) override"
+.br
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QMouseEvent *) override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQTextOrientationWidget\fP (const \fBQTextOrientationWidget\fP &)"
+.br
+.ti -1c
+.RI "\fBQTextOrientationWidget\fP & \fBoperator=\fP (const \fBQTextOrientationWidget\fP &)"
+.br
+.ti -1c
+.RI "QString \fBgetMostUsableStringForRadius\fP (const qreal &)"
+.br
+.ti -1c
+.RI "void \fBgenerateTextSizeHash\fP ()"
+.br
+.ti -1c
+.RI "bool \fBpositionIsASquare\fP (const QPointF &, double *=nullptr)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBsquares_interval_\fP"
+.br
+.RI "Interval between commonly used angles (represented by squares), in degrees\&. "
+.ti -1c
+.RI "double \fBcurrent_orientation_\fP"
+.br
+.RI "current angle "
+.ti -1c
+.RI "bool \fBdisplay_text_\fP"
+.br
+.RI "Whether to display an example text\&. "
+.ti -1c
+.RI "QFont \fBtext_font_\fP"
+.br
+.RI "Font used to render the example text\&. "
+.ti -1c
+.RI "QHash< QString, qreal > \fBtext_size_hash_\fP"
+.br
+.RI "Associate available example texts with their length (in pixels) "
+.ti -1c
+.RI "double \fBhighlight_angle_\fP"
+.br
+.RI "Specific angle to be highlighted\&. "
+.ti -1c
+.RI "bool \fBmust_highlight_angle_\fP"
+.br
+.RI "Whether to highlight a specific angle\&. "
+.ti -1c
+.RI "bool \fBread_only_\fP"
+.br
+.RI "Whether this widget is read only\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a visual representation of a text orientation\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QTextOrientationWidget::QTextOrientationWidget (QWidget * parent = \fCnullptr\fP)"
+Constructeur Par defaut, ce widget met en valeur les angles multiples de 45 degres et presente un texte oriente a 0 degre, avec la police par defaut de l'application\&. Le texte affiche est 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Widget parent 
+.RE
+.PP
+
+.SS "QTextOrientationWidget::~QTextOrientationWidget ()\fC [override]\fP"
+Destructeur 
+.SS "QTextOrientationWidget::QTextOrientationWidget (const \fBQTextOrientationWidget\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QFont QTextOrientationWidget::font () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la police utilisee pour le texte affiche 
+.RE
+.PP
+
+.SS "void QTextOrientationWidget::generateTextSizeHash ()\fC [private]\fP"
+S'assure que le hash associant les textes utilisables a leur taille soit correctement rempli\&. 
+.SS "QString QTextOrientationWidget::getMostUsableStringForRadius (const qreal & radius)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIradius\fP Rayon du cercle qui limitera le rendu du texte 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la chaine la plus appropriee en fonction de la taille du widget\&. 
+.RE
+.PP
+
+.SS "int QTextOrientationWidget::heightForWidth (int w) const\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIw\fP une largeur donnee 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la hauteur preferee pour une largeur donnee Pour ce widget : retourne la largeur fournie afin de maintenir le widget carre 
+.RE
+.PP
+
+.SS "bool QTextOrientationWidget::isReadOnly () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le widget est en mode 'lecture seule', false sinon 
+.RE
+.PP
+
+.SS "void QTextOrientationWidget::mouseMoveEvent (QMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+Gere les mouvements de la souris sur ce widget 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Evenement decrivant le mouvement de la souris 
+.RE
+.PP
+
+.SS "void QTextOrientationWidget::mouseReleaseEvent (QMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+Gere les relachements de la souris sur ce widget 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Evenement decrivant le relachement de la souris 
+.RE
+.PP
+
+.SS "\fBQTextOrientationWidget\fP& QTextOrientationWidget::operator= (const \fBQTextOrientationWidget\fP &)\fC [private]\fP"
+
+.SS "double QTextOrientationWidget::orientation () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+l'orientation / l'angle actuellement selectionne(e) 0 degre correspond a un texte horizontal, de gauche a droite 90 degres correspondent a un texte vertical de haut en bas 
+.RE
+.PP
+
+.SS "void QTextOrientationWidget::orientationChanged (double)\fC [signal]\fP"
+Signal emitted when users specify an orientation by clicking the widget\&. 
+.SS "void QTextOrientationWidget::paintEvent (QPaintEvent * event)\fC [override]\fP, \fC [protected]\fP"
+Effectue le rendu du widget 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Evenement decrivant la demande de rendu du widget 
+.RE
+.PP
+
+.SS "bool QTextOrientationWidget::positionIsASquare (const QPointF & pos, double * angle_value_ptr = \fCnullptr\fP)\fC [private]\fP"
+Determine si une position donnee correspond a un des carres representant un angle pertinent\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP Position donnee 
+.br
+\fIangle_value_ptr\fP Si different de 0, le double pointe par ce parametre vaudra l'angle pertinent concerne 
+.RE
+.PP
+
+.SS "void QTextOrientationWidget::setDisplayText (bool display_text)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdisplay_text\fP true pour afficher un texte, false sinon 
+.RE
+.PP
+
+.SS "void QTextOrientationWidget::setFont (const QFont & font)"
+Definit la police de caracteres a utiliser pour le texte affiche 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfont\fP Une police de caracteres 
+.RE
+.PP
+
+.SS "void QTextOrientationWidget::setOrientation (const double & angle)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIangle\fP la nouvelle orientation / le nouvel angle selectionne(e) 0 degre correspond a un texte horizontal, de gauche a droite 90 degres correspondent a un texte vertical de haut en bas 
+.RE
+.PP
+
+.SS "void QTextOrientationWidget::setReadOnly (bool ro)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIro\fP true pour passer le widget en mode 'lecture seule', false sinon 
+.RE
+.PP
+
+.SS "void QTextOrientationWidget::setUsableTexts (const QStringList & texts_list)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItexts_list\fP Une liste de chaines de caracteres utilisables par le widget afin d'afficher un texte en guise d'exemple\&. Le widget choisit la chaine la plus appropriee en fonction de sa taille\&. Note : la liste fournie ne doit pas etre vide\&. Utilisez setDisplayText si vous ne voulez plus afficher de texte\&. 
+.RE
+.PP
+
+.SS "QSize QTextOrientationWidget::sizeHint () const\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+la taille recommandee pour ce widget 
+.RE
+.PP
+
+.SS "bool QTextOrientationWidget::textDisplayed () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la police utilisee pour le texte affiche 
+.RE
+.PP
+
+.SS "QStringList QTextOrientationWidget::usableTexts () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la liste des chaines dont le widget dispose pour afficher un texte 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "double QTextOrientationWidget::current_orientation_\fC [private]\fP"
+
+.PP
+current angle 
+.SS "bool QTextOrientationWidget::display_text_\fC [private]\fP"
+
+.PP
+Whether to display an example text\&. 
+.SS "double QTextOrientationWidget::highlight_angle_\fC [private]\fP"
+
+.PP
+Specific angle to be highlighted\&. 
+.SS "bool QTextOrientationWidget::must_highlight_angle_\fC [private]\fP"
+
+.PP
+Whether to highlight a specific angle\&. 
+.SS "bool QTextOrientationWidget::read_only_\fC [private]\fP"
+
+.PP
+Whether this widget is read only\&. 
+.SS "double QTextOrientationWidget::squares_interval_\fC [private]\fP"
+
+.PP
+Interval between commonly used angles (represented by squares), in degrees\&. 
+.SS "QFont QTextOrientationWidget::text_font_\fC [private]\fP"
+
+.PP
+Font used to render the example text\&. 
+.SS "QHash<QString, qreal> QTextOrientationWidget::text_size_hash_\fC [private]\fP"
+
+.PP
+Associate available example texts with their length (in pixels) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

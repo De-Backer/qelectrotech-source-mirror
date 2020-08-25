@@ -1,0 +1,1470 @@
+.TH "QETDiagramEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETDiagramEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetdiagrameditor\&.h>\fP
+.PP
+Inherits \fBQETMainWindow\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsave\fP ()"
+.br
+.RI "\fBQETDiagramEditor::save\fP Ask the current active project to save\&. "
+.ti -1c
+.RI "void \fBsaveAs\fP ()"
+.br
+.RI "\fBQETDiagramEditor::saveAs\fP Ask the current active project to save as\&. "
+.ti -1c
+.RI "bool \fBnewProject\fP ()"
+.br
+.RI "\fBQETDiagramEditor::newProject\fP Create a new project with an empty diagram\&. "
+.ti -1c
+.RI "bool \fBopenProject\fP ()"
+.br
+.ti -1c
+.RI "bool \fBopenRecentFile\fP (const QString &)"
+.br
+.ti -1c
+.RI "bool \fBcloseProject\fP (\fBProjectView\fP *)"
+.br
+.ti -1c
+.RI "bool \fBcloseProject\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBzoomGroupTriggered\fP (QAction *action)"
+.br
+.ti -1c
+.RI "void \fBselectGroupTriggered\fP (QAction *action)"
+.br
+.RI "\fBQETDiagramEditor::selectGroupTriggered\fP This slot is called when selection need to change\&. "
+.ti -1c
+.RI "void \fBaddItemGroupTriggered\fP (QAction *action)"
+.br
+.RI "\fBQETDiagramEditor::addItemGroupTriggered\fP This slot is called when an item must be added to the curent diagram, this slot use the \fBDVEventInterface\fP to add item\&. "
+.ti -1c
+.RI "void \fBselectionGroupTriggered\fP (QAction *action)"
+.br
+.RI "\fBQETDiagramEditor::selectionGroupTriggered\fP This slot is called when an action should be made on the current selection\&. "
+.ti -1c
+.RI "void \fBrowColumnGroupTriggered\fP (QAction *action)"
+.br
+.ti -1c
+.RI "void \fBslot_updateActions\fP ()"
+.br
+.RI "\fBQETDiagramEditor::slot_updateActions\fP Manage actions\&. "
+.ti -1c
+.RI "void \fBslot_updateUndoStack\fP ()"
+.br
+.RI "\fBQETDiagramEditor::slot_updateUndoStack\fP Update the undo stack view\&. "
+.ti -1c
+.RI "void \fBslot_updateModeActions\fP ()"
+.br
+.RI "\fBQETDiagramEditor::slot_updateModeActions\fP Manage action who need an opened diagram or project to be updated\&. "
+.ti -1c
+.RI "void \fBslot_updateComplexActions\fP ()"
+.br
+.RI "\fBQETDiagramEditor::slot_updateComplexActions\fP Manage the actions who need some conditions to be enable or not\&. This method does nothing if there is no project opened\&. "
+.ti -1c
+.RI "void \fBslot_updatePasteAction\fP ()"
+.br
+.RI "\fBQETDiagramEditor::slot_updatePasteAction\fP Gere les actions ayant besoin du presse-papier\&. "
+.ti -1c
+.RI "void \fBslot_updateWindowsMenu\fP ()"
+.br
+.ti -1c
+.RI "void \fBslot_updateAutoNumDock\fP ()"
+.br
+.RI "\fBQETDiagramEditor::slot_updateAutoNumDock\fP Update Auto Num Dock Widget when changing Project\&. "
+.ti -1c
+.RI "void \fBgenerateTerminalBlock\fP ()"
+.br
+.RI "\fBQETDiagramEditor::generateTerminalBlock\fP\&. "
+.ti -1c
+.RI "void \fBsetWindowedMode\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTabbedMode\fP ()"
+.br
+.ti -1c
+.RI "void \fBreadSettings\fP ()"
+.br
+.RI "\fBQETDiagramEditor::readSettings\fP Read the settings\&. "
+.ti -1c
+.RI "void \fBwriteSettings\fP ()"
+.br
+.RI "\fBQETDiagramEditor::writeSettings\fP Write the settings\&. "
+.ti -1c
+.RI "void \fBactivateDiagram\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBactivateProject\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBactivateProject\fP (\fBProjectView\fP *)"
+.br
+.ti -1c
+.RI "void \fBactivateWidget\fP (QWidget *)"
+.br
+.ti -1c
+.RI "void \fBprojectWasClosed\fP (\fBProjectView\fP *)"
+.br
+.ti -1c
+.RI "void \fBeditProjectProperties\fP (\fBProjectView\fP *)"
+.br
+.ti -1c
+.RI "void \fBeditProjectProperties\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBeditDiagramProperties\fP (\fBDiagramView\fP *)"
+.br
+.ti -1c
+.RI "void \fBeditDiagramProperties\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBaddDiagramToProject\fP (\fBQETProject\fP *)"
+.br
+.RI "\fBQETDiagramEditor::addDiagramToProject\fP Add a diagram to project\&. "
+.ti -1c
+.RI "void \fBremoveDiagram\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBremoveDiagramFromProject\fP ()"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUp\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramDown\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUpTop\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramUpx10\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBmoveDiagramDownx10\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBreloadOldElementPanel\fP ()"
+.br
+.ti -1c
+.RI "void \fBdiagramWasAdded\fP (\fBDiagramView\fP *)"
+.br
+.RI "\fBQETDiagramEditor::diagramWasAdded\fP Manage the adding of diagram view in a project\&. "
+.ti -1c
+.RI "void \fBfindElementInPanel\fP (const \fBElementsLocation\fP &)"
+.br
+.RI "\fBQETDiagramEditor::findElementInPanel\fP Find the item for location in the element panel\&. "
+.ti -1c
+.RI "void \fBeditElementInEditor\fP (const \fBElementsLocation\fP &)"
+.br
+.ti -1c
+.RI "void \fBeditSelectedElementInEditor\fP ()"
+.br
+.ti -1c
+.RI "void \fBshowError\fP (const \fBQETResult\fP &)"
+.br
+.ti -1c
+.RI "void \fBshowError\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBsubWindowActivated\fP (QMdiSubWindow *subWindows)"
+.br
+.RI "\fBQETDiagramEditor::subWindowActivated\fP Slot used to update menu and undo stack when subwindows of MDIarea was activated\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETDiagramEditor\fP (const QStringList &=QStringList(), QWidget *=nullptr)"
+.br
+.RI "\fBQETDiagramEditor::QETDiagramEditor\fP Constructor\&. "
+.ti -1c
+.RI "\fB~QETDiagramEditor\fP () override"
+.br
+.ti -1c
+.RI "void \fBcloseEvent\fP (QCloseEvent *) override"
+.br
+.ti -1c
+.RI "QList< \fBProjectView\fP * > \fBopenedProjects\fP () const"
+.br
+.ti -1c
+.RI "void \fBaddProjectView\fP (\fBProjectView\fP *)"
+.br
+.RI "\fBQETDiagramEditor::addProjectView\fP Add a new project view to workspace and build the connection between the projectview / project and this \fBQETDiagramEditor\fP\&. "
+.ti -1c
+.RI "bool \fBopenAndAddProject\fP (const QString &, bool=true)"
+.br
+.ti -1c
+.RI "QList< QString > \fBeditedFiles\fP () const"
+.br
+.ti -1c
+.RI "\fBProjectView\fP * \fBviewForFile\fP (const QString &) const"
+.br
+.ti -1c
+.RI "\fBProjectView\fP * \fBcurrentProjectView\fP () const"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBcurrentProject\fP () const"
+.br
+.RI "\fBQETDiagramEditor::currentProject\fP\&. "
+.ti -1c
+.RI "bool \fBdrawGrid\fP () const"
+.br
+.RI "\fBQETDiagramEditor::drawGrid\fP\&. "
+.ti -1c
+.RI "void \fBopenBackupFiles\fP (QList< KAutoSaveFile * > backup_files)"
+.br
+.RI "\fBQETDiagramEditor::openBackupFiles\fP\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QAction * \fBm_edit_diagram_properties\fP"
+.br
+.RI "Show a dialog to edit diagram properties\&. "
+.ti -1c
+.RI "QAction * \fBm_conductor_reset\fP"
+.br
+.RI "Reset paths of selected conductors\&. "
+.ti -1c
+.RI "QAction * \fBm_cut\fP"
+.br
+.RI "Cut selection to clipboard\&. "
+.ti -1c
+.RI "QAction * \fBm_copy\fP"
+.br
+.RI "Copy selection to clipboard\&. "
+.ti -1c
+.RI "QActionGroup \fBm_row_column_actions_group\fP"
+.br
+.ti -1c
+.RI "QActionGroup \fBm_selection_actions_group\fP"
+.br
+.RI "Action related to add/remove rows/column in diagram\&. "
+.ti -1c
+.RI "QActionGroup * \fBm_depth_action_group\fP = nullptr"
+.br
+.RI "Action related to edit a selected item\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBevent\fP (QEvent *) override"
+.br
+.RI "\fBQETDiagramEditor::event\fP Reimplemented to : -Load elements collection when WindowActivate\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBselectionChanged\fP ()"
+.br
+.RI "\fBQETDiagramEditor::selectionChanged\fP This slot is called when a diagram selection was changed\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETDiagramEditor\fP (const \fBQETDiagramEditor\fP &)"
+.br
+.ti -1c
+.RI "void \fBsetUpElementsPanel\fP ()"
+.br
+.RI "\fBQETDiagramEditor::setUpElementsPanel\fP Setup the element panel and element panel widget\&. "
+.ti -1c
+.RI "void \fBsetUpElementsCollectionWidget\fP ()"
+.br
+.RI "\fBQETDiagramEditor::setUpElementsCollectionWidget\fP Set up the dock widget of element collection\&. "
+.ti -1c
+.RI "void \fBsetUpUndoStack\fP ()"
+.br
+.RI "\fBQETDiagramEditor::setUpUndoStack\fP Setup the undostack and undo stack widget\&. "
+.ti -1c
+.RI "void \fBsetUpSelectionPropertiesEditor\fP ()"
+.br
+.RI "\fBQETDiagramEditor::setUpSelectionPropertiesEditor\fP Setup the dock for edit the current selection\&. "
+.ti -1c
+.RI "void \fBsetUpAutonumberingWidget\fP ()"
+.br
+.RI "\fBQETDiagramEditor::setUpAutonumberingWidget\fP Setup the dock for AutoNumbering Selection\&. "
+.ti -1c
+.RI "void \fBsetUpActions\fP ()"
+.br
+.RI "\fBQETDiagramEditor::setUpActions\fP Set up all Qaction\&. "
+.ti -1c
+.RI "void \fBsetUpToolBar\fP ()"
+.br
+.RI "\fBQETDiagramEditor::setUpToolBar\fP\&. "
+.ti -1c
+.RI "void \fBsetUpMenu\fP ()"
+.br
+.RI "\fBQETDiagramEditor::setUpMenu\fP\&. "
+.ti -1c
+.RI "bool \fBaddProject\fP (\fBQETProject\fP *, bool=true)"
+.br
+.ti -1c
+.RI "\fBDiagramView\fP * \fBcurrentDiagramView\fP () const"
+.br
+.ti -1c
+.RI "\fBElement\fP * \fBcurrentElement\fP () const"
+.br
+.ti -1c
+.RI "\fBProjectView\fP * \fBfindProject\fP (\fBDiagramView\fP *) const"
+.br
+.ti -1c
+.RI "\fBProjectView\fP * \fBfindProject\fP (\fBDiagram\fP *) const"
+.br
+.ti -1c
+.RI "\fBProjectView\fP * \fBfindProject\fP (\fBQETProject\fP *) const"
+.br
+.ti -1c
+.RI "\fBProjectView\fP * \fBfindProject\fP (const QString &) const"
+.br
+.ti -1c
+.RI "QMdiSubWindow * \fBsubWindowForWidget\fP (QWidget *) const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QActionGroup * \fBgrp_visu_sel\fP"
+.br
+.RI "Action group for visualisation vs edition mode\&. "
+.ti -1c
+.RI "QActionGroup * \fBm_group_view_mode\fP"
+.br
+.RI "Action group for project\&. "
+.ti -1c
+.RI "QActionGroup \fBm_add_item_actions_group\fP"
+.br
+.ti -1c
+.RI "QActionGroup \fBm_zoom_actions_group\fP"
+.br
+.RI "Action related to adding (add text image shape\&.\&.\&.) "
+.ti -1c
+.RI "QActionGroup \fBm_select_actions_group\fP"
+.br
+.RI "Action related to zoom for diagram\&. "
+.ti -1c
+.RI "QActionGroup \fBm_file_actions_group\fP"
+.br
+.RI "Action related to global selections\&. "
+.ti -1c
+.RI "QAction * \fBm_tabbed_view_mode\fP"
+.br
+.RI "Actions related to file (open, close, save\&.\&.\&.) "
+.ti -1c
+.RI "QAction * \fBm_windowed_view_mode\fP"
+.br
+.RI "Display projects as windows\&. "
+.ti -1c
+.RI "QAction * \fBm_mode_selection\fP"
+.br
+.RI "Set edition mode\&. "
+.ti -1c
+.RI "QAction * \fBm_mode_visualise\fP"
+.br
+.RI "Set visualisation mode\&. "
+.ti -1c
+.RI "QAction * \fBm_export_diagram\fP"
+.br
+.RI "Export diagrams of the current project as imagess\&. "
+.ti -1c
+.RI "QAction * \fBm_print\fP"
+.br
+.RI "Print diagrams of the current project\&. "
+.ti -1c
+.RI "QAction * \fBm_quit_editor\fP"
+.br
+.RI "Quit the diagram editor\&. "
+.ti -1c
+.RI "QAction * \fBundo\fP"
+.br
+.RI "Cancel the latest action\&. "
+.ti -1c
+.RI "QAction * \fBredo\fP"
+.br
+.RI "Redo the latest cancelled operation\&. "
+.ti -1c
+.RI "QAction * \fBm_paste\fP"
+.br
+.RI "Paste clipboard content on the current diagram\&. "
+.ti -1c
+.RI "QAction * \fBm_auto_conductor\fP"
+.br
+.RI "Enable/Disable the use of auto conductor\&. "
+.ti -1c
+.RI "QAction * \fBconductor_default\fP"
+.br
+.RI "Show a dialog to edit default conductor properties\&. "
+.ti -1c
+.RI "QAction * \fBm_grey_background\fP"
+.br
+.RI "Switch the background color in white or grey\&. "
+.ti -1c
+.RI "QAction * \fBm_draw_grid\fP"
+.br
+.RI "Switch the background grid display or not\&. "
+.ti -1c
+.RI "QAction * \fBm_project_edit_properties\fP"
+.br
+.RI "Edit the properties of the current project\&. "
+.ti -1c
+.RI "QAction * \fBm_project_add_diagram\fP"
+.br
+.RI "Add a diagram to the current project\&. "
+.ti -1c
+.RI "QAction * \fBm_remove_diagram_from_project\fP"
+.br
+.RI "Delete a diagram from the current project\&. "
+.ti -1c
+.RI "QAction * \fBm_clean_project\fP"
+.br
+.RI "Clean the content of the curent project by removing useless items\&. "
+.ti -1c
+.RI "QAction * \fBm_project_folio_list\fP"
+.br
+.RI "Sommaire des schemas\&. "
+.ti -1c
+.RI "QAction * \fBm_csv_export\fP"
+.br
+.RI "generate nomenclature "
+.ti -1c
+.RI "QAction * \fBm_add_nomenclature\fP"
+.br
+.RI "Add nomenclature graphics item;\&. "
+.ti -1c
+.RI "QAction * \fBm_add_summary\fP"
+.br
+.RI "Add summary graphics item\&. "
+.ti -1c
+.RI "QAction * \fBm_project_terminalBloc\fP"
+.br
+.RI "generate terminal block "
+.ti -1c
+.RI "QAction * \fBm_project_export_conductor_num\fP"
+.br
+.RI "Export the wire num to csv\&. "
+.ti -1c
+.RI "QAction * \fBm_export_project_db\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_tile_window\fP"
+.br
+.RI "Export to file the internal database of the current project\&. "
+.ti -1c
+.RI "QAction * \fBm_cascade_window\fP"
+.br
+.RI "Show MDI subwindows as cascade\&. "
+.ti -1c
+.RI "QAction * \fBm_previous_window\fP"
+.br
+.RI "Switch to the previous document\&. "
+.ti -1c
+.RI "QAction * \fBm_next_window\fP"
+.br
+.RI "Switch to the next document\&. "
+.ti -1c
+.RI "QAction * \fBm_edit_selection\fP"
+.br
+.RI "To edit selected item\&. "
+.ti -1c
+.RI "QList< QAction * > \fBm_zoom_action_toolBar\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_delete_selection\fP"
+.br
+.RI "Only zoom action must displayed in the toolbar\&. "
+.ti -1c
+.RI "QAction * \fBm_rotate_selection\fP"
+.br
+.RI "Rotate selected elements and text items by 90 degrees\&. "
+.ti -1c
+.RI "QAction * \fBm_rotate_texts\fP"
+.br
+.RI "Direct selected text items to a specific angle\&. "
+.ti -1c
+.RI "QAction * \fBm_find_element\fP"
+.br
+.RI "Find the selected element in the panel\&. "
+.ti -1c
+.RI "QAction * \fBm_group_selected_texts\fP = nullptr"
+.br
+.ti -1c
+.RI "QAction * \fBm_close_file\fP"
+.br
+.RI "Close current project file\&. "
+.ti -1c
+.RI "QAction * \fBm_save_file\fP"
+.br
+.RI "Save current project\&. "
+.ti -1c
+.RI "QAction * \fBm_save_file_as\fP"
+.br
+.RI "Save current project as a specific file\&. "
+.ti -1c
+.RI "QAction * \fBm_find\fP = nullptr"
+.br
+.ti -1c
+.RI "QMdiArea \fBm_workspace\fP"
+.br
+.ti -1c
+.RI "QSignalMapper \fBwindowMapper\fP"
+.br
+.ti -1c
+.RI "QDir \fBopen_dialog_dir\fP"
+.br
+.ti -1c
+.RI "QDockWidget * \fBqdw_pa\fP"
+.br
+.RI "Directory to use for file dialogs such as File > save\&. "
+.ti -1c
+.RI "QDockWidget * \fBm_qdw_elmt_collection\fP"
+.br
+.RI "Dock for the elements panel\&. "
+.ti -1c
+.RI "QDockWidget * \fBqdw_undo\fP"
+.br
+.ti -1c
+.RI "\fBElementsCollectionWidget\fP * \fBm_element_collection_widget\fP"
+.br
+.RI "Dock for the undo list\&. "
+.ti -1c
+.RI "\fBDiagramPropertiesEditorDockWidget\fP * \fBm_selection_properties_editor\fP"
+.br
+.ti -1c
+.RI "\fBElementsPanelWidget\fP * \fBpa\fP"
+.br
+.RI "Elements panel\&. "
+.ti -1c
+.RI "QMenu * \fBwindows_menu\fP"
+.br
+.ti -1c
+.RI "QToolBar * \fBmain_tool_bar\fP = nullptr"
+.br
+.ti -1c
+.RI "QToolBar * \fBview_tool_bar\fP = nullptr"
+.br
+.ti -1c
+.RI "QToolBar * \fBdiagram_tool_bar\fP = nullptr"
+.br
+.ti -1c
+.RI "QToolBar * \fBm_add_item_tool_bar\fP = nullptr"
+.br
+.ti -1c
+.RI "QToolBar * \fBm_depth_tool_bar\fP = nullptr"
+.br
+.ti -1c
+.RI "QUndoGroup \fBundo_group\fP"
+.br
+.ti -1c
+.RI "\fBAutoNumberingDockWidget\fP * \fBm_autonumbering_dock\fP"
+.br
+.ti -1c
+.RI "int \fBactiveSubWindowIndex\fP"
+.br
+.ti -1c
+.RI "bool \fBm_first_show\fP = true"
+.br
+.ti -1c
+.RI "\fBSearchAndReplaceWidget\fP \fBm_search_and_replace_widget\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents the main window of the QElectroTech diagram editor and, ipso facto, the most important part of the QElectroTech user interface\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QETDiagramEditor::QETDiagramEditor (const QStringList & files = \fCQStringList()\fP, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBQETDiagramEditor::QETDiagramEditor\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfiles\fP : list of files to open 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "QETDiagramEditor::~QETDiagramEditor ()\fC [override]\fP"
+Destructeur 
+.SS "QETDiagramEditor::QETDiagramEditor (const \fBQETDiagramEditor\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QETDiagramEditor::activateDiagram (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Active le schema passe en parametre 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a activer 
+.RE
+.PP
+
+.PP
+\fBTodo\fP
+.RS 4
+gerer ce cas 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::activateProject (\fBProjectView\fP * project_view)\fC [slot]\fP"
+Active le projet passe en parametre 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject_view\fP Projet a activer 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::activateProject (\fBQETProject\fP * project)\fC [slot]\fP"
+Active le projet passe en parametre 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Projet a activer 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::activateWidget (QWidget * widget)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget\fP Widget a activer 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::addDiagramToProject (\fBQETProject\fP * project)\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::addDiagramToProject\fP Add a diagram to project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::addItemGroupTriggered (QAction * action)\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::addItemGroupTriggered\fP This slot is called when an item must be added to the curent diagram, this slot use the \fBDVEventInterface\fP to add item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaction\fP : Action that describe the item to add\&. 
+.RE
+.PP
+
+.SS "bool QETDiagramEditor::addProject (\fBQETProject\fP * project, bool update_panel = \fCtrue\fP)\fC [private]\fP"
+Ajoute un projetmoveDiagramUp( 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP projet a ajouter 
+.br
+\fIupdate_panel\fP Whether the elements panel should be warned this project has been added\&. Defaults to true\&. 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::addProjectView (\fBProjectView\fP * project_view)"
+
+.PP
+\fBQETDiagramEditor::addProjectView\fP Add a new project view to workspace and build the connection between the projectview / project and this \fBQETDiagramEditor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject_view\fP : project view to add 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::closeEvent (QCloseEvent * qce)\fC [override]\fP"
+Permet de quitter l'application lors de la fermeture de la fenetre principale 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqce\fP Le QCloseEvent correspondant a l'evenement de fermeture 
+.RE
+.PP
+
+.SS "bool QETDiagramEditor::closeProject (\fBProjectView\fP * project_view)\fC [slot]\fP"
+Ferme un projet 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject_view\fP Projet a fermer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si la fermeture du projet a reussi, false sinon Note : cette methode renvoie true si project est nul 
+.RE
+.PP
+
+.SS "bool QETDiagramEditor::closeProject (\fBQETProject\fP * project)\fC [slot]\fP"
+Ferme un projet 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP projet a fermer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si la fermeture du fichier a reussi, false sinon Note : cette methode renvoie true si project est nul 
+.RE
+.PP
+
+.SS "\fBDiagramView\fP * QETDiagramEditor::currentDiagramView () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+Le schema actuellement edite (= l'onglet ouvert dans le projet courant) ou 0 s'il n'y en a pas 
+.RE
+.PP
+
+.SS "\fBElement\fP * QETDiagramEditor::currentElement () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the selected element in the current diagram view, or 0 if: no diagram is being viewed in this editor\&. no element is selected more than one element is selected 
+.RE
+.PP
+
+.SS "\fBQETProject\fP * QETDiagramEditor::currentProject () const"
+
+.PP
+\fBQETDiagramEditor::currentProject\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the current edited project\&. This function can return nullptr\&. 
+.RE
+.PP
+
+.SS "\fBProjectView\fP * QETDiagramEditor::currentProjectView () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+Le projet actuellement edite (= qui a le focus dans l'interface MDI) ou 0 s'il n'y en a pas 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::diagramWasAdded (\fBDiagramView\fP * dv)\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::diagramWasAdded\fP Manage the adding of diagram view in a project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdv\fP : added diagram view 
+.RE
+.PP
+
+.SS "bool QETDiagramEditor::drawGrid () const"
+
+.PP
+\fBQETDiagramEditor::drawGrid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the grid of folio must be displayed 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::editDiagramProperties (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Edite les proprietes du schema diagram 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP schema dont il faut editer les proprietes 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::editDiagramProperties (\fBDiagramView\fP * diagram_view)\fC [slot]\fP"
+Edite les proprietes du schema diagram 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_view\fP schema dont il faut editer les proprietes 
+.RE
+.PP
+
+.SS "QList< QString > QETDiagramEditor::editedFiles () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la liste des fichiers edites par cet editeur de schemas 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::editElementInEditor (const \fBElementsLocation\fP & location)\fC [slot]\fP"
+Lance l'editeur d'element pour l'element filename 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP Emplacement de l'element a editer 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::editProjectProperties (\fBProjectView\fP * project_view)\fC [slot]\fP"
+Edite les proprietes du projet project_view\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject_view\fP Vue sur le projet dont il faut editer les proprietes 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::editProjectProperties (\fBQETProject\fP * project)\fC [slot]\fP"
+Edite les proprietes du projet project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Projet dont il faut editer les proprietes 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::editSelectedElementInEditor ()\fC [slot]\fP"
+Launch an element editor to edit the selected element in the current diagram view\&. 
+.SS "bool QETDiagramEditor::event (QEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBQETDiagramEditor::event\fP Reimplemented to : -Load elements collection when WindowActivate\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void QETDiagramEditor::findElementInPanel (const \fBElementsLocation\fP & location)\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::findElementInPanel\fP Find the item for location in the element panel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+
+.SS "\fBProjectView\fP * QETDiagramEditor::findProject (const QString & filepath) const\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP Chemin de fichier d'un projet 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le \fBProjectView\fP correspondant au chemin passe en parametre, ou 0 si celui-ci n'a pas ete trouve 
+.RE
+.PP
+
+.SS "\fBProjectView\fP * QETDiagramEditor::findProject (\fBDiagram\fP * diagram) const\fC [private]\fP"
+Cette methode permet de retrouver le projet contenant un schema donne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema dont il faut retrouver 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la vue sur le projet contenant ce schema ou 0 s'il n'y en a pas 
+.RE
+.PP
+
+.SS "\fBProjectView\fP * QETDiagramEditor::findProject (\fBDiagramView\fP * diagram_view) const\fC [private]\fP"
+Cette methode permet de retrouver le projet contenant un schema donne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram_view\fP Schema dont il faut retrouver 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la vue sur le projet contenant ce schema ou 0 s'il n'y en a pas 
+.RE
+.PP
+
+.SS "\fBProjectView\fP * QETDiagramEditor::findProject (\fBQETProject\fP * project) const\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Projet dont il faut trouver la vue 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la vue du projet passe en parametre 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::generateTerminalBlock ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::generateTerminalBlock\fP\&. 
+.SS "void QETDiagramEditor::moveDiagramDown (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Change l'ordre des schemas d'un projet, en decalant le schema vers le bas / la droite 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a decaler vers le bas / la droite 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::moveDiagramDownx10 (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Change l'ordre des schemas d'un projet, en decalant le schema vers le bas / la droite x10 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a decaler vers le bas / la droite x10 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::moveDiagramUp (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Change l'ordre des schemas d'un projet, en decalant le schema vers le haut / la gauche 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a decaler vers le haut / la gauche 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::moveDiagramUpTop (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Change l'ordre des schemas d'un projet, en decalant le schema vers le haut / la gauche en position 0 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a decaler vers le haut / la gauche en position 0 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::moveDiagramUpx10 (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Change l'ordre des schemas d'un projet, en decalant le schema vers le haut / la gauche x10 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a decaler vers le haut / la gauche x10 
+.RE
+.PP
+
+.SS "bool QETDiagramEditor::newProject ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::newProject\fP Create a new project with an empty diagram\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "bool QETDiagramEditor::openAndAddProject (const QString & filepath, bool interactive = \fCtrue\fP)"
+Ouvre un projet depuis un fichier et l'ajoute a cet editeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP Chemin du projet a ouvrir 
+.br
+\fIinteractive\fP true pour afficher des messages a l'utilisateur, false sinon 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si l'ouverture a reussi, false sinon 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::openBackupFiles (QList< KAutoSaveFile * > backup_files)"
+
+.PP
+\fBQETDiagramEditor::openBackupFiles\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbackup_files\fP 
+.RE
+.PP
+
+.SS "QList< \fBProjectView\fP * > QETDiagramEditor::openedProjects () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la liste des projets ouverts dans cette fenetre 
+.RE
+.PP
+
+.SS "bool QETDiagramEditor::openProject ()\fC [slot]\fP"
+Cette fonction demande un nom de fichier a ouvrir a l'utilisateur 
+.PP
+\fBReturns\fP
+.RS 4
+true si l'ouverture a reussi, false sinon 
+.RE
+.PP
+
+.SS "bool QETDiagramEditor::openRecentFile (const QString & filepath)\fC [slot]\fP"
+Slot utilise pour ouvrir un fichier recent\&. Transfere filepath au slot openAndAddDiagram seulement si cet editeur est actif 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP Fichier a ouvrir 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+openAndAddDiagram 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::projectWasClosed (\fBProjectView\fP * project_view)\fC [slot]\fP"
+
+.SS "void QETDiagramEditor::readSettings ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::readSettings\fP Read the settings\&. 
+.SS "void QETDiagramEditor::reloadOldElementPanel ()\fC [slot]\fP"
+
+.SS "void QETDiagramEditor::removeDiagram (\fBDiagram\fP * diagram)\fC [slot]\fP"
+Supprime un schema de son projet 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a supprimer 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::removeDiagramFromProject ()\fC [slot]\fP"
+Supprime le schema courant du projet courant 
+.SS "void QETDiagramEditor::rowColumnGroupTriggered (QAction * action)\fC [slot]\fP"
+
+.SS "void QETDiagramEditor::save ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::save\fP Ask the current active project to save\&. 
+.SS "void QETDiagramEditor::saveAs ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::saveAs\fP Ask the current active project to save as\&. 
+.SS "void QETDiagramEditor::selectGroupTriggered (QAction * action)\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::selectGroupTriggered\fP This slot is called when selection need to change\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaction\fP : Action that describes what to do\&. 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::selectionChanged ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::selectionChanged\fP This slot is called when a diagram selection was changed\&. 
+.SS "void QETDiagramEditor::selectionGroupTriggered (QAction * action)\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::selectionGroupTriggered\fP This slot is called when an action should be made on the current selection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaction\fP : Action that describe the action to do\&. 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::setTabbedMode ()\fC [slot]\fP"
+Affiche les projets dans des onglets\&. 
+.SS "void QETDiagramEditor::setUpActions ()\fC [private]\fP"
+
+.PP
+\fBQETDiagramEditor::setUpActions\fP Set up all Qaction\&. 
+.SS "void QETDiagramEditor::setUpAutonumberingWidget ()\fC [private]\fP"
+
+.PP
+\fBQETDiagramEditor::setUpAutonumberingWidget\fP Setup the dock for AutoNumbering Selection\&. 
+.SS "void QETDiagramEditor::setUpElementsCollectionWidget ()\fC [private]\fP"
+
+.PP
+\fBQETDiagramEditor::setUpElementsCollectionWidget\fP Set up the dock widget of element collection\&. 
+.SS "void QETDiagramEditor::setUpElementsPanel ()\fC [private]\fP"
+
+.PP
+\fBQETDiagramEditor::setUpElementsPanel\fP Setup the element panel and element panel widget\&. 
+.SS "void QETDiagramEditor::setUpMenu ()\fC [private]\fP"
+
+.PP
+\fBQETDiagramEditor::setUpMenu\fP\&. 
+.SS "void QETDiagramEditor::setUpSelectionPropertiesEditor ()\fC [private]\fP"
+
+.PP
+\fBQETDiagramEditor::setUpSelectionPropertiesEditor\fP Setup the dock for edit the current selection\&. 
+.SS "void QETDiagramEditor::setUpToolBar ()\fC [private]\fP"
+
+.PP
+\fBQETDiagramEditor::setUpToolBar\fP\&. 
+.SS "void QETDiagramEditor::setUpUndoStack ()\fC [private]\fP"
+
+.PP
+\fBQETDiagramEditor::setUpUndoStack\fP Setup the undostack and undo stack widget\&. 
+.SS "void QETDiagramEditor::setWindowedMode ()\fC [slot]\fP"
+Affiche les projets dans des fenetres\&. 
+.SS "void QETDiagramEditor::showError (const \fBQETResult\fP & result)\fC [slot]\fP"
+Show the error message contained in \fIresult\fP\&. 
+.SS "void QETDiagramEditor::showError (const QString & error)\fC [slot]\fP"
+Show the \fIerror\fP message\&. 
+.SS "void QETDiagramEditor::slot_updateActions ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::slot_updateActions\fP Manage actions\&. 
+.SS "void QETDiagramEditor::slot_updateAutoNumDock ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::slot_updateAutoNumDock\fP Update Auto Num Dock Widget when changing Project\&. 
+.SS "void QETDiagramEditor::slot_updateComplexActions ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::slot_updateComplexActions\fP Manage the actions who need some conditions to be enable or not\&. This method does nothing if there is no project opened\&. 
+.SS "void QETDiagramEditor::slot_updateModeActions ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::slot_updateModeActions\fP Manage action who need an opened diagram or project to be updated\&. 
+.SS "void QETDiagramEditor::slot_updatePasteAction ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::slot_updatePasteAction\fP Gere les actions ayant besoin du presse-papier\&. 
+.SS "void QETDiagramEditor::slot_updateUndoStack ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::slot_updateUndoStack\fP Update the undo stack view\&. 
+.SS "void QETDiagramEditor::slot_updateWindowsMenu ()\fC [slot]\fP"
+met a jour le menu 'Fenetres' 
+.SS "void QETDiagramEditor::subWindowActivated (QMdiSubWindow * subWindows)\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::subWindowActivated\fP Slot used to update menu and undo stack when subwindows of MDIarea was activated\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsubWindows\fP 
+.RE
+.PP
+
+.SS "QMdiSubWindow * QETDiagramEditor::subWindowForWidget (QWidget * widget) const\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget\fP Widget a rechercher dans la zone MDI 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+La sous-fenetre accueillant le widget passe en parametre, ou 0 si celui-ci n'a pas ete trouve\&. 
+.RE
+.PP
+
+.SS "\fBProjectView\fP * QETDiagramEditor::viewForFile (const QString & filepath) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP Un chemin de fichier Note : si filepath est une chaine vide, cette methode retourne 0\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le \fBProjectView\fP editant le fichier filepath, ou 0 si ce fichier n'est pas edite par cet editeur de schemas\&. 
+.RE
+.PP
+
+.SS "void QETDiagramEditor::writeSettings ()\fC [slot]\fP"
+
+.PP
+\fBQETDiagramEditor::writeSettings\fP Write the settings\&. 
+.SS "void QETDiagramEditor::zoomGroupTriggered (QAction * action)\fC [slot]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int QETDiagramEditor::activeSubWindowIndex\fC [private]\fP"
+
+.SS "QAction* QETDiagramEditor::conductor_default\fC [private]\fP"
+
+.PP
+Show a dialog to edit default conductor properties\&. 
+.SS "QToolBar * QETDiagramEditor::diagram_tool_bar = nullptr\fC [private]\fP"
+
+.SS "QActionGroup* QETDiagramEditor::grp_visu_sel\fC [private]\fP"
+
+.PP
+Action group for visualisation vs edition mode\&. 
+.SS "QActionGroup QETDiagramEditor::m_add_item_actions_group\fC [private]\fP"
+
+.SS "QToolBar * QETDiagramEditor::m_add_item_tool_bar = nullptr\fC [private]\fP"
+
+.SS "QAction* QETDiagramEditor::m_add_nomenclature\fC [private]\fP"
+
+.PP
+Add nomenclature graphics item;\&. 
+.SS "QAction* QETDiagramEditor::m_add_summary\fC [private]\fP"
+
+.PP
+Add summary graphics item\&. 
+.SS "QAction* QETDiagramEditor::m_auto_conductor\fC [private]\fP"
+
+.PP
+Enable/Disable the use of auto conductor\&. 
+.SS "\fBAutoNumberingDockWidget\fP* QETDiagramEditor::m_autonumbering_dock\fC [private]\fP"
+
+.SS "QAction* QETDiagramEditor::m_cascade_window\fC [private]\fP"
+
+.PP
+Show MDI subwindows as cascade\&. 
+.SS "QAction* QETDiagramEditor::m_clean_project\fC [private]\fP"
+
+.PP
+Clean the content of the curent project by removing useless items\&. 
+.SS "QAction* QETDiagramEditor::m_close_file\fC [private]\fP"
+
+.PP
+Close current project file\&. 
+.SS "QAction* QETDiagramEditor::m_conductor_reset"
+
+.PP
+Reset paths of selected conductors\&. 
+.SS "QAction* QETDiagramEditor::m_copy"
+
+.PP
+Copy selection to clipboard\&. 
+.SS "QAction* QETDiagramEditor::m_csv_export\fC [private]\fP"
+
+.PP
+generate nomenclature 
+.SS "QAction* QETDiagramEditor::m_cut"
+
+.PP
+Cut selection to clipboard\&. 
+.SS "QAction* QETDiagramEditor::m_delete_selection\fC [private]\fP"
+
+.PP
+Only zoom action must displayed in the toolbar\&. Delete selection 
+.SS "QActionGroup* QETDiagramEditor::m_depth_action_group = nullptr"
+
+.PP
+Action related to edit a selected item\&. 
+.SS "QToolBar * QETDiagramEditor::m_depth_tool_bar = nullptr\fC [private]\fP"
+
+.SS "QAction* QETDiagramEditor::m_draw_grid\fC [private]\fP"
+
+.PP
+Switch the background grid display or not\&. 
+.SS "QAction* QETDiagramEditor::m_edit_diagram_properties"
+
+.PP
+Show a dialog to edit diagram properties\&. 
+.SS "QAction* QETDiagramEditor::m_edit_selection\fC [private]\fP"
+
+.PP
+To edit selected item\&. 
+.SS "\fBElementsCollectionWidget\fP* QETDiagramEditor::m_element_collection_widget\fC [private]\fP"
+
+.PP
+Dock for the undo list\&. 
+.SS "QAction* QETDiagramEditor::m_export_diagram\fC [private]\fP"
+
+.PP
+Export diagrams of the current project as imagess\&. 
+.SS "QAction* QETDiagramEditor::m_export_project_db\fC [private]\fP"
+
+.SS "QActionGroup QETDiagramEditor::m_file_actions_group\fC [private]\fP"
+
+.PP
+Action related to global selections\&. 
+.SS "QAction* QETDiagramEditor::m_find = nullptr\fC [private]\fP"
+
+.SS "QAction* QETDiagramEditor::m_find_element\fC [private]\fP"
+
+.PP
+Find the selected element in the panel\&. 
+.SS "bool QETDiagramEditor::m_first_show = true\fC [private]\fP"
+
+.SS "QAction* QETDiagramEditor::m_grey_background\fC [private]\fP"
+
+.PP
+Switch the background color in white or grey\&. 
+.SS "QAction* QETDiagramEditor::m_group_selected_texts = nullptr\fC [private]\fP"
+
+.SS "QActionGroup* QETDiagramEditor::m_group_view_mode\fC [private]\fP"
+
+.PP
+Action group for project\&. 
+.SS "QAction* QETDiagramEditor::m_mode_selection\fC [private]\fP"
+
+.PP
+Set edition mode\&. 
+.SS "QAction* QETDiagramEditor::m_mode_visualise\fC [private]\fP"
+
+.PP
+Set visualisation mode\&. 
+.SS "QAction* QETDiagramEditor::m_next_window\fC [private]\fP"
+
+.PP
+Switch to the next document\&. 
+.SS "QAction* QETDiagramEditor::m_paste\fC [private]\fP"
+
+.PP
+Paste clipboard content on the current diagram\&. 
+.SS "QAction* QETDiagramEditor::m_previous_window\fC [private]\fP"
+
+.PP
+Switch to the previous document\&. 
+.SS "QAction* QETDiagramEditor::m_print\fC [private]\fP"
+
+.PP
+Print diagrams of the current project\&. 
+.SS "QAction* QETDiagramEditor::m_project_add_diagram\fC [private]\fP"
+
+.PP
+Add a diagram to the current project\&. 
+.SS "QAction* QETDiagramEditor::m_project_edit_properties\fC [private]\fP"
+
+.PP
+Edit the properties of the current project\&. 
+.SS "QAction* QETDiagramEditor::m_project_export_conductor_num\fC [private]\fP"
+
+.PP
+Export the wire num to csv\&. 
+.SS "QAction* QETDiagramEditor::m_project_folio_list\fC [private]\fP"
+
+.PP
+Sommaire des schemas\&. 
+.SS "QAction* QETDiagramEditor::m_project_terminalBloc\fC [private]\fP"
+
+.PP
+generate terminal block 
+.SS "QDockWidget* QETDiagramEditor::m_qdw_elmt_collection\fC [private]\fP"
+
+.PP
+Dock for the elements panel\&. 
+.SS "QAction* QETDiagramEditor::m_quit_editor\fC [private]\fP"
+
+.PP
+Quit the diagram editor\&. 
+.SS "QAction* QETDiagramEditor::m_remove_diagram_from_project\fC [private]\fP"
+
+.PP
+Delete a diagram from the current project\&. 
+.SS "QAction* QETDiagramEditor::m_rotate_selection\fC [private]\fP"
+
+.PP
+Rotate selected elements and text items by 90 degrees\&. 
+.SS "QAction* QETDiagramEditor::m_rotate_texts\fC [private]\fP"
+
+.PP
+Direct selected text items to a specific angle\&. 
+.SS "QActionGroup QETDiagramEditor::m_row_column_actions_group"
+
+.SS "QAction* QETDiagramEditor::m_save_file\fC [private]\fP"
+
+.PP
+Save current project\&. 
+.SS "QAction* QETDiagramEditor::m_save_file_as\fC [private]\fP"
+
+.PP
+Save current project as a specific file\&. 
+.SS "\fBSearchAndReplaceWidget\fP QETDiagramEditor::m_search_and_replace_widget\fC [private]\fP"
+
+.SS "QActionGroup QETDiagramEditor::m_select_actions_group\fC [private]\fP"
+
+.PP
+Action related to zoom for diagram\&. 
+.SS "QActionGroup QETDiagramEditor::m_selection_actions_group"
+
+.PP
+Action related to add/remove rows/column in diagram\&. 
+.SS "\fBDiagramPropertiesEditorDockWidget\fP* QETDiagramEditor::m_selection_properties_editor\fC [private]\fP"
+
+.SS "QAction* QETDiagramEditor::m_tabbed_view_mode\fC [private]\fP"
+
+.PP
+Actions related to file (open, close, save\&.\&.\&.) Display projects as tabs 
+.SS "QAction* QETDiagramEditor::m_tile_window\fC [private]\fP"
+
+.PP
+Export to file the internal database of the current project\&. Show MDI subwindows as tile 
+.SS "QAction* QETDiagramEditor::m_windowed_view_mode\fC [private]\fP"
+
+.PP
+Display projects as windows\&. 
+.SS "QMdiArea QETDiagramEditor::m_workspace\fC [private]\fP"
+
+.SS "QList<QAction *> QETDiagramEditor::m_zoom_action_toolBar\fC [private]\fP"
+
+.SS "QActionGroup QETDiagramEditor::m_zoom_actions_group\fC [private]\fP"
+
+.PP
+Action related to adding (add text image shape\&.\&.\&.) 
+.SS "QToolBar* QETDiagramEditor::main_tool_bar = nullptr\fC [private]\fP"
+
+.SS "QDir QETDiagramEditor::open_dialog_dir\fC [private]\fP"
+
+.SS "\fBElementsPanelWidget\fP* QETDiagramEditor::pa\fC [private]\fP"
+
+.PP
+Elements panel\&. 
+.SS "QDockWidget* QETDiagramEditor::qdw_pa\fC [private]\fP"
+
+.PP
+Directory to use for file dialogs such as File > save\&. 
+.SS "QDockWidget* QETDiagramEditor::qdw_undo\fC [private]\fP"
+
+.SS "QAction* QETDiagramEditor::redo\fC [private]\fP"
+
+.PP
+Redo the latest cancelled operation\&. 
+.SS "QAction* QETDiagramEditor::undo\fC [private]\fP"
+
+.PP
+Cancel the latest action\&. 
+.SS "QUndoGroup QETDiagramEditor::undo_group\fC [private]\fP"
+
+.SS "QToolBar * QETDiagramEditor::view_tool_bar = nullptr\fC [private]\fP"
+
+.SS "QSignalMapper QETDiagramEditor::windowMapper\fC [private]\fP"
+
+.SS "QMenu* QETDiagramEditor::windows_menu\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

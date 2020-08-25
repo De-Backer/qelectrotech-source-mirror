@@ -1,0 +1,87 @@
+.TH "QETInformation" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETInformation
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "QStringList \fBtitleblockInfoKeys\fP ()"
+.br
+.RI "\fBQETInformation::titleblockInfoKeys\fP\&. "
+.ti -1c
+.RI "QString \fBtitleblockTranslatedInfoKey\fP (const QString &info)"
+.br
+.RI "\fBQETInformation::titleblockTranslatedInfoKey\fP\&. "
+.ti -1c
+.RI "QString \fBtitleblockInfoKeysToVar\fP (const QString &info)"
+.br
+.RI "\fBQETInformation::titleblockInfoKeysToVar\fP\&. "
+.ti -1c
+.RI "QHash< QString, QString > \fBtitleblockTranslatedKeyHashVar\fP ()"
+.br
+.RI "\fBQETInformation::titleblockTranslatedKeyHashVar\fP\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "QStringList QETInformation::titleblockInfoKeys ()"
+
+.PP
+\fBQETInformation::titleblockInfoKeys\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+all available key for use with a titleblock 
+.RE
+.PP
+
+.SS "QString QETInformation::titleblockInfoKeysToVar (const QString & info)"
+
+.PP
+\fBQETInformation::titleblockInfoKeysToVar\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+var in form %{my-var} corresponding to the info\&. if there is not available var for the given info, the returned var is %{void} 
+.RE
+.PP
+
+.SS "QString QETInformation::titleblockTranslatedInfoKey (const QString & info)"
+
+.PP
+\fBQETInformation::titleblockTranslatedInfoKey\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo\fP : info key to be translated 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the translated information given by info If info don't match, return an empty string 
+.RE
+.PP
+
+.SS "QHash< QString, QString > QETInformation::titleblockTranslatedKeyHashVar ()"
+
+.PP
+\fBQETInformation::titleblockTranslatedKeyHashVar\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a QHash with for key, the translated information key of title block, and for value the corresponding var\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

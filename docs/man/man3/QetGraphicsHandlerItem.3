@@ -1,0 +1,174 @@
+.TH "QetGraphicsHandlerItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QetGraphicsHandlerItem \- The \fBQetGraphicsHandlerItem\fP class This graphics item represents a point, destined to be used as an handler, for modifie the geometrie of a another graphics item (like shapes)\&. The graphics item to be modified, must call 'installSceneEventFilter' of this item with itself for argument,\&. The ghraphics item to be modified, need to reimplement 'sceneEventFilter' for create the modification behavior\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetgraphicshandleritem\&.h>\fP
+.PP
+Inherits QGraphicsItem\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1200 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQetGraphicsHandlerItem\fP (qreal size=10)"
+.br
+.RI "\fBQetGraphicsHandlerItem::QetGraphicsHandlerItem\fP\&. "
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBQetGraphicsHandlerItem::boundingRect\fP\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "void \fBsetColor\fP (QColor color)"
+.br
+.RI "\fBQetGraphicsHandlerItem::setColor\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QVector< \fBQetGraphicsHandlerItem\fP * > \fBhandlerForPoint\fP (const QVector< QPointF > &points, int size=10)"
+.br
+.RI "\fBQetGraphicsHandlerItem::handlerForPoint\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override"
+.br
+.RI "\fBQetGraphicsHandlerItem::paint\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QRectF \fBm_handler_rect\fP"
+.br
+.ti -1c
+.RI "QRectF \fBm_br\fP"
+.br
+.ti -1c
+.RI "qreal \fBm_size\fP"
+.br
+.ti -1c
+.RI "QColor \fBm_color\fP"
+.br
+.ti -1c
+.RI "QPen \fBm_pen\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBQetGraphicsHandlerItem\fP class This graphics item represents a point, destined to be used as an handler, for modifie the geometrie of a another graphics item (like shapes)\&. The graphics item to be modified, must call 'installSceneEventFilter' of this item with itself for argument,\&. The ghraphics item to be modified, need to reimplement 'sceneEventFilter' for create the modification behavior\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QetGraphicsHandlerItem::QetGraphicsHandlerItem (qreal size = \fC10\fP)"
+
+.PP
+\fBQetGraphicsHandlerItem::QetGraphicsHandlerItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP : the size of the handler 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QRectF QetGraphicsHandlerItem::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBQetGraphicsHandlerItem::boundingRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QVector< \fBQetGraphicsHandlerItem\fP * > QetGraphicsHandlerItem::handlerForPoint (const QVector< QPointF > & points, int size = \fC10\fP)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsHandlerItem::handlerForPoint\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpoints\fP 
+.br
+\fIsize\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A list of handler with pos at point 
+.RE
+.PP
+
+.SS "void QetGraphicsHandlerItem::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBQetGraphicsHandlerItem::paint\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.br
+\fIoption\fP 
+.br
+\fIwidget\fP 
+.RE
+.PP
+
+.SS "void QetGraphicsHandlerItem::setColor (QColor color)"
+
+.PP
+\fBQetGraphicsHandlerItem::setColor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolor\fP : set the color of the handler 
+.RE
+.PP
+
+.SS "int QetGraphicsHandlerItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QRectF QetGraphicsHandlerItem::m_br\fC [private]\fP"
+
+.SS "QColor QetGraphicsHandlerItem::m_color\fC [private]\fP"
+
+.SS "QRectF QetGraphicsHandlerItem::m_handler_rect\fC [private]\fP"
+
+.SS "QPen QetGraphicsHandlerItem::m_pen\fC [private]\fP"
+
+.SS "qreal QetGraphicsHandlerItem::m_size\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

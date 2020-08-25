@@ -1,0 +1,312 @@
+.TH "MasterPropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MasterPropertiesWidget \- The \fBMasterPropertiesWidget\fP class This class is a widget for make link between a master element with several slave element\&. This class embenddedthe undo/redo command when apply new connection\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <masterpropertieswidget\&.h>\fP
+.PP
+Inherits \fBAbstractElementPropertiesEditorWidget\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateUi\fP () override"
+.br
+.RI "\fBMasterPropertiesWidget::updateUi\fP Build the interface of the widget\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMasterPropertiesWidget\fP (\fBElement\fP *elmt, QWidget *parent=nullptr)"
+.br
+.RI "\fBMasterPropertiesWidget::MasterPropertiesWidget\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~MasterPropertiesWidget\fP () override"
+.br
+.RI "\fBMasterPropertiesWidget::~MasterPropertiesWidget\fP Destructor\&. "
+.ti -1c
+.RI "void \fBsetElement\fP (\fBElement\fP *element) override"
+.br
+.RI "\fBMasterPropertiesWidget::setElement\fP Set the element to be edited\&. "
+.ti -1c
+.RI "void \fBapply\fP () override"
+.br
+.RI "\fBMasterPropertiesWidget::apply\fP If link betwen edited element and other change, apply the change with a QUndoCommand (got with method associatedUndo) pushed to the stack of element project\&. Return true if link change, else false\&. "
+.ti -1c
+.RI "void \fBreset\fP () override"
+.br
+.RI "\fBMasterPropertiesWidget::reset\fP Reset curent widget, clear eveything and rebuild widget\&. "
+.ti -1c
+.RI "QUndoCommand * \fBassociatedUndo\fP () const override"
+.br
+.RI "\fBMasterPropertiesWidget::associatedUndo\fP If link between the edited element and other change, return a QUndoCommand with this change\&. If no change return nullptr\&. "
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.RI "title "
+.ti -1c
+.RI "bool \fBsetLiveEdit\fP (bool live_edit) override"
+.br
+.RI "\fBMasterPropertiesWidget::setLiveEdit\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBheaderCustomContextMenuRequested\fP (const QPoint &pos)"
+.br
+.RI "\fBMasterPropertiesWidget::headerCustomContextMenuRequested\fP\&. "
+.ti -1c
+.RI "void \fBon_link_button_clicked\fP ()"
+.br
+.RI "\fBMasterPropertiesWidget::on_link_button_clicked\fP move curent item in the free_list to linked_list\&. "
+.ti -1c
+.RI "void \fBon_unlink_button_clicked\fP ()"
+.br
+.RI "\fBMasterPropertiesWidget::on_unlink_button_clicked\fP move curent item in linked_list to free_list\&. "
+.ti -1c
+.RI "void \fBshowElementFromTWI\fP (QTreeWidgetItem *qtwi, int column)"
+.br
+.RI "\fBMasterPropertiesWidget::showElementFromTWI\fP Show the element corresponding to the given QTreeWidgetItem\&. "
+.ti -1c
+.RI "void \fBshowedElementWasDeleted\fP ()"
+.br
+.RI "\fBMasterPropertiesWidget::showedElementWasDeleted\fP Set to nullptr the current showed element when he was deleted\&. "
+.ti -1c
+.RI "void \fBdiagramWasdeletedFromProject\fP ()"
+.br
+.RI "\fBMasterPropertiesWidget::diagramWasdeletedFromProject\fP This slot is called when a diagram is removed from the parent project of edited element to update the content of this widget\&. "
+.ti -1c
+.RI "void \fBcustomContextMenu\fP (const QPoint &pos, int i=0)"
+.br
+.RI "\fBMasterPropertiesWidget::customContextMenu\fP Display a context menu\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::MasterPropertiesWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "QHash< QTreeWidgetItem *, \fBElement\fP * > \fBm_qtwi_hash\fP"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_qtwi_at_context_menu\fP = nullptr"
+.br
+.ti -1c
+.RI "QPointer< \fBElement\fP > \fBm_showed_element\fP"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP"
+.br
+.ti -1c
+.RI "QMenu * \fBm_context_menu\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_link_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_unlink_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_show_qtwi\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_show_element\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_save_header_state\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBMasterPropertiesWidget\fP class This class is a widget for make link between a master element with several slave element\&. This class embenddedthe undo/redo command when apply new connection\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MasterPropertiesWidget::MasterPropertiesWidget (\fBElement\fP * elmt, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBMasterPropertiesWidget::MasterPropertiesWidget\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "MasterPropertiesWidget::~MasterPropertiesWidget ()\fC [override]\fP"
+
+.PP
+\fBMasterPropertiesWidget::~MasterPropertiesWidget\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void MasterPropertiesWidget::apply ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBMasterPropertiesWidget::apply\fP If link betwen edited element and other change, apply the change with a QUndoCommand (got with method associatedUndo) pushed to the stack of element project\&. Return true if link change, else false\&. 
+.PP
+\fBNote\fP
+.RS 4
+is void no Return ??? 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "QUndoCommand * MasterPropertiesWidget::associatedUndo () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBMasterPropertiesWidget::associatedUndo\fP If link between the edited element and other change, return a QUndoCommand with this change\&. If no change return nullptr\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void MasterPropertiesWidget::customContextMenu (const QPoint & pos, int i = \fC0\fP)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMasterPropertiesWidget::customContextMenu\fP Display a context menu\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP 
+.br
+\fIi\fP : the tree widget where the context menu was requested\&. 
+.RE
+.PP
+
+.SS "void MasterPropertiesWidget::diagramWasdeletedFromProject ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMasterPropertiesWidget::diagramWasdeletedFromProject\fP This slot is called when a diagram is removed from the parent project of edited element to update the content of this widget\&. 
+.SS "void MasterPropertiesWidget::headerCustomContextMenuRequested (const QPoint & pos)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMasterPropertiesWidget::headerCustomContextMenuRequested\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP 
+.RE
+.PP
+
+.SS "void MasterPropertiesWidget::on_link_button_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMasterPropertiesWidget::on_link_button_clicked\fP move curent item in the free_list to linked_list\&. 
+.SS "void MasterPropertiesWidget::on_unlink_button_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMasterPropertiesWidget::on_unlink_button_clicked\fP move curent item in linked_list to free_list\&. 
+.SS "void MasterPropertiesWidget::reset ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBMasterPropertiesWidget::reset\fP Reset curent widget, clear eveything and rebuild widget\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void MasterPropertiesWidget::setElement (\fBElement\fP * element)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBMasterPropertiesWidget::setElement\fP Set the element to be edited\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.PP
+Implements \fBAbstractElementPropertiesEditorWidget\fP\&.
+.SS "bool MasterPropertiesWidget::setLiveEdit (bool live_edit)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBMasterPropertiesWidget::setLiveEdit\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlive_edit\fP = true : live edit is enable else false : live edit is disable\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+always true because live edit is handled by this editor widget 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void MasterPropertiesWidget::showedElementWasDeleted ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMasterPropertiesWidget::showedElementWasDeleted\fP Set to nullptr the current showed element when he was deleted\&. 
+.SS "void MasterPropertiesWidget::showElementFromTWI (QTreeWidgetItem * qtwi, int column)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBMasterPropertiesWidget::showElementFromTWI\fP Show the element corresponding to the given QTreeWidgetItem\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqtwi\fP 
+.br
+\fIcolumn\fP 
+.RE
+.PP
+
+.SS "QString MasterPropertiesWidget::title () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+title 
+.PP
+\fBReturns\fP
+.RS 4
+QString title 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void MasterPropertiesWidget::updateUi ()\fC [override]\fP, \fC [slot]\fP"
+
+.PP
+\fBMasterPropertiesWidget::updateUi\fP Build the interface of the widget\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QMenu* MasterPropertiesWidget::m_context_menu\fC [private]\fP"
+
+.SS "QAction* MasterPropertiesWidget::m_link_action\fC [private]\fP"
+
+.SS "\fBQETProject\fP* MasterPropertiesWidget::m_project\fC [private]\fP"
+
+.SS "QTreeWidgetItem* MasterPropertiesWidget::m_qtwi_at_context_menu = nullptr\fC [private]\fP"
+
+.SS "QHash<QTreeWidgetItem *, \fBElement\fP *> MasterPropertiesWidget::m_qtwi_hash\fC [private]\fP"
+
+.SS "QAction * MasterPropertiesWidget::m_save_header_state\fC [private]\fP"
+
+.SS "QAction * MasterPropertiesWidget::m_show_element\fC [private]\fP"
+
+.SS "QAction * MasterPropertiesWidget::m_show_qtwi\fC [private]\fP"
+
+.SS "QPointer<\fBElement\fP> MasterPropertiesWidget::m_showed_element\fC [private]\fP"
+
+.SS "QAction * MasterPropertiesWidget::m_unlink_action\fC [private]\fP"
+
+.SS "Ui::MasterPropertiesWidget* MasterPropertiesWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,10 @@
+<map id="FolioAutonumberingW::applyEnable" name="FolioAutonumberingW::applyEnable">
+<area shape="rect" id="node1" title="SelectAutonumW::applyEnable enable/disable the apply button." alt="" coords="692,169,843,211"/>
+<area shape="rect" id="node2" href="$dc/d2b/class_folio_autonumbering_w.html#a7ac23bf7905f93872a0d5182f691ef28" title=" " alt="" coords="447,5,606,47"/>
+<area shape="rect" id="node3" href="$dc/d2b/class_folio_autonumbering_w.html#a5a0c31ebafa9c991b1f5d9e0a44777cf" title="SelectAutonumW::on_buttonBox_clicked Action on buttonBox clicked." alt="" coords="5,97,163,139"/>
+<area shape="rect" id="node4" href="$dc/d2b/class_folio_autonumbering_w.html#a5f8728734f4039c2ddf20c7934ca4afd" title="FolioAutonumberingW::on_m_autonumber_tabs_rb_clicked Enable From ComboBox, fill From ComboBox." alt="" coords="442,122,611,178"/>
+<area shape="rect" id="node6" href="$dc/d2b/class_folio_autonumbering_w.html#af396ec2c384b9ccfaefbe82745da9f83" title="FolioAutonumberingW::on_m_create_new_tabs_rb_clicked Enable New Tabs SpinBox." alt="" coords="443,202,611,258"/>
+<area shape="rect" id="node7" href="$dc/d2b/class_folio_autonumbering_w.html#a85c1830226f34181fb99139402450a13" title="FolioAutonumberingW::on_m_from_cb_currentIndexChanged Enable To ComboBox." alt="" coords="429,282,624,338"/>
+<area shape="rect" id="node8" href="$dc/d2b/class_folio_autonumbering_w.html#a06055527a4f07b6e253f8d2027733d00" title="FolioAutonumberingW::on_m_new_tabs_sb_valueChanged Enable Apply if any new folio is to be created." alt="" coords="409,363,644,404"/>
+<area shape="rect" id="node5" href="$dc/d2b/class_folio_autonumbering_w.html#aced97b687a8b5c421482b4d52b01bd95" title="FolioAutonumberingW::updateFolioList update Folio List in From and To ComboBox." alt="" coords="211,129,361,171"/>
+</map>

@@ -1,0 +1,315 @@
+.TH "ConductorTextItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConductorTextItem
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductortextitem\&.h>\fP
+.PP
+Inherits \fBDiagramTextItem\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1006 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorTextItem\fP (\fBConductor\fP *=nullptr)"
+.br
+.ti -1c
+.RI "\fBConductorTextItem\fP (const QString &, \fBConductor\fP *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ConductorTextItem\fP () override"
+.br
+.ti -1c
+.RI "\fBConductor\fP * \fBparentConductor\fP () const"
+.br
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &) override"
+.br
+.RI "\fBConductorTextItem::fromXml\fP Read the properties stored in the xml element given in parameter\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "virtual bool \fBwasMovedByUser\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBwasRotateByUser\fP () const"
+.br
+.RI "\fBConductorTextItem::wasRotateByUser\fP\&. "
+.ti -1c
+.RI "virtual void \fBforceMovedByUser\fP (bool)"
+.br
+.ti -1c
+.RI "virtual void \fBforceRotateByUser\fP (bool)"
+.br
+.RI "\fBConductorTextItem::forceRotateByUser\fP\&. "
+.ti -1c
+.RI "virtual void \fBsetPos\fP (const QPointF &pos)"
+.br
+.RI "\fBConductorTextItem::setPos\fP\&. "
+.ti -1c
+.RI "virtual void \fBsetPos\fP (qreal x, qreal y)"
+.br
+.RI "\fBConductorTextItem::setPos\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBConductorTextItem::mousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBConductorTextItem::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBConductorTextItem::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "void \fBhoverEnterEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.ti -1c
+.RI "void \fBhoverLeaveEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.ti -1c
+.RI "void \fBhoverMoveEvent\fP (QGraphicsSceneHoverEvent *) override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorTextItem\fP (const \fBConductorTextItem\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConductor\fP * \fBparent_conductor_\fP"
+.br
+.ti -1c
+.RI "bool \fBmoved_by_user_\fP"
+.br
+.ti -1c
+.RI "bool \fBrotate_by_user_\fP"
+.br
+.ti -1c
+.RI "QPointF \fBbefore_mov_pos_\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents a text item attached to a parent conductor\&. It may be moved and edited by users\&. It may also be rotated to any angle\&. Its movements are however limited to a particular distance around its parent conductor\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConductorTextItem::ConductorTextItem (\fBConductor\fP * parent_conductor = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_conductor\fP Conducteur auquel ce texte est rattache 
+.RE
+.PP
+
+.SS "ConductorTextItem::ConductorTextItem (const QString & text, \fBConductor\fP * parent_conductor = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP Le texte affiche par le champ de texte 
+.br
+\fIparent_conductor\fP Conducteur auquel ce texte est rattache 
+.RE
+.PP
+
+.SS "ConductorTextItem::~ConductorTextItem ()\fC [override]\fP"
+Destructeur 
+.SS "ConductorTextItem::ConductorTextItem (const \fBConductorTextItem\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ConductorTextItem::forceMovedByUser (bool moved_by_user)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fImoved_by_user\fP true pour que la position du texte soit consideree comme ayant ete definie par l'utilisateur (et donc soit sauvegardee), false pour remettre le texte a sa position originelle 
+.RE
+.PP
+
+.SS "void ConductorTextItem::forceRotateByUser (bool rotate_by_user)\fC [virtual]\fP"
+
+.PP
+\fBConductorTextItem::forceRotateByUser\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrotate_by_user\fP true pour que la rotation du texte soit consideree comme ayant ete definie par l'utilisateur (et donc soit sauvegardee), false pour remettre le texte a sont angle originelle 
+.RE
+.PP
+
+.SS "void ConductorTextItem::fromXml (const QDomElement & e)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBConductorTextItem::fromXml\fP Read the properties stored in the xml element given in parameter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.PP
+Implements \fBDiagramTextItem\fP\&.
+.SS "void ConductorTextItem::hoverEnterEvent (QGraphicsSceneHoverEvent * e)\fC [override]\fP, \fC [protected]\fP"
+When mouse over element change m_mouse_hover to true (used in \fBpaint()\fP function ) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP QGraphicsSceneHoverEvent 
+.RE
+.PP
+
+.SS "void ConductorTextItem::hoverLeaveEvent (QGraphicsSceneHoverEvent * e)\fC [override]\fP, \fC [protected]\fP"
+When mouse over element leave the position change m_mouse_hover to false(used in paint() function ) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP QGraphicsSceneHoverEvent 
+.RE
+.PP
+
+.SS "void ConductorTextItem::hoverMoveEvent (QGraphicsSceneHoverEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Do nothing default function \&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP QGraphicsSceneHoverEvent 
+.RE
+.PP
+
+.SS "void ConductorTextItem::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductorTextItem::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void ConductorTextItem::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductorTextItem::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void ConductorTextItem::mouseReleaseEvent (QGraphicsSceneMouseEvent * e)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductorTextItem::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+
+.SS "\fBConductor\fP * ConductorTextItem::parentConductor () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le conducteur parent de ce champ de texte, ou 0 si celui-ci n'en a pas 
+.RE
+.PP
+
+.SS "void ConductorTextItem::setPos (const QPointF & pos)\fC [virtual]\fP"
+
+.PP
+\fBConductorTextItem::setPos\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP 
+.RE
+.PP
+
+.SS "void ConductorTextItem::setPos (qreal x, qreal y)\fC [virtual]\fP"
+
+.PP
+\fBConductorTextItem::setPos\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP 
+.br
+\fIy\fP 
+.RE
+.PP
+
+.SS "int ConductorTextItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "bool ConductorTextItem::wasMovedByUser () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si ce champ de texte a ete explictement deplace par l'utilisateur, false sinon 
+.RE
+.PP
+
+.SS "bool ConductorTextItem::wasRotateByUser () const\fC [virtual]\fP"
+
+.PP
+\fBConductorTextItem::wasRotateByUser\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if text was explicit moved by user else false 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QPointF ConductorTextItem::before_mov_pos_\fC [private]\fP"
+
+.SS "bool ConductorTextItem::moved_by_user_\fC [private]\fP"
+
+.SS "\fBConductor\fP* ConductorTextItem::parent_conductor_\fC [private]\fP"
+
+.SS "bool ConductorTextItem::rotate_by_user_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,667 @@
+.TH "ElementsLocation" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementsLocation \- The \fBElementsLocation\fP class This class represents the location, the location of an element or of a category, even of a collection \&.\&.\&. in a collection\&. She encapsulates a virtual path\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementslocation\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsLocation\fP ()"
+.br
+.RI "\fBElementsLocation::ElementsLocation\fP Constructor\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP (const QString &\fBpath\fP, \fBQETProject\fP *\fBproject\fP=nullptr)"
+.br
+.RI "\fBElementsLocation::ElementsLocation\fP\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP (const \fBElementsLocation\fP &)"
+.br
+.RI "\fBElementsLocation::ElementsLocation\fP The copy constructor\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP (const QMimeData *data)"
+.br
+.RI "ElementsLocation::ElementLocation Constructor, build an ElementLocation from a QMimeData, the mime data format must be 'application/x-qet-element-uri' or 'application/x-qet-category-uri'\&. This location can be null even if format is valid\&. "
+.ti -1c
+.RI "virtual \fB~ElementsLocation\fP ()"
+.br
+.RI "\fBElementsLocation::~ElementsLocation\fP Destructeur\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP & \fBoperator=\fP (const \fBElementsLocation\fP &)"
+.br
+.RI "\fBElementsLocation::operator =\fP Assignment operator\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBElementsLocation\fP &) const"
+.br
+.RI "\fBElementsLocation::operator ==\fP\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBElementsLocation\fP &) const"
+.br
+.RI "\fBElementsLocation::operator !=\fP Operateur de comparaison\&. "
+.ti -1c
+.RI "QString \fBbaseName\fP () const"
+.br
+.RI "\fBElementsLocation::baseName\fP\&. "
+.ti -1c
+.RI "QString \fBcollectionPath\fP (bool protocol=true) const"
+.br
+.RI "\fBElementsLocation::collectionPath\fP Return the path of the represented element relative to collection if protocol is true the path is prepended by the collection type (common://, custom:// or embed://) else if false, only the collection path is returned without the collection type\&. "
+.ti -1c
+.RI "QString \fBprojectCollectionPath\fP () const"
+.br
+.RI "\fBElementsLocation::projectCollectionPath\fP\&. "
+.ti -1c
+.RI "QString \fBfileSystemPath\fP () const"
+.br
+.RI "\fBElementsLocation::fileSystemPath\fP\&. "
+.ti -1c
+.RI "QString \fBpath\fP () const"
+.br
+.RI "\fBElementsLocation::path\fP\&. "
+.ti -1c
+.RI "void \fBsetPath\fP (const QString &\fBpath\fP)"
+.br
+.RI "\fBElementsLocation::setPath\fP Set the path of this item\&. The path can be relative to a collection (start by common:// , custom:// or embed://) or not\&. "
+.ti -1c
+.RI "bool \fBaddToPath\fP (const QString &)"
+.br
+.RI "\fBElementsLocation::addToPath\fP Add a string to the actual path of this location\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP \fBparent\fP () const"
+.br
+.RI "\fBElementsLocation::parent\fP\&. "
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject\fP () const"
+.br
+.RI "\fBElementsLocation::project\fP\&. "
+.ti -1c
+.RI "void \fBsetProject\fP (\fBQETProject\fP *)"
+.br
+.RI "\fBElementsLocation::setProject\fP\&. "
+.ti -1c
+.RI "bool \fBisNull\fP () const"
+.br
+.RI "\fBElementsLocation::isNull\fP\&. "
+.ti -1c
+.RI "QString \fBtoString\fP () const"
+.br
+.RI "\fBElementsLocation::toString\fP\&. "
+.ti -1c
+.RI "bool \fBisElement\fP () const"
+.br
+.RI "\fBElementsLocation::isElement\fP\&. "
+.ti -1c
+.RI "bool \fBisDirectory\fP () const"
+.br
+.RI "\fBElementsLocation::isDirectory\fP\&. "
+.ti -1c
+.RI "bool \fBisFileSystem\fP () const"
+.br
+.RI "\fBElementsLocation::isFileSystem\fP\&. "
+.ti -1c
+.RI "bool \fBisCommonCollection\fP () const"
+.br
+.RI "\fBElementsLocation::isCommonCollection\fP\&. "
+.ti -1c
+.RI "bool \fBisCustomCollection\fP () const"
+.br
+.RI "\fBElementsLocation::isCustomCollection\fP\&. "
+.ti -1c
+.RI "bool \fBisProject\fP () const"
+.br
+.RI "\fBElementsLocation::isProject\fP\&. "
+.ti -1c
+.RI "bool \fBexist\fP () const"
+.br
+.RI "\fBElementsLocation::exist\fP\&. "
+.ti -1c
+.RI "bool \fBisWritable\fP () const"
+.br
+.RI "\fBElementsLocation::isWritable\fP\&. "
+.ti -1c
+.RI "\fBXmlElementCollection\fP * \fBprojectCollection\fP () const"
+.br
+.RI "\fBElementsLocation::projectCollection\fP\&. "
+.ti -1c
+.RI "\fBNamesList\fP \fBnameList\fP ()"
+.br
+.RI "\fBElementsLocation::nameList\fP\&. "
+.ti -1c
+.RI "QDomElement \fBxml\fP () const"
+.br
+.RI "\fBElementsLocation::xml\fP\&. "
+.ti -1c
+.RI "pugi::xml_document \fBpugiXml\fP () const"
+.br
+.RI "\fBElementsLocation::pugiXml\fP\&. "
+.ti -1c
+.RI "bool \fBsetXml\fP (const QDomDocument &xml_document) const"
+.br
+.RI "\fBElementsLocation::setXml\fP Replace the current xml description by xml_document; The document element of xml_document must have tagname 'definition' to be written This definition must be writable\&. "
+.ti -1c
+.RI "QUuid \fBuuid\fP () const"
+.br
+.RI "\fBElementsLocation::uuid\fP\&. "
+.ti -1c
+.RI "QIcon \fBicon\fP () const"
+.br
+.RI "ElementLocation::icon\&. "
+.ti -1c
+.RI "QString \fBname\fP () const"
+.br
+.RI "ElementLocation::name\&. "
+.ti -1c
+.RI "QString \fBfileName\fP () const"
+.br
+.RI "ElementLocation::fileName\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBelementInformations\fP () const"
+.br
+.RI "\fBElementsLocation::elementInformations\fP\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBMetaTypeId\fP = qRegisterMetaType<\fBElementsLocation\fP>('ElementsLocation')"
+.br
+.RI "Id of the corresponding Qt meta type\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBm_collection_path\fP"
+.br
+.ti -1c
+.RI "QString \fBm_file_system_path\fP"
+.br
+.ti -1c
+.RI "\fBQETProject\fP * \fBm_project\fP = nullptr"
+.br
+.ti -1c
+.RI "std::stringstream \fBm_string_stream\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementsLocation\fP class This class represents the location, the location of an element or of a category, even of a collection \&.\&.\&. in a collection\&. She encapsulates a virtual path\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementsLocation::ElementsLocation ()"
+
+.PP
+\fBElementsLocation::ElementsLocation\fP Constructor\&. 
+.SS "ElementsLocation::ElementsLocation (const QString & path, \fBQETProject\fP * project = \fCnullptr\fP)"
+
+.PP
+\fBElementsLocation::ElementsLocation\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : Item location path 
+.br
+\fIproject\fP : Project of the location of the element 
+.RE
+.PP
+
+.SS "ElementsLocation::ElementsLocation (const \fBElementsLocation\fP & other)"
+
+.PP
+\fBElementsLocation::ElementsLocation\fP The copy constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP : Alternate item location to copy 
+.RE
+.PP
+
+.SS "ElementsLocation::ElementsLocation (const QMimeData * data)"
+
+.PP
+ElementsLocation::ElementLocation Constructor, build an ElementLocation from a QMimeData, the mime data format must be 'application/x-qet-element-uri' or 'application/x-qet-category-uri'\&. This location can be null even if format is valid\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP 
+.RE
+.PP
+
+.SS "ElementsLocation::~ElementsLocation ()\fC [virtual]\fP"
+
+.PP
+\fBElementsLocation::~ElementsLocation\fP Destructeur\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ElementsLocation::addToPath (const QString & string)"
+
+.PP
+\fBElementsLocation::addToPath\fP Add a string to the actual path of this location\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the operation success 
+.RE
+.PP
+
+.SS "QString ElementsLocation::baseName () const"
+
+.PP
+\fBElementsLocation::baseName\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The base name of the element or directory\&. Unlike \fBElementsLocation::fileName\fP, this method don't return the extension name\&. For exemple if this location represent an element they return myElement\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBfileName()\fP 
+.RE
+.PP
+
+.SS "QString ElementsLocation::collectionPath (bool protocol = \fCtrue\fP) const"
+
+.PP
+\fBElementsLocation::collectionPath\fP Return the path of the represented element relative to collection if protocol is true the path is prepended by the collection type (common://, custom:// or embed://) else if false, only the collection path is returned without the collection type\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprotocol\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the path 
+.RE
+.PP
+
+.SS "\fBDiagramContext\fP ElementsLocation::elementInformations () const"
+
+.PP
+\fBElementsLocation::elementInformations\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the element information of the element represented by this location\&. If the location is a directory, the returned diagram context is empty 
+.RE
+.PP
+
+.SS "bool ElementsLocation::exist () const"
+
+.PP
+\fBElementsLocation::exist\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if this location represent an existing directory or element\&. 
+.RE
+.PP
+
+.SS "QString ElementsLocation::fileName () const"
+
+.PP
+ElementLocation::fileName\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Return the file name of the represented item, whatever the storage system (file system, xml collection) with is file extension\&. For example if this location represent an element, they return myElement\&.elmt\&. For a directory return myDirectory\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBbaseName\fP 
+.RE
+.PP
+
+.SS "QString ElementsLocation::fileSystemPath () const"
+
+.PP
+\fBElementsLocation::fileSystemPath\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The file system path of this element, (the separator is always '/' see QDir::toNativeSeparators()) If this element is embedded in a project return an empty string; 
+.RE
+.PP
+
+.SS "QIcon ElementsLocation::icon () const"
+
+.PP
+ElementLocation::icon\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The icon of the represented element\&. If icon can't be set, return a null QIcon 
+.RE
+.PP
+
+.SS "bool ElementsLocation::isCommonCollection () const"
+
+.PP
+\fBElementsLocation::isCommonCollection\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if this location represent an item from the common collection 
+.RE
+.PP
+
+.SS "bool ElementsLocation::isCustomCollection () const"
+
+.PP
+\fBElementsLocation::isCustomCollection\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if this location represent an item from the custom collection 
+.RE
+.PP
+
+.SS "bool ElementsLocation::isDirectory () const"
+
+.PP
+\fBElementsLocation::isDirectory\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this location represent a directory 
+.RE
+.PP
+
+.SS "bool ElementsLocation::isElement () const"
+
+.PP
+\fBElementsLocation::isElement\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this location represent an element 
+.RE
+.PP
+
+.SS "bool ElementsLocation::isFileSystem () const"
+
+.PP
+\fBElementsLocation::isFileSystem\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if 
+.RE
+.PP
+
+.SS "bool ElementsLocation::isNull () const"
+
+.PP
+\fBElementsLocation::isNull\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if the location seems usable (virtual path not empty)\&. 
+.RE
+.PP
+
+.SS "bool ElementsLocation::isProject () const"
+
+.PP
+\fBElementsLocation::isProject\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if this location represent an item from a project\&. 
+.RE
+.PP
+
+.SS "bool ElementsLocation::isWritable () const"
+
+.PP
+\fBElementsLocation::isWritable\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if this element can be writable (can use set xml) 
+.RE
+.PP
+
+.SS "QString ElementsLocation::name () const"
+
+.PP
+ElementLocation::name\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The name of the represented element in the current local 
+.RE
+.PP
+
+.SS "\fBNamesList\fP ElementsLocation::nameList ()"
+
+.PP
+\fBElementsLocation::nameList\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the namelist of the represented element or directory\&. If namelist can't be set, return a empty namelist 
+.RE
+.PP
+
+.SS "bool ElementsLocation::operator!= (const \fBElementsLocation\fP & other) const"
+
+.PP
+\fBElementsLocation::operator !=\fP Operateur de comparaison\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP Autre emplacement d'element a comparer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si other et cet \fBElementsLocation\fP sont differents, false sinon 
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP & ElementsLocation::operator= (const \fBElementsLocation\fP & other)"
+
+.PP
+\fBElementsLocation::operator =\fP Assignment operator\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP : Other item location to assign 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+*this \fBElementsLocation\fP 
+.RE
+.PP
+
+.SS "bool ElementsLocation::operator== (const \fBElementsLocation\fP & other) const"
+
+.PP
+\fBElementsLocation::operator ==\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP : other item location to compare 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if other and this \fBElementsLocation\fP are identical, false otherwise 
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP ElementsLocation::parent () const"
+
+.PP
+\fBElementsLocation::parent\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the location of the parent category, or a copy of this location when it represents a root category\&. 
+.RE
+.PP
+
+.SS "QString ElementsLocation::path () const"
+
+.PP
+\fBElementsLocation::path\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The path of this location\&. 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+use instead collectionPath(true) 
+.RE
+.PP
+
+.SS "\fBQETProject\fP * ElementsLocation::project () const"
+
+.PP
+\fBElementsLocation::project\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the project of this location or 0 if it is not linked to a project\&. 
+.RE
+.PP
+
+.SS "\fBXmlElementCollection\fP * ElementsLocation::projectCollection () const"
+
+.PP
+\fBElementsLocation::projectCollection\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+If this location represente a item in an embedded project collection, return this collection else return nullptr\&. 
+.RE
+.PP
+
+.SS "QString ElementsLocation::projectCollectionPath () const"
+
+.PP
+\fBElementsLocation::projectCollectionPath\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The path is in form : project0+embed://dir/subdir/myElement\&.elmt If this item represent a file system thing, return a null QString; 
+.RE
+.PP
+
+.SS "pugi::xml_document ElementsLocation::pugiXml () const"
+
+.PP
+\fBElementsLocation::pugiXml\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the xml document of this element or directory The definition can be null 
+.RE
+.PP
+
+.SS "void ElementsLocation::setPath (const QString & path)"
+
+.PP
+\fBElementsLocation::setPath\fP Set the path of this item\&. The path can be relative to a collection (start by common:// , custom:// or embed://) or not\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+
+.SS "void ElementsLocation::setProject (\fBQETProject\fP * project)"
+
+.PP
+\fBElementsLocation::setProject\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : the new project points to this location Indicate 0 so that this location is no longer linked to a project\&. 
+.RE
+.PP
+
+.SS "bool ElementsLocation::setXml (const QDomDocument & xml_document) const"
+
+.PP
+\fBElementsLocation::setXml\fP Replace the current xml description by xml_document; The document element of xml_document must have tagname 'definition' to be written This definition must be writable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if success 
+.RE
+.PP
+
+.SS "QString ElementsLocation::toString () const"
+
+.PP
+\fBElementsLocation::toString\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+A character string representing the location 
+.RE
+.PP
+
+.SS "QUuid ElementsLocation::uuid () const"
+
+.PP
+\fBElementsLocation::uuid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The uuid of the pointed element Uuid can be null 
+.RE
+.PP
+
+.SS "QDomElement ElementsLocation::xml () const"
+
+.PP
+\fBElementsLocation::xml\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The definition of this element or directory\&. The definition can be null\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString ElementsLocation::m_collection_path\fC [private]\fP"
+
+.SS "QString ElementsLocation::m_file_system_path\fC [private]\fP"
+
+.SS "\fBQETProject\fP* ElementsLocation::m_project = nullptr\fC [private]\fP"
+
+.SS "std::stringstream ElementsLocation::m_string_stream\fC [mutable]\fP, \fC [private]\fP"
+
+.SS "int ElementsLocation::MetaTypeId = qRegisterMetaType<\fBElementsLocation\fP>('ElementsLocation')\fC [static]\fP"
+
+.PP
+Id of the corresponding Qt meta type\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

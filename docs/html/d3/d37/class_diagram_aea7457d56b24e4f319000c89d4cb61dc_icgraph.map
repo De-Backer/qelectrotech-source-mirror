@@ -1,0 +1,30 @@
+<map id="Diagram::title" name="Diagram::title">
+<area shape="rect" id="node1" title="Diagram::title." alt="" coords="983,249,1083,275"/>
+<area shape="rect" id="node2" href="$d3/d37/class_diagram.html#a3992e391b483cb5c237c651852e25ac3" title="Diagram::folioSequentialsFromXml Load folio sequential from QDomElement." alt="" coords="749,5,919,47"/>
+<area shape="rect" id="node4" href="$d3/d37/class_diagram.html#a7608fde21b2501b184030d2752ae9930" title="Diagram::insertFolioSeqHash This class inserts a stringlist containing all sequential variables relat..." alt="" coords="737,173,931,199"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#a8c5e5c0996f65e27743d9b9084c3f582" title="Diagram::loadCndFolioSeq This class loads all conductor folio sequential variables related to the cur..." alt="" coords="503,173,681,199"/>
+<area shape="rect" id="node9" href="$d3/d37/class_diagram.html#a3c47d70020b2c9ba2802c6b8e28d031e" title="Diagram::loadElmtFolioSeq This class loads all folio sequential variables related to the current auto..." alt="" coords="501,223,683,250"/>
+<area shape="rect" id="node11" href="$d3/d37/class_diagram.html#a03afc2727f07934756b660ba30e4dde5" title="Diagram::loadFolioSeqHash This class loads all folio sequential variables related to the current auto..." alt="" coords="741,223,927,250"/>
+<area shape="rect" id="node12" href="$d7/d44/class_auto_numbering_management_w.html#a139bee6e3f404ebf12d433e44ca0efa6" title="AutoNumberingManagementW::on_m_apply_folios_rb_clicked Set From Folios Combobox." alt="" coords="734,325,934,381"/>
+<area shape="rect" id="node13" href="$dc/d2b/class_folio_autonumbering_w.html#a5f8728734f4039c2ddf20c7934ca4afd" title="FolioAutonumberingW::on_m_autonumber_tabs_rb_clicked Enable From ComboBox, fill From ComboBox." alt="" coords="749,405,919,461"/>
+<area shape="rect" id="node16" href="$d6/dc5/class_q_e_t_project.html#aa6ab11517671dc9e288da42555dc79d6" title="QETProject::readDiagramsXml Load the diagrams from the xml description of the project...." alt="" coords="733,485,935,511"/>
+<area shape="rect" id="node20" href="$d3/d37/class_diagram.html#a4eb3622b674ca4b2220758211cabdb75" title="Diagram::titleChanged emit(diagramTitleChanged(this, title));." alt="" coords="516,97,668,123"/>
+<area shape="rect" id="node21" href="$d6/df6/class_project_view.html#a049b4128fa32a5f18c06a0f39526af2c" title="ProjectView::updateTabTitle Update the title of the tab which display the diagram view." alt="" coords="742,561,926,587"/>
+<area shape="rect" id="node3" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="528,13,656,39"/>
+<area shape="rect" id="node6" href="$d3/d37/class_diagram.html#a3a51ca00d34d4d198b1ab7768522846f" title="Diagram::Diagram Constructor." alt="" coords="283,173,411,199"/>
+<area shape="rect" id="node7" href="$d7/d9c/class_diagram_view.html#aa7ddeae989deaf45dc87f9b4614152c0" title=" " alt="" coords="255,223,440,250"/>
+<area shape="rect" id="node8" href="$d5/d18/class_auto_numbering_dock_widget.html#a48ae4db7ac35f72e2052a0586b0b30f0" title="AutoNumberingDockWidget::on_m_conductor_cb_activated Set new conductor AutoNum." alt="" coords="244,107,451,148"/>
+<area shape="rect" id="node10" href="$d5/d18/class_auto_numbering_dock_widget.html#a705a0108c6676697b02cf324abc9388c" title="AutoNumberingDockWidget::on_m_element_cb_activated Set new element AutoNum." alt="" coords="250,275,445,316"/>
+<area shape="rect" id="node14" href="$dc/d2b/class_folio_autonumbering_w.html#aced97b687a8b5c421482b4d52b01bd95" title="FolioAutonumberingW::updateFolioList update Folio List in From and To ComboBox." alt="" coords="517,412,667,453"/>
+<area shape="rect" id="node15" href="$dc/d2b/class_folio_autonumbering_w.html#a5a0c31ebafa9c991b1f5d9e0a44777cf" title="SelectAutonumW::on_buttonBox_clicked Action on buttonBox clicked." alt="" coords="269,412,426,453"/>
+<area shape="rect" id="node17" href="$d6/dc5/class_q_e_t_project.html#ad9a09b5d1756ddc11c5eed75bb3738c6" title="QETProject::readProjectXml Read and make the project from an xml description." alt="" coords="499,481,685,507"/>
+<area shape="rect" id="node18" href="$d6/dc5/class_q_e_t_project.html#a260924555b97e401594c9ae6d6733281" title="QETProject::openFile." alt="" coords="274,481,421,507"/>
+<area shape="rect" id="node19" href="$d6/dc5/class_q_e_t_project.html#ab739141bacf11150129e65eaa11a0946" title="QETProject::QETProject Construct a project from a .qet file." alt="" coords="18,481,183,507"/>
+<area shape="rect" id="node22" href="$d6/df6/class_project_view.html#acef0c61795f302565f8bfefe3cb7badd" title="ProjectView::diagramAdded Slot called when qetproject emit diagramAdded." alt="" coords="256,535,439,562"/>
+<area shape="rect" id="node23" href="$d6/df6/class_project_view.html#aa578b9f4a0d2d3d7a919ebbb7e21c99e" title=" " alt="" coords="515,649,669,675"/>
+<area shape="rect" id="node26" href="$d6/df6/class_project_view.html#ab8cca02fafaaf32b79b8d983a42b385d" title="ProjectView::updateAllTabsTitle Update all tabs title." alt="" coords="501,583,683,624"/>
+<area shape="rect" id="node24" href="$d6/df6/class_project_view.html#ac07eefae9ce1eef4bd4fbc26e8973ed8" title=" " alt="" coords="265,649,429,675"/>
+<area shape="rect" id="node25" href="$d6/df6/class_project_view.html#a92b14ca3695dc24da5dca2e351f889dd" title=" " alt="" coords="16,649,185,675"/>
+<area shape="rect" id="node27" href="$d6/df6/class_project_view.html#a05e419d3276d2e955b5dad2375ec4c9e" title="ProjectView::removeDiagram Remove a diagram (folio) of the project." alt="" coords="252,590,443,617"/>
+<area shape="rect" id="node28" href="$d6/df6/class_project_view.html#a0b1154e63e636689947a26254be0f7b1" title=" " alt="" coords="5,590,196,617"/>
+</map>

@@ -1,0 +1,52 @@
+<map id="Diagram::fromXml" name="Diagram::fromXml">
+<area shape="rect" id="node1" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="5,1427,133,1453"/>
+<area shape="rect" id="node2" href="$d3/d37/class_diagram.html#ac808ccc853ae12b34660417d98354b9b" title="Diagram::addItem Réimplemented from QGraphicsScene::addItem(QGraphicsItem *item) Do some specific ope..." alt="" coords="208,148,335,175"/>
+<area shape="rect" id="node9" href="$d3/d37/class_diagram.html#a5ce477a5197fdfc394d662f8f71dc977" title="Diagram::adjustSceneRect Recalcul and adjust the size of the scene." alt="" coords="182,1043,361,1069"/>
+<area shape="rect" id="node11" href="$df/d92/class_border_title_block.html#a98fcba632e50b424dd2253108558766e" title="BorderTitleBlock::borderFromXml Reads the border settings from XML." alt="" coords="190,1149,353,1190"/>
+<area shape="rect" id="node20" href="$d3/d37/class_diagram.html#a3126df4682d5c67b8daad666616f4575" title="Diagram::declaredQElectroTechVersion." alt="" coords="182,1214,361,1255"/>
+<area shape="rect" id="node21" href="$dc/da9/namespace_q_e_t.html#a063111bd3b5cc88eefdda06db6e264df" title=" " alt="" coords="675,477,838,504"/>
+<area shape="rect" id="node22" href="$da/d0d/diagram_8cpp.html#a3db072f5bea03b1799f0301ef64267cb" title="findTerminal Find terminal to which the conductor should be connected" alt="" coords="225,1280,317,1307"/>
+<area shape="rect" id="node23" href="$d3/d37/class_diagram.html#a3992e391b483cb5c237c651852e25ac3" title="Diagram::folioSequentialsFromXml Load folio sequential from QDomElement." alt="" coords="186,318,357,359"/>
+<area shape="rect" id="node25" href="$d6/db9/class_conductor_properties.html#a7ac32f27f9287cebb1e5c2c328d22758" title="ConductorProperties::fromXml Import conductor propertie, from the attribute of the xml element &#39;e&#39;." alt="" coords="200,1331,343,1373"/>
+<area shape="rect" id="node29" href="$d5/d50/class_element.html#a904453810089404ad88dc7ad1d99a441" title="Element::fromXml Import the parameters of this element from a xml document. When call this function e..." alt="" coords="208,696,335,723"/>
+<area shape="rect" id="node38" href="$d3/d37/class_diagram.html#a4421fe323f2ce7eb493489b4e1241184" title="Diagram::fromXml Imports the described schema into an XML document. If a position is specified,..." alt="" coords="207,1397,335,1424"/>
+<area shape="rect" id="node39" href="$d0/d67/class_element_collection_handler.html#a2aaef6deab3fcd2f8a713d4bfdcbf884" title="ElementCollectionHandler::importFromProject Import the element represented by location to the embedde..." alt="" coords="185,1449,358,1490"/>
+<area shape="rect" id="node40" href="$db/d8d/class_element_factory.html#aa1937c3e4b527b4fbc1118efdb541d92" title=" " alt="" coords="185,1515,357,1541"/>
+<area shape="rect" id="node41" href="$da/d7f/class_conductor.html#a189d20f735051205a4de96c87d0db9cc" title="Conductor::isValid." alt="" coords="207,1565,335,1592"/>
+<area shape="rect" id="node42" href="$d5/dd7/class_elements_location.html#ac46aeb57416fc91e16266fc937a02810" title="ElementsLocation::path." alt="" coords="192,1616,351,1643"/>
+<area shape="rect" id="node43" href="$d7/df8/class_q_e_t_app.html#a6be4484aa447132c5b44732279b0836c" title="QETApp::project." alt="" coords="212,1667,331,1693"/>
+<area shape="rect" id="node44" href="$d3/d37/class_diagram.html#a0b0af5271af64fe8eab04efb14e849d8" title="Diagram::removeItem Reimplemented from QGraphicsScene::removeItem(QGraphicsItem *item) Do some specif..." alt="" coords="198,224,345,251"/>
+<area shape="rect" id="node45" href="$d3/d37/class_diagram.html#aca79c4ab46b3b8d3869affb2344253e8" title="Diagram::snapToGrid Return a nearest snap point of p." alt="" coords="199,1717,344,1744"/>
+<area shape="rect" id="node46" href="$dd/d7e/namespace_q_e_t_x_m_l.html#adc70401028994da8bab94cb7a85b1ff8" title="QETXML::subChild." alt="" coords="204,1768,339,1795"/>
+<area shape="rect" id="node47" href="$df/d92/class_border_title_block.html#a61c599afbdb17ebcc588d14cca5ab616" title="BorderTitleBlock::titleBlockFromXml Reads the title block values from XML." alt="" coords="181,1819,361,1861"/>
+<area shape="rect" id="node48" href="$da/d7f/class_conductor.html#aefaa9decb5b8c78c27b2673c2950d633" title=" " alt="" coords="198,1885,345,1912"/>
+<area shape="rect" id="node49" href="$d5/d50/class_element.html#af099524aa7115b35ac66f9bffc96a38e" title=" " alt="" coords="205,1936,338,1963"/>
+<area shape="rect" id="node50" href="$d7/d15/class_qet_graphics_table_item.html#ad299fa804cf35de8d8098145792b2897" title=" " alt="" coords="195,1987,347,2029"/>
+<area shape="rect" id="node3" href="$dc/d46/class_terminal.html#a377dac06e69a03135dfc1df2fad8fad1" title="Terminal::addConductor Add a conductor to this terminal." alt="" coords="430,123,590,149"/>
+<area shape="rect" id="node4" href="$d5/d7f/classproject_data_base.html#a2ce088e76015c5887728319c0e33af33" title="projectDataBase::addElement" alt="" coords="412,5,608,32"/>
+<area shape="rect" id="node6" href="$da/d7f/class_conductor.html#ab352e0bd0e048b8897ad67684d00b01a" title="Conductor::calculateTextItemPosition Move the text at middle of conductor (if is vertical or horizont..." alt="" coords="427,57,593,98"/>
+<area shape="rect" id="node7" href="$d6/dc5/class_q_e_t_project.html#a38c4778acc88e16b55913fefa48e6f5b" title="QETProject::dataBase." alt="" coords="434,173,586,200"/>
+<area shape="rect" id="node8" href="$d3/d37/class_diagram.html#ab576e6398fe6d00cd92d6bbf9300f7b6" title="Diagram::isReadOnly." alt="" coords="437,224,583,251"/>
+<area shape="rect" id="node5" href="$d7/db5/class_qet_graphics_item.html#af9b4e57c5ad3f5a9307a03a4310ce7b2" title=" " alt="" coords="669,191,844,217"/>
+<area shape="rect" id="node10" href="$df/d92/class_border_title_block.html#a8f493ea91d266e4f8219b45b83a01550" title="BorderTitleBlock::borderAndTitleBlockRect." alt="" coords="429,981,591,1022"/>
+<area shape="rect" id="node12" href="$df/d92/class_border_title_block.html#a4c31aa3f4003d6c5cfb4efacbfa6c512" title="BorderTitleBlock::displayColumns." alt="" coords="427,1149,593,1190"/>
+<area shape="rect" id="node13" href="$df/d92/class_border_title_block.html#ad7f79c50edd4c943368caf3a43829d2b" title="BorderTitleBlock::displayRows." alt="" coords="409,1215,611,1241"/>
+<area shape="rect" id="node14" href="$df/d92/class_border_title_block.html#a99592b672eabb626322afd8d123c6cbc" title="BorderTitleBlock::setColumnsCount Allows you to change the number of columns. If this number of colum..." alt="" coords="659,1434,855,1475"/>
+<area shape="rect" id="node15" href="$df/d92/class_border_title_block.html#a9d95b0343e1382b06344aa45063ca7ef" title="BorderTitleBlock::updateRectangles This method update the diagram rect according to the value of rows..." alt="" coords="903,1317,1068,1358"/>
+<area shape="rect" id="node16" href="$df/d92/class_border_title_block.html#a300797fce97fab966a763f480b683e7f" title="BorderTitleBlock::setColumnsWidth Change the width of the columns. If the width indicated is less tha..." alt="" coords="659,1113,855,1154"/>
+<area shape="rect" id="node17" href="$df/d92/class_border_title_block.html#aa9d6571ca6f4bfde5ff0fee1203f808d" title="BorderTitleBlock::setDiagramHeight This method tries to get as close as possible to the given height ..." alt="" coords="413,1266,607,1307"/>
+<area shape="rect" id="node18" href="$df/d92/class_border_title_block.html#a72a0fbbde5b1cb78de2d3fa9bba4f072" title="BorderTitleBlock::setRowsCount Allows you to change the number of lines. If this number of lines is l..." alt="" coords="667,1251,846,1293"/>
+<area shape="rect" id="node19" href="$df/d92/class_border_title_block.html#a298a1f7fd508657af32d2f5a87814405" title="BorderTitleBlock::setRowsHeight Change the height of the lines. If the indicated height is lower than..." alt="" coords="667,1317,846,1358"/>
+<area shape="rect" id="node24" href="$d3/d37/class_diagram.html#aea7457d56b24e4f319000c89d4cb61dc" title="Diagram::title." alt="" coords="460,275,560,301"/>
+<area shape="rect" id="node26" href="$d3/de3/class_single_line_properties.html#a15ae2f5c20135695acaf52ee77899f9a" title=" " alt="" coords="439,1485,581,1526"/>
+<area shape="rect" id="node27" href="$d6/db9/class_conductor_properties.html#a22a9442dc568c830e479ada93fa95fa0" title=" " alt="" coords="439,1550,581,1591"/>
+<area shape="rect" id="node28" href="$d6/db9/class_conductor_properties.html#a17d691af0791a3b9d3500f5ef2e2ac4b" title=" " alt="" coords="439,1615,581,1657"/>
+<area shape="rect" id="node30" href="$d5/d50/class_element.html#a9f69c40f30c8285e338504db3db72444" title="Element::addDynamiqueTextItem Add deti as a dynamic text item of this element, deti is reparented to ..." alt="" coords="409,696,611,723"/>
+<area shape="rect" id="node31" href="$d5/d50/class_element.html#ae0c6b6020bd666bccd8a754f639a44c7" title="Element::addTextGroup Create and add an element text item group to this element. If this element alre..." alt="" coords="431,747,589,773"/>
+<area shape="rect" id="node32" href="$d5/d50/class_element.html#acb37f88171be9edf2c43e1d393e9f71d" title="Element::addTextToGroup Add the text text to the group group; If group isn&#39;t owned by this element re..." alt="" coords="671,784,843,811"/>
+<area shape="rect" id="node33" href="$db/dfb/class_diagram_context.html#a523b81ff2dfbcf73e304a55ccdc58c1b" title=" " alt="" coords="668,587,845,613"/>
+<area shape="rect" id="node34" href="$d2/d1b/classautonum_1_1sequential_numbers.html#aed1a6490738c5df7db003b96c75a221a" title="sequentialNumbers::fromXml Import sequential values from a QDomElement" alt="" coords="414,798,606,839"/>
+<area shape="rect" id="node35" href="$db/dfb/class_diagram_context.html#a8e5ed488953211c89e25dea81b56c448" title=" " alt="" coords="423,528,597,555"/>
+<area shape="rect" id="node36" href="$dd/df7/class_element_text_item_group.html#a99c85661ac187b1f36d6fdf75d08f763" title="ElementTextItemGroup::fromXml Import data of this group from xml." alt="" coords="432,579,588,621"/>
+<area shape="rect" id="node37" href="$d0/d59/class_dynamic_element_text_item.html#ab5b363836fc16f3007145c691fec914a" title="DynamicElementTextItem::fromXml Import this text from xml." alt="" coords="423,863,597,905"/>
+</map>

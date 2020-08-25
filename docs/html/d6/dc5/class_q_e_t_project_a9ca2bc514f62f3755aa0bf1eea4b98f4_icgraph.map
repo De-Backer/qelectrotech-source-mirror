@@ -1,0 +1,30 @@
+<map id="QETProject::projectInformationsChanged" name="QETProject::projectInformationsChanged">
+<area shape="rect" id="node1" title=" " alt="" coords="1284,241,1492,283"/>
+<area shape="rect" id="node2" href="$d6/dc5/class_q_e_t_project.html#a3254e172c41b2a6bfa097d6cbb6d321a" title="QETProject::setFilePath Set the filepath of this project file Set a file path also create a backup fi..." alt="" coords="1047,23,1210,50"/>
+<area shape="rect" id="node6" href="$d6/dc5/class_q_e_t_project.html#a0f838d02c0c6747371ddb9262cb2f67d" title=" " alt="" coords="1047,249,1211,275"/>
+<area shape="rect" id="node15" href="$d6/dc5/class_q_e_t_project.html#a0fbf1fb78e6aefeb7f19421ce4941e39" title="QETProject::write Save the project in a file." alt="" coords="805,343,931,370"/>
+<area shape="rect" id="node16" href="$d6/dc5/class_q_e_t_project.html#a23411b4a0fa7e2ef984e7eadaa11469c" title=" " alt="" coords="1059,125,1199,151"/>
+<area shape="rect" id="node19" href="$da/d3a/class_generic_panel.html#a7dbe480e2977e30cc9292574cbbe983d" title="GenericPanel::updateProjectItem." alt="" coords="1021,450,1236,477"/>
+<area shape="rect" id="node3" href="$d6/dc5/class_q_e_t_project.html#a260924555b97e401594c9ae6d6733281" title="QETProject::openFile." alt="" coords="281,23,427,50"/>
+<area shape="rect" id="node5" href="$d6/dc5/class_q_e_t_project.html#ac148924e97451c105a55ab298c8e6323" title="QETProject::QETProject." alt="" coords="785,23,951,50"/>
+<area shape="rect" id="node4" href="$d6/dc5/class_q_e_t_project.html#ab739141bacf11150129e65eaa11a0946" title="QETProject::QETProject Construct a project from a .qet file." alt="" coords="26,23,191,50"/>
+<area shape="rect" id="node7" href="$d6/df6/class_project_view.html#acef0c61795f302565f8bfefe3cb7badd" title="ProjectView::diagramAdded Slot called when qetproject emit diagramAdded." alt="" coords="777,175,959,202"/>
+<area shape="rect" id="node8" href="$d6/dc5/class_q_e_t_project.html#a4950a2fd7df57591c523f9c596d859a0" title=" " alt="" coords="781,227,955,268"/>
+<area shape="rect" id="node12" href="$d6/dc5/class_q_e_t_project.html#a0dae3c97c88cd1db96622fd77da5c485" title=" " alt="" coords="763,293,973,319"/>
+<area shape="rect" id="node9" href="$d6/df6/class_project_view.html#aa578b9f4a0d2d3d7a919ebbb7e21c99e" title=" " alt="" coords="528,234,683,261"/>
+<area shape="rect" id="node10" href="$d6/df6/class_project_view.html#ac07eefae9ce1eef4bd4fbc26e8973ed8" title=" " alt="" coords="272,234,436,261"/>
+<area shape="rect" id="node11" href="$d6/df6/class_project_view.html#a92b14ca3695dc24da5dca2e351f889dd" title=" " alt="" coords="24,234,193,261"/>
+<area shape="rect" id="node13" href="$d6/dc5/class_q_e_t_project.html#a662e74af3dcca1385e0fdcb14f3112d8" title="QETProject::init." alt="" coords="548,289,663,315"/>
+<area shape="rect" id="node14" href="$d6/dc5/class_q_e_t_project.html#aca8454d2efa04acd1fc188f9b71afcaf" title="QETProject::QETProject Create a empty project." alt="" coords="271,286,437,313"/>
+<area shape="rect" id="node17" href="$d6/dc5/class_q_e_t_project.html#aa6ab11517671dc9e288da42555dc79d6" title="QETProject::readDiagramsXml Load the diagrams from the xml description of the project...." alt="" coords="767,125,969,151"/>
+<area shape="rect" id="node18" href="$d6/dc5/class_q_e_t_project.html#ad9a09b5d1756ddc11c5eed75bb3738c6" title="QETProject::readProjectXml Read and make the project from an xml description." alt="" coords="512,74,699,101"/>
+<area shape="rect" id="node20" href="$da/d3a/class_generic_panel.html#a3e9bd6f33b61757d8e3fbdde6198c42f" title="GenericPanel::addProject." alt="" coords="783,450,953,477"/>
+<area shape="rect" id="node21" href="$db/d79/class_elements_panel.html#ae4e35fa9354536741708dbc1c37cd549" title="ElementsPanel::addProject Methode permettant d&#39;ajouter un projet au panel d&#39;elements." alt="" coords="515,349,695,375"/>
+<area shape="rect" id="node25" href="$da/d3a/class_generic_panel.html#abee204892f072d8136eb926ece8b6dea" title="GenericPanel::diagramAdded." alt="" coords="510,399,701,426"/>
+<area shape="rect" id="node27" href="$da/d3a/class_generic_panel.html#a9393855236c8741ad068f06473c8b6ff" title="GenericPanel::diagramRemoved." alt="" coords="501,501,709,527"/>
+<area shape="rect" id="node28" href="$da/d3a/class_generic_panel.html#aecff857bf9da5e8dfdd5937a2a762122" title="GenericPanel::projectInformationsChanged." alt="" coords="496,552,715,593"/>
+<area shape="rect" id="node22" href="$db/d79/class_elements_panel.html#abb30fe38d0c9f1be3b4289ec53833a3e" title=" " alt="" coords="263,337,445,379"/>
+<area shape="rect" id="node23" href="$db/d79/class_elements_panel.html#ada5643d1ecd83378e28271ab41b44dca" title="ElementsPanel::reload Reload the elements tree." alt="" coords="277,403,431,430"/>
+<area shape="rect" id="node24" href="$db/d79/class_elements_panel.html#af1b8cb32dfde9dd9e6f19dab3715ac2b" title=" " alt="" coords="5,403,212,430"/>
+<area shape="rect" id="node26" href="$da/d3a/class_generic_panel.html#aa28f9640e6c209fa6fc80a602b8a039b" title="GenericPanel::fillProjectItem." alt="" coords="260,454,448,481"/>
+</map>

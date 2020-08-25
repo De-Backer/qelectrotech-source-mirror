@@ -1,0 +1,127 @@
+.TH "TitleBlockTemplateLocationSaver" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateLocationSaver
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatelocationsaver\&.h>\fP
+.PP
+Inherits \fBTitleBlockTemplateLocationChooser\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateLocationSaver\fP (const \fBTitleBlockTemplateLocation\fP &, QWidget *=nullptr)"
+.br
+.RI "\fBTitleBlockTemplateLocationSaver::TitleBlockTemplateLocationSaver\fP Constructor\&. "
+.ti -1c
+.RI "\fB~TitleBlockTemplateLocationSaver\fP () override"
+.br
+.in -1c
+.SS "Protected Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateTemplates\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBupdateNewName\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QLineEdit * \fBnew_name_\fP"
+.br
+.RI "New template name textfield\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateLocationSaver\fP (const \fBTitleBlockTemplateLocationSaver\fP &)"
+.br
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.ti -1c
+.RI "void \fBsetLocation\fP (const \fBTitleBlockTemplateLocation\fP &) override"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class is a widget that allows the user to choose a target title block template, with the intention to save it\&. Therefore, compared to a \fBTitleBlockTemplateLocationChooser\fP, it includes an extra field for the user to set the name of the new template if needed\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateLocationSaver::TitleBlockTemplateLocationSaver (const \fBTitleBlockTemplateLocation\fP & location, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBTitleBlockTemplateLocationSaver::TitleBlockTemplateLocationSaver\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.br
+\fIparent\fP : QWidget 
+.RE
+.PP
+
+.SS "TitleBlockTemplateLocationSaver::~TitleBlockTemplateLocationSaver ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockTemplateLocationSaver::TitleBlockTemplateLocationSaver (const \fBTitleBlockTemplateLocationSaver\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TitleBlockTemplateLocationSaver::init ()\fC [private]\fP"
+Initialize this widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP Initial location displayed by the widget 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplateLocationSaver::name () const\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the currently selected/entered name 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTitleBlockTemplateLocationChooser\fP\&.
+.SS "void TitleBlockTemplateLocationSaver::setLocation (const \fBTitleBlockTemplateLocation\fP & location)\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+Set the location displayed by this widget 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP to be displayed by this widget 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTitleBlockTemplateLocationChooser\fP\&.
+.SS "void TitleBlockTemplateLocationSaver::updateNewName ()\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+Enable or diable the 'new name' text field depending of the selected template\&. 
+.SS "void TitleBlockTemplateLocationSaver::updateTemplates ()\fC [override]\fP, \fC [protected]\fP, \fC [slot]\fP"
+Update the templates list according to the selected collection\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QLineEdit* TitleBlockTemplateLocationSaver::new_name_\fC [protected]\fP"
+
+.PP
+New template name textfield\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

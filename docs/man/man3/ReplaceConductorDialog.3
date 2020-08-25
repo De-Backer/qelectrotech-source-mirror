@@ -1,0 +1,179 @@
+.TH "ReplaceConductorDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReplaceConductorDialog \- The \fBReplaceConductorDialog\fP class A Qdialog to edit a conductor properties, use for the search and replace feature of QElectrotech\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <replaceconductordialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReplaceConductorDialog\fP (const \fBConductorProperties\fP &\fBproperties\fP, QWidget *parent=0)"
+.br
+.RI "\fBReplaceConductorDialog::ReplaceConductorDialog\fP\&. "
+.ti -1c
+.RI "\fB~ReplaceConductorDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdatePreview\fP (bool b=true)"
+.br
+.RI "\fBReplaceConductorDialog::updatePreview\fP Update the preview for single line\&. "
+.ti -1c
+.RI "void \fBsetProperties\fP (const \fBConductorProperties\fP &\fBproperties\fP)"
+.br
+.ti -1c
+.RI "\fBConductorProperties\fP \fBproperties\fP () const"
+.br
+.RI "\fBReplaceConductorDialog::properties\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_erase_formula_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_erase_text_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_erase_function_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_erase_tension_protocol_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_erase_m_wire_color_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_erase_m_wire_section_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_earth_cb_toggled\fP (bool checked)"
+.br
+.ti -1c
+.RI "void \fBon_m_neutral_cb_toggled\fP (bool checked)"
+.br
+.ti -1c
+.RI "void \fBon_m_update_preview_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_color_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_color_2_pb_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitWidget\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetColorButton\fP (const QColor &color)"
+.br
+.ti -1c
+.RI "void \fBsetColorButton2\fP (const QColor &color)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ReplaceConductorDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBConductorProperties\fP \fBm_properties\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBReplaceConductorDialog\fP class A Qdialog to edit a conductor properties, use for the search and replace feature of QElectrotech\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ReplaceConductorDialog::ReplaceConductorDialog (const \fBConductorProperties\fP & properties, QWidget * parent = \fC0\fP)\fC [explicit]\fP"
+
+.PP
+\fBReplaceConductorDialog::ReplaceConductorDialog\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperties\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "ReplaceConductorDialog::~ReplaceConductorDialog ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ReplaceConductorDialog::initWidget ()\fC [private]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_color_2_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_color_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_earth_cb_toggled (bool checked)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_erase_formula_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_erase_function_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_erase_m_wire_color_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_erase_m_wire_section_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_erase_tension_protocol_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_erase_text_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_neutral_cb_toggled (bool checked)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceConductorDialog::on_m_update_preview_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "\fBConductorProperties\fP ReplaceConductorDialog::properties () const"
+
+.PP
+\fBReplaceConductorDialog::properties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the properties edited by this widget 
+.RE
+.PP
+
+.SS "void ReplaceConductorDialog::setColorButton (const QColor & color)\fC [private]\fP"
+
+.SS "void ReplaceConductorDialog::setColorButton2 (const QColor & color)\fC [private]\fP"
+
+.SS "void ReplaceConductorDialog::setProperties (const \fBConductorProperties\fP & properties)"
+
+.SS "void ReplaceConductorDialog::updatePreview (bool b = \fCtrue\fP)"
+
+.PP
+\fBReplaceConductorDialog::updatePreview\fP Update the preview for single line\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIb\fP : true: update from the value displayed by this widget false: update from the properties given at the constructor of this widget 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBConductorProperties\fP ReplaceConductorDialog::m_properties\fC [private]\fP"
+
+.SS "Ui::ReplaceConductorDialog* ReplaceConductorDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

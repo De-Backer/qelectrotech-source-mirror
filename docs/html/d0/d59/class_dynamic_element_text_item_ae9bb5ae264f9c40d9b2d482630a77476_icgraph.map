@@ -1,0 +1,18 @@
+<map id="DynamicElementTextItem::updateXref" name="DynamicElementTextItem::updateXref">
+<area shape="rect" id="node1" title="DynamicElementTextItem::updateXref Create or delete the Xref according to the current properties of t..." alt="" coords="1292,123,1465,164"/>
+<area shape="rect" id="node2" href="$d0/d59/class_dynamic_element_text_item.html#ad4a70d14ceeae9695931ef8942a67af9" title=" " alt="" coords="849,35,1023,76"/>
+<area shape="rect" id="node3" href="$d0/d59/class_dynamic_element_text_item.html#ac88ecdc622f139d862817b70df8aabbb" title="DynamicElementTextItem::masterChanged This function is only use when the parent element is a slave...." alt="" coords="1071,5,1244,47"/>
+<area shape="rect" id="node4" href="$d0/d59/class_dynamic_element_text_item.html#a42c64413985aaaf7e2a624ffe0593e65" title="DynamicElementTextItem::setCompositeText Set the composite text of this text item to text." alt="" coords="1071,123,1244,164"/>
+<area shape="rect" id="node14" href="$d0/d59/class_dynamic_element_text_item.html#a2b2a8925f17606f5dc969790b12b71b2" title="DynamicElementTextItem::setInfoName Set the information name of the parent element." alt="" coords="1071,188,1244,229"/>
+<area shape="rect" id="node16" href="$d0/d59/class_dynamic_element_text_item.html#a96b657f1d7eff45823d8d6cf811b01ca" title="DynamicElementTextItem::setTextFrom Set the final text is created from." alt="" coords="1071,253,1244,295"/>
+<area shape="rect" id="node5" href="$d0/d59/class_dynamic_element_text_item.html#ab5b363836fc16f3007145c691fec914a" title="DynamicElementTextItem::fromXml Import this text from xml." alt="" coords="849,129,1023,171"/>
+<area shape="rect" id="node6" href="$d6/dfc/class_import_element_text_pattern.html#ab5ee9f26fdbf4ec21dc4f853fe45ac30" title="ImportElementTextPattern::apply Apply the user choice." alt="" coords="621,85,795,127"/>
+<area shape="rect" id="node8" href="$d5/d50/class_element.html#a904453810089404ad88dc7ad1d99a441" title="Element::fromXml Import the parameters of this element from a xml document. When call this function e..." alt="" coords="645,202,771,229"/>
+<area shape="rect" id="node10" href="$d5/d50/class_element.html#a3636c0bffbfe918f48a44c58044a5381" title="Element::parseDynamicText Create the dynamic text field describ in dom_element." alt="" coords="615,151,801,178"/>
+<area shape="rect" id="node7" href="$d6/dfc/class_import_element_text_pattern.html#a95c6943c345304d7858f4daded820cbf" title=" " alt="" coords="384,85,567,127"/>
+<area shape="rect" id="node9" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="411,202,539,229"/>
+<area shape="rect" id="node11" href="$d5/d50/class_element.html#a89723eed743ef8077a2e25322bd3e8b4" title="Element::parseElement Parse the element of the xml description of this element." alt="" coords="397,259,554,286"/>
+<area shape="rect" id="node12" href="$d5/d50/class_element.html#a26daf036ef51d92d37c14171f59ef10e" title="Element::buildFromXml Build this element from an xml description." alt="" coords="179,259,336,286"/>
+<area shape="rect" id="node13" href="$d5/d50/class_element.html#a5ecb4a8b8a296bf3a5bb90cb66fe6d49" title="Element::Element." alt="" coords="5,259,131,286"/>
+<area shape="rect" id="node15" href="$d5/d50/class_element.html#a986ebd80d8930def013e94f3ca8c8cdb" title="Element::parseInput Parse the input (old text field) the parsed input are converted to dynamic text f..." alt="" coords="867,297,1005,323"/>
+</map>

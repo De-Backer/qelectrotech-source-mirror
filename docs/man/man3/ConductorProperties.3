@@ -1,0 +1,342 @@
+.TH "ConductorProperties" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConductorProperties \- The \fBConductorProperties\fP class This class represents the functional properties of a particular conductor, i\&.e\&. properties other than path and terminals\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductorproperties\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBConductorType\fP { \fBSingle\fP, \fBMulti\fP }"
+.br
+.RI "The ConductorType enum Represents the kind of a particular conductor: Single: singleline symbols, no text input Multi: text input, no symbol\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorProperties\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~ConductorProperties\fP ()"
+.br
+.ti -1c
+.RI "void \fBtoXml\fP (QDomElement &) const"
+.br
+.RI "\fBConductorProperties::toXml\fP Export conductor propertie, in the XML element 'e'\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (QDomElement &)"
+.br
+.RI "\fBConductorProperties::fromXml\fP Import conductor propertie, from the attribute of the xml element 'e'\&. "
+.ti -1c
+.RI "void \fBtoSettings\fP (QSettings &, const QString &=QString()) const"
+.br
+.ti -1c
+.RI "void \fBfromSettings\fP (QSettings &, const QString &=QString())"
+.br
+.ti -1c
+.RI "void \fBapplyForEqualAttributes\fP (QList< \fBConductorProperties\fP > list)"
+.br
+.RI "\fBConductorProperties::applyForEqualAttributes\fP Test each attribute of properties in the list separatly\&. For each attributes, if is equal, the attribute is apply to this\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBConductorProperties\fP &) const"
+.br
+.RI "\fBConductorProperties::operator ==\fP\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBConductorProperties\fP &) const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBtypeToString\fP (\fBConductorType\fP)"
+.br
+.ti -1c
+.RI "static \fBConductorProperties\fP \fBdefaultProperties\fP ()"
+.br
+.RI "\fBConductorProperties::defaultProperties\fP\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorType\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "QColor \fBcolor\fP"
+.br
+.ti -1c
+.RI "QColor \fBm_color_2\fP"
+.br
+.ti -1c
+.RI "QColor \fBtext_color\fP"
+.br
+.ti -1c
+.RI "QString \fBtext\fP"
+.br
+.ti -1c
+.RI "QString \fBm_function\fP"
+.br
+.ti -1c
+.RI "QString \fBm_tension_protocol\fP"
+.br
+.ti -1c
+.RI "QString \fBm_wire_color\fP"
+.br
+.ti -1c
+.RI "QString \fBm_wire_section\fP"
+.br
+.ti -1c
+.RI "QString \fBm_formula\fP"
+.br
+.ti -1c
+.RI "int \fBtext_size\fP"
+.br
+.ti -1c
+.RI "int \fBm_dash_size\fP = 1"
+.br
+.ti -1c
+.RI "double \fBcond_size\fP"
+.br
+.ti -1c
+.RI "double \fBverti_rotate_text\fP"
+.br
+.ti -1c
+.RI "double \fBhoriz_rotate_text\fP"
+.br
+.ti -1c
+.RI "bool \fBm_show_text\fP"
+.br
+.ti -1c
+.RI "bool \fBm_one_text_per_folio\fP"
+.br
+.ti -1c
+.RI "bool \fBm_bicolor\fP = false"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBm_horizontal_alignment\fP = Qt::AlignBottom"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBm_vertical_alignment\fP = Qt::AlignRight"
+.br
+.ti -1c
+.RI "Qt::PenStyle \fBstyle\fP"
+.br
+.ti -1c
+.RI "\fBSingleLineProperties\fP \fBsingleLineProperties\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreadStyle\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBwriteStyle\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBConductorProperties\fP class This class represents the functional properties of a particular conductor, i\&.e\&. properties other than path and terminals\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBConductorProperties::ConductorType\fP"
+
+.PP
+The ConductorType enum Represents the kind of a particular conductor: Single: singleline symbols, no text input Multi: text input, no symbol\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISingle \fP\fP
+.TP
+\fB\fIMulti \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConductorProperties::ConductorProperties ()"
+Constructeur : par defaut, les proprietes font un conducteur multifilaire noir dont le texte est '_' 
+.SS "ConductorProperties::~ConductorProperties ()\fC [virtual]\fP"
+Destructeur 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ConductorProperties::applyForEqualAttributes (QList< \fBConductorProperties\fP > list)"
+
+.PP
+\fBConductorProperties::applyForEqualAttributes\fP Test each attribute of properties in the list separatly\&. For each attributes, if is equal, the attribute is apply to this\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlist\fP 
+.RE
+.PP
+
+.SS "\fBConductorProperties\fP ConductorProperties::defaultProperties ()\fC [static]\fP"
+
+.PP
+\fBConductorProperties::defaultProperties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the default properties stored in the setting file 
+.RE
+.PP
+
+.SS "void ConductorProperties::fromSettings (QSettings & settings, const QString & prefix = \fCQString()\fP)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP Parametres a lire 
+.br
+\fIprefix\fP prefixe a ajouter devant les noms des parametres 
+.RE
+.PP
+
+.SS "void ConductorProperties::fromXml (QDomElement & e)"
+
+.PP
+\fBConductorProperties::fromXml\fP Import conductor propertie, from the attribute of the xml element 'e'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP the xml document 
+.RE
+.PP
+
+.SS "bool ConductorProperties::operator!= (const \fBConductorProperties\fP & other) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP l'autre ensemble de proprietes avec lequel il faut effectuer la comparaison 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si les deux ensembles de proprietes sont differents, false sinon 
+.RE
+.PP
+
+.SS "bool ConductorProperties::operator== (const \fBConductorProperties\fP & other) const"
+
+.PP
+\fBConductorProperties::operator ==\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if other == this 
+.RE
+.PP
+
+.SS "void ConductorProperties::readStyle (const QString & style_string)\fC [private]\fP"
+Applique les styles passes en parametre dans cet objet 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstyle_string\fP Chaine decrivant le style du conducteur 
+.RE
+.PP
+
+.SS "void ConductorProperties::toSettings (QSettings & settings, const QString & prefix = \fCQString()\fP) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP Parametres a ecrire 
+.br
+\fIprefix\fP prefixe a ajouter devant les noms des parametres 
+.RE
+.PP
+
+.SS "void ConductorProperties::toXml (QDomElement & e) const"
+
+.PP
+\fBConductorProperties::toXml\fP Export conductor propertie, in the XML element 'e'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP the xml element 
+.RE
+.PP
+
+.SS "QString ConductorProperties::typeToString (\fBConductorType\fP t)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIt\fP type du conducteur 
+.RE
+.PP
+
+.SS "QString ConductorProperties::writeStyle () const\fC [private]\fP"
+Exporte le style du conducteur sous forme d'une chaine de caracteres 
+.PP
+\fBReturns\fP
+.RS 4
+une chaine de caracteres decrivant le style du conducteur 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QColor ConductorProperties::color"
+
+.SS "double ConductorProperties::cond_size"
+
+.SS "double ConductorProperties::horiz_rotate_text"
+
+.SS "bool ConductorProperties::m_bicolor = false"
+
+.SS "QColor ConductorProperties::m_color_2"
+
+.SS "int ConductorProperties::m_dash_size = 1"
+
+.SS "QString ConductorProperties::m_formula"
+
+.SS "QString ConductorProperties::m_function"
+
+.SS "Qt::Alignment ConductorProperties::m_horizontal_alignment = Qt::AlignBottom"
+
+.SS "bool ConductorProperties::m_one_text_per_folio"
+
+.SS "bool ConductorProperties::m_show_text"
+
+.SS "QString ConductorProperties::m_tension_protocol"
+
+.SS "Qt::Alignment ConductorProperties::m_vertical_alignment = Qt::AlignRight"
+
+.SS "QString ConductorProperties::m_wire_color"
+
+.SS "QString ConductorProperties::m_wire_section"
+
+.SS "\fBSingleLineProperties\fP ConductorProperties::singleLineProperties"
+
+.SS "Qt::PenStyle ConductorProperties::style"
+
+.SS "QString ConductorProperties::text"
+
+.SS "QColor ConductorProperties::text_color"
+
+.SS "int ConductorProperties::text_size"
+
+.SS "\fBConductorType\fP ConductorProperties::type"
+
+.SS "double ConductorProperties::verti_rotate_text"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,164 @@
+.TH "ElementProvider" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementProvider
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementprovider\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementProvider\fP (\fBQETProject\fP *prj, \fBDiagram\fP *diagram=nullptr)"
+.br
+.RI "\fBElementProvider::ElementProvider\fP Constructor\&. "
+.ti -1c
+.RI "\fBElementProvider\fP (\fBDiagram\fP *diag)"
+.br
+.RI "\fBElementProvider::ElementProvider\fP Constructor\&. "
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBfreeElement\fP (const int filter) const"
+.br
+.RI "ElementProvider::FreeElement Search and return the asked element corresponding with the given filter All returned element are free, ie element aren't connected with another element\&. "
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBfromUuids\fP (QList< QUuid >) const"
+.br
+.RI "\fBElementProvider::fromUuids\fP\&. "
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBfind\fP (const int filter) const"
+.br
+.RI "\fBElementProvider::find\fP Search and return the asked element corresponding with the given filter\&. "
+.ti -1c
+.RI "QVector< \fBQetGraphicsTableItem\fP * > \fBtable\fP (\fBQetGraphicsTableItem\fP *table=nullptr, QAbstractItemModel *model=nullptr)"
+.br
+.RI "\fBElementProvider::table\fP\&. "
+.ti -1c
+.RI "\fBQetGraphicsTableItem\fP * \fBtableFromUuid\fP (const QUuid &uuid)"
+.br
+.RI "\fBElementProvider::tableFromUuid\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBDiagram\fP * > \fBm_diagram_list\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+this class can search in the given diagram or project some kind of element like 'folio report' or 'master' and return it\&. We can get element element with specific status like 'free'\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementProvider::ElementProvider (\fBQETProject\fP * prj, \fBDiagram\fP * diagram = \fCnullptr\fP)"
+
+.PP
+\fBElementProvider::ElementProvider\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprj\fP the project where we must find element 
+.br
+\fIdiagram\fP the diagram to exclude from the search 
+.RE
+.PP
+
+.SS "ElementProvider::ElementProvider (\fBDiagram\fP * diag)"
+
+.PP
+\fBElementProvider::ElementProvider\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiag\fP \fBDiagram\fP to search 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QList< \fBElement\fP * > ElementProvider::find (const int filter) const"
+
+.PP
+\fBElementProvider::find\fP Search and return the asked element corresponding with the given filter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilter\fP the filter for search element (You can find all filter with the define in Element\&.h) 
+.RE
+.PP
+
+.SS "QList< \fBElement\fP * > ElementProvider::freeElement (const int filter) const"
+
+.PP
+ElementProvider::FreeElement Search and return the asked element corresponding with the given filter All returned element are free, ie element aren't connected with another element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilter\fP the filter for search element (You can find all filter with the define in Element\&.h) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QList< \fBElement\fP * > ElementProvider::fromUuids (QList< QUuid > uuid_list) const"
+
+.PP
+\fBElementProvider::fromUuids\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIuuid_list\fP list of uuid must be found 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+all elements with uuid corresponding to uuid in uuid_list 
+.RE
+.PP
+
+.SS "QVector< \fBQetGraphicsTableItem\fP * > ElementProvider::table (\fBQetGraphicsTableItem\fP * table = \fCnullptr\fP, QAbstractItemModel * model = \fCnullptr\fP)"
+
+.PP
+\fBElementProvider::table\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItable\fP 
+.br
+\fImodel\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+All tables wich display the derivated class of model (if set) and not already in all the chain of next/previous table of table (if set) If table and model are nullptr, return every tables 
+.RE
+.PP
+
+.SS "\fBQetGraphicsTableItem\fP * ElementProvider::tableFromUuid (const QUuid & uuid)"
+
+.PP
+\fBElementProvider::tableFromUuid\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIuuid\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the table with uuid uuid or nullptr if not found 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<\fBDiagram\fP *> ElementProvider::m_diagram_list\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

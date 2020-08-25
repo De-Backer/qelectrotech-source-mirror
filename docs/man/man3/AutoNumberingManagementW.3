@@ -1,0 +1,191 @@
+.TH "AutoNumberingManagementW" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AutoNumberingManagementW
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <autonumberingmanagementw\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBapplyPressed\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAutoNumberingManagementW\fP (\fBQETProject\fP *project, QWidget *parent=nullptr)"
+.br
+.RI "\fBAutoNumberingManagementW::AutoNumberingManagementW\fP Constructor\&. "
+.ti -1c
+.RI "\fB~AutoNumberingManagementW\fP () override"
+.br
+.RI "\fBAutoNumberingManagementW::~AutoNumberingManagementW\fP Destructor\&. "
+.ti -1c
+.RI "void \fBsetProjectContext\fP ()"
+.br
+.RI "\fBAutoNumberingManagementW::setProjectContext\fP Add Default Project Status\&. "
+.ti -1c
+.RI "void \fBcontextToFormula\fP ()"
+.br
+.ti -1c
+.RI "QString \fBelementFormula\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::AutoNumberingManagementW * \fBui\fP"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_from_folios_cb_currentIndexChanged\fP (int)"
+.br
+.RI "\fBAutoNumberingManagementW::on_m_from_folios_cb_currentIndexChanged\fP Set To Folios Combobox\&. "
+.ti -1c
+.RI "void \fBon_m_to_folios_cb_currentIndexChanged\fP (int)"
+.br
+.RI "\fBAutoNumberingManagementW::on_m_to_folios_cb_currentIndexChanged\fP Set selected folios Line Edit content\&. "
+.ti -1c
+.RI "void \fBon_m_status_cb_currentIndexChanged\fP (int)"
+.br
+.RI "\fBAutoNumberingManagementW::on_m_status_cb_currentIndexChanged\fP Load Default Status Options\&. "
+.ti -1c
+.RI "void \fBon_m_apply_folios_rb_clicked\fP ()"
+.br
+.RI "\fBAutoNumberingManagementW::on_m_apply_folios_rb_clicked\fP Set From Folios Combobox\&. "
+.ti -1c
+.RI "void \fBon_m_apply_project_rb_clicked\fP ()"
+.br
+.RI "\fBAutoNumberingManagementW::on_m_apply_project_rb_clicked\fP Disable folio widget\&. "
+.ti -1c
+.RI "void \fBon_buttonBox_clicked\fP (QAbstractButton *)"
+.br
+.RI "\fBAutoNumberingManagementW::on_buttonBox_clicked\fP Action on buttonBox clicked\&. "
+.ti -1c
+.RI "void \fBapplyEnable\fP (bool=true)"
+.br
+.RI "\fBAutoNumberingManagementW::applyEnable\fP enable/disable the apply button\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject_\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AutoNumberingManagementW::AutoNumberingManagementW (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBAutoNumberingManagementW::AutoNumberingManagementW\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "AutoNumberingManagementW::~AutoNumberingManagementW ()\fC [override]\fP"
+
+.PP
+\fBAutoNumberingManagementW::~AutoNumberingManagementW\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void AutoNumberingManagementW::applyEnable (bool b = \fCtrue\fP)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingManagementW::applyEnable\fP enable/disable the apply button\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIb\fP 
+.RE
+.PP
+
+.SS "void AutoNumberingManagementW::applyPressed ()\fC [signal]\fP"
+
+.SS "void AutoNumberingManagementW::contextToFormula ()"
+
+.SS "QString AutoNumberingManagementW::elementFormula ()"
+
+.SS "void AutoNumberingManagementW::on_buttonBox_clicked (QAbstractButton * button)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingManagementW::on_buttonBox_clicked\fP Action on buttonBox clicked\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbutton\fP 
+.RE
+.PP
+
+.SS "void AutoNumberingManagementW::on_m_apply_folios_rb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingManagementW::on_m_apply_folios_rb_clicked\fP Set From Folios Combobox\&. 
+.SS "void AutoNumberingManagementW::on_m_apply_project_rb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingManagementW::on_m_apply_project_rb_clicked\fP Disable folio widget\&. 
+.SS "void AutoNumberingManagementW::on_m_from_folios_cb_currentIndexChanged (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingManagementW::on_m_from_folios_cb_currentIndexChanged\fP Set To Folios Combobox\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+
+.SS "void AutoNumberingManagementW::on_m_status_cb_currentIndexChanged (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingManagementW::on_m_status_cb_currentIndexChanged\fP Load Default Status Options\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+
+.SS "void AutoNumberingManagementW::on_m_to_folios_cb_currentIndexChanged (int index)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBAutoNumberingManagementW::on_m_to_folios_cb_currentIndexChanged\fP Set selected folios Line Edit content\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+
+.SS "void AutoNumberingManagementW::setProjectContext ()"
+
+.PP
+\fBAutoNumberingManagementW::setProjectContext\fP Add Default Project Status\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQETProject\fP* AutoNumberingManagementW::project_\fC [private]\fP"
+
+.SS "Ui::AutoNumberingManagementW* AutoNumberingManagementW::ui"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

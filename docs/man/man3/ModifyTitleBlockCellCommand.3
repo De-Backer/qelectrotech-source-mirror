@@ -1,0 +1,211 @@
+.TH "ModifyTitleBlockCellCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModifyTitleBlockCellCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatecommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModifyTitleBlockCellCommand\fP (\fBTitleBlockCell\fP *, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ModifyTitleBlockCellCommand\fP () override"
+.br
+.ti -1c
+.RI "int \fBid\fP () const override"
+.br
+.ti -1c
+.RI "bool \fBmergeWith\fP (const QUndoCommand *) override"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.ti -1c
+.RI "\fBTitleBlockCell\fP * \fBcell\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetCell\fP (\fBTitleBlockCell\fP *)"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateView\fP * \fBview\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetView\fP (\fBTitleBlockTemplateView\fP *)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddModification\fP (const QString &, const QVariant &, bool=false)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModifyTitleBlockCellCommand\fP (const \fBModifyTitleBlockCellCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateView\fP * \fBview_\fP"
+.br
+.RI "This class may trigger a view update\&. "
+.ti -1c
+.RI "\fBTitleBlockCell\fP * \fBmodified_cell_\fP"
+.br
+.RI "modified cell "
+.ti -1c
+.RI "QHash< QString, QVariant > \fBold_values_\fP"
+.br
+.RI "values before the cell is modified "
+.ti -1c
+.RI "QHash< QString, QVariant > \fBnew_values_\fP"
+.br
+.RI "values after the cell has been modified "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a set of modification applied to a title block template cell\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModifyTitleBlockCellCommand::ModifyTitleBlockCellCommand (\fBTitleBlockCell\fP * cell, QUndoCommand * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP Modified cell 
+.br
+\fIparent\fP Parent QUndoCommand 
+.RE
+.PP
+
+.SS "ModifyTitleBlockCellCommand::~ModifyTitleBlockCellCommand ()\fC [override]\fP"
+Destructor 
+.SS "ModifyTitleBlockCellCommand::ModifyTitleBlockCellCommand (const \fBModifyTitleBlockCellCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModifyTitleBlockCellCommand::addModification (const QString & attribute, const QVariant & value, bool is_old_value = \fCfalse\fP)"
+Register a new modification on a title block template cell; you may indicate either the new value or the old one: this method will systematically fetch the other one\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIattribute\fP Name of the modified attribute 
+.br
+\fIvalue\fP Old or new value of the modified attribute, depending on is_old_value 
+.br
+\fIis_old_value\fP (optional, defaults to false) Indicates whether the provided value is the old or the new one\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockCell\fP * ModifyTitleBlockCellCommand::cell () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the cell modified by this command 
+.RE
+.PP
+
+.SS "void ModifyTitleBlockCellCommand::clear ()"
+Erase the known old/new values\&. 
+.SS "int ModifyTitleBlockCellCommand::id () const\fC [override]\fP"
+
+.PP
+\fBSee also\fP
+.RS 4
+QUndoCommand::id() 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the ID of this command\&. 
+.RE
+.PP
+
+.SS "bool ModifyTitleBlockCellCommand::mergeWith (const QUndoCommand * command)\fC [override]\fP"
+
+.PP
+\fBSee also\fP
+.RS 4
+QUndoCommand::mergeWith() 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP Command to merge with\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true on success, false otherwise 
+.RE
+.PP
+
+.SS "void ModifyTitleBlockCellCommand::redo ()\fC [override]\fP"
+Redo the change\&. 
+.SS "void ModifyTitleBlockCellCommand::setCell (\fBTitleBlockCell\fP * modified_cell)"
+Set the cell modified by this command object 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodified_cell\fP the cell modified by this command 
+.RE
+.PP
+
+.SS "void ModifyTitleBlockCellCommand::setView (\fBTitleBlockTemplateView\fP * view)"
+Set the view to be updated after the cell modification 
+.PP
+\fBParameters\fP
+.RS 4
+\fIview\fP the view to be updated after the cell modification 
+.RE
+.PP
+
+.SS "void ModifyTitleBlockCellCommand::undo ()\fC [override]\fP"
+Undo the change\&. 
+.SS "\fBTitleBlockTemplateView\fP * ModifyTitleBlockCellCommand::view () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the view to be updated after the cell modification 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTitleBlockCell\fP* ModifyTitleBlockCellCommand::modified_cell_\fC [private]\fP"
+
+.PP
+modified cell 
+.SS "QHash<QString, QVariant> ModifyTitleBlockCellCommand::new_values_\fC [private]\fP"
+
+.PP
+values after the cell has been modified 
+.SS "QHash<QString, QVariant> ModifyTitleBlockCellCommand::old_values_\fC [private]\fP"
+
+.PP
+values before the cell is modified 
+.SS "\fBTitleBlockTemplateView\fP* ModifyTitleBlockCellCommand::view_\fC [private]\fP"
+
+.PP
+This class may trigger a view update\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

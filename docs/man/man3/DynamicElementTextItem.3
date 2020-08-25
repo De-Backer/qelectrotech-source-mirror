@@ -1,0 +1,831 @@
+.TH "DynamicElementTextItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DynamicElementTextItem \- The \fBDynamicElementTextItem\fP class This class provide a simple text field of element who can be added or removed directly from the diagram editor\&. This text is created to compensate a big lack of the ElementTextItem : ElementTextItem can't be added or removed directly in the diagram editor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dynamicelementtextitem\&.h>\fP
+.PP
+Inherits \fBDiagramTextItem\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTextFrom\fP { \fBUserText\fP, \fBElementInfo\fP, \fBCompositeText\fP }"
+.br
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1010 }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBtextChanged\fP (QString \fBtext\fP)"
+.br
+.ti -1c
+.RI "void \fBtextFromChanged\fP (\fBDynamicElementTextItem::TextFrom\fP text_from)"
+.br
+.ti -1c
+.RI "void \fBinfoNameChanged\fP (QString info)"
+.br
+.ti -1c
+.RI "void \fBcompositeTextChanged\fP (QString \fBtext\fP)"
+.br
+.ti -1c
+.RI "void \fBframeChanged\fP (bool \fBframe\fP)"
+.br
+.ti -1c
+.RI "void \fBplainTextChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBtextWidthChanged\fP (qreal width)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "\fBDynamicElementTextItem\fP (\fBElement\fP *parent_element)"
+.br
+.RI "\fBDynamicElementTextItem::DynamicElementTextItem\fP Constructor\&. "
+.ti -1c
+.RI "\fB~DynamicElementTextItem\fP () override"
+.br
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &dom_doc) const override"
+.br
+.RI "\fBDynamicElementTextItem::toXml\fP Export this text to xml\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &dom_elmt) override"
+.br
+.RI "\fBDynamicElementTextItem::fromXml\fP Import this text from xml\&. "
+.ti -1c
+.RI "\fBElement\fP * \fBparentElement\fP () const"
+.br
+.RI "DynamicElementTextItem::ParentElement\&. "
+.ti -1c
+.RI "\fBElementTextItemGroup\fP * \fBparentGroup\fP () const"
+.br
+.RI "\fBDynamicElementTextItem::parentGroup\fP\&. "
+.ti -1c
+.RI "\fBElement\fP * \fBelementUseForInfo\fP () const"
+.br
+.RI "\fBDynamicElementTextItem::elementUseForInfo\fP\&. "
+.ti -1c
+.RI "void \fBrefreshLabelConnection\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::refreshLabelConnection\fP Refresh the connection of this text when the source of text is label, or composite text, with a variable %{label}\&. "
+.ti -1c
+.RI "\fBDynamicElementTextItem::TextFrom\fP \fBtextFrom\fP () const"
+.br
+.RI "\fBDynamicElementTextItem::textFrom\fP\&. "
+.ti -1c
+.RI "void \fBsetTextFrom\fP (\fBDynamicElementTextItem::TextFrom\fP text_from)"
+.br
+.RI "\fBDynamicElementTextItem::setTextFrom\fP Set the final text is created from\&. "
+.ti -1c
+.RI "QString \fBtext\fP () const"
+.br
+.RI "\fBDynamicElementTextItem::text\fP\&. "
+.ti -1c
+.RI "void \fBsetText\fP (const QString &\fBtext\fP)"
+.br
+.RI "\fBDynamicElementTextItem::setText\fP Set the text of this text\&. "
+.ti -1c
+.RI "void \fBsetInfoName\fP (const QString &info_name)"
+.br
+.RI "\fBDynamicElementTextItem::setInfoName\fP Set the information name of the parent element\&. "
+.ti -1c
+.RI "QString \fBinfoName\fP () const"
+.br
+.RI "\fBDynamicElementTextItem::infoName\fP\&. "
+.ti -1c
+.RI "void \fBsetCompositeText\fP (const QString &\fBtext\fP)"
+.br
+.RI "\fBDynamicElementTextItem::setCompositeText\fP Set the composite text of this text item to text\&. "
+.ti -1c
+.RI "QString \fBcompositeText\fP () const"
+.br
+.RI "\fBDynamicElementTextItem::compositeText\fP\&. "
+.ti -1c
+.RI "void \fBsetFrame\fP (const bool \fBframe\fP)"
+.br
+.ti -1c
+.RI "bool \fBframe\fP () const"
+.br
+.ti -1c
+.RI "QUuid \fBuuid\fP () const"
+.br
+.ti -1c
+.RI "void \fBupdateXref\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::updateXref\fP Create or delete the Xref according to the current properties of the project\&. "
+.ti -1c
+.RI "void \fBsetPlainText\fP (const QString &\fBtext\fP)"
+.br
+.ti -1c
+.RI "void \fBsetTextWidth\fP (qreal width)"
+.br
+.ti -1c
+.RI "void \fBsetXref_item\fP (Qt::AlignmentFlag m_exHrefPos)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QMetaEnum \fBtextFromMetaEnum\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::textFromMetaEnum\fP\&. "
+.ti -1c
+.RI "static QString \fBxmlTagName\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDynamicElementTextItem::mousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDynamicElementTextItem::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDynamicElementTextItem::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDynamicElementTextItem::mouseDoubleClickEvent\fP Reimplemented functions, for add extra feature when this text is owned by a slave\&. In this case if the parent slave element is linked to a master, and this text display the label of the master (both if the 'text from' is 'element info' or 'composite text') the QGraphicsView go to master and select it\&. "
+.ti -1c
+.RI "void \fBhoverEnterEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBDynamicElementTextItem::hoverEnterEvent\fP If the parent element of this text is a folio report or a slave element, the element is linked and the text display the variable 'label' we set the text blue for signal the user that the text act like a link when we double click on\&. "
+.ti -1c
+.RI "void \fBhoverLeaveEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBDynamicElementTextItem::hoverLeaveEvent\fP\&. "
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override"
+.br
+.ti -1c
+.RI "QVariant \fBitemChange\fP (GraphicsItemChange change, const QVariant &value) override"
+.br
+.ti -1c
+.RI "bool \fBsceneEventFilter\fP (QGraphicsItem *watched, QEvent *event) override"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "QString \fBtext\fP"
+.br
+.ti -1c
+.RI "\fBTextFrom\fP \fBtextFrom\fP"
+.br
+.ti -1c
+.RI "QString \fBinfoName\fP"
+.br
+.ti -1c
+.RI "QString \fBcompositeText\fP"
+.br
+.ti -1c
+.RI "bool \fBframe\fP"
+.br
+.ti -1c
+.RI "qreal \fBtextWidth\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDynamicElementTextItem\fP ()"
+.br
+.ti -1c
+.RI "\fBDynamicElementTextItem\fP (const \fBDynamicElementTextItem\fP &)"
+.br
+.ti -1c
+.RI "void \fBelementInfoChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBmasterChanged\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::masterChanged\fP This function is only use when the parent element is a slave\&. Call when the master element linked to the parent slave element of this text change\&. "
+.ti -1c
+.RI "void \fBreportChanged\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::reportChanged\fP This function is only use when parent element of this text is a folio report The linked report of the parent element was changed\&. "
+.ti -1c
+.RI "void \fBreportFormulaChanged\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::reportFormulaChanged\fP The report formula use in the project was changed\&. "
+.ti -1c
+.RI "void \fBsetConnectionForReportFormula\fP (const QString &formula)"
+.br
+.ti -1c
+.RI "void \fBremoveConnectionForReportFormula\fP (const QString &formula)"
+.br
+.ti -1c
+.RI "void \fBsetupFormulaConnection\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::setupFormulaConnection\fP Setup the required connection for the formula of the label\&. "
+.ti -1c
+.RI "void \fBclearFormulaConnection\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateReportFormulaConnection\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateReportText\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::updateReportText\fP This function is only use when this text is owned by a report, and this text have for info the Label\&. "
+.ti -1c
+.RI "void \fBupdateLabel\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::updateLabel\fP Update the displayed text, when this dynamic text is based on the label of the parent element\&. This function is notably use when the label itself is based from a formula\&. If this dynamic text isn't based on label, this function do nothing\&. "
+.ti -1c
+.RI "void \fBconductorWasAdded\fP (\fBConductor\fP *conductor)"
+.br
+.RI "\fBDynamicElementTextItem::conductorWasAdded\fP Function only use when parent element is a folio report\&. "
+.ti -1c
+.RI "void \fBconductorWasRemoved\fP (\fBConductor\fP *conductor)"
+.br
+.RI "\fBDynamicElementTextItem::conductorWasRemoved\fP Function only use when parent element is a folio report\&. "
+.ti -1c
+.RI "void \fBsetPotentialConductor\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::setPotentialConductor\fP This function is only used when the parent element of this text is a report element Get a conductor in the potential of the parent report\&. "
+.ti -1c
+.RI "void \fBconductorPropertiesChanged\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::conductorPropertiesChanged\fP This function is only used when the parent element of this text is a report element\&. "
+.ti -1c
+.RI "QString \fBreportReplacedCompositeText\fP () const"
+.br
+.RI "\fBDynamicElementTextItem::reportReplacedCompositeText\fP This function is only used when the parent element of this text is a report element\&. "
+.ti -1c
+.RI "void \fBzoomToLinkedElement\fP ()"
+.br
+.RI "\fBDynamicElementTextItem::zoomToLinkedElement\fP If the parent element is a folio report or a slave element, and is linked, zoom to the linked element\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< \fBElement\fP > \fBm_parent_element\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBElement\fP > \fBm_master_element\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBElement\fP > \fBm_other_report\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBConductor\fP > \fBm_watched_conductor\fP"
+.br
+.ti -1c
+.RI "QString \fBm_text\fP"
+.br
+.ti -1c
+.RI "QString \fBm_info_name\fP"
+.br
+.ti -1c
+.RI "QString \fBm_composite_text\fP"
+.br
+.ti -1c
+.RI "QString \fBm_report_formula\fP"
+.br
+.ti -1c
+.RI "QString \fBm_F_str\fP"
+.br
+.ti -1c
+.RI "\fBDynamicElementTextItem::TextFrom\fP \fBm_text_from\fP = \fBUserText\fP"
+.br
+.ti -1c
+.RI "QUuid \fBm_uuid\fP"
+.br
+.ti -1c
+.RI "QMetaObject::Connection \fBm_report_formula_con\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_formula_connection\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_update_slave_Xref_connection\fP"
+.br
+.ti -1c
+.RI "QColor \fBm_user_color\fP"
+.br
+.ti -1c
+.RI "bool \fBm_frame\fP = false"
+.br
+.ti -1c
+.RI "bool \fBm_first_scene_change\fP = true"
+.br
+.ti -1c
+.RI "\fBCrossRefItem\fP * \fBm_Xref_item\fP = nullptr"
+.br
+.ti -1c
+.RI "QGraphicsTextItem * \fBm_slave_Xref_item\fP = nullptr"
+.br
+.ti -1c
+.RI "qreal \fBm_text_width\fP = \-1"
+.br
+.ti -1c
+.RI "QPointF \fBm_initial_position\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBDynamicTextItemDelegate\fP"
+.br
+.ti -1c
+.RI "class \fBCompositeTextEditDialog\fP"
+.br
+.ti -1c
+.RI "class \fBElement\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBDynamicElementTextItem\fP class This class provide a simple text field of element who can be added or removed directly from the diagram editor\&. This text is created to compensate a big lack of the ElementTextItem : ElementTextItem can't be added or removed directly in the diagram editor\&. 
+
+
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SS "enum \fBDynamicElementTextItem::TextFrom\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIUserText \fP\fP
+.TP
+\fB\fIElementInfo \fP\fP
+.TP
+\fB\fICompositeText \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DynamicElementTextItem::DynamicElementTextItem (\fBElement\fP * parent_element)"
+
+.PP
+\fBDynamicElementTextItem::DynamicElementTextItem\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_element\fP 
+.RE
+.PP
+
+.SS "DynamicElementTextItem::~DynamicElementTextItem ()\fC [override]\fP"
+
+.SS "DynamicElementTextItem::DynamicElementTextItem ()\fC [private]\fP"
+
+.SS "DynamicElementTextItem::DynamicElementTextItem (const \fBDynamicElementTextItem\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DynamicElementTextItem::clearFormulaConnection ()\fC [private]\fP"
+
+.SS "QString DynamicElementTextItem::compositeText () const"
+
+.PP
+\fBDynamicElementTextItem::compositeText\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::compositeTextChanged (QString text)\fC [signal]\fP"
+
+.SS "void DynamicElementTextItem::conductorPropertiesChanged ()\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::conductorPropertiesChanged\fP This function is only used when the parent element of this text is a report element\&. 
+.SS "void DynamicElementTextItem::conductorWasAdded (\fBConductor\fP * conductor)\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::conductorWasAdded\fP Function only use when parent element is a folio report\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::conductorWasRemoved (\fBConductor\fP * conductor)\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::conductorWasRemoved\fP Function only use when parent element is a folio report\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::elementInfoChanged ()\fC [private]\fP"
+
+.SS "\fBElement\fP * DynamicElementTextItem::elementUseForInfo () const"
+
+.PP
+\fBDynamicElementTextItem::elementUseForInfo\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to the element we must use for the variable information\&. If this text is owned by a simple element, the simple element is returned, this is the same element returned by the function \fBparentElement()\fP\&. If this text is owned by a master element, the master element is returned, this is the same element returned by the function \fBparentElement()\fP\&. If this text is owned by a report element, the report element is returned, this is the same element returned by the function \fBparentElement()\fP\&. If this text is owned by a terminal element, the terminal element is returned, this is the same element returned by the function \fBparentElement()\fP\&. If this text is owned by a slave element, we return the master element set as master of the parent slave element, if the parent slave is not linked to a master, this function return a nullptr\&. If this text have no parent element, return nullptr 
+.RE
+.PP
+
+.SS "bool DynamicElementTextItem::frame () const"
+
+.SS "void DynamicElementTextItem::frameChanged (bool frame)\fC [signal]\fP"
+
+.SS "void DynamicElementTextItem::fromXml (const QDomElement & dom_elmt)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDynamicElementTextItem::fromXml\fP Import this text from xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_elmt\fP 
+.RE
+.PP
+
+.PP
+Implements \fBDiagramTextItem\fP\&.
+.SS "void DynamicElementTextItem::hoverEnterEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDynamicElementTextItem::hoverEnterEvent\fP If the parent element of this text is a folio report or a slave element, the element is linked and the text display the variable 'label' we set the text blue for signal the user that the text act like a link when we double click on\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::hoverLeaveEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDynamicElementTextItem::hoverLeaveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "QString DynamicElementTextItem::infoName () const"
+
+.PP
+\fBDynamicElementTextItem::infoName\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the info name of this text 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::infoNameChanged (QString info)\fC [signal]\fP"
+
+.SS "QVariant DynamicElementTextItem::itemChange (GraphicsItemChange change, const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void DynamicElementTextItem::masterChanged ()\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::masterChanged\fP This function is only use when the parent element is a slave\&. Call when the master element linked to the parent slave element of this text change\&. 
+.SS "void DynamicElementTextItem::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDynamicElementTextItem::mouseDoubleClickEvent\fP Reimplemented functions, for add extra feature when this text is owned by a slave\&. In this case if the parent slave element is linked to a master, and this text display the label of the master (both if the 'text from' is 'element info' or 'composite text') the QGraphicsView go to master and select it\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDynamicElementTextItem::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDynamicElementTextItem::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBDynamicElementTextItem::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "\fBElement\fP * DynamicElementTextItem::parentElement () const"
+
+.PP
+DynamicElementTextItem::ParentElement\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to the parent element\&. Note the pointer can be null\&. Note that the text can return a parent element, even if the text belong to a group of this same element\&. 
+.RE
+.PP
+
+.SS "\fBElementTextItemGroup\fP * DynamicElementTextItem::parentGroup () const"
+
+.PP
+\fBDynamicElementTextItem::parentGroup\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The group where this text belong, if this item is note in a group, return nullptr\&. 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::plainTextChanged ()\fC [signal]\fP"
+
+.SS "void DynamicElementTextItem::refreshLabelConnection ()"
+
+.PP
+\fBDynamicElementTextItem::refreshLabelConnection\fP Refresh the connection of this text when the source of text is label, or composite text, with a variable %{label}\&. 
+.SS "void DynamicElementTextItem::removeConnectionForReportFormula (const QString & formula)\fC [private]\fP"
+
+.SS "void DynamicElementTextItem::reportChanged ()\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::reportChanged\fP This function is only use when parent element of this text is a folio report The linked report of the parent element was changed\&. 
+.SS "void DynamicElementTextItem::reportFormulaChanged ()\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::reportFormulaChanged\fP The report formula use in the project was changed\&. 
+.SS "QString DynamicElementTextItem::reportReplacedCompositeText () const\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::reportReplacedCompositeText\fP This function is only used when the parent element of this text is a report element\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the composite text with the variable replaced by the real value\&. If the parent element of this text is not a folio report, return a default QString\&. 
+.RE
+.PP
+
+.SS "bool DynamicElementTextItem::sceneEventFilter (QGraphicsItem * watched, QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void DynamicElementTextItem::setCompositeText (const QString & text)"
+
+.PP
+\fBDynamicElementTextItem::setCompositeText\fP Set the composite text of this text item to text\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::setConnectionForReportFormula (const QString & formula)\fC [private]\fP"
+
+.SS "void DynamicElementTextItem::setFrame (const bool frame)"
+
+.SS "void DynamicElementTextItem::setInfoName (const QString & info_name)"
+
+.PP
+\fBDynamicElementTextItem::setInfoName\fP Set the information name of the parent element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo_name\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::setPlainText (const QString & text)"
+
+.SS "void DynamicElementTextItem::setPotentialConductor ()\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::setPotentialConductor\fP This function is only used when the parent element of this text is a report element Get a conductor in the potential of the parent report\&. 
+.SS "void DynamicElementTextItem::setText (const QString & text)"
+
+.PP
+\fBDynamicElementTextItem::setText\fP Set the text of this text\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::setTextFrom (\fBDynamicElementTextItem::TextFrom\fP text_from)"
+
+.PP
+\fBDynamicElementTextItem::setTextFrom\fP Set the final text is created from\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext_from\fP 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::setTextWidth (qreal width)"
+
+.SS "void DynamicElementTextItem::setupFormulaConnection ()\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::setupFormulaConnection\fP Setup the required connection for the formula of the label\&. 
+.SS "void DynamicElementTextItem::setXref_item (Qt::AlignmentFlag m_exHrefPos)"
+
+.SS "QString DynamicElementTextItem::text () const"
+
+.PP
+\fBDynamicElementTextItem::text\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the text of this text 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::textChanged (QString text)\fC [signal]\fP"
+
+.SS "\fBDynamicElementTextItem::TextFrom\fP DynamicElementTextItem::textFrom () const"
+
+.PP
+\fBDynamicElementTextItem::textFrom\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+what the final text is created from\&. 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::textFromChanged (\fBDynamicElementTextItem::TextFrom\fP text_from)\fC [signal]\fP"
+
+.SS "QMetaEnum DynamicElementTextItem::textFromMetaEnum ()\fC [static]\fP"
+
+.PP
+\fBDynamicElementTextItem::textFromMetaEnum\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The QMetaEnum of the enum TextFrom 
+.RE
+.PP
+
+.SS "void DynamicElementTextItem::textWidthChanged (qreal width)\fC [signal]\fP"
+
+.SS "QDomElement DynamicElementTextItem::toXml (QDomDocument & dom_doc) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDynamicElementTextItem::toXml\fP Export this text to xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_doc\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramTextItem\fP\&.
+.SS "int DynamicElementTextItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "void DynamicElementTextItem::updateLabel ()\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::updateLabel\fP Update the displayed text, when this dynamic text is based on the label of the parent element\&. This function is notably use when the label itself is based from a formula\&. If this dynamic text isn't based on label, this function do nothing\&. 
+.SS "void DynamicElementTextItem::updateReportFormulaConnection ()\fC [private]\fP"
+
+.SS "void DynamicElementTextItem::updateReportText ()\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::updateReportText\fP This function is only use when this text is owned by a report, and this text have for info the Label\&. 
+.SS "void DynamicElementTextItem::updateXref ()"
+
+.PP
+\fBDynamicElementTextItem::updateXref\fP Create or delete the Xref according to the current properties of the project\&. 
+.SS "QUuid DynamicElementTextItem::uuid () const"
+
+.SS "static QString DynamicElementTextItem::xmlTagName ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "void DynamicElementTextItem::zoomToLinkedElement ()\fC [private]\fP"
+
+.PP
+\fBDynamicElementTextItem::zoomToLinkedElement\fP If the parent element is a folio report or a slave element, and is linked, zoom to the linked element\&. 
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBCompositeTextEditDialog\fP\fC [friend]\fP"
+
+.SS "friend class \fBDynamicTextItemDelegate\fP\fC [friend]\fP"
+
+.SS "friend class \fBElement\fP\fC [friend]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString DynamicElementTextItem::m_composite_text\fC [private]\fP"
+
+.SS "QString DynamicElementTextItem::m_F_str\fC [private]\fP"
+
+.SS "bool DynamicElementTextItem::m_first_scene_change = true\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> DynamicElementTextItem::m_formula_connection\fC [private]\fP"
+
+.SS "bool DynamicElementTextItem::m_frame = false\fC [private]\fP"
+
+.SS "QString DynamicElementTextItem::m_info_name\fC [private]\fP"
+
+.SS "QPointF DynamicElementTextItem::m_initial_position\fC [private]\fP"
+
+.SS "QPointer<\fBElement\fP> DynamicElementTextItem::m_master_element\fC [private]\fP"
+
+.SS "QPointer<\fBElement\fP> DynamicElementTextItem::m_other_report\fC [private]\fP"
+
+.SS "QPointer<\fBElement\fP> DynamicElementTextItem::m_parent_element\fC [private]\fP"
+
+.SS "QString DynamicElementTextItem::m_report_formula\fC [private]\fP"
+
+.SS "QMetaObject::Connection DynamicElementTextItem::m_report_formula_con\fC [private]\fP"
+
+.SS "QGraphicsTextItem* DynamicElementTextItem::m_slave_Xref_item = nullptr\fC [private]\fP"
+
+.SS "QString DynamicElementTextItem::m_text\fC [private]\fP"
+
+.SS "\fBDynamicElementTextItem::TextFrom\fP DynamicElementTextItem::m_text_from = \fBUserText\fP\fC [private]\fP"
+
+.SS "qreal DynamicElementTextItem::m_text_width = \-1\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> DynamicElementTextItem::m_update_slave_Xref_connection\fC [private]\fP"
+
+.SS "QColor DynamicElementTextItem::m_user_color\fC [private]\fP"
+
+.SS "QUuid DynamicElementTextItem::m_uuid\fC [private]\fP"
+
+.SS "QPointer<\fBConductor\fP> DynamicElementTextItem::m_watched_conductor\fC [private]\fP"
+
+.SS "\fBCrossRefItem\fP* DynamicElementTextItem::m_Xref_item = nullptr\fC [private]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "QString DynamicElementTextItem::compositeText\fC [read]\fP, \fC [write]\fP"
+
+.SS "bool DynamicElementTextItem::frame\fC [read]\fP, \fC [write]\fP"
+
+.SS "QString DynamicElementTextItem::infoName\fC [read]\fP, \fC [write]\fP"
+
+.SS "QString DynamicElementTextItem::text\fC [read]\fP, \fC [write]\fP"
+
+.SS "\fBTextFrom\fP DynamicElementTextItem::textFrom\fC [read]\fP, \fC [write]\fP"
+
+.SS "qreal DynamicElementTextItem::textWidth\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

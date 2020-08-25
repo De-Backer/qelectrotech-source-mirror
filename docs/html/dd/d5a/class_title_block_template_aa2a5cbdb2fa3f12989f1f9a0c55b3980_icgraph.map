@@ -1,0 +1,13 @@
+<map id="TitleBlockTemplate::createCell" name="TitleBlockTemplate::createCell">
+<area shape="rect" id="node1" title="TitleBlockTemplate::createCell Create a new cell and associate it with this template,..." alt="" coords="1115,72,1248,113"/>
+<area shape="rect" id="node2" href="$dd/d5a/class_title_block_template.html#aac75772c9e675a84317f92b59243df1b" title="TitleBlockTemplate::clone." alt="" coords="933,39,1067,80"/>
+<area shape="rect" id="node3" href="$dd/d5a/class_title_block_template.html#aaae9ec47b0d19821a3c6eb66c45531da" title="TitleBlockTemplate::createCellsList." alt="" coords="933,104,1067,145"/>
+<area shape="rect" id="node4" href="$dd/d5a/class_title_block_template.html#aea4e9aaf70598be0a1ef80e77db8c8e2" title="TitleBlockTemplate::createColumn." alt="" coords="752,71,885,112"/>
+<area shape="rect" id="node10" href="$dd/d5a/class_title_block_template.html#a22d7ed41901e5fd2737f3b6a8904f4bc" title="TitleBlockTemplate::createRow." alt="" coords="752,136,885,177"/>
+<area shape="rect" id="node5" href="$dd/d5a/class_title_block_template.html#adbf32aeeea69f5caf75a91c29439331f" title="TitleBlockTemplate::addColumn Add a new 50px&#45;wide column at the provided index." alt="" coords="571,5,704,47"/>
+<area shape="rect" id="node6" href="$dd/d5a/class_title_block_template.html#a50524c17ec7334634737946f5dc7bceb" title="TitleBlockTemplate::initCells Initialize the internal cells grid with the row and column counts...." alt="" coords="571,71,704,112"/>
+<area shape="rect" id="node7" href="$dd/d5a/class_title_block_template.html#a753e1f1387c0bfcdd3c99c123aa34ed1" title=" " alt="" coords="389,71,523,112"/>
+<area shape="rect" id="node8" href="$dd/d5a/class_title_block_template.html#ae81978987a8183e50af6671050ce09fb" title="TitleBlockTemplate::loadFromXmlElement." alt="" coords="187,71,341,112"/>
+<area shape="rect" id="node9" href="$dd/d5a/class_title_block_template.html#a2db40e477dc860eaacc00650aa968bdc" title="TitleBlockTemplate::loadFromXmlFile Load a titleblock template from an XML file." alt="" coords="5,71,139,112"/>
+<area shape="rect" id="node11" href="$dd/d5a/class_title_block_template.html#ad0ea1e09a4fc3c9cb84e11303635ee35" title="TitleBlockTemplate::addRow Add a new 25px&#45;wide row at the provided index." alt="" coords="571,136,704,177"/>
+</map>

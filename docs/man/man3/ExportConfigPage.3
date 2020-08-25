@@ -1,0 +1,103 @@
+.TH "ExportConfigPage" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExportConfigPage \- The \fBExportConfigPage\fP class This configuration page enables users to set default export options\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <configpages\&.h>\fP
+.PP
+Inherits \fBConfigPage\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExportConfigPage\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ExportConfigPage\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBapplyConf\fP () override"
+.br
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.ti -1c
+.RI "QIcon \fBicon\fP () const override"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBExportPropertiesWidget\fP * \fBepw\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExportConfigPage\fP (const \fBExportConfigPage\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBExportConfigPage\fP class This configuration page enables users to set default export options\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ExportConfigPage::ExportConfigPage (QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP QWidget parent 
+.RE
+.PP
+
+.SS "ExportConfigPage::~ExportConfigPage ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "ExportConfigPage::ExportConfigPage (const \fBExportConfigPage\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ExportConfigPage::applyConf ()\fC [override]\fP, \fC [virtual]\fP"
+Applique la configuration de cette page 
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "QIcon ExportConfigPage::icon () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+l'icone de cette page 
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "QString ExportConfigPage::title () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+le titre de cette page 
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBExportPropertiesWidget\fP* ExportConfigPage::epw"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

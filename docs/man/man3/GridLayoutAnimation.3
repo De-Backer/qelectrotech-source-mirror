@@ -1,0 +1,157 @@
+.TH "GridLayoutAnimation" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GridLayoutAnimation
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gridlayoutanimation\&.h>\fP
+.PP
+Inherits QVariantAnimation\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGridLayoutAnimation\fP (QGraphicsGridLayout *=nullptr, QObject *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~GridLayoutAnimation\fP () override"
+.br
+.ti -1c
+.RI "QGraphicsGridLayout * \fBgrid\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetGrid\fP (QGraphicsGridLayout *)"
+.br
+.ti -1c
+.RI "int \fBindex\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetIndex\fP (int)"
+.br
+.ti -1c
+.RI "bool \fBactsOnRows\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetActsOnRows\fP (bool)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateCurrentValue\fP (const QVariant &) override"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QGraphicsGridLayout * \fBgrid_\fP"
+.br
+.RI "Grid this class will animate\&. "
+.ti -1c
+.RI "bool \fBrow_\fP"
+.br
+.RI "Whether we should animate a row or a column\&. "
+.ti -1c
+.RI "int \fBindex_\fP"
+.br
+.RI "Index of the row/column to be animated\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class allows animating a dimension change for a QGraphicsGridLayout row or column\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GridLayoutAnimation::GridLayoutAnimation (QGraphicsGridLayout * grid = \fCnullptr\fP, QObject * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgrid\fP Grid to be animated 
+.br
+\fIparent\fP Parent QObject 
+.RE
+.PP
+
+.SS "GridLayoutAnimation::~GridLayoutAnimation ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool GridLayoutAnimation::actsOnRows () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if this object acts on a row, false if it acts on a column\&. 
+.RE
+.PP
+
+.SS "QGraphicsGridLayout * GridLayoutAnimation::grid ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+the animated grid 
+.RE
+.PP
+
+.SS "int GridLayoutAnimation::index () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the index of the row/column to be animated 
+.RE
+.PP
+
+.SS "void GridLayoutAnimation::setActsOnRows (bool acts_on_row)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIacts_on_row\fP true for this object to act on a row, false for it to act on a column\&. 
+.RE
+.PP
+
+.SS "void GridLayoutAnimation::setGrid (QGraphicsGridLayout * grid)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIgrid\fP The grid to be animated 
+.RE
+.PP
+
+.SS "void GridLayoutAnimation::setIndex (int index)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP the index of the row/column to be animated 
+.RE
+.PP
+
+.SS "void GridLayoutAnimation::updateCurrentValue (const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+Implementation of QVariantAnimation::updateCurrentValue()\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QGraphicsGridLayout* GridLayoutAnimation::grid_\fC [private]\fP"
+
+.PP
+Grid this class will animate\&. 
+.SS "int GridLayoutAnimation::index_\fC [private]\fP"
+
+.PP
+Index of the row/column to be animated\&. 
+.SS "bool GridLayoutAnimation::row_\fC [private]\fP"
+
+.PP
+Whether we should animate a row or a column\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

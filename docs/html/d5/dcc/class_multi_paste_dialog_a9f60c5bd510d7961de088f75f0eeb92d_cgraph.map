@@ -1,0 +1,52 @@
+<map id="MultiPasteDialog::MultiPasteDialog" name="MultiPasteDialog::MultiPasteDialog">
+<area shape="rect" id="node1" title=" " alt="" coords="5,740,196,781"/>
+<area shape="rect" id="node2" href="$d3/d37/class_diagram.html#a504d4e59ccf7d02638606463462945a1" title="Diagram::toXml Exports all or part of the schema." alt="" coords="271,521,385,547"/>
+<area shape="rect" id="node37" href="$d5/dcc/class_multi_paste_dialog.html#a8788e76c17a1908550ab51294cb3fcc4" title=" " alt="" coords="244,881,412,923"/>
+<area shape="rect" id="node3" href="$df/d92/class_border_title_block.html#a05f982fb31c58cd0ebbbacce061cda91" title="BorderTitleBlock::borderToXml Exports the border current settings to XML." alt="" coords="469,235,631,276"/>
+<area shape="rect" id="node13" href="$d3/d37/class_diagram.html#a22332c260233569adf592e8e94577d34" title="Diagram::folioSequentialsToXml Add folio sequential to QDomElement." alt="" coords="465,404,635,445"/>
+<area shape="rect" id="node14" href="$d3/d37/class_diagram.html#ad1ca657daa905b0d10529326148e4546" title="Diagram::isEmpty An empty schema contains no element, conductor, or text field." alt="" coords="487,470,613,497"/>
+<area shape="rect" id="node15" href="$d7/df8/class_q_e_t_app.html#a69a31da8f6a67539cfcbed0e903c1671" title="QETApp::projectId." alt="" coords="485,521,615,547"/>
+<area shape="rect" id="node17" href="$df/d92/class_border_title_block.html#ab61cc41d6ee33d11428f481ee8ff9f5b" title="BorderTitleBlock::titleBlockToXml Exports the title block current values to XML." alt="" coords="460,572,640,613"/>
+<area shape="rect" id="node33" href="$d6/db9/class_conductor_properties.html#ae5632aaf7a0837f13174ee9bf867051d" title="ConductorProperties::toXml Export conductor propertie, in the XML element &#39;e&#39;." alt="" coords="479,700,621,741"/>
+<area shape="rect" id="node4" href="$df/d92/class_border_title_block.html#a6a505ad72db66806de4c21b1256637d5" title=" " alt="" coords="709,5,884,47"/>
+<area shape="rect" id="node5" href="$df/d92/class_border_title_block.html#aee0fe66b0f44c0379344dd257eef1de4" title=" " alt="" coords="709,71,884,112"/>
+<area shape="rect" id="node6" href="$df/d92/class_border_title_block.html#af38649a1abd3a73a7f8026382330541c" title=" " alt="" coords="709,136,884,177"/>
+<area shape="rect" id="node7" href="$df/d92/class_border_title_block.html#a82d55c9147b0148234af09355a634aa2" title="diagramHeight" alt="" coords="711,201,883,243"/>
+<area shape="rect" id="node10" href="$df/d92/class_border_title_block.html#ad4bd3cffcedb869dceaa31dd10d6905e" title=" " alt="" coords="709,267,884,308"/>
+<area shape="rect" id="node11" href="$df/d92/class_border_title_block.html#ad17bd13289ef524249a24058ed02a255" title=" " alt="" coords="702,333,891,359"/>
+<area shape="rect" id="node12" href="$df/d92/class_border_title_block.html#a92a59aec4ce6210e9d80781e770626df" title=" " alt="" coords="701,383,893,410"/>
+<area shape="rect" id="node8" href="$df/d92/class_border_title_block.html#ab4991748456b593ff4587d343240293d" title=" " alt="" coords="971,136,1145,177"/>
+<area shape="rect" id="node9" href="$df/d92/class_border_title_block.html#a71342eabe761927eb76054d43ea9470b" title=" " alt="" coords="967,201,1149,243"/>
+<area shape="rect" id="node16" href="$d7/df8/class_q_e_t_app.html#a6be4484aa447132c5b44732279b0836c" title="QETApp::project." alt="" coords="737,487,856,514"/>
+<area shape="rect" id="node18" href="$df/d92/class_border_title_block.html#af7ff69f6cf7cceebed9457f86c7eafd7" title="BorderTitleBlock::exportTitleBlock." alt="" coords="715,539,878,580"/>
+<area shape="rect" id="node30" href="$d3/d1a/class_title_block_properties.html#a26de002cbb991529ee15e620a4710720" title=" " alt="" coords="727,604,867,645"/>
+<area shape="rect" id="node19" href="$df/d92/class_border_title_block.html#ac1b23e114bc6405dc9458b87822e30e3" title=" " alt="" coords="977,267,1139,294"/>
+<area shape="rect" id="node20" href="$df/d92/class_border_title_block.html#ac60ba58bc308f973ed34dc76167c86dc" title=" " alt="" coords="953,318,1163,345"/>
+<area shape="rect" id="node21" href="$df/d92/class_border_title_block.html#af4f6e39703a96bbad7a66d543d06459b" title=" " alt="" coords="983,369,1133,395"/>
+<area shape="rect" id="node22" href="$df/d92/class_border_title_block.html#a0eb91b4d0a71a631a051b1b654914255" title=" " alt="" coords="969,419,1147,446"/>
+<area shape="rect" id="node23" href="$df/d92/class_border_title_block.html#af3ad97fdae613bac5d29b7c5750fd6ec" title=" " alt="" coords="983,470,1133,497"/>
+<area shape="rect" id="node24" href="$df/d92/class_border_title_block.html#a97f7fc56e25453acc763a200f89f971d" title=" " alt="" coords="971,521,1145,547"/>
+<area shape="rect" id="node25" href="$df/d92/class_border_title_block.html#a4bb10e5a498bd9fff74fa20dfdcb3405" title=" " alt="" coords="971,571,1145,598"/>
+<area shape="rect" id="node26" href="$df/d92/class_border_title_block.html#a395b9693b6b6391584da1fc884b5df08" title=" " alt="" coords="981,622,1135,649"/>
+<area shape="rect" id="node27" href="$df/d92/class_border_title_block.html#ae83cb12cf27875a22b05492cbcbcd5f3" title=" " alt="" coords="985,673,1131,699"/>
+<area shape="rect" id="node28" href="$df/d92/class_border_title_block.html#afbad2010fb9792d192f3d24ab6f7c51a" title="BorderTitleBlock::titleBlockTemplateName." alt="" coords="968,724,1148,765"/>
+<area shape="rect" id="node29" href="$df/d92/class_border_title_block.html#a773d936e4e444170ebb08f926789bc29" title=" " alt="" coords="975,790,1141,817"/>
+<area shape="rect" id="node31" href="$d3/d1a/class_title_block_properties.html#ad785dd1e73f03863c4fb703bea97604e" title=" " alt="" coords="988,841,1128,883"/>
+<area shape="rect" id="node32" href="$db/dfb/class_diagram_context.html#a37d1ffa39889b4afa4766137f9d2e13d" title=" " alt="" coords="983,907,1133,934"/>
+<area shape="rect" id="node34" href="$d3/de3/class_single_line_properties.html#abcafa860f7c903a2c6e856bbc4c64c7b" title=" " alt="" coords="725,669,868,711"/>
+<area shape="rect" id="node35" href="$d6/db9/class_conductor_properties.html#a17d691af0791a3b9d3500f5ef2e2ac4b" title=" " alt="" coords="725,735,868,776"/>
+<area shape="rect" id="node36" href="$d6/db9/class_conductor_properties.html#af0bcd9b7979c4ed45e2f44d4aa8d5b1d" title=" " alt="" coords="725,800,868,841"/>
+<area shape="rect" id="node38" href="$d3/d37/class_diagram.html#a5ce477a5197fdfc394d662f8f71dc977" title="Diagram::adjustSceneRect Recalcul and adjust the size of the scene." alt="" coords="461,787,639,814"/>
+<area shape="rect" id="node40" href="$d9/db9/class_diagram_content.html#a0cbea8cc313b3582b349f6f8bab81cd2" title="DiagramContent::clear Remove all items from the diagram content." alt="" coords="474,838,626,865"/>
+<area shape="rect" id="node41" href="$d9/db9/class_diagram_content.html#a69545c3ec624bc931c6a0bcfca0f7fa6" title="DiagramContent::count." alt="" coords="472,889,628,915"/>
+<area shape="rect" id="node42" href="$d3/d37/class_diagram.html#a4421fe323f2ce7eb493489b4e1241184" title="Diagram::fromXml Imports the described schema into an XML document. If a position is specified,..." alt="" coords="486,939,614,966"/>
+<area shape="rect" id="node43" href="$d9/db9/class_diagram_content.html#a278da70e11e9a9db67db1bcdcf0f69f0" title="DiagramContent::items." alt="" coords="472,990,628,1017"/>
+<area shape="rect" id="node45" href="$d3/d37/class_diagram.html#a0b0af5271af64fe8eab04efb14e849d8" title="Diagram::removeItem Reimplemented from QGraphicsScene::removeItem(QGraphicsItem *item) Do some specif..." alt="" coords="477,1071,623,1098"/>
+<area shape="rect" id="node39" href="$df/d92/class_border_title_block.html#a8f493ea91d266e4f8219b45b83a01550" title="BorderTitleBlock::borderAndTitleBlockRect." alt="" coords="715,865,878,907"/>
+<area shape="rect" id="node44" href="$d9/db9/class_diagram_content.html#a469693789e1268cbfae9486b240da1a3" title="DiagramContent::conductors." alt="" coords="703,945,891,971"/>
+<area shape="rect" id="node46" href="$d6/dc5/class_q_e_t_project.html#a38c4778acc88e16b55913fefa48e6f5b" title="QETProject::dataBase." alt="" coords="721,995,873,1022"/>
+<area shape="rect" id="node47" href="$d3/d37/class_diagram.html#ab576e6398fe6d00cd92d6bbf9300f7b6" title="Diagram::isReadOnly." alt="" coords="723,1046,870,1073"/>
+<area shape="rect" id="node48" href="$dc/d46/class_terminal.html#a35ee48aaa14c345828ba931876dba1c9" title="Terminal::removeConductor Remove a conductor from this terminal." alt="" coords="706,1097,887,1123"/>
+<area shape="rect" id="node49" href="$d5/d7f/classproject_data_base.html#a936b9fe54fd06e16c4f769643cfedf8f" title="projectDataBase::removeElement" alt="" coords="688,1147,905,1174"/>
+<area shape="rect" id="node50" href="$d5/d50/class_element.html#a9a1858b233f9a764d9934619ade84c2d" title=" " alt="" coords="706,1198,887,1225"/>
+</map>

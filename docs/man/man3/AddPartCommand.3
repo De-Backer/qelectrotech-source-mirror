@@ -1,0 +1,101 @@
+.TH "AddPartCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AddPartCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <editorcommands\&.h>\fP
+.PP
+Inherits \fBElementEditionCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAddPartCommand\fP (const QString &, \fBElementScene\fP *, QGraphicsItem *, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~AddPartCommand\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "Annule l'ajout\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "Refait l'ajout\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAddPartCommand\fP (const \fBAddPartCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QGraphicsItem * \fBpart\fP"
+.br
+.RI "Added primitive\&. "
+.ti -1c
+.RI "bool \fBfirst_redo\fP"
+.br
+.RI "Prevent the first call to \fBredo()\fP "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This command adds a primitive when editing an electrical element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AddPartCommand::AddPartCommand (const QString & name, \fBElementScene\fP * scene, QGraphicsItem * p, QUndoCommand * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP Nom de la partie ajoutee 
+.br
+\fIscene\fP \fBElementScene\fP concernee 
+.br
+\fIp\fP partie ajoutee 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "AddPartCommand::~AddPartCommand ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "AddPartCommand::AddPartCommand (const \fBAddPartCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void AddPartCommand::redo ()\fC [override]\fP"
+
+.PP
+Refait l'ajout\&. 
+.SS "void AddPartCommand::undo ()\fC [override]\fP"
+
+.PP
+Annule l'ajout\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool AddPartCommand::first_redo\fC [private]\fP"
+
+.PP
+Prevent the first call to \fBredo()\fP 
+.SS "QGraphicsItem* AddPartCommand::part\fC [private]\fP"
+
+.PP
+Added primitive\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

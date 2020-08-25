@@ -1,0 +1,267 @@
+.TH "CustomElementPart" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CustomElementPart \- The \fBCustomElementPart\fP class This abstract class represents a primitive of the visual representation of an electrical element\&. The \fBElement\fP, FixedElement and CustomElement classes do not embed its attributes and methods in order to remain lightweight; indeed, there is no point for those classes to store their visual representation with anything more complex than a QImage\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <customelementpart\&.h>\fP
+.PP
+Inherited by \fBCustomElementGraphicPart\fP, \fBPartDynamicTextField\fP, and \fBPartText\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCustomElementPart\fP (\fBQETElementEditor\fP *editor)"
+.br
+.RI "\fBCustomElementPart\fP Constructor\&. "
+.ti -1c
+.RI "virtual \fB~CustomElementPart\fP ()"
+.br
+.RI "~CustomElementPart Destructor "
+.ti -1c
+.RI "virtual void \fBfromXml\fP (const QDomElement &)=0"
+.br
+.ti -1c
+.RI "virtual const QDomElement \fBtoXml\fP (QDomDocument &) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetProperty\fP (const char *\fBname\fP, const QVariant &value)=0"
+.br
+.ti -1c
+.RI "virtual QVariant \fBproperty\fP (const char *\fBname\fP) const =0"
+.br
+.ti -1c
+.RI "virtual bool \fBisUseless\fP () const =0"
+.br
+.ti -1c
+.RI "virtual QRectF \fBsceneGeometricRect\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBstartUserTransformation\fP (const QRectF &)=0"
+.br
+.ti -1c
+.RI "virtual void \fBhandleUserTransformation\fP (const QRectF &, const QRectF &)=0"
+.br
+.ti -1c
+.RI "virtual \fBQETElementEditor\fP * \fBelementEditor\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBupdateCurrentPartEditor\fP () const"
+.br
+.ti -1c
+.RI "virtual \fBElementScene\fP * \fBelementScene\fP () const"
+.br
+.ti -1c
+.RI "virtual QUndoStack & \fBundoStack\fP () const"
+.br
+.ti -1c
+.RI "virtual QString \fBname\fP () const =0"
+.br
+.ti -1c
+.RI "virtual QString \fBxmlName\fP () const =0"
+.br
+.ti -1c
+.RI "virtual QGraphicsItem * \fBtoItem\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBQET::ScalingMethod\fP \fBpreferredScalingMethod\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QList< QPointF > \fBmapPoints\fP (const QRectF &, const QRectF &, const QList< QPointF > &)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCustomElementPart\fP (const \fBCustomElementPart\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETElementEditor\fP * \fBelement_editor\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBCustomElementPart\fP class This abstract class represents a primitive of the visual representation of an electrical element\&. The \fBElement\fP, FixedElement and CustomElement classes do not embed its attributes and methods in order to remain lightweight; indeed, there is no point for those classes to store their visual representation with anything more complex than a QImage\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CustomElementPart::CustomElementPart (\fBQETElementEditor\fP * editor)\fC [inline]\fP"
+
+.PP
+\fBCustomElementPart\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP \fBElement\fP editor this primitive is attached to 
+.RE
+.PP
+
+.SS "virtual CustomElementPart::~CustomElementPart ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+~CustomElementPart Destructor 
+.SS "CustomElementPart::CustomElementPart (const \fBCustomElementPart\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBQETElementEditor\fP * CustomElementPart::elementEditor () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to the parent element editor
+.PP
+le \fBQETElementEditor\fP auquel cet editeur appartient 
+.RE
+.PP
+
+.SS "\fBElementScene\fP * CustomElementPart::elementScene () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to the parent editing scene
+.PP
+l'\fBElementScene\fP contenant les parties editees par cet editeur 
+.RE
+.PP
+
+.SS "virtual void CustomElementPart::fromXml (const QDomElement &)\fC [pure virtual]\fP"
+Load the primitive from an XML element that describes it 
+.PP
+Implemented in \fBPartDynamicTextField\fP, \fBPartLine\fP, \fBPartPolygon\fP, \fBPartRectangle\fP, \fBPartText\fP, \fBPartEllipse\fP, \fBPartTerminal\fP, and \fBPartArc\fP\&.
+.SS "virtual void CustomElementPart::handleUserTransformation (const QRectF &, const QRectF &)\fC [pure virtual]\fP"
+Make this part fit into the provided rectangle\&. 
+.PP
+Implemented in \fBPartDynamicTextField\fP, \fBPartLine\fP, \fBPartRectangle\fP, \fBPartPolygon\fP, \fBPartText\fP, \fBPartTerminal\fP, and \fBAbstractPartEllipse\fP\&.
+.SS "virtual bool CustomElementPart::isUseless () const\fC [pure virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+whether the primitive appears to be useless (e\&.g\&. 0-length line) Typically, useless primitives are discarded when saving the element\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBPartLine\fP, \fBPartRectangle\fP, \fBPartDynamicTextField\fP, \fBAbstractPartEllipse\fP, \fBPartPolygon\fP, \fBPartText\fP, and \fBPartTerminal\fP\&.
+.SS "QList< QPointF > CustomElementPart::mapPoints (const QRectF & initial_selection_rect, const QRectF & new_selection_rect, const QList< QPointF > & points)\fC [protected]\fP"
+Helper method to map points in \fBCustomElementPart::handleUserTransformation()\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_selection_rect\fP Selection rectangle when the movement started, in scene coordinates 
+.br
+\fInew_selection_rect\fP New selection rectangle, in scene coordinates 
+.br
+\fIpoints\fP List of points when the movement started, in scene coordinates\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The list of points mapped from initial_selection_rect to new_selection_rect 
+.RE
+.PP
+
+.SS "virtual QString CustomElementPart::name () const\fC [pure virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name of the primitive 
+.RE
+.PP
+
+.PP
+Implemented in \fBPartLine\fP, \fBPartDynamicTextField\fP, \fBPartPolygon\fP, \fBPartRectangle\fP, \fBPartText\fP, \fBPartTerminal\fP, \fBPartEllipse\fP, and \fBPartArc\fP\&.
+.SS "\fBQET::ScalingMethod\fP CustomElementPart::preferredScalingMethod () const\fC [virtual]\fP"
+This method is called by the decorator when it needs to determine the best way to interactively scale a primitive\&. It is typically called when only a single primitive is being scaled\&. The default implementation systematically returns \fBQET::SnapScalingPointToGrid\fP 
+.PP
+Reimplemented in \fBPartPolygon\fP\&.
+.SS "virtual QVariant CustomElementPart::property (const char * name) const\fC [pure virtual]\fP"
+Get the current value of a specific primitive property 
+.PP
+Implemented in \fBCustomElementGraphicPart\fP, \fBPartText\fP, and \fBPartDynamicTextField\fP\&.
+.SS "virtual QRectF CustomElementPart::sceneGeometricRect () const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBPartLine\fP, \fBPartDynamicTextField\fP, \fBPartRectangle\fP, \fBPartPolygon\fP, \fBAbstractPartEllipse\fP, \fBPartText\fP, and \fBPartTerminal\fP\&.
+.SS "virtual void CustomElementPart::setProperty (const char * name, const QVariant & value)\fC [pure virtual]\fP"
+Set a specific property of the primitive 
+.PP
+Implemented in \fBCustomElementGraphicPart\fP, \fBPartText\fP, and \fBPartDynamicTextField\fP\&.
+.SS "virtual void CustomElementPart::startUserTransformation (const QRectF &)\fC [pure virtual]\fP"
+Inform this part a user-induced transformation is about to begin\&. This method can be used to save data required by \fBhandleUserTransformation()\fP\&. 
+.PP
+Implemented in \fBPartDynamicTextField\fP, \fBPartLine\fP, \fBPartRectangle\fP, \fBPartPolygon\fP, \fBPartText\fP, \fBPartTerminal\fP, and \fBAbstractPartEllipse\fP\&.
+.SS "QGraphicsItem * CustomElementPart::toItem ()\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+this primitive as a QGraphicsItem 
+.RE
+.PP
+
+.SS "virtual const QDomElement CustomElementPart::toXml (QDomDocument &) const\fC [pure virtual]\fP"
+Export the primitive as an XML element 
+.PP
+Implemented in \fBPartDynamicTextField\fP, \fBPartLine\fP, \fBPartPolygon\fP, \fBPartRectangle\fP, \fBPartText\fP, \fBPartTerminal\fP, \fBPartEllipse\fP, and \fBPartArc\fP\&.
+.SS "QUndoStack & CustomElementPart::undoStack () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the element editor undo stack
+.PP
+la QUndoStack a utiliser pour les annulations 
+.RE
+.PP
+
+.SS "void CustomElementPart::updateCurrentPartEditor () const\fC [virtual]\fP"
+Call the \fBupdateCurrentPartEditor()\fP slot of the editor 
+.PP
+\fBSee also\fP
+.RS 4
+\fBQETElementEditor::updateCurrentPartEditor()\fP
+.RE
+.PP
+Appelle le slot updateCurrentPartEditor de l'editeur 
+.PP
+\fBSee also\fP
+.RS 4
+\fBQETElementEditor::updateCurrentPartEditor()\fP 
+.RE
+.PP
+
+.SS "virtual QString CustomElementPart::xmlName () const\fC [pure virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name that will be used as XML tag when exporting the primitive 
+.RE
+.PP
+
+.PP
+Implemented in \fBPartLine\fP, \fBPartDynamicTextField\fP, \fBPartPolygon\fP, \fBPartRectangle\fP, \fBPartText\fP, \fBPartTerminal\fP, \fBPartEllipse\fP, and \fBPartArc\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQETElementEditor\fP* CustomElementPart::element_editor\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

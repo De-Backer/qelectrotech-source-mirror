@@ -1,0 +1,56 @@
+.TH "sources/qetgraphicsitem/element.h" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qetgraphicsitem/element.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'qet\&.h'\fP
+.br
+\fC#include 'qetgraphicsitem\&.h'\fP
+.br
+\fC#include 'diagramcontext\&.h'\fP
+.br
+\fC#include 'assignvariables\&.h'\fP
+.br
+\fC#include 'elementslocation\&.h'\fP
+.br
+\fC#include 'nameslist\&.h'\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <QPicture>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBElement\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBcomparPos\fP (const \fBElement\fP *elmt1, const \fBElement\fP *elmt2)"
+.br
+.RI "comparPos Compare position of the two elements\&. Compare 3 points: 1 folio - 2 row - 3 line returns a response when a comparison is found\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "bool comparPos (const \fBElement\fP * elmt1, const \fBElement\fP * elmt2)"
+
+.PP
+comparPos Compare position of the two elements\&. Compare 3 points: 1 folio - 2 row - 3 line returns a response when a comparison is found\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if elmt1 is at lower position than elmt 2, else false 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

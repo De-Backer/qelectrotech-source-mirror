@@ -1,0 +1,95 @@
+.TH "sources/diagram.cpp" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/diagram.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <math\&.h>\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include 'qetgraphicsitem/conductor\&.h'\fP
+.br
+\fC#include 'qetgraphicsitem/conductortextitem\&.h'\fP
+.br
+\fC#include 'factory/elementfactory\&.h'\fP
+.br
+\fC#include 'diagram\&.h'\fP
+.br
+\fC#include 'diagramcommands\&.h'\fP
+.br
+\fC#include 'diagramcontent\&.h'\fP
+.br
+\fC#include 'diagramposition\&.h'\fP
+.br
+\fC#include 'exportdialog\&.h'\fP
+.br
+\fC#include 'qetgraphicsitem/independenttextitem\&.h'\fP
+.br
+\fC#include 'qetgraphicsitem/diagramimageitem\&.h'\fP
+.br
+\fC#include 'qetgraphicsitem/qetshapeitem\&.h'\fP
+.br
+\fC#include 'terminal\&.h'\fP
+.br
+\fC#include 'diagrameventinterface\&.h'\fP
+.br
+\fC#include 'qetapp\&.h'\fP
+.br
+\fC#include 'elementcollectionhandler\&.h'\fP
+.br
+\fC#include 'element\&.h'\fP
+.br
+\fC#include 'diagramview\&.h'\fP
+.br
+\fC#include 'dynamicelementtextitem\&.h'\fP
+.br
+\fC#include 'elementtextitemgroup\&.h'\fP
+.br
+\fC#include 'undocommand/addelementtextcommand\&.h'\fP
+.br
+\fC#include 'QPropertyUndoCommand/qpropertyundocommand\&.h'\fP
+.br
+\fC#include 'qetgraphicstableitem\&.h'\fP
+.br
+\fC#include 'qetxml\&.h'\fP
+.br
+\fC#include 'elementprovider\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminal\fP * \fBfindTerminal\fP (int conductor_index, QDomElement &f, QHash< int, \fBTerminal\fP * > &table_adr_id, QList< \fBElement\fP * > &added_elements)"
+.br
+.RI "findTerminal Find terminal to which the conductor should be connected "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBTerminal\fP* findTerminal (int conductor_index, QDomElement & f, QHash< int, \fBTerminal\fP * > & table_adr_id, QList< \fBElement\fP * > & added_elements)"
+
+.PP
+findTerminal Find terminal to which the conductor should be connected 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor_index\fP 1 or 2 depending on which terminal is searched 
+.br
+\fIf\fP \fBConductor\fP xml element 
+.br
+\fItable_adr_id\fP Hash table to all terminal id assignement (legacy) 
+.br
+\fIadded_elements\fP Elements found in the xml file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

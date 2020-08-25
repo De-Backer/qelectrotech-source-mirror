@@ -1,0 +1,159 @@
+.TH "ESEventInterface" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESEventInterface
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eseventinterface\&.h>\fP
+.PP
+Inherited by \fBESEventAddArc\fP, \fBESEventAddDynamicTextField\fP, \fBESEventAddEllipse\fP, \fBESEventAddLine\fP, \fBESEventAddPolygon\fP, \fBESEventAddRect\fP, \fBESEventAddTerminal\fP, and \fBESEventAddText\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESEventInterface\fP (\fBElementScene\fP *scene)"
+.br
+.ti -1c
+.RI "virtual \fB~ESEventInterface\fP ()"
+.br
+.RI "\fBESEventInterface::~ESEventInterface\fP Destructor\&. "
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.RI "\fBESEventInterface::init\fP Init this event interface\&. "
+.ti -1c
+.RI "virtual bool \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBwheelEvent\fP (QGraphicsSceneWheelEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBkeyPressEvent\fP (QKeyEvent *event)"
+.br
+.RI "\fBESEventInterface::keyPressEvent\fP By default, press escape key abort the curent action\&. "
+.ti -1c
+.RI "virtual bool \fBKeyReleaseEvent\fP (QKeyEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBisRunning\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBisFinish\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateHelpCross\fP (const QPointF &p)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElementScene\fP * \fBm_scene\fP"
+.br
+.ti -1c
+.RI "\fBQETElementEditor\fP * \fBm_editor\fP"
+.br
+.ti -1c
+.RI "QGraphicsLineItem * \fBm_help_horiz\fP"
+.br
+.ti -1c
+.RI "QGraphicsLineItem * \fBm_help_verti\fP"
+.br
+.ti -1c
+.RI "bool \fBm_running\fP"
+.br
+.ti -1c
+.RI "bool \fBm_abort\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESEventInterface::ESEventInterface (\fBElementScene\fP * scene)"
+
+.SS "ESEventInterface::~ESEventInterface ()\fC [virtual]\fP"
+
+.PP
+\fBESEventInterface::~ESEventInterface\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ESEventInterface::init ()"
+
+.PP
+\fBESEventInterface::init\fP Init this event interface\&. 
+.SS "bool ESEventInterface::isFinish () const\fC [virtual]\fP"
+
+.SS "bool ESEventInterface::isRunning () const\fC [virtual]\fP"
+
+.SS "bool ESEventInterface::keyPressEvent (QKeyEvent * event)\fC [virtual]\fP"
+
+.PP
+\fBESEventInterface::keyPressEvent\fP By default, press escape key abort the curent action\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented in \fBESEventAddArc\fP, and \fBESEventAddTerminal\fP\&.
+.SS "bool ESEventInterface::KeyReleaseEvent (QKeyEvent * event)\fC [virtual]\fP"
+
+.SS "bool ESEventInterface::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBESEventAddPolygon\fP\&.
+.SS "bool ESEventInterface::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBESEventAddEllipse\fP, \fBESEventAddArc\fP, \fBESEventAddLine\fP, \fBESEventAddPolygon\fP, \fBESEventAddDynamicTextField\fP, \fBESEventAddTerminal\fP, \fBESEventAddText\fP, and \fBESEventAddRect\fP\&.
+.SS "bool ESEventInterface::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBESEventAddEllipse\fP, \fBESEventAddArc\fP, \fBESEventAddLine\fP, \fBESEventAddPolygon\fP, and \fBESEventAddRect\fP\&.
+.SS "bool ESEventInterface::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBESEventAddEllipse\fP, \fBESEventAddArc\fP, \fBESEventAddLine\fP, \fBESEventAddPolygon\fP, \fBESEventAddDynamicTextField\fP, \fBESEventAddTerminal\fP, \fBESEventAddText\fP, and \fBESEventAddRect\fP\&.
+.SS "void ESEventInterface::updateHelpCross (const QPointF & p)\fC [protected]\fP"
+
+.SS "bool ESEventInterface::wheelEvent (QGraphicsSceneWheelEvent * event)\fC [virtual]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool ESEventInterface::m_abort\fC [protected]\fP"
+
+.SS "\fBQETElementEditor\fP* ESEventInterface::m_editor\fC [protected]\fP"
+
+.SS "QGraphicsLineItem* ESEventInterface::m_help_horiz\fC [protected]\fP"
+
+.SS "QGraphicsLineItem * ESEventInterface::m_help_verti\fC [protected]\fP"
+
+.SS "bool ESEventInterface::m_running\fC [protected]\fP"
+
+.SS "\fBElementScene\fP* ESEventInterface::m_scene\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,137 @@
+.TH "MoveConductorsTextsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MoveConductorsTextsCommand \- The \fBMoveConductorsTextsCommand\fP class This command moves text items related to conductors on a particular diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMoveConductorsTextsCommand\fP (\fBDiagram\fP *, QUndoCommand *=nullptr)"
+.br
+.RI "\fBMoveConductorsTextsCommand::MoveConductorsTextsCommand\fP Constructeur\&. "
+.ti -1c
+.RI "\fB~MoveConductorsTextsCommand\fP () override"
+.br
+.RI "\fBMoveConductorsTextsCommand::~MoveConductorsTextsCommand\fP Destructeur\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBMoveConductorsTextsCommand::undo\fP annule le deplacement\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBMoveConductorsTextsCommand::redo\fP refait le deplacement\&. "
+.ti -1c
+.RI "virtual void \fBaddTextMovement\fP (\fBConductorTextItem\fP *, const QPointF &, const QPointF &, bool=false)"
+.br
+.RI "\fBMoveConductorsTextsCommand::addTextMovement\fP Ajout un mouvement de champ de texte a cet objet\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMoveConductorsTextsCommand\fP (const \fBMoveConductorsTextsCommand\fP &)"
+.br
+.ti -1c
+.RI "void \fBregenerateTextLabel\fP ()"
+.br
+.RI "\fBMoveConductorsTextsCommand::regenerateTextLabel\fP Genere la description de l'objet d'annulation\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP"
+.br
+.RI "diagram the movement takes place on\&. "
+.ti -1c
+.RI "QHash< \fBConductorTextItem\fP *, QPair< QPointF, bool > > \fBtexts_to_move_\fP"
+.br
+.RI "text items to be moved "
+.ti -1c
+.RI "bool \fBfirst_redo\fP"
+.br
+.RI "prevent the first call to \fBredo()\fP "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBMoveConductorsTextsCommand\fP class This command moves text items related to conductors on a particular diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MoveConductorsTextsCommand::MoveConductorsTextsCommand (\fBDiagram\fP * diagram, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBMoveConductorsTextsCommand::MoveConductorsTextsCommand\fP Constructeur\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema sur lequel on deplace des champs de texte 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "MoveConductorsTextsCommand::~MoveConductorsTextsCommand ()\fC [override]\fP"
+
+.PP
+\fBMoveConductorsTextsCommand::~MoveConductorsTextsCommand\fP Destructeur\&. 
+.SS "MoveConductorsTextsCommand::MoveConductorsTextsCommand (const \fBMoveConductorsTextsCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void MoveConductorsTextsCommand::addTextMovement (\fBConductorTextItem\fP * text_item, const QPointF & old_pos, const QPointF & new_pos, bool already_moved = \fCfalse\fP)\fC [virtual]\fP"
+
+.PP
+\fBMoveConductorsTextsCommand::addTextMovement\fP Ajout un mouvement de champ de texte a cet objet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext_item\fP Champ de texte deplace ; si celui-ci est deja connu de l'objet d'annulation, il sera ignore 
+.br
+\fIold_pos\fP Position du champ de texte avant le mouvement 
+.br
+\fInew_pos\fP Position du champ de texte apres le mouvement 
+.br
+\fIalready_moved\fP true si le champ de texte etait deja a une position personnalisee par l'utilisateur, false sinon 
+.RE
+.PP
+
+.SS "void MoveConductorsTextsCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBMoveConductorsTextsCommand::redo\fP refait le deplacement\&. 
+.SS "void MoveConductorsTextsCommand::regenerateTextLabel ()\fC [private]\fP"
+
+.PP
+\fBMoveConductorsTextsCommand::regenerateTextLabel\fP Genere la description de l'objet d'annulation\&. 
+.SS "void MoveConductorsTextsCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBMoveConductorsTextsCommand::undo\fP annule le deplacement\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagram\fP* MoveConductorsTextsCommand::diagram\fC [private]\fP"
+
+.PP
+diagram the movement takes place on\&. 
+.SS "bool MoveConductorsTextsCommand::first_redo\fC [private]\fP"
+
+.PP
+prevent the first call to \fBredo()\fP 
+.SS "QHash<\fBConductorTextItem\fP *, QPair<QPointF, bool> > MoveConductorsTextsCommand::texts_to_move_\fC [private]\fP"
+
+.PP
+text items to be moved 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

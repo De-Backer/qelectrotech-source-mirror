@@ -1,0 +1,47 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,695,128,721"/>
+<area shape="rect" id="node2" href="$da/d81/class_add_element_text_command.html" title="The AddElementTextCommand class Manage the adding of element text." alt="" coords="196,5,375,32"/>
+<area shape="rect" id="node3" href="$d3/ddf/class_add_item_command.html" title="The AddItemCommand class This command add an item in a diagram The item to add is template,..." alt="" coords="196,56,375,83"/>
+<area shape="rect" id="node4" href="$d0/d14/class_add_texts_group_command.html" title="The AddTextsGroupCommand class Manage the adding of a texts group." alt="" coords="199,107,371,133"/>
+<area shape="rect" id="node5" href="$d2/dec/class_add_text_to_group_command.html" title="The AddTextToGroupCommand class." alt="" coords="196,157,375,184"/>
+<area shape="rect" id="node6" href="$dd/d33/class_alignment_texts_group_command.html" title="The AlignmentTextsGroupCommand class." alt="" coords="182,208,389,235"/>
+<area shape="rect" id="node7" href="$dd/d5d/class_change_border_command.html" title="The ChangeBorderCommand class This command changes the border properties of a particular diagram." alt="" coords="203,259,368,285"/>
+<area shape="rect" id="node8" href="$dc/ddd/class_change_conductor_command.html" title="The ChangeConductorCommand class This command changes a particular conductor." alt="" coords="192,309,379,336"/>
+<area shape="rect" id="node9" href="$dd/dc7/class_change_diagram_text_command.html" title="The ChangeDiagramTextCommand class This commad modifies a text item." alt="" coords="185,360,386,387"/>
+<area shape="rect" id="node10" href="$d7/dd9/class_change_element_information_command.html" title="The ChangeElementInformationCommand class This class manage undo/redo to change the element informati..." alt="" coords="195,411,375,453"/>
+<area shape="rect" id="node11" href="$df/d68/class_change_template_informations_command.html" title=" " alt="" coords="189,477,381,518"/>
+<area shape="rect" id="node12" href="$dd/d9c/class_change_title_block_command.html" title="The ChangeTitleBlockCommand class This command changes the title block properties for a particular di..." alt="" coords="193,543,378,569"/>
+<area shape="rect" id="node13" href="$d8/db3/class_delete_q_graphics_item_command.html" title=" " alt="" coords="181,593,389,620"/>
+<area shape="rect" id="node15" href="$dc/d01/class_element_edition_command.html" title="The ElementEditionCommand class ElementEditionCommand is the base class for all commands classes invo..." alt="" coords="200,644,371,671"/>
+<area shape="rect" id="node26" href="$d6/d1a/class_link_element_command.html" title="The LinkElementCommand class This undo class manage link between elements. In the same instance of th..." alt="" coords="208,695,363,721"/>
+<area shape="rect" id="node27" href="$da/dd1/class_model_header_data_command.html" title="The ModelHeaderDataCommand class Change the data of a header." alt="" coords="192,745,379,772"/>
+<area shape="rect" id="node28" href="$d9/dff/class_model_index_command.html" title="The ModelIndexCommand class Change a data of an index of QAbstractItemModel." alt="" coords="211,796,360,823"/>
+<area shape="rect" id="node29" href="$dc/d4d/class_modify_title_block_cell_command.html" title=" " alt="" coords="184,847,387,873"/>
+<area shape="rect" id="node30" href="$dd/ddf/class_move_conductors_texts_command.html" title="The MoveConductorsTextsCommand class This command moves text items related to conductors on a particu..." alt="" coords="179,897,391,924"/>
+<area shape="rect" id="node31" href="$dc/d2d/class_move_elements_command.html" title="The MoveElementsCommand class This command moves some content on a particular diagram." alt="" coords="201,948,369,975"/>
+<area shape="rect" id="node32" href="$d1/db0/class_paste_diagram_command.html" title="The PasteDiagramCommand class This command pastes some content onto a particular diagram." alt="" coords="203,999,368,1025"/>
+<area shape="rect" id="node33" href="$d8/d58/class_q_property_undo_command.html" title="The QPropertyUndoCommand class This undo command manage QProperty of a QObject. This undo command can..." alt="" coords="199,1049,372,1076"/>
+<area shape="rect" id="node34" href="$de/db2/class_remove_text_from_group_command.html" title="The RemoveTextFromGroupCommand class." alt="" coords="176,1100,395,1127"/>
+<area shape="rect" id="node35" href="$db/d7d/class_remove_texts_group_command.html" title="The RemoveTextsGroupCommand class Manage the removinf of a texts group." alt="" coords="187,1151,383,1177"/>
+<area shape="rect" id="node36" href="$d7/d68/class_reset_conductor_command.html" title="The ResetConductorCommand class This command resets conductor paths." alt="" coords="197,1201,373,1228"/>
+<area shape="rect" id="node37" href="$de/dc7/class_rotate_selection_command.html" title="The RotateSelectionCommand class Rotate the selected items in the given diagram." alt="" coords="198,1252,373,1279"/>
+<area shape="rect" id="node38" href="$d6/d2f/class_rotate_texts_command.html" title="The RotateTextsCommand class Open a dialog for edit the rotation of the current selected texts and te..." alt="" coords="209,1303,362,1329"/>
+<area shape="rect" id="node39" href="$d3/d41/class_title_block_template_command.html" title=" " alt="" coords="189,1353,382,1380"/>
+<area shape="rect" id="node14" href="$d9/d7e/class_cut_diagram_command.html" title="The CutDiagramCommand class This command cuts content from a particular diagram." alt="" coords="466,416,618,443"/>
+<area shape="rect" id="node16" href="$d9/d48/class_add_part_command.html" title=" " alt="" coords="477,467,607,493"/>
+<area shape="rect" id="node17" href="$dc/d55/class_change_informations_command.html" title=" " alt="" coords="443,517,641,544"/>
+<area shape="rect" id="node18" href="$de/d42/class_change_names_command.html" title=" " alt="" coords="457,568,627,595"/>
+<area shape="rect" id="node19" href="$d8/d65/class_change_properties_command.html" title=" " alt="" coords="449,619,635,645"/>
+<area shape="rect" id="node20" href="$d4/ddc/class_change_z_value_command.html" title=" " alt="" coords="459,669,625,696"/>
+<area shape="rect" id="node21" href="$d6/d4b/class_delete_parts_command.html" title=" " alt="" coords="466,720,618,747"/>
+<area shape="rect" id="node23" href="$de/d09/class_move_parts_command.html" title=" " alt="" coords="469,771,615,797"/>
+<area shape="rect" id="node24" href="$d4/d2b/class_paste_parts_command.html" title="The PastePartsCommand class Undo command for paste element primitive in an element editor." alt="" coords="468,821,616,848"/>
+<area shape="rect" id="node25" href="$d7/d75/class_scale_parts_command.html" title=" " alt="" coords="469,872,615,899"/>
+<area shape="rect" id="node22" href="$d2/d12/class_cut_parts_command.html" title=" " alt="" coords="689,720,824,747"/>
+<area shape="rect" id="node40" href="$db/dc9/class_cut_template_cells_command.html" title=" " alt="" coords="449,1227,635,1253"/>
+<area shape="rect" id="node41" href="$dd/da3/class_merge_cells_command.html" title=" " alt="" coords="468,1277,616,1304"/>
+<area shape="rect" id="node42" href="$de/d0b/class_modify_template_dimension.html" title=" " alt="" coords="454,1328,630,1355"/>
+<area shape="rect" id="node43" href="$d9/da7/class_modify_template_grid_command.html" title=" " alt="" coords="443,1379,641,1405"/>
+<area shape="rect" id="node44" href="$d7/d8f/class_paste_template_cells_command.html" title=" " alt="" coords="443,1429,641,1456"/>
+<area shape="rect" id="node45" href="$d7/dd0/class_split_cells_command.html" title=" " alt="" coords="473,1480,611,1507"/>
+</map>

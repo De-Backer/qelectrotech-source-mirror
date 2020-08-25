@@ -1,0 +1,43 @@
+<map id="CrossRefItem::linkedChanged" name="CrossRefItem::linkedChanged">
+<area shape="rect" id="node1" title="CrossRefItem::linkedChanged." alt="" coords="5,152,201,179"/>
+<area shape="rect" id="node2" href="$d5/d50/class_element.html#a6e6dd7422b4247998b2c2dd06b6112e2" title="Element::linkedElements." alt="" coords="1279,165,1445,192"/>
+<area shape="rect" id="node15" href="$df/d6e/class_cross_ref_item.html#a9ad3517a23c07244d9df2ec342999fd9" title="CrossRefItem::updateLabel Update the content of the item." alt="" coords="249,312,431,339"/>
+<area shape="rect" id="node3" href="$d4/dfe/element_8h.html#aefbd4becc52ac4934fb4268241ab5f50" title="comparPos Compare position of the two elements. Compare 3 points: 1 folio &#45; 2 row &#45; 3 line returns a ..." alt="" coords="1523,199,1611,225"/>
+<area shape="rect" id="node4" href="$d3/d37/class_diagram.html#a00ca50b86ab52583341ccbc8fefe9967" title="Diagram::convertPosition." alt="" coords="1661,199,1831,225"/>
+<area shape="rect" id="node12" href="$d7/db5/class_qet_graphics_item.html#af9b4e57c5ad3f5a9307a03a4310ce7b2" title=" " alt="" coords="1659,355,1833,381"/>
+<area shape="rect" id="node13" href="$d3/d37/class_diagram.html#a6fa7b30a9b91175f316ce8212c32afd6" title="Diagram::folioIndex." alt="" coords="1679,249,1813,276"/>
+<area shape="rect" id="node14" href="$dc/d20/class_diagram_position.html#a6204c673acd9167925f6c8194dcabed6" title=" " alt="" coords="1669,148,1823,175"/>
+<area shape="rect" id="node5" href="$df/d92/class_border_title_block.html#afa48dd3cfdb5bb46e4cf4e4720705211" title="BorderTitleBlock::convertPosition Convert a Point in cartesian coordinate (x : 12...." alt="" coords="1892,146,2061,187"/>
+<area shape="rect" id="node10" href="$dc/d20/class_diagram_position.html#aee22136fa026b42fb599dc402e733617" title=" " alt="" coords="1881,244,2072,271"/>
+<area shape="rect" id="node6" href="$df/d92/class_border_title_block.html#af38649a1abd3a73a7f8026382330541c" title=" " alt="" coords="2129,81,2303,122"/>
+<area shape="rect" id="node7" href="$df/d92/class_border_title_block.html#ad77b51d22f7e035a416cc3279de90bf0" title="BorderTitleBlock::incrementLetters increments string with Letters A to Z." alt="" coords="2125,146,2307,187"/>
+<area shape="rect" id="node8" href="$df/d92/class_border_title_block.html#abf6fab4e876c1d76e10b4f4bd2943aab" title="BorderTitleBlock::insideBorderRect." alt="" coords="2136,211,2296,253"/>
+<area shape="rect" id="node9" href="$df/d92/class_border_title_block.html#a92a59aec4ce6210e9d80781e770626df" title=" " alt="" coords="2120,29,2312,56"/>
+<area shape="rect" id="node11" href="$dc/d20/class_diagram_position.html#ac16f72e5a2f3081071e830dca9e0cd47" title=" " alt="" coords="2131,277,2301,304"/>
+<area shape="rect" id="node16" href="$df/d6e/class_cross_ref_item.html#a3065c34fd9292b9eeb0ef4b99fa5b48d" title="CrossRefItem::autoPos Calculate and set position automaticaly." alt="" coords="503,312,662,339"/>
+<area shape="rect" id="node22" href="$d7/df8/class_q_e_t_app.html#a219f04d4314737f12bb159f0a2eb3f78" title="QETApp::diagramTextsFont The font to use By default the font is &quot;sans Serif&quot; and size 9." alt="" coords="491,363,674,389"/>
+<area shape="rect" id="node23" href="$d4/d83/class_x_ref_properties.html#a5a442502a75018c8b780980f7a4c7a91" title=" " alt="" coords="1270,305,1454,332"/>
+<area shape="rect" id="node24" href="$df/d6e/class_cross_ref_item.html#a92bd21bc105f34c9cdc04bcbcaa1f74a" title="CrossRefItem::drawAsContacts Draw this crossref with symbolic contacts." alt="" coords="479,515,687,541"/>
+<area shape="rect" id="node35" href="$df/d6e/class_cross_ref_item.html#a028a816f37194d7bf544de55ad700dcd" title="CrossRefItem::drawAsCross Draw this crossref with a cross." alt="" coords="487,203,678,229"/>
+<area shape="rect" id="node17" href="$df/d61/qgraphicsitemutility_8cpp.html#ab1a14bc7f44ac3916c1907c88bb30c2e" title="centerToBottomDiagram Set item pos to the bottom of diagram and centered vertically to element_to_fol..." alt="" coords="749,413,911,440"/>
+<area shape="rect" id="node19" href="$df/d61/qgraphicsitemutility_8cpp.html#aa0ad0ed42dbae9f41bdc795add9cd489" title="centerToParentBottom Center the item at the bottom of is parent." alt="" coords="754,261,906,288"/>
+<area shape="rect" id="node20" href="$d4/d83/class_x_ref_properties.html#ae3cb613374d3eeb6ba6b0fe2fafcd69d" title=" " alt="" coords="754,312,906,339"/>
+<area shape="rect" id="node21" href="$d4/d83/class_x_ref_properties.html#a827cd15e8eeee39b16f1034336ad256f" title=" " alt="" coords="749,363,911,389"/>
+<area shape="rect" id="node18" href="$d5/d50/class_element.html#a0c46ab724259fcec05ce8f8422ca60d3" title=" " alt="" coords="1009,413,1165,440"/>
+<area shape="rect" id="node25" href="$df/d6e/class_cross_ref_item.html#a91e19847a046d4368e2e885093214d47" title="CrossRefItem::drawContact Draw one contact, the type of contact to draw is define in flags." alt="" coords="737,616,923,643"/>
+<area shape="rect" id="node30" href="$d5/d50/class_element.html#a5ba6e350aebd61f0f52dfb8c06f7172a" title=" " alt="" coords="1275,357,1449,384"/>
+<area shape="rect" id="node34" href="$df/d6e/class_cross_ref_item.html#accb9dfd56e1a7ac7bd37463f26484f0a" title=" " alt="" coords="762,565,898,592"/>
+<area shape="rect" id="node26" href="$df/d6e/class_cross_ref_item.html#a4428e09a48f23e0275010802ceaa05cb" title="CrossRefItem::elementPositionText." alt="" coords="973,565,1201,592"/>
+<area shape="rect" id="node27" href="$db/dfb/class_diagram_context.html#a08be91da1dea1e98586934abd35063bf" title=" " alt="" coords="1275,513,1449,540"/>
+<area shape="rect" id="node28" href="$d6/dc5/class_q_e_t_project.html#aadc675b7db03862e16ce467715ad00c1" title=" " alt="" coords="1249,564,1475,591"/>
+<area shape="rect" id="node29" href="$d3/df5/classautonum_1_1_assign_variables.html#abf8fecd78bdaa59e34a2f7da7af6ebcf" title="AssignVariables::formulaToLabel Return the formula with variable assigned (ready to be displayed)" alt="" coords="1275,615,1449,657"/>
+<area shape="rect" id="node31" href="$d4/d83/class_x_ref_properties.html#a947ccb904c1de0b433d17e7df29132e4" title=" " alt="" coords="1267,681,1457,708"/>
+<area shape="rect" id="node32" href="$d4/d83/class_x_ref_properties.html#a1318cac6e60dcb70e62ef7dd3f03fc39" title=" " alt="" coords="1287,732,1437,759"/>
+<area shape="rect" id="node33" href="$d3/d37/class_diagram.html#a8a2a4a08dce92d0eed86f94077e9cc84" title="Diagram::project." alt="" coords="1303,412,1421,439"/>
+<area shape="rect" id="node36" href="$df/d6e/class_cross_ref_item.html#a75037ff7f99c37cdd5d8d4aa00630eac" title="CrossRefItem::boundingRect." alt="" coords="735,93,925,120"/>
+<area shape="rect" id="node37" href="$df/d6e/class_cross_ref_item.html#aa2bad47ca216cff8bc12694ae2d5a1e5" title="CrossRefItem::setUpCrossBoundingRect Get the numbers of slaves elements linked to this parent element..." alt="" coords="739,195,921,237"/>
+<area shape="rect" id="node38" href="$d5/d50/class_element.html#a47b3b7b793b6482759a16268dbabf436" title=" " alt="" coords="1031,196,1144,223"/>
+<area shape="rect" id="node39" href="$df/d6e/class_cross_ref_item.html#af03add16e60861a4aa9be0542209b21e" title="CrossRefItem::NCElements." alt="" coords="994,297,1181,324"/>
+<area shape="rect" id="node41" href="$df/d6e/class_cross_ref_item.html#ac3ef54937d042dd2e5d24b34140b3d93" title="CrossRefItem::NOElements." alt="" coords="994,247,1181,273"/>
+<area shape="rect" id="node40" href="$d4/d83/class_x_ref_properties.html#ab3f8f0b780dae3987fc003bb06fb270b" title=" " alt="" coords="1269,239,1455,281"/>
+</map>

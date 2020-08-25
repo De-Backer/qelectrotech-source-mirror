@@ -1,0 +1,61 @@
+.TH "sources/autoNum/assignvariables.cpp" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/autoNum/assignvariables.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'assignvariables\&.h'\fP
+.br
+\fC#include 'diagram\&.h'\fP
+.br
+\fC#include 'element\&.h'\fP
+.br
+\fC#include 'diagramposition\&.h'\fP
+.br
+\fC#include 'qetapp\&.h'\fP
+.br
+\fC#include 'qetxml\&.h'\fP
+.br
+\fC#include <QVariant>\fP
+.br
+\fC#include <QStringList>\fP
+.br
+\fC#include <utility>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBautonum\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBautonum::setSequentialToList\fP (QStringList &list, \fBNumerotationContext\fP &context, const QString &type)"
+.br
+.RI "setSequentialToList Append all sequential of type type owned by context in list "
+.ti -1c
+.RI "void \fBautonum::setFolioSequentialToHash\fP (QStringList &list, QHash< QString, QStringList > &hash, const QString &autoNumName)"
+.br
+.RI "setFolioSequentialToHash Insert all value of list in hash with key autoNumName "
+.ti -1c
+.RI "void \fBautonum::setSequential\fP (const QString &label, sequentialNumbers &seqStruct, \fBNumerotationContext\fP &context, \fBDiagram\fP *diagram, const QString &hashKey)"
+.br
+.RI "setSequential Fill seqStruct "
+.ti -1c
+.RI "QString \fBautonum::numerotationContextToFormula\fP (const \fBNumerotationContext\fP &nc)"
+.br
+.RI "numerotationContextToFormula "
+.ti -1c
+.RI "QString \fBautonum::elementPrefixForLocation\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "elementPrefixForLocation "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

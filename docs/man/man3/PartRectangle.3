@@ -1,0 +1,589 @@
+.TH "PartRectangle" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PartRectangle
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <partrectangle\&.h>\fP
+.PP
+Inherits \fBCustomElementGraphicPart\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1109 }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBrectChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBXRadiusChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBYRadiusChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPartRectangle\fP (\fBQETElementEditor\fP *, QGraphicsItem *parent=nullptr)"
+.br
+.RI "\fBPartRectangle::PartRectangle\fP Constructor\&. "
+.ti -1c
+.RI "\fB~PartRectangle\fP () override"
+.br
+.RI "\fBPartRectangle::~PartRectangle\fP\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *=nullptr) override"
+.br
+.RI "\fBPartRectangle::paint\fP Draw this Rectangle\&. "
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.ti -1c
+.RI "QString \fBxmlName\fP () const override"
+.br
+.ti -1c
+.RI "const QDomElement \fBtoXml\fP (QDomDocument &) const override"
+.br
+.RI "\fBPartRectangle::toXml\fP Export this rectangle in xml\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &) override"
+.br
+.RI "\fBPartRectangle::fromXml\fP Import the properties of this rectangle from a xml element\&. "
+.ti -1c
+.RI "QRectF \fBrect\fP () const"
+.br
+.RI "\fBPartRectangle::rect\fP\&. "
+.ti -1c
+.RI "void \fBsetRect\fP (const QRectF &\fBrect\fP)"
+.br
+.RI "\fBPartRectangle::setRect\fP Sets the item's rectangle to be the given rectangle\&. "
+.ti -1c
+.RI "qreal \fBXRadius\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetXRadius\fP (qreal X)"
+.br
+.ti -1c
+.RI "qreal \fBYRadius\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetYRadius\fP (qreal Y)"
+.br
+.ti -1c
+.RI "QRectF \fBsceneGeometricRect\fP () const override"
+.br
+.RI "\fBPartRectangle::sceneGeometricRect\fP\&. "
+.ti -1c
+.RI "virtual QPointF \fBsceneTopLeft\fP () const"
+.br
+.RI "\fBPartRectangle::sceneTopLeft\fP\&. "
+.ti -1c
+.RI "QPainterPath \fBshape\fP () const override"
+.br
+.RI "\fBPartRectangle::shape\fP\&. "
+.ti -1c
+.RI "QPainterPath \fBshadowShape\fP () const override"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBPartRectangle::boundingRect\fP\&. "
+.ti -1c
+.RI "bool \fBisUseless\fP () const override"
+.br
+.RI "\fBPartRectangle::isUseless\fP\&. "
+.ti -1c
+.RI "void \fBstartUserTransformation\fP (const QRectF &) override"
+.br
+.RI "\fBPartRectangle::startUserTransformation\fP Start the user-induced transformation, provided this primitive is contained within the initial_selection_rect bounding rectangle\&. "
+.ti -1c
+.RI "void \fBhandleUserTransformation\fP (const QRectF &, const QRectF &) override"
+.br
+.RI "\fBPartRectangle::handleUserTransformation\fP Handle the user-induced transformation from \fIinitial_selection_rect\fP to \fInew_selection_rect\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBPartRectangle::mouseReleaseEvent\fP Handle mouse release event\&. "
+.ti -1c
+.RI "QVariant \fBitemChange\fP (GraphicsItemChange change, const QVariant &value) override"
+.br
+.RI "\fBPartRectangle::itemChange\fP\&. "
+.ti -1c
+.RI "bool \fBsceneEventFilter\fP (QGraphicsItem *watched, QEvent *event) override"
+.br
+.RI "\fBPartRectangle::sceneEventFilter\fP\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "QRectF \fBrect\fP"
+.br
+.ti -1c
+.RI "qreal \fBxRadius\fP"
+.br
+.ti -1c
+.RI "qreal \fByRadius\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPartRectangle\fP (const \fBPartRectangle\fP &)"
+.br
+.ti -1c
+.RI "void \fBswitchResizeMode\fP ()"
+.br
+.RI "\fBPartRectangle::switchResizeMode\fP\&. "
+.ti -1c
+.RI "void \fBadjusteHandlerPos\fP ()"
+.br
+.RI "\fBPartRectangle::adjusteHandlerPos\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMousePressEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBPartRectangle::handlerMousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMouseMoveEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBPartRectangle::handlerMouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMouseReleaseEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.ti -1c
+.RI "void \fBsceneSelectionChanged\fP ()"
+.br
+.RI "\fBPartRectangle::sceneSelectionChanged\fP When the scene selection change, if there are several primitive selected, we remove the handler of this item\&. "
+.ti -1c
+.RI "void \fBaddHandler\fP ()"
+.br
+.RI "\fBPartRectangle::addHandler\fP Add handlers for this item\&. "
+.ti -1c
+.RI "void \fBremoveHandler\fP ()"
+.br
+.RI "\fBPartRectangle::removeHandler\fP Remove the handlers of this item\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QRectF \fBm_rect\fP"
+.br
+.ti -1c
+.RI "QRectF \fBm_old_rect\fP"
+.br
+.ti -1c
+.RI "QList< QPointF > \fBsaved_points_\fP"
+.br
+.ti -1c
+.RI "int \fBm_resize_mode\fP = 1"
+.br
+.ti -1c
+.RI "int \fBm_vector_index\fP = \-1"
+.br
+.ti -1c
+.RI "QVector< \fBQetGraphicsHandlerItem\fP * > \fBm_handler_vector\fP"
+.br
+.ti -1c
+.RI "qreal \fBm_xRadius\fP = 0"
+.br
+.ti -1c
+.RI "qreal \fBm_yRadius\fP = 0"
+.br
+.ti -1c
+.RI "qreal \fBm_old_xRadius\fP"
+.br
+.ti -1c
+.RI "qreal \fBm_old_yRadius\fP"
+.br
+.ti -1c
+.RI "bool \fBm_modifie_radius_equaly\fP = false"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents a rectangle primitive which may be used to compose the drawing of an electrical element within the element editor\&. All coordinates is in item coordinate, except pos() 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PartRectangle::PartRectangle (\fBQETElementEditor\fP * editor, QGraphicsItem * parent = \fCnullptr\fP)"
+
+.PP
+\fBPartRectangle::PartRectangle\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP the \fBQETElementEditor\fP of this item 
+.br
+\fIparent\fP parent item 
+.RE
+.PP
+
+.SS "PartRectangle::~PartRectangle ()\fC [override]\fP"
+
+.PP
+\fBPartRectangle::~PartRectangle\fP\&. 
+.SS "PartRectangle::PartRectangle (const \fBPartRectangle\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void PartRectangle::addHandler ()\fC [private]\fP"
+
+.PP
+\fBPartRectangle::addHandler\fP Add handlers for this item\&. 
+.SS "void PartRectangle::adjusteHandlerPos ()\fC [private]\fP"
+
+.PP
+\fBPartRectangle::adjusteHandlerPos\fP\&. 
+.SS "QRectF PartRectangle::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBPartRectangle::boundingRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Bounding rectangle this part can fit into 
+.RE
+.PP
+
+.SS "void PartRectangle::fromXml (const QDomElement & qde)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartRectangle::fromXml\fP Import the properties of this rectangle from a xml element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqde\fP : Xml document to use\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartRectangle::handlerMouseMoveEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBPartRectangle::handlerMouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void PartRectangle::handlerMousePressEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBPartRectangle::handlerMousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void PartRectangle::handlerMouseReleaseEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.SS "void PartRectangle::handleUserTransformation (const QRectF & initial_selection_rect, const QRectF & new_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartRectangle::handleUserTransformation\fP Handle the user-induced transformation from \fIinitial_selection_rect\fP to \fInew_selection_rect\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_selection_rect\fP 
+.br
+\fInew_selection_rect\fP 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "bool PartRectangle::isUseless () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartRectangle::isUseless\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this part is irrelevant and does not deserve to be Retained / registered\&. An rectangle is relevant when he's not null\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "QVariant PartRectangle::itemChange (GraphicsItemChange change, const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartRectangle::itemChange\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void PartRectangle::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartRectangle::mouseReleaseEvent\fP Handle mouse release event\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "QString PartRectangle::name () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name of the primitive 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartRectangle::paint (QPainter * painter, const QStyleOptionGraphicsItem * options, QWidget * widget = \fCnullptr\fP)\fC [override]\fP"
+
+.PP
+\fBPartRectangle::paint\fP Draw this Rectangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.br
+\fIoptions\fP 
+.br
+\fIwidget\fP 
+.RE
+.PP
+
+.SS "QRectF PartRectangle::rect () const"
+
+.PP
+\fBPartRectangle::rect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+: Returns the item's rectangle\&. 
+.RE
+.PP
+
+.SS "void PartRectangle::rectChanged ()\fC [signal]\fP"
+
+.SS "void PartRectangle::removeHandler ()\fC [private]\fP"
+
+.PP
+\fBPartRectangle::removeHandler\fP Remove the handlers of this item\&. 
+.SS "bool PartRectangle::sceneEventFilter (QGraphicsItem * watched, QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartRectangle::sceneEventFilter\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwatched\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QRectF PartRectangle::sceneGeometricRect () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartRectangle::sceneGeometricRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the minimum, margin-less rectangle this part can fit into, in scene coordinates\&. It is different from \fBboundingRect()\fP because it is not supposed to imply any margin, and it is different from shape because it is a regular rectangle, not a complex shape\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartRectangle::sceneSelectionChanged ()\fC [private]\fP"
+
+.PP
+\fBPartRectangle::sceneSelectionChanged\fP When the scene selection change, if there are several primitive selected, we remove the handler of this item\&. 
+.SS "QPointF PartRectangle::sceneTopLeft () const\fC [virtual]\fP"
+
+.PP
+\fBPartRectangle::sceneTopLeft\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the top left of rectangle, in scene coordinate 
+.RE
+.PP
+
+.SS "void PartRectangle::setRect (const QRectF & rect)"
+
+.PP
+\fBPartRectangle::setRect\fP Sets the item's rectangle to be the given rectangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrect\fP 
+.RE
+.PP
+
+.SS "void PartRectangle::setXRadius (qreal X)"
+
+.SS "void PartRectangle::setYRadius (qreal Y)"
+
+.SS "QPainterPath PartRectangle::shadowShape () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBCustomElementGraphicPart\fP\&.
+.SS "QPainterPath PartRectangle::shape () const\fC [override]\fP"
+
+.PP
+\fBPartRectangle::shape\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the shape of this item 
+.RE
+.PP
+
+.SS "void PartRectangle::startUserTransformation (const QRectF & initial_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartRectangle::startUserTransformation\fP Start the user-induced transformation, provided this primitive is contained within the initial_selection_rect bounding rectangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_selection_rect\fP 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartRectangle::switchResizeMode ()\fC [private]\fP"
+
+.PP
+\fBPartRectangle::switchResizeMode\fP\&. 
+.SS "const QDomElement PartRectangle::toXml (QDomDocument & xml_document) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartRectangle::toXml\fP Export this rectangle in xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP : Xml document to use for create the xml element\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+an xml element that describe this ellipse 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "int PartRectangle::type () const\fC [inline]\fP, \fC [override]\fP"
+Enable the use of qgraphicsitem_cast to safely cast a QGraphicsItem into a \fBPartRectangle\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the QGraphicsItem type 
+.RE
+.PP
+
+.SS "QString PartRectangle::xmlName () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name that will be used as XML tag when exporting the primitive 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "qreal PartRectangle::XRadius () const\fC [inline]\fP"
+
+.SS "void PartRectangle::XRadiusChanged ()\fC [signal]\fP"
+
+.SS "qreal PartRectangle::YRadius () const\fC [inline]\fP"
+
+.SS "void PartRectangle::YRadiusChanged ()\fC [signal]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QVector<\fBQetGraphicsHandlerItem\fP *> PartRectangle::m_handler_vector\fC [private]\fP"
+
+.SS "bool PartRectangle::m_modifie_radius_equaly = false\fC [private]\fP"
+
+.SS "QRectF PartRectangle::m_old_rect\fC [private]\fP"
+
+.SS "qreal PartRectangle::m_old_xRadius\fC [private]\fP"
+
+.SS "qreal PartRectangle::m_old_yRadius\fC [private]\fP"
+
+.SS "QRectF PartRectangle::m_rect\fC [private]\fP"
+
+.SS "int PartRectangle::m_resize_mode = 1\fC [private]\fP"
+
+.SS "int PartRectangle::m_vector_index = \-1\fC [private]\fP"
+
+.SS "qreal PartRectangle::m_xRadius = 0\fC [private]\fP"
+
+.SS "qreal PartRectangle::m_yRadius = 0\fC [private]\fP"
+
+.SS "QList<QPointF> PartRectangle::saved_points_\fC [private]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "QRectF PartRectangle::rect\fC [read]\fP, \fC [write]\fP"
+
+.SS "qreal PartRectangle::xRadius\fC [read]\fP, \fC [write]\fP"
+
+.SS "qreal PartRectangle::yRadius\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

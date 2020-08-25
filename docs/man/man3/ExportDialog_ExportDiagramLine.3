@@ -1,0 +1,112 @@
+.TH "ExportDialog::ExportDiagramLine" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExportDialog::ExportDiagramLine
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExportDiagramLine\fP (\fBDiagram\fP *, QSize)"
+.br
+.ti -1c
+.RI "virtual \fB~ExportDiagramLine\fP ()"
+.br
+.ti -1c
+.RI "QBoxLayout * \fBsizeLayout\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBmust_export\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBtitle_label\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBfile_name\fP"
+.br
+.ti -1c
+.RI "QSpinBox * \fBwidth\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBx_label\fP"
+.br
+.ti -1c
+.RI "QSpinBox * \fBheight\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBkeep_ratio\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBreset_size\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBpreview\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBclipboard\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ExportDialog::ExportDiagramLine::ExportDiagramLine (\fBDiagram\fP * dia, QSize diagram_size)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdia\fP Schema concerne, 
+.br
+\fIdiagram_size\fP taille du schema tenant compte des parametres d'export 
+.RE
+.PP
+
+.SS "ExportDialog::ExportDiagramLine::~ExportDiagramLine ()\fC [virtual]\fP"
+Destructeur 
+.SH "Member Function Documentation"
+.PP 
+.SS "QBoxLayout * ExportDialog::ExportDiagramLine::sizeLayout ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+un layout contenant les widgets necessaires a la gestion de la taille d'un schema avant son export\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QPushButton* ExportDialog::ExportDiagramLine::clipboard"
+
+.SS "\fBDiagram\fP* ExportDialog::ExportDiagramLine::diagram"
+
+.SS "QLineEdit* ExportDialog::ExportDiagramLine::file_name"
+
+.SS "QSpinBox* ExportDialog::ExportDiagramLine::height"
+
+.SS "QPushButton* ExportDialog::ExportDiagramLine::keep_ratio"
+
+.SS "QCheckBox* ExportDialog::ExportDiagramLine::must_export"
+
+.SS "QPushButton* ExportDialog::ExportDiagramLine::preview"
+
+.SS "QPushButton* ExportDialog::ExportDiagramLine::reset_size"
+
+.SS "QLabel* ExportDialog::ExportDiagramLine::title_label"
+
+.SS "QSpinBox* ExportDialog::ExportDiagramLine::width"
+
+.SS "QLabel* ExportDialog::ExportDiagramLine::x_label"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

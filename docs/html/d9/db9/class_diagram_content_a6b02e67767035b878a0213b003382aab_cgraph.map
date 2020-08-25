@@ -1,0 +1,10 @@
+<map id="DiagramContent::operator+=" name="DiagramContent::operator+=">
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,192,73"/>
+<area shape="rect" id="node2" href="$d9/db9/class_diagram_content.html#ac06563ac735778aea71c016c9b4331ce" title="DiagramContent::potentialIsManaged." alt="" coords="243,5,417,47"/>
+<area shape="rect" id="node4" href="$da/d7f/class_conductor.html#a7df52a1f89a88dad4ecd531c9d02675f" title="Conductor::relatedPotentialConductors Return all conductors at the same potential of this conductor,..." alt="" coords="240,71,420,112"/>
+<area shape="rect" id="node3" href="$d9/db9/class_diagram_content.html#a469693789e1268cbfae9486b240da1a3" title="DiagramContent::conductors." alt="" coords="468,13,656,39"/>
+<area shape="rect" id="node5" href="$dc/d46/class_terminal.html#a31d1c604e0f9991140ad938c741df3af" title="Terminal::conductors." alt="" coords="491,70,633,97"/>
+<area shape="rect" id="node6" href="$d8/dc7/terminal_8cpp.html#a0d860470dc66715c56fd2cad5e2dd9bb" title="Conductor::relatedPotentialTerminal Return terminal at the same potential from the same parent elemen..." alt="" coords="481,121,643,147"/>
+<area shape="rect" id="node7" href="$dc/d46/class_terminal.html#aac01ad77bc72ce5406f9397bfcb656da" title="Terminal::parentElement." alt="" coords="704,95,867,122"/>
+<area shape="rect" id="node8" href="$d5/d50/class_element.html#aa52d2e2e5f2d4368588962d3ecf6f75f" title="Element::terminals." alt="" coords="720,146,851,173"/>
+</map>

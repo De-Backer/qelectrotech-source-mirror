@@ -1,0 +1,27 @@
+<map id="Element::setUpFormula" name="Element::setUpFormula">
+<area shape="rect" id="node1" title="Element::setUpFormula Set up the formula used to create the label of this element." alt="" coords="5,324,164,351"/>
+<area shape="rect" id="node2" href="$d5/d50/class_element.html#acaa85efeeff7a62c5b6e0aaa5577de15" title="Element::actualLabel Always return the current label to be displayed. This function is usefull when l..." alt="" coords="251,72,394,99"/>
+<area shape="rect" id="node3" href="$d7/db5/class_qet_graphics_item.html#af9b4e57c5ad3f5a9307a03a4310ce7b2" title=" " alt="" coords="504,12,679,39"/>
+<area shape="rect" id="node6" href="$d6/dc5/class_q_e_t_project.html#a5f2695dde0cbf9679a55ad9a7954e14a" title="QETProject::addElementAutoNum Add a new element numerotation context. If key already exist,..." alt="" coords="212,178,433,204"/>
+<area shape="rect" id="node7" href="$db/dfb/class_diagram_context.html#a523b81ff2dfbcf73e304a55ccdc58c1b" title=" " alt="" coords="234,127,411,154"/>
+<area shape="rect" id="node10" href="$d2/d1b/classautonum_1_1sequential_numbers.html#a876f78692da0d2b020bd4053295b2f5d" title=" " alt="" coords="227,229,419,270"/>
+<area shape="rect" id="node11" href="$d6/dc5/class_q_e_t_project.html#a25728f248bd542c6c4a909f049581a34" title="QETProject::elementAutoNum." alt="" coords="223,295,422,322"/>
+<area shape="rect" id="node12" href="$d6/dc5/class_q_e_t_project.html#adc4028be6b4416dc35cd3298f56d87bd" title="QETProject::elementAutoNumCurrentFormula." alt="" coords="223,346,422,388"/>
+<area shape="rect" id="node17" href="$d6/dc5/class_q_e_t_project.html#ad9020cd9cd747e25149a052f9f42dee8" title="QETProject::elementCurrentAutoNum." alt="" coords="229,514,416,556"/>
+<area shape="rect" id="node18" href="$d5/d50/class_element.html#a81ccfa68d05b06fcfb1a05a0abd533d6" title=" " alt="" coords="260,580,385,607"/>
+<area shape="rect" id="node19" href="$dc/dcb/class_numerotation_context_commands.html#aad44e5c7dfc1989f5651e3e09b285b90" title="NumerotationContextCommands::next." alt="" coords="749,536,963,577"/>
+<area shape="rect" id="node21" href="$d3/d37/class_diagram.html#a8a2a4a08dce92d0eed86f94077e9cc84" title="Diagram::project." alt="" coords="263,631,382,658"/>
+<area shape="rect" id="node22" href="$d1/ddb/namespaceautonum.html#abb6951e25029c8e731ee96c5ce807bf0" title="setSequential Fill seqStruct" alt="" coords="512,412,671,439"/>
+<area shape="rect" id="node4" href="$d3/df5/classautonum_1_1_assign_variables.html#abf8fecd78bdaa59e34a2f7da7af6ebcf" title="AssignVariables::formulaToLabel Return the formula with variable assigned (ready to be displayed)" alt="" coords="505,64,678,105"/>
+<area shape="rect" id="node5" href="$db/dfb/class_diagram_context.html#aaae71410c57f72e74fbbd76af8a80a0f" title=" " alt="" coords="514,130,669,156"/>
+<area shape="rect" id="node8" href="$db/dfb/class_diagram_context.html#a880beb69f231ec60e992f8407354043f" title=" " alt="" coords="481,180,701,207"/>
+<area shape="rect" id="node9" href="$db/dfb/class_diagram_context.html#a07d55b945f3a45b467c1751339426d14" title=" " alt="" coords="770,173,942,214"/>
+<area shape="rect" id="node13" href="$d6/dc5/class_q_e_t_project.html#af5eefcb7abbbd1d60333bd76f810725c" title="QETProject::elementAutoNumFormula." alt="" coords="492,317,691,358"/>
+<area shape="rect" id="node14" href="$d1/ddb/namespaceautonum.html#ac5013eb6df6a472f5b2676d51b579da8" title="numerotationContextToFormula" alt="" coords="755,288,957,329"/>
+<area shape="rect" id="node15" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="1044,317,1191,358"/>
+<area shape="rect" id="node16" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="1044,382,1191,424"/>
+<area shape="rect" id="node20" href="$dc/dcb/class_numerotation_context_commands.html#a8d31e00e3c510c67a59f5de6964ef54a" title="NumerotationContextCommands::setNumStrategy apply the good strategy relative to str." alt="" coords="1011,536,1224,577"/>
+<area shape="rect" id="node23" href="$d7/db7/class_numerotation_context.html#a597bebf0816382be8c7588da15ddd1eb" title="NumerotationContext::isEmpty." alt="" coords="783,470,929,512"/>
+<area shape="rect" id="node24" href="$d1/ddb/namespaceautonum.html#a4c12cf7b9ff9108dc629feb969d01690" title="setFolioSequentialToHash Insert all value of list in hash with key autoNumName" alt="" coords="763,405,949,446"/>
+<area shape="rect" id="node25" href="$d1/ddb/namespaceautonum.html#a9594e0b4bcd2ea2e20070c829ccbdb19" title="setSequentialToList Append all sequential of type type owned by context in list" alt="" coords="759,354,953,380"/>
+</map>

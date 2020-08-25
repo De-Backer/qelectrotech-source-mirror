@@ -1,0 +1,52 @@
+<map id="ConductorAutoNumerotation::numerate" name="ConductorAutoNumerotation::numerate">
+<area shape="rect" id="node1" title="ConductorAutoNumerotation::numerate execute the automatic numerotation." alt="" coords="5,621,192,662"/>
+<area shape="rect" id="node2" href="$de/d1d/class_conductor_auto_numerotation.html#aec981865ae357c33c7aaf72f18922239" title="ConductorAutoNumerotation::numerateNewConductor create and apply a new numerotation to m_conductor." alt="" coords="240,427,427,469"/>
+<area shape="rect" id="node47" href="$de/d1d/class_conductor_auto_numerotation.html#a42ef087c8e73f62a579b57358fa36f6a" title="ConductorAutoNumerotation::numeratePotential Numerate a conductor on an existing potential." alt="" coords="240,763,427,805"/>
+<area shape="rect" id="node3" href="$d6/dc5/class_q_e_t_project.html#aee782dd4898087e3e26e03466c889211" title="QETProject::addConductorAutoNum Add a new conductor numerotation context. If key already exist,..." alt="" coords="501,293,679,334"/>
+<area shape="rect" id="node4" href="$de/d1d/class_conductor_auto_numerotation.html#a0a3ae857616b75f7148d053c0faf78db" title="ConductorAutoNumerotation::applyText apply the text t to conductor_ and all conductors at the same po..." alt="" coords="497,629,683,670"/>
+<area shape="rect" id="node6" href="$d3/d37/class_diagram.html#a8a2a4a08dce92d0eed86f94077e9cc84" title="Diagram::project." alt="" coords="1065,409,1183,436"/>
+<area shape="rect" id="node8" href="$d6/dc5/class_q_e_t_project.html#a77506f0b161248e94dc3ddd68736e0d6" title="QETProject::conductorAutoNum." alt="" coords="485,460,695,487"/>
+<area shape="rect" id="node9" href="$d6/dc5/class_q_e_t_project.html#ae496c389282a8afba6b1fc4e125dff15" title="QETProject::conductorCurrentAutoNum." alt="" coords="491,511,689,553"/>
+<area shape="rect" id="node10" href="$d3/d37/class_diagram.html#a7d9dac1371b6cde3a1929981e7dcf9a7" title="Diagram::conductorsAutonumName." alt="" coords="475,577,705,604"/>
+<area shape="rect" id="node11" href="$d3/df5/classautonum_1_1_assign_variables.html#abf8fecd78bdaa59e34a2f7da7af6ebcf" title="AssignVariables::formulaToLabel Return the formula with variable assigned (ready to be displayed)" alt="" coords="1295,503,1469,545"/>
+<area shape="rect" id="node12" href="$d7/db7/class_numerotation_context.html#a597bebf0816382be8c7588da15ddd1eb" title="NumerotationContext::isEmpty." alt="" coords="787,122,933,163"/>
+<area shape="rect" id="node13" href="$dc/dcb/class_numerotation_context_commands.html#aad44e5c7dfc1989f5651e3e09b285b90" title="NumerotationContextCommands::next." alt="" coords="753,253,967,294"/>
+<area shape="rect" id="node17" href="$d1/ddb/namespaceautonum.html#ac5013eb6df6a472f5b2676d51b579da8" title="numerotationContextToFormula" alt="" coords="759,187,961,229"/>
+<area shape="rect" id="node18" href="$da/d7f/class_conductor.html#a409cf24ca0ee090594c10871de24ab9d" title=" " alt="" coords="500,745,680,772"/>
+<area shape="rect" id="node19" href="$da/d7f/class_conductor.html#a23f980cf7a29cfe55378b504ecfecde1" title="Conductor::setProperties Set property as current property of conductor." alt="" coords="506,695,674,721"/>
+<area shape="rect" id="node44" href="$d1/ddb/namespaceautonum.html#abb6951e25029c8e731ee96c5ce807bf0" title="setSequential Fill seqStruct" alt="" coords="511,73,669,100"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#aadc97c48501180ecd35ce25a8ebf161d" title="Diagram::undoStack." alt="" coords="789,460,931,487"/>
+<area shape="rect" id="node7" href="$d6/dc5/class_q_e_t_project.html#af94030b24e669c0007caf263ae52b4b3" title=" " alt="" coords="1045,460,1203,487"/>
+<area shape="rect" id="node14" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="1051,122,1197,163"/>
+<area shape="rect" id="node15" href="$dc/dcb/class_numerotation_context_commands.html#a8d31e00e3c510c67a59f5de6964ef54a" title="NumerotationContextCommands::setNumStrategy apply the good strategy relative to str." alt="" coords="1017,253,1231,294"/>
+<area shape="rect" id="node16" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="1051,187,1197,229"/>
+<area shape="rect" id="node20" href="$da/d7f/class_conductor.html#ab352e0bd0e048b8897ad67684d00b01a" title="Conductor::calculateTextItemPosition Move the text at middle of conductor (if is vertical or horizont..." alt="" coords="777,959,943,1001"/>
+<area shape="rect" id="node24" href="$da/d7f/class_conductor.html#a3bc24a36dba5f211726f9524ffe48953" title=" " alt="" coords="1314,713,1450,740"/>
+<area shape="rect" id="node37" href="$d4/dbd/class_diagram_text_item.html#a3af1e2bcc07b3f50aba04eba4e6efe78" title=" " alt="" coords="771,764,949,791"/>
+<area shape="rect" id="node38" href="$d4/dbd/class_diagram_text_item.html#a92a30718227b025f9ab301486d462ba7" title=" " alt="" coords="773,1244,947,1271"/>
+<area shape="rect" id="node41" href="$d4/dbd/class_diagram_text_item.html#ac7846e57c76dabcdf2bc186242a54a1a" title=" " alt="" coords="1281,591,1483,617"/>
+<area shape="rect" id="node42" href="$da/d7f/class_conductor.html#ab411f57a5b904c59f513c3afaefb054b" title="Conductor::setUpConnectionForFormula setup connection according to the variable of formula." alt="" coords="765,647,955,689"/>
+<area shape="rect" id="node21" href="$da/d7f/class_conductor.html#a649d3839caef33cd2d47759f82e68a08" title="Conductor::boundingRect." alt="" coords="1039,865,1209,892"/>
+<area shape="rect" id="node25" href="$d9/d9d/conductor_8cpp.html#a7255f2a0d5739fa13352d03e061fc893" title="longuestConductorInPotential" alt="" coords="1027,1135,1221,1161"/>
+<area shape="rect" id="node27" href="$da/d7f/class_conductor.html#a7df52a1f89a88dad4ecd531c9d02675f" title="Conductor::relatedPotentialConductors Return all conductors at the same potential of this conductor,..." alt="" coords="1292,1293,1472,1334"/>
+<area shape="rect" id="node28" href="$da/d7f/class_conductor.html#aeba0bf998f55fd1a797b2db95822edd6" title=" " alt="" coords="1037,1018,1211,1059"/>
+<area shape="rect" id="node30" href="$da/d7f/class_conductor.html#a6f60f9f146fd142ee57b84084c843409" title="Conductor::nearShape." alt="" coords="1306,921,1458,948"/>
+<area shape="rect" id="node31" href="$da/d7f/class_conductor.html#ab32bd11b8874c7b45d1127c640477218" title="Conductor::posForText Calculate and return the better pos for text." alt="" coords="1047,1084,1201,1111"/>
+<area shape="rect" id="node36" href="$da/d7f/class_conductor.html#ad3546c9cc056283d1b8b64ba0660f8ab" title=" " alt="" coords="1055,916,1193,943"/>
+<area shape="rect" id="node22" href="$da/d7f/class_conductor.html#a9a17e0e7c33d5963b336be63133f7bd0" title="Conductor::shape." alt="" coords="1319,867,1445,893"/>
+<area shape="rect" id="node23" href="$da/d7f/class_conductor.html#a4272fa407d1088bd4f6e99c8c82a35a4" title=" " alt="" coords="1579,921,1693,948"/>
+<area shape="rect" id="node26" href="$da/d7f/class_conductor.html#a25b82af24dc6117765fb802c68422c18" title="Conductor::length." alt="" coords="1319,1023,1445,1049"/>
+<area shape="rect" id="node29" href="$dc/da9/namespace_q_e_t.html#a8c06162adcffa1bc992082e3fc4705a7" title=" " alt="" coords="1295,972,1469,999"/>
+<area shape="rect" id="node32" href="$d2/d0c/class_conductor_segment.html#ae487262ea29ceb538015805470591d60" title=" " alt="" coords="1293,1125,1471,1166"/>
+<area shape="rect" id="node33" href="$d2/d0c/class_conductor_segment.html#a801965b0c65b1980159543b2147038da" title=" " alt="" coords="1531,1216,1741,1243"/>
+<area shape="rect" id="node34" href="$d2/d0c/class_conductor_segment.html#a5ddcdf5405e5a01ec08f8e14a33db742" title=" " alt="" coords="1294,1191,1470,1217"/>
+<area shape="rect" id="node35" href="$d2/d0c/class_conductor_segment.html#a35228a00501c2a046076c58e4642c255" title=" " alt="" coords="1293,1073,1471,1100"/>
+<area shape="rect" id="node39" href="$d4/dbd/class_diagram_text_item.html#a41e9039fffdfbd6c98151866bdce3b67" title="DiagramTextItem::finishAlignment Call this function after changing the bouding rect of this text to s..." alt="" coords="1015,1303,1233,1329"/>
+<area shape="rect" id="node40" href="$d4/dbd/class_diagram_text_item.html#a47c516140e2046d0462db620ba3d668d" title="DiagramTextItem::prepareAlignment Call this function before changing the bounding rect of this text." alt="" coords="1037,1237,1211,1278"/>
+<area shape="rect" id="node43" href="$da/d7f/class_conductor.html#ae5fb53e95ae09d8f11804b713caebb8f" title="Conductor::refreshText Refresh the text of this conductor. recalcule and set the text according to th..." alt="" coords="1047,612,1201,639"/>
+<area shape="rect" id="node45" href="$d1/ddb/namespaceautonum.html#a4c12cf7b9ff9108dc629feb969d01690" title="setFolioSequentialToHash Insert all value of list in hash with key autoNumName" alt="" coords="767,57,953,98"/>
+<area shape="rect" id="node46" href="$d1/ddb/namespaceautonum.html#a9594e0b4bcd2ea2e20070c829ccbdb19" title="setSequentialToList Append all sequential of type type owned by context in list" alt="" coords="763,5,957,32"/>
+<area shape="rect" id="node48" href="$d6/db9/class_conductor_properties.html#a9279b2329fc9fe36568052bcbc977d43" title="ConductorProperties::applyForEqualAttributes Test each attribute of properties in the list separatly...." alt="" coords="505,847,675,889"/>
+<area shape="rect" id="node49" href="$da/d7f/class_conductor.html#a180d5c54f65a9bdb3e167892fccb0584" title="Conductor::diagramEditor." alt="" coords="775,815,945,841"/>
+<area shape="rect" id="node50" href="$dc/da9/namespace_q_e_t.html#a45f80bdfb59c46f3a544672bd605df93" title="QET::eachStrIsEqual." alt="" coords="518,913,662,940"/>
+</map>

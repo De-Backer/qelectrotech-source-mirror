@@ -1,0 +1,1277 @@
+.TH "Conductor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Conductor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductor\&.h>\fP
+.PP
+Inherits QGraphicsObject\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1001 }"
+.br
+.ti -1c
+.RI "enum \fBHighlight\fP { \fBNone\fP, \fBNormal\fP, \fBAlert\fP }"
+.br
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBdisplayedTextChanged\fP ()"
+.br
+.RI "\fBConductor::displayedTextChanged\fP Update the properties (text) of this conductor and other conductors at the same potential of this conductor\&. "
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBpropertiesChange\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductor\fP (\fBTerminal\fP *, \fBTerminal\fP *)"
+.br
+.RI "\fBConductor::Conductor\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~Conductor\fP () override"
+.br
+.RI "\fBConductor::~Conductor\fP Destructor\&. The conductor is removed from is terminal\&. "
+.ti -1c
+.RI "bool \fBisValid\fP () const"
+.br
+.RI "\fBConductor::isValid\fP\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.RI "type Enable the use of qgraphicsitem_cast to safely cast a QGraphicsItem into a conductor\&. "
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP () const"
+.br
+.ti -1c
+.RI "\fBConductorTextItem\fP * \fBtextItem\fP () const"
+.br
+.ti -1c
+.RI "void \fBupdatePath\fP (const QRectF &=QRectF())"
+.br
+.ti -1c
+.RI "void \fBupdatePathAnimate\fP (const int=1)"
+.br
+.ti -1c
+.RI "int \fBfakePath\fP ()"
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *) override"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBConductor::boundingRect\fP\&. "
+.ti -1c
+.RI "QPainterPath \fBshape\fP () const override"
+.br
+.RI "\fBConductor::shape\fP\&. "
+.ti -1c
+.RI "virtual QPainterPath \fBnearShape\fP () const"
+.br
+.RI "\fBConductor::nearShape\fP\&. "
+.ti -1c
+.RI "qreal \fBlength\fP () const"
+.br
+.RI "\fBConductor::length\fP\&. "
+.ti -1c
+.RI "\fBConductorSegment\fP * \fBmiddleSegment\fP ()"
+.br
+.ti -1c
+.RI "QPointF \fBposForText\fP (Qt::Orientations &flag)"
+.br
+.RI "\fBConductor::posForText\fP Calculate and return the better pos for text\&. "
+.ti -1c
+.RI "void \fBrefreshText\fP ()"
+.br
+.RI "\fBConductor::refreshText\fP Refresh the text of this conductor\&. recalcule and set the text according to the formula\&. "
+.ti -1c
+.RI "void \fBsetPath\fP (const QPainterPath &\fBpath\fP)"
+.br
+.ti -1c
+.RI "QPainterPath \fBpath\fP () const"
+.br
+.ti -1c
+.RI "bool \fBfromXml\fP (QDomElement &)"
+.br
+.RI "\fBConductor::fromXml\fP Load the conductor and her information from xml element\&. "
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &, QHash< \fBTerminal\fP *, int > &) const"
+.br
+.RI "\fBConductor::toXml\fP Exporte les caracteristiques du conducteur sous forme d'une element XML\&. "
+.ti -1c
+.RI "QVector< QPointF > \fBhandlerPoints\fP () const"
+.br
+.RI "\fBConductor::handlerPoints\fP\&. "
+.ti -1c
+.RI "const QList< \fBConductorSegment\fP * > \fBsegmentsList\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetPropertyToPotential\fP (const \fBConductorProperties\fP &property, bool only_text=false)"
+.br
+.RI "Conductor::setPropertiesToPotential\&. "
+.ti -1c
+.RI "void \fBsetProperties\fP (const \fBConductorProperties\fP &property)"
+.br
+.RI "\fBConductor::setProperties\fP Set property as current property of conductor\&. "
+.ti -1c
+.RI "\fBConductorProperties\fP \fBproperties\fP () const"
+.br
+.RI "\fBConductor::properties\fP\&. "
+.ti -1c
+.RI "void \fBsetProfile\fP (const \fBConductorProfile\fP &, Qt::Corner)"
+.br
+.ti -1c
+.RI "\fBConductorProfile\fP \fBprofile\fP (Qt::Corner) const"
+.br
+.ti -1c
+.RI "void \fBsetProfiles\fP (const \fBConductorProfilesGroup\fP &)"
+.br
+.RI "\fBConductor::setProfiles\fP\&. "
+.ti -1c
+.RI "\fBConductorProfilesGroup\fP \fBprofiles\fP () const"
+.br
+.ti -1c
+.RI "void \fBcalculateTextItemPosition\fP ()"
+.br
+.RI "\fBConductor::calculateTextItemPosition\fP Move the text at middle of conductor (if is vertical or horizontal) otherwise, move conductor at the middle of the longest segment of conductor\&. If text was moved by user, this function do nothing, except check if text is near conductor\&. "
+.ti -1c
+.RI "virtual \fBHighlight\fP \fBhighlight\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetHighlighted\fP (\fBHighlight\fP)"
+.br
+.ti -1c
+.RI "QSet< \fBConductor\fP * > \fBrelatedPotentialConductors\fP (const bool all_diagram=true, QList< \fBTerminal\fP * > *t_list=nullptr)"
+.br
+.RI "\fBConductor::relatedPotentialConductors\fP Return all conductors at the same potential of this conductor, this conductor isn't part of the returned QSet\&. "
+.ti -1c
+.RI "\fBQETDiagramEditor\fP * \fBdiagramEditor\fP () const"
+.br
+.RI "\fBConductor::diagramEditor\fP\&. "
+.ti -1c
+.RI "void \fBeditProperty\fP ()"
+.br
+.RI "\fBConductor::editProperty\fP\&. "
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP \fBsequenceNum\fP () const"
+.br
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP & \fBrSequenceNum\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSequenceNum\fP (const \fBautonum::sequentialNumbers\fP &sn)"
+.br
+.ti -1c
+.RI "void \fBsetFreezeLabel\fP (bool freeze)"
+.br
+.RI "\fBConductor::setFreezeLabel\fP Freeze this conductor label if true Unfreeze this conductor label if false\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBvalideXml\fP (QDomElement &)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminal\fP * \fBterminal1\fP"
+.br
+.ti -1c
+.RI "\fBTerminal\fP * \fBterminal2\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBConductor::mouseDoubleClickEvent\fP Manage the mouse double click\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBConductor::mousePressEvent\fP Manage the mouse press event\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBConductor::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "void \fBhoverEnterEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBConductor::hoverEnterEvent\fP Manage the hover enter event\&. "
+.ti -1c
+.RI "void \fBhoverLeaveEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBConductor::hoverLeaveEvent\fP Manage the mouse leave event\&. "
+.ti -1c
+.RI "QVariant \fBitemChange\fP (GraphicsItemChange, const QVariant &) override"
+.br
+.RI "\fBConductor::itemChange\fP\&. "
+.ti -1c
+.RI "bool \fBsceneEventFilter\fP (QGraphicsItem *watched, QEvent *event) override"
+.br
+.RI "\fBConductor::sceneEventFilter\fP\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "QPointF \fBpos\fP"
+.br
+.ti -1c
+.RI "int \fBanimPath\fP"
+.br
+.ti -1c
+.RI "\fBConductorProperties\fP \fBproperties\fP"
+.br
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP \fBsequenceNum\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductor\fP (const \fBConductor\fP &)"
+.br
+.ti -1c
+.RI "bool \fBpathFromXml\fP (const QDomElement &)"
+.br
+.RI "\fBConductor::pathFromXml\fP Generate the path (of the line) from xml file by checking the segments in the xml file\&. "
+.ti -1c
+.RI "void \fBsetUpConnectionForFormula\fP (QString old_formula, QString new_formula)"
+.br
+.RI "\fBConductor::setUpConnectionForFormula\fP setup connection according to the variable of formula\&. "
+.ti -1c
+.RI "void \fBadjusteHandlerPos\fP ()"
+.br
+.RI "\fBConductor::adjusteHandlerPos\fP Adjust the position of the handler item\&. "
+.ti -1c
+.RI "void \fBhandlerMousePressEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBConductor::handlerMousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMouseMoveEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBConductor::handlerMouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBhandlerMouseReleaseEvent\fP (\fBQetGraphicsHandlerItem\fP *qghi, QGraphicsSceneMouseEvent *event)"
+.br
+.RI "\fBConductor::handlerMouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "void \fBaddHandler\fP ()"
+.br
+.RI "\fBConductor::addHandler\fP Add handlers for this item\&. "
+.ti -1c
+.RI "void \fBremoveHandler\fP ()"
+.br
+.RI "\fBConductor::removeHandler\fP Remove the handlers of this item\&. "
+.ti -1c
+.RI "void \fBsegmentsToPath\fP ()"
+.br
+.RI "\fBConductor::segmentsToPath\fP Generate the QPainterPath from the list of points\&. "
+.ti -1c
+.RI "void \fBsaveProfile\fP (bool=true)"
+.br
+.ti -1c
+.RI "void \fBgenerateConductorPath\fP (const QPointF &, \fBQet::Orientation\fP, const QPointF &, \fBQet::Orientation\fP)"
+.br
+.ti -1c
+.RI "void \fBupdateConductorPath\fP (const QPointF &, \fBQet::Orientation\fP, const QPointF &, \fBQet::Orientation\fP)"
+.br
+.ti -1c
+.RI "uint \fBsegmentsCount\fP (\fBQET::ConductorSegmentType\fP=\fBQET::Both\fP) const"
+.br
+.ti -1c
+.RI "QList< QPointF > \fBsegmentsToPoints\fP () const"
+.br
+.ti -1c
+.RI "QList< \fBConductorBend\fP > \fBbends\fP () const"
+.br
+.ti -1c
+.RI "QList< QPointF > \fBjunctions\fP () const"
+.br
+.ti -1c
+.RI "void \fBpointsToSegments\fP (const QList< QPointF > &)"
+.br
+.ti -1c
+.RI "Qt::Corner \fBcurrentPathType\fP () const"
+.br
+.ti -1c
+.RI "void \fBdeleteSegments\fP ()"
+.br
+.RI "Supprime les segments\&. "
+.ti -1c
+.RI "QHash< \fBConductorSegmentProfile\fP *, qreal > \fBshareOffsetBetweenSegments\fP (const qreal &offset, const QList< \fBConductorSegmentProfile\fP * > &, const qreal &=0\&.01) const"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBgetCoeff\fP (const qreal &, const qreal &)"
+.br
+.ti -1c
+.RI "static int \fBgetSign\fP (const qreal &)"
+.br
+.ti -1c
+.RI "static QPointF \fBextendTerminal\fP (const QPointF &, \fBQet::Orientation\fP, qreal=9\&.0)"
+.br
+.ti -1c
+.RI "static Qt::Corner \fBmovementType\fP (const QPointF &, const QPointF &)"
+.br
+.ti -1c
+.RI "static QPointF \fBmovePointIntoPolygon\fP (const QPointF &, const QPainterPath &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP \fBm_autoNum_seq\fP"
+.br
+.ti -1c
+.RI "QVector< \fBQetGraphicsHandlerItem\fP * > \fBm_handler_vector\fP"
+.br
+.ti -1c
+.RI "int \fBm_vector_index\fP = \-1"
+.br
+.ti -1c
+.RI "bool \fBm_mouse_over\fP"
+.br
+.ti -1c
+.RI "\fBConductorProperties\fP \fBm_properties\fP"
+.br
+.RI "Functional properties\&. "
+.ti -1c
+.RI "\fBConductorTextItem\fP * \fBm_text_item\fP"
+.br
+.RI "Text input for non simple, non-singleline conductors\&. "
+.ti -1c
+.RI "\fBConductorSegment\fP * \fBsegments\fP"
+.br
+.RI "Segments composing the conductor\&. "
+.ti -1c
+.RI "bool \fBm_moving_segment\fP"
+.br
+.RI "Attributs related to mouse interaction\&. "
+.ti -1c
+.RI "int \fBmoved_point\fP"
+.br
+.ti -1c
+.RI "qreal \fBm_previous_z_value\fP"
+.br
+.ti -1c
+.RI "\fBConductorSegment\fP * \fBm_moved_segment\fP"
+.br
+.ti -1c
+.RI "QPointF \fBbefore_mov_text_pos_\fP"
+.br
+.ti -1c
+.RI "bool \fBmodified_path\fP"
+.br
+.RI "Whether the conductor was manually modified by users\&. "
+.ti -1c
+.RI "bool \fBhas_to_save_profile\fP"
+.br
+.RI "Whether the current profile should be saved as soon as possible\&. "
+.ti -1c
+.RI "\fBConductorProfilesGroup\fP \fBconductor_profiles\fP"
+.br
+.ti -1c
+.RI "\fBHighlight\fP \fBmust_highlight_\fP"
+.br
+.RI "Define whether and how the conductor should be highlighted\&. "
+.ti -1c
+.RI "bool \fBm_valid\fP"
+.br
+.ti -1c
+.RI "bool \fBm_freeze_label\fP = false"
+.br
+.ti -1c
+.RI "QPainterPath \fBm_path\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static QPen \fBconductor_pen\fP = QPen()"
+.br
+.RI "QPen et QBrush objects used to draw conductors\&. "
+.ti -1c
+.RI "static QBrush \fBconductor_brush\fP = QBrush()"
+.br
+.ti -1c
+.RI "static bool \fBpen_and_brush_initialized\fP = false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a conductor, i\&.e\&. a wire between two element terminals\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SS "enum \fBConductor::Highlight\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINone \fP\fP
+.TP
+\fB\fINormal \fP\fP
+.TP
+\fB\fIAlert \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Conductor::Conductor (\fBTerminal\fP * p1, \fBTerminal\fP * p2)"
+
+.PP
+\fBConductor::Conductor\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp1\fP : first terminal of this conductor\&. 
+.br
+\fIp2\fP : second terminal of this conductor\&. 
+.RE
+.PP
+
+.SS "Conductor::~Conductor ()\fC [override]\fP"
+
+.PP
+\fBConductor::~Conductor\fP Destructor\&. The conductor is removed from is terminal\&. 
+.SS "Conductor::Conductor (const \fBConductor\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Conductor::addHandler ()\fC [private]\fP"
+
+.PP
+\fBConductor::addHandler\fP Add handlers for this item\&. 
+.SS "void Conductor::adjusteHandlerPos ()\fC [private]\fP"
+
+.PP
+\fBConductor::adjusteHandlerPos\fP Adjust the position of the handler item\&. 
+.SS "QList< \fBConductorBend\fP > Conductor::bends () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+la liste des bifurcations de ce conducteur ; ConductorBend est un typedef pour une QPair<QPointF, Qt::Corner>\&. Le point indique la position (en coordonnees locales) de la bifurcation tandis que le Corner indique le type de bifurcation\&. 
+.RE
+.PP
+
+.SS "QRectF Conductor::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBConductor::boundingRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void Conductor::calculateTextItemPosition ()"
+
+.PP
+\fBConductor::calculateTextItemPosition\fP Move the text at middle of conductor (if is vertical or horizontal) otherwise, move conductor at the middle of the longest segment of conductor\&. If text was moved by user, this function do nothing, except check if text is near conductor\&. 
+.SS "Qt::Corner Conductor::currentPathType () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+le type de trajet actuel de ce conducteur 
+.RE
+.PP
+
+.SS "void Conductor::deleteSegments ()\fC [private]\fP"
+
+.PP
+Supprime les segments\&. 
+.SS "\fBDiagram\fP * Conductor::diagram () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le \fBDiagram\fP auquel ce conducteur appartient, ou 0 si ce conducteur est independant 
+.RE
+.PP
+
+.SS "\fBQETDiagramEditor\fP * Conductor::diagramEditor () const"
+
+.PP
+\fBConductor::diagramEditor\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The parent diagram editor or nullptr; 
+.RE
+.PP
+
+.SS "void Conductor::displayedTextChanged ()\fC [slot]\fP"
+
+.PP
+\fBConductor::displayedTextChanged\fP Update the properties (text) of this conductor and other conductors at the same potential of this conductor\&. 
+.SS "void Conductor::editProperty ()"
+
+.PP
+\fBConductor::editProperty\fP\&. 
+.SS "QPointF Conductor::extendTerminal (const QPointF & terminal, \fBQet::Orientation\fP terminal_orientation, qreal ext_size = \fC9\&.0\fP)\fC [static]\fP, \fC [private]\fP"
+Prolonge une borne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIterminal\fP Le point correspondant a la borne 
+.br
+\fIterminal_orientation\fP L'orientation de la borne 
+.br
+\fIext_size\fP la taille de la prolongation 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le point correspondant a la borne apres prolongation 
+.RE
+.PP
+
+.SS "int Conductor::fakePath ()\fC [inline]\fP"
+
+.SS "bool Conductor::fromXml (QDomElement & dom_element)"
+
+.PP
+\fBConductor::fromXml\fP Load the conductor and her information from xml element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true is loading success else return false 
+.RE
+.PP
+
+.SS "void Conductor::generateConductorPath (const QPointF & p1, \fBQet::Orientation\fP o1, const QPointF & p2, \fBQet::Orientation\fP o2)\fC [private]\fP"
+Calcule un trajet 'par defaut' pour le conducteur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp1\fP Coordonnees du point d'amarrage de la borne 1 
+.br
+\fIo1\fP Orientation de la borne 1 
+.br
+\fIp2\fP Coordonnees du point d'amarrage de la borne 2 
+.br
+\fIo2\fP Orientation de la borne 2 
+.RE
+.PP
+
+.SS "int Conductor::getCoeff (const qreal & value1, const qreal & value2)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue1\fP Premiere valeur 
+.br
+\fIvalue2\fP Deuxieme valeur 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+1 si les deux valeurs sont de meme signe, -1 sinon 
+.RE
+.PP
+
+.SS "int Conductor::getSign (const qreal & value)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP valeur 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+1 si valeur est negatif, 1 s'il est positif ou nul 
+.RE
+.PP
+
+.SS "void Conductor::handlerMouseMoveEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBConductor::handlerMouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void Conductor::handlerMousePressEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBConductor::handlerMousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void Conductor::handlerMouseReleaseEvent (\fBQetGraphicsHandlerItem\fP * qghi, QGraphicsSceneMouseEvent * event)\fC [private]\fP"
+
+.PP
+\fBConductor::handlerMouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqghi\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+
+.SS "QVector< QPointF > Conductor::handlerPoints () const"
+
+.PP
+\fBConductor::handlerPoints\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The points used to draw the handler square, used to modify the path of the conductor\&. The points stored in the QVector are the middle point of each segments that compose the conductor, at exception of the first and last segment because there just here to extend the terminal\&. 
+.RE
+.PP
+
+.SS "\fBConductor::Highlight\fP Conductor::highlight () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le conducteur est mis en evidence 
+.RE
+.PP
+
+.SS "void Conductor::hoverEnterEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductor::hoverEnterEvent\fP Manage the hover enter event\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void Conductor::hoverLeaveEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductor::hoverLeaveEvent\fP Manage the mouse leave event\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "bool Conductor::isValid () const"
+
+.PP
+\fBConductor::isValid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if conductor is valid else false; A non valid conductor, is a conductor without two terminal 
+.RE
+.PP
+
+.SS "QVariant Conductor::itemChange (GraphicsItemChange change, const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductor::itemChange\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QList< QPointF > Conductor::junctions () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+la liste des positions des jonctions avec d'autres conducteurs 
+.RE
+.PP
+
+.SS "qreal Conductor::length () const"
+
+.PP
+\fBConductor::length\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the length of this conductor 
+.RE
+.PP
+
+.SS "\fBConductorSegment\fP * Conductor::middleSegment ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+Le segment qui contient le point au milieu du conducteur 
+.RE
+.PP
+
+.SS "void Conductor::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductor::mouseDoubleClickEvent\fP Manage the mouse double click\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void Conductor::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductor::mousePressEvent\fP Manage the mouse press event\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void Conductor::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductor::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "Qt::Corner Conductor::movementType (const QPointF & start, const QPointF & end)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP Point de depart 
+.br
+\fIend\fP Point d'arrivee 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le coin vers lequel se dirige le trajet de start vers end 
+.RE
+.PP
+
+.SS "QPointF Conductor::movePointIntoPolygon (const QPointF & point, const QPainterPath & polygon)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIpoint\fP Un point situe a l'exterieur du polygone 
+.br
+\fIpolygon\fP Le polygone dans lequel on veut rapatrier le point 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+la position du point, une fois ramene dans le polygone, ou plus exactement sur le bord du polygone 
+.RE
+.PP
+
+.SS "QPainterPath Conductor::nearShape () const\fC [virtual]\fP"
+
+.PP
+\fBConductor::nearShape\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+: An area in which it is considered a point is near this conductor\&. 
+.RE
+.PP
+
+.SS "void Conductor::paint (QPainter * qp, const QStyleOptionGraphicsItem * options, QWidget * qw)\fC [override]\fP"
+Dessine le conducteur sans antialiasing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqp\fP Le QPainter a utiliser pour dessiner le conducteur 
+.br
+\fIoptions\fP Les options de style pour le conducteur 
+.br
+\fIqw\fP Le QWidget sur lequel on dessine 
+.RE
+.PP
+
+.SS "QPainterPath Conductor::path () const"
+
+.SS "bool Conductor::pathFromXml (const QDomElement & e)\fC [private]\fP"
+
+.PP
+\fBConductor::pathFromXml\fP Generate the path (of the line) from xml file by checking the segments in the xml file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if generate path success else return false 
+.RE
+.PP
+
+.SS "void Conductor::pointsToSegments (const QList< QPointF > & points_list)\fC [private]\fP"
+Regenere les segments de ce conducteur a partir de la liste de points passee en parametre 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpoints_list\fP Liste de points a utiliser pour generer les segments 
+.RE
+.PP
+
+.SS "QPointF Conductor::posForText (Qt::Orientations & flag)"
+
+.PP
+\fBConductor::posForText\fP Calculate and return the better pos for text\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIflag\fP : flag is used to know if text pos is near of a vertical or horizontal conductor segment\&. 
+.RE
+.PP
+
+.SS "\fBConductorProfile\fP Conductor::profile (Qt::Corner path_type) const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le profil de ce conducteur 
+.RE
+.PP
+
+.SS "\fBConductorProfilesGroup\fP Conductor::profiles () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+les profils de ce conducteur 
+.RE
+.PP
+
+.SS "\fBConductorProperties\fP Conductor::properties () const"
+
+.PP
+\fBConductor::properties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the properties of this \fBConductor\fP 
+.RE
+.PP
+
+.SS "void Conductor::propertiesChange ()\fC [signal]\fP"
+
+.SS "void Conductor::refreshText ()"
+
+.PP
+\fBConductor::refreshText\fP Refresh the text of this conductor\&. recalcule and set the text according to the formula\&. 
+.SS "QSet< \fBConductor\fP * > Conductor::relatedPotentialConductors (const bool all_diagram = \fCtrue\fP, QList< \fBTerminal\fP * > * t_list = \fCnullptr\fP)"
+
+.PP
+\fBConductor::relatedPotentialConductors\fP Return all conductors at the same potential of this conductor, this conductor isn't part of the returned QSet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIall_diagram\fP : if true search in all diagram of the project, false search only in the parent diagram of this conductor 
+.br
+\fIt_list\fP : a list of terminal already found for this potential\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a QSet of conductor at the same potential\&. 
+.RE
+.PP
+
+.SS "void Conductor::removeHandler ()\fC [private]\fP"
+
+.PP
+\fBConductor::removeHandler\fP Remove the handlers of this item\&. 
+.SS "\fBautonum::sequentialNumbers\fP& Conductor::rSequenceNum ()\fC [inline]\fP"
+
+.SS "void Conductor::saveProfile (bool undo = \fCtrue\fP)\fC [private]\fP"
+Sauvegarde le profil courant du conducteur pour l'utiliser ulterieurement dans priv_modifieConductor\&. 
+.SS "bool Conductor::sceneEventFilter (QGraphicsItem * watched, QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBConductor::sceneEventFilter\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwatched\fP 
+.br
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "uint Conductor::segmentsCount (\fBQET::ConductorSegmentType\fP type = \fC\fBQET::Both\fP\fP) const\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP Type de Segments 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Le nombre de segments composant le conducteur\&. 
+.RE
+.PP
+
+.SS "const QList< \fBConductorSegment\fP * > Conductor::segmentsList () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+les segments de ce conducteur 
+.RE
+.PP
+
+.SS "void Conductor::segmentsToPath ()\fC [private]\fP"
+
+.PP
+\fBConductor::segmentsToPath\fP Generate the QPainterPath from the list of points\&. 
+.SS "QList< QPointF > Conductor::segmentsToPoints () const\fC [private]\fP"
+Genere une liste de points a partir des segments de ce conducteur 
+.PP
+\fBReturns\fP
+.RS 4
+La liste de points representant ce conducteur 
+.RE
+.PP
+
+.SS "\fBautonum::sequentialNumbers\fP Conductor::sequenceNum () const\fC [inline]\fP"
+
+.SS "void Conductor::setFreezeLabel (bool freeze)"
+
+.PP
+\fBConductor::setFreezeLabel\fP Freeze this conductor label if true Unfreeze this conductor label if false\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfreeze\fP 
+.RE
+.PP
+
+.SS "void Conductor::setHighlighted (\fBConductor::Highlight\fP hl)\fC [virtual]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIhl\fP true pour mettre le conducteur en evidence, false sinon 
+.RE
+.PP
+
+.SS "void Conductor::setPath (const QPainterPath & path)"
+
+.SS "void Conductor::setProfile (const \fBConductorProfile\fP & cp, Qt::Corner path_type)"
+Applique un nouveau profil a ce conducteur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcp\fP Profil a appliquer a ce conducteur 
+.br
+\fIpath_type\fP Type de trajet pour lequel ce profil convient 
+.RE
+.PP
+
+.SS "void Conductor::setProfiles (const \fBConductorProfilesGroup\fP & cpg)"
+
+.PP
+\fBConductor::setProfiles\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpg\fP : the new profils of conductor 
+.RE
+.PP
+
+.SS "void Conductor::setProperties (const \fBConductorProperties\fP & property)"
+
+.PP
+\fBConductor::setProperties\fP Set property as current property of conductor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperty\fP : properties 
+.RE
+.PP
+
+.SS "void Conductor::setPropertyToPotential (const \fBConductorProperties\fP & property, bool only_text = \fCfalse\fP)"
+
+.PP
+Conductor::setPropertiesToPotential\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperty\fP 
+.br
+\fIonly_text\fP Set propertie to conductor and every conductors in the same potential of conductor\&. If only_text is true only formula, text, function and tension/protocol is set to other conductor in the same potential, the other values of property stay unmodified 
+.RE
+.PP
+
+.SS "void Conductor::setSequenceNum (const \fBautonum::sequentialNumbers\fP & sn)"
+
+.SS "void Conductor::setUpConnectionForFormula (QString old_formula, QString new_formula)\fC [private]\fP"
+
+.PP
+\fBConductor::setUpConnectionForFormula\fP setup connection according to the variable of formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIold_formula\fP 
+.br
+\fInew_formula\fP 
+.RE
+.PP
+
+.SS "QPainterPath Conductor::shape () const\fC [override]\fP"
+
+.PP
+\fBConductor::shape\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the shape of conductor\&. The shape thickness is bigger when conductor is hovered 
+.RE
+.PP
+
+.SS "QHash< \fBConductorSegmentProfile\fP *, qreal > Conductor::shareOffsetBetweenSegments (const qreal & offset, const QList< \fBConductorSegmentProfile\fP * > & segments_list, const qreal & precision = \fC0\&.01\fP) const\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIoffset\fP Longueur a repartir entre les segments 
+.br
+\fIsegments_list\fP Segments sur lesquels il faut repartir la longueur 
+.br
+\fIprecision\fP seuil en-deca duquel on considere qu'il ne reste rien a repartir 
+.RE
+.PP
+
+.SS "\fBConductorTextItem\fP * Conductor::textItem () const"
+4 
+.PP
+\fBReturns\fP
+.RS 4
+le champ de texte associe a ce conducteur 
+.RE
+.PP
+
+.SS "QDomElement Conductor::toXml (QDomDocument & dom_document, QHash< \fBTerminal\fP *, int > & table_adr_id) const"
+
+.PP
+\fBConductor::toXml\fP Exporte les caracteristiques du conducteur sous forme d'une element XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_document\fP : Le document XML a utiliser pour creer l'element XML 
+.br
+\fItable_adr_id\fP : Hash stockant les correspondances entre les ids des bornes dans le document XML et leur adresse en memoire 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Un element XML representant le conducteur 
+.RE
+.PP
+
+.SS "int Conductor::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.PP
+type Enable the use of qgraphicsitem_cast to safely cast a QGraphicsItem into a conductor\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the QGraphicsItem type 
+.RE
+.PP
+
+.SS "void Conductor::updateConductorPath (const QPointF & p1, \fBQet::Orientation\fP o1, const QPointF & p2, \fBQet::Orientation\fP o2)\fC [private]\fP"
+Gere les updates 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp1\fP Coordonnees du point d'amarrage de la borne 1 
+.br
+\fIo1\fP Orientation de la borne 1 
+.br
+\fIp2\fP Coordonnees du point d'amarrage de la borne 2 
+.br
+\fIo2\fP Orientation de la borne 2 
+.RE
+.PP
+
+.SS "void Conductor::updatePath (const QRectF & rect = \fCQRectF()\fP)"
+Met a jour la representation graphique du conducteur en recalculant son trace\&. Cette fonction est typiquement appelee lorsqu'une seule des bornes du conducteur a change de position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrect\fP Rectangle a mettre a jour 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+QGraphicsPathItem::update() 
+.RE
+.PP
+
+.SS "void Conductor::updatePathAnimate (const int = \fC1\fP)\fC [inline]\fP"
+
+.SS "bool Conductor::valideXml (QDomElement & e)\fC [static]\fP"
+Methode de validation d'element XML 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP Un element XML sense represente un Conducteur 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si l'element XML represente bien un Conducteur ; false sinon 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QPointF Conductor::before_mov_text_pos_\fC [private]\fP"
+
+.SS "QBrush Conductor::conductor_brush = QBrush()\fC [static]\fP, \fC [private]\fP"
+
+.SS "QPen Conductor::conductor_pen = QPen()\fC [static]\fP, \fC [private]\fP"
+
+.PP
+QPen et QBrush objects used to draw conductors\&. 
+.SS "\fBConductorProfilesGroup\fP Conductor::conductor_profiles\fC [private]\fP"
+conductor profile: 'photography' of what the conductor is supposed to look like - there is one profile per kind of traject 
+.SS "bool Conductor::has_to_save_profile\fC [private]\fP"
+
+.PP
+Whether the current profile should be saved as soon as possible\&. 
+.SS "\fBautonum::sequentialNumbers\fP Conductor::m_autoNum_seq\fC [private]\fP"
+
+.SS "bool Conductor::m_freeze_label = false\fC [private]\fP"
+
+.SS "QVector<\fBQetGraphicsHandlerItem\fP *> Conductor::m_handler_vector\fC [private]\fP"
+
+.SS "bool Conductor::m_mouse_over\fC [private]\fP"
+
+.SS "\fBConductorSegment\fP* Conductor::m_moved_segment\fC [private]\fP"
+
+.SS "bool Conductor::m_moving_segment\fC [private]\fP"
+
+.PP
+Attributs related to mouse interaction\&. 
+.SS "QPainterPath Conductor::m_path\fC [private]\fP"
+
+.SS "qreal Conductor::m_previous_z_value\fC [private]\fP"
+
+.SS "\fBConductorProperties\fP Conductor::m_properties\fC [private]\fP"
+
+.PP
+Functional properties\&. 
+.SS "\fBConductorTextItem\fP* Conductor::m_text_item\fC [private]\fP"
+
+.PP
+Text input for non simple, non-singleline conductors\&. 
+.SS "bool Conductor::m_valid\fC [private]\fP"
+
+.SS "int Conductor::m_vector_index = \-1\fC [private]\fP"
+
+.SS "bool Conductor::modified_path\fC [private]\fP"
+
+.PP
+Whether the conductor was manually modified by users\&. 
+.SS "int Conductor::moved_point\fC [private]\fP"
+
+.SS "\fBHighlight\fP Conductor::must_highlight_\fC [private]\fP"
+
+.PP
+Define whether and how the conductor should be highlighted\&. 
+.SS "bool Conductor::pen_and_brush_initialized = false\fC [static]\fP, \fC [private]\fP"
+
+.SS "\fBConductorSegment\fP* Conductor::segments\fC [private]\fP"
+
+.PP
+Segments composing the conductor\&. 
+.SS "\fBTerminal\fP* Conductor::terminal1"
+
+.SS "\fBTerminal\fP* Conductor::terminal2"
+
+.SH "Property Documentation"
+.PP 
+.SS "int Conductor::animPath\fC [read]\fP, \fC [write]\fP"
+
+.SS "QPointF Conductor::pos\fC [read]\fP, \fC [write]\fP"
+
+.SS "\fBConductorProperties\fP Conductor::properties\fC [read]\fP, \fC [write]\fP"
+
+.SS "\fBautonum::sequentialNumbers\fP Conductor::sequenceNum\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

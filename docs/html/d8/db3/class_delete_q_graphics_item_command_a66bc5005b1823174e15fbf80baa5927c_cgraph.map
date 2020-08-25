@@ -1,0 +1,52 @@
+<map id="DeleteQGraphicsItemCommand::redo" name="DeleteQGraphicsItemCommand::redo">
+<area shape="rect" id="node1" title="DeleteQGraphicsItemCommand::redo Redo the delete command." alt="" coords="5,653,213,695"/>
+<area shape="rect" id="node2" href="$d9/db9/class_diagram_content.html#a469693789e1268cbfae9486b240da1a3" title="DiagramContent::conductors." alt="" coords="547,483,735,510"/>
+<area shape="rect" id="node3" href="$d9/db9/class_diagram_content.html#a278da70e11e9a9db67db1bcdcf0f69f0" title="DiagramContent::items." alt="" coords="295,509,451,535"/>
+<area shape="rect" id="node4" href="$d5/d50/class_element.html#a6e6dd7422b4247998b2c2dd06b6112e2" title="Element::linkedElements." alt="" coords="1259,226,1425,253"/>
+<area shape="rect" id="node17" href="$dd/df7/class_element_text_item_group.html#a2df1f58b1f5a9e42bac05240dedab862" title="ElementTextItemGroup::parentElement." alt="" coords="295,712,451,753"/>
+<area shape="rect" id="node18" href="$d0/d59/class_dynamic_element_text_item.html#a3321e3550f441a8babaf5dbefadcf443" title="DynamicElementTextItem::ParentElement." alt="" coords="286,777,459,819"/>
+<area shape="rect" id="node19" href="$d0/d59/class_dynamic_element_text_item.html#ae8ac3098e77f47420795ae66ffc209ca" title="DynamicElementTextItem::parentGroup." alt="" coords="286,843,459,884"/>
+<area shape="rect" id="node20" href="$d5/d50/class_element.html#a6ed92e8132bc473ef597fde05bcc553b" title="Element::removeDynamicTextItem Remove deti, no matter if is a child of this element or a child of a g..." alt="" coords="261,661,484,687"/>
+<area shape="rect" id="node21" href="$d5/d50/class_element.html#afad1a946afa372934a9e1a9eb5fe8e74" title="Element::removeTextFromGroup Remove the text text from the group group, en reparent text to this elem..." alt="" coords="536,661,745,687"/>
+<area shape="rect" id="node44" href="$d3/d37/class_diagram.html#a0b0af5271af64fe8eab04efb14e849d8" title="Diagram::removeItem Reimplemented from QGraphicsScene::removeItem(QGraphicsItem *item) Do some specif..." alt="" coords="299,1035,446,1062"/>
+<area shape="rect" id="node5" href="$d4/dfe/element_8h.html#aefbd4becc52ac4934fb4268241ab5f50" title="comparPos Compare position of the two elements. Compare 3 points: 1 folio &#45; 2 row &#45; 3 line returns a ..." alt="" coords="1550,226,1638,253"/>
+<area shape="rect" id="node6" href="$d3/d37/class_diagram.html#a00ca50b86ab52583341ccbc8fefe9967" title="Diagram::convertPosition." alt="" coords="1757,175,1927,202"/>
+<area shape="rect" id="node14" href="$d7/db5/class_qet_graphics_item.html#af9b4e57c5ad3f5a9307a03a4310ce7b2" title=" " alt="" coords="1755,277,1929,303"/>
+<area shape="rect" id="node15" href="$d3/d37/class_diagram.html#a6fa7b30a9b91175f316ce8212c32afd6" title="Diagram::folioIndex." alt="" coords="1775,226,1909,253"/>
+<area shape="rect" id="node16" href="$dc/d20/class_diagram_position.html#a6204c673acd9167925f6c8194dcabed6" title=" " alt="" coords="1765,125,1919,151"/>
+<area shape="rect" id="node7" href="$df/d92/class_border_title_block.html#afa48dd3cfdb5bb46e4cf4e4720705211" title="BorderTitleBlock::convertPosition Convert a Point in cartesian coordinate (x : 12...." alt="" coords="1988,123,2157,164"/>
+<area shape="rect" id="node12" href="$dc/d20/class_diagram_position.html#aee22136fa026b42fb599dc402e733617" title=" " alt="" coords="1977,221,2168,247"/>
+<area shape="rect" id="node8" href="$df/d92/class_border_title_block.html#af38649a1abd3a73a7f8026382330541c" title=" " alt="" coords="2225,123,2399,164"/>
+<area shape="rect" id="node9" href="$df/d92/class_border_title_block.html#ad77b51d22f7e035a416cc3279de90bf0" title="BorderTitleBlock::incrementLetters increments string with Letters A to Z." alt="" coords="2221,188,2403,229"/>
+<area shape="rect" id="node10" href="$df/d92/class_border_title_block.html#abf6fab4e876c1d76e10b4f4bd2943aab" title="BorderTitleBlock::insideBorderRect." alt="" coords="2232,5,2392,47"/>
+<area shape="rect" id="node11" href="$df/d92/class_border_title_block.html#a92a59aec4ce6210e9d80781e770626df" title=" " alt="" coords="2216,71,2408,98"/>
+<area shape="rect" id="node13" href="$dc/d20/class_diagram_position.html#ac16f72e5a2f3081071e830dca9e0cd47" title=" " alt="" coords="2227,254,2397,281"/>
+<area shape="rect" id="node22" href="$d5/d50/class_element.html#a9f69c40f30c8285e338504db3db72444" title="Element::addDynamiqueTextItem Add deti as a dynamic text item of this element, deti is reparented to ..." alt="" coords="797,635,999,662"/>
+<area shape="rect" id="node23" href="$dd/df7/class_element_text_item_group.html#ae47da5361a55a13ff74c648afecd70f0" title="ElementTextItemGroup::removeFromGroup." alt="" coords="820,687,976,728"/>
+<area shape="rect" id="node27" href="$dd/df7/class_element_text_item_group.html#a0e3a9d52a0349e79ba35731562a989ed" title="ElementTextItemGroup::texts." alt="" coords="1764,909,1920,951"/>
+<area shape="rect" id="node24" href="$dd/df7/class_element_text_item_group.html#a31792107851534b509b3bd8dd6de8df0" title="ElementTextItemGroup::setAlignment Update the alignement of the items in this group,..." alt="" coords="1047,1001,1203,1043"/>
+<area shape="rect" id="node39" href="$dd/df7/class_element_text_item_group.html#af2be13bab4c1a945e182df98edb9cfd3" title=" " alt="" coords="1047,611,1203,652"/>
+<area shape="rect" id="node25" href="$dd/df7/class_element_text_item_group.html#af6240ae3cce5543755258dd93eefc79c" title=" " alt="" coords="1264,749,1420,791"/>
+<area shape="rect" id="node28" href="$df/d6e/class_cross_ref_item.html#a3065c34fd9292b9eeb0ef4b99fa5b48d" title="CrossRefItem::autoPos Calculate and set position automaticaly." alt="" coords="1263,983,1421,1010"/>
+<area shape="rect" id="node31" href="$dd/df7/class_element_text_item_group.html#a8c1dc7f8aeb5eea83d30a85e085c8b55" title=" " alt="" coords="1264,867,1420,908"/>
+<area shape="rect" id="node36" href="$dd/df7/class_element_text_item_group.html#a00510ec3c33f72f13e855bb91ba22303" title=" " alt="" coords="1264,1203,1420,1244"/>
+<area shape="rect" id="node37" href="$dd/df7/class_element_text_item_group.html#a630fed51321ea325883a11d03bec9212" title=" " alt="" coords="1264,1085,1420,1127"/>
+<area shape="rect" id="node38" href="$d7/dbb/elementtextitemgroup_8cpp.html#a12f331690ccfc3493845a79fea0aaffe" title="sorting" alt="" coords="1311,1151,1373,1178"/>
+<area shape="rect" id="node26" href="$dd/df7/class_element_text_item_group.html#a353bfd6c2332fd0e18eaea32989f0c12" title="ElementTextItemGroup::boundingRect." alt="" coords="1516,793,1672,835"/>
+<area shape="rect" id="node29" href="$df/d61/qgraphicsitemutility_8cpp.html#ab1a14bc7f44ac3916c1907c88bb30c2e" title="centerToBottomDiagram Set item pos to the bottom of diagram and centered vertically to element_to_fol..." alt="" coords="1513,983,1675,1010"/>
+<area shape="rect" id="node30" href="$d4/d83/class_x_ref_properties.html#a827cd15e8eeee39b16f1034336ad256f" title=" " alt="" coords="1513,933,1675,959"/>
+<area shape="rect" id="node32" href="$d6/dc5/class_q_e_t_project.html#aadc675b7db03862e16ce467715ad00c1" title=" " alt="" coords="1481,867,1707,894"/>
+<area shape="rect" id="node33" href="$d5/d50/class_element.html#a5ba6e350aebd61f0f52dfb8c06f7172a" title=" " alt="" coords="1507,527,1681,554"/>
+<area shape="rect" id="node34" href="$d5/d50/class_element.html#a81ccfa68d05b06fcfb1a05a0abd533d6" title=" " alt="" coords="1531,627,1657,654"/>
+<area shape="rect" id="node35" href="$d3/d37/class_diagram.html#a8a2a4a08dce92d0eed86f94077e9cc84" title="Diagram::project." alt="" coords="1535,727,1653,754"/>
+<area shape="rect" id="node40" href="$d7/df8/class_q_e_t_app.html#a219f04d4314737f12bb159f0a2eb3f78" title="QETApp::diagramTextsFont The font to use By default the font is &quot;sans Serif&quot; and size 9." alt="" coords="1251,530,1433,557"/>
+<area shape="rect" id="node41" href="$d3/df5/classautonum_1_1_assign_variables.html#abf8fecd78bdaa59e34a2f7da7af6ebcf" title="AssignVariables::formulaToLabel Return the formula with variable assigned (ready to be displayed)" alt="" coords="1255,581,1429,623"/>
+<area shape="rect" id="node42" href="$d5/d50/class_element.html#a4f6473b7ac4553a83e4a847b560c4fd1" title=" " alt="" coords="1255,647,1429,674"/>
+<area shape="rect" id="node43" href="$d4/d83/class_x_ref_properties.html#ad7961bc8cf6c09a5f45bbc1faf83a763" title=" " alt="" coords="1252,378,1432,405"/>
+<area shape="rect" id="node45" href="$d6/dc5/class_q_e_t_project.html#a38c4778acc88e16b55913fefa48e6f5b" title="QETProject::dataBase." alt="" coords="565,1010,717,1037"/>
+<area shape="rect" id="node46" href="$d3/d37/class_diagram.html#ab576e6398fe6d00cd92d6bbf9300f7b6" title="Diagram::isReadOnly." alt="" coords="567,1061,714,1087"/>
+<area shape="rect" id="node47" href="$dc/d46/class_terminal.html#a35ee48aaa14c345828ba931876dba1c9" title="Terminal::removeConductor Remove a conductor from this terminal." alt="" coords="550,1111,731,1138"/>
+<area shape="rect" id="node48" href="$d5/d7f/classproject_data_base.html#a936b9fe54fd06e16c4f769643cfedf8f" title="projectDataBase::removeElement" alt="" coords="532,1226,749,1253"/>
+<area shape="rect" id="node50" href="$d5/d50/class_element.html#a9a1858b233f9a764d9934619ade84c2d" title=" " alt="" coords="550,959,731,986"/>
+<area shape="rect" id="node49" href="$d5/d50/class_element.html#a873eecea89b2cdb02b740beabd2e36c6" title="Element::uuid." alt="" coords="847,1319,949,1346"/>
+</map>

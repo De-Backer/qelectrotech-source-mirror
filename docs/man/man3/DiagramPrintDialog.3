@@ -1,0 +1,386 @@
+.TH "DiagramPrintDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramPrintDialog \- The \fBDiagramPrintDialog\fP class This class implements both the dialog allowing users to configure the printing of a project file and the printing itself\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramprintdialog\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramPrintDialog\fP (\fBQETProject\fP *, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~DiagramPrintDialog\fP () override"
+.br
+.ti -1c
+.RI "void \fBsetFileName\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBfileName\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDocName\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBdocName\fP () const"
+.br
+.ti -1c
+.RI "QRect \fBdiagramRect\fP (\fBDiagram\fP *, const \fBExportProperties\fP &) const"
+.br
+.RI "\fBDiagramPrintDialog::diagramRect\fP\&. "
+.ti -1c
+.RI "int \fBpagesCount\fP (\fBDiagram\fP *, const \fBExportProperties\fP &, bool=false) const"
+.br
+.ti -1c
+.RI "int \fBhorizontalPagesCount\fP (\fBDiagram\fP *, const \fBExportProperties\fP &, bool=false) const"
+.br
+.ti -1c
+.RI "int \fBverticalPagesCount\fP (\fBDiagram\fP *, const \fBExportProperties\fP &, bool=false) const"
+.br
+.ti -1c
+.RI "void \fBexec\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBprint\fP (const QList< \fBDiagram\fP * > &, bool, const \fBExportProperties\fP &)"
+.br
+.ti -1c
+.RI "void \fBprintDiagram\fP (\fBDiagram\fP *, bool, const \fBExportProperties\fP &, QPainter *, QPrinter *=nullptr)"
+.br
+.ti -1c
+.RI "void \fBupdatePrintTypeDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBacceptPrintTypeDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBbrowseFilePrintTypeDialog\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramPrintDialog\fP (const \fBDiagramPrintDialog\fP &)"
+.br
+.ti -1c
+.RI "void \fBbuildPrintTypeDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBbuildDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBsaveReloadDiagramParameters\fP (\fBDiagram\fP *, const \fBExportProperties\fP &, bool)"
+.br
+.ti -1c
+.RI "void \fBsavePageSetupForCurrentPrinter\fP ()"
+.br
+.ti -1c
+.RI "void \fBloadPageSetupForCurrentPrinter\fP ()"
+.br
+.ti -1c
+.RI "QString \fBsettingsSectionName\fP (const QPrinter *)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject_\fP"
+.br
+.ti -1c
+.RI "QPrinter * \fBprinter_\fP"
+.br
+.ti -1c
+.RI "QString \fBdoc_name_\fP"
+.br
+.ti -1c
+.RI "QString \fBfile_name_\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialog_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBprinttype_label_\fP"
+.br
+.ti -1c
+.RI "QGridLayout * \fBglayout0_\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvlayout0_\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhlayout0_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBprinter_icon_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBpdf_icon_\fP"
+.br
+.ti -1c
+.RI "QButtonGroup * \fBprinttype_choice_\fP"
+.br
+.ti -1c
+.RI "QRadioButton * \fBprinter_choice_\fP"
+.br
+.ti -1c
+.RI "QRadioButton * \fBpdf_choice_\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBfilepath_field_\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBbrowse_button_\fP"
+.br
+.ti -1c
+.RI "QDialogButtonBox * \fBbuttons_\fP"
+.br
+.ti -1c
+.RI "QColor \fBbackup_diagram_background_color\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBDiagramPrintDialog\fP class This class implements both the dialog allowing users to configure the printing of a project file and the printing itself\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramPrintDialog::DiagramPrintDialog (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Schema a imprimer 
+.br
+\fIparent\fP Widget parent du dialogue 
+.RE
+.PP
+
+.SS "DiagramPrintDialog::~DiagramPrintDialog ()\fC [override]\fP"
+Destructeur 
+.SS "DiagramPrintDialog::DiagramPrintDialog (const \fBDiagramPrintDialog\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramPrintDialog::acceptPrintTypeDialog ()\fC [private]\fP, \fC [slot]\fP"
+Verifie l'etat du dialogue permettant le choix du type d'impression lorsque l'utilisateur le valide\&. 
+.PP
+\fBTodo\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void DiagramPrintDialog::browseFilePrintTypeDialog ()\fC [private]\fP, \fC [slot]\fP"
+Permet a l'utilisateur de choisir un fichier 
+.SS "void DiagramPrintDialog::buildDialog ()\fC [private]\fP"
+
+.SS "void DiagramPrintDialog::buildPrintTypeDialog ()\fC [private]\fP"
+Construit un dialogue non standard pour demander a l'utilisateur quelle type d'impression il souhaite effectuer : PDF, PS ou imprimante physique 
+.SS "QRect DiagramPrintDialog::diagramRect (\fBDiagram\fP * diagram, const \fBExportProperties\fP & options) const"
+
+.PP
+\fBDiagramPrintDialog::diagramRect\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : \fBDiagram\fP to be printed 
+.br
+\fIoptions\fP : 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the rectangle to be printed 
+.RE
+.PP
+
+.SS "QString DiagramPrintDialog::docName () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le nom du document 
+.RE
+.PP
+
+.SS "void DiagramPrintDialog::exec ()"
+Execute le dialogue d'impression 
+.SS "QString DiagramPrintDialog::fileName () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le nom du PDF 
+.RE
+.PP
+
+.SS "int DiagramPrintDialog::horizontalPagesCount (\fBDiagram\fP * diagram, const \fBExportProperties\fP & options, bool fullpage = \fCfalse\fP) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a imprimer 
+.br
+\fIoptions\fP Rendering options 
+.br
+\fIfullpage\fP true pour utiliser toute la feuille dans le calcul 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+La largeur du 'poster' en nombre de pages pour imprimer le schema avec l'orientation et le format papier utilise dans l'imprimante en cours\&. 
+.RE
+.PP
+
+.SS "void DiagramPrintDialog::loadPageSetupForCurrentPrinter ()\fC [private]\fP"
+Load parameters previously set in the 'page setup' dialog for the current printer, if any\&. 
+.SS "int DiagramPrintDialog::pagesCount (\fBDiagram\fP * diagram, const \fBExportProperties\fP & options, bool fullpage = \fCfalse\fP) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a imprimer 
+.br
+\fIoptions\fP Rendering options 
+.br
+\fIfullpage\fP true pour utiliser toute la feuille dans le calcul 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Le nombre de pages necessaires pour imprimer le schema avec l'orientation et le format papier utilise dans l'imprimante en cours\&. 
+.RE
+.PP
+
+.SS "void DiagramPrintDialog::print (const QList< \fBDiagram\fP * > & diagrams, bool fit_page, const \fBExportProperties\fP & options)\fC [private]\fP, \fC [slot]\fP"
+Effectue l'impression elle-meme 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagrams\fP Schemas a imprimer 
+.br
+\fIfit_page\fP Booleen indiquant s'il faut adapter les schemas aux pages ou non 
+.br
+\fIoptions\fP Options de rendu 
+.RE
+.PP
+
+.SS "void DiagramPrintDialog::printDiagram (\fBDiagram\fP * diagram, bool fit_page, const \fBExportProperties\fP & options, QPainter * qp, QPrinter * printer = \fCnullptr\fP)\fC [private]\fP, \fC [slot]\fP"
+Imprime un schema 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a imprimer 
+.br
+\fIfit_page\fP True pour adapter les schemas aux pages, false sinon 
+.br
+\fIoptions\fP Options de rendu a appliquer pour l'impression 
+.br
+\fIqp\fP QPainter a utiliser (deja initialise sur printer) 
+.br
+\fIprinter\fP Imprimante a utiliser 
+.RE
+.PP
+
+.SS "void DiagramPrintDialog::savePageSetupForCurrentPrinter ()\fC [private]\fP"
+Save parameters set in the 'page setup' dialog into the QElectroTech configuration\&. Key/values pairs are associated to the printer for which they have been set\&. 
+.SS "void DiagramPrintDialog::saveReloadDiagramParameters (\fBDiagram\fP * diagram, const \fBExportProperties\fP & options, bool save)\fC [private]\fP"
+Sauve ou restaure les parametres du schema 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema dont on sauve ou restaure les parametres 
+.br
+\fIoptions\fP Parametres a appliquer 
+.br
+\fIsave\fP true pour memoriser les parametres du schema et appliquer ceux definis dans options, false pour restaurer les parametres 
+.RE
+.PP
+
+.SS "void DiagramPrintDialog::setDocName (const QString & name)"
+Definit le nom du document 
+.SS "void DiagramPrintDialog::setFileName (const QString & name)"
+Definit le nom du PDF si l'utilisateur choisit une sortie vers un PDF 
+.SS "QString DiagramPrintDialog::settingsSectionName (const QPrinter * printer)\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+a section name for use with QSettings in order to store parameters related to \fIprinter\fP\&. 
+.RE
+.PP
+
+.SS "void DiagramPrintDialog::updatePrintTypeDialog ()\fC [private]\fP, \fC [slot]\fP"
+Assure la coherence du dialogue permettant le choix du type d'impression 
+.SS "int DiagramPrintDialog::verticalPagesCount (\fBDiagram\fP * diagram, const \fBExportProperties\fP & options, bool fullpage = \fCfalse\fP) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Schema a imprimer 
+.br
+\fIoptions\fP Rendering options 
+.br
+\fIfullpage\fP true pour utiliser toute la feuille dans le calcul 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+La largeur du 'poster' en nombre de pages pour imprimer le schema avec l'orientation et le format papier utilise dans l'imprimante en cours\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QColor DiagramPrintDialog::backup_diagram_background_color\fC [private]\fP"
+
+.SS "QPushButton* DiagramPrintDialog::browse_button_\fC [private]\fP"
+
+.SS "QDialogButtonBox* DiagramPrintDialog::buttons_\fC [private]\fP"
+
+.SS "QDialog* DiagramPrintDialog::dialog_\fC [private]\fP"
+
+.SS "QString DiagramPrintDialog::doc_name_\fC [private]\fP"
+
+.SS "QString DiagramPrintDialog::file_name_\fC [private]\fP"
+
+.SS "QLineEdit* DiagramPrintDialog::filepath_field_\fC [private]\fP"
+
+.SS "QGridLayout* DiagramPrintDialog::glayout0_\fC [private]\fP"
+
+.SS "QHBoxLayout* DiagramPrintDialog::hlayout0_\fC [private]\fP"
+
+.SS "QRadioButton* DiagramPrintDialog::pdf_choice_\fC [private]\fP"
+
+.SS "QLabel* DiagramPrintDialog::pdf_icon_\fC [private]\fP"
+
+.SS "QPrinter* DiagramPrintDialog::printer_\fC [private]\fP"
+
+.SS "QRadioButton* DiagramPrintDialog::printer_choice_\fC [private]\fP"
+
+.SS "QLabel* DiagramPrintDialog::printer_icon_\fC [private]\fP"
+
+.SS "QButtonGroup* DiagramPrintDialog::printtype_choice_\fC [private]\fP"
+
+.SS "QLabel* DiagramPrintDialog::printtype_label_\fC [private]\fP"
+
+.SS "\fBQETProject\fP* DiagramPrintDialog::project_\fC [private]\fP"
+
+.SS "QVBoxLayout* DiagramPrintDialog::vlayout0_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

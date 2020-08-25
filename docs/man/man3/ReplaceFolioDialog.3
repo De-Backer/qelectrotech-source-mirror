@@ -1,0 +1,80 @@
+.TH "ReplaceFolioDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReplaceFolioDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <replacefoliowidget\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReplaceFolioDialog\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ReplaceFolioDialog\fP ()"
+.br
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBtitleBlockProperties\fP () const"
+.br
+.RI "\fBReplaceFolioDialog::titleBlockProperties\fP\&. "
+.ti -1c
+.RI "void \fBsetTitleBlockProperties\fP (const \fBTitleBlockProperties\fP &properties)"
+.br
+.RI "\fBReplaceFolioDialog::setTitleBlockProperties\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBReplaceFolioWidget\fP * \fBm_widget\fP = nullptr"
+.br
+.ti -1c
+.RI "QDialogButtonBox * \fBm_button_box\fP = nullptr"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ReplaceFolioDialog::ReplaceFolioDialog (QWidget * parent = \fCnullptr\fP)"
+
+.SS "ReplaceFolioDialog::~ReplaceFolioDialog ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ReplaceFolioDialog::setTitleBlockProperties (const \fBTitleBlockProperties\fP & properties)"
+
+.PP
+\fBReplaceFolioDialog::setTitleBlockProperties\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperties\fP : set the title block properties edited by this dialog 
+.RE
+.PP
+
+.SS "\fBTitleBlockProperties\fP ReplaceFolioDialog::titleBlockProperties () const"
+
+.PP
+\fBReplaceFolioDialog::titleBlockProperties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The title block properties edited by this dialog 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QDialogButtonBox* ReplaceFolioDialog::m_button_box = nullptr\fC [private]\fP"
+
+.SS "\fBReplaceFolioWidget\fP* ReplaceFolioDialog::m_widget = nullptr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

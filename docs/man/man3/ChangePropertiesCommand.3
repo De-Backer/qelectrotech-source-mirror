@@ -1,0 +1,84 @@
+.TH "ChangePropertiesCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChangePropertiesCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <editorcommands\&.h>\fP
+.PP
+Inherits \fBElementEditionCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangePropertiesCommand\fP (\fBElementScene\fP *scene, const QString &type, const \fBDiagramContext\fP &info, const \fBDiagramContext\fP &elmt_info, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBChangePropertiesCommand::ChangePropertiesCommand\fP Change the properties of the drawed element\&. "
+.ti -1c
+.RI "\fB~ChangePropertiesCommand\fP () override"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< QString > \fBm_type\fP"
+.br
+.ti -1c
+.RI "QList< \fBDiagramContext\fP > \fBm_kind_info\fP"
+.br
+.ti -1c
+.RI "QList< \fBDiagramContext\fP > \fBm_elmt_info\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChangePropertiesCommand::ChangePropertiesCommand (\fBElementScene\fP * scene, const QString & type, const \fBDiagramContext\fP & info, const \fBDiagramContext\fP & elmt_info, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBChangePropertiesCommand::ChangePropertiesCommand\fP Change the properties of the drawed element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP : scene to belong the property 
+.br
+\fItype\fP : new type of element\&. 
+.br
+\fIinfo\fP 
+.br
+\fIelmt_info\fP : new info about type\&. 
+.br
+\fIparent\fP : parent undo 
+.RE
+.PP
+
+.SS "ChangePropertiesCommand::~ChangePropertiesCommand ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChangePropertiesCommand::redo ()\fC [override]\fP"
+
+.SS "void ChangePropertiesCommand::undo ()\fC [override]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QList< \fBDiagramContext\fP> ChangePropertiesCommand::m_elmt_info\fC [private]\fP"
+
+.SS "QList<\fBDiagramContext\fP> ChangePropertiesCommand::m_kind_info\fC [private]\fP"
+
+.SS "QList<QString> ChangePropertiesCommand::m_type\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

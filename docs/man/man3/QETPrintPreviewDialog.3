@@ -1,0 +1,416 @@
+.TH "QETPrintPreviewDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETPrintPreviewDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetprintpreviewdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBfirstPage\fP ()"
+.br
+.ti -1c
+.RI "void \fBpreviousPage\fP ()"
+.br
+.ti -1c
+.RI "void \fBnextPage\fP ()"
+.br
+.ti -1c
+.RI "void \fBlastPage\fP ()"
+.br
+.ti -1c
+.RI "void \fBpageSetup\fP ()"
+.br
+.ti -1c
+.RI "void \fBuseFullPage\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBfitDiagramToPage\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBzoomIn\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomOut\fP ()"
+.br
+.ti -1c
+.RI "void \fBselectAllDiagrams\fP ()"
+.br
+.ti -1c
+.RI "void \fBselectNoDiagram\fP ()"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBpaintRequested\fP (const QList< \fBDiagram\fP * > &, bool, const \fBExportProperties\fP, QPrinter *)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETPrintPreviewDialog\fP (\fBQETProject\fP *, QPrinter *, QWidget *=nullptr, Qt::WindowFlags=Qt::Widget)"
+.br
+.ti -1c
+.RI "\fB~QETPrintPreviewDialog\fP () override"
+.br
+.ti -1c
+.RI "\fBDiagramsChooser\fP * \fBdiagramsChooser\fP ()"
+.br
+.ti -1c
+.RI "bool \fBfitDiagramsToPages\fP () const"
+.br
+.ti -1c
+.RI "\fBExportProperties\fP \fBexportProperties\fP () const"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBrequestPaint\fP (QPrinter *)"
+.br
+.ti -1c
+.RI "void \fBcheckDiagramsCount\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDiagramsListVisible\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBsetPrintOptionsVisible\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBupdateZoomList\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdatePreviewZoom\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETPrintPreviewDialog\fP (const \fBQETPrintPreviewDialog\fP &)"
+.br
+.ti -1c
+.RI "void \fBbuild\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject_\fP"
+.br
+.ti -1c
+.RI "QPrinter * \fBprinter_\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhlayout0_\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvlayout0_\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvlayout1_\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvlayout2_\fP"
+.br
+.ti -1c
+.RI "QToolBar * \fBtoolbar_\fP"
+.br
+.ti -1c
+.RI "QPrintPreviewWidget * \fBpreview_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBdiagrams_label_\fP"
+.br
+.ti -1c
+.RI "\fBDiagramsChooser\fP * \fBdiagrams_list_\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBdiagrams_select_all_\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBdiagrams_select_none_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBtoggle_diagrams_list_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBtoggle_print_options_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBadjust_width_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBadjust_page_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBzoom_in_\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBzoom_box_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBzoom_out_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBlandscape_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBportrait_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBfirst_page_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBprevious_page_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBnext_page_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBlast_page_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBall_pages_view_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBfacing_pages_view_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBsingle_page_view_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBpage_setup_\fP"
+.br
+.ti -1c
+.RI "QDialogButtonBox * \fBbuttons_\fP"
+.br
+.ti -1c
+.RI "QGroupBox * \fBprint_options_box_\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBuse_full_page_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBuse_full_page_label_\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBfit_diagram_to_page_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBfit_diagram_to_page_label_\fP"
+.br
+.ti -1c
+.RI "\fBExportPropertiesWidget\fP * \fBrender_properties_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a dialog for users to refine printing options for a particular project by relying on a visual print preview\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QETPrintPreviewDialog::QETPrintPreviewDialog (\fBQETProject\fP * project, QPrinter * printer, QWidget * widget = \fCnullptr\fP, Qt::WindowFlags f = \fCQt::Widget\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Projet a imprimer 
+.br
+\fIprinter\fP Imprimante a utiliser pour 
+.br
+\fIwidget\fP Widget parent 
+.br
+\fIf\fP Flags passes au constructeur de QDialog puis QWidget 
+.RE
+.PP
+
+.SS "QETPrintPreviewDialog::~QETPrintPreviewDialog ()\fC [override]\fP"
+Destructeur 
+.SS "QETPrintPreviewDialog::QETPrintPreviewDialog (const \fBQETPrintPreviewDialog\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QETPrintPreviewDialog::build ()\fC [private]\fP"
+Met en place le dialogue 
+.SS "void QETPrintPreviewDialog::checkDiagramsCount ()\fC [private]\fP, \fC [slot]\fP"
+Ce slot prive verifie que le nombre de schemas a imprimer est bien superieur a 0 et active ou desactive le bouton 'Imprimer' en consequence\&. 
+.SS "\fBDiagramsChooser\fP * QETPrintPreviewDialog::diagramsChooser ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+le widget permettant de choisir les schemas a imprimer\&. 
+.RE
+.PP
+
+.SS "\fBExportProperties\fP QETPrintPreviewDialog::exportProperties () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+les options de rendu definies par l'utilisateur 
+.RE
+.PP
+
+.SS "void QETPrintPreviewDialog::firstPage ()\fC [slot]\fP"
+Passe a la premiere page 
+.SS "bool QETPrintPreviewDialog::fitDiagramsToPages () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si l'option 'Adapter le schema a la page' est activee 
+.RE
+.PP
+
+.SS "void QETPrintPreviewDialog::fitDiagramToPage (bool fit_diagram)\fC [slot]\fP"
+Fait tenir ou non chaque schema sur une page 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfit_diagram\fP true pour adapter chaque schema sur une page, false sinon 
+.RE
+.PP
+
+.SS "void QETPrintPreviewDialog::lastPage ()\fC [slot]\fP"
+Passe a la derniere page 
+.SS "void QETPrintPreviewDialog::nextPage ()\fC [slot]\fP"
+Passe a la page suivante 
+.SS "void QETPrintPreviewDialog::pageSetup ()\fC [slot]\fP"
+Copnfigure la mise en page 
+.SS "void QETPrintPreviewDialog::paintRequested (const QList< \fBDiagram\fP * > &, bool, const ExportProperties, QPrinter *)\fC [signal]\fP"
+
+.SS "void QETPrintPreviewDialog::previousPage ()\fC [slot]\fP"
+Passe a la page precedente 
+.SS "void QETPrintPreviewDialog::requestPaint (QPrinter * printer)\fC [private]\fP, \fC [slot]\fP"
+Ce slot prive emet le signal paintRequested avec : la liste des schemas a imprimer / selectionnes un booleen indiquant s'il faut adapter les schemas aux pages ou non l'imprimante a utiliser 
+.SS "void QETPrintPreviewDialog::selectAllDiagrams ()\fC [slot]\fP"
+Selectionne tous les schemas 
+.SS "void QETPrintPreviewDialog::selectNoDiagram ()\fC [slot]\fP"
+Deselectionne tous les schemas 
+.SS "void QETPrintPreviewDialog::setDiagramsListVisible (bool display)\fC [private]\fP, \fC [slot]\fP"
+Ce slot prive affiche ou cache la liste des schemas 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdisplay\fP true pour affiche la liste des schemas, false pour la cacher 
+.RE
+.PP
+
+.SS "void QETPrintPreviewDialog::setPrintOptionsVisible (bool display)\fC [private]\fP, \fC [slot]\fP"
+Ce slot prive affiche ou cache les options d'impression 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdisplay\fP true pour affiche les options d'impression, false pour les cacher 
+.RE
+.PP
+
+.SS "void QETPrintPreviewDialog::updatePreviewZoom ()\fC [private]\fP, \fC [slot]\fP"
+Change le zoom de l'apercu en fonctiopn du contenu du zoom selectionne 
+.SS "void QETPrintPreviewDialog::updateZoomList ()\fC [private]\fP, \fC [slot]\fP"
+Met a jour la liste des zooms disponibles 
+.SS "void QETPrintPreviewDialog::useFullPage (bool full_page)\fC [slot]\fP"
+Utilise ou non toute la page sans teni compte des marges 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfull_page\fP true pour utiliser toute la page, false sinon 
+.RE
+.PP
+
+.SS "void QETPrintPreviewDialog::zoomIn ()\fC [slot]\fP"
+Effectue l'action 'zoom avant' sur l'apercu avant impression 
+.SS "void QETPrintPreviewDialog::zoomOut ()\fC [slot]\fP"
+Effectue l'action 'zoom arriere' sur l'apercu avant impression 
+.SH "Member Data Documentation"
+.PP 
+.SS "QAction* QETPrintPreviewDialog::adjust_page_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::adjust_width_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::all_pages_view_\fC [private]\fP"
+
+.SS "QDialogButtonBox* QETPrintPreviewDialog::buttons_\fC [private]\fP"
+
+.SS "QLabel* QETPrintPreviewDialog::diagrams_label_\fC [private]\fP"
+
+.SS "\fBDiagramsChooser\fP* QETPrintPreviewDialog::diagrams_list_\fC [private]\fP"
+
+.SS "QPushButton* QETPrintPreviewDialog::diagrams_select_all_\fC [private]\fP"
+
+.SS "QPushButton* QETPrintPreviewDialog::diagrams_select_none_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::facing_pages_view_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::first_page_\fC [private]\fP"
+
+.SS "QCheckBox* QETPrintPreviewDialog::fit_diagram_to_page_\fC [private]\fP"
+
+.SS "QLabel* QETPrintPreviewDialog::fit_diagram_to_page_label_\fC [private]\fP"
+
+.SS "QHBoxLayout* QETPrintPreviewDialog::hlayout0_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::landscape_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::last_page_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::next_page_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::page_setup_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::portrait_\fC [private]\fP"
+
+.SS "QPrintPreviewWidget* QETPrintPreviewDialog::preview_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::previous_page_\fC [private]\fP"
+
+.SS "QGroupBox* QETPrintPreviewDialog::print_options_box_\fC [private]\fP"
+
+.SS "QPrinter* QETPrintPreviewDialog::printer_\fC [private]\fP"
+
+.SS "\fBQETProject\fP* QETPrintPreviewDialog::project_\fC [private]\fP"
+
+.SS "\fBExportPropertiesWidget\fP* QETPrintPreviewDialog::render_properties_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::single_page_view_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::toggle_diagrams_list_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::toggle_print_options_\fC [private]\fP"
+
+.SS "QToolBar* QETPrintPreviewDialog::toolbar_\fC [private]\fP"
+
+.SS "QCheckBox* QETPrintPreviewDialog::use_full_page_\fC [private]\fP"
+
+.SS "QLabel* QETPrintPreviewDialog::use_full_page_label_\fC [private]\fP"
+
+.SS "QVBoxLayout* QETPrintPreviewDialog::vlayout0_\fC [private]\fP"
+
+.SS "QVBoxLayout* QETPrintPreviewDialog::vlayout1_\fC [private]\fP"
+
+.SS "QVBoxLayout* QETPrintPreviewDialog::vlayout2_\fC [private]\fP"
+
+.SS "QComboBox* QETPrintPreviewDialog::zoom_box_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::zoom_in_\fC [private]\fP"
+
+.SS "QAction* QETPrintPreviewDialog::zoom_out_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

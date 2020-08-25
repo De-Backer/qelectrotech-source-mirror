@@ -1,0 +1,332 @@
+.TH "TitleBlockProperties" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockProperties
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <titleblockproperties\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDateManagement\fP { \fBUseDateValue\fP, \fBCurrentDate\fP }"
+.br
+.RI "Lists the various ways to handle the date\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockProperties\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~TitleBlockProperties\fP ()"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBTitleBlockProperties\fP &)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBTitleBlockProperties\fP &)"
+.br
+.ti -1c
+.RI "void \fBtoXml\fP (QDomElement &) const"
+.br
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &)"
+.br
+.ti -1c
+.RI "void \fBtoSettings\fP (QSettings &, const QString &=QString()) const"
+.br
+.RI "\fBTitleBlockProperties::toSettings\fP Export the \fBTitleBlockProperties\fP into a QSettings\&. "
+.ti -1c
+.RI "void \fBfromSettings\fP (QSettings &, const QString &=QString())"
+.br
+.ti -1c
+.RI "void \fBsetAutoPageNum\fP (QString autonum)"
+.br
+.ti -1c
+.RI "QDate \fBfinalDate\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBTitleBlockProperties\fP \fBdefaultProperties\fP ()"
+.br
+.RI "\fBTitleBlockProperties::defaultProperties\fP Return the default properties stored in the setting file\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBtitle\fP"
+.br
+.RI "Folio title (displayed by the default template) "
+.ti -1c
+.RI "QString \fBauthor\fP"
+.br
+.RI "Author of the diagram/folio (displayed by the default template) "
+.ti -1c
+.RI "QDate \fBdate\fP"
+.br
+.RI "Date (displayed by the default template) "
+.ti -1c
+.RI "QString \fBfilename\fP"
+.br
+.RI "Filename (displayed by the default template) "
+.ti -1c
+.RI "QString \fBplant\fP"
+.br
+.RI "Plant (displayed by the default template) "
+.ti -1c
+.RI "QString \fBlocmach\fP"
+.br
+.RI "Location(displayed by the default template) "
+.ti -1c
+.RI "QString \fBindexrev\fP"
+.br
+.RI "Revision Index (displayed by the default template) "
+.ti -1c
+.RI "QString \fBversion\fP"
+.br
+.RI "Version (displayed by the default template) "
+.ti -1c
+.RI "QString \fBfolio\fP"
+.br
+.RI "Folio information (displayed by the default template) "
+.ti -1c
+.RI "QString \fBauto_page_num\fP"
+.br
+.ti -1c
+.RI "\fBDateManagement\fP \fBuseDate\fP"
+.br
+.RI "Wheter to use the date attribute\&. "
+.ti -1c
+.RI "QString \fBtemplate_name\fP"
+.br
+.RI "Name of the template used to render the title block - an empty string means 'the default template provided by the application'\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBcontext\fP"
+.br
+.RI "Container for the additional, user-defined fields\&. "
+.ti -1c
+.RI "Qt::Edge \fBdisplay_at\fP"
+.br
+.RI "Edge to display the titleblock\&. "
+.ti -1c
+.RI "\fBQET::QetCollection\fP \fBcollection\fP"
+.br
+.RI "Specify the location of the title block\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QString \fBexportDate\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDateFromString\fP (const QString &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a container for the properties of a particular title block, i\&.e\&. title, author, date, filename, folio, template, custom properties, \&.\&.\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBTitleBlockProperties::DateManagement\fP"
+
+.PP
+Lists the various ways to handle the date\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIUseDateValue \fP\fP
+use the date attribute 
+.TP
+\fB\fICurrentDate \fP\fP
+use the current date 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockProperties::TitleBlockProperties ()"
+Constructeur\&. Initialise un objet \fBTitleBlockProperties\fP avec tous les champs vides (date vide + useDate a UseDateValue)\&. 
+.SS "TitleBlockProperties::~TitleBlockProperties ()\fC [virtual]\fP"
+Destructeur 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBTitleBlockProperties\fP TitleBlockProperties::defaultProperties ()\fC [static]\fP"
+
+.PP
+\fBTitleBlockProperties::defaultProperties\fP Return the default properties stored in the setting file\&. 
+.SS "QString TitleBlockProperties::exportDate () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+une chaine de caracteres decrivant comment gerer la date dans le cartouche : la chaine peut valoir : null pour ne pas afficher de date now pour afficher la date courante (a la creation du schema) une date au format yyyyMMdd pour utiliser une date fixe 
+.RE
+.PP
+
+.SS "QDate TitleBlockProperties::finalDate () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+La date a utiliser 
+.RE
+.PP
+
+.SS "void TitleBlockProperties::fromSettings (QSettings & settings, const QString & prefix = \fCQString()\fP)"
+Importe le cartouche depuis une configuration\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP Parametres a lire 
+.br
+\fIprefix\fP prefixe a ajouter devant les noms des parametres 
+.RE
+.PP
+
+.SS "void TitleBlockProperties::fromXml (const QDomElement & e)"
+Importe le cartouche a partir des attributs XML de l'element e 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP \fBElement\fP XML dont les attributs seront lus 
+.RE
+.PP
+
+.SS "bool TitleBlockProperties::operator!= (const \fBTitleBlockProperties\fP & ip)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIip\fP autre conteneur \fBTitleBlockProperties\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+false si ip et ce conteneur sont identiques, true sinon 
+.RE
+.PP
+
+.SS "bool TitleBlockProperties::operator== (const \fBTitleBlockProperties\fP & ip)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIip\fP autre conteneur \fBTitleBlockProperties\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si ip et ce conteneur sont identiques, false sinon 
+.RE
+.PP
+
+.SS "void TitleBlockProperties::setAutoPageNum (QString autonum)\fC [inline]\fP"
+
+.SS "void TitleBlockProperties::setDateFromString (const QString & date_string)\fC [private]\fP"
+Charge les attributs date et useDate a partir d'une chaine de caracteres\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdate_string\fP Chaine de caracteres a analyser 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBexportDate\fP 
+.RE
+.PP
+
+.SS "void TitleBlockProperties::toSettings (QSettings & settings, const QString & prefix = \fCQString()\fP) const"
+
+.PP
+\fBTitleBlockProperties::toSettings\fP Export the \fBTitleBlockProperties\fP into a QSettings\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP : setting to use 
+.br
+\fIprefix\fP : name to use as prefix for this property 
+.RE
+.PP
+
+.SS "void TitleBlockProperties::toXml (QDomElement & e) const"
+Exporte le cartouche sous formes d'attributs XML ajoutes a l'element e\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP \fBElement\fP XML auquel seront ajoutes des attributs 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString TitleBlockProperties::author"
+
+.PP
+Author of the diagram/folio (displayed by the default template) 
+.SS "QString TitleBlockProperties::auto_page_num"
+
+.SS "\fBQET::QetCollection\fP TitleBlockProperties::collection"
+
+.PP
+Specify the location of the title block\&. 
+.SS "\fBDiagramContext\fP TitleBlockProperties::context"
+
+.PP
+Container for the additional, user-defined fields\&. 
+.SS "QDate TitleBlockProperties::date"
+
+.PP
+Date (displayed by the default template) 
+.SS "Qt::Edge TitleBlockProperties::display_at"
+
+.PP
+Edge to display the titleblock\&. 
+.SS "QString TitleBlockProperties::filename"
+
+.PP
+Filename (displayed by the default template) 
+.SS "QString TitleBlockProperties::folio"
+
+.PP
+Folio information (displayed by the default template) 
+.SS "QString TitleBlockProperties::indexrev"
+
+.PP
+Revision Index (displayed by the default template) 
+.SS "QString TitleBlockProperties::locmach"
+
+.PP
+Location(displayed by the default template) 
+.SS "QString TitleBlockProperties::plant"
+
+.PP
+Plant (displayed by the default template) 
+.SS "QString TitleBlockProperties::template_name"
+
+.PP
+Name of the template used to render the title block - an empty string means 'the default template provided by the application'\&. 
+.SS "QString TitleBlockProperties::title"
+
+.PP
+Folio title (displayed by the default template) 
+.SS "\fBDateManagement\fP TitleBlockProperties::useDate"
+
+.PP
+Wheter to use the date attribute\&. 
+.SS "QString TitleBlockProperties::version"
+
+.PP
+Version (displayed by the default template) 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

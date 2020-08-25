@@ -1,0 +1,147 @@
+.TH "ESEventAddPolygon" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESEventAddPolygon \- The \fBESEventAddPolygon\fP class This ESEvent manage creation of polygon in an \fBElementScene\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eseventaddpolygon\&.h>\fP
+.PP
+Inherits \fBESEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESEventAddPolygon\fP (\fBElementScene\fP *scene)"
+.br
+.RI "\fBESEventAddPolygon::ESEventAddPolygon\fP\&. "
+.ti -1c
+.RI "\fB~ESEventAddPolygon\fP () override"
+.br
+.RI "\fBESEventAddPolygon::~ESEventAddPolygon\fP\&. "
+.ti -1c
+.RI "bool \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddPolygon::mousePressEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddPolygon::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddPolygon::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddPolygon::mouseDoubleClickEvent\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPartPolygon\fP * \fBm_polygon\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBESEventAddPolygon\fP class This ESEvent manage creation of polygon in an \fBElementScene\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESEventAddPolygon::ESEventAddPolygon (\fBElementScene\fP * scene)"
+
+.PP
+\fBESEventAddPolygon::ESEventAddPolygon\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP 
+.RE
+.PP
+
+.SS "ESEventAddPolygon::~ESEventAddPolygon ()\fC [override]\fP"
+
+.PP
+\fBESEventAddPolygon::~ESEventAddPolygon\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ESEventAddPolygon::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddPolygon::mouseDoubleClickEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddPolygon::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddPolygon::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddPolygon::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddPolygon::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddPolygon::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddPolygon::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPartPolygon\fP* ESEventAddPolygon::m_polygon\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

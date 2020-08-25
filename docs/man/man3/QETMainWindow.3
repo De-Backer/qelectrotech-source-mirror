@@ -1,0 +1,251 @@
+.TH "QETMainWindow" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETMainWindow
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetmainwindow\&.h>\fP
+.PP
+Inherits QMainWindow\&.
+.PP
+Inherited by \fBQETDiagramEditor\fP, \fBQETElementEditor\fP, and \fBQETTitleBlockTemplateEditor\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBtoggleFullScreen\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateFullScreenAction\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheckToolbarsmenu\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETMainWindow\fP (QWidget *=nullptr, Qt::WindowFlags=Qt::Widget)"
+.br
+.ti -1c
+.RI "\fB~QETMainWindow\fP () override"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitCommonActions\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitCommonMenus\fP ()"
+.br
+.ti -1c
+.RI "void \fBinsertMenu\fP (QMenu *, QMenu *, bool=true)"
+.br
+.ti -1c
+.RI "QAction * \fBactionForMenu\fP (QMenu *)"
+.br
+.ti -1c
+.RI "bool \fBevent\fP (QEvent *) override"
+.br
+.ti -1c
+.RI "void \fBdragEnterEvent\fP (QDragEnterEvent *e) override"
+.br
+.ti -1c
+.RI "void \fBdropEvent\fP (QDropEvent *e) override"
+.br
+.ti -1c
+.RI "virtual void \fBfirstActivation\fP (QEvent *)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "QAction * \fBconfigure_action_\fP"
+.br
+.RI "Launch the QElectroTech configuration dialog\&. "
+.ti -1c
+.RI "QAction * \fBfullscreen_action_\fP"
+.br
+.RI "Toggle full screen\&. "
+.ti -1c
+.RI "QAction * \fBwhatsthis_action_\fP"
+.br
+.RI "Toggle 'What's this' mode\&. "
+.ti -1c
+.RI "QAction * \fBabout_qet_\fP"
+.br
+.RI "Launch the 'About QElectroTech' dialog\&. "
+.ti -1c
+.RI "QAction * \fBmanual_online_\fP"
+.br
+.RI "Launch browser on QElectroTech online manual\&. "
+.ti -1c
+.RI "QAction * \fByoutube_\fP"
+.br
+.RI "Launch browser on QElectroTech Youtube channel\&. "
+.ti -1c
+.RI "QAction * \fBupgrade_\fP"
+.br
+.RI "Launch browser on QElectroTech Windows Nightly builds\&. "
+.ti -1c
+.RI "QAction * \fBupgrade_M\fP"
+.br
+.RI "Launch browser on QElectroTech MAC_OS_X builds\&. "
+.ti -1c
+.RI "QAction * \fBdonate_\fP"
+.br
+.RI "Launch browser to donate link\&. "
+.ti -1c
+.RI "QAction * \fBabout_qt_\fP"
+.br
+.RI "launch the 'About Qt' dialog "
+.ti -1c
+.RI "QMenu * \fBsettings_menu_\fP"
+.br
+.RI "Settings menu\&. "
+.ti -1c
+.RI "QMenu * \fBhelp_menu_\fP"
+.br
+.RI "Help menu\&. "
+.ti -1c
+.RI "QMenu * \fBdisplay_toolbars_\fP"
+.br
+.RI "Show/hide toolbars/docks\&. "
+.ti -1c
+.RI "QHash< QMenu *, QAction * > \fBmenu_actions_\fP"
+.br
+.RI "Store actions retrieved when inserting menus\&. "
+.ti -1c
+.RI "bool \fBfirst_activation_\fP"
+.br
+.RI "Used to detect whether the window is activated for the first time\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the base class for the main top-level windows within QElectroTech\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QETMainWindow::QETMainWindow (QWidget * widget = \fCnullptr\fP, Qt::WindowFlags flags = \fCQt::Widget\fP)"
+Constructor 
+.SS "QETMainWindow::~QETMainWindow ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "QAction * QETMainWindow::actionForMenu (QMenu * menu)\fC [protected]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the action returned when inserting \fImenu\fP 
+.RE
+.PP
+
+.SS "void QETMainWindow::checkToolbarsmenu ()\fC [slot]\fP"
+Check whether a sub menu dedicated to docks and toolbars can be inserted on top of the settings menu\&. 
+.SS "void QETMainWindow::dragEnterEvent (QDragEnterEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Accept or refuse drag'n drop events depending on the dropped mime type; especially, accepts only URLs to local files that we could open\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP le QDragEnterEvent correspondant au drag'n drop tente 
+.RE
+.PP
+
+.SS "void QETMainWindow::dropEvent (QDropEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Handle drops accepted on main windows; more specifically, open dropped files as long as they are handled by QElectrotech\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP the QDropEvent describing the current drag'n drop 
+.RE
+.PP
+
+.SS "bool QETMainWindow::event (QEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Handle the \fIe\fP event\&. 
+.SS "void QETMainWindow::firstActivation (QEvent *)\fC [protected]\fP, \fC [virtual]\fP"
+Base implementation of firstActivation (does nothing)\&. 
+.PP
+Reimplemented in \fBQETElementEditor\fP, and \fBQETTitleBlockTemplateEditor\fP\&.
+.SS "void QETMainWindow::initCommonActions ()\fC [protected]\fP"
+Initialize common actions\&. 
+.SS "void QETMainWindow::initCommonMenus ()\fC [protected]\fP"
+Initialize common menus\&. 
+.SS "void QETMainWindow::insertMenu (QMenu * before, QMenu * menu, bool customize = \fCtrue\fP)\fC [protected]\fP"
+Add \fImenu\fP before \fIbefore\fP\&. Unless \fIcustomize\fP is false, this method also enables some common settings on the inserted menu\&. 
+.SS "void QETMainWindow::toggleFullScreen ()\fC [slot]\fP"
+Toggle the window from/to full screen\&. 
+.SS "void QETMainWindow::updateFullScreenAction ()\fC [slot]\fP"
+Update the look of the full screen action according to the current state of the window\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QAction* QETMainWindow::about_qet_\fC [protected]\fP"
+
+.PP
+Launch the 'About QElectroTech' dialog\&. 
+.SS "QAction* QETMainWindow::about_qt_\fC [protected]\fP"
+
+.PP
+launch the 'About Qt' dialog 
+.SS "QAction* QETMainWindow::configure_action_\fC [protected]\fP"
+
+.PP
+Launch the QElectroTech configuration dialog\&. 
+.SS "QMenu* QETMainWindow::display_toolbars_\fC [protected]\fP"
+
+.PP
+Show/hide toolbars/docks\&. 
+.SS "QAction* QETMainWindow::donate_\fC [protected]\fP"
+
+.PP
+Launch browser to donate link\&. 
+.SS "bool QETMainWindow::first_activation_\fC [protected]\fP"
+
+.PP
+Used to detect whether the window is activated for the first time\&. 
+.SS "QAction* QETMainWindow::fullscreen_action_\fC [protected]\fP"
+
+.PP
+Toggle full screen\&. 
+.SS "QMenu* QETMainWindow::help_menu_\fC [protected]\fP"
+
+.PP
+Help menu\&. 
+.SS "QAction* QETMainWindow::manual_online_\fC [protected]\fP"
+
+.PP
+Launch browser on QElectroTech online manual\&. 
+.SS "QHash<QMenu *, QAction *> QETMainWindow::menu_actions_\fC [protected]\fP"
+
+.PP
+Store actions retrieved when inserting menus\&. 
+.SS "QMenu* QETMainWindow::settings_menu_\fC [protected]\fP"
+
+.PP
+Settings menu\&. 
+.SS "QAction* QETMainWindow::upgrade_\fC [protected]\fP"
+
+.PP
+Launch browser on QElectroTech Windows Nightly builds\&. 
+.SS "QAction* QETMainWindow::upgrade_M\fC [protected]\fP"
+
+.PP
+Launch browser on QElectroTech MAC_OS_X builds\&. 
+.SS "QAction* QETMainWindow::whatsthis_action_\fC [protected]\fP"
+
+.PP
+Toggle 'What's this' mode\&. 
+.SS "QAction* QETMainWindow::youtube_\fC [protected]\fP"
+
+.PP
+Launch browser on QElectroTech Youtube channel\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,666 @@
+.TH "PartDynamicTextField" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PartDynamicTextField \- The \fBPartDynamicTextField\fP class This class represents an editable dynamic text field which may be used to compose the drawing of an electrical element within the element editor\&. The field will remain editable once the element is added onto a diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <partdynamictextfield\&.h>\fP
+.PP
+Inherits QGraphicsTextItem, and \fBCustomElementPart\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1110 }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBtaggChanged\fP (QString tagg)"
+.br
+.ti -1c
+.RI "void \fBtextChanged\fP (QString \fBtext\fP)"
+.br
+.ti -1c
+.RI "void \fBtextFromChanged\fP (\fBDynamicElementTextItem::TextFrom\fP text_from)"
+.br
+.ti -1c
+.RI "void \fBinfoNameChanged\fP (QString info)"
+.br
+.ti -1c
+.RI "void \fBcompositeTextChanged\fP (QString \fBtext\fP)"
+.br
+.ti -1c
+.RI "void \fBcolorChanged\fP (QColor \fBcolor\fP)"
+.br
+.ti -1c
+.RI "void \fBframeChanged\fP (bool \fBframe\fP)"
+.br
+.ti -1c
+.RI "void \fBtextWidthChanged\fP (qreal width)"
+.br
+.ti -1c
+.RI "void \fBalignmentChanged\fP (Qt::Alignment \fBalignment\fP)"
+.br
+.ti -1c
+.RI "void \fBfontChanged\fP (QFont \fBfont\fP)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetProperty\fP (const char *\fBname\fP, const QVariant &value) override"
+.br
+.RI "PROPERTY\&. "
+.ti -1c
+.RI "QVariant \fBproperty\fP (const char *\fBname\fP) const override"
+.br
+.ti -1c
+.RI "\fBPartDynamicTextField\fP (\fBQETElementEditor\fP *editor, QGraphicsItem *parent=nullptr)"
+.br
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "QString \fBname\fP () const override"
+.br
+.ti -1c
+.RI "QString \fBxmlName\fP () const override"
+.br
+.ti -1c
+.RI "bool \fBisUseless\fP () const override"
+.br
+.ti -1c
+.RI "QRectF \fBsceneGeometricRect\fP () const override"
+.br
+.ti -1c
+.RI "void \fBstartUserTransformation\fP (const QRectF &initial_selection_rect) override"
+.br
+.RI "\fBPartDynamicTextField::startUserTransformation\fP\&. "
+.ti -1c
+.RI "void \fBhandleUserTransformation\fP (const QRectF &initial_selection_rect, const QRectF &new_selection_rect) override"
+.br
+.RI "\fBPartDynamicTextField::handleUserTransformation\fP\&. "
+.ti -1c
+.RI "const QDomElement \fBtoXml\fP (QDomDocument &dom_doc) const override"
+.br
+.RI "\fBPartDynamicTextField::toXml\fP\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &dom_elmt) override"
+.br
+.RI "\fBPartDynamicTextField::fromXml\fP\&. "
+.ti -1c
+.RI "void \fBfromTextFieldXml\fP (const QDomElement &dom_element)"
+.br
+.RI "\fBPartDynamicTextField::fromTextFieldXml\fP Setup this text from the xml definition of a text field (The xml tagg of a text field is 'input');\&. "
+.ti -1c
+.RI "\fBDynamicElementTextItem::TextFrom\fP \fBtextFrom\fP () const"
+.br
+.RI "\fBPartDynamicTextField::textFrom\fP\&. "
+.ti -1c
+.RI "void \fBsetTextFrom\fP (\fBDynamicElementTextItem::TextFrom\fP text_from)"
+.br
+.RI "\fBPartDynamicTextField::setTextFrom\fP Set the final text is created from\&. "
+.ti -1c
+.RI "QString \fBtext\fP () const"
+.br
+.RI "\fBPartDynamicTextField::text\fP\&. "
+.ti -1c
+.RI "void \fBsetText\fP (const QString &\fBtext\fP)"
+.br
+.RI "\fBPartDynamicTextField::setText\fP Set the text of this text\&. "
+.ti -1c
+.RI "void \fBsetInfoName\fP (const QString &info_name)"
+.br
+.ti -1c
+.RI "QString \fBinfoName\fP () const"
+.br
+.RI "\fBPartDynamicTextField::infoName\fP\&. "
+.ti -1c
+.RI "void \fBsetCompositeText\fP (const QString &\fBtext\fP)"
+.br
+.RI "\fBPartDynamicTextField::setCompositeText\fP Set the composite text of this text item to text\&. "
+.ti -1c
+.RI "QString \fBcompositeText\fP () const"
+.br
+.RI "\fBPartDynamicTextField::compositeText\fP\&. "
+.ti -1c
+.RI "void \fBsetColor\fP (const QColor &\fBcolor\fP)"
+.br
+.RI "\fBPartDynamicTextField::setColor\fP\&. "
+.ti -1c
+.RI "QColor \fBcolor\fP () const"
+.br
+.RI "\fBPartDynamicTextField::color\fP\&. "
+.ti -1c
+.RI "void \fBsetFrame\fP (bool \fBframe\fP)"
+.br
+.ti -1c
+.RI "bool \fBframe\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetTextWidth\fP (qreal width)"
+.br
+.ti -1c
+.RI "void \fBsetPlainText\fP (const QString &\fBtext\fP)"
+.br
+.ti -1c
+.RI "void \fBsetAlignment\fP (Qt::Alignment \fBalignment\fP)"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBalignment\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetFont\fP (const QFont &\fBfont\fP)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBxmlTaggName\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBPartDynamicTextField::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBPartDynamicTextField::mousePressEvent\fP\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBPartDynamicTextField::mouseReleaseEvent\fP\&. "
+.ti -1c
+.RI "QVariant \fBitemChange\fP (GraphicsItemChange change, const QVariant &value) override"
+.br
+.RI "\fBPartDynamicTextField::itemChange\fP\&. "
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "QString \fBtext\fP"
+.br
+.ti -1c
+.RI "\fBDynamicElementTextItem::TextFrom\fP \fBtextFrom\fP"
+.br
+.ti -1c
+.RI "QString \fBinfoName\fP"
+.br
+.ti -1c
+.RI "QString \fBcompositeText\fP"
+.br
+.ti -1c
+.RI "QColor \fBcolor\fP"
+.br
+.ti -1c
+.RI "bool \fBframe\fP"
+.br
+.ti -1c
+.RI "qreal \fBtextWidth\fP"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBalignment\fP"
+.br
+.ti -1c
+.RI "QFont \fBfont\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBelementInfoChanged\fP ()"
+.br
+.RI "\fBPartDynamicTextField::elementInfoChanged\fP Used to up to date this text field, when the element information (see elementScene) changed\&. "
+.ti -1c
+.RI "void \fBprepareAlignment\fP ()"
+.br
+.ti -1c
+.RI "void \fBfinishAlignment\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointF \fBm_origine_pos\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_saved_point\fP"
+.br
+.ti -1c
+.RI "QString \fBm_text\fP"
+.br
+.ti -1c
+.RI "QString \fBm_info_name\fP"
+.br
+.ti -1c
+.RI "QString \fBm_composite_text\fP"
+.br
+.ti -1c
+.RI "\fBDynamicElementTextItem::TextFrom\fP \fBm_text_from\fP = \fBDynamicElementTextItem::UserText\fP"
+.br
+.ti -1c
+.RI "QUuid \fBm_uuid\fP"
+.br
+.ti -1c
+.RI "bool \fBm_frame\fP = false"
+.br
+.ti -1c
+.RI "bool \fBm_first_add\fP = true"
+.br
+.ti -1c
+.RI "bool \fBm_block_alignment\fP = false"
+.br
+.ti -1c
+.RI "qreal \fBm_text_width\fP = \-1"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBm_alignment\fP = Qt::AlignTop|Qt::AlignLeft"
+.br
+.ti -1c
+.RI "QRectF \fBm_alignment_rect\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBPartDynamicTextField\fP class This class represents an editable dynamic text field which may be used to compose the drawing of an electrical element within the element editor\&. The field will remain editable once the element is added onto a diagram\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PartDynamicTextField::PartDynamicTextField (\fBQETElementEditor\fP * editor, QGraphicsItem * parent = \fCnullptr\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "Qt::Alignment PartDynamicTextField::alignment () const"
+
+.SS "void PartDynamicTextField::alignmentChanged (Qt::Alignment alignment)\fC [signal]\fP"
+
+.SS "QColor PartDynamicTextField::color () const"
+
+.PP
+\fBPartDynamicTextField::color\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The color of this text 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::colorChanged (QColor color)\fC [signal]\fP"
+
+.SS "QString PartDynamicTextField::compositeText () const"
+
+.PP
+\fBPartDynamicTextField::compositeText\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the composite text of this text 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::compositeTextChanged (QString text)\fC [signal]\fP"
+
+.SS "void PartDynamicTextField::elementInfoChanged ()\fC [private]\fP"
+
+.PP
+\fBPartDynamicTextField::elementInfoChanged\fP Used to up to date this text field, when the element information (see elementScene) changed\&. 
+.SS "void PartDynamicTextField::finishAlignment ()\fC [private]\fP"
+
+.SS "void PartDynamicTextField::fontChanged (QFont font)\fC [signal]\fP"
+
+.SS "bool PartDynamicTextField::frame () const"
+
+.SS "void PartDynamicTextField::frameChanged (bool frame)\fC [signal]\fP"
+
+.SS "void PartDynamicTextField::fromTextFieldXml (const QDomElement & dom_element)"
+
+.PP
+\fBPartDynamicTextField::fromTextFieldXml\fP Setup this text from the xml definition of a text field (The xml tagg of a text field is 'input');\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_element\fP 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::fromXml (const QDomElement & dom_elmt)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartDynamicTextField::fromXml\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_elmt\fP 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartDynamicTextField::handleUserTransformation (const QRectF & initial_selection_rect, const QRectF & new_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartDynamicTextField::handleUserTransformation\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_selection_rect\fP 
+.br
+\fInew_selection_rect\fP Handle the user-induced transformation from initial_selection_rect to new_selection_rect 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "QString PartDynamicTextField::infoName () const"
+
+.PP
+\fBPartDynamicTextField::infoName\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the info name of this text 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::infoNameChanged (QString info)\fC [signal]\fP"
+
+.SS "bool PartDynamicTextField::isUseless () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+whether the primitive appears to be useless (e\&.g\&. 0-length line) Typically, useless primitives are discarded when saving the element\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "QVariant PartDynamicTextField::itemChange (GraphicsItemChange change, const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartDynamicTextField::itemChange\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchange\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void PartDynamicTextField::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartDynamicTextField::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartDynamicTextField::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBPartDynamicTextField::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "QString PartDynamicTextField::name () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name of the primitive 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartDynamicTextField::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void PartDynamicTextField::prepareAlignment ()\fC [private]\fP"
+
+.SS "QVariant PartDynamicTextField::property (const char * name) const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+Get the current value of a specific primitive property 
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "QRectF PartDynamicTextField::sceneGeometricRect () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartDynamicTextField::setAlignment (Qt::Alignment alignment)"
+
+.SS "void PartDynamicTextField::setColor (const QColor & color)"
+
+.PP
+\fBPartDynamicTextField::setColor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcolor\fP set text color to color 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::setCompositeText (const QString & text)"
+
+.PP
+\fBPartDynamicTextField::setCompositeText\fP Set the composite text of this text item to text\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::setFont (const QFont & font)"
+
+.SS "void PartDynamicTextField::setFrame (bool frame)"
+
+.SS "void PartDynamicTextField::setInfoName (const QString & info_name)"
+
+.SS "void PartDynamicTextField::setPlainText (const QString & text)"
+
+.SS "void PartDynamicTextField::setProperty (const char * name, const QVariant & value)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+PROPERTY\&. 
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartDynamicTextField::setText (const QString & text)"
+
+.PP
+\fBPartDynamicTextField::setText\fP Set the text of this text\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::setTextFrom (\fBDynamicElementTextItem::TextFrom\fP text_from)"
+
+.PP
+\fBPartDynamicTextField::setTextFrom\fP Set the final text is created from\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext_from\fP 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::setTextWidth (qreal width)"
+
+.SS "void PartDynamicTextField::startUserTransformation (const QRectF & initial_selection_rect)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartDynamicTextField::startUserTransformation\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinitial_selection_rect\fP Start the user-induced transformation, provided this primitive is contained within the initial_selection_rect bounding rectangle\&. 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "void PartDynamicTextField::taggChanged (QString tagg)\fC [signal]\fP"
+
+.SS "QString PartDynamicTextField::text () const"
+
+.PP
+\fBPartDynamicTextField::text\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the text of this text 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::textChanged (QString text)\fC [signal]\fP"
+
+.SS "\fBDynamicElementTextItem::TextFrom\fP PartDynamicTextField::textFrom () const"
+
+.PP
+\fBPartDynamicTextField::textFrom\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+what the final text is created from\&. 
+.RE
+.PP
+
+.SS "void PartDynamicTextField::textFromChanged (\fBDynamicElementTextItem::TextFrom\fP text_from)\fC [signal]\fP"
+
+.SS "void PartDynamicTextField::textWidthChanged (qreal width)\fC [signal]\fP"
+
+.SS "const QDomElement PartDynamicTextField::toXml (QDomDocument & dom_doc) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBPartDynamicTextField::toXml\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom_doc\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "int PartDynamicTextField::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "QString PartDynamicTextField::xmlName () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the name that will be used as XML tag when exporting the primitive 
+.RE
+.PP
+
+.PP
+Implements \fBCustomElementPart\fP\&.
+.SS "static QString PartDynamicTextField::xmlTaggName ()\fC [inline]\fP, \fC [static]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Qt::Alignment PartDynamicTextField::m_alignment = Qt::AlignTop|Qt::AlignLeft\fC [private]\fP"
+
+.SS "QRectF PartDynamicTextField::m_alignment_rect\fC [private]\fP"
+
+.SS "bool PartDynamicTextField::m_block_alignment = false\fC [private]\fP"
+
+.SS "QString PartDynamicTextField::m_composite_text\fC [private]\fP"
+
+.SS "bool PartDynamicTextField::m_first_add = true\fC [private]\fP"
+
+.SS "bool PartDynamicTextField::m_frame = false\fC [private]\fP"
+
+.SS "QString PartDynamicTextField::m_info_name\fC [private]\fP"
+
+.SS "QPointF PartDynamicTextField::m_origine_pos\fC [private]\fP"
+
+.SS "QPointF PartDynamicTextField::m_saved_point\fC [private]\fP"
+
+.SS "QString PartDynamicTextField::m_text\fC [private]\fP"
+
+.SS "\fBDynamicElementTextItem::TextFrom\fP PartDynamicTextField::m_text_from = \fBDynamicElementTextItem::UserText\fP\fC [private]\fP"
+
+.SS "qreal PartDynamicTextField::m_text_width = \-1\fC [private]\fP"
+
+.SS "QUuid PartDynamicTextField::m_uuid\fC [private]\fP"
+
+.SH "Property Documentation"
+.PP 
+.SS "Qt::Alignment PartDynamicTextField::alignment\fC [read]\fP, \fC [write]\fP"
+
+.SS "QColor PartDynamicTextField::color\fC [read]\fP, \fC [write]\fP"
+
+.SS "QString PartDynamicTextField::compositeText\fC [read]\fP, \fC [write]\fP"
+
+.SS "QFont PartDynamicTextField::font\fC [read]\fP, \fC [write]\fP"
+
+.SS "bool PartDynamicTextField::frame\fC [read]\fP, \fC [write]\fP"
+
+.SS "QString PartDynamicTextField::infoName\fC [read]\fP, \fC [write]\fP"
+
+.SS "QString PartDynamicTextField::text\fC [read]\fP, \fC [write]\fP"
+
+.SS "\fBDynamicElementTextItem::TextFrom\fP PartDynamicTextField::textFrom\fC [read]\fP, \fC [write]\fP"
+
+.SS "qreal PartDynamicTextField::textWidth\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

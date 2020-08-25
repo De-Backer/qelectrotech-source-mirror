@@ -1,0 +1,156 @@
+.TH "qdesigner_internal::RichTextEditorToolBar" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+qdesigner_internal::RichTextEditorToolBar
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits QToolBar\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateActions\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRichTextEditorToolBar\fP (\fBRichTextEditor\fP *editor, QWidget *parent=nullptr)"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBalignmentActionTriggered\fP (QAction *action)"
+.br
+.ti -1c
+.RI "void \fBsizeInputActivated\fP (const QString &size)"
+.br
+.ti -1c
+.RI "void \fBcolorChanged\fP (const QColor &color)"
+.br
+.ti -1c
+.RI "void \fBsetVAlignSuper\fP (bool super)"
+.br
+.ti -1c
+.RI "void \fBsetVAlignSub\fP (bool sub)"
+.br
+.ti -1c
+.RI "void \fBinsertLink\fP ()"
+.br
+.ti -1c
+.RI "void \fBinsertImage\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QAction * \fBm_bold_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_italic_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_underline_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_valign_sup_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_valign_sub_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_align_left_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_align_center_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_align_right_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_align_justify_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_link_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_image_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_simplify_richtext_action\fP"
+.br
+.ti -1c
+.RI "\fBColorAction\fP * \fBm_color_action\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBm_font_size_input\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBRichTextEditor\fP > \fBm_editor\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "qdesigner_internal::RichTextEditorToolBar::RichTextEditorToolBar (\fBRichTextEditor\fP * editor, QWidget * parent = \fCnullptr\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void qdesigner_internal::RichTextEditorToolBar::alignmentActionTriggered (QAction * action)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditorToolBar::colorChanged (const QColor & color)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditorToolBar::insertImage ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditorToolBar::insertLink ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditorToolBar::setVAlignSub (bool sub)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditorToolBar::setVAlignSuper (bool super)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditorToolBar::sizeInputActivated (const QString & size)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void qdesigner_internal::RichTextEditorToolBar::updateActions ()\fC [slot]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_align_center_action\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_align_justify_action\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_align_left_action\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_align_right_action\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_bold_action\fC [private]\fP"
+
+.SS "\fBColorAction\fP* qdesigner_internal::RichTextEditorToolBar::m_color_action\fC [private]\fP"
+
+.SS "QPointer<\fBRichTextEditor\fP> qdesigner_internal::RichTextEditorToolBar::m_editor\fC [private]\fP"
+
+.SS "QComboBox* qdesigner_internal::RichTextEditorToolBar::m_font_size_input\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_image_action\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_italic_action\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_link_action\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_simplify_richtext_action\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_underline_action\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_valign_sub_action\fC [private]\fP"
+
+.SS "QAction* qdesigner_internal::RichTextEditorToolBar::m_valign_sup_action\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

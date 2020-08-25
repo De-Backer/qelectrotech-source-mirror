@@ -1,0 +1,176 @@
+.TH "TitleBlockTemplateCellsSet" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateCellsSet
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatecellsset\&.h>\fP
+.PP
+Inherits QList< TitleBlockTemplateVisualCell * >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateCellsSet\fP (const \fBTitleBlockTemplateView\fP *)"
+.br
+.ti -1c
+.RI "virtual \fB~TitleBlockTemplateCellsSet\fP ()"
+.br
+.ti -1c
+.RI "QPainterPath \fBpainterPath\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisRectangle\fP () const"
+.br
+.ti -1c
+.RI "bool \fBallCellsAreSelected\fP () const"
+.br
+.ti -1c
+.RI "bool \fBhasExternalSpan\fP () const"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateVisualCell\fP * \fBtopLeftCell\fP () const"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateVisualCell\fP * \fBbottomRightCell\fP () const"
+.br
+.ti -1c
+.RI "QRectF \fBmergeAreaRect\fP () const"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateCellsSet\fP \fBmergeArea\fP (const QRectF &=QRectF()) const"
+.br
+.ti -1c
+.RI "QSet< \fBTitleBlockCell\fP * > \fBcells\fP (bool=true) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBTitleBlockTemplateView\fP * \fBparent_view_\fP"
+.br
+.RI "the view displaying the cells "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a set of cells (selected or not) when editing a title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateCellsSet::TitleBlockTemplateCellsSet (const \fBTitleBlockTemplateView\fP * parent_view)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_view\fP View this set of cells are rattached to 
+.RE
+.PP
+
+.SS "TitleBlockTemplateCellsSet::~TitleBlockTemplateCellsSet ()\fC [virtual]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool TitleBlockTemplateCellsSet::allCellsAreSelected () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if all cells within this set are selected 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplateVisualCell\fP * TitleBlockTemplateCellsSet::bottomRightCell () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the bottom right cell within this set, or 0 if this set is empty 
+.RE
+.PP
+
+.SS "QSet< \fBTitleBlockCell\fP * > TitleBlockTemplateCellsSet::cells (bool include_spanned = \fCtrue\fP) const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the list of cells rendered by the current selection 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIinclude_spanned\fP whether to include spanned cells or not 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplateCellsSet::hasExternalSpan () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if this set includes at least one cell which is spanned by a cell not present in this set, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplateCellsSet::isRectangle () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if the cells within this set are composing a rectangle shape, false otherwise\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplateCellsSet\fP TitleBlockTemplateCellsSet::mergeArea (const QRectF & rect = \fCQRectF()\fP) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIrect\fP (Optional) The merge area to be considered; if a null QRectF is provided, this method will use \fBmergeAreaRect()\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the cells contained in the merge area of this cells set 
+.RE
+.PP
+
+.SS "QRectF TitleBlockTemplateCellsSet::mergeAreaRect () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the merge area, i\&.e\&. the rectangle delimited by the top left cell and the bottom right cell within this cells set\&. 
+.RE
+.PP
+
+.SS "QPainterPath TitleBlockTemplateCellsSet::painterPath () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+a QPainterPath composed of the rectangles from cells within this set 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplateVisualCell\fP * TitleBlockTemplateCellsSet::topLeftCell () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the top left cell within this set, or 0 if this set is empty 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "const \fBTitleBlockTemplateView\fP* TitleBlockTemplateCellsSet::parent_view_"
+
+.PP
+the view displaying the cells 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

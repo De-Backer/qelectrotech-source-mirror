@@ -1,0 +1,501 @@
+.TH "TitleBlockTemplateCellWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateCellWidget \- The \fBTitleBlockTemplateCellWidget\fP class This class implements an edition widget for cells that compose a title block template\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatecellwidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateFormType\fP (int)"
+.br
+.ti -1c
+.RI "void \fBedit\fP (\fBTitleBlockCell\fP *)"
+.br
+.ti -1c
+.RI "void \fBeditType\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditName\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditLabelDisplayed\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditLabel\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditValue\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditAlignment\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditFontSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditAdjust\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditLogo\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateLogosComboBox\fP (const \fBTitleBlockTemplate\fP *)"
+.br
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool)"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBlogoEditionRequested\fP ()"
+.br
+.ti -1c
+.RI "void \fBcellModified\fP (\fBModifyTitleBlockCellCommand\fP *) const"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateCellWidget\fP (\fBTitleBlockTemplate\fP *=nullptr, QWidget *=nullptr)"
+.br
+.RI "\fBTitleBlockTemplateCellWidget::TitleBlockTemplateCellWidget\fP Constructor\&. "
+.ti -1c
+.RI "\fB~TitleBlockTemplateCellWidget\fP () override"
+.br
+.ti -1c
+.RI "int \fBhorizontalAlignment\fP () const"
+.br
+.ti -1c
+.RI "int \fBverticalAlignment\fP () const"
+.br
+.ti -1c
+.RI "int \fBalignment\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisReadOnly\fP () const"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBeditTranslatableValue\fP (\fBNamesList\fP &, const QString &, const QString &) const"
+.br
+.ti -1c
+.RI "void \fBemitModification\fP (const QString &, const QVariant &) const"
+.br
+.ti -1c
+.RI "QString \fBdefaultVariablesString\fP () const"
+.br
+.ti -1c
+.RI "QString \fBlabelValueInformationString\fP () const"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateCellWidget\fP (const \fBTitleBlockTemplateCellWidget\fP &)"
+.br
+.ti -1c
+.RI "void \fBinitWidgets\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBread_only_\fP"
+.br
+.RI "is the template read-only? "
+.ti -1c
+.RI "QLabel * \fBcell_type_label_\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBcell_type_input_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBempty_label_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBlogo_label_\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBlogo_input_\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBadd_logo_input_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBname_label_\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBname_input_\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBlabel_checkbox_\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBlabel_input_\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBlabel_edit_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBvalue_label_\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBvalue_input_\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBvalue_edit_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBalign_label_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBhoriz_align_label_\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBhoriz_align_input_\fP"
+.br
+.ti -1c
+.RI "QHash< int, int > \fBhoriz_align_indexes_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBvert_align_label_\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBvert_align_input_\fP"
+.br
+.ti -1c
+.RI "QHash< int, int > \fBvert_align_indexes_\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBfont_size_label_\fP"
+.br
+.ti -1c
+.RI "QSpinBox * \fBfont_size_input_\fP"
+.br
+.ti -1c
+.RI "QCheckBox * \fBfont_adjust_input_\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBcell_editor_layout_\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBcell_editor_type_and_name_layout_\fP"
+.br
+.ti -1c
+.RI "QGridLayout * \fBcell_editor_text_layout_\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBcell_editor_image_layout_\fP"
+.br
+.ti -1c
+.RI "\fBTitleBlockCell\fP * \fBedited_cell_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBTitleBlockTemplateCellWidget\fP class This class implements an edition widget for cells that compose a title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateCellWidget::TitleBlockTemplateCellWidget (\fBTitleBlockTemplate\fP * parent_template = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBTitleBlockTemplateCellWidget::TitleBlockTemplateCellWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_template\fP : \fBTitleBlockTemplate\fP 
+.br
+\fIparent\fP : QWidget 
+.RE
+.PP
+
+.SS "TitleBlockTemplateCellWidget::~TitleBlockTemplateCellWidget ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockTemplateCellWidget::TitleBlockTemplateCellWidget (const \fBTitleBlockTemplateCellWidget\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int TitleBlockTemplateCellWidget::alignment () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the currently selected alignment\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::cellModified (\fBModifyTitleBlockCellCommand\fP *) const\fC [signal]\fP"
+
+.SS "QString TitleBlockTemplateCellWidget::defaultVariablesString () const\fC [protected]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+a string describing the various variables provided by default by the application\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::edit (\fBTitleBlockCell\fP * cell)\fC [slot]\fP"
+Set the title block cell to be edited\&. The cell pointer is stored by this class; however, modifications made by the user are packaged as \fBModifyTitleBlockCellCommand\fP objects and emitted through the \fBcellModified()\fP signal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP Title block cell to be edited 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::editAdjust ()\fC [slot]\fP"
+Emit a modification command stating whether the text should be adjusted if needed\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::editAlignment ()\fC [slot]\fP"
+Emit an alignment modification command\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::editFontSize ()\fC [slot]\fP"
+Emit a font size modification command\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::editLabel ()\fC [slot]\fP"
+Emit a label modification command\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::editLabelDisplayed ()\fC [slot]\fP"
+Emit a modification command stating whether the label should be displayed or not\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::editLogo ()\fC [slot]\fP"
+Emit a logo modification command\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::editName ()\fC [slot]\fP"
+Emit a name modification command\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::editTranslatableValue (\fBNamesList\fP & names, const QString & attribute, const QString & title) const\fC [protected]\fP"
+Allow the user to edit a translatable string (e\&.g\&. value or label)\&. If the user modified the string, this method emits a \fBModifyTitleBlockCellCommand\fP object through the \fBcellModified()\fP signal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInames\fP Translatable string to be edited 
+.br
+\fIattribute\fP Name of the edited cell attribute 
+.br
+\fItitle\fP Title of the dialog window 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::editType ()\fC [slot]\fP"
+Emit a type modification command\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::editValue ()\fC [slot]\fP"
+Emit a value modification command\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::emitModification (const QString & attribute, const QVariant & new_value) const\fC [protected]\fP"
+Create a \fBModifyTitleBlockCellCommand\fP object to change \fIattribute\fP to \fInew_value\fP\&. This object is then emitted through the \fBcellModified()\fP signal\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIattribute\fP Modified cell attribute 
+.br
+\fInew_value\fP New value for the modified cell attribute 
+.RE
+.PP
+
+.SS "int TitleBlockTemplateCellWidget::horizontalAlignment () const"
+Emit a horizontal alignment modification command\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::initWidgets ()\fC [private]\fP"
+Initialize layout and widgets\&. 
+.SS "bool TitleBlockTemplateCellWidget::isReadOnly () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+whether this edition widget is read only 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplateCellWidget::labelValueInformationString () const\fC [protected]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+a string describing what the user may enter as cell label / value\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::logoEditionRequested ()\fC [signal]\fP"
+
+.SS "void TitleBlockTemplateCellWidget::setReadOnly (bool read_only)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIread_only\fP whether this edition widget should be read only 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateCellWidget::updateFormType (int cell_type)\fC [slot]\fP"
+Shows or hides various widgets depending on the selected cell type 
+.SS "void TitleBlockTemplateCellWidget::updateLogosComboBox (const \fBTitleBlockTemplate\fP * parent_template)\fC [slot]\fP"
+Updates the list of available logos 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent_template\fP The title block template which contains the currently edited cell 
+.RE
+.PP
+
+.SS "int TitleBlockTemplateCellWidget::verticalAlignment () const"
+Emit a vertical alignment modification command\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBModifyTitleBlockCellCommand\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QPushButton* TitleBlockTemplateCellWidget::add_logo_input_\fC [private]\fP"
+
+.SS "QLabel* TitleBlockTemplateCellWidget::align_label_\fC [private]\fP"
+
+.SS "QHBoxLayout* TitleBlockTemplateCellWidget::cell_editor_image_layout_\fC [private]\fP"
+
+.SS "QVBoxLayout* TitleBlockTemplateCellWidget::cell_editor_layout_\fC [private]\fP"
+
+.SS "QGridLayout* TitleBlockTemplateCellWidget::cell_editor_text_layout_\fC [private]\fP"
+
+.SS "QHBoxLayout* TitleBlockTemplateCellWidget::cell_editor_type_and_name_layout_\fC [private]\fP"
+
+.SS "QComboBox* TitleBlockTemplateCellWidget::cell_type_input_\fC [private]\fP"
+
+.SS "QLabel* TitleBlockTemplateCellWidget::cell_type_label_\fC [private]\fP"
+
+.SS "\fBTitleBlockCell\fP* TitleBlockTemplateCellWidget::edited_cell_\fC [private]\fP"
+
+.SS "QLabel* TitleBlockTemplateCellWidget::empty_label_\fC [private]\fP"
+
+.SS "QCheckBox* TitleBlockTemplateCellWidget::font_adjust_input_\fC [private]\fP"
+
+.SS "QSpinBox* TitleBlockTemplateCellWidget::font_size_input_\fC [private]\fP"
+
+.SS "QLabel* TitleBlockTemplateCellWidget::font_size_label_\fC [private]\fP"
+
+.SS "QHash<int, int> TitleBlockTemplateCellWidget::horiz_align_indexes_\fC [private]\fP"
+
+.SS "QComboBox* TitleBlockTemplateCellWidget::horiz_align_input_\fC [private]\fP"
+
+.SS "QLabel* TitleBlockTemplateCellWidget::horiz_align_label_\fC [private]\fP"
+
+.SS "QCheckBox* TitleBlockTemplateCellWidget::label_checkbox_\fC [private]\fP"
+
+.SS "QPushButton* TitleBlockTemplateCellWidget::label_edit_\fC [private]\fP"
+
+.SS "QLineEdit* TitleBlockTemplateCellWidget::label_input_\fC [private]\fP"
+
+.SS "QComboBox* TitleBlockTemplateCellWidget::logo_input_\fC [private]\fP"
+
+.SS "QLabel* TitleBlockTemplateCellWidget::logo_label_\fC [private]\fP"
+
+.SS "QLineEdit* TitleBlockTemplateCellWidget::name_input_\fC [private]\fP"
+
+.SS "QLabel* TitleBlockTemplateCellWidget::name_label_\fC [private]\fP"
+
+.SS "bool TitleBlockTemplateCellWidget::read_only_\fC [private]\fP"
+
+.PP
+is the template read-only? 
+.SS "QPushButton* TitleBlockTemplateCellWidget::value_edit_\fC [private]\fP"
+
+.SS "QLineEdit* TitleBlockTemplateCellWidget::value_input_\fC [private]\fP"
+
+.SS "QLabel* TitleBlockTemplateCellWidget::value_label_\fC [private]\fP"
+
+.SS "QHash<int, int> TitleBlockTemplateCellWidget::vert_align_indexes_\fC [private]\fP"
+
+.SS "QComboBox* TitleBlockTemplateCellWidget::vert_align_input_\fC [private]\fP"
+
+.SS "QLabel* TitleBlockTemplateCellWidget::vert_align_label_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,1748 @@
+.TH "QETProject" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETProject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetproject\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBProjectState\fP { \fBOk\fP = 0, \fBFileOpenFailed\fP = 1, \fBXmlParsingFailed\fP = 2, \fBProjectParsingRunning\fP = 3, \fBProjectParsingFailed\fP = 4, \fBFileOpenDiscard\fP = 5 }"
+.br
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBaddNewDiagram\fP (int pos=\-1)"
+.br
+.RI "\fBQETProject::addNewDiagram\fP Add a new diagram in project at position pos\&. "
+.ti -1c
+.RI "void \fBremoveDiagram\fP (\fBDiagram\fP *)"
+.br
+.RI "\fBQETProject::removeDiagram\fP Remove diagram from project\&. "
+.ti -1c
+.RI "void \fBdiagramOrderChanged\fP (int, int)"
+.br
+.ti -1c
+.RI "void \fBsetModified\fP (bool)"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBprojectFilePathChanged\fP (\fBQETProject\fP *, const QString &)"
+.br
+.ti -1c
+.RI "void \fBprojectTitleChanged\fP (\fBQETProject\fP *, const QString &)"
+.br
+.ti -1c
+.RI "void \fBprojectInformationsChanged\fP (\fBQETProject\fP *)"
+.br
+.ti -1c
+.RI "void \fBdiagramAdded\fP (\fBQETProject\fP *, \fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBdiagramRemoved\fP (\fBQETProject\fP *, \fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "void \fBprojectModified\fP (\fBQETProject\fP *, bool)"
+.br
+.ti -1c
+.RI "void \fBprojectDiagramsOrderChanged\fP (\fBQETProject\fP *, int, int)"
+.br
+.ti -1c
+.RI "void \fBdiagramUsedTemplate\fP (\fBTitleBlockTemplatesCollection\fP *, const QString &)"
+.br
+.ti -1c
+.RI "void \fBreadOnlyChanged\fP (\fBQETProject\fP *, bool)"
+.br
+.ti -1c
+.RI "void \fBreportPropertiesChanged\fP (const QString &old_str, const QString &new_str)"
+.br
+.ti -1c
+.RI "void \fBXRefPropertiesChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddAutoNumDiagram\fP ()"
+.br
+.ti -1c
+.RI "void \fBelementAutoNumAdded\fP (QString name)"
+.br
+.ti -1c
+.RI "void \fBelementAutoNumRemoved\fP (QString name)"
+.br
+.ti -1c
+.RI "void \fBconductorAutoNumAdded\fP ()"
+.br
+.ti -1c
+.RI "void \fBconductorAutoNumRemoved\fP ()"
+.br
+.ti -1c
+.RI "void \fBfolioAutoNumAdded\fP ()"
+.br
+.ti -1c
+.RI "void \fBfolioAutoNumRemoved\fP ()"
+.br
+.ti -1c
+.RI "void \fBfolioAutoNumChanged\fP (QString)"
+.br
+.ti -1c
+.RI "void \fBdefaultTitleBlockPropertiesChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBconductorAutoNumChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP (QObject *parent=nullptr)"
+.br
+.RI "\fBQETProject::QETProject\fP Create a empty project\&. "
+.ti -1c
+.RI "\fBQETProject\fP (const QString &path, QObject *=nullptr)"
+.br
+.RI "\fBQETProject::QETProject\fP Construct a project from a \&.qet file\&. "
+.ti -1c
+.RI "\fBQETProject\fP (KAutoSaveFile *backup, QObject *parent=nullptr)"
+.br
+.RI "\fBQETProject::QETProject\fP\&. "
+.ti -1c
+.RI "\fB~QETProject\fP () override"
+.br
+.RI "\fBQETProject::~QETProject\fP Destructor\&. "
+.ti -1c
+.RI "\fBprojectDataBase\fP * \fBdataBase\fP ()"
+.br
+.RI "\fBQETProject::dataBase\fP\&. "
+.ti -1c
+.RI "QUuid \fBuuid\fP () const"
+.br
+.RI "\fBQETProject::uuid\fP\&. "
+.ti -1c
+.RI "\fBProjectState\fP \fBstate\fP () const"
+.br
+.ti -1c
+.RI "QList< \fBDiagram\fP * > \fBdiagrams\fP () const"
+.br
+.ti -1c
+.RI "int \fBfolioIndex\fP (const \fBDiagram\fP *) const"
+.br
+.ti -1c
+.RI "\fBXmlElementCollection\fP * \fBembeddedElementCollection\fP () const"
+.br
+.RI "QETProject::embeddedCollection\&. "
+.ti -1c
+.RI "\fBTitleBlockTemplatesProjectCollection\fP * \fBembeddedTitleBlockTemplatesCollection\fP ()"
+.br
+.ti -1c
+.RI "QString \fBfilePath\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFilePath\fP (const QString &)"
+.br
+.RI "\fBQETProject::setFilePath\fP Set the filepath of this project file Set a file path also create a backup file according to the path\&. If a previous path was set, the previous backup file is deleted and a new one is created according to the path\&. "
+.ti -1c
+.RI "QString \fBcurrentDir\fP () const"
+.br
+.ti -1c
+.RI "QString \fBpathNameTitle\fP () const"
+.br
+.ti -1c
+.RI "QString \fBtitle\fP () const"
+.br
+.ti -1c
+.RI "qreal \fBdeclaredQElectroTechVersion\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTitle\fP (const QString &)"
+.br
+.ti -1c
+.RI "\fBBorderProperties\fP \fBdefaultBorderProperties\fP () const"
+.br
+.RI "DEFAULT PROPERTIES\&. "
+.ti -1c
+.RI "void \fBsetDefaultBorderProperties\fP (const \fBBorderProperties\fP &)"
+.br
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBdefaultTitleBlockProperties\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDefaultTitleBlockProperties\fP (const \fBTitleBlockProperties\fP &)"
+.br
+.RI "\fBQETProject::setDefaultTitleBlockProperties\fP Specify the title block to be used at the creation of a new diagram for this project\&. "
+.ti -1c
+.RI "\fBConductorProperties\fP \fBdefaultConductorProperties\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDefaultConductorProperties\fP (const \fBConductorProperties\fP &)"
+.br
+.ti -1c
+.RI "QString \fBdefaultReportProperties\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDefaultReportProperties\fP (const QString &properties)"
+.br
+.ti -1c
+.RI "\fBXRefProperties\fP \fBdefaultXRefProperties\fP (const QString &type) const"
+.br
+.ti -1c
+.RI "QHash< QString, \fBXRefProperties\fP > \fBdefaultXRefProperties\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDefaultXRefProperties\fP (const QString &type, const \fBXRefProperties\fP &properties)"
+.br
+.ti -1c
+.RI "void \fBsetDefaultXRefProperties\fP (QHash< QString, \fBXRefProperties\fP > hash)"
+.br
+.ti -1c
+.RI "QHash< QString, \fBNumerotationContext\fP > \fBconductorAutoNum\fP () const"
+.br
+.RI "\fBQETProject::conductorAutoNum\fP\&. "
+.ti -1c
+.RI "QHash< QString, \fBNumerotationContext\fP > \fBelementAutoNum\fP () const"
+.br
+.RI "\fBQETProject::elementAutoNum\fP\&. "
+.ti -1c
+.RI "QHash< QString, \fBNumerotationContext\fP > \fBfolioAutoNum\fP () const"
+.br
+.RI "\fBQETProject::folioAutoNum\fP\&. "
+.ti -1c
+.RI "void \fBaddConductorAutoNum\fP (const QString &key, const \fBNumerotationContext\fP &context)"
+.br
+.RI "\fBQETProject::addConductorAutoNum\fP Add a new conductor numerotation context\&. If key already exist, replace old context by the new context\&. "
+.ti -1c
+.RI "void \fBaddElementAutoNum\fP (const QString &key, const \fBNumerotationContext\fP &context)"
+.br
+.RI "\fBQETProject::addElementAutoNum\fP Add a new element numerotation context\&. If key already exist, replace old context by the new context\&. "
+.ti -1c
+.RI "void \fBaddFolioAutoNum\fP (const QString &key, const \fBNumerotationContext\fP &context)"
+.br
+.RI "\fBQETProject::addFolioAutoNum\fP Add a new folio numerotation context\&. If key already exist, replace old context by the new context\&. "
+.ti -1c
+.RI "void \fBremoveConductorAutoNum\fP (const QString &key)"
+.br
+.RI "\fBQETProject::removeConductorAutoNum\fP Remove \fBConductor\fP Numerotation Context stored with key\&. "
+.ti -1c
+.RI "void \fBremoveElementAutoNum\fP (const QString &key)"
+.br
+.RI "QETProject::removeElementAutonum Remove \fBElement\fP Numerotation Context stored with key\&. "
+.ti -1c
+.RI "void \fBremoveFolioAutoNum\fP (const QString &key)"
+.br
+.RI "QETProject::removeFolioAutonum Remove Folio Numerotation Context stored with key\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBconductorAutoNum\fP (const QString &key) const"
+.br
+.RI "\fBQETProject::conductorAutoNum\fP Return conductor numerotation context stored with key\&. If key is not found, return an empty numerotation context\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBfolioAutoNum\fP (const QString &key) const"
+.br
+.RI "\fBQETProject::folioAutoNum\fP Return folio numerotation context stored with key\&. If key is not found, return an empty numerotation context\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBelementAutoNum\fP (const QString &key)"
+.br
+.RI "\fBQETProject::elementAutoNum\fP Return element numerotation context stored with key\&. If key is not found, return an empty numerotation context\&. "
+.ti -1c
+.RI "QString \fBconductorAutoNumFormula\fP (const QString &key) const"
+.br
+.RI "\fBQETProject::conductorAutoNumFormula\fP\&. "
+.ti -1c
+.RI "QString \fBconductorCurrentAutoNum\fP () const"
+.br
+.RI "\fBQETProject::conductorCurrentAutoNum\fP\&. "
+.ti -1c
+.RI "void \fBsetCurrentConductorAutoNum\fP (QString autoNum)"
+.br
+.RI "\fBQETProject::setCurrentConductorAutoNum\fP\&. "
+.ti -1c
+.RI "QString \fBelementAutoNumFormula\fP (const QString &key) const"
+.br
+.RI "\fBQETProject::elementAutoNumFormula\fP\&. "
+.ti -1c
+.RI "QString \fBelementAutoNumCurrentFormula\fP () const"
+.br
+.RI "\fBQETProject::elementAutoNumCurrentFormula\fP\&. "
+.ti -1c
+.RI "QString \fBelementCurrentAutoNum\fP () const"
+.br
+.RI "\fBQETProject::elementCurrentAutoNum\fP\&. "
+.ti -1c
+.RI "void \fBsetCurrrentElementAutonum\fP (QString autoNum)"
+.br
+.RI "\fBQETProject::setCurrrentElementAutonum\fP\&. "
+.ti -1c
+.RI "void \fBfreezeExistentElementLabel\fP (bool freeze, int from, int to)"
+.br
+.RI "\fBQETProject::freezeExistentElementLabel\fP Freeze Existent Elements in the selected folios\&. "
+.ti -1c
+.RI "void \fBfreezeNewElementLabel\fP (bool freeze, int from, int to)"
+.br
+.RI "\fBQETProject::freezeNewElementLabel\fP Freeze New Elements in the selected folios\&. "
+.ti -1c
+.RI "bool \fBisFreezeNewElements\fP ()"
+.br
+.RI "QETProject::freezeNewElements\&. "
+.ti -1c
+.RI "void \fBsetFreezeNewElements\fP (bool)"
+.br
+.RI "QETProject::setfreezeNewElements Set Project Wide freeze new elements\&. "
+.ti -1c
+.RI "void \fBfreezeExistentConductorLabel\fP (bool freeze, int from, int to)"
+.br
+.RI "\fBQETProject::freezeExistentConductorLabel\fP Freeze Existent Conductors in the selected folios\&. "
+.ti -1c
+.RI "void \fBfreezeNewConductorLabel\fP (bool freeze, int from, int to)"
+.br
+.RI "\fBQETProject::freezeNewConductorLabel\fP Freeze New Conductors in the selected folios\&. "
+.ti -1c
+.RI "bool \fBisFreezeNewConductors\fP ()"
+.br
+.RI "\fBQETProject::isFreezeNewConductors\fP\&. "
+.ti -1c
+.RI "void \fBsetFreezeNewConductors\fP (bool)"
+.br
+.RI "QETProject::setfreezeNewConductors Set Project Wide freeze new conductors\&. "
+.ti -1c
+.RI "bool \fBautoConductor\fP () const"
+.br
+.RI "\fBQETProject::autoConductor\fP\&. "
+.ti -1c
+.RI "bool \fBautoElement\fP () const"
+.br
+.ti -1c
+.RI "bool \fBautoFolio\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetAutoConductor\fP (bool ac)"
+.br
+.RI "\fBQETProject::setAutoConductor\fP\&. "
+.ti -1c
+.RI "void \fBsetAutoElement\fP (bool ae)"
+.br
+.ti -1c
+.RI "void \fBautoFolioNumberingNewFolios\fP ()"
+.br
+.RI "\fBQETProject::autoFolioNumberingNewFolios\fP emit Signal to add new \fBDiagram\fP with autonum properties\&. "
+.ti -1c
+.RI "void \fBautoFolioNumberingSelectedFolios\fP (int, int, const QString &)"
+.br
+.RI "\fBQETProject::autoFolioNumberingNewFolios\fP\&. "
+.ti -1c
+.RI "QDomDocument \fBtoXml\fP ()"
+.br
+.RI "\fBQETProject::toXml\fP\&. "
+.ti -1c
+.RI "bool \fBclose\fP ()"
+.br
+.ti -1c
+.RI "\fBQETResult\fP \fBwrite\fP ()"
+.br
+.RI "\fBQETProject::write\fP Save the project in a file\&. "
+.ti -1c
+.RI "bool \fBisReadOnly\fP () const"
+.br
+.RI "\fBQETProject::isReadOnly\fP\&. "
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool)"
+.br
+.RI "\fBQETProject::setReadOnly\fP Set this project to read only if read_only = true\&. "
+.ti -1c
+.RI "bool \fBisEmpty\fP () const"
+.br
+.ti -1c
+.RI "\fBElementsLocation\fP \fBimportElement\fP (\fBElementsLocation\fP &location)"
+.br
+.RI "\fBQETProject::importElement\fP Import the element represented by location to the embbeded collection of this project\&. "
+.ti -1c
+.RI "QString \fBintegrateTitleBlockTemplate\fP (const \fBTitleBlockTemplateLocation\fP &, \fBMoveTitleBlockTemplatesHandler\fP *handler)"
+.br
+.RI "\fBQETProject::integrateTitleBlockTemplate\fP Integrate a title block template into this project\&. "
+.ti -1c
+.RI "bool \fBusesElement\fP (const \fBElementsLocation\fP &) const"
+.br
+.ti -1c
+.RI "QList< \fBElementsLocation\fP > \fBunusedElements\fP () const"
+.br
+.RI "\fBQETProject::unusedElements\fP\&. "
+.ti -1c
+.RI "bool \fBusesTitleBlockTemplate\fP (const \fBTitleBlockTemplateLocation\fP &)"
+.br
+.ti -1c
+.RI "bool \fBprojectWasModified\fP ()"
+.br
+.ti -1c
+.RI "bool \fBprojectOptionsWereModified\fP ()"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBprojectProperties\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetProjectProperties\fP (const \fBDiagramContext\fP &)"
+.br
+.ti -1c
+.RI "QUndoStack * \fBundoStack\fP ()"
+.br
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "bool \fBautoConductor\fP"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateDiagramsFolioData\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateDiagramsTitleBlockTemplate\fP (\fBTitleBlockTemplatesCollection\fP *, const QString &)"
+.br
+.ti -1c
+.RI "void \fBremoveDiagramsTitleBlockTemplate\fP (\fBTitleBlockTemplatesCollection\fP *, const QString &)"
+.br
+.ti -1c
+.RI "void \fBusedTitleBlockTemplateChanged\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBundoStackChanged\fP (bool a)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP (const \fBQETProject\fP &)"
+.br
+.ti -1c
+.RI "void \fBreadProjectXml\fP (QDomDocument &xml_project)"
+.br
+.RI "\fBQETProject::readProjectXml\fP Read and make the project from an xml description\&. "
+.ti -1c
+.RI "void \fBreadDiagramsXml\fP (QDomDocument &xml_project)"
+.br
+.RI "\fBQETProject::readDiagramsXml\fP Load the diagrams from the xml description of the project\&. Note a project can have 0 diagram\&. "
+.ti -1c
+.RI "void \fBreadElementsCollectionXml\fP (QDomDocument &xml_project)"
+.br
+.RI "\fBQETProject::readElementsCollectionXml\fP Load the diagrams from the xml description of the project\&. "
+.ti -1c
+.RI "void \fBreadProjectPropertiesXml\fP (QDomDocument &xml_project)"
+.br
+.RI "\fBQETProject::readProjectPropertiesXml\fP Load project properties from the XML description of the project\&. "
+.ti -1c
+.RI "void \fBreadDefaultPropertiesXml\fP (QDomDocument &xml_project)"
+.br
+.RI "\fBQETProject::readDefaultPropertiesXml\fP load default properties for new diagram, found in the xml of this project or by default find in the QElectroTech global conf\&. "
+.ti -1c
+.RI "void \fBwriteProjectPropertiesXml\fP (QDomElement &)"
+.br
+.ti -1c
+.RI "void \fBwriteDefaultPropertiesXml\fP (QDomElement &)"
+.br
+.RI "\fBQETProject::writeDefaultPropertiesXml\fP Export all defaults properties used by a new diagram and his content size of border content of titleblock default conductor defaut folio report default Xref\&. "
+.ti -1c
+.RI "void \fBaddDiagram\fP (\fBDiagram\fP *diagram, int pos=\-1)"
+.br
+.RI "\fBQETProject::addDiagram\fP Add a diagram in this project\&. "
+.ti -1c
+.RI "\fBNamesList\fP \fBnamesListForIntegrationCategory\fP ()"
+.br
+.ti -1c
+.RI "void \fBwriteBackup\fP ()"
+.br
+.RI "\fBQETProject::writeBackup\fP Write a backup file of this project, in the case that \fBQET\fP crash\&. "
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.RI "\fBQETProject::init\fP\&. "
+.ti -1c
+.RI "\fBProjectState\fP \fBopenFile\fP (QFile *file)"
+.br
+.RI "\fBQETProject::openFile\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBm_file_path\fP"
+.br
+.RI "File path this project is saved to\&. "
+.ti -1c
+.RI "\fBProjectState\fP \fBm_state\fP"
+.br
+.RI "Current state of the project\&. "
+.ti -1c
+.RI "QList< \fBDiagram\fP * > \fBm_diagrams_list\fP"
+.br
+.RI "Diagrams carried by the project\&. "
+.ti -1c
+.RI "QString \fBproject_title_\fP"
+.br
+.RI "Project title\&. "
+.ti -1c
+.RI "qreal \fBm_project_qet_version\fP = \-1"
+.br
+.RI "QElectroTech version declared in the XML document at opening time\&. "
+.ti -1c
+.RI "bool \fBm_modified\fP = false"
+.br
+.RI "Whether options were modified\&. "
+.ti -1c
+.RI "bool \fBm_read_only\fP = false"
+.br
+.RI "Whether the project is read only\&. "
+.ti -1c
+.RI "QString \fBread_only_file_path_\fP"
+.br
+.RI "Filepath for which this project is considered read only\&. "
+.ti -1c
+.RI "\fBBorderProperties\fP \fBdefault_border_properties_\fP = \fBBorderProperties::defaultProperties\fP()"
+.br
+.RI "Default dimensions and properties for new diagrams created within the project\&. "
+.ti -1c
+.RI "\fBConductorProperties\fP \fBdefault_conductor_properties_\fP = \fBConductorProperties::defaultProperties\fP()"
+.br
+.RI "Default conductor properties for new diagrams created within the project\&. "
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBdefault_titleblock_properties_\fP"
+.br
+.RI "Default title block properties for new diagrams created within the project\&. "
+.ti -1c
+.RI "QString \fBm_default_report_properties\fP = \fBReportProperties::defaultProperties\fP()"
+.br
+.RI "Default report properties\&. "
+.ti -1c
+.RI "QHash< QString, \fBXRefProperties\fP > \fBm_default_xref_properties\fP = \fBXRefProperties::defaultProperties\fP()"
+.br
+.RI "Default xref properties\&. "
+.ti -1c
+.RI "\fBTitleBlockTemplatesProjectCollection\fP \fBm_titleblocks_collection\fP"
+.br
+.RI "Embedded title block templates collection\&. "
+.ti -1c
+.RI "\fBDiagramContext\fP \fBm_project_properties\fP"
+.br
+.RI "project-wide variables that will be made available to child diagrams "
+.ti -1c
+.RI "QUndoStack * \fBm_undo_stack\fP"
+.br
+.RI "undo stack for this project "
+.ti -1c
+.RI "QHash< QString, \fBNumerotationContext\fP > \fBm_conductor_autonum\fP"
+.br
+.RI "\fBConductor\fP auto numerotation\&. "
+.ti -1c
+.RI "QString \fBm_current_conductor_autonum\fP"
+.br
+.ti -1c
+.RI "QHash< QString, \fBNumerotationContext\fP > \fBm_folio_autonum\fP"
+.br
+.RI "Folio auto numbering\&. "
+.ti -1c
+.RI "QHash< QString, \fBNumerotationContext\fP > \fBm_element_autonum\fP"
+.br
+.RI "\fBElement\fP Auto Numbering\&. "
+.ti -1c
+.RI "QString \fBm_current_element_autonum\fP"
+.br
+.ti -1c
+.RI "bool \fBm_auto_conductor\fP = true"
+.br
+.ti -1c
+.RI "\fBXmlElementCollection\fP * \fBm_elements_collection\fP = nullptr"
+.br
+.ti -1c
+.RI "bool \fBm_freeze_new_elements\fP = false"
+.br
+.ti -1c
+.RI "bool \fBm_freeze_new_conductors\fP = false"
+.br
+.ti -1c
+.RI "QTimer \fBm_save_backup_timer\fP"
+.br
+.ti -1c
+.RI "QTimer \fBm_autosave_timer\fP"
+.br
+.ti -1c
+.RI "KAutoSaveFile \fBm_backup_file\fP"
+.br
+.ti -1c
+.RI "QUuid \fBm_uuid\fP = QUuid::createUuid()"
+.br
+.ti -1c
+.RI "\fBprojectDataBase\fP \fBm_data_base\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a \fBQET\fP project\&. Typically saved as a \&.qet file, it consists in an XML document grouping 0 to n diagrams and embedding an elements collection\&. This collection enables users to export diagrams on remote machines without wondering whether required elements are available to them\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBQETProject::ProjectState\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOk \fP\fP
+.TP
+\fB\fIFileOpenFailed \fP\fP
+no error 
+.TP
+\fB\fIXmlParsingFailed \fP\fP
+file opening failed 
+.TP
+\fB\fIProjectParsingRunning \fP\fP
+XML parsing failed\&. 
+.TP
+\fB\fIProjectParsingFailed \fP\fP
+the XML content is currently being processed 
+.TP
+\fB\fIFileOpenDiscard \fP\fP
+the parsing of the XML content failed 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QETProject::QETProject (QObject * parent = \fCnullptr\fP)"
+
+.PP
+\fBQETProject::QETProject\fP Create a empty project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SS "QETProject::QETProject (const QString & path, QObject * parent = \fCnullptr\fP)"
+
+.PP
+\fBQETProject::QETProject\fP Construct a project from a \&.qet file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : path of the file 
+.br
+\fIparent\fP : parent QObject 
+.RE
+.PP
+
+.SS "QETProject::QETProject (KAutoSaveFile * backup, QObject * parent = \fCnullptr\fP)"
+
+.PP
+\fBQETProject::QETProject\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbackup\fP : backup file to open, \fBQETProject\fP take ownership of backup\&. 
+.br
+\fIparent\fP : parent QObject 
+.RE
+.PP
+
+.SS "QETProject::~QETProject ()\fC [override]\fP"
+
+.PP
+\fBQETProject::~QETProject\fP Destructor\&. 
+.SS "QETProject::QETProject (const \fBQETProject\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QETProject::addAutoNumDiagram ()\fC [signal]\fP"
+
+.SS "void QETProject::addConductorAutoNum (const QString & key, const \fBNumerotationContext\fP & context)"
+
+.PP
+\fBQETProject::addConductorAutoNum\fP Add a new conductor numerotation context\&. If key already exist, replace old context by the new context\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.br
+\fIcontext\fP 
+.RE
+.PP
+
+.SS "void QETProject::addDiagram (\fBDiagram\fP * diagram, int pos = \fC\-1\fP)\fC [private]\fP"
+
+.PP
+\fBQETProject::addDiagram\fP Add a diagram in this project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP added diagram 
+.br
+\fIpos\fP postion of the new diagram, by default at the end 
+.RE
+.PP
+
+.SS "void QETProject::addElementAutoNum (const QString & key, const \fBNumerotationContext\fP & context)"
+
+.PP
+\fBQETProject::addElementAutoNum\fP Add a new element numerotation context\&. If key already exist, replace old context by the new context\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.br
+\fIcontext\fP 
+.RE
+.PP
+
+.SS "void QETProject::addFolioAutoNum (const QString & key, const \fBNumerotationContext\fP & context)"
+
+.PP
+\fBQETProject::addFolioAutoNum\fP Add a new folio numerotation context\&. If key already exist, replace old context by the new context\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.br
+\fIcontext\fP 
+.RE
+.PP
+
+.SS "\fBDiagram\fP * QETProject::addNewDiagram (int pos = \fC\-1\fP)\fC [slot]\fP"
+
+.PP
+\fBQETProject::addNewDiagram\fP Add a new diagram in project at position pos\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the new created diagram 
+.RE
+.PP
+
+.SS "bool QETProject::autoConductor () const"
+
+.PP
+\fBQETProject::autoConductor\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if use of auto conductor is authorized\&. See also Q_PROPERTY autoConductor 
+.RE
+.PP
+
+.SS "bool QETProject::autoElement () const"
+
+.SS "bool QETProject::autoFolio () const"
+
+.SS "void QETProject::autoFolioNumberingNewFolios ()"
+
+.PP
+\fBQETProject::autoFolioNumberingNewFolios\fP emit Signal to add new \fBDiagram\fP with autonum properties\&. 
+.SS "void QETProject::autoFolioNumberingSelectedFolios (int from, int to, const QString & autonum)"
+
+.PP
+\fBQETProject::autoFolioNumberingNewFolios\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP 
+.br
+\fIto\fP 
+.br
+\fIautonum\fP : used, index from selected tabs 'from' and 'to' rename folios with selected autonum 
+.RE
+.PP
+
+.SS "bool QETProject::close ()"
+Ferme le projet 
+.SS "QHash< QString, \fBNumerotationContext\fP > QETProject::conductorAutoNum () const"
+
+.PP
+\fBQETProject::conductorAutoNum\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+All value of conductor autonum stored in project 
+.RE
+.PP
+
+.SS "\fBNumerotationContext\fP QETProject::conductorAutoNum (const QString & key) const"
+
+.PP
+\fBQETProject::conductorAutoNum\fP Return conductor numerotation context stored with key\&. If key is not found, return an empty numerotation context\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+
+.SS "void QETProject::conductorAutoNumAdded ()\fC [signal]\fP"
+
+.SS "void QETProject::conductorAutoNumChanged ()\fC [signal]\fP"
+
+.SS "QString QETProject::conductorAutoNumFormula (const QString & key) const"
+
+.PP
+\fBQETProject::conductorAutoNumFormula\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP : autonum title 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Formula of element autonum stored in conductor autonum 
+.RE
+.PP
+
+.SS "void QETProject::conductorAutoNumRemoved ()\fC [signal]\fP"
+
+.SS "QString QETProject::conductorCurrentAutoNum () const"
+
+.PP
+\fBQETProject::conductorCurrentAutoNum\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+current conductor autonum title 
+.RE
+.PP
+
+.SS "QString QETProject::currentDir () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le dossier contenant le fichier projet si celui-ci a ete enregistre ; dans le cas contraire, cette methode retourne l'emplacement du bureau de l'utilisateur\&. 
+.RE
+.PP
+
+.SS "\fBprojectDataBase\fP * QETProject::dataBase ()"
+
+.PP
+\fBQETProject::dataBase\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The data base of this project 
+.RE
+.PP
+
+.SS "qreal QETProject::declaredQElectroTechVersion ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+la version de QElectroTech declaree dans le fichier projet lorsque celui-ci a ete ouvert ; si ce projet n'a jamais ete enregistre / ouvert depuis un fichier, cette methode retourne -1\&. 
+.RE
+.PP
+
+.SS "\fBBorderProperties\fP QETProject::defaultBorderProperties () const"
+
+.PP
+DEFAULT PROPERTIES\&. 
+.PP
+\fBReturns\fP
+.RS 4
+les dimensions par defaut utilisees lors de la creation d'un nouveau schema dans ce projet\&. 
+.RE
+.PP
+
+.SS "\fBConductorProperties\fP QETProject::defaultConductorProperties () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le type de conducteur par defaut utilise lors de la creation d'un nouveau schema dans ce projet\&. 
+.RE
+.PP
+
+.SS "QString QETProject::defaultReportProperties () const"
+
+.SS "\fBTitleBlockProperties\fP QETProject::defaultTitleBlockProperties () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le cartouche par defaut utilise lors de la creation d'un nouveau schema dans ce projet\&. 
+.RE
+.PP
+
+.SS "void QETProject::defaultTitleBlockPropertiesChanged ()\fC [signal]\fP"
+
+.SS "QHash<QString, \fBXRefProperties\fP> QETProject::defaultXRefProperties () const\fC [inline]\fP"
+
+.SS "\fBXRefProperties\fP QETProject::defaultXRefProperties (const QString & type) const\fC [inline]\fP"
+
+.SS "void QETProject::diagramAdded (\fBQETProject\fP *, \fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "void QETProject::diagramOrderChanged (int old_index, int new_index)\fC [slot]\fP"
+Gere le fait que l'ordre des schemas ait change 
+.PP
+\fBParameters\fP
+.RS 4
+\fIold_index\fP ancien indice du schema deplace 
+.br
+\fInew_index\fP nouvel indice du schema deplace Si l'ancien ou le nouvel index est negatif ou superieur au nombre de schemas dans le projet, cette methode ne fait rien\&. Les index vont de 0 a 'nombre de schemas - 1' 
+.RE
+.PP
+
+.SS "void QETProject::diagramRemoved (\fBQETProject\fP *, \fBDiagram\fP *)\fC [signal]\fP"
+
+.SS "QList< \fBDiagram\fP * > QETProject::diagrams () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la liste des schemas de ce projet 
+.RE
+.PP
+
+.SS "void QETProject::diagramUsedTemplate (\fBTitleBlockTemplatesCollection\fP *, const QString &)\fC [signal]\fP"
+
+.SS "QHash< QString, \fBNumerotationContext\fP > QETProject::elementAutoNum () const"
+
+.PP
+\fBQETProject::elementAutoNum\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+All value of element autonum stored in project 
+.RE
+.PP
+
+.SS "\fBNumerotationContext\fP QETProject::elementAutoNum (const QString & key)"
+
+.PP
+\fBQETProject::elementAutoNum\fP Return element numerotation context stored with key\&. If key is not found, return an empty numerotation context\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+
+.SS "void QETProject::elementAutoNumAdded (QString name)\fC [signal]\fP"
+
+.SS "QString QETProject::elementAutoNumCurrentFormula () const"
+
+.PP
+\fBQETProject::elementAutoNumCurrentFormula\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+current formula being used by project 
+.RE
+.PP
+
+.SS "QString QETProject::elementAutoNumFormula (const QString & key) const"
+
+.PP
+\fBQETProject::elementAutoNumFormula\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP : autonum title 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Formula of element autonum stored in element autonum 
+.RE
+.PP
+
+.SS "void QETProject::elementAutoNumRemoved (QString name)\fC [signal]\fP"
+
+.SS "QString QETProject::elementCurrentAutoNum () const"
+
+.PP
+\fBQETProject::elementCurrentAutoNum\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+current element autonum title 
+.RE
+.PP
+
+.SS "\fBXmlElementCollection\fP * QETProject::embeddedElementCollection () const"
+
+.PP
+QETProject::embeddedCollection\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The embedded collection 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplatesProjectCollection\fP * QETProject::embeddedTitleBlockTemplatesCollection ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+the title block templates collection enbeedded within this project 
+.RE
+.PP
+
+.SS "QString QETProject::filePath ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+le chemin du fichier dans lequel ce projet est enregistre 
+.RE
+.PP
+
+.SS "QHash< QString, \fBNumerotationContext\fP > QETProject::folioAutoNum () const"
+
+.PP
+\fBQETProject::folioAutoNum\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+All value of folio autonum stored in project 
+.RE
+.PP
+
+.SS "\fBNumerotationContext\fP QETProject::folioAutoNum (const QString & key) const"
+
+.PP
+\fBQETProject::folioAutoNum\fP Return folio numerotation context stored with key\&. If key is not found, return an empty numerotation context\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+
+.SS "void QETProject::folioAutoNumAdded ()\fC [signal]\fP"
+
+.SS "void QETProject::folioAutoNumChanged (QString)\fC [signal]\fP"
+
+.SS "void QETProject::folioAutoNumRemoved ()\fC [signal]\fP"
+
+.SS "int QETProject::folioIndex (const \fBDiagram\fP * diagram) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP Pointer to a \fBDiagram\fP object 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the folio number of the given diagram object within the project, or -1 if it is not part of this project\&. Note: this returns 0 for the first diagram, not 1 
+.RE
+.PP
+
+.SS "void QETProject::freezeExistentConductorLabel (bool freeze, int from, int to)"
+
+.PP
+\fBQETProject::freezeExistentConductorLabel\fP Freeze Existent Conductors in the selected folios\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfreeze\fP 
+.br
+\fIfrom\fP - first folio index to apply freeze 
+.br
+\fIto\fP - last folio index to apply freeze 
+.RE
+.PP
+
+.SS "void QETProject::freezeExistentElementLabel (bool freeze, int from, int to)"
+
+.PP
+\fBQETProject::freezeExistentElementLabel\fP Freeze Existent Elements in the selected folios\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfreeze\fP 
+.br
+\fIfrom\fP - first folio index to apply freeze 
+.br
+\fIto\fP - last folio index to apply freeze 
+.RE
+.PP
+
+.SS "void QETProject::freezeNewConductorLabel (bool freeze, int from, int to)"
+
+.PP
+\fBQETProject::freezeNewConductorLabel\fP Freeze New Conductors in the selected folios\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfreeze\fP 
+.br
+\fIfrom\fP - first folio index to apply freeze 
+.br
+\fIto\fP - last folio index to apply freeze 
+.RE
+.PP
+
+.SS "void QETProject::freezeNewElementLabel (bool freeze, int from, int to)"
+
+.PP
+\fBQETProject::freezeNewElementLabel\fP Freeze New Elements in the selected folios\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfreeze\fP 
+.br
+\fIfrom\fP - first folio index to apply freeze 
+.br
+\fIto\fP - last folio index to apply freeze 
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP QETProject::importElement (\fBElementsLocation\fP & location)"
+
+.PP
+\fBQETProject::importElement\fP Import the element represented by location to the embbeded collection of this project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the location of the imported element, location can be null\&. 
+.RE
+.PP
+
+.SS "void QETProject::init ()\fC [private]\fP"
+
+.PP
+\fBQETProject::init\fP\&. 
+.SS "QString QETProject::integrateTitleBlockTemplate (const \fBTitleBlockTemplateLocation\fP & src_tbt, \fBMoveTitleBlockTemplatesHandler\fP * handler)"
+
+.PP
+\fBQETProject::integrateTitleBlockTemplate\fP Integrate a title block template into this project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsrc_tbt\fP The location of the title block template to be integrated into this project 
+.br
+\fIhandler\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the name of the template after integration, or an empty QString if a problem occurred\&. 
+.RE
+.PP
+
+.SS "bool QETProject::isEmpty () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le projet peut etre considere comme vide, c'est-a-dire :
+.IP "\(bu" 2
+soit avec une collection embarquee vide
+.IP "\(bu" 2
+soit avec uniquement des schemas consideres comme vides
+.IP "\(bu" 2
+soit avec un titre de projet 
+.PP
+.RE
+.PP
+
+.SS "bool QETProject::isFreezeNewConductors ()"
+
+.PP
+\fBQETProject::isFreezeNewConductors\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+freeze new conductors Project Wide status 
+.RE
+.PP
+
+.SS "bool QETProject::isFreezeNewElements ()"
+
+.PP
+QETProject::freezeNewElements\&. 
+.PP
+\fBReturns\fP
+.RS 4
+freeze new elements Project Wide status 
+.RE
+.PP
+
+.SS "bool QETProject::isReadOnly () const"
+
+.PP
+\fBQETProject::isReadOnly\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true si le projet est en mode readonly, false sinon 
+.RE
+.PP
+
+.SS "\fBNamesList\fP QETProject::namesListForIntegrationCategory ()\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+La liste des noms a utiliser pour la categorie dediee aux elements integres automatiquement dans le projet\&. 
+.RE
+.PP
+
+.SS "\fBQETProject::ProjectState\fP QETProject::openFile (QFile * file)\fC [private]\fP"
+
+.PP
+\fBQETProject::openFile\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QString QETProject::pathNameTitle () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+une chaine de caractere du type 'Projet titre du projet'\&. Si le projet n'a pas de titre, le nom du fichier est utilise\&. Si le projet n'est pas associe a un fichier, cette methode retourne 'Projet
+sans titre'\&. De plus, si le projet est en lecture seule, le tag '[lecture seule]' est ajoute\&. 
+.RE
+.PP
+
+.SS "void QETProject::projectDiagramsOrderChanged (\fBQETProject\fP *, int, int)\fC [signal]\fP"
+
+.SS "void QETProject::projectFilePathChanged (\fBQETProject\fP *, const QString &)\fC [signal]\fP"
+
+.SS "void QETProject::projectInformationsChanged (\fBQETProject\fP *)\fC [signal]\fP"
+
+.SS "void QETProject::projectModified (\fBQETProject\fP *, bool)\fC [signal]\fP"
+
+.SS "bool QETProject::projectOptionsWereModified ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if project options (title, project-wide properties, settings for new diagrams, diagrams order\&.\&.\&.) were modified, false otherwise\&. 
+.RE
+.PP
+
+.SS "\fBDiagramContext\fP QETProject::projectProperties ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+the project-wide properties made available to child diagrams\&. 
+.RE
+.PP
+
+.SS "void QETProject::projectTitleChanged (\fBQETProject\fP *, const QString &)\fC [signal]\fP"
+
+.SS "bool QETProject::projectWasModified ()"
+Cette methode sert a reperer un projet vide, c-a-d un projet identique a ce que l'on obtient en faisant Fichier > Nouveau\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true si les schemas, la collection embarquee ou les proprietes de ce projet ont ete modifies\&. Concretement, le projet doit avoir un titre vide et ni ses schemas ni sa collection embarquee ne doivent avoir ete modifies\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+diagramsWereModified(), embeddedCollectionWasModified() 
+.RE
+.PP
+
+.SS "void QETProject::readDefaultPropertiesXml (QDomDocument & xml_project)\fC [private]\fP"
+
+.PP
+\fBQETProject::readDefaultPropertiesXml\fP load default properties for new diagram, found in the xml of this project or by default find in the QElectroTech global conf\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_project\fP : the xml description of the project 
+.RE
+.PP
+
+.SS "void QETProject::readDiagramsXml (QDomDocument & xml_project)\fC [private]\fP"
+
+.PP
+\fBQETProject::readDiagramsXml\fP Load the diagrams from the xml description of the project\&. Note a project can have 0 diagram\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_project\fP 
+.RE
+.PP
+
+.SS "void QETProject::readElementsCollectionXml (QDomDocument & xml_project)\fC [private]\fP"
+
+.PP
+\fBQETProject::readElementsCollectionXml\fP Load the diagrams from the xml description of the project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_project\fP : the xml description of the project 
+.RE
+.PP
+
+.SS "void QETProject::readOnlyChanged (\fBQETProject\fP *, bool)\fC [signal]\fP"
+
+.SS "void QETProject::readProjectPropertiesXml (QDomDocument & xml_project)\fC [private]\fP"
+
+.PP
+\fBQETProject::readProjectPropertiesXml\fP Load project properties from the XML description of the project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_project\fP : the xml description of the project 
+.RE
+.PP
+
+.SS "void QETProject::readProjectXml (QDomDocument & xml_project)\fC [private]\fP"
+
+.PP
+\fBQETProject::readProjectXml\fP Read and make the project from an xml description\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_project\fP : the description of the project from an xml 
+.RE
+.PP
+
+.SS "void QETProject::removeConductorAutoNum (const QString & key)"
+
+.PP
+\fBQETProject::removeConductorAutoNum\fP Remove \fBConductor\fP Numerotation Context stored with key\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+
+.SS "void QETProject::removeDiagram (\fBDiagram\fP * diagram)\fC [slot]\fP"
+
+.PP
+\fBQETProject::removeDiagram\fP Remove diagram from project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP 
+.RE
+.PP
+
+.SS "void QETProject::removeDiagramsTitleBlockTemplate (\fBTitleBlockTemplatesCollection\fP * collection, const QString & template_name)\fC [private]\fP, \fC [slot]\fP"
+Inform each diagram that the \fItemplate_name\fP title block is about to be removed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection\fP Title block templates collection 
+.br
+\fItemplate_name\fP Name of the removed template 
+.RE
+.PP
+
+.SS "void QETProject::removeElementAutoNum (const QString & key)"
+
+.PP
+QETProject::removeElementAutonum Remove \fBElement\fP Numerotation Context stored with key\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+
+.SS "void QETProject::removeFolioAutoNum (const QString & key)"
+
+.PP
+QETProject::removeFolioAutonum Remove Folio Numerotation Context stored with key\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP 
+.RE
+.PP
+
+.SS "void QETProject::reportPropertiesChanged (const QString & old_str, const QString & new_str)\fC [signal]\fP"
+
+.SS "void QETProject::setAutoConductor (bool ac)"
+
+.PP
+\fBQETProject::setAutoConductor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIac\fP Enable the use of auto conductor if true See also Q_PROPERTY autoConductor 
+.RE
+.PP
+
+.SS "void QETProject::setAutoElement (bool ae)"
+
+.SS "void QETProject::setCurrentConductorAutoNum (QString autoNum)"
+
+.PP
+\fBQETProject::setCurrentConductorAutoNum\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIautoNum\fP set the current conductor autonum to autonum 
+.RE
+.PP
+
+.SS "void QETProject::setCurrrentElementAutonum (QString autoNum)"
+
+.PP
+\fBQETProject::setCurrrentElementAutonum\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIautoNum\fP : set the current element autonum to autonum 
+.RE
+.PP
+
+.SS "void QETProject::setDefaultBorderProperties (const \fBBorderProperties\fP & border)"
+Permet de specifier les dimensions par defaut utilisees lors de la creation d'un nouveau schema dans ce projet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIborder\fP dimensions d'un schema 
+.RE
+.PP
+
+.SS "void QETProject::setDefaultConductorProperties (const \fBConductorProperties\fP & conductor)"
+Permet de specifier e type de conducteur par defaut utilise lors de la creation d'un nouveau schema dans ce projet\&. 
+.SS "void QETProject::setDefaultReportProperties (const QString & properties)"
+
+.SS "void QETProject::setDefaultTitleBlockProperties (const \fBTitleBlockProperties\fP & titleblock)"
+
+.PP
+\fBQETProject::setDefaultTitleBlockProperties\fP Specify the title block to be used at the creation of a new diagram for this project\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitleblock\fP 
+.RE
+.PP
+
+.SS "void QETProject::setDefaultXRefProperties (const QString & type, const \fBXRefProperties\fP & properties)"
+
+.SS "void QETProject::setDefaultXRefProperties (QHash< QString, \fBXRefProperties\fP > hash)"
+
+.SS "void QETProject::setFilePath (const QString & filepath)"
+
+.PP
+\fBQETProject::setFilePath\fP Set the filepath of this project file Set a file path also create a backup file according to the path\&. If a previous path was set, the previous backup file is deleted and a new one is created according to the path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP 
+.RE
+.PP
+
+.SS "void QETProject::setFreezeNewConductors (bool set)"
+
+.PP
+QETProject::setfreezeNewConductors Set Project Wide freeze new conductors\&. 
+.SS "void QETProject::setFreezeNewElements (bool set)"
+
+.PP
+QETProject::setfreezeNewElements Set Project Wide freeze new elements\&. 
+.SS "void QETProject::setModified (bool modified)\fC [slot]\fP"
+Mark this project as modified and emit the \fBprojectModified()\fP signal\&. 
+.SS "void QETProject::setProjectProperties (const \fBDiagramContext\fP & context)"
+Use \fIcontext\fP as project-wide properties made available to child diagrams\&. 
+.SS "void QETProject::setReadOnly (bool read_only)"
+
+.PP
+\fBQETProject::setReadOnly\fP Set this project to read only if read_only = true\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIread_only\fP 
+.RE
+.PP
+
+.SS "void QETProject::setTitle (const QString & title)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItitle\fP le nouveau titre du projet 
+.RE
+.PP
+
+.SS "\fBQETProject::ProjectState\fP QETProject::state () const"
+Cette methode peut etre utilisee pour tester la bonne ouverture d'un projet 
+.PP
+\fBReturns\fP
+.RS 4
+l'etat du projet 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBProjectState\fP 
+.RE
+.PP
+
+.SS "QString QETProject::title () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+le titre du projet 
+.RE
+.PP
+
+.SS "QDomDocument QETProject::toXml ()"
+
+.PP
+\fBQETProject::toXml\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+un document XML representant le projet 
+.RE
+.PP
+
+.SS "QUndoStack* QETProject::undoStack ()\fC [inline]\fP"
+
+.SS "void QETProject::undoStackChanged (bool a)\fC [inline]\fP, \fC [private]\fP, \fC [slot]\fP"
+
+.SS "QList< \fBElementsLocation\fP > QETProject::unusedElements () const"
+
+.PP
+\fBQETProject::unusedElements\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of unused element (exactly her location) An unused element, is an element present in the embedded collection but not present in a diagram of this project\&. Be aware that an element can be not present in a diagram, but managed by an undo command (delete an element), so an unused element can be used after an undo\&. 
+.RE
+.PP
+
+.SS "void QETProject::updateDiagramsFolioData ()\fC [private]\fP, \fC [slot]\fP"
+Indique a chaque schema du projet quel est son numero de folio et combien de folio le projet contient\&. 
+.SS "void QETProject::updateDiagramsTitleBlockTemplate (\fBTitleBlockTemplatesCollection\fP * collection, const QString & template_name)\fC [private]\fP, \fC [slot]\fP"
+Inform each diagram that the \fItemplate_name\fP title block changed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcollection\fP Title block templates collection 
+.br
+\fItemplate_name\fP Name of the changed template 
+.RE
+.PP
+
+.SS "void QETProject::usedTitleBlockTemplateChanged (const QString & template_name)\fC [private]\fP, \fC [slot]\fP"
+Handles the fact a digram changed the title block template it used 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemplate_name\fP Name of the template 
+.RE
+.PP
+
+.SS "bool QETProject::usesElement (const \fBElementsLocation\fP & location) const"
+Permet de savoir si un element est utilise dans un projet 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP Emplacement d'un element 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si l'element location est utilise sur au moins un des schemas de ce projet, false sinon 
+.RE
+.PP
+
+.SS "bool QETProject::usesTitleBlockTemplate (const \fBTitleBlockTemplateLocation\fP & location)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP Location of a title block template 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the provided template is used by at least one diagram within this project, false otherwise 
+.RE
+.PP
+
+.SS "QUuid QETProject::uuid () const"
+
+.PP
+\fBQETProject::uuid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the uuid of this project 
+.RE
+.PP
+
+.SS "\fBQETResult\fP QETProject::write ()"
+
+.PP
+\fBQETProject::write\fP Save the project in a file\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBfilePath()\fP 
+.PP
+\fBsetFilePath()\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the project was successfully saved, else false 
+.RE
+.PP
+
+.SS "void QETProject::writeBackup ()\fC [private]\fP"
+
+.PP
+\fBQETProject::writeBackup\fP Write a backup file of this project, in the case that \fBQET\fP crash\&. 
+.SS "void QETProject::writeDefaultPropertiesXml (QDomElement & xml_element)\fC [private]\fP"
+
+.PP
+\fBQETProject::writeDefaultPropertiesXml\fP Export all defaults properties used by a new diagram and his content size of border content of titleblock default conductor defaut folio report default Xref\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : xml element to use for store default propertie\&. 
+.RE
+.PP
+
+.SS "void QETProject::writeProjectPropertiesXml (QDomElement & xml_element)\fC [private]\fP"
+Export project properties under the \fIxml_element\fP XML element\&. 
+.SS "void QETProject::XRefPropertiesChanged ()\fC [signal]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBBorderProperties\fP QETProject::default_border_properties_ = \fBBorderProperties::defaultProperties\fP()\fC [private]\fP"
+
+.PP
+Default dimensions and properties for new diagrams created within the project\&. 
+.SS "\fBConductorProperties\fP QETProject::default_conductor_properties_ = \fBConductorProperties::defaultProperties\fP()\fC [private]\fP"
+
+.PP
+Default conductor properties for new diagrams created within the project\&. 
+.SS "\fBTitleBlockProperties\fP QETProject::default_titleblock_properties_\fC [private]\fP"
+
+.PP
+Default title block properties for new diagrams created within the project\&. 
+.SS "bool QETProject::m_auto_conductor = true\fC [private]\fP"
+
+.SS "QTimer QETProject::m_autosave_timer\fC [private]\fP"
+
+.SS "KAutoSaveFile QETProject::m_backup_file\fC [private]\fP"
+
+.SS "QHash<QString, \fBNumerotationContext\fP> QETProject::m_conductor_autonum\fC [private]\fP"
+
+.PP
+\fBConductor\fP auto numerotation\&. 
+.SS "QString QETProject::m_current_conductor_autonum\fC [private]\fP"
+
+.SS "QString QETProject::m_current_element_autonum\fC [private]\fP"
+
+.SS "\fBprojectDataBase\fP QETProject::m_data_base\fC [private]\fP"
+
+.SS "QString QETProject::m_default_report_properties = \fBReportProperties::defaultProperties\fP()\fC [private]\fP"
+
+.PP
+Default report properties\&. 
+.SS "QHash<QString, \fBXRefProperties\fP> QETProject::m_default_xref_properties = \fBXRefProperties::defaultProperties\fP()\fC [private]\fP"
+
+.PP
+Default xref properties\&. 
+.SS "QList<\fBDiagram\fP *> QETProject::m_diagrams_list\fC [private]\fP"
+
+.PP
+Diagrams carried by the project\&. 
+.SS "QHash<QString, \fBNumerotationContext\fP> QETProject::m_element_autonum\fC [private]\fP"
+
+.PP
+\fBElement\fP Auto Numbering\&. 
+.SS "\fBXmlElementCollection\fP* QETProject::m_elements_collection = nullptr\fC [private]\fP"
+
+.SS "QString QETProject::m_file_path\fC [private]\fP"
+
+.PP
+File path this project is saved to\&. 
+.SS "QHash<QString, \fBNumerotationContext\fP> QETProject::m_folio_autonum\fC [private]\fP"
+
+.PP
+Folio auto numbering\&. 
+.SS "bool QETProject::m_freeze_new_conductors = false\fC [private]\fP"
+
+.SS "bool QETProject::m_freeze_new_elements = false\fC [private]\fP"
+
+.SS "bool QETProject::m_modified = false\fC [private]\fP"
+
+.PP
+Whether options were modified\&. 
+.SS "\fBDiagramContext\fP QETProject::m_project_properties\fC [private]\fP"
+
+.PP
+project-wide variables that will be made available to child diagrams 
+.SS "qreal QETProject::m_project_qet_version = \-1\fC [private]\fP"
+
+.PP
+QElectroTech version declared in the XML document at opening time\&. 
+.SS "bool QETProject::m_read_only = false\fC [private]\fP"
+
+.PP
+Whether the project is read only\&. 
+.SS "QTimer QETProject::m_save_backup_timer\fC [private]\fP"
+
+.SS "\fBProjectState\fP QETProject::m_state\fC [private]\fP"
+
+.PP
+Current state of the project\&. 
+.SS "\fBTitleBlockTemplatesProjectCollection\fP QETProject::m_titleblocks_collection\fC [private]\fP"
+
+.PP
+Embedded title block templates collection\&. 
+.SS "QUndoStack* QETProject::m_undo_stack\fC [private]\fP"
+
+.PP
+undo stack for this project 
+.SS "QUuid QETProject::m_uuid = QUuid::createUuid()\fC [private]\fP"
+
+.SS "QString QETProject::project_title_\fC [private]\fP"
+
+.PP
+Project title\&. 
+.SS "QString QETProject::read_only_file_path_\fC [private]\fP"
+
+.PP
+Filepath for which this project is considered read only\&. 
+.SH "Property Documentation"
+.PP 
+.SS "bool QETProject::autoConductor\fC [read]\fP, \fC [write]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,41 @@
+<map id="Diagram::elements" name="Diagram::elements">
+<area shape="rect" id="node1" title="Diagram::elements." alt="" coords="1811,488,1943,515"/>
+<area shape="rect" id="node2" href="$df/d20/class_element_provider.html#a84832c0b9e4cc7ef9fbfac79761f071a" title="ElementProvider::find Search and return the asked element corresponding with the given filter." alt="" coords="1591,311,1738,337"/>
+<area shape="rect" id="node25" href="$df/d20/class_element_provider.html#a6a8380ee321c761b369f0fc4bb654432" title="ElementProvider::FreeElement Search and return the asked element corresponding with the given filter ..." alt="" coords="1567,387,1763,413"/>
+<area shape="rect" id="node31" href="$d3/d37/class_diagram.html#a0c17be8f3cacd92591e45539875851f4" title="Diagram::freezeElements Freeze every existent element label." alt="" coords="1579,437,1750,464"/>
+<area shape="rect" id="node32" href="$df/d20/class_element_provider.html#a9f16549ce5c633f5d676646eaffed3aa" title="ElementProvider::fromUuids." alt="" coords="1571,488,1758,515"/>
+<area shape="rect" id="node37" href="$d3/d37/class_diagram.html#ae6ba5a325ae75b0b4f5eb96d1d960d45" title="Diagram::refreshContents refresh all content of diagram." alt="" coords="1579,539,1751,565"/>
+<area shape="rect" id="node38" href="$d3/d37/class_diagram.html#a07c3c8c645c9f4ccc0d9cde95745eab4" title="Diagram::unfreezeElements Unfreeze every existent element label." alt="" coords="1573,589,1757,616"/>
+<area shape="rect" id="node39" href="$d3/d37/class_diagram.html#afd8f39c9841b5f1de627cfbc0e3c8eec" title="Diagram::usesElement Used to find out if an element is used on a schema." alt="" coords="1587,640,1742,667"/>
+<area shape="rect" id="node3" href="$df/d26/class_link_single_element_widget.html#a5d53935d839785c508b7bf9bf9572049" title="LinkSingleElementWidget::availableElements." alt="" coords="1345,335,1516,377"/>
+<area shape="rect" id="node11" href="$d5/d7f/classproject_data_base.html#ac2931960c6cd5c88c465a3ba71d21950" title="projectDataBase::populateElementsTable Populate the elements table" alt="" coords="1343,263,1519,305"/>
+<area shape="rect" id="node24" href="$d5/d7f/classproject_data_base.html#a674fb667a9a3c7c487f48ee8619536c6" title="projectDataBase::populateElementTable Populate the element table" alt="" coords="1343,194,1519,235"/>
+<area shape="rect" id="node4" href="$df/d26/class_link_single_element_widget.html#a14d257e74306f8c4803298a5d6cc90bc" title="LinkSingleElementWidget::buildTree Build the content of the QTreeWidget." alt="" coords="1102,335,1273,377"/>
+<area shape="rect" id="node5" href="$df/d26/class_link_single_element_widget.html#a341fcfc7b54350075feae4a567f41fed" title=" " alt="" coords="564,453,735,494"/>
+<area shape="rect" id="node6" href="$df/d26/class_link_single_element_widget.html#aabea7527204ea7b23969c388d6f58276" title="LinkSingleElementWidget::updateUi Update the content of this widget." alt="" coords="836,335,1007,377"/>
+<area shape="rect" id="node7" href="$df/d26/class_link_single_element_widget.html#aeccc46950ebd79884e21acbdcfe52635" title="LinkSingleElementWidget::diagramWasRemovedFromProject This slot is called when a diagram is removed f..." alt="" coords="536,335,763,377"/>
+<area shape="rect" id="node8" href="$df/d26/class_link_single_element_widget.html#a83b0dcb7549d89d871791b419999492a" title="LinkSingleElementWidget::setElement Set element to be the edited element." alt="" coords="293,329,464,370"/>
+<area shape="rect" id="node10" href="$df/d26/class_link_single_element_widget.html#a98bce7a57efc018bc185bce12b69729c" title="LinkSingleElementWidget::linkTriggered Action linkis triggered." alt="" coords="293,394,464,435"/>
+<area shape="rect" id="node9" href="$df/d26/class_link_single_element_widget.html#a4506affce3fbfa9a802cb153bbb702c9" title="Methods." alt="" coords="24,361,203,402"/>
+<area shape="rect" id="node12" href="$d5/d7f/classproject_data_base.html#acf25fb0afaf0be20fbcbcdcd2d0ef483" title="projectDataBase::updateDB Up to date the content of the data base. Emit the signal dataBaseUpdated" alt="" coords="1095,187,1280,213"/>
+<area shape="rect" id="node13" href="$d5/d7f/classproject_data_base.html#a5d3247265a4b1fd7ade3417d3e6b4bbf" title="projectDataBase::createDataBase Create the data base" alt="" coords="811,187,1032,213"/>
+<area shape="rect" id="node15" href="$d9/dd1/class_b_o_m_export_dialog.html#a59bbafb0dc2c04f1feaef12391771e58" title=" " alt="" coords="831,237,1012,264"/>
+<area shape="rect" id="node19" href="$dc/d8e/class_project_d_b_model_properties_widget.html#a7308a1bd9f09fc9053514972ec434b93" title=" " alt="" coords="833,5,1010,61"/>
+<area shape="rect" id="node20" href="$d6/dc5/class_q_e_t_project.html#aa6ab11517671dc9e288da42555dc79d6" title="QETProject::readDiagramsXml Load the diagrams from the xml description of the project...." alt="" coords="821,85,1022,112"/>
+<area shape="rect" id="node21" href="$d6/dc5/class_q_e_t_project.html#ad9a09b5d1756ddc11c5eed75bb3738c6" title="QETProject::readProjectXml Read and make the project from an xml description." alt="" coords="556,100,743,127"/>
+<area shape="rect" id="node14" href="$d5/d7f/classproject_data_base.html#ad3aff67ae7e06c218a78bed8f290cbf6" title="projectDataBase::projectDataBase Default constructor" alt="" coords="566,167,733,209"/>
+<area shape="rect" id="node16" href="$d9/dd1/class_b_o_m_export_dialog.html#acb3e1c82b28db994a8835b0cd5fe47b0" title="BOMExportDialog::exec." alt="" coords="568,233,731,260"/>
+<area shape="rect" id="node17" href="$d0/dcb/class_q_e_t_diagram_editor.html#a6448cdc59c55224bee47909e744d0277" title="QETDiagramEditor::setUpActions Set up all Qaction." alt="" coords="269,233,488,260"/>
+<area shape="rect" id="node18" href="$d0/dcb/class_q_e_t_diagram_editor.html#a5cdbfffca55038045ec0d040e047c429" title="QETDiagramEditor::QETDiagramEditor Constructor." alt="" coords="5,226,221,267"/>
+<area shape="rect" id="node22" href="$d6/dc5/class_q_e_t_project.html#a260924555b97e401594c9ae6d6733281" title="QETProject::openFile." alt="" coords="305,100,452,127"/>
+<area shape="rect" id="node23" href="$d6/dc5/class_q_e_t_project.html#ab739141bacf11150129e65eaa11a0946" title="QETProject::QETProject Construct a project from a .qet file." alt="" coords="31,100,196,127"/>
+<area shape="rect" id="node26" href="$d6/dd2/class_master_properties_widget.html#aa81336b4520c1f0af5a6080619b9da41" title="MasterPropertiesWidget::updateUi Build the interface of the widget." alt="" coords="1349,429,1512,470"/>
+<area shape="rect" id="node27" href="$d6/dd2/class_master_properties_widget.html#ab1b3e25d751b75b989ad377b8d943d2c" title="MasterPropertiesWidget::diagramWasdeletedFromProject This slot is called when a diagram is removed fr..." alt="" coords="1080,518,1295,559"/>
+<area shape="rect" id="node28" href="$d6/dd2/class_master_properties_widget.html#aa61de47a6c1ddbc95930035bb6c654ef" title="MasterPropertiesWidget::setElement Set the element to be edited." alt="" coords="840,518,1003,559"/>
+<area shape="rect" id="node30" href="$d6/dd2/class_master_properties_widget.html#a46c2838aaeaf7640589b89b9fb9d4c91" title="MasterPropertiesWidget::reset Reset curent widget, clear eveything and rebuild widget." alt="" coords="1106,453,1269,494"/>
+<area shape="rect" id="node29" href="$d6/dd2/class_master_properties_widget.html#a7dab2f8686331c8ab4337cf0441d7a89" title="MasterPropertiesWidget::MasterPropertiesWidget Default constructor." alt="" coords="564,518,735,559"/>
+<area shape="rect" id="node33" href="$d5/d50/class_element.html#a4f5c908a851b66d41765e968b262e62e" title="Element::initLink Initialise the link between this element and other elements. This method can be cal..." alt="" coords="1371,609,1490,636"/>
+<area shape="rect" id="node34" href="$d4/d33/class_terminal_element.html#aed5cb0236a5a6769ae2a0bf5bff26668" title="TerminalElement::initLink." alt="" coords="1104,685,1271,712"/>
+<area shape="rect" id="node35" href="$db/d72/class_simple_element.html#a1b43b59c2cf36be9cbc6352b9e6bdf75" title="SimpleElement::initLink." alt="" coords="1108,584,1267,611"/>
+<area shape="rect" id="node36" href="$d0/d2b/class_master_element.html#a16d50bb823ece42d1c306b2bd215678a" title="MasterElement::initLink." alt="" coords="1108,635,1267,661"/>
+</map>

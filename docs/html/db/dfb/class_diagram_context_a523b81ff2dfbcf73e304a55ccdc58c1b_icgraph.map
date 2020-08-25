@@ -1,0 +1,52 @@
+<map id="DiagramContext::addValue" name="DiagramContext::addValue">
+<area shape="rect" id="node1" title=" " alt="" coords="801,987,979,1014"/>
+<area shape="rect" id="node2" href="$db/dfb/class_diagram_context.html#aea61cd56ae2ffa31ce5ee684d0ac147d" title="DiagramContext::add Add all value of other to this. If a key already exist, the value is replaced...." alt="" coords="567,109,713,135"/>
+<area shape="rect" id="node7" href="$d5/d68/class_title_block_properties_widget.html#a6a294dcf5906e51cfec99ffb1366f29f" title="TitleBlockPropertiesWidget::changeCurrentTitleBlockTemplate Load the additionnal field of title block..." alt="" coords="527,248,753,289"/>
+<area shape="rect" id="node9" href="$dd/d2f/class_diagram_context_widget.html#a1906d528cce4d071e60d0c8fbed983af" title="DiagramContextWidget::context." alt="" coords="561,345,719,387"/>
+<area shape="rect" id="node12" href="$d4/d58/class_replace_element_dialog.html#a9e721848adf407ea57f52d13d1bd5f70" title="ReplaceElementDialog::context." alt="" coords="563,499,717,540"/>
+<area shape="rect" id="node16" href="$d9/db5/class_element_info_widget.html#a14f507f029baf9094be7724d0ed0e871" title="ElementInfoWidget::currentInfo." alt="" coords="570,659,710,700"/>
+<area shape="rect" id="node19" href="$db/dfb/class_diagram_context.html#a38fdab1e974f7bfb8acbbc6e3a36da33" title=" " alt="" coords="541,766,739,793"/>
+<area shape="rect" id="node21" href="$db/dfb/class_diagram_context.html#a8e5ed488953211c89e25dea81b56c448" title=" " alt="" coords="553,857,727,883"/>
+<area shape="rect" id="node26" href="$d5/d50/class_element.html#a904453810089404ad88dc7ad1d99a441" title="Element::fromXml Import the parameters of this element from a xml document. When call this function e..." alt="" coords="292,1073,419,1099"/>
+<area shape="rect" id="node29" href="$dc/d30/class_element_properties_editor_widget.html#a7ddd20b83402dcd4836f896ed384f1a9" title="ElementPropertiesEditorWidget::on_m_buttonBox_accepted Action on button accepted : the new informatio..." alt="" coords="537,1009,743,1051"/>
+<area shape="rect" id="node30" href="$d1/db0/class_paste_diagram_command.html#a06aef4edcc1e56439edd1a3b40c66831" title="PasteDiagramCommand::redo Redo this commnand." alt="" coords="557,1075,723,1116"/>
+<area shape="rect" id="node31" href="$dd/d41/class_search_and_replace_worker.html#a5b48b2be386e4b795e6dc774c71cd632" title="SearchAndReplaceWorker::replaceAdvanced." alt="" coords="553,1140,727,1181"/>
+<area shape="rect" id="node32" href="$dd/d41/class_search_and_replace_worker.html#a36a5ec3e636f9ae1f494814c846b2d68" title="SearchAndReplaceWorker::replaceElement Replace all properties of each elements in list All element mu..." alt="" coords="268,149,443,191"/>
+<area shape="rect" id="node34" href="$d5/d50/class_element.html#afb9758ae3e31fdf7e1a832c97e88eb38" title="Element::setElementInformations Set new information for this element. If new information is different..." alt="" coords="533,958,747,985"/>
+<area shape="rect" id="node35" href="$d6/dc5/class_q_e_t_project.html#a3254e172c41b2a6bfa097d6cbb6d321a" title="QETProject::setFilePath Set the filepath of this project file Set a file path also create a backup fi..." alt="" coords="274,1123,437,1150"/>
+<area shape="rect" id="node38" href="$df/d92/class_border_title_block.html#a882d36e976ebf58565cf24daa9b1dfb5" title="BorderTitleBlock::setNextFolioNum." alt="" coords="554,1375,726,1416"/>
+<area shape="rect" id="node39" href="$df/d92/class_border_title_block.html#a659966503fe8d833c4a4a4a136ebffb7" title="BorderTitleBlock::setPreviousFolioNum." alt="" coords="543,1440,737,1481"/>
+<area shape="rect" id="node40" href="$d5/d50/class_element.html#abe6bac8645077e5a9a8000cdbd6ad680" title="Element::setUpFormula Set up the formula used to create the label of this element." alt="" coords="561,1506,719,1533"/>
+<area shape="rect" id="node42" href="$df/d92/class_border_title_block.html#a79fdcc4217e46e37ff593477dc0b3926" title="BorderTitleBlock::updateDiagramContextForTitleBlock Update the informations given to the titleblock t..." alt="" coords="543,1557,737,1599"/>
+<area shape="rect" id="node44" href="$d6/dc5/class_q_e_t_project.html#a113392389e518c47bd1a5bd797b9f109" title=" " alt="" coords="544,1257,736,1299"/>
+<area shape="rect" id="node50" href="$d6/dc5/class_q_e_t_project.html#a0fbf1fb78e6aefeb7f19421ce4941e39" title="QETProject::write Save the project in a file." alt="" coords="293,1443,418,1470"/>
+<area shape="rect" id="node3" href="$dd/d41/class_search_and_replace_worker.html#a8f85b91f168cb0021d8d672839ef6e60" title="SearchAndReplaceWorker::replaceDiagram Replace all properties of each diagram in diagram_list,..." alt="" coords="268,80,443,121"/>
+<area shape="rect" id="node4" href="$d3/d0d/class_search_and_replace_widget.html#ae05416b7c7a8e7994102425f3492eae6" title="SearchAndReplaceWidget::on_m_replace_all_pb_clicked Replace all checked item." alt="" coords="7,71,182,127"/>
+<area shape="rect" id="node5" href="$d3/d0d/class_search_and_replace_widget.html#a1d0aba92bf33ca8332d20381dc4ae0b2" title="SearchAndReplaceWidget::on_m_replace_pb_clicked Replace the current selection." alt="" coords="5,152,184,193"/>
+<area shape="rect" id="node6" href="$dd/d41/class_search_and_replace_worker.html#a791a7b1f22bfdcb0a97bf8014a623dbc" title=" " alt="" coords="7,5,182,47"/>
+<area shape="rect" id="node8" href="$d5/d68/class_title_block_properties_widget.html#a6e7cc054b37cf02c55257058816ce0e3" title="TitleBlockPropertiesWidget::initDialog Init this dialog." alt="" coords="265,215,446,256"/>
+<area shape="rect" id="node10" href="$dd/d2f/class_diagram_context_widget.html#aee9c6c9b81c4ff8414e19dd6360d558a" title="DiagramContextWidget::setContext Load the content from context into this widget." alt="" coords="276,280,435,321"/>
+<area shape="rect" id="node11" href="$d1/d0c/class_replace_folio_widget.html#a855b04d8e7b152fb6ecc0ff2cd0502d0" title="ReplaceFolioWidget::titleBlockProperties." alt="" coords="283,345,427,387"/>
+<area shape="rect" id="node13" href="$d3/d0d/class_search_and_replace_widget.html#af9115cfc5c27b5d4c30237ade5afd636" title=" " alt="" coords="264,411,447,452"/>
+<area shape="rect" id="node14" href="$d4/d58/class_replace_element_dialog.html#adce19e5b6d2dc4828821c620b8ab63dc" title=" " alt="" coords="13,499,176,540"/>
+<area shape="rect" id="node15" href="$d4/d58/class_replace_element_dialog.html#aacf300a729c27b2c88fef0e2a2fc9985" title="ReplaceElementDialog::setContext Set the current diagram context to be edited." alt="" coords="278,528,433,569"/>
+<area shape="rect" id="node17" href="$d9/db5/class_element_info_widget.html#a5fbd8daba9f10fde1aa82daf6e324efe" title="ElementInfoWidget::associatedUndo If the edited info is different of the actual element info,..." alt="" coords="285,593,425,635"/>
+<area shape="rect" id="node18" href="$d9/db5/class_element_info_widget.html#a6caa90c16817398b519e42969d6a22c8" title="ElementInfoWidget::elementInfoChange This slot is called when m_element::elementInformation change." alt="" coords="285,659,425,700"/>
+<area shape="rect" id="node20" href="$d3/d1a/class_title_block_properties.html#a34159ecbd785f43875604edcd94516e0" title=" " alt="" coords="285,724,425,765"/>
+<area shape="rect" id="node22" href="$d2/d17/class_element_scene.html#a75a10a9536448997c08a698e4b4bfc6c" title="ElementScene::applyInformations Applies the information (dimensions, hostpot, orientations,..." alt="" coords="246,971,465,998"/>
+<area shape="rect" id="node23" href="$d5/d50/class_element.html#a26daf036ef51d92d37c14171f59ef10e" title="Element::buildFromXml Build this element from an xml description." alt="" coords="277,1022,434,1049"/>
+<area shape="rect" id="node24" href="$d5/dd7/class_elements_location.html#abaf857915acb7ce450cc2b962e64984f" title="ElementsLocation::elementInformations." alt="" coords="265,789,445,831"/>
+<area shape="rect" id="node25" href="$d3/d1a/class_title_block_properties.html#a4118aa8910c93b1f36dca16bded4b2c3" title=" " alt="" coords="285,855,425,896"/>
+<area shape="rect" id="node28" href="$d6/dc5/class_q_e_t_project.html#ab93d48531177241f5bf3ac2bb3b7d33d" title="QETProject::readProjectPropertiesXml Load project properties from the XML description of the project." alt="" coords="232,921,479,947"/>
+<area shape="rect" id="node27" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="31,1073,159,1099"/>
+<area shape="rect" id="node33" href="$dd/d41/class_search_and_replace_worker.html#ab944ee00c1c4df17231576dc956a1c01" title=" " alt="" coords="7,217,182,259"/>
+<area shape="rect" id="node36" href="$d6/dc5/class_q_e_t_project.html#a260924555b97e401594c9ae6d6733281" title="QETProject::openFile." alt="" coords="21,1123,168,1150"/>
+<area shape="rect" id="node37" href="$d6/dc5/class_q_e_t_project.html#ac148924e97451c105a55ab298c8e6323" title="QETProject::QETProject." alt="" coords="12,1174,177,1201"/>
+<area shape="rect" id="node41" href="$de/d1f/class_diagram_event_add_element.html#af36a8f0e0220dfe7ba3430e99bb257b9" title="DiagramEventAddElement::addElement Add an element at the current pos en current rotation,..." alt="" coords="268,1499,443,1540"/>
+<area shape="rect" id="node43" href="$df/d92/class_border_title_block.html#a2eedcd7ea52baa0a71817a58e70956e3" title="BorderTitleBlock::setFolioData." alt="" coords="255,1565,455,1591"/>
+<area shape="rect" id="node45" href="$d6/dc5/class_q_e_t_project.html#ae0a665031afdee208609327d787dc3b1" title="QETProject::addDiagram Add a diagram in this project." alt="" coords="272,1326,439,1353"/>
+<area shape="rect" id="node46" href="$d6/dc5/class_q_e_t_project.html#a4950a2fd7df57591c523f9c596d859a0" title=" " alt="" coords="268,1377,443,1419"/>
+<area shape="rect" id="node47" href="$d6/dc5/class_q_e_t_project.html#a3865d200dd15b09cefa3fce584046a3a" title="QETProject::removeDiagram Remove diagram from project." alt="" coords="261,1174,449,1201"/>
+<area shape="rect" id="node48" href="$d6/dc5/class_q_e_t_project.html#a6480f5060510dffca4eae3b20194a8b4" title=" " alt="" coords="247,1225,463,1251"/>
+<area shape="rect" id="node49" href="$d6/dc5/class_q_e_t_project.html#a23411b4a0fa7e2ef984e7eadaa11469c" title=" " alt="" coords="285,1275,425,1302"/>
+</map>

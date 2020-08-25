@@ -1,0 +1,89 @@
+.TH "MultiPasteDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MultiPasteDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <multipastedialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMultiPasteDialog\fP (\fBDiagram\fP *diagram, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~MultiPasteDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdatePreview\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_button_box_accepted\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::MultiPasteDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBDiagramContent\fP \fBm_pasted_content\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_origin\fP"
+.br
+.ti -1c
+.RI "QDomDocument \fBm_document\fP"
+.br
+.ti -1c
+.RI "bool \fBm_accept\fP = false"
+.br
+.ti -1c
+.RI "QList< \fBDiagramContent\fP > \fBm_pasted_content_list\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MultiPasteDialog::MultiPasteDialog (\fBDiagram\fP * diagram, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "MultiPasteDialog::~MultiPasteDialog ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void MultiPasteDialog::on_m_button_box_accepted ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void MultiPasteDialog::updatePreview ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool MultiPasteDialog::m_accept = false\fC [private]\fP"
+
+.SS "\fBDiagram\fP* MultiPasteDialog::m_diagram = nullptr\fC [private]\fP"
+
+.SS "QDomDocument MultiPasteDialog::m_document\fC [private]\fP"
+
+.SS "QPointF MultiPasteDialog::m_origin\fC [private]\fP"
+
+.SS "\fBDiagramContent\fP MultiPasteDialog::m_pasted_content\fC [private]\fP"
+
+.SS "QList<\fBDiagramContent\fP> MultiPasteDialog::m_pasted_content_list\fC [private]\fP"
+
+.SS "Ui::MultiPasteDialog* MultiPasteDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

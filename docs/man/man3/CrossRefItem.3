@@ -1,0 +1,560 @@
+.TH "CrossRefItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CrossRefItem \- The \fBCrossRefItem\fP class This clas provide an item, for show the cross reference, like the contacts linked to a coil\&. The item setpos automaticaly when parent move\&. All slave displayed in cross ref will be updated when folio position change in the project\&. It's the responsability of the master element to informe displayed slave are moved, by calling the slot updateLabel By default master element is the parent graphics item of this Xref, but if the Xref must be snap to the label of master, the label become the parent of this Xref\&. This behavior can be changed at anytime by calling setProperties\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <crossrefitem\&.h>\fP
+.PP
+Inherits QGraphicsObject\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1009 }"
+.br
+.ti -1c
+.RI "enum \fBCONTACTS\fP { \fBNO\fP = 1, \fBNC\fP = 2, \fBNOC\fP = 3, \fBSW\fP = 4, \fBPower\fP = 8, \fBDelayOn\fP = 16, \fBDelayOff\fP = 32, \fBDelayOnOff\fP = 64, \fBDelay\fP = 112 }"
+.br
+.RI "The CONTACTS enum\&. "
+.in -1c
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateProperties\fP ()"
+.br
+.RI "\fBCrossRefItem::updateProperties\fP update the curent properties\&. "
+.ti -1c
+.RI "void \fBupdateLabel\fP ()"
+.br
+.RI "\fBCrossRefItem::updateLabel\fP Update the content of the item\&. "
+.ti -1c
+.RI "void \fBautoPos\fP ()"
+.br
+.RI "\fBCrossRefItem::autoPos\fP Calculate and set position automaticaly\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCrossRefItem\fP (\fBElement\fP *elmt)"
+.br
+.RI "\fBCrossRefItem::CrossRefItem\fP\&. "
+.ti -1c
+.RI "\fBCrossRefItem\fP (\fBElement\fP *elmt, \fBDynamicElementTextItem\fP *text)"
+.br
+.RI "\fBCrossRefItem::CrossRefItem\fP\&. "
+.ti -1c
+.RI "\fBCrossRefItem\fP (\fBElement\fP *elmt, \fBElementTextItemGroup\fP *group)"
+.br
+.RI "\fBCrossRefItem::CrossRefItem\fP\&. "
+.ti -1c
+.RI "\fB~CrossRefItem\fP () override"
+.br
+.RI "\fBCrossRefItem::~CrossRefItem\fP Default destructor\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBCrossRefItem::boundingRect\fP\&. "
+.ti -1c
+.RI "QPainterPath \fBshape\fP () const override"
+.br
+.RI "\fBCrossRefItem::shape\fP\&. "
+.ti -1c
+.RI "QString \fBelementPositionText\fP (const \fBElement\fP *elmt, const bool &add_prefix=false) const"
+.br
+.RI "\fBCrossRefItem::elementPositionText\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBsceneEvent\fP (QEvent *event) override"
+.br
+.RI "\fBCrossRefItem::sceneEvent\fP\&. "
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override"
+.br
+.RI "\fBCrossRefItem::paint\fP Paint this item\&. "
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBCrossRefItem::mouseDoubleClickEvent\fP\&. "
+.ti -1c
+.RI "void \fBhoverEnterEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBCrossRefItem::hoverEnterEvent\fP\&. "
+.ti -1c
+.RI "void \fBhoverMoveEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBCrossRefItem::hoverMoveEvent\fP\&. "
+.ti -1c
+.RI "void \fBhoverLeaveEvent\fP (QGraphicsSceneHoverEvent *event) override"
+.br
+.RI "\fBCrossRefItem::hoverLeaveEvent\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.RI "\fBCrossRefItem::init\fP init this Xref\&. "
+.ti -1c
+.RI "void \fBsetUpConnection\fP ()"
+.br
+.RI "\fBCrossRefItem::setUpConnection\fP Set up several connection to keep up to date the Xref\&. "
+.ti -1c
+.RI "void \fBlinkedChanged\fP ()"
+.br
+.RI "\fBCrossRefItem::linkedChanged\fP\&. "
+.ti -1c
+.RI "void \fBbuildHeaderContact\fP ()"
+.br
+.RI "\fBCrossRefItem::buildHeaderContact\fP Draw the QPicture of m_hdr_no_ctc and m_hdr_nc_ctc\&. "
+.ti -1c
+.RI "void \fBsetUpCrossBoundingRect\fP (QPainter &painter)"
+.br
+.RI "\fBCrossRefItem::setUpCrossBoundingRect\fP Get the numbers of slaves elements linked to this parent element, for calculate the size of the cross bounding rect\&. The cross ref item is drawing according to the size of the cross bounding rect\&. "
+.ti -1c
+.RI "void \fBdrawAsCross\fP (QPainter &painter)"
+.br
+.RI "\fBCrossRefItem::drawAsCross\fP Draw this crossref with a cross\&. "
+.ti -1c
+.RI "void \fBdrawAsContacts\fP (QPainter &painter)"
+.br
+.RI "\fBCrossRefItem::drawAsContacts\fP Draw this crossref with symbolic contacts\&. "
+.ti -1c
+.RI "QRectF \fBdrawContact\fP (QPainter &painter, int flags, \fBElement\fP *elmt)"
+.br
+.RI "\fBCrossRefItem::drawContact\fP Draw one contact, the type of contact to draw is define in flags\&. "
+.ti -1c
+.RI "void \fBfillCrossRef\fP (QPainter &painter)"
+.br
+.RI "\fBCrossRefItem::fillCrossRef\fP Fill the content of the cross ref\&. "
+.ti -1c
+.RI "void \fBAddExtraInfo\fP (QPainter &painter, const QString &)"
+.br
+.RI "\fBCrossRefItem::AddExtraInfo\fP Add the comment info of the parent item if needed\&. "
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBNOElements\fP () const"
+.br
+.RI "\fBCrossRefItem::NOElements\fP\&. "
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBNCElements\fP () const"
+.br
+.RI "\fBCrossRefItem::NCElements\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElement\fP * \fBm_element\fP"
+.br
+.ti -1c
+.RI "QRectF \fBm_bounding_rect\fP"
+.br
+.ti -1c
+.RI "QPicture \fBm_drawing\fP"
+.br
+.ti -1c
+.RI "QPicture \fBm_hdr_no_ctc\fP"
+.br
+.ti -1c
+.RI "QPicture \fBm_hdr_nc_ctc\fP"
+.br
+.ti -1c
+.RI "QPainterPath \fBm_shape_path\fP"
+.br
+.ti -1c
+.RI "\fBXRefProperties\fP \fBm_properties\fP"
+.br
+.ti -1c
+.RI "int \fBm_drawed_contacts\fP"
+.br
+.ti -1c
+.RI "QMultiMap< \fBElement\fP *, QRectF > \fBm_hovered_contacts_map\fP"
+.br
+.ti -1c
+.RI "\fBElement\fP * \fBm_hovered_contact\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBDynamicElementTextItem\fP * \fBm_text\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBElementTextItemGroup\fP * \fBm_group\fP = nullptr"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_slave_connection\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_update_connection\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBCrossRefItem\fP class This clas provide an item, for show the cross reference, like the contacts linked to a coil\&. The item setpos automaticaly when parent move\&. All slave displayed in cross ref will be updated when folio position change in the project\&. It's the responsability of the master element to informe displayed slave are moved, by calling the slot updateLabel By default master element is the parent graphics item of this Xref, but if the Xref must be snap to the label of master, the label become the parent of this Xref\&. This behavior can be changed at anytime by calling setProperties\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SS "enum \fBCrossRefItem::CONTACTS\fP"
+
+.PP
+The CONTACTS enum\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINO \fP\fP
+.TP
+\fB\fINC \fP\fP
+.TP
+\fB\fINOC \fP\fP
+.TP
+\fB\fISW \fP\fP
+.TP
+\fB\fIPower \fP\fP
+.TP
+\fB\fIDelayOn \fP\fP
+.TP
+\fB\fIDelayOff \fP\fP
+.TP
+\fB\fIDelayOnOff \fP\fP
+.TP
+\fB\fIDelay \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CrossRefItem::CrossRefItem (\fBElement\fP * elmt)\fC [explicit]\fP"
+
+.PP
+\fBCrossRefItem::CrossRefItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP : element to display the cross ref 
+.RE
+.PP
+
+.SS "CrossRefItem::CrossRefItem (\fBElement\fP * elmt, \fBDynamicElementTextItem\fP * text)\fC [explicit]\fP"
+
+.PP
+\fBCrossRefItem::CrossRefItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP : element to display the cross ref 
+.br
+\fItext\fP : If the Xref must be displayed under a text, the text\&. 
+.RE
+.PP
+
+.SS "CrossRefItem::CrossRefItem (\fBElement\fP * elmt, \fBElementTextItemGroup\fP * group)\fC [explicit]\fP"
+
+.PP
+\fBCrossRefItem::CrossRefItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP : element to display the cross ref 
+.br
+\fIgroup\fP : If the Xref must be displayed under a group, the group\&. 
+.RE
+.PP
+
+.SS "CrossRefItem::~CrossRefItem ()\fC [override]\fP"
+
+.PP
+\fBCrossRefItem::~CrossRefItem\fP Default destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void CrossRefItem::AddExtraInfo (QPainter & painter, const QString & type)\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::AddExtraInfo\fP Add the comment info of the parent item if needed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP painter to use for draw the text 
+.br
+\fItype\fP type of Info do be draw e\&.g\&. comment, location\&. 
+.RE
+.PP
+
+.SS "void CrossRefItem::autoPos ()\fC [slot]\fP"
+
+.PP
+\fBCrossRefItem::autoPos\fP Calculate and set position automaticaly\&. 
+.SS "QRectF CrossRefItem::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBCrossRefItem::boundingRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the bounding rect of this item 
+.RE
+.PP
+
+.SS "void CrossRefItem::buildHeaderContact ()\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::buildHeaderContact\fP Draw the QPicture of m_hdr_no_ctc and m_hdr_nc_ctc\&. 
+.SS "void CrossRefItem::drawAsContacts (QPainter & painter)\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::drawAsContacts\fP Draw this crossref with symbolic contacts\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP painter to use 
+.RE
+.PP
+
+.SS "void CrossRefItem::drawAsCross (QPainter & painter)\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::drawAsCross\fP Draw this crossref with a cross\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP painter to use 
+.RE
+.PP
+
+.SS "QRectF CrossRefItem::drawContact (QPainter & painter, int flags, \fBElement\fP * elmt)\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::drawContact\fP Draw one contact, the type of contact to draw is define in flags\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP : painter to use 
+.br
+\fIflags\fP : define how to draw the contact (see enul CONTACTS) 
+.br
+\fIelmt\fP : the element to display text (the position of the contact) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The bounding rect of the draw (contact + text) 
+.RE
+.PP
+take exemple of this code for display the terminal text
+.SS "QString CrossRefItem::elementPositionText (const \fBElement\fP * elmt, const bool & add_prefix = \fCfalse\fP) const"
+
+.PP
+\fBCrossRefItem::elementPositionText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP 
+.br
+\fIadd_prefix\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the string corresponding to the position of elmt in the diagram\&. if add_prefix is true, prefix (for power and delay contact) is added to the poistion text\&. 
+.RE
+.PP
+
+.SS "void CrossRefItem::fillCrossRef (QPainter & painter)\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::fillCrossRef\fP Fill the content of the cross ref\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP painter to use\&. 
+.RE
+.PP
+
+.SS "void CrossRefItem::hoverEnterEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBCrossRefItem::hoverEnterEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void CrossRefItem::hoverLeaveEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBCrossRefItem::hoverLeaveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void CrossRefItem::hoverMoveEvent (QGraphicsSceneHoverEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBCrossRefItem::hoverMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "void CrossRefItem::init ()\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::init\fP init this Xref\&. 
+.SS "void CrossRefItem::linkedChanged ()\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::linkedChanged\fP\&. 
+.SS "void CrossRefItem::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBCrossRefItem::mouseDoubleClickEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.SS "QList< \fBElement\fP * > CrossRefItem::NCElements () const\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::NCElements\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The linked elements of m_element wich are close or switch contact If linked element is a power contact, xref propertie is set to don't show power contact and this cross item must be drawed as cross, the element is not append in the list\&. 
+.RE
+.PP
+
+.SS "QList< \fBElement\fP * > CrossRefItem::NOElements () const\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::NOElements\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The linked elements of m_element wich are open or switch contact\&. If linked element is a power contact, xref propertie is set to don't show power contact and this cross item must be drawed as cross, the element is not append in the list\&. 
+.RE
+.PP
+
+.SS "void CrossRefItem::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBCrossRefItem::paint\fP Paint this item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.br
+\fIoption\fP 
+.br
+\fIwidget\fP 
+.RE
+.PP
+
+.SS "bool CrossRefItem::sceneEvent (QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBCrossRefItem::sceneEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void CrossRefItem::setUpConnection ()\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::setUpConnection\fP Set up several connection to keep up to date the Xref\&. 
+.SS "void CrossRefItem::setUpCrossBoundingRect (QPainter & painter)\fC [private]\fP"
+
+.PP
+\fBCrossRefItem::setUpCrossBoundingRect\fP Get the numbers of slaves elements linked to this parent element, for calculate the size of the cross bounding rect\&. The cross ref item is drawing according to the size of the cross bounding rect\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.RE
+.PP
+
+.SS "QPainterPath CrossRefItem::shape () const\fC [override]\fP"
+
+.PP
+\fBCrossRefItem::shape\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the shape of this item 
+.RE
+.PP
+
+.SS "int CrossRefItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "void CrossRefItem::updateLabel ()\fC [slot]\fP"
+
+.PP
+\fBCrossRefItem::updateLabel\fP Update the content of the item\&. 
+.SS "void CrossRefItem::updateProperties ()\fC [slot]\fP"
+
+.PP
+\fBCrossRefItem::updateProperties\fP update the curent properties\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QRectF CrossRefItem::m_bounding_rect\fC [private]\fP"
+
+.SS "int CrossRefItem::m_drawed_contacts\fC [private]\fP"
+
+.SS "QPicture CrossRefItem::m_drawing\fC [private]\fP"
+
+.SS "\fBElement\fP* CrossRefItem::m_element\fC [private]\fP"
+
+.SS "\fBElementTextItemGroup\fP* CrossRefItem::m_group = nullptr\fC [private]\fP"
+
+.SS "QPicture CrossRefItem::m_hdr_nc_ctc\fC [private]\fP"
+
+.SS "QPicture CrossRefItem::m_hdr_no_ctc\fC [private]\fP"
+
+.SS "\fBElement\fP* CrossRefItem::m_hovered_contact = nullptr\fC [private]\fP"
+
+.SS "QMultiMap<\fBElement\fP *, QRectF> CrossRefItem::m_hovered_contacts_map\fC [private]\fP"
+
+.SS "\fBXRefProperties\fP CrossRefItem::m_properties\fC [private]\fP"
+
+.SS "QPainterPath CrossRefItem::m_shape_path\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> CrossRefItem::m_slave_connection\fC [private]\fP"
+
+.SS "\fBDynamicElementTextItem\fP* CrossRefItem::m_text = nullptr\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> CrossRefItem::m_update_connection\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

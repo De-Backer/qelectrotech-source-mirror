@@ -1,0 +1,82 @@
+.TH "ExportElementTextPattern" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExportElementTextPattern
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementtextpattern\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExportElementTextPattern\fP (\fBElement\fP *elmt)"
+.br
+.RI "\fBExportElementTextPattern::ExportElementTextPattern\fP Constructor\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QString \fBgetName\fP (bool &ok) const"
+.br
+.RI "ExportElementTextConf::getName Open a dialog to let user set the name of the conf and return it\&. "
+.ti -1c
+.RI "QWidget * \fBparentWidget\fP () const"
+.br
+.ti -1c
+.RI "QDomDocument \fBxmlConf\fP () const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElement\fP * \fBm_element\fP = nullptr"
+.br
+.ti -1c
+.RI "QString \fBm_name\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ExportElementTextPattern::ExportElementTextPattern (\fBElement\fP * elmt)"
+
+.PP
+\fBExportElementTextPattern::ExportElementTextPattern\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QString ExportElementTextPattern::getName (bool & ok) const\fC [private]\fP"
+
+.PP
+ExportElementTextConf::getName Open a dialog to let user set the name of the conf and return it\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QWidget * ExportElementTextPattern::parentWidget () const\fC [private]\fP"
+
+.SS "QDomDocument ExportElementTextPattern::xmlConf () const\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElement\fP* ExportElementTextPattern::m_element = nullptr\fC [private]\fP"
+
+.SS "QString ExportElementTextPattern::m_name\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

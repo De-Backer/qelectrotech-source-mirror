@@ -1,0 +1,370 @@
+.TH "LinkSingleElementWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LinkSingleElementWidget \- The \fBLinkSingleElementWidget\fP class this class provide a widget to select an element to be linked to the element given in the constructor\&. The element given in constructor must be linked with only one other element (like report or slave element)\&. This widget detect automaticaly the kind of element given in the constructor and search all element that can be linked with it\&. If the element is already linked, the widget ask user to unlink\&. This widget embedded the diagram command for undo/redo the action\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <linksingleelementwidget\&.h>\fP
+.PP
+Inherits \fBAbstractElementPropertiesEditorWidget\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateUi\fP () override"
+.br
+.RI "\fBLinkSingleElementWidget::updateUi\fP Update the content of this widget\&. "
+.ti -1c
+.RI "void \fBbuildTree\fP ()"
+.br
+.RI "\fBLinkSingleElementWidget::buildTree\fP Build the content of the QTreeWidget\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLinkSingleElementWidget\fP (\fBElement\fP *elmt, QWidget *parent=nullptr)"
+.br
+.RI "Methods\&. "
+.ti -1c
+.RI "\fB~LinkSingleElementWidget\fP () override"
+.br
+.RI "\fBLinkSingleElementWidget::~LinkSingleElementWidget\fP Default destructor\&. "
+.ti -1c
+.RI "void \fBsetElement\fP (\fBElement\fP *element) override"
+.br
+.RI "\fBLinkSingleElementWidget::setElement\fP Set element to be the edited element\&. "
+.ti -1c
+.RI "void \fBapply\fP () override"
+.br
+.RI "\fBLinkSingleElementWidget::apply\fP Apply the new property of the edited element by pushing the associated undo command to parent project undo stack\&. "
+.ti -1c
+.RI "QUndoCommand * \fBassociatedUndo\fP () const override"
+.br
+.RI "\fBLinkSingleElementWidget::associatedUndo\fP\&. "
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.RI "\fBLinkSingleElementWidget::title\fP\&. "
+.ti -1c
+.RI "bool \fBsetLiveEdit\fP (bool live_edit) override"
+.br
+.RI "\fBLinkSingleElementWidget::setLiveEdit\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBdiagramWasRemovedFromProject\fP ()"
+.br
+.RI "\fBLinkSingleElementWidget::diagramWasRemovedFromProject\fP This slot is called when a diagram is removed from the parent project of edited element to update the content of this widget\&. "
+.ti -1c
+.RI "void \fBshowedElementWasDeleted\fP ()"
+.br
+.ti -1c
+.RI "void \fBlinkTriggered\fP ()"
+.br
+.RI "\fBLinkSingleElementWidget::linkTriggered\fP Action linkis triggered\&. "
+.ti -1c
+.RI "void \fBhideButtons\fP ()"
+.br
+.RI "\fBLinkSingleElementWidget::hideButtons\fP Hide the button displayed when element is already linked\&. "
+.ti -1c
+.RI "void \fBshowButtons\fP ()"
+.br
+.RI "\fBLinkSingleElementWidget::showButtons\fP Show the button displayed when element is already linked\&. "
+.ti -1c
+.RI "void \fBheaderCustomContextMenuRequested\fP (const QPoint &pos)"
+.br
+.ti -1c
+.RI "void \fBon_m_unlink_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_tree_widget_itemDoubleClicked\fP (QTreeWidgetItem *item, int column)"
+.br
+.RI "\fBLinkSingleElementWidget::on_m_tree_widget_itemDoubleClicked\fP Highlight the element represented by item\&. "
+.ti -1c
+.RI "void \fBon_m_tree_widget_customContextMenuRequested\fP (const QPoint &pos)"
+.br
+.ti -1c
+.RI "void \fBon_m_show_linked_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_show_this_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_search_field_textEdited\fP (const QString &arg1)"
+.br
+.RI "\fBLinkSingleElementWidget::on_m_search_field_textEdited\fP Search all items which match with arg1 and shows it, other items is hidden\&. If arg1 is empty, show all items\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBElement\fP * > \fBavailableElements\fP ()"
+.br
+.RI "\fBLinkSingleElementWidget::availableElements\fP\&. "
+.ti -1c
+.RI "void \fBsetUpCompleter\fP ()"
+.br
+.RI "\fBLinkSingleElementWidget::setUpCompleter\fP Setup the completer of search_field\&. "
+.ti -1c
+.RI "void \fBclearTreeWidget\fP ()"
+.br
+.RI "\fBLinkSingleElementWidget::clearTreeWidget\fP Clear the tree widget\&. Delete all QTreeWidget (in the tree widget and in the hash)\&. Clear the hash\&. "
+.ti -1c
+.RI "void \fBsetUpHeaderLabels\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::LinkSingleElementWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "bool \fBm_unlink\fP = false"
+.br
+.ti -1c
+.RI "\fBElement::kind\fP \fBm_filter\fP"
+.br
+.ti -1c
+.RI "QHash< QTreeWidgetItem *, \fBElement\fP * > \fBm_qtwi_elmt_hash\fP"
+.br
+.ti -1c
+.RI "QHash< QTreeWidgetItem *, QStringList > \fBm_qtwi_strl_hash\fP"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_qtwi_at_context_menu\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeWidgetItem * \fBm_pending_qtwi\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBElement\fP * \fBm_showed_element\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBElement\fP * \fBm_element_to_link\fP = nullptr"
+.br
+.ti -1c
+.RI "QMenu * \fBm_context_menu\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_link_action\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_show_qtwi\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_show_element\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_save_header_state\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBLinkSingleElementWidget\fP class this class provide a widget to select an element to be linked to the element given in the constructor\&. The element given in constructor must be linked with only one other element (like report or slave element)\&. This widget detect automaticaly the kind of element given in the constructor and search all element that can be linked with it\&. If the element is already linked, the widget ask user to unlink\&. This widget embedded the diagram command for undo/redo the action\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "LinkSingleElementWidget::LinkSingleElementWidget (\fBElement\fP * elmt, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+Methods\&. \fBLinkSingleElementWidget::LinkSingleElementWidget\fP Default constructor\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP the edited element 
+.br
+\fIparent\fP the parent widget 
+.RE
+.PP
+
+.SS "LinkSingleElementWidget::~LinkSingleElementWidget ()\fC [override]\fP"
+
+.PP
+\fBLinkSingleElementWidget::~LinkSingleElementWidget\fP Default destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void LinkSingleElementWidget::apply ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBLinkSingleElementWidget::apply\fP Apply the new property of the edited element by pushing the associated undo command to parent project undo stack\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "QUndoCommand * LinkSingleElementWidget::associatedUndo () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBLinkSingleElementWidget::associatedUndo\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the undo command associated to the current edition if there isn't change, return nulptr 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "QList< \fBElement\fP * > LinkSingleElementWidget::availableElements ()\fC [private]\fP"
+
+.PP
+\fBLinkSingleElementWidget::availableElements\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+A QList with all available element to be linked with the edited element\&. This methode take care of the combo box 'find in diagram' 
+.RE
+.PP
+
+.SS "void LinkSingleElementWidget::buildTree ()\fC [slot]\fP"
+
+.PP
+\fBLinkSingleElementWidget::buildTree\fP Build the content of the QTreeWidget\&. 
+.SS "void LinkSingleElementWidget::clearTreeWidget ()\fC [private]\fP"
+
+.PP
+\fBLinkSingleElementWidget::clearTreeWidget\fP Clear the tree widget\&. Delete all QTreeWidget (in the tree widget and in the hash)\&. Clear the hash\&. 
+.SS "void LinkSingleElementWidget::diagramWasRemovedFromProject ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBLinkSingleElementWidget::diagramWasRemovedFromProject\fP This slot is called when a diagram is removed from the parent project of edited element to update the content of this widget\&. 
+.SS "void LinkSingleElementWidget::headerCustomContextMenuRequested (const QPoint & pos)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void LinkSingleElementWidget::hideButtons ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBLinkSingleElementWidget::hideButtons\fP Hide the button displayed when element is already linked\&. 
+.SS "void LinkSingleElementWidget::linkTriggered ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBLinkSingleElementWidget::linkTriggered\fP Action linkis triggered\&. 
+.SS "void LinkSingleElementWidget::on_m_search_field_textEdited (const QString & arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBLinkSingleElementWidget::on_m_search_field_textEdited\fP Search all items which match with arg1 and shows it, other items is hidden\&. If arg1 is empty, show all items\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg1\fP 
+.RE
+.PP
+
+.SS "void LinkSingleElementWidget::on_m_show_linked_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void LinkSingleElementWidget::on_m_show_this_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void LinkSingleElementWidget::on_m_tree_widget_customContextMenuRequested (const QPoint & pos)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void LinkSingleElementWidget::on_m_tree_widget_itemDoubleClicked (QTreeWidgetItem * item, int column)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBLinkSingleElementWidget::on_m_tree_widget_itemDoubleClicked\fP Highlight the element represented by item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP 
+.br
+\fIcolumn\fP 
+.RE
+.PP
+
+.SS "void LinkSingleElementWidget::on_m_unlink_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void LinkSingleElementWidget::setElement (\fBElement\fP * element)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBLinkSingleElementWidget::setElement\fP Set element to be the edited element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.PP
+Implements \fBAbstractElementPropertiesEditorWidget\fP\&.
+.SS "bool LinkSingleElementWidget::setLiveEdit (bool live_edit)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBLinkSingleElementWidget::setLiveEdit\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlive_edit\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void LinkSingleElementWidget::setUpCompleter ()\fC [private]\fP"
+
+.PP
+\fBLinkSingleElementWidget::setUpCompleter\fP Setup the completer of search_field\&. 
+.SS "void LinkSingleElementWidget::setUpHeaderLabels ()\fC [private]\fP"
+
+.SS "void LinkSingleElementWidget::showButtons ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBLinkSingleElementWidget::showButtons\fP Show the button displayed when element is already linked\&. 
+.SS "void LinkSingleElementWidget::showedElementWasDeleted ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "QString LinkSingleElementWidget::title () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBLinkSingleElementWidget::title\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the title used for this editor 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void LinkSingleElementWidget::updateUi ()\fC [override]\fP, \fC [slot]\fP"
+
+.PP
+\fBLinkSingleElementWidget::updateUi\fP Update the content of this widget\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QMenu* LinkSingleElementWidget::m_context_menu\fC [private]\fP"
+
+.SS "\fBElement\fP * LinkSingleElementWidget::m_element_to_link = nullptr\fC [private]\fP"
+
+.SS "\fBElement::kind\fP LinkSingleElementWidget::m_filter\fC [private]\fP"
+
+.SS "QAction* LinkSingleElementWidget::m_link_action\fC [private]\fP"
+
+.SS "QTreeWidgetItem * LinkSingleElementWidget::m_pending_qtwi = nullptr\fC [private]\fP"
+
+.SS "QTreeWidgetItem* LinkSingleElementWidget::m_qtwi_at_context_menu = nullptr\fC [private]\fP"
+
+.SS "QHash<QTreeWidgetItem*, \fBElement\fP*> LinkSingleElementWidget::m_qtwi_elmt_hash\fC [private]\fP"
+
+.SS "QHash<QTreeWidgetItem*, QStringList> LinkSingleElementWidget::m_qtwi_strl_hash\fC [private]\fP"
+
+.SS "QAction * LinkSingleElementWidget::m_save_header_state\fC [private]\fP"
+
+.SS "QAction * LinkSingleElementWidget::m_show_element\fC [private]\fP"
+
+.SS "QAction * LinkSingleElementWidget::m_show_qtwi\fC [private]\fP"
+
+.SS "\fBElement\fP* LinkSingleElementWidget::m_showed_element = nullptr\fC [private]\fP"
+
+.SS "bool LinkSingleElementWidget::m_unlink = false\fC [private]\fP"
+
+.SS "Ui::LinkSingleElementWidget* LinkSingleElementWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

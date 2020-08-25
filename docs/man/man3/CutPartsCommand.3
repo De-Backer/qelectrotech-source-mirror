@@ -1,0 +1,59 @@
+.TH "CutPartsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CutPartsCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <editorcommands\&.h>\fP
+.PP
+Inherits \fBDeletePartsCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCutPartsCommand\fP (\fBElementScene\fP *, const QList< QGraphicsItem * > &, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~CutPartsCommand\fP () override"
+.br
+.RI "Destructeur\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCutPartsCommand\fP (const \fBCutPartsCommand\fP &)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This command cut primitives when editing an electrical element\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CutPartsCommand::CutPartsCommand (\fBElementScene\fP * scene, const QList< QGraphicsItem * > & parts, QUndoCommand * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP \fBElementScene\fP concernee 
+.br
+\fIparts\fP Liste des parties coupees 
+.br
+\fIparent\fP QUndoCommand parent 
+.RE
+.PP
+
+.SS "CutPartsCommand::~CutPartsCommand ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "CutPartsCommand::CutPartsCommand (const \fBCutPartsCommand\fP &)\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

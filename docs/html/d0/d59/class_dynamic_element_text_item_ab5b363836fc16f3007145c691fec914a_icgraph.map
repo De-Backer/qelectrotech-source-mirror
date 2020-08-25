@@ -1,0 +1,11 @@
+<map id="DynamicElementTextItem::fromXml" name="DynamicElementTextItem::fromXml">
+<area shape="rect" id="node1" title="DynamicElementTextItem::fromXml Import this text from xml." alt="" coords="849,64,1023,105"/>
+<area shape="rect" id="node2" href="$d6/dfc/class_import_element_text_pattern.html#ab5ee9f26fdbf4ec21dc4f853fe45ac30" title="ImportElementTextPattern::apply Apply the user choice." alt="" coords="621,5,795,47"/>
+<area shape="rect" id="node4" href="$d5/d50/class_element.html#a904453810089404ad88dc7ad1d99a441" title="Element::fromXml Import the parameters of this element from a xml document. When call this function e..." alt="" coords="645,71,771,98"/>
+<area shape="rect" id="node6" href="$d5/d50/class_element.html#a3636c0bffbfe918f48a44c58044a5381" title="Element::parseDynamicText Create the dynamic text field describ in dom_element." alt="" coords="615,122,801,149"/>
+<area shape="rect" id="node3" href="$d6/dfc/class_import_element_text_pattern.html#a95c6943c345304d7858f4daded820cbf" title=" " alt="" coords="384,5,567,47"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="411,71,539,98"/>
+<area shape="rect" id="node7" href="$d5/d50/class_element.html#a89723eed743ef8077a2e25322bd3e8b4" title="Element::parseElement Parse the element of the xml description of this element." alt="" coords="397,122,554,149"/>
+<area shape="rect" id="node8" href="$d5/d50/class_element.html#a26daf036ef51d92d37c14171f59ef10e" title="Element::buildFromXml Build this element from an xml description." alt="" coords="179,122,336,149"/>
+<area shape="rect" id="node9" href="$d5/d50/class_element.html#a5ecb4a8b8a296bf3a5bb90cb66fe6d49" title="Element::Element." alt="" coords="5,122,131,149"/>
+</map>

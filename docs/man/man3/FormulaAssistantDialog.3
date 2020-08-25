@@ -1,0 +1,84 @@
+.TH "FormulaAssistantDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FormulaAssistantDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <formulaassistantdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFormulaAssistantDialog\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~FormulaAssistantDialog\fP () override"
+.br
+.ti -1c
+.RI "void \fBsetForbiddenVariables\fP (const QStringList &list)"
+.br
+.ti -1c
+.RI "void \fBsetText\fP (const QString &text)"
+.br
+.ti -1c
+.RI "void \fBsetFormula\fP (const QString &text)"
+.br
+.ti -1c
+.RI "QString \fBformula\fP () const"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_line_edit_textChanged\fP (const QString &arg1)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::FormulaAssistantDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "QRegularExpression \fBm_rx\fP"
+.br
+.ti -1c
+.RI "QString \fBm_formula\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "FormulaAssistantDialog::FormulaAssistantDialog (QWidget * parent = \fCnullptr\fP)"
+
+.SS "FormulaAssistantDialog::~FormulaAssistantDialog ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QString FormulaAssistantDialog::formula () const"
+
+.SS "void FormulaAssistantDialog::on_m_line_edit_textChanged (const QString & arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void FormulaAssistantDialog::setForbiddenVariables (const QStringList & list)"
+
+.SS "void FormulaAssistantDialog::setFormula (const QString & text)"
+
+.SS "void FormulaAssistantDialog::setText (const QString & text)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString FormulaAssistantDialog::m_formula\fC [private]\fP"
+
+.SS "QRegularExpression FormulaAssistantDialog::m_rx\fC [private]\fP"
+
+.SS "Ui::FormulaAssistantDialog* FormulaAssistantDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

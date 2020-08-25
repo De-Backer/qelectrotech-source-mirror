@@ -1,0 +1,147 @@
+.TH "AddTextsGroupCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AddTextsGroupCommand \- The \fBAddTextsGroupCommand\fP class Manage the adding of a texts group\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <addelementtextcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAddTextsGroupCommand\fP (\fBElement\fP *element, QString groupe_name, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBAddTextsGroupCommand::AddTextsGroupCommand\fP\&. "
+.ti -1c
+.RI "\fBAddTextsGroupCommand\fP (\fBElement\fP *element, const QDomElement &dom_element, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBAddTextsGroupCommand::AddTextsGroupCommand\fP\&. "
+.ti -1c
+.RI "\fBAddTextsGroupCommand\fP (\fBElement\fP *element, QString groupe_name, QList< \fBDynamicElementTextItem\fP * > texts_list, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBAddTextsGroupCommand::AddTextsGroupCommand\fP\&. "
+.ti -1c
+.RI "\fB~AddTextsGroupCommand\fP () override"
+.br
+.RI "\fBAddTextsGroupCommand::~AddTextsGroupCommand\fP Destructor\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBAddTextsGroupCommand::undo\fP\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBAddTextsGroupCommand::redo\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< \fBElement\fP > \fBm_element\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBElementTextItemGroup\fP > \fBm_group\fP"
+.br
+.ti -1c
+.RI "QList< \fBDynamicElementTextItem\fP * > \fBm_deti_list\fP"
+.br
+.ti -1c
+.RI "QDomElement \fBm_dom_element\fP"
+.br
+.ti -1c
+.RI "QString \fBm_name\fP"
+.br
+.ti -1c
+.RI "bool \fBm_first_undo\fP = true"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBAddTextsGroupCommand\fP class Manage the adding of a texts group\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AddTextsGroupCommand::AddTextsGroupCommand (\fBElement\fP * element, QString groupe_name, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBAddTextsGroupCommand::AddTextsGroupCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP : the element to add a new group 
+.br
+\fIgroupe_name\fP : the name of the group 
+.br
+\fIparent\fP : parent undo 
+.RE
+.PP
+
+.SS "AddTextsGroupCommand::AddTextsGroupCommand (\fBElement\fP * element, const QDomElement & dom_element, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBAddTextsGroupCommand::AddTextsGroupCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP : The element to add a new group 
+.br
+\fIdom_element\fP : the first time the group is created, we call the function fromXml of the group, and give dom_element has argument\&. 
+.br
+\fIparent\fP : parent undo 
+.RE
+.PP
+
+.SS "AddTextsGroupCommand::AddTextsGroupCommand (\fBElement\fP * element, QString groupe_name, QList< \fBDynamicElementTextItem\fP * > texts_list, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBAddTextsGroupCommand::AddTextsGroupCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP : The element to add a new group 
+.br
+\fIgroupe_name\fP 
+.br
+\fItexts_list\fP : a list of texts to add to the created group (texts must be child of element) 
+.br
+\fIparent\fP : parent undo 
+.RE
+.PP
+
+.SS "AddTextsGroupCommand::~AddTextsGroupCommand ()\fC [override]\fP"
+
+.PP
+\fBAddTextsGroupCommand::~AddTextsGroupCommand\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void AddTextsGroupCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBAddTextsGroupCommand::redo\fP\&. 
+.SS "void AddTextsGroupCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBAddTextsGroupCommand::undo\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<\fBDynamicElementTextItem\fP *> AddTextsGroupCommand::m_deti_list\fC [private]\fP"
+
+.SS "QDomElement AddTextsGroupCommand::m_dom_element\fC [private]\fP"
+
+.SS "QPointer<\fBElement\fP> AddTextsGroupCommand::m_element\fC [private]\fP"
+
+.SS "bool AddTextsGroupCommand::m_first_undo = true\fC [private]\fP"
+
+.SS "QPointer<\fBElementTextItemGroup\fP> AddTextsGroupCommand::m_group\fC [private]\fP"
+
+.SS "QString AddTextsGroupCommand::m_name\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

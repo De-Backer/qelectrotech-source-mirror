@@ -1,0 +1,94 @@
+.TH "ChangeTitleBlockCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChangeTitleBlockCommand \- The \fBChangeTitleBlockCommand\fP class This command changes the title block properties for a particular diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <changetitleblockcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeTitleBlockCommand\fP (\fBDiagram\fP *, const \fBTitleBlockProperties\fP &, const \fBTitleBlockProperties\fP &, QUndoCommand *=nullptr)"
+.br
+.RI "\fBChangeTitleBlockCommand::ChangeTitleBlockCommand\fP\&. "
+.ti -1c
+.RI "\fB~ChangeTitleBlockCommand\fP () override"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeTitleBlockCommand\fP (const \fBChangeTitleBlockCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP"
+.br
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBold_titleblock\fP"
+.br
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBnew_titleblock\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBChangeTitleBlockCommand\fP class This command changes the title block properties for a particular diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChangeTitleBlockCommand::ChangeTitleBlockCommand (\fBDiagram\fP * d, const \fBTitleBlockProperties\fP & old_ip, const \fBTitleBlockProperties\fP & new_ip, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBChangeTitleBlockCommand::ChangeTitleBlockCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP 
+.br
+\fIold_ip\fP 
+.br
+\fInew_ip\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "ChangeTitleBlockCommand::~ChangeTitleBlockCommand ()\fC [override]\fP"
+
+.SS "ChangeTitleBlockCommand::ChangeTitleBlockCommand (const \fBChangeTitleBlockCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChangeTitleBlockCommand::redo ()\fC [override]\fP"
+
+.SS "void ChangeTitleBlockCommand::undo ()\fC [override]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagram\fP* ChangeTitleBlockCommand::diagram\fC [private]\fP"
+
+.SS "\fBTitleBlockProperties\fP ChangeTitleBlockCommand::new_titleblock\fC [private]\fP"
+
+.SS "\fBTitleBlockProperties\fP ChangeTitleBlockCommand::old_titleblock\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,136 @@
+.TH "ESEventAddEllipse" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESEventAddEllipse \- The \fBESEventAddEllipse\fP class This ESEvent manage creation of ellpise in an \fBElementScene\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <eseventaddellipse\&.h>\fP
+.PP
+Inherits \fBESEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESEventAddEllipse\fP (\fBElementScene\fP *scene)"
+.br
+.RI "\fBESEventAddEllipse::ESEventAddEllipse\fP\&. "
+.ti -1c
+.RI "\fB~ESEventAddEllipse\fP () override"
+.br
+.RI "\fBESEventAddEllipse::~ESEventAddEllipse\fP\&. "
+.ti -1c
+.RI "bool \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddEllipse::mousePressEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddRect::mouseMoveEvent\fP\&. "
+.ti -1c
+.RI "bool \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBESEventAddEllipse::mouseReleaseEvent\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPartEllipse\fP * \fBm_ellipse\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_origin\fP"
+.br
+.ti -1c
+.RI "QPointF \fBm_new_pos\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBESEventAddEllipse\fP class This ESEvent manage creation of ellpise in an \fBElementScene\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESEventAddEllipse::ESEventAddEllipse (\fBElementScene\fP * scene)"
+
+.PP
+\fBESEventAddEllipse::ESEventAddEllipse\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP 
+.RE
+.PP
+
+.SS "ESEventAddEllipse::~ESEventAddEllipse ()\fC [override]\fP"
+
+.PP
+\fBESEventAddEllipse::~ESEventAddEllipse\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ESEventAddEllipse::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddRect::mouseMoveEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddEllipse::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddEllipse::mousePressEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SS "bool ESEventAddEllipse::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBESEventAddEllipse::mouseReleaseEvent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Reimplemented from \fBESEventInterface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPartEllipse\fP* ESEventAddEllipse::m_ellipse\fC [private]\fP"
+
+.SS "QPointF ESEventAddEllipse::m_new_pos\fC [private]\fP"
+
+.SS "QPointF ESEventAddEllipse::m_origin\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

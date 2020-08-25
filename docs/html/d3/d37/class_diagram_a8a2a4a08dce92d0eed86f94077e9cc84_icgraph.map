@@ -1,0 +1,52 @@
+<map id="Diagram::project" name="Diagram::project">
+<area shape="rect" id="node1" title="Diagram::project." alt="" coords="1036,1008,1155,1035"/>
+<area shape="rect" id="node2" href="$d0/d2b/class_master_element.html#ae7f1a5aab89359e7a681663490a92cb3" title="MasterElement::aboutDeleteXref Check if Xref item must be displayed, if not, delete it...." alt="" coords="761,79,972,106"/>
+<area shape="rect" id="node3" href="$d0/d2b/class_master_element.html#ad5c015e588a51801382d0aeba649767b" title="MasterElement::linkToElement Link this master to another element For this class element must be a sla..." alt="" coords="493,28,691,55"/>
+<area shape="rect" id="node5" href="$d0/d2b/class_master_element.html#ad60b05294c6a30d01c745228bf5381de" title=" " alt="" coords="493,130,691,172"/>
+<area shape="rect" id="node6" href="$de/d1f/class_diagram_event_add_element.html#af36a8f0e0220dfe7ba3430e99bb257b9" title="DiagramEventAddElement::addElement Add an element at the current pos en current rotation,..." alt="" coords="505,204,679,245"/>
+<area shape="rect" id="node8" href="$d3/df5/classautonum_1_1_assign_variables.html#af50dcd82449ed28d3f95590bc80ba299" title=" " alt="" coords="780,282,953,324"/>
+<area shape="rect" id="node10" href="$dd/df7/class_element_text_item_group.html#a8c1dc7f8aeb5eea83d30a85e085c8b55" title=" " alt="" coords="789,400,945,441"/>
+<area shape="rect" id="node11" href="$dd/df7/class_element_text_item_group.html#a94dfa5304047edf4de0b784535bac2ff" title=" " alt="" coords="511,341,673,382"/>
+<area shape="rect" id="node13" href="$de/d1f/class_diagram_event_add_element.html#a3515ac9716d6bf6147d13105253a1776" title="DiagramEventAddElement::buildElement Build the element, if the element is build successfully,..." alt="" coords="779,465,954,506"/>
+<area shape="rect" id="node15" href="$d8/dd0/class_qet_graphics_table_factory.html#aab7e64fed714f4bcdcb057955cd3fe03" title=" " alt="" coords="507,560,677,601"/>
+<area shape="rect" id="node18" href="$dd/d9c/class_diagram_properties_dialog.html#a3942304cf69113655ebf9027f90463df" title="DiagramPropertiesDialog::DiagramPropertiesDialog Deafult constructor." alt="" coords="504,700,680,741"/>
+<area shape="rect" id="node19" href="$dd/d9c/class_diagram_properties_dialog.html#a686271e57786d17bbe3d58c0f1567a60" title="DiagramPropertiesDialog::editAutonum Open folio autonum editor." alt="" coords="783,700,951,741"/>
+<area shape="rect" id="node20" href="$dd/d9c/class_diagram_properties_dialog.html#a6005903eabd6790788dc597b766c3c1a" title="DiagramPropertiesDialog::editAutonum Open conductor autonum editor." alt="" coords="783,765,951,806"/>
+<area shape="rect" id="node21" href="$df/d6e/class_cross_ref_item.html#a4428e09a48f23e0275010802ceaa05cb" title="CrossRefItem::elementPositionText." alt="" coords="753,831,981,858"/>
+<area shape="rect" id="node24" href="$d7/d9c/class_diagram_view.html#a693cda43ac88d056c78df1abd938a654" title="DiagramView::handleTitleBlockDrop Handle the dropEvent that contain data of a titleblock." alt="" coords="507,897,677,938"/>
+<area shape="rect" id="node26" href="$df/d6e/class_cross_ref_item.html#a27744b46734660de9d35059bbba3de91" title="CrossRefItem::init init this Xref." alt="" coords="278,1084,406,1111"/>
+<area shape="rect" id="node28" href="$d3/d37/class_diagram.html#a8c5e5c0996f65e27743d9b9084c3f582" title="Diagram::loadCndFolioSeq This class loads all conductor folio sequential variables related to the cur..." alt="" coords="777,1186,956,1212"/>
+<area shape="rect" id="node31" href="$d3/d37/class_diagram.html#a3c47d70020b2c9ba2802c6b8e28d031e" title="Diagram::loadElmtFolioSeq This class loads all folio sequential variables related to the current auto..." alt="" coords="776,1236,957,1263"/>
+<area shape="rect" id="node32" href="$de/d1d/class_conductor_auto_numerotation.html#a1da84f991489b22550633697fd9e0b22" title="ConductorAutoNumerotation::newProperties Create a new properties according to the current autonum rul..." alt="" coords="773,1288,960,1329"/>
+<area shape="rect" id="node33" href="$d8/dd0/class_qet_graphics_table_factory.html#aa256211e335e8df1baab6ec719d4d478" title="QetGraphicsTableFactory::newTable Create a new table ." alt="" coords="781,582,952,624"/>
+<area shape="rect" id="node34" href="$de/d1d/class_conductor_auto_numerotation.html#aec981865ae357c33c7aaf72f18922239" title="ConductorAutoNumerotation::numerateNewConductor create and apply a new numerotation to m_conductor." alt="" coords="773,1353,960,1394"/>
+<area shape="rect" id="node35" href="$d5/dcc/class_multi_paste_dialog.html#a2d6de36192586c285fb858a2ab367878" title=" " alt="" coords="507,965,677,1006"/>
+<area shape="rect" id="node36" href="$d3/d37/class_diagram.html#ae6ba5a325ae75b0b4f5eb96d1d960d45" title="Diagram::refreshContents refresh all content of diagram." alt="" coords="781,1419,953,1446"/>
+<area shape="rect" id="node37" href="$d0/d59/class_dynamic_element_text_item.html#a3d4cc2e4e9f67d4a7ea1bbb110c6bf37" title=" " alt="" coords="745,1521,988,1562"/>
+<area shape="rect" id="node38" href="$d0/d59/class_dynamic_element_text_item.html#af75e3a4d7cab30f7e9354cd42bc1b288" title="DynamicElementTextItem::reportChanged This function is only use when parent element of this text is a..." alt="" coords="505,1553,679,1594"/>
+<area shape="rect" id="node39" href="$d0/d59/class_dynamic_element_text_item.html#ae97e56cad50eacca03a967d5b270b839" title="DynamicElementTextItem::reportFormulaChanged The report formula use in the project was changed." alt="" coords="780,1586,953,1628"/>
+<area shape="rect" id="node40" href="$d0/d59/class_dynamic_element_text_item.html#a202e5d6a74657731357fb61183b0abcb" title=" " alt="" coords="757,1652,976,1693"/>
+<area shape="rect" id="node41" href="$d6/dd2/class_master_properties_widget.html#aa61de47a6c1ddbc95930035bb6c654ef" title="MasterPropertiesWidget::setElement Set the element to be edited." alt="" coords="785,1717,948,1758"/>
+<area shape="rect" id="node42" href="$d0/d59/class_dynamic_element_text_item.html#aa84ba56b52f1aaab0ea6a3cb65e45de9" title=" " alt="" coords="780,1782,953,1824"/>
+<area shape="rect" id="node43" href="$df/d6e/class_cross_ref_item.html#a9fea02f4de235171644a5d1818364dd0" title="CrossRefItem::setUpConnection Set up several connection to keep up to date the Xref." alt="" coords="761,1084,973,1111"/>
+<area shape="rect" id="node44" href="$df/d6e/class_cross_ref_item.html#a085ce3c5017a232072467929487cd719" title="CrossRefItem::updateProperties update the curent properties." alt="" coords="487,1135,697,1162"/>
+<area shape="rect" id="node45" href="$d5/d50/class_element.html#abe6bac8645077e5a9a8000cdbd6ad680" title="Element::setUpFormula Set up the formula used to create the label of this element." alt="" coords="787,231,946,258"/>
+<area shape="rect" id="node46" href="$d0/d59/class_dynamic_element_text_item.html#a26bdeb78605599ea0c1764a76ce299d9" title="DynamicElementTextItem::setupFormulaConnection Setup the required connection for the formula of the l..." alt="" coords="779,1848,954,1889"/>
+<area shape="rect" id="node47" href="$d3/d37/class_diagram.html#aadc97c48501180ecd35ce25a8ebf161d" title="Diagram::undoStack." alt="" coords="796,932,937,959"/>
+<area shape="rect" id="node48" href="$d7/dd9/class_change_element_information_command.html#a7ca7075010f884dc4db3ad5f26af0048" title=" " alt="" coords="772,1913,961,1954"/>
+<area shape="rect" id="node49" href="$d0/d59/class_dynamic_element_text_item.html#ae9bb5ae264f9c40d9b2d482630a77476" title="DynamicElementTextItem::updateXref Create or delete the Xref according to the current properties of t..." alt="" coords="780,1978,953,2020"/>
+<area shape="rect" id="node50" href="$dd/df7/class_element_text_item_group.html#af2be13bab4c1a945e182df98edb9cfd3" title=" " alt="" coords="789,2044,945,2085"/>
+<area shape="rect" id="node4" href="$d0/d2b/class_master_element.html#a63d0a2885d93935c727350751236bda8" title="MasterElement::unlinkElement Unlink the given elmt in parametre." alt="" coords="493,79,691,106"/>
+<area shape="rect" id="node7" href="$de/d1f/class_diagram_event_add_element.html#a83197f59aa1fe080ac85c7fc6124be53" title="DiagramEventAddElement::mouseReleaseEvent Right button finish this event (isRunning = false) and emit..." alt="" coords="255,204,429,245"/>
+<area shape="rect" id="node9" href="$d3/df5/classautonum_1_1_assign_variables.html#a1a513d98deafc981a67027e3812da5a7" title=" " alt="" coords="505,276,679,317"/>
+<area shape="rect" id="node12" href="$dd/df7/class_element_text_item_group.html#a31792107851534b509b3bd8dd6de8df0" title="ElementTextItemGroup::setAlignment Update the alignement of the items in this group,..." alt="" coords="514,406,670,448"/>
+<area shape="rect" id="node14" href="$de/d1f/class_diagram_event_add_element.html#afc0999b41ed221f4494437fff0544b15" title="DiagramEventAddElement::DiagramEventAddElement Defaut constructor." alt="" coords="501,472,683,513"/>
+<area shape="rect" id="node16" href="$d8/dd0/class_qet_graphics_table_factory.html#a72611a4d6afbd026f5fd8595abefb9f6" title="QetGraphicsTableFactory::createAndAddNomenclature Open a dialog for ask user the config of the table,..." alt="" coords="245,593,439,634"/>
+<area shape="rect" id="node17" href="$d8/dd0/class_qet_graphics_table_factory.html#ac320c43f647e2e37f3d9d476d034db6e" title="QetGraphicsTableFactory::createAndAddSummary Open a dialog for ask user the config of the table,..." alt="" coords="257,528,427,569"/>
+<area shape="rect" id="node22" href="$df/d6e/class_cross_ref_item.html#a91e19847a046d4368e2e885093214d47" title="CrossRefItem::drawContact Draw one contact, the type of contact to draw is define in flags." alt="" coords="499,774,685,800"/>
+<area shape="rect" id="node23" href="$df/d6e/class_cross_ref_item.html#aa2bad47ca216cff8bc12694ae2d5a1e5" title="CrossRefItem::setUpCrossBoundingRect Get the numbers of slaves elements linked to this parent element..." alt="" coords="501,825,683,866"/>
+<area shape="rect" id="node25" href="$d7/d9c/class_diagram_view.html#aaafc031a8acad3902341476567b01a71" title=" " alt="" coords="259,904,425,931"/>
+<area shape="rect" id="node27" href="$df/d6e/class_cross_ref_item.html#a5328f57806a0e22b7a3e41837d355150" title="CrossRefItem::CrossRefItem." alt="" coords="5,1084,197,1111"/>
+<area shape="rect" id="node29" href="$d3/d37/class_diagram.html#a3a51ca00d34d4d198b1ab7768522846f" title="Diagram::Diagram Constructor." alt="" coords="528,1186,656,1212"/>
+<area shape="rect" id="node30" href="$d7/d9c/class_diagram_view.html#aa7ddeae989deaf45dc87f9b4614152c0" title=" " alt="" coords="499,1236,685,1263"/>
+</map>

@@ -1,0 +1,313 @@
+.TH "XRefProperties" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+XRefProperties \- The \fBXRefProperties\fP class this class store properties used by XrefItem\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <xrefproperties\&.h>\fP
+.PP
+Inherits \fBPropertiesInterface\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBDisplayHas\fP { \fBCross\fP, \fBContacts\fP }"
+.br
+.ti -1c
+.RI "enum \fBSnapTo\fP { \fBBottom\fP, \fBLabel\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBXRefProperties\fP ()"
+.br
+.RI "\fBXRefProperties::XRefProperties\fP Default Constructor\&. "
+.ti -1c
+.RI "void \fBtoSettings\fP (QSettings &settings, const QString=QString()) const override"
+.br
+.RI "\fBXRefProperties::toSettings\fP Save to settings\&. "
+.ti -1c
+.RI "void \fBfromSettings\fP (const QSettings &settings, const QString=QString()) override"
+.br
+.RI "\fBXRefProperties::fromSettings\fP load from settings\&. "
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &xml_document) const override"
+.br
+.RI "\fBXRefProperties::toXml\fP Save to xml\&. "
+.ti -1c
+.RI "bool \fBfromXml\fP (const QDomElement &xml_element) override"
+.br
+.RI "\fBXRefProperties::fromXml\fP Load from xml\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBXRefProperties\fP &xrp) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBXRefProperties\fP &xrp) const"
+.br
+.ti -1c
+.RI "void \fBsetShowPowerContac\fP (const bool a)"
+.br
+.ti -1c
+.RI "bool \fBshowPowerContact\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDisplayHas\fP (const \fBDisplayHas\fP dh)"
+.br
+.ti -1c
+.RI "\fBDisplayHas\fP \fBdisplayHas\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetSnapTo\fP (const \fBSnapTo\fP st)"
+.br
+.ti -1c
+.RI "\fBSnapTo\fP \fBsnapTo\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetXrefPos\fP (const Qt::AlignmentFlag xref)"
+.br
+.ti -1c
+.RI "Qt::AlignmentFlag \fBgetXrefPos\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetPrefix\fP (const QString &key, const QString &value)"
+.br
+.ti -1c
+.RI "QString \fBprefix\fP (const QString &key) const"
+.br
+.ti -1c
+.RI "void \fBsetMasterLabel\fP (const QString master)"
+.br
+.ti -1c
+.RI "QString \fBmasterLabel\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetSlaveLabel\fP (const QString slave)"
+.br
+.ti -1c
+.RI "QString \fBslaveLabel\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetOffset\fP (const int \fBoffset\fP)"
+.br
+.ti -1c
+.RI "int \fBoffset\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetKey\fP (QString &key)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QHash< QString, \fBXRefProperties\fP > \fBdefaultProperties\fP ()"
+.br
+.RI "\fBXRefProperties::defaultProperties\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_show_power_ctc\fP"
+.br
+.ti -1c
+.RI "\fBDisplayHas\fP \fBm_display\fP"
+.br
+.ti -1c
+.RI "\fBSnapTo\fP \fBm_snap_to\fP"
+.br
+.ti -1c
+.RI "Qt::AlignmentFlag \fBm_xref_pos\fP"
+.br
+.ti -1c
+.RI "QHash< QString, QString > \fBm_prefix\fP"
+.br
+.ti -1c
+.RI "QStringList \fBm_prefix_keys\fP"
+.br
+.ti -1c
+.RI "QString \fBm_master_label\fP"
+.br
+.ti -1c
+.RI "QString \fBm_slave_label\fP"
+.br
+.ti -1c
+.RI "int \fBm_offset\fP"
+.br
+.ti -1c
+.RI "QString \fBm_key\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBXRefProperties\fP class this class store properties used by XrefItem\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBXRefProperties::DisplayHas\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICross \fP\fP
+.TP
+\fB\fIContacts \fP\fP
+.SS "enum \fBXRefProperties::SnapTo\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBottom \fP\fP
+.TP
+\fB\fILabel \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "XRefProperties::XRefProperties ()"
+
+.PP
+\fBXRefProperties::XRefProperties\fP Default Constructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "QHash< QString, \fBXRefProperties\fP > XRefProperties::defaultProperties ()\fC [static]\fP"
+
+.PP
+\fBXRefProperties::defaultProperties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the default properties stored in the setting file For the xref, there is 2 propreties\&. For coil, stored with the string 'coil' in the returned QHash\&. For protection, stored with the string 'protection' in the returned QHash\&. 
+.RE
+.PP
+
+.SS "\fBDisplayHas\fP XRefProperties::displayHas () const\fC [inline]\fP"
+
+.SS "void XRefProperties::fromSettings (const QSettings & settings, const QString prefix = \fCQString()\fP)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXRefProperties::fromSettings\fP load from settings\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP QSettings to use 
+.br
+\fIprefix\fP prefix before properties name 
+.RE
+.PP
+
+.PP
+Implements \fBPropertiesInterface\fP\&.
+.SS "bool XRefProperties::fromXml (const QDomElement & xml_element)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXRefProperties::fromXml\fP Load from xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP QDomElement to use for load 
+.RE
+.PP
+
+.PP
+Implements \fBPropertiesInterface\fP\&.
+.SS "Qt::AlignmentFlag XRefProperties::getXrefPos () const\fC [inline]\fP"
+
+.SS "QString XRefProperties::masterLabel () const\fC [inline]\fP"
+
+.SS "int XRefProperties::offset () const\fC [inline]\fP"
+
+.SS "bool XRefProperties::operator!= (const \fBXRefProperties\fP & xrp) const"
+
+.SS "bool XRefProperties::operator== (const \fBXRefProperties\fP & xrp) const"
+
+.SS "QString XRefProperties::prefix (const QString & key) const\fC [inline]\fP"
+
+.SS "void XRefProperties::setDisplayHas (const \fBDisplayHas\fP dh)\fC [inline]\fP"
+
+.SS "void XRefProperties::setKey (QString & key)\fC [inline]\fP"
+
+.SS "void XRefProperties::setMasterLabel (const QString master)\fC [inline]\fP"
+
+.SS "void XRefProperties::setOffset (const int offset)\fC [inline]\fP"
+
+.SS "void XRefProperties::setPrefix (const QString & key, const QString & value)\fC [inline]\fP"
+
+.SS "void XRefProperties::setShowPowerContac (const bool a)\fC [inline]\fP"
+
+.SS "void XRefProperties::setSlaveLabel (const QString slave)\fC [inline]\fP"
+
+.SS "void XRefProperties::setSnapTo (const \fBSnapTo\fP st)\fC [inline]\fP"
+
+.SS "void XRefProperties::setXrefPos (const Qt::AlignmentFlag xref)\fC [inline]\fP"
+
+.SS "bool XRefProperties::showPowerContact () const\fC [inline]\fP"
+
+.SS "QString XRefProperties::slaveLabel () const\fC [inline]\fP"
+
+.SS "\fBSnapTo\fP XRefProperties::snapTo () const\fC [inline]\fP"
+
+.SS "void XRefProperties::toSettings (QSettings & settings, const QString prefix = \fCQString()\fP) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXRefProperties::toSettings\fP Save to settings\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP QSettings to use 
+.br
+\fIprefix\fP prefix before properties name 
+.RE
+.PP
+
+.PP
+Implements \fBPropertiesInterface\fP\&.
+.SS "QDomElement XRefProperties::toXml (QDomDocument & xml_document) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBXRefProperties::toXml\fP Save to xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP : QDomElement to use for saving 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+QDomElement 
+.RE
+.PP
+
+.PP
+Implements \fBPropertiesInterface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDisplayHas\fP XRefProperties::m_display\fC [private]\fP"
+
+.SS "QString XRefProperties::m_key\fC [private]\fP"
+
+.SS "QString XRefProperties::m_master_label\fC [private]\fP"
+
+.SS "int XRefProperties::m_offset\fC [private]\fP"
+
+.SS "QHash<QString, QString> XRefProperties::m_prefix\fC [private]\fP"
+
+.SS "QStringList XRefProperties::m_prefix_keys\fC [private]\fP"
+
+.SS "bool XRefProperties::m_show_power_ctc\fC [private]\fP"
+
+.SS "QString XRefProperties::m_slave_label\fC [private]\fP"
+
+.SS "\fBSnapTo\fP XRefProperties::m_snap_to\fC [private]\fP"
+
+.SS "Qt::AlignmentFlag XRefProperties::m_xref_pos\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

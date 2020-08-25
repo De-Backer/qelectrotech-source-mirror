@@ -1,0 +1,28 @@
+.TH "sources/PropertiesEditor/propertieseditordialog.h" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/PropertiesEditor/propertieseditordialog.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QDialog>\fP
+.br
+\fC#include <QDialogButtonBox>\fP
+.br
+\fC#include <QVBoxLayout>\fP
+.br
+\fC#include <QAbstractButton>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBPropertiesEditorDialog\fP"
+.br
+.RI "The \fBPropertiesEditorDialog\fP class Create a dialog to edit some properties of a thing\&. Only create a instance of this class and call exec, all is done for you in this class\&. The first argument (a template) must be a subclass of QWidget and provide the 3 methods bellow : QString::title() void::apply() void::reset() You can subclass the interface \fBPropertiesEditorWidget\fP who provide all this methods\&. This dialog take ownership of the editor, so the editor will be deleted by this dialog\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

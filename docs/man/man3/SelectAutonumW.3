@@ -1,0 +1,216 @@
+.TH "SelectAutonumW" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SelectAutonumW
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <selectautonumw\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBapplyPressed\fP ()"
+.br
+.ti -1c
+.RI "void \fBremoveClicked\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSelectAutonumW\fP (int type, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fBSelectAutonumW\fP (const \fBNumerotationContext\fP &context, int type, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~SelectAutonumW\fP () override"
+.br
+.ti -1c
+.RI "void \fBsetContext\fP (const \fBNumerotationContext\fP &context)"
+.br
+.RI "\fBSelectAutonumW::setContext\fP build the context of current diagram selected in the diagram_chooser QcomboBox\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBtoNumContext\fP () const"
+.br
+.RI "\fBSelectAutonumW::toNumContext\fP\&. "
+.ti -1c
+.RI "void \fBcontextToFormula\fP ()"
+.br
+.RI "\fBSelectAutonumW::contextToFormula\fP Apply formula to ElementAutonumbering Widget\&. "
+.ti -1c
+.RI "QString \fBformula\fP ()"
+.br
+.RI "\fBSelectAutonumW::formula\fP\&. "
+.ti -1c
+.RI "QComboBox * \fBcontextComboBox\fP () const"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_add_button_clicked\fP ()"
+.br
+.RI "\fBSelectAutonumW::on_add_button_clicked\fP Action on add_button, add a NumPartEditor\&. "
+.ti -1c
+.RI "void \fBon_remove_button_clicked\fP ()"
+.br
+.RI "\fBSelectAutonumW::on_remove_button_clicked\fP Action on remove button, remove the last NumPartEditor\&. "
+.ti -1c
+.RI "void \fBon_buttonBox_clicked\fP (QAbstractButton *)"
+.br
+.RI "\fBSelectAutonumW::on_buttonBox_clicked\fP Action on button clicked\&. "
+.ti -1c
+.RI "void \fBapplyEnable\fP (bool=true)"
+.br
+.RI "\fBSelectAutonumW::applyEnable\fP enable/disable the apply button\&. "
+.ti -1c
+.RI "void \fBon_m_next_pb_clicked\fP ()"
+.br
+.RI "\fBSelectAutonumW::on_m_next_pb_clicked\fP Increase \fBNumerotationContext\fP\&. "
+.ti -1c
+.RI "void \fBon_m_previous_pb_clicked\fP ()"
+.br
+.RI "\fBSelectAutonumW::on_m_previous_pb_clicked\fP Decrease \fBNumerotationContext\fP\&. "
+.ti -1c
+.RI "void \fBon_m_comboBox_currentTextChanged\fP (const QString &arg1)"
+.br
+.ti -1c
+.RI "void \fBon_m_remove_pb_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::SelectAutonumW * \fBui\fP"
+.br
+.ti -1c
+.RI "QList< \fBNumPartEditorW\fP * > \fBnum_part_list_\fP"
+.br
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBm_context\fP"
+.br
+.ti -1c
+.RI "\fBFormulaAutonumberingW\fP * \fBm_feaw\fP"
+.br
+.ti -1c
+.RI "\fBFormulaAutonumberingW\fP * \fBm_fcaw\fP"
+.br
+.ti -1c
+.RI "int \fBm_edited_type\fP = \-1"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SelectAutonumW::SelectAutonumW (int type, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+Constructor 
+.SS "SelectAutonumW::SelectAutonumW (const \fBNumerotationContext\fP & context, int type, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "SelectAutonumW::~SelectAutonumW ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SelectAutonumW::applyEnable (bool b = \fCtrue\fP)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSelectAutonumW::applyEnable\fP enable/disable the apply button\&. 
+.SS "void SelectAutonumW::applyPressed ()\fC [signal]\fP"
+
+.SS "QComboBox * SelectAutonumW::contextComboBox () const"
+
+.SS "void SelectAutonumW::contextToFormula ()"
+
+.PP
+\fBSelectAutonumW::contextToFormula\fP Apply formula to ElementAutonumbering Widget\&. 
+.SS "QString SelectAutonumW::formula ()"
+
+.PP
+\fBSelectAutonumW::formula\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+autonumbering widget formula 
+.RE
+.PP
+
+.SS "void SelectAutonumW::on_add_button_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSelectAutonumW::on_add_button_clicked\fP Action on add_button, add a NumPartEditor\&. 
+.SS "void SelectAutonumW::on_buttonBox_clicked (QAbstractButton * button)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSelectAutonumW::on_buttonBox_clicked\fP Action on button clicked\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbutton\fP 
+.RE
+.PP
+
+.SS "void SelectAutonumW::on_m_comboBox_currentTextChanged (const QString & arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void SelectAutonumW::on_m_next_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSelectAutonumW::on_m_next_pb_clicked\fP Increase \fBNumerotationContext\fP\&. 
+.SS "void SelectAutonumW::on_m_previous_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSelectAutonumW::on_m_previous_pb_clicked\fP Decrease \fBNumerotationContext\fP\&. 
+.SS "void SelectAutonumW::on_m_remove_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void SelectAutonumW::on_remove_button_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSelectAutonumW::on_remove_button_clicked\fP Action on remove button, remove the last NumPartEditor\&. 
+.SS "void SelectAutonumW::removeClicked ()\fC [signal]\fP"
+
+.SS "void SelectAutonumW::setContext (const \fBNumerotationContext\fP & context)"
+
+.PP
+\fBSelectAutonumW::setContext\fP build the context of current diagram selected in the diagram_chooser QcomboBox\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontext\fP 
+.RE
+.PP
+
+.SS "\fBNumerotationContext\fP SelectAutonumW::toNumContext () const"
+
+.PP
+\fBSelectAutonumW::toNumContext\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the content to num_part_list to \fBNumerotationContext\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBNumerotationContext\fP SelectAutonumW::m_context\fC [private]\fP"
+
+.SS "int SelectAutonumW::m_edited_type = \-1\fC [private]\fP"
+
+.SS "\fBFormulaAutonumberingW\fP* SelectAutonumW::m_fcaw\fC [private]\fP"
+
+.SS "\fBFormulaAutonumberingW\fP* SelectAutonumW::m_feaw\fC [private]\fP"
+
+.SS "QList<\fBNumPartEditorW\fP *> SelectAutonumW::num_part_list_\fC [private]\fP"
+
+.SS "Ui::SelectAutonumW* SelectAutonumW::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

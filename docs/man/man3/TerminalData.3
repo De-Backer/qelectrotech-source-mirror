@@ -1,0 +1,226 @@
+.TH "TerminalData" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TerminalData \- The \fBTerminalData\fP class Data of the terminal\&. Stored in extra class so it can be used by \fBPartTerminal\fP and \fBTerminal\fP without defining everything again\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <terminaldata\&.h>\fP
+.PP
+Inherits \fBPropertiesInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTerminalData\fP ()"
+.br
+.ti -1c
+.RI "\fBTerminalData\fP (QGraphicsObject *parent)"
+.br
+.ti -1c
+.RI "\fB~TerminalData\fP ()"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetParent\fP (QGraphicsObject *parent)"
+.br
+.RI "\fBTerminalData::setParent\fP\&. "
+.ti -1c
+.RI "void \fBtoSettings\fP (QSettings &settings, const QString prefix=QString()) const override"
+.br
+.RI "\fBTerminalData::toSettings\fP Save properties to setting file\&. "
+.ti -1c
+.RI "void \fBfromSettings\fP (const QSettings &settings, const QString prefix=QString()) override"
+.br
+.RI "\fBTerminalData::fromSettings\fP load properties to setting file\&. "
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &xml_element) const override"
+.br
+.RI "\fBTerminalData::toXml\fP Save properties to xml element write the name, number, position and orientation of the terminal to xml_element\&. "
+.ti -1c
+.RI "bool \fBfromXml\fP (const QDomElement &xml_element) override"
+.br
+.RI "\fBTerminalData::fromXml\fP load properties to xml element\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQet::Orientation\fP \fBm_orientation\fP"
+.br
+.RI "m_orientation Orientation of the terminal "
+.ti -1c
+.RI "QPointF \fBsecond_point\fP"
+.br
+.RI "second_point Position of the second point of the terminal in scene coordinates "
+.ti -1c
+.RI "QUuid \fBm_uuid\fP"
+.br
+.RI "m_uuid Uuid of the terminal\&. "
+.ti -1c
+.RI "QString \fBm_name\fP"
+.br
+.RI "m_name Name of the element\&. It can be used to create wiring harness tables "
+.ti -1c
+.RI "QPointF \fBm_pos\fP"
+.br
+.RI "m_pos Position of the terminal\&. The second point is calculated from this position and the orientation "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QGraphicsObject * \fBq\fP {nullptr}"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBTerminalData\fP class Data of the terminal\&. Stored in extra class so it can be used by \fBPartTerminal\fP and \fBTerminal\fP without defining everything again\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+tis class needs to be work on 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TerminalData::TerminalData ()"
+
+.SS "TerminalData::TerminalData (QGraphicsObject * parent)"
+
+.SS "TerminalData::~TerminalData ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TerminalData::fromSettings (const QSettings & settings, const QString prefix = \fCQString()\fP)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBTerminalData::fromSettings\fP load properties to setting file\&. QString is use for prefix a word befor the name of each paramètre 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP UNUSED 
+.br
+\fIprefix\fP UNUSED 
+.RE
+.PP
+
+.PP
+Implements \fBPropertiesInterface\fP\&.
+.SS "bool TerminalData::fromXml (const QDomElement & xml_element)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBTerminalData::fromXml\fP load properties to xml element\&. 
+.PP
+\fBNote\fP
+.RS 4
+This method is only called from the \fBPartTerminal\fP and should never called from the \fBTerminal\fP class 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if succeeded / false if the attribute is not real 
+.RE
+.PP
+
+.PP
+Implements \fBPropertiesInterface\fP\&.
+.SS "void TerminalData::init ()"
+
+.SS "void TerminalData::setParent (QGraphicsObject * parent)"
+
+.PP
+\fBTerminalData::setParent\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SS "void TerminalData::toSettings (QSettings & settings, const QString prefix = \fCQString()\fP) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBTerminalData::toSettings\fP Save properties to setting file\&. QString is use for prefix a word befor the name of each paramètre 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP UNUSED 
+.br
+\fIprefix\fP UNUSED 
+.RE
+.PP
+
+.PP
+Implements \fBPropertiesInterface\fP\&.
+.SS "QDomElement TerminalData::toXml (QDomDocument & xml_document) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBTerminalData::toXml\fP Save properties to xml element write the name, number, position and orientation of the terminal to xml_element\&. 
+.PP
+\fBNote\fP
+.RS 4
+This method is only called from the \fBPartTerminal\fP and should never called from the \fBTerminal\fP class 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+xml_element : DomElement with the name, number, position and orientation of the terminal 
+.RE
+.PP
+
+.PP
+Implements \fBPropertiesInterface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QString TerminalData::m_name"
+
+.PP
+m_name Name of the element\&. It can be used to create wiring harness tables 
+.SS "\fBQet::Orientation\fP TerminalData::m_orientation"
+
+.PP
+m_orientation Orientation of the terminal 
+.SS "QPointF TerminalData::m_pos"
+
+.PP
+m_pos Position of the terminal\&. The second point is calculated from this position and the orientation 
+.PP
+\fBNote\fP
+.RS 4
+Important: this variable is only updated during read from xml and not during mouse move! It is used to store the initial position so that \fBPartTerminal\fP and \fBTerminal\fP have access to it\&. 
+.RE
+.PP
+
+.SS "QUuid TerminalData::m_uuid"
+
+.PP
+m_uuid Uuid of the terminal\&. In \fBelementscene\&.cpp\fP an element gets a new uuid when saving the element\&. In the current state each connection is made by using the local position of the terminal and a dynamic id\&. In the new case, each terminal should have it's own uuid to identify it uniquely\&. When changing each time this uuid, the conductor after updating the part is anymore valid\&. So if in the loaded document a uuid exists, use this one and don't create a new one\&. 
+.SS "QGraphicsObject* TerminalData::q {nullptr}\fC [private]\fP"
+
+.SS "QPointF TerminalData::second_point"
+
+.PP
+second_point Position of the second point of the terminal in scene coordinates 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,33 @@
+<map id="XmlElementCollection::copy" name="XmlElementCollection::copy">
+<area shape="rect" id="node1" title="XmlElementCollection::copy Copy the content represented by source (an element or a directory) to dest..." alt="" coords="5,946,156,988"/>
+<area shape="rect" id="node2" href="$df/dd9/class_xml_element_collection.html#a94e7303abced9b0484aa7e2a192e82f2" title="XmlElementCollection::copyDirectory Copy the directory represented by source to destination...." alt="" coords="221,450,372,492"/>
+<area shape="rect" id="node6" href="$df/dd9/class_xml_element_collection.html#a380da7f5ccba9f21d6f1d0f5ee40b4ff" title="XmlElementCollection::copyElement Copy the element represented by source to destination (must be a di..." alt="" coords="462,276,613,317"/>
+<area shape="rect" id="node18" href="$d5/dd7/class_elements_location.html#a45f9e8dbe179a42f73a8ea0625bddc7e" title="ElementsLocation::isElement." alt="" coords="968,992,1160,1019"/>
+<area shape="rect" id="node20" href="$d5/dd7/class_elements_location.html#ac1b1937396c17a87da0936abab0e54dd" title="ElementsLocation::projectCollection." alt="" coords="451,946,624,988"/>
+<area shape="rect" id="node28" href="$d5/dd7/class_elements_location.html#acfded834f9b1e5b0fc2b0933a107ff1e" title="ElementsLocation::exist." alt="" coords="456,887,619,914"/>
+<area shape="rect" id="node30" href="$d5/dd7/class_elements_location.html#a86f6d84916123008ed9b90dac81eeda5" title="ElementsLocation::isDirectory." alt="" coords="697,1039,896,1066"/>
+<area shape="rect" id="node31" href="$d5/dd7/class_elements_location.html#ade366028c25fbe20a2b54c4186a37183" title="ElementsLocation::isProject." alt="" coords="204,1140,389,1167"/>
+<area shape="rect" id="node3" href="$df/dd9/class_xml_element_collection.html#a5cb901cc25363fdd9e5f8e77661f49d3" title="XmlElementCollection::child If parent_element have child element with an attribute name = child_name,..." alt="" coords="1250,130,1401,172"/>
+<area shape="rect" id="node4" href="$d5/dd7/class_elements_location.html#af60688342bf5c70c8619e77c5f6232e0" title="ElementsLocation::collectionPath Return the path of the represented element relative to collection if..." alt="" coords="956,592,1172,619"/>
+<area shape="rect" id="node7" href="$df/dd9/class_xml_element_collection.html#a21d7a45d847c560734ee73ca5dd9c3d3" title="XmlElementCollection::directory." alt="" coords="989,218,1139,260"/>
+<area shape="rect" id="node8" href="$df/dd9/class_xml_element_collection.html#acd7dcecea45b62258579598d3782610d" title="XmlElementCollection::element." alt="" coords="989,130,1139,172"/>
+<area shape="rect" id="node9" href="$d5/dd7/class_elements_location.html#ac2abfa03dc55587f20447005b69b765e" title="ElementLocation::fileName." alt="" coords="703,399,890,426"/>
+<area shape="rect" id="node11" href="$d5/dd7/class_elements_location.html#a5d08aed111ae277d92d65193d496e0d8" title="ElementsLocation::fileSystemPath." alt="" coords="685,618,908,644"/>
+<area shape="rect" id="node12" href="$d5/dd7/class_elements_location.html#a9bb48a1e0d52bec51f37b8df599c51fe" title="ElementsLocation::isFileSystem." alt="" coords="981,442,1147,484"/>
+<area shape="rect" id="node13" href="$d5/dd7/class_elements_location.html#a97b6a38a44ef4434ad6cfefe7fe669fd" title="ElementsLocation::projectCollectionPath." alt="" coords="710,501,883,542"/>
+<area shape="rect" id="node19" href="$dd/d7e/namespace_q_e_t_x_m_l.html#a0b055af99ac5a2c9012974f976faa26a" title=" " alt="" coords="437,341,637,382"/>
+<area shape="rect" id="node21" href="$d5/dd7/class_elements_location.html#a955183399b1be3317bb5a9df6bebe94a" title="ElementsLocation::setPath Set the path of this item. The path can be relative to a collection (start ..." alt="" coords="975,694,1153,720"/>
+<area shape="rect" id="node5" href="$d5/dd7/class_elements_location.html#ac46aeb57416fc91e16266fc937a02810" title="ElementsLocation::path." alt="" coords="1246,592,1405,619"/>
+<area shape="rect" id="node10" href="$dd/d7e/namespace_q_e_t_x_m_l.html#a0a04d30015c59abfeafcf5922a526ac0" title=" " alt="" coords="699,181,894,222"/>
+<area shape="rect" id="node16" href="$d5/dd7/class_elements_location.html#a00a4e9b223af42e8350f3d823d0dddc4" title="ElementsLocation::xml." alt="" coords="719,298,874,324"/>
+<area shape="rect" id="node14" href="$d7/df8/class_q_e_t_app.html#a69a31da8f6a67539cfcbed0e903c1671" title="QETApp::projectId." alt="" coords="999,536,1129,563"/>
+<area shape="rect" id="node15" href="$d7/df8/class_q_e_t_app.html#a6be4484aa447132c5b44732279b0836c" title="QETApp::project." alt="" coords="1266,538,1385,564"/>
+<area shape="rect" id="node17" href="$d6/dc5/class_q_e_t_project.html#a6e182aa14ce7c48753e6be355ebbdb5f" title="QETProject::embeddedCollection." alt="" coords="961,880,1167,921"/>
+<area shape="rect" id="node22" href="$d7/df8/class_q_e_t_app.html#aa1d76144001acd7736b11f78b0dee649" title="QETApp::commonElementsDirN like QString QETApp::commonElementsDir but without &quot;/&quot; at the end." alt="" coords="1220,643,1431,670"/>
+<area shape="rect" id="node24" href="$d7/df8/class_q_e_t_app.html#aad457f9e9a4fa9fbec00d0929f2bae75" title="QETApp::customElementsDirN like QString QETApp::customElementsDir but without &quot;/&quot; at the end." alt="" coords="1223,694,1427,720"/>
+<area shape="rect" id="node27" href="$d5/dd7/class_elements_location.html#aca8d214a0d7569264c514dc0e302fca5" title="ElementsLocation::project." alt="" coords="1239,744,1412,771"/>
+<area shape="rect" id="node23" href="$d7/df8/class_q_e_t_app.html#a63b7129a16de541f941e880e4c82e0b4" title="QETApp::commonElementsDir." alt="" coords="1479,643,1680,670"/>
+<area shape="rect" id="node25" href="$d7/df8/class_q_e_t_app.html#a0991c2c64acf67c4bea937c8de80aaac" title="QETApp::customElementsDir." alt="" coords="1482,694,1677,720"/>
+<area shape="rect" id="node26" href="$d7/df8/class_q_e_t_app.html#a19c87f4f930f26f4fc60118fa5a79b8f" title="QETApp::configDir Return the QET configuration folder, i.e. the path to the folder in which QET will ..." alt="" coords="1728,694,1859,720"/>
+<area shape="rect" id="node29" href="$df/dd9/class_xml_element_collection.html#a7f27796160cb849693b029979c0d5eaf" title="XmlElementCollection::exist Return true if the path path exist in this collection." alt="" coords="721,821,872,862"/>
+</map>

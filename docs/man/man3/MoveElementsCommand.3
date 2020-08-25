@@ -1,0 +1,164 @@
+.TH "MoveElementsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MoveElementsCommand \- The \fBMoveElementsCommand\fP class This command moves some content on a particular diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMoveElementsCommand\fP (\fBDiagram\fP *, const \fBDiagramContent\fP &, const QPointF &m, QUndoCommand *=nullptr)"
+.br
+.RI "\fBMoveElementsCommand::MoveElementsCommand\fP Constructor\&. "
+.ti -1c
+.RI "\fB~MoveElementsCommand\fP () override"
+.br
+.RI "\fBMoveElementsCommand::~MoveElementsCommand\fP Destructor\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBMoveElementsCommand::undo\fP\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBMoveElementsCommand::redo\fP\&. "
+.ti -1c
+.RI "virtual void \fBmove\fP (const QPointF &)"
+.br
+.RI "\fBMoveElementsCommand::move\fP Move item and conductor to actual_movement\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMoveElementsCommand\fP (const \fBMoveElementsCommand\fP &)"
+.br
+.ti -1c
+.RI "void \fBsetupAnimation\fP (QObject *target, const QByteArray &propertyName, const QVariant &start, const QVariant &end)"
+.br
+.RI "\fBMoveElementsCommand::setupAnimation\fP Set up the animation for this undo command\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram\fP"
+.br
+.RI "diagram the movement takes place on\&. "
+.ti -1c
+.RI "\fBDiagramContent\fP \fBcontent_to_move\fP"
+.br
+.RI "moved content "
+.ti -1c
+.RI "QPointF \fBmovement\fP"
+.br
+.RI "applied movement "
+.ti -1c
+.RI "QParallelAnimationGroup * \fBm_anim_group\fP"
+.br
+.RI "animation group "
+.ti -1c
+.RI "bool \fBfirst_redo\fP"
+.br
+.RI "prevent the first call to \fBredo()\fP "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBMoveElementsCommand\fP class This command moves some content on a particular diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MoveElementsCommand::MoveElementsCommand (\fBDiagram\fP * dia, const \fBDiagramContent\fP & diagram_content, const QPointF & m, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBMoveElementsCommand::MoveElementsCommand\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdia\fP diagram 
+.br
+\fIdiagram_content\fP diagram content (contain all items to be moved) 
+.br
+\fIm\fP movement to applied 
+.br
+\fIparent\fP parent undo command 
+.RE
+.PP
+
+.SS "MoveElementsCommand::~MoveElementsCommand ()\fC [override]\fP"
+
+.PP
+\fBMoveElementsCommand::~MoveElementsCommand\fP Destructor\&. 
+.SS "MoveElementsCommand::MoveElementsCommand (const \fBMoveElementsCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void MoveElementsCommand::move (const QPointF & actual_movement)\fC [virtual]\fP"
+
+.PP
+\fBMoveElementsCommand::move\fP Move item and conductor to actual_movement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIactual_movement\fP movement to be applied 
+.RE
+.PP
+
+.SS "void MoveElementsCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBMoveElementsCommand::redo\fP\&. 
+.SS "void MoveElementsCommand::setupAnimation (QObject * target, const QByteArray & propertyName, const QVariant & start, const QVariant & end)\fC [private]\fP"
+
+.PP
+\fBMoveElementsCommand::setupAnimation\fP Set up the animation for this undo command\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP object to anim 
+.br
+\fIpropertyName\fP property to animate 
+.br
+\fIstart\fP value at start 
+.br
+\fIend\fP value at end 
+.RE
+.PP
+
+.SS "void MoveElementsCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBMoveElementsCommand::undo\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagramContent\fP MoveElementsCommand::content_to_move\fC [private]\fP"
+
+.PP
+moved content 
+.SS "\fBDiagram\fP* MoveElementsCommand::diagram\fC [private]\fP"
+
+.PP
+diagram the movement takes place on\&. 
+.SS "bool MoveElementsCommand::first_redo\fC [private]\fP"
+
+.PP
+prevent the first call to \fBredo()\fP 
+.SS "QParallelAnimationGroup* MoveElementsCommand::m_anim_group\fC [private]\fP"
+
+.PP
+animation group 
+.SS "QPointF MoveElementsCommand::movement\fC [private]\fP"
+
+.PP
+applied movement 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,159 @@
+.TH "PotentialSelectorDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PotentialSelectorDialog \- The \fBPotentialSelectorDialog\fP class This dialog is used when user try to connect two existing potential together\&. The dialog ask to user to make a choice between the properties of the two existing potential, to apply it for the new potential\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <potentialselectordialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPotentialSelectorDialog\fP (\fBConductor\fP *conductor, QUndoCommand *parent_undo=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBPotentialSelectorDialog::PotentialSelectorDialog\fP Constructor when we link two potentiels together, with a conductor\&. "
+.ti -1c
+.RI "\fBPotentialSelectorDialog\fP (\fBElement\fP *report, QUndoCommand *parent_undo=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBPotentialSelectorDialog::PotentialSelectorDialog\fP Constructor when we link two potentiels together, with a folio report\&. "
+.ti -1c
+.RI "\fB~PotentialSelectorDialog\fP () override"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBConductorProperties\fP \fBchosenProperties\fP (QList< \fBConductorProperties\fP > list, QWidget *parent=nullptr)"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_buttonBox_accepted\fP ()"
+.br
+.RI "\fBPotentialSelectorDialog::on_buttonBox_accepted\fP Action when user click on OK button\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBbuildWidget\fP ()"
+.br
+.RI "\fBPotentialSelectorDialog::buildWidget\fP Build the dialog\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::PotentialSelectorDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBConductor\fP * \fBm_conductor\fP"
+.br
+.ti -1c
+.RI "\fBElement\fP * \fBm_report\fP"
+.br
+.ti -1c
+.RI "QUndoCommand * \fBm_parent_undo\fP"
+.br
+.ti -1c
+.RI "\fBautonum::sequentialNumbers\fP \fBm_sequential_num\fP"
+.br
+.ti -1c
+.RI "\fBAbstractPotentialSelector\fP * \fBm_potential_selector\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductorProperties\fP > \fBm_properties_list\fP"
+.br
+.ti -1c
+.RI "QList< \fBConductor\fP * > \fBm_conductors_to_change\fP"
+.br
+.ti -1c
+.RI "int \fBm_selected\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBPotentialSelectorDialog\fP class This dialog is used when user try to connect two existing potential together\&. The dialog ask to user to make a choice between the properties of the two existing potential, to apply it for the new potential\&. 
+
+Each constructor have a QUndoCommand parent_undo for parameter If parent_undo isn't null, when user click on OK button, the dialog will use the parent-undo as parent of the undo command that describe the changes\&. If parent_undo is null, the created undo-command is push to the undo stack of the parent diagram of a conductor in potential\&. else we apply the change without a QUndoCommand\&.
+.PP
+the static function chosenProperties, open a dialog who ask user to make a choice between the given properties 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "PotentialSelectorDialog::PotentialSelectorDialog (\fBConductor\fP * conductor, QUndoCommand * parent_undo = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBPotentialSelectorDialog::PotentialSelectorDialog\fP Constructor when we link two potentiels together, with a conductor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP : the new conductor who connect to existing potential 
+.br
+\fIparent_undo\fP : undo parent to use\&. 
+.br
+\fIparent\fP : parent widget\&. 
+.RE
+.PP
+
+.SS "PotentialSelectorDialog::PotentialSelectorDialog (\fBElement\fP * report, QUndoCommand * parent_undo = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBPotentialSelectorDialog::PotentialSelectorDialog\fP Constructor when we link two potentiels together, with a folio report\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreport\fP : one of the report used to link the potentials (report must be linked to another report) 
+.br
+\fIparent_undo\fP : undo parent to use 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "PotentialSelectorDialog::~PotentialSelectorDialog ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void PotentialSelectorDialog::buildWidget ()\fC [private]\fP"
+
+.PP
+\fBPotentialSelectorDialog::buildWidget\fP Build the dialog\&. 
+.SS "\fBConductorProperties\fP PotentialSelectorDialog::chosenProperties (QList< \fBConductorProperties\fP > list, QWidget * parent = \fCnullptr\fP)\fC [static]\fP"
+
+.SS "void PotentialSelectorDialog::on_buttonBox_accepted ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBPotentialSelectorDialog::on_buttonBox_accepted\fP Action when user click on OK button\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBConductor\fP* PotentialSelectorDialog::m_conductor\fC [private]\fP"
+
+.SS "QList<\fBConductor\fP *> PotentialSelectorDialog::m_conductors_to_change\fC [private]\fP"
+
+.SS "QUndoCommand* PotentialSelectorDialog::m_parent_undo\fC [private]\fP"
+
+.SS "\fBAbstractPotentialSelector\fP* PotentialSelectorDialog::m_potential_selector\fC [private]\fP"
+
+.SS "QList<\fBConductorProperties\fP> PotentialSelectorDialog::m_properties_list\fC [private]\fP"
+
+.SS "\fBElement\fP* PotentialSelectorDialog::m_report\fC [private]\fP"
+
+.SS "int PotentialSelectorDialog::m_selected = 0\fC [private]\fP"
+
+.SS "\fBautonum::sequentialNumbers\fP PotentialSelectorDialog::m_sequential_num\fC [private]\fP"
+
+.SS "Ui::PotentialSelectorDialog* PotentialSelectorDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

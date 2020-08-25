@@ -1,0 +1,1653 @@
+.TH "TitleBlockTemplate" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplate \- The \fBTitleBlockTemplate\fP class This class represents an title block template for an electric diagram\&. It can read from an XML document the layout of the table that graphically represents the title block, and can produce a graphical rendering of it from a diagram context (object embedding the informations of the diagram we want to represent the title block\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <titleblocktemplate\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP (QObject *=nullptr)"
+.br
+.RI "\fBTitleBlockTemplate::TitleBlockTemplate\fP Constructor\&. "
+.ti -1c
+.RI "\fB~TitleBlockTemplate\fP () override"
+.br
+.RI "\fBTitleBlockTemplate::~TitleBlockTemplate\fP Destructor\&. "
+.ti -1c
+.RI "\fBTitleBlockCell\fP * \fBcreateCell\fP (const \fBTitleBlockCell\fP *=nullptr)"
+.br
+.RI "\fBTitleBlockTemplate::createCell\fP Create a new cell and associate it with this template, which means that it will be deleted when this template is destroyed\&. "
+.ti -1c
+.RI "bool \fBloadFromXmlFile\fP (const QString &)"
+.br
+.RI "\fBTitleBlockTemplate::loadFromXmlFile\fP Load a titleblock template from an XML file\&. "
+.ti -1c
+.RI "bool \fBloadFromXmlElement\fP (const QDomElement &)"
+.br
+.RI "\fBTitleBlockTemplate::loadFromXmlElement\fP\&. "
+.ti -1c
+.RI "bool \fBsaveToXmlFile\fP (const QString &)"
+.br
+.RI "\fBTitleBlockTemplate::saveToXmlFile\fP Save the title block template into an XML file\&. "
+.ti -1c
+.RI "bool \fBsaveToXmlElement\fP (QDomElement &) const"
+.br
+.RI "\fBTitleBlockTemplate::saveToXmlElement\fP Save the title block template as XML\&. "
+.ti -1c
+.RI "void \fBexportCellToXml\fP (\fBTitleBlockCell\fP *, QDomElement &) const"
+.br
+.RI "\fBTitleBlockTemplate::exportCellToXml\fP\&. "
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBclone\fP () const"
+.br
+.RI "\fBTitleBlockTemplate::clone\fP\&. "
+.ti -1c
+.RI "QString \fBname\fP () const"
+.br
+.RI "\fBTitleBlockTemplate::name\fP\&. "
+.ti -1c
+.RI "QString \fBinformation\fP () const"
+.br
+.RI "\fBTitleBlockTemplate::information\fP\&. "
+.ti -1c
+.RI "void \fBsetInformation\fP (const QString &)"
+.br
+.RI "\fBTitleBlockTemplate::setInformation\fP\&. "
+.ti -1c
+.RI "int \fBrowDimension\fP (int)"
+.br
+.RI "\fBTitleBlockTemplate::rowDimension\fP\&. "
+.ti -1c
+.RI "void \fBsetRowDimension\fP (int, const \fBTitleBlockDimension\fP &)"
+.br
+.RI "\fBTitleBlockTemplate::setRowDimension\fP Set the height of a row\&. "
+.ti -1c
+.RI "\fBTitleBlockDimension\fP \fBcolumnDimension\fP (int)"
+.br
+.RI "\fBTitleBlockTemplate::columnDimension\fP\&. "
+.ti -1c
+.RI "void \fBsetColumnDimension\fP (int, const \fBTitleBlockDimension\fP &)"
+.br
+.RI "\fBTitleBlockTemplate::setColumnDimension\fP Set the width of a column\&. "
+.ti -1c
+.RI "int \fBcolumnsCount\fP () const"
+.br
+.RI "\fBTitleBlockTemplate::columnsCount\fP\&. "
+.ti -1c
+.RI "int \fBrowsCount\fP () const"
+.br
+.RI "\fBTitleBlockTemplate::rowsCount\fP\&. "
+.ti -1c
+.RI "QList< int > \fBcolumnsWidth\fP (int) const"
+.br
+.RI "\fBTitleBlockTemplate::columnsWidth\fP\&. "
+.ti -1c
+.RI "QList< int > \fBrowsHeights\fP () const"
+.br
+.RI "\fBTitleBlockTemplate::rowsHeights\fP\&. "
+.ti -1c
+.RI "int \fBcolumnTypeCount\fP (\fBQET::TitleBlockColumnLength\fP)"
+.br
+.RI "\fBTitleBlockTemplate::columnTypeCount\fP\&. "
+.ti -1c
+.RI "int \fBcolumnTypeTotal\fP (\fBQET::TitleBlockColumnLength\fP)"
+.br
+.RI "\fBTitleBlockTemplate::columnTypeTotal\fP\&. "
+.ti -1c
+.RI "int \fBminimumWidth\fP ()"
+.br
+.ti -1c
+.RI "int \fBmaximumWidth\fP ()"
+.br
+.RI "\fBTitleBlockTemplate::maximumWidth\fP\&. "
+.ti -1c
+.RI "int \fBwidth\fP (int)"
+.br
+.RI "\fBTitleBlockTemplate::width\fP\&. "
+.ti -1c
+.RI "int \fBheight\fP () const"
+.br
+.RI "\fBTitleBlockTemplate::height\fP\&. "
+.ti -1c
+.RI "bool \fBmoveRow\fP (int, int)"
+.br
+.RI "\fBTitleBlockTemplate::moveRow\fP Move a row within this template\&. "
+.ti -1c
+.RI "void \fBaddRow\fP (int=\-1)"
+.br
+.RI "\fBTitleBlockTemplate::addRow\fP Add a new 25px-wide row at the provided index\&. "
+.ti -1c
+.RI "bool \fBinsertRow\fP (int, const QList< \fBTitleBlockCell\fP * > &, int=\-1)"
+.br
+.RI "\fBTitleBlockTemplate::insertRow\fP\&. "
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP * > \fBtakeRow\fP (int)"
+.br
+.RI "\fBTitleBlockTemplate::takeRow\fP Removes the row at index i\&. "
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP * > \fBcreateRow\fP ()"
+.br
+.RI "\fBTitleBlockTemplate::createRow\fP\&. "
+.ti -1c
+.RI "bool \fBmoveColumn\fP (int, int)"
+.br
+.RI "\fBTitleBlockTemplate::moveColumn\fP Move the column at index 'from' to index 'to'\&. "
+.ti -1c
+.RI "void \fBaddColumn\fP (int=\-1)"
+.br
+.RI "\fBTitleBlockTemplate::addColumn\fP Add a new 50px-wide column at the provided index\&. "
+.ti -1c
+.RI "bool \fBinsertColumn\fP (const \fBTitleBlockDimension\fP &, const QList< \fBTitleBlockCell\fP * > &, int=\-1)"
+.br
+.RI "\fBTitleBlockTemplate::insertColumn\fP\&. "
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP * > \fBtakeColumn\fP (int)"
+.br
+.RI "\fBTitleBlockTemplate::takeColumn\fP Removes the column at index i\&. "
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP * > \fBcreateColumn\fP ()"
+.br
+.RI "\fBTitleBlockTemplate::createColumn\fP\&. "
+.ti -1c
+.RI "\fBTitleBlockCell\fP * \fBcell\fP (int, int) const"
+.br
+.RI "\fBTitleBlockTemplate::cell\fP\&. "
+.ti -1c
+.RI "QSet< \fBTitleBlockCell\fP * > \fBspannedCells\fP (const \fBTitleBlockCell\fP *, bool=false) const"
+.br
+.RI "\fBTitleBlockTemplate::spannedCells\fP\&. "
+.ti -1c
+.RI "QHash< \fBTitleBlockCell\fP *, QPair< int, int > > \fBgetAllSpans\fP () const"
+.br
+.RI "\fBTitleBlockTemplate::getAllSpans\fP Export the span parameters of all cell in the current grid\&. "
+.ti -1c
+.RI "void \fBsetAllSpans\fP (const QHash< \fBTitleBlockCell\fP *, QPair< int, int > > &)"
+.br
+.RI "\fBTitleBlockTemplate::setAllSpans\fP Restore a set of span parameters\&. "
+.ti -1c
+.RI "bool \fBaddLogo\fP (const QString &, QByteArray *, const QString &='svg', const QString &='xml')"
+.br
+.RI "\fBTitleBlockTemplate::addLogo\fP\&. "
+.ti -1c
+.RI "bool \fBaddLogoFromFile\fP (const QString &, const QString &=QString())"
+.br
+.RI "\fBTitleBlockTemplate::addLogoFromFile\fP\&. "
+.ti -1c
+.RI "bool \fBsaveLogoToFile\fP (const QString &, const QString &)"
+.br
+.RI "\fBTitleBlockTemplate::saveLogoToFile\fP\&. "
+.ti -1c
+.RI "bool \fBremoveLogo\fP (const QString &)"
+.br
+.RI "\fBTitleBlockTemplate::removeLogo\fP\&. "
+.ti -1c
+.RI "bool \fBrenameLogo\fP (const QString &, const QString &)"
+.br
+.RI "\fBTitleBlockTemplate::renameLogo\fP Rename the \fIlogo_name\fP logo to \fInew_name\fP\&. "
+.ti -1c
+.RI "void \fBsetLogoStorage\fP (const QString &, const QString &)"
+.br
+.RI "\fBTitleBlockTemplate::setLogoStorage\fP Set the kind of storage for the \fIlogo_name\fP logo\&. "
+.ti -1c
+.RI "QList< QString > \fBlogos\fP () const"
+.br
+.RI "\fBTitleBlockTemplate::logos\fP\&. "
+.ti -1c
+.RI "QString \fBlogoType\fP (const QString &) const"
+.br
+.RI "\fBTitleBlockTemplate::logoType\fP\&. "
+.ti -1c
+.RI "QSvgRenderer * \fBvectorLogo\fP (const QString &) const"
+.br
+.RI "\fBTitleBlockTemplate::vectorLogo\fP\&. "
+.ti -1c
+.RI "QPixmap \fBbitmapLogo\fP (const QString &) const"
+.br
+.RI "\fBTitleBlockTemplate::bitmapLogo\fP\&. "
+.ti -1c
+.RI "void \fBrender\fP (QPainter &, const \fBDiagramContext\fP &, int) const"
+.br
+.RI "\fBTitleBlockTemplate::render\fP Render the titleblock\&. "
+.ti -1c
+.RI "void \fBrenderDxf\fP (QRectF &, const \fBDiagramContext\fP &, int, QString &, int) const"
+.br
+.RI "\fBTitleBlockTemplate::renderDxf\fP Render the titleblock in DXF\&. "
+.ti -1c
+.RI "void \fBrenderCell\fP (QPainter &, const \fBTitleBlockCell\fP &, const \fBDiagramContext\fP &, const QRect &) const"
+.br
+.RI "\fBTitleBlockTemplate::renderCell\fP Render a titleblock cell\&. "
+.ti -1c
+.RI "void \fBapplyCellSpans\fP ()"
+.br
+.RI "\fBTitleBlockTemplate::applyCellSpans\fP Forget any previously applied span, then apply again all spans defined by existing cells\&. "
+.ti -1c
+.RI "void \fBforgetSpanning\fP ()"
+.br
+.RI "\fBTitleBlockTemplate::forgetSpanning\fP Set the spanner_cell attribute of every cell to 0\&. "
+.ti -1c
+.RI "void \fBforgetSpanning\fP (\fBTitleBlockCell\fP *, bool=true)"
+.br
+.RI "\fBTitleBlockTemplate::forgetSpanning\fP Set the spanner_cell attribute of every cell spanned by \fIspanning_cell\fP to 0\&. "
+.ti -1c
+.RI "bool \fBcheckCellSpan\fP (\fBTitleBlockCell\fP *)"
+.br
+.RI "\fBTitleBlockTemplate::checkCellSpan\fP Check whether a given cell can be spanned according to its row_span and col_span attributes\&. the following attributes of \fIcell\fP are updated according to what is really possible: applied_col_span applied_row_span span_state\&. "
+.ti -1c
+.RI "void \fBapplyCellSpan\fP (\fBTitleBlockCell\fP *)"
+.br
+.RI "\fBTitleBlockTemplate::applyCellSpan\fP Ensure the spans of the provided cell are applied within the grid structure\&. "
+.ti -1c
+.RI "void \fBapplyRowColNums\fP ()"
+.br
+.RI "\fBTitleBlockTemplate::applyRowColNums\fP Ensure all cells have the right col+row numbers\&. "
+.ti -1c
+.RI "void \fBrowColsChanged\fP ()"
+.br
+.RI "\fBTitleBlockTemplate::rowColsChanged\fP Take care of consistency and span-related problematics when adding/moving/deleting rows and columns\&. "
+.ti -1c
+.RI "QStringList \fBlistOfVariables\fP ()"
+.br
+.RI "\fBTitleBlockTemplate::listOfVariables\fP Get list of variables\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QFont \fBfontForCell\fP (const \fBTitleBlockCell\fP &)"
+.br
+.RI "\fBTitleBlockTemplate::fontForCell\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBloadInformation\fP (const QDomElement &)"
+.br
+.RI "\fBTitleBlockTemplate::loadInformation\fP Import text informations from a given XML title block template\&. "
+.ti -1c
+.RI "bool \fBloadLogos\fP (const QDomElement &, bool=false)"
+.br
+.RI "\fBTitleBlockTemplate::loadLogos\fP Import the logos from a given XML titleblock template\&. "
+.ti -1c
+.RI "bool \fBloadLogo\fP (const QDomElement &)"
+.br
+.RI "\fBTitleBlockTemplate::loadLogo\fP Import the logo from a given XML logo description\&. "
+.ti -1c
+.RI "bool \fBloadGrid\fP (const QDomElement &)"
+.br
+.ti -1c
+.RI "bool \fBloadCells\fP (const QDomElement &)"
+.br
+.RI "\fBTitleBlockTemplate::loadCells\fP Analyze an XML element, looking for grid cells\&. The grid cells are checked and stored in this object\&. "
+.ti -1c
+.RI "void \fBloadCell\fP (const QDomElement &)"
+.br
+.RI "\fBTitleBlockTemplate::loadCell\fP Load a cell into this template\&. "
+.ti -1c
+.RI "void \fBsaveInformation\fP (QDomElement &) const"
+.br
+.RI "\fBTitleBlockTemplate::saveInformation\fP Export this template's extra information\&. "
+.ti -1c
+.RI "void \fBsaveLogos\fP (QDomElement &) const"
+.br
+.RI "\fBTitleBlockTemplate::saveLogos\fP Export this template's logos as XML\&. "
+.ti -1c
+.RI "void \fBsaveLogo\fP (const QString &, QDomElement &) const"
+.br
+.RI "\fBTitleBlockTemplate::saveLogo\fP Export a specific logo as XML\&. "
+.ti -1c
+.RI "void \fBsaveGrid\fP (QDomElement &) const"
+.br
+.RI "\fBTitleBlockTemplate::saveGrid\fP Export this template's cells grid as XML\&. "
+.ti -1c
+.RI "void \fBsaveCells\fP (QDomElement &) const"
+.br
+.RI "\fBTitleBlockTemplate::saveCells\fP Export this template's cells as XML (without the grid-related information, usch as rows and cols) "
+.ti -1c
+.RI "void \fBsaveCell\fP (\fBTitleBlockCell\fP *, QDomElement &, bool=false) const"
+.br
+.RI "\fBTitleBlockTemplate::saveCell\fP Export a specific cell as XML\&. "
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP * > \fBcreateCellsList\fP (int)"
+.br
+.RI "\fBTitleBlockTemplate::createCellsList\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP (const \fBTitleBlockTemplate\fP &)"
+.br
+.ti -1c
+.RI "void \fBparseRows\fP (const QString &)"
+.br
+.RI "\fBTitleBlockTemplate::parseRows\fP Parse the rows heights\&. "
+.ti -1c
+.RI "void \fBparseColumns\fP (const QString &)"
+.br
+.RI "\fBTitleBlockTemplate::parseColumns\fP Parse the columns widths\&. "
+.ti -1c
+.RI "bool \fBcheckCell\fP (const QDomElement &, \fBTitleBlockCell\fP **=nullptr)"
+.br
+.RI "\fBTitleBlockTemplate::checkCell\fP Load the essential attributes of a cell: row and column indices and spans\&. "
+.ti -1c
+.RI "void \fBflushCells\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitCells\fP ()"
+.br
+.RI "\fBTitleBlockTemplate::initCells\fP Initialize the internal cells grid with the row and column counts\&. Note that this method does nothing if one of the internal lists columns_width_ and rows_heights_ is empty\&. "
+.ti -1c
+.RI "int \fBlengthRange\fP (int, int, const QList< int > &) const"
+.br
+.RI "\fBTitleBlockTemplate::lengthRange\fP\&. "
+.ti -1c
+.RI "QString \fBfinalTextForCell\fP (const \fBTitleBlockCell\fP &, const \fBDiagramContext\fP &) const"
+.br
+.RI "\fBTitleBlockTemplate::finalTextForCell\fP\&. "
+.ti -1c
+.RI "QString \fBinterpreteVariables\fP (const QString &, const \fBDiagramContext\fP &) const"
+.br
+.RI "\fBTitleBlockTemplate::interpreteVariables\fP\&. "
+.ti -1c
+.RI "void \fBrenderTextCell\fP (QPainter &, const QString &, const \fBTitleBlockCell\fP &, const QRectF &) const"
+.br
+.RI "\fBTitleBlockTemplate::renderTextCell\fP This method uses a \fIpainter\fP to render the \fItext\fP of a \fIcell\fP into the \fIcell_rect\fP rectangle\&. The alignment, font_size and other cell parameters are taken into account when rendering\&. "
+.ti -1c
+.RI "void \fBrenderTextCellDxf\fP (QString &, const QString &, const \fBTitleBlockCell\fP &, qreal, qreal, qreal, qreal, int) const"
+.br
+.RI "\fBTitleBlockTemplate::renderTextCellDxf\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QString \fBname_\fP"
+.br
+.RI "name_ : name identifying the Title Block Template within its parent collection "
+.ti -1c
+.RI "QString \fBinformation_\fP"
+.br
+.ti -1c
+.RI "QHash< QString, QByteArray > \fBdata_logos_\fP"
+.br
+.RI "data_logos_ : Logos raw data "
+.ti -1c
+.RI "QHash< QString, QString > \fBstorage_logos_\fP"
+.br
+.RI "storage_logos_ : Logos applied storage type (e\&.g\&. 'xml' or 'base64') "
+.ti -1c
+.RI "QHash< QString, QString > \fBtype_logos_\fP"
+.br
+.RI "type_logos_ : Logos types (e\&.g\&. 'png', 'jpeg', 'svg') "
+.ti -1c
+.RI "QHash< QString, QSvgRenderer * > \fBvector_logos_\fP"
+.br
+.RI "vector_logos_ : Rendered objects for vector logos "
+.ti -1c
+.RI "QHash< QString, QPixmap > \fBbitmap_logos_\fP"
+.br
+.RI "bitmap_logos_ : Pixmaps for bitmap logos "
+.ti -1c
+.RI "QList< int > \fBrows_heights_\fP"
+.br
+.RI "rows heights -- simple integers "
+.ti -1c
+.RI "QList< \fBTitleBlockDimension\fP > \fBcolumns_width_\fP"
+.br
+.RI "columns_width_ : columns widths -- "
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP * > \fBregistered_cells_\fP"
+.br
+.RI "registered_cells_ : Cells objects created rattached to this template, but not mandatorily used "
+.ti -1c
+.RI "QList< QList< \fBTitleBlockCell\fP * > > \fBcells_\fP"
+.br
+.RI "Cells grid\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBTitleBlockTemplate\fP class This class represents an title block template for an electric diagram\&. It can read from an XML document the layout of the table that graphically represents the title block, and can produce a graphical rendering of it from a diagram context (object embedding the informations of the diagram we want to represent the title block\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplate::TitleBlockTemplate (QObject * parent = \fCnullptr\fP)"
+
+.PP
+\fBTitleBlockTemplate::TitleBlockTemplate\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP parent QObject 
+.RE
+.PP
+
+.SS "TitleBlockTemplate::~TitleBlockTemplate ()\fC [override]\fP"
+
+.PP
+\fBTitleBlockTemplate::~TitleBlockTemplate\fP Destructor\&. 
+.SS "TitleBlockTemplate::TitleBlockTemplate (const \fBTitleBlockTemplate\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TitleBlockTemplate::addColumn (int i = \fC\-1\fP)"
+
+.PP
+\fBTitleBlockTemplate::addColumn\fP Add a new 50px-wide column at the provided index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP : Index of the added column, -1 meaning 'last position' 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::addLogo (const QString & logo_name, QByteArray * logo_data, const QString & logo_type = \fC'svg'\fP, const QString & logo_storage = \fC'xml'\fP)"
+
+.PP
+\fBTitleBlockTemplate::addLogo\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogo_name\fP : Logo name to be added / replaced 
+.br
+\fIlogo_data\fP : Logo data 
+.br
+\fIlogo_type\fP : 
+.br
+\fIlogo_storage\fP : 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true or false 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::addLogoFromFile (const QString & filepath, const QString & name = \fCQString()\fP)"
+
+.PP
+\fBTitleBlockTemplate::addLogoFromFile\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP : Path of the image file to add as a logo 
+.br
+\fIname\fP : Name used to store the logo; if none is provided, the basename of the first argument is used\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the logo could be deleted, false otherwise 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::addRow (int i = \fC\-1\fP)"
+
+.PP
+\fBTitleBlockTemplate::addRow\fP Add a new 25px-wide row at the provided index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP : Index of the added row, -1 meaning 'last position' 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::applyCellSpan (\fBTitleBlockCell\fP * cell)"
+
+.PP
+\fBTitleBlockTemplate::applyCellSpan\fP Ensure the spans of the provided cell are applied within the grid structure\&. 
+.PP
+\fBNote\fP
+.RS 4
+: this function does not check whether the spans of the provided cell make sense\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP : Potentially spanning cell 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::applyCellSpans ()"
+
+.PP
+\fBTitleBlockTemplate::applyCellSpans\fP Forget any previously applied span, then apply again all spans defined by existing cells\&. 
+.SS "void TitleBlockTemplate::applyRowColNums ()"
+
+.PP
+\fBTitleBlockTemplate::applyRowColNums\fP Ensure all cells have the right col+row numbers\&. 
+.SS "QPixmap TitleBlockTemplate::bitmapLogo (const QString & logo_name) const"
+
+.PP
+\fBTitleBlockTemplate::bitmapLogo\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogo_name\fP : Name of a logo embedded within this title block template\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the pixmap for the required bitmap logo, or a null pixmap if no such bitmap logo was found in this template\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockCell\fP * TitleBlockTemplate::cell (int row, int col) const"
+
+.PP
+\fBTitleBlockTemplate::cell\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrow\fP : A row number (starting from 0) 
+.br
+\fIcol\fP : A column number (starting from 0) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the cell located at (row, col) 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::checkCell (const QDomElement & xml_element, \fBTitleBlockCell\fP ** titleblock_cell_ptr = \fCnullptr\fP)\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplate::checkCell\fP Load the essential attributes of a cell: row and column indices and spans\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : XML element representing a cell, i\&.e\&. either an titleblock logo or an titleblock field\&. 
+.br
+\fItitleblock_cell_ptr\fP : Pointer to a \fBTitleBlockCell\fP object pointer - if non-zero and if this method returns true, will be filled with the created \fBTitleBlockCell\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE if the cell appears to be ok, FALSE otherwise 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::checkCellSpan (\fBTitleBlockCell\fP * cell)"
+
+.PP
+\fBTitleBlockTemplate::checkCellSpan\fP Check whether a given cell can be spanned according to its row_span and col_span attributes\&. the following attributes of \fIcell\fP are updated according to what is really possible: applied_col_span applied_row_span span_state\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP : Cell we want to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+false if no check could be performed, true otherwise 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplate\fP * TitleBlockTemplate::clone () const"
+
+.PP
+\fBTitleBlockTemplate::clone\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a deep copy of the current title block template (i\&.e\&. title block cells are duplicated too and associated with their parent template)\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockDimension\fP TitleBlockTemplate::columnDimension (int i)"
+
+.PP
+\fBTitleBlockTemplate::columnDimension\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP : column index 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the width of the column at index i 
+.RE
+.PP
+
+.SS "int TitleBlockTemplate::columnsCount () const"
+
+.PP
+\fBTitleBlockTemplate::columnsCount\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the number of columns in this template 
+.RE
+.PP
+
+.SS "QList< int > TitleBlockTemplate::columnsWidth (int total_width) const"
+
+.PP
+\fBTitleBlockTemplate::columnsWidth\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItotal_width\fP : The total width of the titleblock to render 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the list of the columns widths for this rendering 
+.RE
+.PP
+
+.SS "int TitleBlockTemplate::columnTypeCount (\fBQET::TitleBlockColumnLength\fP type)"
+
+.PP
+\fBTitleBlockTemplate::columnTypeCount\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP : a column type 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the count of \fItype\fP columns 
+.RE
+.PP
+
+.SS "int TitleBlockTemplate::columnTypeTotal (\fBQET::TitleBlockColumnLength\fP type)"
+
+.PP
+\fBTitleBlockTemplate::columnTypeTotal\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP : a column type 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the sum of values attached to \fItype\fP columns 
+.RE
+.PP
+
+.SS "\fBTitleBlockCell\fP * TitleBlockTemplate::createCell (const \fBTitleBlockCell\fP * existing_cell = \fCnullptr\fP)"
+
+.PP
+\fBTitleBlockTemplate::createCell\fP Create a new cell and associate it with this template, which means that it will be deleted when this template is destroyed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIexisting_cell\fP (optional) An existing cell that will be copied 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A pointer to the newly created cell 
+.RE
+.PP
+
+.SS "QList< \fBTitleBlockCell\fP * > TitleBlockTemplate::createCellsList (int count)\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::createCellsList\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcount\fP : Number of cells expected in the list 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a list containing count newly created (and registered) cells 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBcreateCell()\fP 
+.RE
+.PP
+
+.SS "QList< \fBTitleBlockCell\fP * > TitleBlockTemplate::createColumn ()"
+
+.PP
+\fBTitleBlockTemplate::createColumn\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a new column that fits the current grid 
+.RE
+.PP
+
+.SS "QList< \fBTitleBlockCell\fP * > TitleBlockTemplate::createRow ()"
+
+.PP
+\fBTitleBlockTemplate::createRow\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+a new row that fits the current grid 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::exportCellToXml (\fBTitleBlockCell\fP * cell, QDomElement & xml_element) const"
+
+.PP
+\fBTitleBlockTemplate::exportCellToXml\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP : Cell to export 
+.br
+\fIxml_element\fP : Parent XML element to be used when exporting \fIcell\fP 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplate::finalTextForCell (const \fBTitleBlockCell\fP & cell, const \fBDiagramContext\fP & diagram_context) const\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplate::finalTextForCell\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP : A cell from this template 
+.br
+\fIdiagram_context\fP : \fBDiagram\fP context to use to generate the final text for the given cell 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the final text that has to be drawn in the given cell 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::flushCells ()\fC [private]\fP"
+
+.SS "QFont TitleBlockTemplate::fontForCell (const \fBTitleBlockCell\fP & cell)\fC [static]\fP"
+
+.PP
+\fBTitleBlockTemplate::fontForCell\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP : An existing cell 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The font that should be used to render this cell according to its properties\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::forgetSpanning ()"
+
+.PP
+\fBTitleBlockTemplate::forgetSpanning\fP Set the spanner_cell attribute of every cell to 0\&. 
+.SS "void TitleBlockTemplate::forgetSpanning (\fBTitleBlockCell\fP * spanning_cell, bool modify_cell = \fCtrue\fP)"
+
+.PP
+\fBTitleBlockTemplate::forgetSpanning\fP Set the spanner_cell attribute of every cell spanned by \fIspanning_cell\fP to 0\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspanning_cell\fP : 
+.br
+\fImodify_cell\fP : (Optional, defaults to true) Whether to set row_span and col_span of \fIspanning_cell\fP to 0\&. 
+.RE
+.PP
+
+.SS "QHash< \fBTitleBlockCell\fP *, QPair< int, int > > TitleBlockTemplate::getAllSpans () const"
+
+.PP
+\fBTitleBlockTemplate::getAllSpans\fP Export the span parameters of all cell in the current grid\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "int TitleBlockTemplate::height () const"
+
+.PP
+\fBTitleBlockTemplate::height\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the total height of this template 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplate::information () const"
+
+.PP
+\fBTitleBlockTemplate::information\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the information field attached to this template 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::initCells ()\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplate::initCells\fP Initialize the internal cells grid with the row and column counts\&. Note that this method does nothing if one of the internal lists columns_width_ and rows_heights_ is empty\&. 
+.SS "bool TitleBlockTemplate::insertColumn (const \fBTitleBlockDimension\fP & dimension, const QList< \fBTitleBlockCell\fP * > & column, int i = \fC\-1\fP)"
+
+.PP
+\fBTitleBlockTemplate::insertColumn\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdimension\fP : Size of the column to be added 
+.br
+\fIcolumn\fP : Column to be added 
+.br
+\fIi\fP : Index of the column after insertion, -1 meaning 'last position' 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::insertRow (int dimension, const QList< \fBTitleBlockCell\fP * > & row, int i = \fC\-1\fP)"
+
+.PP
+\fBTitleBlockTemplate::insertRow\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdimension\fP : dimension Size of the row to be added (always absolute, in pixels) 
+.br
+\fIrow\fP : column Row to be added 
+.br
+\fIi\fP : Index of the column after insertion, -1 meaning 'last position' 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplate::interpreteVariables (const QString & string, const \fBDiagramContext\fP & diagram_context) const\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplate::interpreteVariables\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP : A text containing 0 to n variables, e\&.g\&. '%var' or '%{var}' 
+.br
+\fIdiagram_context\fP : \fBDiagram\fP context to use to interprete variables 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the provided string with variables replaced by the values from the diagram context 
+.RE
+.PP
+
+.SS "int TitleBlockTemplate::lengthRange (int start, int end, const QList< int > & lengths_list) const\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplate::lengthRange\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP : start border number 
+.br
+\fIend\fP : end border number 
+.br
+\fIlengths_list\fP : 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the width between two borders 
+.RE
+.PP
+
+.SS "QStringList TitleBlockTemplate::listOfVariables ()"
+
+.PP
+\fBTitleBlockTemplate::listOfVariables\fP Get list of variables\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The list of string with variables 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::loadCell (const QDomElement & cell_element)\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::loadCell\fP Load a cell into this template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell_element\fP : XML element describing a cell within a title block template 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::loadCells (const QDomElement & xml_element)\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::loadCells\fP Analyze an XML element, looking for grid cells\&. The grid cells are checked and stored in this object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP XML element to analyze 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+systematically true 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::loadFromXmlElement (const QDomElement & xml_element)"
+
+.PP
+\fBTitleBlockTemplate::loadFromXmlElement\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : An XML document to read the template from\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the reading succeeds, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::loadFromXmlFile (const QString & filepath)"
+
+.PP
+\fBTitleBlockTemplate::loadFromXmlFile\fP Load a titleblock template from an XML file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP : A file path to read the template from\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the reading succeeds, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::loadGrid (const QDomElement & xml_element)\fC [protected]\fP"
+Import the grid from a given XML titleblock template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP An XML element representing an titleblock template\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the reading succeeds, false otherwise\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::loadInformation (const QDomElement & xml_element)\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::loadInformation\fP Import text informations from a given XML title block template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::loadLogo (const QDomElement & xml_element)\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::loadLogo\fP Import the logo from a given XML logo description\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : An XML element representing a logo within an titleblock template\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the reading succeeds, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::loadLogos (const QDomElement & xml_element, bool reset = \fCfalse\fP)\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::loadLogos\fP Import the logos from a given XML titleblock template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : An XML element representing an titleblock template\&. 
+.br
+\fIreset\fP : true to delete all previously known logos before, false otherwise\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the reading succeeds, false otherwise\&. 
+.RE
+.PP
+
+.SS "QList< QString > TitleBlockTemplate::logos () const"
+
+.PP
+\fBTitleBlockTemplate::logos\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The names of logos embedded within this title block template\&. 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplate::logoType (const QString & logo_name) const"
+
+.PP
+\fBTitleBlockTemplate::logoType\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogo_name\fP : Name of a logo embedded within this title block template\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the kind of storage used for the required logo, or a null QString if no such logo was found in this template\&. 
+.RE
+.PP
+
+.SS "int TitleBlockTemplate::maximumWidth ()"
+
+.PP
+\fBTitleBlockTemplate::maximumWidth\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the maximum width for this template, or -1 if it does not have any\&. 
+.RE
+.PP
+
+.SS "int TitleBlockTemplate::minimumWidth ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+the minimum width for this template 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::moveColumn (int from, int to)"
+
+.PP
+\fBTitleBlockTemplate::moveColumn\fP Move the column at index 'from' to index 'to'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP : Source index of the moved column 
+.br
+\fIto\fP : Target index of the moved column 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true or false 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::moveRow (int from, int to)"
+
+.PP
+\fBTitleBlockTemplate::moveRow\fP Move a row within this template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfrom\fP : Index of the moved row 
+.br
+\fIto\fP : Arrival index of the moved row 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true on row Changed or false 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplate::name () const"
+
+.PP
+\fBTitleBlockTemplate::name\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the name of this template 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::parseColumns (const QString & cols_string)\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplate::parseColumns\fP Parse the columns widths\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcols_string\fP : A string describing the columns widths of the titleblock 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::parseRows (const QString & rows_string)\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplate::parseRows\fP Parse the rows heights\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrows_string\fP : A string describing the rows heights of the titleblock 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::removeLogo (const QString & logo_name)"
+
+.PP
+\fBTitleBlockTemplate::removeLogo\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogo_name\fP : Name of the logo to remove 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the logo could be deleted, false otherwise 
+.RE
+.PP
+TODO check existing cells using this logo\&.
+.SS "bool TitleBlockTemplate::renameLogo (const QString & logo_name, const QString & new_name)"
+
+.PP
+\fBTitleBlockTemplate::renameLogo\fP Rename the \fIlogo_name\fP logo to \fInew_name\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogo_name\fP : Name of the logo to be renamed 
+.br
+\fInew_name\fP : New name of the renamed logo 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+TODO check existing cells using this logo\&.
+.SS "void TitleBlockTemplate::render (QPainter & painter, const \fBDiagramContext\fP & diagram_context, int titleblock_width) const"
+
+.PP
+\fBTitleBlockTemplate::render\fP Render the titleblock\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP : Painter to use to render the titleblock 
+.br
+\fIdiagram_context\fP : \fBDiagram\fP context to use to generate the titleblock strings 
+.br
+\fItitleblock_width\fP : Width of the titleblock to render 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::renderCell (QPainter & painter, const \fBTitleBlockCell\fP & cell, const \fBDiagramContext\fP & diagram_context, const QRect & cell_rect) const"
+
+.PP
+\fBTitleBlockTemplate::renderCell\fP Render a titleblock cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP : Painter to use to render the titleblock 
+.br
+\fIcell\fP : 
+.br
+\fIdiagram_context\fP : \fBDiagram\fP context to use to generate the titleblock strings 
+.br
+\fIcell_rect\fP : Rectangle the cell must be rendered into\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::renderDxf (QRectF & title_block_rect, const \fBDiagramContext\fP & diagram_context, int titleblock_width, QString & file_path, int color) const"
+
+.PP
+\fBTitleBlockTemplate::renderDxf\fP Render the titleblock in DXF\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItitle_block_rect\fP : 
+.br
+\fIdiagram_context\fP : \fBDiagram\fP context to use to generate the titleblock strings 
+.br
+\fItitleblock_width\fP : Width of the titleblock to render 
+.br
+\fIfile_path\fP : 
+.br
+\fIcolor\fP : 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::renderTextCell (QPainter & painter, const QString & text, const \fBTitleBlockCell\fP & cell, const QRectF & cell_rect) const\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplate::renderTextCell\fP This method uses a \fIpainter\fP to render the \fItext\fP of a \fIcell\fP into the \fIcell_rect\fP rectangle\&. The alignment, font_size and other cell parameters are taken into account when rendering\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP : QPainter used to render the text 
+.br
+\fItext\fP : Text to render 
+.br
+\fIcell\fP : Cell the rendered text is rattached to 
+.br
+\fIcell_rect\fP : Rectangle delimiting the cell area 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::renderTextCellDxf (QString & file_path, const QString & text, const \fBTitleBlockCell\fP & cell, qreal x, qreal y, qreal w, qreal h, int color) const\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplate::renderTextCellDxf\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_path\fP 
+.br
+\fItext\fP 
+.br
+\fIcell\fP 
+.br
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIw\fP 
+.br
+\fIh\fP 
+.br
+\fIcolor\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::rowColsChanged ()"
+
+.PP
+\fBTitleBlockTemplate::rowColsChanged\fP Take care of consistency and span-related problematics when adding/moving/deleting rows and columns\&. 
+.SS "int TitleBlockTemplate::rowDimension (int i)"
+
+.PP
+\fBTitleBlockTemplate::rowDimension\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP : row index 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the height of the row at index i 
+.RE
+.PP
+
+.SS "int TitleBlockTemplate::rowsCount () const"
+
+.PP
+\fBTitleBlockTemplate::rowsCount\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the number of rows in this template 
+.RE
+.PP
+
+.SS "QList< int > TitleBlockTemplate::rowsHeights () const"
+
+.PP
+\fBTitleBlockTemplate::rowsHeights\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the heights of all the rows in this template 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::saveCell (\fBTitleBlockCell\fP * cell, QDomElement & xml_element, bool save_empty = \fCfalse\fP) const\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::saveCell\fP Export a specific cell as XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP : Cell to be exported as XML 
+.br
+\fIxml_element\fP : XML element under which the <cell> element will be attached 
+.br
+\fIsave_empty\fP : If true, the cell will be saved even if it is an empty one 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::saveCells (QDomElement & xml_element) const\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::saveCells\fP Export this template's cells as XML (without the grid-related information, usch as rows and cols) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : XML element under which the <cell> elements will be attached 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::saveGrid (QDomElement & xml_element) const\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::saveGrid\fP Export this template's cells grid as XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : XML element under which the <grid> element will be attached 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::saveInformation (QDomElement & xml_element) const\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::saveInformation\fP Export this template's extra information\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : XML element under which extra informations will be attached 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::saveLogo (const QString & logo_name, QDomElement & xml_element) const\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::saveLogo\fP Export a specific logo as XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogo_name\fP : Name of the logo to be exported 
+.br
+\fIxml_element\fP : XML element in which the logo will be exported 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::saveLogos (QDomElement & xml_element) const\fC [protected]\fP"
+
+.PP
+\fBTitleBlockTemplate::saveLogos\fP Export this template's logos as XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : XML \fBElement\fP under which the <logos> element will be attached 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::saveLogoToFile (const QString & logo_name, const QString & filepath)"
+
+.PP
+\fBTitleBlockTemplate::saveLogoToFile\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogo_name\fP : Name used to store the logo 
+.br
+\fIfilepath\fP : Path the logo will be saved as 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the logo could be exported, false otherwise 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::saveToXmlElement (QDomElement & xml_element) const"
+
+.PP
+\fBTitleBlockTemplate::saveToXmlElement\fP Save the title block template as XML\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : The XML element this title block template should be saved to\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the export succeeds, false otherwise 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplate::saveToXmlFile (const QString & filepath)"
+
+.PP
+\fBTitleBlockTemplate::saveToXmlFile\fP Save the title block template into an XML file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilepath\fP : The file path this title block template should be saved to\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the operation succeeds, false otherwise 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::setAllSpans (const QHash< \fBTitleBlockCell\fP *, QPair< int, int > > & spans)"
+
+.PP
+\fBTitleBlockTemplate::setAllSpans\fP Restore a set of span parameters\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspans\fP : 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::setColumnDimension (int i, const \fBTitleBlockDimension\fP & dimension)"
+
+.PP
+\fBTitleBlockTemplate::setColumnDimension\fP Set the width of a column\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP : column index 
+.br
+\fIdimension\fP : New width of the column at index i 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::setInformation (const QString & info)"
+
+.PP
+\fBTitleBlockTemplate::setInformation\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo\fP information to be attached to this template 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::setLogoStorage (const QString & logo_name, const QString & storage)"
+
+.PP
+\fBTitleBlockTemplate::setLogoStorage\fP Set the kind of storage for the \fIlogo_name\fP logo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogo_name\fP : Name of the logo which kind of storage is to be changed 
+.br
+\fIstorage\fP : The kind of storage to use for the logo, e\&.g\&. 'xml' or 'base64'\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplate::setRowDimension (int i, const \fBTitleBlockDimension\fP & dimension)"
+
+.PP
+\fBTitleBlockTemplate::setRowDimension\fP Set the height of a row\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP : row index 
+.br
+\fIdimension\fP : New height of the row at index i 
+.RE
+.PP
+
+.SS "QSet< \fBTitleBlockCell\fP * > TitleBlockTemplate::spannedCells (const \fBTitleBlockCell\fP * given_cell, bool ignore_span_state = \fCfalse\fP) const"
+
+.PP
+\fBTitleBlockTemplate::spannedCells\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgiven_cell\fP : cell A cell belonging to this title block template 
+.br
+\fIignore_span_state\fP : (Optional, defaults to false) If true, will consider cells theoretically spanned (i\&.e\&. row_span and col_span attributes)\&. Otherwise, will take span_state attribute into account\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the set of cells spanned by the provided cell Note the returned set does not include the spanning, provided cell 
+.RE
+.PP
+
+.SS "QList< \fBTitleBlockCell\fP * > TitleBlockTemplate::takeColumn (int i)"
+
+.PP
+\fBTitleBlockTemplate::takeColumn\fP Removes the column at index i\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP : Index of the column to be removed 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the removed column 
+.RE
+.PP
+
+.SS "QList< \fBTitleBlockCell\fP * > TitleBlockTemplate::takeRow (int i)"
+
+.PP
+\fBTitleBlockTemplate::takeRow\fP Removes the row at index i\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP : Index of the column to be removed 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the removed column 
+.RE
+.PP
+
+.SS "QSvgRenderer * TitleBlockTemplate::vectorLogo (const QString & logo_name) const"
+
+.PP
+\fBTitleBlockTemplate::vectorLogo\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogo_name\fP : Name of a vector logo embedded within this title block template\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the rendering object for the required vector logo, or 0 if no such vector logo was found in this template\&. 
+.RE
+.PP
+
+.SS "int TitleBlockTemplate::width (int total_width)"
+
+.PP
+\fBTitleBlockTemplate::width\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItotal_width\fP : The total width initially planned for the rendering 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the total effective width of this template 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QHash<QString, QPixmap> TitleBlockTemplate::bitmap_logos_\fC [private]\fP"
+
+.PP
+bitmap_logos_ : Pixmaps for bitmap logos 
+.SS "QList< QList<\fBTitleBlockCell\fP *> > TitleBlockTemplate::cells_\fC [private]\fP"
+
+.PP
+Cells grid\&. 
+.SS "QList<\fBTitleBlockDimension\fP> TitleBlockTemplate::columns_width_\fC [private]\fP"
+
+.PP
+columns_width_ : columns widths -- 
+.PP
+\fBSee also\fP
+.RS 4
+TitleBlockColDimension 
+.RE
+.PP
+
+.SS "QHash<QString, QByteArray > TitleBlockTemplate::data_logos_\fC [private]\fP"
+
+.PP
+data_logos_ : Logos raw data 
+.SS "QString TitleBlockTemplate::information_\fC [private]\fP"
+
+.SS "QString TitleBlockTemplate::name_\fC [private]\fP"
+
+.PP
+name_ : name identifying the Title Block Template within its parent collection 
+.SS "QList<\fBTitleBlockCell\fP *> TitleBlockTemplate::registered_cells_\fC [private]\fP"
+
+.PP
+registered_cells_ : Cells objects created rattached to this template, but not mandatorily used 
+.SS "QList<int> TitleBlockTemplate::rows_heights_\fC [private]\fP"
+
+.PP
+rows heights -- simple integers 
+.SS "QHash<QString, QString> TitleBlockTemplate::storage_logos_\fC [private]\fP"
+
+.PP
+storage_logos_ : Logos applied storage type (e\&.g\&. 'xml' or 'base64') 
+.SS "QHash<QString, QString> TitleBlockTemplate::type_logos_\fC [private]\fP"
+
+.PP
+type_logos_ : Logos types (e\&.g\&. 'png', 'jpeg', 'svg') 
+.SS "QHash<QString, QSvgRenderer *> TitleBlockTemplate::vector_logos_\fC [private]\fP"
+
+.PP
+vector_logos_ : Rendered objects for vector logos 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

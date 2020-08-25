@@ -1,0 +1,99 @@
+.TH "RenameDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RenameDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <renamedialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRenameDialog\fP (QString path, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~RenameDialog\fP () override"
+.br
+.ti -1c
+.RI "QString \fBnewName\fP () const"
+.br
+.ti -1c
+.RI "\fBQET::Action\fP \fBselectedAction\fP () const"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_lineEdit_textEdited\fP (const QString &arg1)"
+.br
+.ti -1c
+.RI "void \fBon_m_erase_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_rename_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_cancel_pb_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::RenameDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "QString \fBm_path\fP"
+.br
+.ti -1c
+.RI "QString \fBm_name\fP"
+.br
+.ti -1c
+.RI "QString \fBm_new_name\fP"
+.br
+.ti -1c
+.RI "\fBQET::Action\fP \fBm_action\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RenameDialog::RenameDialog (QString path, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "RenameDialog::~RenameDialog ()\fC [override]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QString RenameDialog::newName () const\fC [inline]\fP"
+
+.SS "void RenameDialog::on_lineEdit_textEdited (const QString & arg1)\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void RenameDialog::on_m_cancel_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void RenameDialog::on_m_erase_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void RenameDialog::on_m_rename_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "\fBQET::Action\fP RenameDialog::selectedAction () const\fC [inline]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQET::Action\fP RenameDialog::m_action\fC [private]\fP"
+
+.SS "QString RenameDialog::m_name\fC [private]\fP"
+
+.SS "QString RenameDialog::m_new_name\fC [private]\fP"
+
+.SS "QString RenameDialog::m_path\fC [private]\fP"
+
+.SS "Ui::RenameDialog* RenameDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

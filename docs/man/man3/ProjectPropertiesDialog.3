@@ -1,0 +1,115 @@
+.TH "ProjectPropertiesDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProjectPropertiesDialog \- The \fBProjectPropertiesDialog\fP class this class builds a dialog to edit whole properties of a project\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <projectpropertiesdialog\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPage\fP { \fBMain\fP = 0, \fBDiagram\fP = 1, \fBAutonum\fP = 2 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectPropertiesDialog\fP (\fBQETProject\fP *project, QWidget *parent=nullptr)"
+.br
+.RI "\fBProjectPropertiesDialog::ProjectPropertiesDialog\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~ProjectPropertiesDialog\fP () override"
+.br
+.RI "\fBProjectPropertiesDialog::~ProjectPropertiesDialog\fP\&. "
+.ti -1c
+.RI "void \fBexec\fP ()"
+.br
+.RI "\fBProjectPropertiesDialog::exec\fP execute this dialog\&. "
+.ti -1c
+.RI "void \fBsetCurrentPage\fP (\fBProjectPropertiesDialog::Page\fP)"
+.br
+.RI "\fBProjectPropertiesDialog::setCurrentPage\fP Change the current displayed page by p\&. "
+.ti -1c
+.RI "void \fBchangeToFolio\fP ()"
+.br
+.RI "\fBProjectPropertiesDialog::changeToFolio\fP Change the current displayed tab to folio tab\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBConfigDialog\fP * \fBm_properties_dialog\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBProjectPropertiesDialog\fP class this class builds a dialog to edit whole properties of a project\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBProjectPropertiesDialog::Page\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIMain \fP\fP
+.TP
+\fB\fIDiagram \fP\fP
+.TP
+\fB\fIAutonum \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ProjectPropertiesDialog::ProjectPropertiesDialog (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBProjectPropertiesDialog::ProjectPropertiesDialog\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : project to edit properties 
+.br
+\fIparent\fP : parent widget of this dialog 
+.RE
+.PP
+
+.SS "ProjectPropertiesDialog::~ProjectPropertiesDialog ()\fC [override]\fP"
+
+.PP
+\fBProjectPropertiesDialog::~ProjectPropertiesDialog\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ProjectPropertiesDialog::changeToFolio ()"
+
+.PP
+\fBProjectPropertiesDialog::changeToFolio\fP Change the current displayed tab to folio tab\&. 
+.SS "void ProjectPropertiesDialog::exec ()"
+
+.PP
+\fBProjectPropertiesDialog::exec\fP execute this dialog\&. 
+.SS "void ProjectPropertiesDialog::setCurrentPage (\fBProjectPropertiesDialog::Page\fP p)"
+
+.PP
+\fBProjectPropertiesDialog::setCurrentPage\fP Change the current displayed page by p\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp\fP : page to display 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBConfigDialog\fP* ProjectPropertiesDialog::m_properties_dialog\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

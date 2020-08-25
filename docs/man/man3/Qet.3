@@ -1,0 +1,256 @@
+.TH "Qet" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Qet
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qet\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBEndType\fP { \fBNone\fP, \fBSimple\fP, \fBTriangle\fP, \fBCircle\fP, \fBDiamond\fP }"
+.br
+.RI "This enum lists the various available endings for line primitives when drawing an electrical element\&. "
+.ti -1c
+.RI "enum \fBOrientation\fP { \fBNorth\fP, \fBEast\fP, \fBSouth\fP, \fBWest\fP }"
+.br
+.RI "Orientation (used for electrical elements and their terminals) "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBendTypeToString\fP (const \fBQet::EndType\fP &)"
+.br
+.ti -1c
+.RI "static \fBQet::EndType\fP \fBendTypeFromString\fP (const QString &)"
+.br
+.ti -1c
+.RI "static \fBQet::Orientation\fP \fBnextOrientation\fP (\fBQet::Orientation\fP)"
+.br
+.ti -1c
+.RI "static \fBQet::Orientation\fP \fBpreviousOrientation\fP (\fBQet::Orientation\fP)"
+.br
+.ti -1c
+.RI "static \fBQet::Orientation\fP \fBorientationFromString\fP (const QString &)"
+.br
+.ti -1c
+.RI "static QString \fBorientationToString\fP (\fBQet::Orientation\fP)"
+.br
+.ti -1c
+.RI "static bool \fBsurLeMemeAxe\fP (\fBQet::Orientation\fP, \fBQet::Orientation\fP)"
+.br
+.ti -1c
+.RI "static bool \fBisOpposed\fP (\fBQet::Orientation\fP a, \fBQet::Orientation\fP b)"
+.br
+.RI "\fBQet::isOpposed\fP\&. "
+.ti -1c
+.RI "static bool \fBisHorizontal\fP (\fBQet::Orientation\fP)"
+.br
+.RI "\fBQet::isHorizontal\fP\&. "
+.ti -1c
+.RI "static bool \fBisVertical\fP (\fBQet::Orientation\fP)"
+.br
+.RI "\fBQet::isVertical\fP\&. "
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBQet::EndType\fP"
+
+.PP
+This enum lists the various available endings for line primitives when drawing an electrical element\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINone \fP\fP
+Regular line\&. 
+.TP
+\fB\fISimple \fP\fP
+Base-less triangle\&. 
+.TP
+\fB\fITriangle \fP\fP
+Triangle\&. 
+.TP
+\fB\fICircle \fP\fP
+Circle\&. 
+.TP
+\fB\fIDiamond \fP\fP
+Diamond\&. 
+.SS "enum \fBQet::Orientation\fP"
+
+.PP
+Orientation (used for electrical elements and their terminals) 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINorth \fP\fP
+.TP
+\fB\fIEast \fP\fP
+.TP
+\fB\fISouth \fP\fP
+.TP
+\fB\fIWest \fP\fP
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBQet::EndType\fP Qet::endTypeFromString (const QString & string)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP une chaine representant un type d'extremite 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+le type d'extremite correspondant ; si la chaine est invalide, QET::None est retourne\&. 
+.RE
+.PP
+
+.SS "QString Qet::endTypeToString (const \fBQet::EndType\fP & end_type)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIend_type\fP un type d'extremite 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+une chaine representant le type d'extremite 
+.RE
+.PP
+
+.SS "bool Qet::isHorizontal (\fBQet::Orientation\fP a)\fC [static]\fP"
+
+.PP
+\fBQet::isHorizontal\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if \fIis\fP horizontal, else false\&. 
+.RE
+.PP
+
+.SS "bool Qet::isOpposed (\fBQet::Orientation\fP a, \fBQet::Orientation\fP b)\fC [static]\fP"
+
+.PP
+\fBQet::isOpposed\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP 
+.br
+\fIb\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if a and b is opposed, else false; 
+.RE
+.PP
+
+.SS "bool Qet::isVertical (\fBQet::Orientation\fP a)\fC [static]\fP"
+
+.PP
+\fBQet::isVertical\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if \fIis\fP vertical, else false\&. 
+.RE
+.PP
+
+.SS "\fBQet::Orientation\fP Qet::nextOrientation (\fBQet::Orientation\fP o)\fC [static]\fP"
+Permet de connaitre l'orientation suivante apres celle donnee en parametre\&. Les orientations sont generalement presentees dans l'ordre suivant : Nord, Est, Sud, Ouest\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIo\fP une orientation 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+l'orientation suivante 
+.RE
+.PP
+
+.SS "\fBQet::Orientation\fP Qet::orientationFromString (const QString & s)\fC [static]\fP"
+Permet de convertir une chaine de caracteres ('n', 's', 'e' ou 'w') en orientation\&. Si la chaine fait plusieurs caracteres, seul le premier est pris en compte\&. En cas d'incoherence, \fBQet::North\fP est retourne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP Chaine de caractere cense representer une orientation 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+l'orientation designee par la chaine de caractere 
+.RE
+.PP
+
+.SS "QString Qet::orientationToString (\fBQet::Orientation\fP o)\fC [static]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIo\fP une orientation 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+une chaine de caractere representant l'orientation 
+.RE
+.PP
+
+.SS "\fBQet::Orientation\fP Qet::previousOrientation (\fBQet::Orientation\fP o)\fC [static]\fP"
+Permet de connaitre l'orientation precedant celle donnee en parametre\&. Les orientations sont generalement presentees dans l'ordre suivant : Nord, Est, Sud, Ouest\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIo\fP une orientation 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+l'orientation precedente 
+.RE
+.PP
+
+.SS "bool Qet::surLeMemeAxe (\fBQet::Orientation\fP a, \fBQet::Orientation\fP b)\fC [static]\fP"
+Indique si deux orientations de Borne sont sur le meme axe (Vertical / Horizontal)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa\fP La premiere orientation de Borne 
+.br
+\fIb\fP La seconde orientation de Borne 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Un booleen a true si les deux orientations de bornes sont sur le meme axe 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,131 @@
+.TH "QFileNameEdit" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QFileNameEdit
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qfilenameedit\&.h>\fP
+.PP
+Inherits QLineEdit\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQFileNameEdit\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fBQFileNameEdit\fP (const QString &, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~QFileNameEdit\fP () override"
+.br
+.ti -1c
+.RI "bool \fBisEmpty\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisValid\fP ()"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBvalidationFailed\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQFileNameEdit\fP (const \fBQFileNameEdit\fP &)"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisplayToolTip\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QRegExp \fBregexp_\fP"
+.br
+.ti -1c
+.RI "\fBQETRegExpValidator\fP * \fBvalidator_\fP"
+.br
+.ti -1c
+.RI "QString \fBtooltip_text_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a textfield dedicated to input a portable filename (not a path)\&. It enables users to input a name matching the regular expression ^[0-9a-z_-.]+$, thus avoiding problems with diacritics, non-printable, non-ASCII or uppercase characters, which should improve the portability of elements created by users\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QFileNameEdit::QFileNameEdit (QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP QWidget parent de ce champ de texte 
+.RE
+.PP
+
+.SS "QFileNameEdit::QFileNameEdit (const QString & contents, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontents\fP Contenu initial du champ 
+.br
+\fIparent\fP QWidget parent de ce champ de texte 
+.RE
+.PP
+
+.SS "QFileNameEdit::~QFileNameEdit ()\fC [override]\fP"
+Destructeur 
+.SS "QFileNameEdit::QFileNameEdit (const \fBQFileNameEdit\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QFileNameEdit::displayToolTip ()\fC [private]\fP"
+Affiche l'info-bulle informant l'utilisateur des caracteres autorises\&. 
+.SS "void QFileNameEdit::init ()\fC [private]\fP"
+Construit l'objet 
+.SS "bool QFileNameEdit::isEmpty ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le champ de texte est vide, false sinon 
+.RE
+.PP
+
+.SS "bool QFileNameEdit::isValid ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le champ de texte n'est pas vide et est valide 
+.RE
+.PP
+
+.SS "void QFileNameEdit::validationFailed ()\fC [private]\fP, \fC [slot]\fP"
+Gere le fait que la validation du champ de texte ait echoue\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QRegExp QFileNameEdit::regexp_\fC [private]\fP"
+
+.SS "QString QFileNameEdit::tooltip_text_\fC [private]\fP"
+
+.SS "\fBQETRegExpValidator\fP* QFileNameEdit::validator_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

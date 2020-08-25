@@ -1,0 +1,90 @@
+.TH "QETRegExpValidator" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETRegExpValidator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetregexpvalidator\&.h>\fP
+.PP
+Inherits QRegExpValidator\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBvalidationFailed\fP () const"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETRegExpValidator\fP (QObject *)"
+.br
+.ti -1c
+.RI "\fBQETRegExpValidator\fP (const QRegExp &, QObject *)"
+.br
+.ti -1c
+.RI "\fB~QETRegExpValidator\fP () override"
+.br
+.ti -1c
+.RI "QValidator::State \fBvalidate\fP (QString &, int &) const override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETRegExpValidator\fP (const \fBQETRegExpValidator\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class acts like a QRegExpValidator except it emits a signal when the input validation fails\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QETRegExpValidator::QETRegExpValidator (QObject * parent)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP QObject parent 
+.RE
+.PP
+
+.SS "QETRegExpValidator::QETRegExpValidator (const QRegExp & regexp, QObject * parent)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIregexp\fP Expression reguliere a valider 
+.br
+\fIparent\fP QObject parent 
+.RE
+.PP
+
+.SS "QETRegExpValidator::~QETRegExpValidator ()\fC [override]\fP"
+Destructeur 
+.SS "QETRegExpValidator::QETRegExpValidator (const \fBQETRegExpValidator\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QValidator::State QETRegExpValidator::validate (QString & input, int & pos) const\fC [override]\fP"
+
+.PP
+\fBSee also\fP
+.RS 4
+QRegExpValidator::validate 
+.PP
+\fBvalidationFailed()\fP Emet le signal \fBvalidationFailed\fP si la validation echoue 
+.RE
+.PP
+
+.SS "void QETRegExpValidator::validationFailed () const\fC [signal]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

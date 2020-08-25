@@ -1,0 +1,34 @@
+<map id="QETProject::writeBackup" name="QETProject::writeBackup">
+<area shape="rect" id="node1" title="QETProject::writeBackup Write a backup file of this project, in the case that QET crash." alt="" coords="5,307,175,334"/>
+<area shape="rect" id="node2" href="$d6/dc5/class_q_e_t_project.html#ae129e97abb00d4817218a3ee8d0345da" title="QETProject::toXml." alt="" coords="223,282,353,309"/>
+<area shape="rect" id="node32" href="$dc/da9/namespace_q_e_t.html#a4841977f6c264042a73705d3fe76f998" title=" " alt="" coords="229,333,347,359"/>
+<area shape="rect" id="node3" href="$d8/d31/class_title_block_templates_project_collection.html#a769455cc58e9b0c9a775b3011e46630f" title=" " alt="" coords="401,115,649,156"/>
+<area shape="rect" id="node4" href="$df/dd9/class_xml_element_collection.html#aecf971dbf0c6f87e214cd86c901e25c8" title="XmlElementCollection::root The root is the first DOM&#45;Element the xml collection, the tag name of the ..." alt="" coords="450,180,601,221"/>
+<area shape="rect" id="node5" href="$d8/d31/class_title_block_templates_project_collection.html#ac0dbc2e369043e43e3551462b1b95358" title=" " alt="" coords="435,245,616,287"/>
+<area shape="rect" id="node6" href="$d6/dc5/class_q_e_t_project.html#a04d0472582317a07aa88ded1f75e0499" title=" " alt="" coords="466,311,585,338"/>
+<area shape="rect" id="node7" href="$d6/dc5/class_q_e_t_project.html#aa7f53150e9b18242287787f1b39684bd" title="QETProject::writeDefaultPropertiesXml Export all defaults properties used by a new diagram and his co..." alt="" coords="442,363,609,404"/>
+<area shape="rect" id="node31" href="$d6/dc5/class_q_e_t_project.html#aa3ae223899fb3360a89c3c18f432cda0" title=" " alt="" coords="442,537,609,579"/>
+<area shape="rect" id="node8" href="$d6/dc5/class_q_e_t_project.html#a77506f0b161248e94dc3ddd68736e0d6" title="QETProject::conductorAutoNum." alt="" coords="705,137,915,163"/>
+<area shape="rect" id="node9" href="$d6/dc5/class_q_e_t_project.html#a34687b589c69ad01ef4acab273901c02" title="QETProject::conductorAutoNumFormula." alt="" coords="719,188,901,229"/>
+<area shape="rect" id="node13" href="$d6/dc5/class_q_e_t_project.html#a1bace81436e2e7623a2390f01c1c908a" title=" " alt="" coords="723,253,897,295"/>
+<area shape="rect" id="node14" href="$d6/dc5/class_q_e_t_project.html#a8796cd1d2c22f4b0cc572c48be5cea2a" title=" " alt="" coords="697,319,923,346"/>
+<area shape="rect" id="node15" href="$d6/dc5/class_q_e_t_project.html#a25728f248bd542c6c4a909f049581a34" title="QETProject::elementAutoNum." alt="" coords="711,370,909,397"/>
+<area shape="rect" id="node16" href="$d6/dc5/class_q_e_t_project.html#af5eefcb7abbbd1d60333bd76f810725c" title="QETProject::elementAutoNumFormula." alt="" coords="711,421,909,463"/>
+<area shape="rect" id="node17" href="$d6/dc5/class_q_e_t_project.html#ab4d93c106722f84fe71e0492f76968e6" title="QETProject::folioAutoNum." alt="" coords="722,487,898,514"/>
+<area shape="rect" id="node18" href="$d0/d2a/class_border_properties.html#a19521ba91236a9c37181ad42545b46ea" title="BorderProperties::toXml Exports dimensions as XML attributes added to element e." alt="" coords="729,538,891,565"/>
+<area shape="rect" id="node19" href="$d3/d1a/class_title_block_properties.html#a26de002cbb991529ee15e620a4710720" title=" " alt="" coords="740,589,880,631"/>
+<area shape="rect" id="node26" href="$d6/db9/class_conductor_properties.html#ae5632aaf7a0837f13174ee9bf867051d" title="ConductorProperties::toXml Export conductor propertie, in the XML element &#39;e&#39;." alt="" coords="739,71,881,112"/>
+<area shape="rect" id="node10" href="$d1/ddb/namespaceautonum.html#ac5013eb6df6a472f5b2676d51b579da8" title="numerotationContextToFormula" alt="" coords="971,308,1172,349"/>
+<area shape="rect" id="node11" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="1224,276,1371,317"/>
+<area shape="rect" id="node12" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="1224,341,1371,383"/>
+<area shape="rect" id="node20" href="$d3/d1a/class_title_block_properties.html#ad785dd1e73f03863c4fb703bea97604e" title=" " alt="" coords="1001,589,1141,631"/>
+<area shape="rect" id="node21" href="$db/dfb/class_diagram_context.html#a37d1ffa39889b4afa4766137f9d2e13d" title=" " alt="" coords="1222,546,1373,573"/>
+<area shape="rect" id="node23" href="$dc/da9/namespace_q_e_t.html#a503f0b06105dee0663593a21f58654c9" title="QET::qetCollectionToString." alt="" coords="982,538,1161,565"/>
+<area shape="rect" id="node24" href="$db/dfb/class_diagram_context.html#a3823c5ca609be01afa5e5096e20a653e" title=" " alt="" coords="992,655,1151,682"/>
+<area shape="rect" id="node22" href="$db/dfb/class_diagram_context.html#ac238380e0f066bcf30bf5d8c01d26421" title=" " alt="" coords="1423,546,1647,573"/>
+<area shape="rect" id="node25" href="$db/dfb/class_diagram_context.html#aaae71410c57f72e74fbbd76af8a80a0f" title=" " alt="" coords="1220,655,1375,682"/>
+<area shape="rect" id="node27" href="$d3/de3/class_single_line_properties.html#abcafa860f7c903a2c6e856bbc4c64c7b" title=" " alt="" coords="1000,136,1143,177"/>
+<area shape="rect" id="node29" href="$d6/db9/class_conductor_properties.html#a17d691af0791a3b9d3500f5ef2e2ac4b" title=" " alt="" coords="1000,5,1143,47"/>
+<area shape="rect" id="node30" href="$d6/db9/class_conductor_properties.html#af0bcd9b7979c4ed45e2f44d4aa8d5b1d" title=" " alt="" coords="1000,71,1143,112"/>
+<area shape="rect" id="node28" href="$d3/de3/class_single_line_properties.html#ad7378fbae8d61b0a28d8587713b70afb" title=" " alt="" coords="1226,136,1369,177"/>
+</map>

@@ -1,0 +1,119 @@
+.TH "ReplaceFolioWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReplaceFolioWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <replacefoliowidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReplaceFolioWidget\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ReplaceFolioWidget\fP ()"
+.br
+.ti -1c
+.RI "\fBTitleBlockProperties\fP \fBtitleBlockProperties\fP () const"
+.br
+.RI "\fBReplaceFolioWidget::titleBlockProperties\fP\&. "
+.ti -1c
+.RI "void \fBsetTitleBlockProperties\fP (const \fBTitleBlockProperties\fP &properties)"
+.br
+.RI "\fBReplaceFolioWidget::setTitleBlockProperties\fP Set the title block properties edited by this widget\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_title_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_author_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_file_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_folio_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_plant_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_loc_cb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_indice_cb_clicked\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ReplaceFolioWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContextWidget\fP * \fBm_diagram_context_widget\fP = nullptr"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ReplaceFolioWidget::ReplaceFolioWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "ReplaceFolioWidget::~ReplaceFolioWidget ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ReplaceFolioWidget::on_m_author_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceFolioWidget::on_m_file_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceFolioWidget::on_m_folio_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceFolioWidget::on_m_indice_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceFolioWidget::on_m_loc_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceFolioWidget::on_m_plant_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceFolioWidget::on_m_title_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void ReplaceFolioWidget::setTitleBlockProperties (const \fBTitleBlockProperties\fP & properties)"
+
+.PP
+\fBReplaceFolioWidget::setTitleBlockProperties\fP Set the title block properties edited by this widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproperties\fP 
+.RE
+.PP
+
+.SS "\fBTitleBlockProperties\fP ReplaceFolioWidget::titleBlockProperties () const"
+
+.PP
+\fBReplaceFolioWidget::titleBlockProperties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the title block properties edited by this widget 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagramContextWidget\fP* ReplaceFolioWidget::m_diagram_context_widget = nullptr\fC [private]\fP"
+
+.SS "Ui::ReplaceFolioWidget* ReplaceFolioWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

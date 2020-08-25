@@ -1,0 +1,85 @@
+.TH "CutTemplateCellsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CutTemplateCellsCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatecommands\&.h>\fP
+.PP
+Inherits \fBTitleBlockTemplateCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCutTemplateCellsCommand\fP (\fBTitleBlockTemplate\fP *, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~CutTemplateCellsCommand\fP () override"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBsetCutCells\fP (const QList< \fBTitleBlockCell\fP * > &)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QHash< \fBTitleBlockCell\fP *, \fBTitleBlockCell::TemplateCellType\fP > \fBcut_cells_\fP"
+.br
+.RI "Cut cells\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBupdateText\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCutTemplateCellsCommand\fP (const \fBCutTemplateCellsCommand\fP &)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This class represents the action of cutting a cells set\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "CutTemplateCellsCommand::CutTemplateCellsCommand (\fBTitleBlockTemplate\fP * tb_template, QUndoCommand * parent = \fCnullptr\fP)"
+Constructor 
+.SS "CutTemplateCellsCommand::~CutTemplateCellsCommand ()\fC [override]\fP"
+Destructor 
+.SS "CutTemplateCellsCommand::CutTemplateCellsCommand (const \fBCutTemplateCellsCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void CutTemplateCellsCommand::redo ()\fC [override]\fP"
+Redo a cut operation 
+.SS "void CutTemplateCellsCommand::setCutCells (const QList< \fBTitleBlockCell\fP * > & cells)\fC [virtual]\fP"
+
+.SS "void CutTemplateCellsCommand::undo ()\fC [override]\fP"
+Undo a cut operation 
+.SS "void CutTemplateCellsCommand::updateText ()\fC [protected]\fP, \fC [virtual]\fP"
+Update the label describing this command 
+.SH "Member Data Documentation"
+.PP 
+.SS "QHash<\fBTitleBlockCell\fP *, \fBTitleBlockCell::TemplateCellType\fP> CutTemplateCellsCommand::cut_cells_"
+
+.PP
+Cut cells\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,258 @@
+.TH "ElementPictureFactory" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementPictureFactory \- The \fBElementPictureFactory\fP class This class is singleton factory, use to create and get the picture use by elements\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementpicturefactory\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBprimitives\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgetPictures\fP (const \fBElementsLocation\fP &location, QPicture &picture, QPicture &low_picture)"
+.br
+.RI "\fBElementPictureFactory::getPictures\fP Set the picture of the element at location\&. Note, picture can be null\&. "
+.ti -1c
+.RI "QPixmap \fBpixmap\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "\fBElementPictureFactory::pixmap\fP\&. "
+.ti -1c
+.RI "\fBElementPictureFactory::primitives\fP \fBgetPrimitives\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "\fBElementPictureFactory::getPrimitives\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBElementPictureFactory\fP * \fBinstance\fP ()"
+.br
+.RI "instance "
+.ti -1c
+.RI "static void \fBdropInstance\fP ()"
+.br
+.RI "dropInstance Drop the instance of factory "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementPictureFactory\fP ()"
+.br
+.ti -1c
+.RI "\fBElementPictureFactory\fP (const \fBElementPictureFactory\fP &)"
+.br
+.ti -1c
+.RI "\fBElementPictureFactory\fP \fBoperator=\fP (const \fBElementPictureFactory\fP &)"
+.br
+.ti -1c
+.RI "\fB~ElementPictureFactory\fP ()"
+.br
+.ti -1c
+.RI "bool \fBbuild\fP (const \fBElementsLocation\fP &location, QPicture *picture=nullptr, QPicture *low_picture=nullptr)"
+.br
+.RI "\fBElementPictureFactory::build\fP Build the picture from location\&. "
+.ti -1c
+.RI "void \fBparseElement\fP (const QDomElement &dom, QPainter &painter, \fBprimitives\fP &prim) const"
+.br
+.ti -1c
+.RI "void \fBparseLine\fP (const QDomElement &dom, QPainter &painter, \fBprimitives\fP &prim) const"
+.br
+.ti -1c
+.RI "void \fBparseRect\fP (const QDomElement &dom, QPainter &painter, \fBprimitives\fP &prim) const"
+.br
+.ti -1c
+.RI "void \fBparseEllipse\fP (const QDomElement &dom, QPainter &painter, \fBprimitives\fP &prim) const"
+.br
+.ti -1c
+.RI "void \fBparseCircle\fP (const QDomElement &dom, QPainter &painter, \fBprimitives\fP &prim) const"
+.br
+.ti -1c
+.RI "void \fBparseArc\fP (const QDomElement &dom, QPainter &painter, \fBprimitives\fP &prim) const"
+.br
+.ti -1c
+.RI "void \fBparsePolygon\fP (const QDomElement &dom, QPainter &painter, \fBprimitives\fP &prim) const"
+.br
+.ti -1c
+.RI "void \fBparseText\fP (const QDomElement &dom, QPainter &painter, \fBprimitives\fP &prim) const"
+.br
+.ti -1c
+.RI "void \fBsetPainterStyle\fP (const QDomElement &dom, QPainter &painter) const"
+.br
+.RI "\fBElementPictureFactory::setPainterStyle\fP apply the style store in dom to painter\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QHash< QUuid, QPicture > \fBm_pictures_H\fP"
+.br
+.ti -1c
+.RI "QHash< QUuid, QPicture > \fBm_low_pictures_H\fP"
+.br
+.ti -1c
+.RI "QHash< QUuid, QPixmap > \fBm_pixmap_H\fP"
+.br
+.ti -1c
+.RI "QHash< QUuid, \fBprimitives\fP > \fBm_primitives_H\fP"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBElementPictureFactory\fP * \fBm_factory\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementPictureFactory\fP class This class is singleton factory, use to create and get the picture use by elements\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementPictureFactory::ElementPictureFactory ()\fC [inline]\fP, \fC [private]\fP"
+
+.SS "ElementPictureFactory::ElementPictureFactory (const \fBElementPictureFactory\fP &)\fC [private]\fP"
+
+.SS "ElementPictureFactory::~ElementPictureFactory ()\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ElementPictureFactory::build (const \fBElementsLocation\fP & location, QPicture * picture = \fCnullptr\fP, QPicture * low_picture = \fCnullptr\fP)\fC [private]\fP"
+
+.PP
+\fBElementPictureFactory::build\fP Build the picture from location\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.br
+\fIpicture\fP 
+.br
+\fIlow_picture\fP if picture and/or low_picture are not null this function draw on it and don't store it\&. if null, this function create a QPicture for normal and low zoom, draw on it and store it in m_pictures_H and m_low_pictures_H 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "static void ElementPictureFactory::dropInstance ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+dropInstance Drop the instance of factory 
+.SS "void ElementPictureFactory::getPictures (const \fBElementsLocation\fP & location, QPicture & picture, QPicture & low_picture)"
+
+.PP
+\fBElementPictureFactory::getPictures\fP Set the picture of the element at location\&. Note, picture can be null\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.br
+\fIpicture\fP 
+.br
+\fIlow_picture\fP 
+.RE
+.PP
+
+.SS "\fBElementPictureFactory::primitives\fP ElementPictureFactory::getPrimitives (const \fBElementsLocation\fP & location)"
+
+.PP
+\fBElementPictureFactory::getPrimitives\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The primtive used to draw the element at location 
+.RE
+.PP
+
+.SS "static \fBElementPictureFactory\fP* ElementPictureFactory::instance ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+instance 
+.PP
+\fBReturns\fP
+.RS 4
+The instance of the factory 
+.RE
+.PP
+
+.SS "\fBElementPictureFactory\fP ElementPictureFactory::operator= (const \fBElementPictureFactory\fP &)\fC [private]\fP"
+
+.SS "void ElementPictureFactory::parseArc (const QDomElement & dom, QPainter & painter, \fBElementPictureFactory::primitives\fP & prim) const\fC [private]\fP"
+
+.SS "void ElementPictureFactory::parseCircle (const QDomElement & dom, QPainter & painter, \fBElementPictureFactory::primitives\fP & prim) const\fC [private]\fP"
+
+.SS "void ElementPictureFactory::parseElement (const QDomElement & dom, QPainter & painter, \fBprimitives\fP & prim) const\fC [private]\fP"
+
+.SS "void ElementPictureFactory::parseEllipse (const QDomElement & dom, QPainter & painter, \fBElementPictureFactory::primitives\fP & prim) const\fC [private]\fP"
+
+.SS "void ElementPictureFactory::parseLine (const QDomElement & dom, QPainter & painter, \fBprimitives\fP & prim) const\fC [private]\fP"
+
+.SS "void ElementPictureFactory::parsePolygon (const QDomElement & dom, QPainter & painter, \fBElementPictureFactory::primitives\fP & prim) const\fC [private]\fP"
+
+.SS "void ElementPictureFactory::parseRect (const QDomElement & dom, QPainter & painter, \fBElementPictureFactory::primitives\fP & prim) const\fC [private]\fP"
+
+.SS "void ElementPictureFactory::parseText (const QDomElement & dom, QPainter & painter, \fBElementPictureFactory::primitives\fP & prim) const\fC [private]\fP"
+
+.SS "QPixmap ElementPictureFactory::pixmap (const \fBElementsLocation\fP & location)"
+
+.PP
+\fBElementPictureFactory::pixmap\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the pixmap of the element at location Note pixmap can be null 
+.RE
+.PP
+
+.SS "void ElementPictureFactory::setPainterStyle (const QDomElement & dom, QPainter & painter) const\fC [private]\fP"
+
+.PP
+\fBElementPictureFactory::setPainterStyle\fP apply the style store in dom to painter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdom\fP 
+.br
+\fIpainter\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElementPictureFactory\fP * ElementPictureFactory::m_factory = nullptr\fC [static]\fP, \fC [private]\fP"
+
+.SS "QHash<QUuid, QPicture> ElementPictureFactory::m_low_pictures_H\fC [private]\fP"
+
+.SS "QHash<QUuid, QPicture> ElementPictureFactory::m_pictures_H\fC [private]\fP"
+
+.SS "QHash<QUuid, QPixmap> ElementPictureFactory::m_pixmap_H\fC [private]\fP"
+
+.SS "QHash<QUuid, \fBprimitives\fP> ElementPictureFactory::m_primitives_H\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

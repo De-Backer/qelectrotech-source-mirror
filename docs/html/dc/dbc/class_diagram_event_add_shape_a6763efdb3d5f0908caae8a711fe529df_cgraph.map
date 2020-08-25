@@ -1,0 +1,52 @@
+<map id="DiagramEventAddShape::updateHelpCross" name="DiagramEventAddShape::updateHelpCross">
+<area shape="rect" id="node1" title="DiagramEventAddShape::updateHelpCross Create and update the position of the cross to help user for dr..." alt="" coords="5,213,169,254"/>
+<area shape="rect" id="node2" href="$d3/d37/class_diagram.html#ac808ccc853ae12b34660417d98354b9b" title="Diagram::addItem Réimplemented from QGraphicsScene::addItem(QGraphicsItem *item) Do some specific ope..." alt="" coords="227,220,353,247"/>
+<area shape="rect" id="node9" href="$df/d92/class_border_title_block.html#abf6fab4e876c1d76e10b4f4bd2943aab" title="BorderTitleBlock::insideBorderRect." alt="" coords="1165,57,1325,98"/>
+<area shape="rect" id="node50" href="$d3/d37/class_diagram.html#aca79c4ab46b3b8d3869affb2344253e8" title="Diagram::snapToGrid Return a nearest snap point of p." alt="" coords="217,271,363,297"/>
+<area shape="rect" id="node3" href="$dc/d46/class_terminal.html#a377dac06e69a03135dfc1df2fad8fad1" title="Terminal::addConductor Add a conductor to this terminal." alt="" coords="429,245,589,272"/>
+<area shape="rect" id="node4" href="$d5/d7f/classproject_data_base.html#a2ce088e76015c5887728319c0e33af33" title="projectDataBase::addElement" alt="" coords="411,296,607,323"/>
+<area shape="rect" id="node26" href="$da/d7f/class_conductor.html#ab352e0bd0e048b8897ad67684d00b01a" title="Conductor::calculateTextItemPosition Move the text at middle of conductor (if is vertical or horizont..." alt="" coords="425,681,592,722"/>
+<area shape="rect" id="node48" href="$d6/dc5/class_q_e_t_project.html#a38c4778acc88e16b55913fefa48e6f5b" title="QETProject::dataBase." alt="" coords="433,144,585,171"/>
+<area shape="rect" id="node49" href="$d3/d37/class_diagram.html#ab576e6398fe6d00cd92d6bbf9300f7b6" title="Diagram::isReadOnly." alt="" coords="435,195,582,221"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#a00ca50b86ab52583341ccbc8fefe9967" title="Diagram::convertPosition." alt="" coords="667,216,836,243"/>
+<area shape="rect" id="node13" href="$d7/db5/class_qet_graphics_item.html#af9b4e57c5ad3f5a9307a03a4310ce7b2" title=" " alt="" coords="1158,305,1333,332"/>
+<area shape="rect" id="node14" href="$d5/d7f/classproject_data_base.html#aae556b3bb552f359c085e10d54a6e6b1" title="projectDataBase::elementInfoToString" alt="" coords="665,318,838,359"/>
+<area shape="rect" id="node20" href="$d5/d50/class_element.html#a5ba6e350aebd61f0f52dfb8c06f7172a" title=" " alt="" coords="665,384,838,411"/>
+<area shape="rect" id="node21" href="$d5/d50/class_element.html#a0f7d00971240f5104ec6245ae25c465d" title=" " alt="" coords="665,435,838,461"/>
+<area shape="rect" id="node22" href="$dc/d20/class_diagram_position.html#a37f627cb8f0961ccd981148fd811e3ca" title=" " alt="" coords="666,485,837,512"/>
+<area shape="rect" id="node24" href="$d5/d50/class_element.html#a873eecea89b2cdb02b740beabd2e36c6" title="Element::uuid." alt="" coords="701,115,802,141"/>
+<area shape="rect" id="node25" href="$d3/d37/class_diagram.html#abb9eb4e6dbe6f6367aa644610a097ab2" title="Diagram::uuid." alt="" coords="700,165,803,192"/>
+<area shape="rect" id="node6" href="$df/d92/class_border_title_block.html#afa48dd3cfdb5bb46e4cf4e4720705211" title="BorderTitleBlock::convertPosition Convert a Point in cartesian coordinate (x : 12...." alt="" coords="909,181,1078,222"/>
+<area shape="rect" id="node11" href="$dc/d20/class_diagram_position.html#aee22136fa026b42fb599dc402e733617" title=" " alt="" coords="898,121,1089,148"/>
+<area shape="rect" id="node7" href="$df/d92/class_border_title_block.html#af38649a1abd3a73a7f8026382330541c" title=" " alt="" coords="1158,239,1333,281"/>
+<area shape="rect" id="node8" href="$df/d92/class_border_title_block.html#ad77b51d22f7e035a416cc3279de90bf0" title="BorderTitleBlock::incrementLetters increments string with Letters A to Z." alt="" coords="1154,122,1337,163"/>
+<area shape="rect" id="node10" href="$df/d92/class_border_title_block.html#a92a59aec4ce6210e9d80781e770626df" title=" " alt="" coords="1149,188,1341,215"/>
+<area shape="rect" id="node12" href="$dc/d20/class_diagram_position.html#ac16f72e5a2f3081071e830dca9e0cd47" title=" " alt="" coords="1160,5,1331,32"/>
+<area shape="rect" id="node15" href="$d5/d50/class_element.html#acaa85efeeff7a62c5b6e0aaa5577de15" title="Element::actualLabel Always return the current label to be displayed. This function is usefull when l..." alt="" coords="922,321,1065,348"/>
+<area shape="rect" id="node18" href="$d7/df8/class_q_e_t_app.html#ac4d9d7a8ca3c7b9501d403f8028a5857" title="QETApp::elementInfoKeys." alt="" coords="905,372,1081,399"/>
+<area shape="rect" id="node19" href="$d5/d50/class_element.html#aef4d1daf654b1340b0b2e977e01c0836" title=" " alt="" coords="896,423,1091,449"/>
+<area shape="rect" id="node16" href="$d3/df5/classautonum_1_1_assign_variables.html#abf8fecd78bdaa59e34a2f7da7af6ebcf" title="AssignVariables::formulaToLabel Return the formula with variable assigned (ready to be displayed)" alt="" coords="1159,357,1332,398"/>
+<area shape="rect" id="node17" href="$db/dfb/class_diagram_context.html#aaae71410c57f72e74fbbd76af8a80a0f" title=" " alt="" coords="1168,423,1323,449"/>
+<area shape="rect" id="node23" href="$dc/d20/class_diagram_position.html#a17057b857099120f43de211fce884040" title=" " alt="" coords="908,478,1079,519"/>
+<area shape="rect" id="node27" href="$da/d7f/class_conductor.html#a649d3839caef33cd2d47759f82e68a08" title="Conductor::boundingRect." alt="" coords="667,688,836,715"/>
+<area shape="rect" id="node30" href="$da/d7f/class_conductor.html#a3bc24a36dba5f211726f9524ffe48953" title=" " alt="" coords="683,536,819,563"/>
+<area shape="rect" id="node31" href="$d9/d9d/conductor_8cpp.html#a7255f2a0d5739fa13352d03e061fc893" title="longuestConductorInPotential" alt="" coords="655,805,848,832"/>
+<area shape="rect" id="node33" href="$da/d7f/class_conductor.html#a7df52a1f89a88dad4ecd531c9d02675f" title="Conductor::relatedPotentialConductors Return all conductors at the same potential of this conductor,..." alt="" coords="903,841,1083,882"/>
+<area shape="rect" id="node36" href="$da/d7f/class_conductor.html#aeba0bf998f55fd1a797b2db95822edd6" title=" " alt="" coords="665,739,838,781"/>
+<area shape="rect" id="node39" href="$da/d7f/class_conductor.html#a6f60f9f146fd142ee57b84084c843409" title="Conductor::nearShape." alt="" coords="675,637,827,664"/>
+<area shape="rect" id="node40" href="$da/d7f/class_conductor.html#ab32bd11b8874c7b45d1127c640477218" title="Conductor::posForText Calculate and return the better pos for text." alt="" coords="674,972,829,999"/>
+<area shape="rect" id="node47" href="$da/d7f/class_conductor.html#ad3546c9cc056283d1b8b64ba0660f8ab" title=" " alt="" coords="682,587,821,613"/>
+<area shape="rect" id="node28" href="$da/d7f/class_conductor.html#a9a17e0e7c33d5963b336be63133f7bd0" title="Conductor::shape." alt="" coords="931,688,1056,715"/>
+<area shape="rect" id="node29" href="$da/d7f/class_conductor.html#a4272fa407d1088bd4f6e99c8c82a35a4" title=" " alt="" coords="1188,688,1303,715"/>
+<area shape="rect" id="node32" href="$da/d7f/class_conductor.html#a25b82af24dc6117765fb802c68422c18" title="Conductor::length." alt="" coords="931,789,1056,816"/>
+<area shape="rect" id="node34" href="$dc/d46/class_terminal.html#a31d1c604e0f9991140ad938c741df3af" title="Terminal::conductors." alt="" coords="1174,873,1317,900"/>
+<area shape="rect" id="node35" href="$d8/dc7/terminal_8cpp.html#a0d860470dc66715c56fd2cad5e2dd9bb" title="Conductor::relatedPotentialTerminal Return terminal at the same potential from the same parent elemen..." alt="" coords="1165,823,1326,849"/>
+<area shape="rect" id="node37" href="$dc/da9/namespace_q_e_t.html#a8c06162adcffa1bc992082e3fc4705a7" title=" " alt="" coords="906,739,1081,765"/>
+<area shape="rect" id="node38" href="$dc/da9/namespace_q_e_t.html#a10470c9b812d673642856d8a828342cc" title=" " alt="" coords="1167,739,1324,765"/>
+<area shape="rect" id="node41" href="$d2/d0c/class_conductor_segment.html#ae487262ea29ceb538015805470591d60" title=" " alt="" coords="905,1074,1082,1115"/>
+<area shape="rect" id="node43" href="$d2/d0c/class_conductor_segment.html#a801965b0c65b1980159543b2147038da" title=" " alt="" coords="1140,997,1351,1024"/>
+<area shape="rect" id="node44" href="$d2/d0c/class_conductor_segment.html#a5ddcdf5405e5a01ec08f8e14a33db742" title=" " alt="" coords="905,1023,1081,1049"/>
+<area shape="rect" id="node45" href="$d2/d0c/class_conductor_segment.html#a35228a00501c2a046076c58e4642c255" title=" " alt="" coords="904,1140,1083,1167"/>
+<area shape="rect" id="node46" href="$d2/d0c/class_conductor_segment.html#aeb8047230822998b478445073624bea9" title=" " alt="" coords="898,906,1089,947"/>
+<area shape="rect" id="node42" href="$d2/d0c/class_conductor_segment.html#ad90ab7d58cc0dce6d02353fd54cb5f75" title=" " alt="" coords="1139,1074,1352,1115"/>
+</map>

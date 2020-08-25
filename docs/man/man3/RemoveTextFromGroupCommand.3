@@ -1,0 +1,92 @@
+.TH "RemoveTextFromGroupCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RemoveTextFromGroupCommand \- The \fBRemoveTextFromGroupCommand\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <addelementtextcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRemoveTextFromGroupCommand\fP (\fBDynamicElementTextItem\fP *text, \fBElementTextItemGroup\fP *group, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBRemoveTextFromGroupCommand::RemoveTextFromGroupCommand\fP\&. "
+.ti -1c
+.RI "\fB~RemoveTextFromGroupCommand\fP () override"
+.br
+.RI "\fBRemoveTextFromGroupCommand::~RemoveTextFromGroupCommand\fP Destructor\&. "
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBRemoveTextFromGroupCommand::undo\fP\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBRemoveTextFromGroupCommand::redo\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< \fBDynamicElementTextItem\fP > \fBm_text\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBElementTextItemGroup\fP > \fBm_group\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBElement\fP > \fBm_element\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBRemoveTextFromGroupCommand\fP class\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RemoveTextFromGroupCommand::RemoveTextFromGroupCommand (\fBDynamicElementTextItem\fP * text, \fBElementTextItemGroup\fP * group, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBRemoveTextFromGroupCommand::RemoveTextFromGroupCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP : text to add to group 
+.br
+\fIgroup\fP 
+.br
+\fIparent\fP : parent undo command 
+.RE
+.PP
+
+.SS "RemoveTextFromGroupCommand::~RemoveTextFromGroupCommand ()\fC [override]\fP"
+
+.PP
+\fBRemoveTextFromGroupCommand::~RemoveTextFromGroupCommand\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void RemoveTextFromGroupCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBRemoveTextFromGroupCommand::redo\fP\&. 
+.SS "void RemoveTextFromGroupCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBRemoveTextFromGroupCommand::undo\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QPointer<\fBElement\fP> RemoveTextFromGroupCommand::m_element\fC [private]\fP"
+
+.SS "QPointer<\fBElementTextItemGroup\fP> RemoveTextFromGroupCommand::m_group\fC [private]\fP"
+
+.SS "QPointer<\fBDynamicElementTextItem\fP> RemoveTextFromGroupCommand::m_text\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

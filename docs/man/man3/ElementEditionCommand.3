@@ -1,0 +1,137 @@
+.TH "ElementEditionCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementEditionCommand \- The \fBElementEditionCommand\fP class \fBElementEditionCommand\fP is the base class for all commands classes involved in the edition of an electrical element\&. It provides commonly required methods and attributes, such as accessors to the modified scene and view\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <editorcommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.PP
+Inherited by \fBAddPartCommand\fP, \fBChangeInformationsCommand\fP, \fBChangeNamesCommand\fP, \fBChangePropertiesCommand\fP, \fBChangeZValueCommand\fP, \fBDeletePartsCommand\fP, \fBMovePartsCommand\fP, \fBPastePartsCommand\fP, and \fBScalePartsCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementEditionCommand\fP (\fBElementScene\fP *=nullptr, \fBElementView\fP *=nullptr, QUndoCommand *=nullptr)"
+.br
+.RI "\fBElementEditionCommand::ElementEditionCommand\fP Constructs an \fBElementEditionCommand\fP, thus embedding the provided \fIscene\fP and \fIview\fP\&. "
+.ti -1c
+.RI "\fBElementEditionCommand\fP (const QString &, \fBElementScene\fP *=nullptr, \fBElementView\fP *=nullptr, QUndoCommand *=nullptr)"
+.br
+.RI "\fBElementEditionCommand::ElementEditionCommand\fP Constructs an \fBElementEditionCommand\fP, thus embedding the provided \fIscene\fP and \fIview\fP\&. "
+.ti -1c
+.RI "\fB~ElementEditionCommand\fP () override"
+.br
+.ti -1c
+.RI "\fBElementScene\fP * \fBelementScene\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetElementScene\fP (\fBElementScene\fP *)"
+.br
+.ti -1c
+.RI "\fBElementView\fP * \fBelementView\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetElementView\fP (\fBElementView\fP *)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElementScene\fP * \fBm_scene\fP"
+.br
+.RI "\fBElement\fP editor/view/scene the command should take place on\&. "
+.ti -1c
+.RI "\fBElementView\fP * \fBm_view\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementEditionCommand\fP (const \fBElementEditionCommand\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementEditionCommand\fP class \fBElementEditionCommand\fP is the base class for all commands classes involved in the edition of an electrical element\&. It provides commonly required methods and attributes, such as accessors to the modified scene and view\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementEditionCommand::ElementEditionCommand (\fBElementScene\fP * scene = \fCnullptr\fP, \fBElementView\fP * view = \fCnullptr\fP, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBElementEditionCommand::ElementEditionCommand\fP Constructs an \fBElementEditionCommand\fP, thus embedding the provided \fIscene\fP and \fIview\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP 
+.br
+\fIview\fP 
+.br
+\fIparent\fP : Parent command 
+.RE
+.PP
+
+.SS "ElementEditionCommand::ElementEditionCommand (const QString & text, \fBElementScene\fP * scene = \fCnullptr\fP, \fBElementView\fP * view = \fCnullptr\fP, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBElementEditionCommand::ElementEditionCommand\fP Constructs an \fBElementEditionCommand\fP, thus embedding the provided \fIscene\fP and \fIview\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP : Text describing the effect of the command 
+.br
+\fIscene\fP 
+.br
+\fIview\fP 
+.br
+\fIparent\fP : Parent command 
+.RE
+.PP
+
+.SS "ElementEditionCommand::~ElementEditionCommand ()\fC [override]\fP"
+Destructor 
+.SS "ElementEditionCommand::ElementEditionCommand (const \fBElementEditionCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBElementScene\fP * ElementEditionCommand::elementScene () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the element editor/scene the command should take place on 
+.RE
+.PP
+
+.SS "\fBElementView\fP * ElementEditionCommand::elementView () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the view the effect of the command should be rendered on 
+.RE
+.PP
+
+.SS "void ElementEditionCommand::setElementScene (\fBElementScene\fP * scene)"
+Define \fIscene\fP as the element editor/scene the command should take place 
+.SS "void ElementEditionCommand::setElementView (\fBElementView\fP * view)"
+Define \fIview\fP as the view the effect of the command should be rendered on 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElementScene\fP* ElementEditionCommand::m_scene\fC [protected]\fP"
+
+.PP
+\fBElement\fP editor/view/scene the command should take place on\&. 
+.SS "\fBElementView\fP* ElementEditionCommand::m_view\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

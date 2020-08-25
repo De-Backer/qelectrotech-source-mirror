@@ -1,0 +1,175 @@
+.TH "sources/qet.h" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qet.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QDomElement>\fP
+.br
+\fC#include <QFile>\fP
+.br
+\fC#include <QObject>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBQet\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBQET\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBQET::GraphicsItemState\fP { \fBQET::GIOK\fP, \fBQET::GIBuildingFromXml\fP, \fBQET::GILoadingFromXml\fP }"
+.br
+.ti -1c
+.RI "enum \fBQET::DepthOption\fP { \fBQET::BringForward\fP, \fBQET::Raise\fP, \fBQET::Lower\fP, \fBQET::SendBackward\fP }"
+.br
+.RI "List the various kind of changes for the zValue\&. "
+.ti -1c
+.RI "enum \fBQET::OrientedMovement\fP { \fBQET::ToNorth\fP, \fBQET::ToNorthEast\fP, \fBQET::ToEast\fP, \fBQET::ToSouthEast\fP, \fBQET::ToSouth\fP, \fBQET::ToSouthWest\fP, \fBQET::ToWest\fP, \fBQET::ToNorthWest\fP }"
+.br
+.RI "Oriented movements\&. "
+.ti -1c
+.RI "enum \fBQET::OperationAreas\fP { \fBQET::ChangeInnerPoints\fP = -4, \fBQET::RotateArea\fP = -3, \fBQET::MoveArea\fP = -2, \fBQET::NoOperation\fP = -1, \fBQET::ResizeFromTopLeftCorner\fP = 0, \fBQET::ResizeFromTopCenterCorner\fP = 1, \fBQET::ResizeFromTopRightCorner\fP = 2, \fBQET::ResizeFromMiddleLeftCorner\fP = 3, \fBQET::ResizeFromMiddleRightCorner\fP = 4, \fBQET::ResizeFromBottomLeftCorner\fP = 5, \fBQET::ResizeFromBottomCenterCorner\fP = 6, \fBQET::ResizeFromBottomRightCorner\fP = 7 }"
+.br
+.RI "List areas related to some common operations\&. "
+.ti -1c
+.RI "enum \fBQET::ScalingMethod\fP { \fBQET::FreeScaling\fP, \fBQET::SnapScalingPointToGrid\fP, \fBQET::RoundScaleRatios\fP }"
+.br
+.RI "Supported types of interactive scaling, typically for a single element primitive\&. "
+.ti -1c
+.RI "enum \fBQET::ConductorSegmentType\fP { \fBQET::Horizontal\fP = 1, \fBQET::Vertical\fP = 2, \fBQET::Both\fP = 3 }"
+.br
+.RI "Known kinds of conductor segments\&. "
+.ti -1c
+.RI "enum \fBQET::ItemType\fP { \fBQET::Element\fP = 1, \fBQET::ElementsCategory\fP = 2, \fBQET::ElementsCollection\fP = 4, \fBQET::ElementsContainer\fP = 6, \fBQET::ElementsCollectionItem\fP = 7, \fBQET::TitleBlockTemplate\fP = 8, \fBQET::TitleBlockTemplatesCollection\fP = 16, \fBQET::TitleBlockTemplatesCollectionItem\fP = 24, \fBQET::Diagram\fP = 32, \fBQET::Project\fP = 64, \fBQET::All\fP = 127 }"
+.br
+.ti -1c
+.RI "enum \fBQET::Filtering\fP { \fBQET::BeginFilter\fP, \fBQET::RegularFilter\fP, \fBQET::EndFilter\fP }"
+.br
+.ti -1c
+.RI "enum \fBQET::Action\fP { \fBQET::Retry\fP, \fBQET::Ignore\fP, \fBQET::Erase\fP, \fBQET::Abort\fP, \fBQET::Managed\fP, \fBQET::Rename\fP }"
+.br
+.ti -1c
+.RI "enum \fBQET::DiagramArea\fP { \fBQET::BorderArea\fP, \fBQET::ElementsArea\fP }"
+.br
+.ti -1c
+.RI "enum \fBQET::TitleBlockColumnLength\fP { \fBQET::Absolute\fP, \fBQET::RelativeToTotalLength\fP, \fBQET::RelativeToRemainingLength\fP }"
+.br
+.RI "enum used to specify the type of a length "
+.ti -1c
+.RI "enum \fBQET::QetCollection\fP { \fBQET::Common\fP, \fBQET::Custom\fP, \fBQET::Embedded\fP }"
+.br
+.RI "Enum used to specify the origin of a collection of thing (title block, element etc\&.\&.\&.) "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "QString \fBQET::license\fP ()"
+.br
+.ti -1c
+.RI "QString \fBQET::qetCollectionToString\fP (const QetCollection &c)"
+.br
+.RI "\fBQET::qetCollectionToString\fP\&. "
+.ti -1c
+.RI "QetCollection \fBQET::qetCollectionFromString\fP (const QString &str)"
+.br
+.RI "\fBQET::qetCollectionFromString\fP\&. "
+.ti -1c
+.RI "bool \fBQET::lineContainsPoint\fP (const QLineF &, const QPointF &)"
+.br
+.ti -1c
+.RI "bool \fBQET::orthogonalProjection\fP (const QPointF &, const QLineF &, QPointF *=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBQET::attributeIsAnInteger\fP (const QDomElement &, const QString &, int *=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBQET::attributeIsAReal\fP (const QDomElement &, const QString &, qreal *=nullptr)"
+.br
+.ti -1c
+.RI "QString \fBQET::ElementsAndConductorsSentence\fP (int elements=0, int conductors=0, int indi_texts=0, int images=0, int shapes=0, int element_text=0, int tables_count=0)"
+.br
+.RI "\fBQET::ElementsAndConductorsSentence\fP Permet de composer rapidement la proposition 'x elements et y conducteurs' ou encore 'x elements, y conducteurs et z champs de texte'\&. "
+.ti -1c
+.RI "QList< QDomElement > \fBQET::findInDomElement\fP (const QDomElement &, const QString &)"
+.br
+.ti -1c
+.RI "QList< QDomElement > \fBQET::findInDomElement\fP (const QDomElement &, const QString &, const QString &)"
+.br
+.ti -1c
+.RI "QList< QChar > \fBQET::forbiddenCharacters\fP ()"
+.br
+.ti -1c
+.RI "QString \fBQET::stringToFileName\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBQET::escapeSpaces\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBQET::unescapeSpaces\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBQET::joinWithSpaces\fP (const QStringList &)"
+.br
+.ti -1c
+.RI "QStringList \fBQET::splitWithSpaces\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBQET::diagramAreaToString\fP (const \fBQET::DiagramArea\fP &)"
+.br
+.ti -1c
+.RI "\fBQET::DiagramArea\fP \fBQET::diagramAreaFromString\fP (const QString &)"
+.br
+.ti -1c
+.RI "qreal \fBQET::round\fP (qreal, qreal)"
+.br
+.ti -1c
+.RI "qreal \fBQET::correctAngle\fP (const qreal &)"
+.br
+.ti -1c
+.RI "bool \fBQET::compareCanonicalFilePaths\fP (const QString &, const QString &)"
+.br
+.ti -1c
+.RI "bool \fBQET::writeXmlFile\fP (QDomDocument &xml_doc, const QString &filepath, QString *error_message=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBQET::writeToFile\fP (QDomDocument &xml_doc, QFile *file, QString *error_message=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBQET::eachStrIsEqual\fP (const QStringList &qsl)"
+.br
+.RI "\fBQET::eachStrIsEqual\fP\&. "
+.ti -1c
+.RI "QActionGroup * \fBQET::depthActionGroup\fP (QObject *parent=nullptr)"
+.br
+.RI "\fBQET::depthActionGroup\fP\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const QString \fBQET::version\fP = '0\&.80'"
+.br
+.RI "QElectroTech version (as string, used to mark projects and elements XML documents) "
+.ti -1c
+.RI "const QString \fBQET::displayedVersion\fP = '0\&.80\-DEV'"
+.br
+.RI "QElectroTech displayed version\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

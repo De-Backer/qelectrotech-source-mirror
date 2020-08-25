@@ -1,0 +1,440 @@
+.TH "ElementsCollectionModel" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementsCollectionModel
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementscollectionmodel\&.h>\fP
+.PP
+Inherits QStandardItemModel\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBloadingProgressValueChanged\fP (int)"
+.br
+.ti -1c
+.RI "void \fBloadingProgressRangeChanged\fP (int, int)"
+.br
+.ti -1c
+.RI "void \fBloadingFinished\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsCollectionModel\fP (QObject *parent=Q_NULLPTR)"
+.br
+.RI "\fBElementsCollectionModel::ElementsCollectionModel\fP Constructor\&. "
+.ti -1c
+.RI "QVariant \fBdata\fP (const QModelIndex &index, int role) const override"
+.br
+.RI "\fBElementsCollectionModel::data\fP Reimplemented from QStandardItemModel\&. "
+.ti -1c
+.RI "QMimeData * \fBmimeData\fP (const QModelIndexList &indexes) const override"
+.br
+.RI "\fBElementsCollectionModel::mimeData\fP Reimplemented from QStandardItemModel\&. "
+.ti -1c
+.RI "QStringList \fBmimeTypes\fP () const override"
+.br
+.RI "\fBElementsCollectionModel::mimeTypes\fP Reimplemented from QStandardItemModel\&. "
+.ti -1c
+.RI "bool \fBcanDropMimeData\fP (const QMimeData *\fBdata\fP, Qt::DropAction action, int row, int column, const QModelIndex &parent) const override"
+.br
+.RI "\fBElementsCollectionModel::canDropMimeData\fP Reimplemented from QStandardItemModel\&. "
+.ti -1c
+.RI "bool \fBdropMimeData\fP (const QMimeData *\fBdata\fP, Qt::DropAction action, int row, int column, const QModelIndex &parent) override"
+.br
+.RI "\fBElementsCollectionModel::dropMimeData\fP Reimplemented from QStandardItemModel\&. "
+.ti -1c
+.RI "void \fBloadCollections\fP (bool common_collection, bool custom_collection, QList< \fBQETProject\fP * > projects)"
+.br
+.RI "\fBElementsCollectionModel::loadCollections\fP Load the several collections in this model\&. Prefer use this method instead of addCommonCollection, addCustomCollection and addProject, because it use multithreading to speed up the loading\&. This method emit \fBloadingProgressRangeChanged(int, int)\fP for know the minimu and maximum progress value This method emit \fBloadingProgressValueChanged(int)\fP for know the current progress value This method emit loadingFinished for know when loading finished\&. "
+.ti -1c
+.RI "void \fBaddCommonCollection\fP (bool set_data=true)"
+.br
+.RI "\fBElementsCollectionModel::addCommonCollection\fP Add the common elements collection to this model\&. "
+.ti -1c
+.RI "void \fBaddCustomCollection\fP (bool set_data=true)"
+.br
+.RI "\fBElementsCollectionModel::addCustomCollection\fP Add the custom elements collection to this model\&. "
+.ti -1c
+.RI "void \fBaddLocation\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "\fBElementsCollectionModel::addLocation\fP Add the element or directory to this model\&. If the location is already managed by this model, do nothing\&. "
+.ti -1c
+.RI "void \fBaddProject\fP (\fBQETProject\fP *\fBproject\fP, bool set_data=true)"
+.br
+.RI "\fBElementsCollectionModel::addProject\fP Add project to this model\&. "
+.ti -1c
+.RI "void \fBremoveProject\fP (\fBQETProject\fP *\fBproject\fP)"
+.br
+.RI "\fBElementsCollectionModel::removeProject\fP Remove project from this model\&. "
+.ti -1c
+.RI "QList< \fBQETProject\fP * > \fBproject\fP () const"
+.br
+.RI "\fBElementsCollectionModel::project\fP\&. "
+.ti -1c
+.RI "void \fBhighlightUnusedElement\fP ()"
+.br
+.RI "\fBElementsCollectionModel::highlightUnusedElement\fP Highlight every unused element of managed project\&. "
+.ti -1c
+.RI "QList< \fBElementCollectionItem\fP * > \fBitems\fP () const"
+.br
+.RI "\fBElementsCollectionModel::items\fP\&. "
+.ti -1c
+.RI "QList< \fBElementCollectionItem\fP * > \fBprojectItems\fP (\fBQETProject\fP *\fBproject\fP) const"
+.br
+.RI "\fBElementsCollectionModel::projectItems\fP\&. "
+.ti -1c
+.RI "void \fBhideElement\fP ()"
+.br
+.RI "\fBElementsCollectionModel::hideElement\fP Hide element in this model, only directory is managed\&. "
+.ti -1c
+.RI "bool \fBisHideElement\fP ()"
+.br
+.ti -1c
+.RI "QModelIndex \fBindexFromLocation\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "\fBElementsCollectionModel::indexFromLocation\fP Return the index who represent location\&. Index can be non valid\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBelementIntegratedToCollection\fP (const QString &path)"
+.br
+.RI "\fBElementsCollectionModel::elementIntegratedToCollection\fP When an element is added to embedded collection of a project, this method create and display the new element\&. "
+.ti -1c
+.RI "void \fBitemRemovedFromCollection\fP (const QString &path)"
+.br
+.RI "\fBElementsCollectionModel::itemRemovedFromCollection\fP This method must be called by a signal, to get a sender\&. "
+.ti -1c
+.RI "void \fBupdateItem\fP (const QString &path)"
+.br
+.RI "\fBElementsCollectionModel::updateItem\fP Update the item at path\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBQETProject\fP * > \fBm_project_list\fP"
+.br
+.ti -1c
+.RI "QHash< \fBQETProject\fP *, \fBXmlProjectElementCollectionItem\fP * > \fBm_project_hash\fP"
+.br
+.ti -1c
+.RI "bool \fBm_hide_element\fP = false"
+.br
+.ti -1c
+.RI "QFuture< void > \fBm_future\fP"
+.br
+.ti -1c
+.RI "QList< \fBElementCollectionItem\fP * > \fBm_items_list_to_setUp\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementsCollectionModel::ElementsCollectionModel (QObject * parent = \fCQ_NULLPTR\fP)"
+
+.PP
+\fBElementsCollectionModel::ElementsCollectionModel\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementsCollectionModel::addCommonCollection (bool set_data = \fCtrue\fP)"
+
+.PP
+\fBElementsCollectionModel::addCommonCollection\fP Add the common elements collection to this model\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIset_data\fP 
+.RE
+.PP
+
+.SS "void ElementsCollectionModel::addCustomCollection (bool set_data = \fCtrue\fP)"
+
+.PP
+\fBElementsCollectionModel::addCustomCollection\fP Add the custom elements collection to this model\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIset_data\fP 
+.RE
+.PP
+
+.SS "void ElementsCollectionModel::addLocation (const \fBElementsLocation\fP & location)"
+
+.PP
+\fBElementsCollectionModel::addLocation\fP Add the element or directory to this model\&. If the location is already managed by this model, do nothing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+
+.SS "void ElementsCollectionModel::addProject (\fBQETProject\fP * project, bool set_data = \fCtrue\fP)"
+
+.PP
+\fBElementsCollectionModel::addProject\fP Add project to this model\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : project to add\&. 
+.br
+\fIset_data\fP : if true, setUpData is called for every \fBElementCollectionItem\fP of project 
+.RE
+.PP
+
+.SS "bool ElementsCollectionModel::canDropMimeData (const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent) const\fC [override]\fP"
+
+.PP
+\fBElementsCollectionModel::canDropMimeData\fP Reimplemented from QStandardItemModel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP 
+.br
+\fIaction\fP 
+.br
+\fIrow\fP 
+.br
+\fIcolumn\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QVariant ElementsCollectionModel::data (const QModelIndex & index, int role) const\fC [override]\fP"
+
+.PP
+\fBElementsCollectionModel::data\fP Reimplemented from QStandardItemModel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.br
+\fIrole\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool ElementsCollectionModel::dropMimeData (const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent)\fC [override]\fP"
+
+.PP
+\fBElementsCollectionModel::dropMimeData\fP Reimplemented from QStandardItemModel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP 
+.br
+\fIaction\fP 
+.br
+\fIrow\fP 
+.br
+\fIcolumn\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void ElementsCollectionModel::elementIntegratedToCollection (const QString & path)\fC [private]\fP"
+
+.PP
+\fBElementsCollectionModel::elementIntegratedToCollection\fP When an element is added to embedded collection of a project, this method create and display the new element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : -The path of the new element in the embedded collection of a project 
+.RE
+.PP
+
+.SS "void ElementsCollectionModel::hideElement ()"
+
+.PP
+\fBElementsCollectionModel::hideElement\fP Hide element in this model, only directory is managed\&. 
+.SS "void ElementsCollectionModel::highlightUnusedElement ()"
+
+.PP
+\fBElementsCollectionModel::highlightUnusedElement\fP Highlight every unused element of managed project\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBQETProject::unusedElements()\fP 
+.RE
+.PP
+
+.SS "QModelIndex ElementsCollectionModel::indexFromLocation (const \fBElementsLocation\fP & location)"
+
+.PP
+\fBElementsCollectionModel::indexFromLocation\fP Return the index who represent location\&. Index can be non valid\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool ElementsCollectionModel::isHideElement ()\fC [inline]\fP"
+
+.SS "void ElementsCollectionModel::itemRemovedFromCollection (const QString & path)\fC [private]\fP"
+
+.PP
+\fBElementsCollectionModel::itemRemovedFromCollection\fP This method must be called by a signal, to get a sender\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+
+.SS "QList< \fBElementCollectionItem\fP * > ElementsCollectionModel::items () const"
+
+.PP
+\fBElementsCollectionModel::items\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+every \fBElementCollectionItem\fP owned by this model 
+.RE
+.PP
+
+.SS "void ElementsCollectionModel::loadCollections (bool common_collection, bool custom_collection, QList< \fBQETProject\fP * > projects)"
+
+.PP
+\fBElementsCollectionModel::loadCollections\fP Load the several collections in this model\&. Prefer use this method instead of addCommonCollection, addCustomCollection and addProject, because it use multithreading to speed up the loading\&. This method emit \fBloadingProgressRangeChanged(int, int)\fP for know the minimu and maximum progress value This method emit \fBloadingProgressValueChanged(int)\fP for know the current progress value This method emit loadingFinished for know when loading finished\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommon_collection\fP : true for load the common collection 
+.br
+\fIcustom_collection\fP : true for load the custom collection 
+.br
+\fIprojects\fP : list of projects to load 
+.RE
+.PP
+
+.SS "void ElementsCollectionModel::loadingFinished ()\fC [signal]\fP"
+
+.SS "void ElementsCollectionModel::loadingProgressRangeChanged (int, int)\fC [signal]\fP"
+
+.SS "void ElementsCollectionModel::loadingProgressValueChanged (int)\fC [signal]\fP"
+
+.SS "QMimeData * ElementsCollectionModel::mimeData (const QModelIndexList & indexes) const\fC [override]\fP"
+
+.PP
+\fBElementsCollectionModel::mimeData\fP Reimplemented from QStandardItemModel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindexes\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QStringList ElementsCollectionModel::mimeTypes () const\fC [override]\fP"
+
+.PP
+\fBElementsCollectionModel::mimeTypes\fP Reimplemented from QStandardItemModel\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QList< \fBQETProject\fP * > ElementsCollectionModel::project () const"
+
+.PP
+\fBElementsCollectionModel::project\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+every project added to this model 
+.RE
+.PP
+
+.SS "QList< \fBElementCollectionItem\fP * > ElementsCollectionModel::projectItems (\fBQETProject\fP * project) const"
+
+.PP
+\fBElementsCollectionModel::projectItems\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+return all items for project\&. the list can be empty 
+.RE
+.PP
+
+.SS "void ElementsCollectionModel::removeProject (\fBQETProject\fP * project)"
+
+.PP
+\fBElementsCollectionModel::removeProject\fP Remove project from this model\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.RE
+.PP
+
+.SS "void ElementsCollectionModel::updateItem (const QString & path)\fC [private]\fP"
+
+.PP
+\fBElementsCollectionModel::updateItem\fP Update the item at path\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QFuture<void> ElementsCollectionModel::m_future\fC [private]\fP"
+
+.SS "bool ElementsCollectionModel::m_hide_element = false\fC [private]\fP"
+
+.SS "QList<\fBElementCollectionItem\fP *> ElementsCollectionModel::m_items_list_to_setUp\fC [private]\fP"
+
+.SS "QHash<\fBQETProject\fP *, \fBXmlProjectElementCollectionItem\fP *> ElementsCollectionModel::m_project_hash\fC [private]\fP"
+
+.SS "QList<\fBQETProject\fP *> ElementsCollectionModel::m_project_list\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

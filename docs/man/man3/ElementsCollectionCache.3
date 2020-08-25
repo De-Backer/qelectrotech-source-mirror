@@ -1,0 +1,348 @@
+.TH "ElementsCollectionCache" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementsCollectionCache
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementscollectioncache\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsCollectionCache\fP (const QString &database_path, QObject *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ElementsCollectionCache\fP () override"
+.br
+.ti -1c
+.RI "void \fBsetLocale\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBlocale\fP () const"
+.br
+.ti -1c
+.RI "bool \fBsetPixmapStorageFormat\fP (const QString &)"
+.br
+.ti -1c
+.RI "QString \fBpixmapStorageFormat\fP () const"
+.br
+.ti -1c
+.RI "bool \fBfetchElement\fP (\fBElementsLocation\fP &location)"
+.br
+.RI "\fBElementsCollectionCache::fetchElement\fP Retrieve the data for a given element, using the cache if available, filling it otherwise\&. Data are then available through \fBpixmap()\fP and \fBname()\fP methods\&. "
+.ti -1c
+.RI "QString \fBname\fP () const"
+.br
+.ti -1c
+.RI "QPixmap \fBpixmap\fP () const"
+.br
+.ti -1c
+.RI "bool \fBfetchData\fP (const \fBElementsLocation\fP &)"
+.br
+.ti -1c
+.RI "bool \fBfetchNameFromCache\fP (const QString &path, const QUuid &uuid)"
+.br
+.RI "\fBElementsCollectionCache::fetchNameFromCache\fP Retrieve the name for an element, given its path and uuid The value is then available through the \fBname()\fP method\&. "
+.ti -1c
+.RI "bool \fBfetchPixmapFromCache\fP (const QString &path, const QUuid &uuid)"
+.br
+.RI "\fBElementsCollectionCache::fetchPixmapFromCache\fP Retrieve the pixmap for an element, given its path and uuid\&. It is then available through the \fBpixmap()\fP method\&. "
+.ti -1c
+.RI "bool \fBcacheName\fP (const QString &path, const QUuid &uuid=QUuid::createUuid())"
+.br
+.RI "\fBElementsCollectionCache::cacheName\fP Cache the current (i\&.e\&. last retrieved) name The cache entry will use the locale set via \fBsetLocale()\fP\&. "
+.ti -1c
+.RI "bool \fBcachePixmap\fP (const QString &path, const QUuid &uuid=QUuid::createUuid())"
+.br
+.RI "\fBElementsCollectionCache::cachePixmap\fP Cache the current (i\&.e\&. last retrieved) pixmap\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QSqlDatabase \fBcache_db_\fP"
+.br
+.RI "Object providing access to the SQLite database this cache relies on\&. "
+.ti -1c
+.RI "QSqlQuery * \fBselect_name_\fP"
+.br
+.RI "Prepared statement to fetch names from the cache\&. "
+.ti -1c
+.RI "QSqlQuery * \fBselect_pixmap_\fP"
+.br
+.RI "Prepared statement to fetch pixmaps from the cache\&. "
+.ti -1c
+.RI "QSqlQuery * \fBinsert_name_\fP"
+.br
+.RI "Prepared statement to insert names into the cache\&. "
+.ti -1c
+.RI "QSqlQuery * \fBinsert_pixmap_\fP"
+.br
+.RI "Prepared statement to insert pixmaps into the cache\&. "
+.ti -1c
+.RI "QString \fBlocale_\fP"
+.br
+.RI "Locale to be used when dealing with names\&. "
+.ti -1c
+.RI "QString \fBpixmap_storage_format_\fP"
+.br
+.RI "Storage format for cached pixmaps\&. "
+.ti -1c
+.RI "QString \fBcurrent_name_\fP"
+.br
+.RI "Last name fetched\&. "
+.ti -1c
+.RI "QPixmap \fBcurrent_pixmap_\fP"
+.br
+.RI "Last pixmap fetched\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements a SQLite cache for data related to elements collections, mainly names and pixmaps\&. This avoids the cost of parsing XML definitions of elements and building full CustomElement objects when (re)loading the elements panel\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementsCollectionCache::ElementsCollectionCache (const QString & database_path, QObject * parent = \fCnullptr\fP)"
+Construct a cache for elements collections\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdatabase_path\fP Path of the SQLite database to open\&. 
+.br
+\fIparent\fP Parent QObject 
+.RE
+.PP
+
+.SS "ElementsCollectionCache::~ElementsCollectionCache ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ElementsCollectionCache::cacheName (const QString & path, const QUuid & uuid = \fCQUuid::createUuid()\fP)"
+
+.PP
+\fBElementsCollectionCache::cacheName\fP Cache the current (i\&.e\&. last retrieved) name The cache entry will use the locale set via \fBsetLocale()\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : \fBElement\fP path (as obtained using \fBElementsLocation::toString()\fP) 
+.br
+\fIuuid\fP :\fBElement\fP uuid 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the caching succeeded, false otherwise\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBname()\fP 
+.RE
+.PP
+
+.SS "bool ElementsCollectionCache::cachePixmap (const QString & path, const QUuid & uuid = \fCQUuid::createUuid()\fP)"
+
+.PP
+\fBElementsCollectionCache::cachePixmap\fP Cache the current (i\&.e\&. last retrieved) pixmap\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : \fBElement\fP path (as obtained using \fBElementsLocation::toString()\fP) 
+.br
+\fIuuid\fP : \fBElement\fP uuid 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the caching succeeded, false otherwise\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBpixmap()\fP 
+.RE
+.PP
+
+.SS "bool ElementsCollectionCache::fetchData (const \fBElementsLocation\fP & location)"
+Retrieve the data by building the full CustomElement object matching the given location, without using the cache\&. Data are then available through \fBpixmap()\fP and \fBname()\fP methods\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP Location of a given \fBElement\fP\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the retrieval succeeded, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool ElementsCollectionCache::fetchElement (\fBElementsLocation\fP & location)"
+
+.PP
+\fBElementsCollectionCache::fetchElement\fP Retrieve the data for a given element, using the cache if available, filling it otherwise\&. Data are then available through \fBpixmap()\fP and \fBname()\fP methods\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP The definition of an element\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBpixmap()\fP 
+.PP
+\fBname()\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the retrieval succeeded, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool ElementsCollectionCache::fetchNameFromCache (const QString & path, const QUuid & uuid)"
+
+.PP
+\fBElementsCollectionCache::fetchNameFromCache\fP Retrieve the name for an element, given its path and uuid The value is then available through the \fBname()\fP method\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : \fBElement\fP path (as obtained using \fBElementsLocation::toString()\fP) 
+.br
+\fIuuid\fP : \fBElement\fP uuid 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the retrieval succeeded, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool ElementsCollectionCache::fetchPixmapFromCache (const QString & path, const QUuid & uuid)"
+
+.PP
+\fBElementsCollectionCache::fetchPixmapFromCache\fP Retrieve the pixmap for an element, given its path and uuid\&. It is then available through the \fBpixmap()\fP method\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP : \fBElement\fP path (as obtained using \fBElementsLocation::toString()\fP) 
+.br
+\fIuuid\fP : \fBElement\fP uuid 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the retrieval succeeded, false otherwise\&. 
+.RE
+.PP
+
+.SS "QString ElementsCollectionCache::locale () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+The locale to be used when dealing with names\&. 
+.RE
+.PP
+
+.SS "QString ElementsCollectionCache::name () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+The last name fetched through \fBfetchElement()\fP\&. 
+.RE
+.PP
+
+.SS "QPixmap ElementsCollectionCache::pixmap () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+The last pixmap fetched through \fBfetchElement()\fP\&. 
+.RE
+.PP
+
+.SS "QString ElementsCollectionCache::pixmapStorageFormat () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the pixmap storage format\&. Default is 'PNG' 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBsetPixmapStorageFormat()\fP 
+.RE
+.PP
+
+.SS "void ElementsCollectionCache::setLocale (const QString & locale)"
+Define the locale to be used when dealing with names\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocale\fP New locale to be used\&. 
+.RE
+.PP
+
+.SS "bool ElementsCollectionCache::setPixmapStorageFormat (const QString & format)"
+Define the storage format for the pixmaps within the SQLite database\&. See Qt's QPixmap documentation for more information\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformat\fP The new pixmap storage format\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the format change was accepted, false otherwise\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QSqlDatabase ElementsCollectionCache::cache_db_\fC [private]\fP"
+
+.PP
+Object providing access to the SQLite database this cache relies on\&. 
+.SS "QString ElementsCollectionCache::current_name_\fC [private]\fP"
+
+.PP
+Last name fetched\&. 
+.SS "QPixmap ElementsCollectionCache::current_pixmap_\fC [private]\fP"
+
+.PP
+Last pixmap fetched\&. 
+.SS "QSqlQuery* ElementsCollectionCache::insert_name_\fC [private]\fP"
+
+.PP
+Prepared statement to insert names into the cache\&. 
+.SS "QSqlQuery* ElementsCollectionCache::insert_pixmap_\fC [private]\fP"
+
+.PP
+Prepared statement to insert pixmaps into the cache\&. 
+.SS "QString ElementsCollectionCache::locale_\fC [private]\fP"
+
+.PP
+Locale to be used when dealing with names\&. 
+.SS "QString ElementsCollectionCache::pixmap_storage_format_\fC [private]\fP"
+
+.PP
+Storage format for cached pixmaps\&. 
+.SS "QSqlQuery* ElementsCollectionCache::select_name_\fC [private]\fP"
+
+.PP
+Prepared statement to fetch names from the cache\&. 
+.SS "QSqlQuery* ElementsCollectionCache::select_pixmap_\fC [private]\fP"
+
+.PP
+Prepared statement to fetch pixmaps from the cache\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

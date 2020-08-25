@@ -1,0 +1,250 @@
+.TH "BorderProperties" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BorderProperties \- The \fBBorderProperties\fP class This class is a container for dimensions and display properties of a diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <borderproperties\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBorderProperties\fP ()"
+.br
+.RI "\fBBorderProperties::BorderProperties\fP constructor Initializes a \fBBorderProperties\fP object with default properties\&. "
+.ti -1c
+.RI "virtual \fB~BorderProperties\fP ()"
+.br
+.RI "\fBBorderProperties::~BorderProperties\fP destructor\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBBorderProperties\fP &)"
+.br
+.RI "\fBBorderProperties::operator ==\fP\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBBorderProperties\fP &)"
+.br
+.RI "\fBBorderProperties::operator !=\fP\&. "
+.ti -1c
+.RI "void \fBtoXml\fP (QDomElement &) const"
+.br
+.RI "\fBBorderProperties::toXml\fP Exports dimensions as XML attributes added to element e\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (QDomElement &)"
+.br
+.RI "\fBBorderProperties::fromXml\fP Import dimensions from XML attributes of element e\&. "
+.ti -1c
+.RI "void \fBtoSettings\fP (QSettings &, const QString &=QString()) const"
+.br
+.RI "\fBBorderProperties::toSettings\fP Export dimensions in a QSettings object\&. "
+.ti -1c
+.RI "void \fBfromSettings\fP (QSettings &, const QString &=QString())"
+.br
+.RI "\fBBorderProperties::fromSettings\fP Import dimensions from a QSettings object\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBBorderProperties\fP \fBdefaultProperties\fP ()"
+.br
+.RI "\fBBorderProperties::defaultProperties\fP\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBcolumns_count\fP"
+.br
+.RI "Columns count\&. "
+.ti -1c
+.RI "qreal \fBcolumns_width\fP"
+.br
+.RI "Columns width\&. "
+.ti -1c
+.RI "qreal \fBcolumns_header_height\fP"
+.br
+.RI "Column headers height\&. "
+.ti -1c
+.RI "bool \fBdisplay_columns\fP"
+.br
+.RI "Whether to display column headers\&. "
+.ti -1c
+.RI "int \fBrows_count\fP"
+.br
+.RI "Rows count\&. "
+.ti -1c
+.RI "qreal \fBrows_height\fP"
+.br
+.RI "Rows height\&. "
+.ti -1c
+.RI "qreal \fBrows_header_width\fP"
+.br
+.RI "Row headers width\&. "
+.ti -1c
+.RI "bool \fBdisplay_rows\fP"
+.br
+.RI "Whether to display row headers\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBBorderProperties\fP class This class is a container for dimensions and display properties of a diagram\&. 
+
+
+.PP
+\fBRemarks\fP
+.RS 4
+Attributes are public 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BorderProperties::BorderProperties ()"
+
+.PP
+\fBBorderProperties::BorderProperties\fP constructor Initializes a \fBBorderProperties\fP object with default properties\&. Initializes a \fBBorderProperties\fP object with the following default properties:
+.IP "\(bu" 2
+17 columns of 60\&.0 px wide by 20\&.0px high
+.IP "\(bu" 2
+8 lines of 80\&.0 px high by 20\&.0px wide 
+.PP
+
+.SS "BorderProperties::~BorderProperties ()\fC [virtual]\fP"
+
+.PP
+\fBBorderProperties::~BorderProperties\fP destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBBorderProperties\fP BorderProperties::defaultProperties ()\fC [static]\fP"
+
+.PP
+\fBBorderProperties::defaultProperties\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the default properties stored in the setting file 
+.RE
+.PP
+
+.SS "void BorderProperties::fromSettings (QSettings & settings, const QString & prefix = \fCQString()\fP)"
+
+.PP
+\fBBorderProperties::fromSettings\fP Import dimensions from a QSettings object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP : QSettings object to read 
+.br
+\fIprefix\fP : prefix to be added before the names of the parameters 
+.RE
+.PP
+
+.SS "void BorderProperties::fromXml (QDomElement & e)"
+
+.PP
+\fBBorderProperties::fromXml\fP Import dimensions from XML attributes of element e\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP : XML element whose attributes will be read 
+.RE
+.PP
+
+.SS "bool BorderProperties::operator!= (const \fBBorderProperties\fP & bp)"
+
+.PP
+\fBBorderProperties::operator !=\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbp\fP : Other \fBBorderProperties\fP container/class\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+False if it and this container are identical, true otherwise\&. 
+.RE
+.PP
+
+.SS "bool BorderProperties::operator== (const \fBBorderProperties\fP & bp)"
+
+.PP
+\fBBorderProperties::operator ==\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbp\fP : Other \fBBorderProperties\fP container/class\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if it and this container are identical, false otherwise\&. 
+.RE
+.PP
+
+.SS "void BorderProperties::toSettings (QSettings & settings, const QString & prefix = \fCQString()\fP) const"
+
+.PP
+\fBBorderProperties::toSettings\fP Export dimensions in a QSettings object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsettings\fP : QSettings object to write 
+.br
+\fIprefix\fP : prefix to be added before the names of the parameters 
+.RE
+.PP
+
+.SS "void BorderProperties::toXml (QDomElement & e) const"
+
+.PP
+\fBBorderProperties::toXml\fP Exports dimensions as XML attributes added to element e\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP : XML element to which attributes will be added 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int BorderProperties::columns_count"
+
+.PP
+Columns count\&. 
+.SS "qreal BorderProperties::columns_header_height"
+
+.PP
+Column headers height\&. 
+.SS "qreal BorderProperties::columns_width"
+
+.PP
+Columns width\&. 
+.SS "bool BorderProperties::display_columns"
+
+.PP
+Whether to display column headers\&. 
+.SS "bool BorderProperties::display_rows"
+
+.PP
+Whether to display row headers\&. 
+.SS "int BorderProperties::rows_count"
+
+.PP
+Rows count\&. 
+.SS "qreal BorderProperties::rows_header_width"
+
+.PP
+Row headers width\&. 
+.SS "qreal BorderProperties::rows_height"
+
+.PP
+Rows height\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,99 @@
+.TH "ChangeTemplateInformationsCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChangeTemplateInformationsCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatecommands\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeTemplateInformationsCommand\fP (\fBTitleBlockTemplate\fP *, const QString &, const QString &, QUndoCommand *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~ChangeTemplateInformationsCommand\fP () override"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeTemplateInformationsCommand\fP (const \fBChangeTemplateInformationsCommand\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBtbtemplate_\fP"
+.br
+.RI "Changed title block template\&. "
+.ti -1c
+.RI "QString \fBold_information_\fP"
+.br
+.RI "Informations before they are modified\&. "
+.ti -1c
+.RI "QString \fBnew_information_\fP"
+.br
+.RI "Informations after they were modified\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents the action of changing extra information of a title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChangeTemplateInformationsCommand::ChangeTemplateInformationsCommand (\fBTitleBlockTemplate\fP * tbt, const QString & old_info, const QString & new_info, QUndoCommand * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt\fP Changed title block template 
+.br
+\fIold_info\fP Former information 
+.br
+\fInew_info\fP New information 
+.br
+\fIparent\fP Parent QUndoCommand 
+.RE
+.PP
+
+.SS "ChangeTemplateInformationsCommand::~ChangeTemplateInformationsCommand ()\fC [override]\fP"
+Destructor 
+.SS "ChangeTemplateInformationsCommand::ChangeTemplateInformationsCommand (const \fBChangeTemplateInformationsCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChangeTemplateInformationsCommand::redo ()\fC [override]\fP"
+Redo the information change 
+.SS "void ChangeTemplateInformationsCommand::undo ()\fC [override]\fP"
+Undo the information change 
+.SH "Member Data Documentation"
+.PP 
+.SS "QString ChangeTemplateInformationsCommand::new_information_\fC [private]\fP"
+
+.PP
+Informations after they were modified\&. 
+.SS "QString ChangeTemplateInformationsCommand::old_information_\fC [private]\fP"
+
+.PP
+Informations before they are modified\&. 
+.SS "\fBTitleBlockTemplate\fP* ChangeTemplateInformationsCommand::tbtemplate_\fC [private]\fP"
+
+.PP
+Changed title block template\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

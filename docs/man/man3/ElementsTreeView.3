@@ -1,0 +1,77 @@
+.TH "ElementsTreeView" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementsTreeView \- The \fBElementsTreeView\fP class This class just reimplement startDrag from QTreeView, for set a custom pixmap\&. This class must be used when the tree view have an \fBElementsCollectionModel\fP as model\&. The pixmap used is the pixmap of the dragged element or a directory pixmap\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementstreeview\&.h>\fP
+.PP
+Inherits QTreeView\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsTreeView\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBElementsTreeView::ElementsTreeView\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstartDrag\fP (Qt::DropActions supportedActions) override"
+.br
+.RI "\fBElementsTreeView::startDrag\fP Reimplemented from QTreeView\&. "
+.ti -1c
+.RI "virtual void \fBstartElementDrag\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "\fBElementsTreeView::startElementDrag\fP Build a QDrag according to the content of location\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementsTreeView\fP class This class just reimplement startDrag from QTreeView, for set a custom pixmap\&. This class must be used when the tree view have an \fBElementsCollectionModel\fP as model\&. The pixmap used is the pixmap of the dragged element or a directory pixmap\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementsTreeView::ElementsTreeView (QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBElementsTreeView::ElementsTreeView\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementsTreeView::startDrag (Qt::DropActions supportedActions)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBElementsTreeView::startDrag\fP Reimplemented from QTreeView\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsupportedActions\fP 
+.RE
+.PP
+
+.SS "void ElementsTreeView::startElementDrag (const \fBElementsLocation\fP & location)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBElementsTreeView::startElementDrag\fP Build a QDrag according to the content of location\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP : location to use for create the content of the QDrag 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

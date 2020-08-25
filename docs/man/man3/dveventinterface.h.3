@@ -1,0 +1,22 @@
+.TH "sources/dvevent/dveventinterface.h" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/dvevent/dveventinterface.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <QObject>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBDVEventInterface\fP"
+.br
+.RI "The \fBDVEventInterface\fP class This class is the main interface for manage event of a \fBDiagram\fP View\&. This do nothing, for create new event behavior, we must to create new class from this\&. Each method return a bool: True if the methode do something else return false\&. Each method of \fBDVEventInterface\fP return false; \fBisRunning()\fP return true if action is started but not finish\&. By default return false\&. \fBisFinish()\fP return true when the action is finish, or not started\&. By default return true\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

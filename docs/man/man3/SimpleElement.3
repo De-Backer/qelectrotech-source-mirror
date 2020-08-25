@@ -1,0 +1,73 @@
+.TH "SimpleElement" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SimpleElement \- The \fBSimpleElement\fP class this class represente a simple element with no specific attribute\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <simpleelement\&.h>\fP
+.PP
+Inherits \fBElement\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSimpleElement\fP (const \fBElementsLocation\fP &, QGraphicsItem *=nullptr, int *=nullptr)"
+.br
+.RI "\fBSimpleElement::SimpleElement\fP\&. "
+.ti -1c
+.RI "\fB~SimpleElement\fP () override"
+.br
+.RI "\fBSimpleElement::~SimpleElement\fP\&. "
+.ti -1c
+.RI "void \fBinitLink\fP (\fBQETProject\fP *project) override"
+.br
+.RI "\fBSimpleElement::initLink\fP\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBSimpleElement\fP class this class represente a simple element with no specific attribute\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SimpleElement::SimpleElement (const \fBElementsLocation\fP & location, QGraphicsItem * qgi = \fCnullptr\fP, int * state = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBSimpleElement::SimpleElement\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.br
+\fIqgi\fP 
+.br
+\fIstate\fP 
+.RE
+.PP
+
+.SS "SimpleElement::~SimpleElement ()\fC [override]\fP"
+
+.PP
+\fBSimpleElement::~SimpleElement\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SimpleElement::initLink (\fBQETProject\fP * project)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBSimpleElement::initLink\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Call init Link from custom element and after call update label for setup it\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBElement\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

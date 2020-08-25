@@ -1,0 +1,813 @@
+.TH "TitleBlockTemplateView" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateView
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templateview\&.h>\fP
+.PP
+Inherits QGraphicsView\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetTitleBlockTemplate\fP (\fBTitleBlockTemplate\fP *)"
+.br
+.ti -1c
+.RI "void \fBselectionChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomIn\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomOut\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomFit\fP ()"
+.br
+.ti -1c
+.RI "void \fBzoomReset\fP ()"
+.br
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP * > \fBcut\fP ()"
+.br
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP * > \fBcopy\fP ()"
+.br
+.ti -1c
+.RI "bool \fBmayPaste\fP ()"
+.br
+.ti -1c
+.RI "QList< \fBTitleBlockCell\fP > \fBpastedCells\fP ()"
+.br
+.ti -1c
+.RI "void \fBpaste\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddColumnAtEnd\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddRowAtEnd\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddColumnBefore\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddRowBefore\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddColumnAfter\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddRowAfter\fP ()"
+.br
+.ti -1c
+.RI "void \fBeditColumn\fP (\fBHelperCell\fP *=nullptr)"
+.br
+.ti -1c
+.RI "void \fBeditRow\fP (\fBHelperCell\fP *=nullptr)"
+.br
+.ti -1c
+.RI "void \fBdeleteColumn\fP ()"
+.br
+.ti -1c
+.RI "void \fBdeleteRow\fP ()"
+.br
+.ti -1c
+.RI "void \fBmergeSelectedCells\fP ()"
+.br
+.ti -1c
+.RI "void \fBsplitSelectedCell\fP ()"
+.br
+.ti -1c
+.RI "void \fBrefresh\fP ()"
+.br
+.ti -1c
+.RI "void \fBchangePreviewWidth\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPreviewWidth\fP (int)"
+.br
+.ti -1c
+.RI "void \fBupdateLayout\fP ()"
+.br
+.ti -1c
+.RI "void \fBrowsDimensionsChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBcolumnsDimensionsChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateDisplayedMinMaxWidth\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool)"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBselectedCellsChanged\fP (QList< \fBTitleBlockCell\fP * >)"
+.br
+.ti -1c
+.RI "void \fBgridModificationRequested\fP (\fBTitleBlockTemplateCommand\fP *)"
+.br
+.ti -1c
+.RI "void \fBpreviewWidthChanged\fP (int, int)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateView\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateView\fP (QGraphicsScene *, QWidget *=nullptr)"
+.br
+.RI "\fBTitleBlockTemplateView::TitleBlockTemplateView\fP\&. "
+.ti -1c
+.RI "\fB~TitleBlockTemplateView\fP () override"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBtitleBlockTemplate\fP () const"
+.br
+.ti -1c
+.RI "virtual QList< \fBTitleBlockCell\fP * > \fBselectedCells\fP () const"
+.br
+.ti -1c
+.RI "virtual \fBTitleBlockTemplateCellsSet\fP \fBselectedCellsSet\fP () const"
+.br
+.ti -1c
+.RI "virtual \fBTitleBlockTemplateCellsSet\fP \fBcells\fP (const QRectF &) const"
+.br
+.ti -1c
+.RI "virtual void \fBanalyzeSelectedCells\fP (bool *, bool *, int *)"
+.br
+.RI "\fBTitleBlockTemplateView::analyzeSelectedCells\fP\&. "
+.ti -1c
+.RI "virtual QSizeF \fBtemplateSize\fP () const"
+.br
+.ti -1c
+.RI "virtual qreal \fBtemplateWidth\fP () const"
+.br
+.ti -1c
+.RI "virtual qreal \fBtemplateHeight\fP () const"
+.br
+.in -1c
+.SS "Protected Slots"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBapplyColumnsWidths\fP (bool=true)"
+.br
+.ti -1c
+.RI "virtual void \fBapplyRowsHeights\fP (bool=true)"
+.br
+.ti -1c
+.RI "virtual void \fBupdateRowsHelperCells\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBupdateColumnsHelperCells\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdrawBackground\fP (QPainter *, const QRectF &) override"
+.br
+.ti -1c
+.RI "virtual void \fBaddCells\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBloadTemplate\fP (\fBTitleBlockTemplate\fP *)"
+.br
+.ti -1c
+.RI "virtual void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBwheelEvent\fP (QWheelEvent *) override"
+.br
+.ti -1c
+.RI "virtual qreal \fBzoomFactor\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBfillWithEmptyCells\fP ()"
+.br
+.ti -1c
+.RI "bool \fBevent\fP (QEvent *) override"
+.br
+.ti -1c
+.RI "virtual void \fBnormalizeCells\fP (QList< \fBTitleBlockCell\fP > &, int x=0, int y=0) const"
+.br
+.RI "\fBTitleBlockTemplateView::normalizeCells\fP Given a cells list, change their position so the top left one is at row \fIx\fP and column \fIy\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateLastContextMenuCell\fP (\fBHelperCell\fP *)"
+.br
+.ti -1c
+.RI "void \fBadjustSceneRect\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateView\fP (const \fBTitleBlockTemplateView\fP &)"
+.br
+.ti -1c
+.RI "QList< QAction * > \fBrowsActions\fP () const"
+.br
+.ti -1c
+.RI "QList< QAction * > \fBcolumnsActions\fP () const"
+.br
+.ti -1c
+.RI "void \fBupdateTotalWidthLabel\fP ()"
+.br
+.ti -1c
+.RI "void \fBrequestGridModification\fP (\fBTitleBlockTemplateCommand\fP *)"
+.br
+.ti -1c
+.RI "int \fBlastContextMenuCellIndex\fP () const"
+.br
+.ti -1c
+.RI "int \fBindexOf\fP (QGraphicsLayoutItem *)"
+.br
+.ti -1c
+.RI "void \fBremoveItem\fP (QGraphicsLayoutItem *)"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplateCellsSet\fP \fBmakeCellsSetFromGraphicsItems\fP (const QList< QGraphicsItem * > &) const"
+.br
+.RI "\fBTitleBlockTemplateView::makeCellsSetFromGraphicsItems\fP\&. "
+.ti -1c
+.RI "QString \fBmakePrettyToolTip\fP (const QString &)"
+.br
+.RI "\fBTitleBlockTemplateView::makePrettyToolTip\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBtbtemplate_\fP"
+.br
+.ti -1c
+.RI "QGraphicsGridLayout * \fBtbgrid_\fP"
+.br
+.ti -1c
+.RI "QGraphicsWidget * \fBform_\fP"
+.br
+.ti -1c
+.RI "int \fBpreview_width_\fP"
+.br
+.ti -1c
+.RI "\fBSplittedHelperCell\fP * \fBtotal_width_helper_cell_\fP"
+.br
+.ti -1c
+.RI "\fBHelperCell\fP * \fBextra_cells_width_helper_cell_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBadd_column_before_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBadd_row_before_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBadd_column_after_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBadd_row_after_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBedit_column_dim_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBedit_row_dim_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBdelete_column_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBdelete_row_\fP"
+.br
+.ti -1c
+.RI "QAction * \fBchange_preview_width_\fP"
+.br
+.ti -1c
+.RI "\fBHelperCell\fP * \fBlast_context_menu_cell_\fP"
+.br
+.ti -1c
+.RI "int \fBapply_columns_widths_count_\fP"
+.br
+.ti -1c
+.RI "int \fBapply_rows_heights_count_\fP"
+.br
+.ti -1c
+.RI "bool \fBfirst_activation_\fP"
+.br
+.RI "Boolean used to detect the first display of this widget\&. "
+.ti -1c
+.RI "bool \fBread_only_\fP"
+.br
+.RI "Boolean stating whether this view allows template edition\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This QGraphicsView subclass is used in the title block template editor to offer a graphical preview of the template being edited, but also to handle cell selection and various actions\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateView::TitleBlockTemplateView (QWidget * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Parent QWidget\&. 
+.RE
+.PP
+
+.SS "TitleBlockTemplateView::TitleBlockTemplateView (QGraphicsScene * scene, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBTitleBlockTemplateView::TitleBlockTemplateView\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscene\fP 
+.br
+\fIparent\fP Parent QWidget\&. 
+.RE
+.PP
+
+.SS "TitleBlockTemplateView::~TitleBlockTemplateView ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockTemplateView::TitleBlockTemplateView (const \fBTitleBlockTemplateView\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TitleBlockTemplateView::addCells ()\fC [protected]\fP, \fC [virtual]\fP"
+Add the cells (both helper cells and regular visual cells) to the scene to get a visual representation of the edited title block template\&. 
+.SS "void TitleBlockTemplateView::addColumnAfter ()\fC [slot]\fP"
+Add a column right after the last index selected when calling the context menu\&. 
+.SS "void TitleBlockTemplateView::addColumnAtEnd ()\fC [slot]\fP"
+Add a column right after the last one\&. 
+.SS "void TitleBlockTemplateView::addColumnBefore ()\fC [slot]\fP"
+Add a column right before the last index selected when calling the context menu\&. 
+.SS "void TitleBlockTemplateView::addRowAfter ()\fC [slot]\fP"
+Add a row right after the last index selected when calling the context menu\&. 
+.SS "void TitleBlockTemplateView::addRowAtEnd ()\fC [slot]\fP"
+Add a row right after the last one\&. 
+.SS "void TitleBlockTemplateView::addRowBefore ()\fC [slot]\fP"
+Add a row right before the last index selected when calling the context menu\&. 
+.SS "void TitleBlockTemplateView::adjustSceneRect ()\fC [private]\fP, \fC [slot]\fP"
+Adjusts the bounding rect of the scene\&. 
+.SS "void TitleBlockTemplateView::analyzeSelectedCells (bool * can_merge, bool * can_split, int * count)\fC [virtual]\fP"
+
+.PP
+\fBTitleBlockTemplateView::analyzeSelectedCells\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcan_merge\fP : If non-zero, will be changed to reflect whether selected cells may be merged 
+.br
+\fIcan_split\fP : If non-zero, will be changed to reflect whether selected cells may be splitted 
+.br
+\fIcount\fP : If non-zero, will be changed to reflect the number of selected cells 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::applyColumnsWidths (bool animate = \fCtrue\fP)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+Apply the columns widths currently specified by the edited title block template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIanimate\fP true to animate the change, false otherwise\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::applyRowsHeights (bool animate = \fCtrue\fP)\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+Apply the rows heights currently specified by the edited title block template\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIanimate\fP true to animate the change, false otherwise\&. 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplateCellsSet\fP TitleBlockTemplateView::cells (const QRectF & rect) const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the visual cells contained in the \fIrect\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIrect\fP Rectangle in the coordinates of the QGraphicsWidget representing the title block template\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::changePreviewWidth ()\fC [slot]\fP"
+Ask the user a new width for the preview 
+.SS "QList< QAction * > TitleBlockTemplateView::columnsActions () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the list of columns-specific actions\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::columnsDimensionsChanged ()\fC [slot]\fP"
+Update the displayed layout\&. Call this function when the dimensions of columns changed\&. 
+.SS "QList< \fBTitleBlockCell\fP * > TitleBlockTemplateView::copy ()\fC [slot]\fP"
+Export currently selected cells to the clipboard\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of cells copied to the clipboard 
+.RE
+.PP
+
+.SS "QList< \fBTitleBlockCell\fP * > TitleBlockTemplateView::cut ()\fC [slot]\fP"
+Export currently selected cells to the clipboard before setting them as empty\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the list of cells copied to the clipboard 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::deleteColumn ()\fC [slot]\fP"
+Remove the column at the last index selected when calling the context menu\&. 
+.SS "void TitleBlockTemplateView::deleteRow ()\fC [slot]\fP"
+Remove the row at the last index selected when calling the context menu\&. 
+.SS "void TitleBlockTemplateView::drawBackground (QPainter * painter, const QRectF & rect)\fC [override]\fP, \fC [protected]\fP"
+Reimplement the way the background is drawn to render the title block template\&. 
+.SS "void TitleBlockTemplateView::editColumn (\fBHelperCell\fP * cell = \fCnullptr\fP)\fC [slot]\fP"
+Edit the width of a column\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP (optional) \fBHelperCell\fP of the column to be modified\&. If 0, this method uses the last index selected when calling the context menu\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::editRow (\fBHelperCell\fP * cell = \fCnullptr\fP)\fC [slot]\fP"
+Edit the height of a row\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcell\fP (optional) \fBHelperCell\fP of the row to be modified\&. If 0, this method uses the last index selected when calling the context menu\&. 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplateView::event (QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP Object describing the received event 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::fillWithEmptyCells ()\fC [protected]\fP, \fC [virtual]\fP"
+Fill the layout with empty cells where needed\&. 
+.SS "void TitleBlockTemplateView::gridModificationRequested (\fBTitleBlockTemplateCommand\fP *)\fC [signal]\fP"
+
+.SS "int TitleBlockTemplateView::indexOf (QGraphicsLayoutItem * item)\fC [private]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP an item supposed to be contained in the grid layout\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the flat index if this item, or -1 if it could not be found\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::init ()\fC [protected]\fP, \fC [virtual]\fP"
+Initialize this view (actions, signals/slots connections, etc\&.) 
+.SS "int TitleBlockTemplateView::lastContextMenuCellIndex () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the last index selected when triggering the context menu\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBupdateLastContextMenuCell\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::loadTemplate (\fBTitleBlockTemplate\fP * tbt)\fC [protected]\fP, \fC [virtual]\fP"
+Load the \fItbt\fP title block template\&. If a different template was previously loaded, it is deleted\&. 
+.SS "\fBTitleBlockTemplateCellsSet\fP TitleBlockTemplateView::makeCellsSetFromGraphicsItems (const QList< QGraphicsItem * > & items) const\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplateView::makeCellsSetFromGraphicsItems\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitems\fP : a list of QGraphicsItem 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the corresponding \fBTitleBlockTemplateCellsSet\fP 
+.RE
+.PP
+
+.SS "QString TitleBlockTemplateView::makePrettyToolTip (const QString & string)\fC [private]\fP"
+
+.PP
+\fBTitleBlockTemplateView::makePrettyToolTip\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP : a text string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+an HTML string that can be passed to setToolTip() 
+.RE
+.PP
+
+.SS "bool TitleBlockTemplateView::mayPaste ()\fC [slot]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if the content of the clipboard looks interesting 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::mergeSelectedCells ()\fC [slot]\fP"
+Merge the selected cells\&. 
+.SS "void TitleBlockTemplateView::normalizeCells (QList< \fBTitleBlockCell\fP > & cells, int x = \fC0\fP, int y = \fC0\fP) const\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBTitleBlockTemplateView::normalizeCells\fP Given a cells list, change their position so the top left one is at row \fIx\fP and column \fIy\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcells\fP Cells list 
+.br
+\fIx\fP : row 
+.br
+\fIy\fP : column 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::paste ()\fC [slot]\fP"
+Import the cells described in the clipboard\&. 
+.SS "QList< \fBTitleBlockCell\fP > TitleBlockTemplateView::pastedCells ()\fC [slot]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+a list containing the pasted cells 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::previewWidthChanged (int, int)\fC [signal]\fP"
+
+.SS "void TitleBlockTemplateView::refresh ()\fC [slot]\fP"
+Refresh the regular cells\&. 
+.SS "void TitleBlockTemplateView::removeItem (QGraphicsLayoutItem * item)\fC [private]\fP"
+Removes an item from the grid layout 
+.PP
+\fBParameters\fP
+.RS 4
+\fIitem\fP an item supposed to be contained in the grid layout\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::requestGridModification (\fBTitleBlockTemplateCommand\fP * command)\fC [private]\fP"
+Emit the \fBgridModificationRequested()\fP signal with \fIcommand\fP after having set its view component\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBTitleBlockTemplateCommand::setView()\fP 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP A command object modifying the rendered title block template\&. 
+.RE
+.PP
+
+.SS "QList< QAction * > TitleBlockTemplateView::rowsActions () const\fC [private]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the list of rows-specific actions\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::rowsDimensionsChanged ()\fC [slot]\fP"
+Update the displayed layout\&. Call this function when the dimensions of rows changed\&. 
+.SS "QList< \fBTitleBlockCell\fP * > TitleBlockTemplateView::selectedCells () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the selected logical cells, not including the spanned ones\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::selectedCellsChanged (QList< \fBTitleBlockCell\fP * >)\fC [signal]\fP"
+
+.SS "\fBTitleBlockTemplateCellsSet\fP TitleBlockTemplateView::selectedCellsSet () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the selected visual cells\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::selectionChanged ()\fC [slot]\fP"
+Emits the \fBselectedCellsChanged()\fP signal with the currently selected cells\&. 
+.SS "void TitleBlockTemplateView::setPreviewWidth (int width)\fC [slot]\fP"
+Set the new preview width to width 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidth\fP new preview width 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::setReadOnly (bool read_only)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIread_only\fP whether this view should be read only\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::setTitleBlockTemplate (\fBTitleBlockTemplate\fP * tbtemplate)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItbtemplate\fP Title block template to be rendered by this view\&. If set to zero, the View will render nothing\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::splitSelectedCell ()\fC [slot]\fP"
+Split the selected cell\&. 
+.SS "qreal TitleBlockTemplateView::templateHeight () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the current height of the rendered title block template 
+.RE
+.PP
+
+.SS "QSizeF TitleBlockTemplateView::templateSize () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the current size of the rendered title block template 
+.RE
+.PP
+
+.SS "qreal TitleBlockTemplateView::templateWidth () const\fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the current width of the rendered title block template 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplate\fP * TitleBlockTemplateView::titleBlockTemplate () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+The title block template object rendered by this view\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::updateColumnsHelperCells ()\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+Update the content (type and value) of columns helper cells\&. 
+.SS "void TitleBlockTemplateView::updateDisplayedMinMaxWidth ()\fC [slot]\fP"
+Update the tooltip that displays the minimum and/or maximum width of the template\&. 
+.SS "void TitleBlockTemplateView::updateLastContextMenuCell (\fBHelperCell\fP * last_context_menu_cell)\fC [private]\fP, \fC [slot]\fP"
+Stores \fIlast_context_menu_cell\fP as being the last helper cell the context menu was triggered on\&. 
+.SS "void TitleBlockTemplateView::updateLayout ()\fC [slot]\fP"
+Update the displayed layout\&. Call this function to refresh the display after the rendered title block template has been 'deeply' modified, e\&.g\&. rows/columns have been added/modified or cells were merged/splitted\&. 
+.SS "void TitleBlockTemplateView::updateRowsHelperCells ()\fC [protected]\fP, \fC [virtual]\fP, \fC [slot]\fP"
+Update the content (type and value) of rows helper cells\&. 
+.SS "void TitleBlockTemplateView::updateTotalWidthLabel ()\fC [private]\fP"
+Update the label of the helper cell that indicates the preview width\&. 
+.SS "void TitleBlockTemplateView::wheelEvent (QWheelEvent * e)\fC [override]\fP, \fC [protected]\fP"
+Handles mouse wheel-related actions 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP QWheelEvent describing the wheel event 
+.RE
+.PP
+
+.SS "qreal TitleBlockTemplateView::zoomFactor () const\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the zoom factor used by \fBzoomIn()\fP and \fBzoomOut()\fP\&. 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::zoomFit ()\fC [slot]\fP"
+Fit the rendered title block template in this view\&. 
+.SS "void TitleBlockTemplateView::zoomIn ()\fC [slot]\fP"
+Zoom in by \fBzoomFactor()\fP\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBzoomFactor()\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::zoomOut ()\fC [slot]\fP"
+Zoom out by \fBzoomFactor()\fP\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBzoomFactor()\fP 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateView::zoomReset ()\fC [slot]\fP"
+Reset the zoom level\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QAction* TitleBlockTemplateView::add_column_after_\fC [private]\fP"
+
+.SS "QAction* TitleBlockTemplateView::add_column_before_\fC [private]\fP"
+
+.SS "QAction * TitleBlockTemplateView::add_row_after_\fC [private]\fP"
+
+.SS "QAction * TitleBlockTemplateView::add_row_before_\fC [private]\fP"
+
+.SS "int TitleBlockTemplateView::apply_columns_widths_count_\fC [private]\fP"
+
+.SS "int TitleBlockTemplateView::apply_rows_heights_count_\fC [private]\fP"
+
+.SS "QAction* TitleBlockTemplateView::change_preview_width_\fC [private]\fP"
+
+.SS "QAction* TitleBlockTemplateView::delete_column_\fC [private]\fP"
+
+.SS "QAction * TitleBlockTemplateView::delete_row_\fC [private]\fP"
+
+.SS "QAction* TitleBlockTemplateView::edit_column_dim_\fC [private]\fP"
+
+.SS "QAction * TitleBlockTemplateView::edit_row_dim_\fC [private]\fP"
+
+.SS "\fBHelperCell\fP* TitleBlockTemplateView::extra_cells_width_helper_cell_\fC [private]\fP"
+
+.SS "bool TitleBlockTemplateView::first_activation_\fC [private]\fP"
+
+.PP
+Boolean used to detect the first display of this widget\&. 
+.SS "QGraphicsWidget* TitleBlockTemplateView::form_\fC [private]\fP"
+
+.SS "\fBHelperCell\fP* TitleBlockTemplateView::last_context_menu_cell_\fC [private]\fP"
+
+.SS "int TitleBlockTemplateView::preview_width_\fC [private]\fP"
+
+.SS "bool TitleBlockTemplateView::read_only_\fC [private]\fP"
+
+.PP
+Boolean stating whether this view allows template edition\&. 
+.SS "QGraphicsGridLayout* TitleBlockTemplateView::tbgrid_\fC [private]\fP"
+
+.SS "\fBTitleBlockTemplate\fP* TitleBlockTemplateView::tbtemplate_\fC [private]\fP"
+
+.SS "\fBSplittedHelperCell\fP* TitleBlockTemplateView::total_width_helper_cell_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

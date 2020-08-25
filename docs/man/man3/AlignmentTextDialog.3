@@ -1,0 +1,74 @@
+.TH "AlignmentTextDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AlignmentTextDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <alignmenttextdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAlignmentTextDialog\fP (Qt::Alignment \fBalignment\fP, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~AlignmentTextDialog\fP ()"
+.br
+.ti -1c
+.RI "Qt::Alignment \fBalignment\fP () const"
+.br
+.RI "\fBAlignmentTextDialog::alignment\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBevent\fP (QEvent *event)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_first_show\fP = true"
+.br
+.ti -1c
+.RI "Ui::AlignmentTextDialog * \fBui\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AlignmentTextDialog::AlignmentTextDialog (Qt::Alignment alignment, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "AlignmentTextDialog::~AlignmentTextDialog ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "Qt::Alignment AlignmentTextDialog::alignment () const"
+
+.PP
+\fBAlignmentTextDialog::alignment\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the selected alignment 
+.RE
+.PP
+
+.SS "bool AlignmentTextDialog::event (QEvent * event)\fC [protected]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool AlignmentTextDialog::m_first_show = true\fC [private]\fP"
+
+.SS "Ui::AlignmentTextDialog* AlignmentTextDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

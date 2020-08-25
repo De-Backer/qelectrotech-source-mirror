@@ -1,0 +1,236 @@
+.TH "TitleBlockDimensionWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockDimensionWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dimensionwidget\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockDimensionWidget\fP (bool, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~TitleBlockDimensionWidget\fP () override"
+.br
+.ti -1c
+.RI "bool \fBisComplete\fP () const"
+.br
+.ti -1c
+.RI "QLabel * \fBlabel\fP () const"
+.br
+.ti -1c
+.RI "QSpinBox * \fBspinbox\fP () const"
+.br
+.ti -1c
+.RI "\fBTitleBlockDimension\fP \fBvalue\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (const \fBTitleBlockDimension\fP &)"
+.br
+.ti -1c
+.RI "bool \fBisReadOnly\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool)"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateSpinBoxSuffix\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockDimensionWidget\fP (const \fBTitleBlockDimensionWidget\fP &)"
+.br
+.ti -1c
+.RI "void \fBinitWidgets\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitLayouts\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBcomplete_\fP"
+.br
+.RI "Whether or not this dialog is required to be complete, i\&.e\&. displaying also\&. "
+.ti -1c
+.RI "QSpinBox * \fBspinbox_\fP"
+.br
+.RI "Spinbox displaying the length\&. "
+.ti -1c
+.RI "QLabel * \fBspinbox_label_\fP"
+.br
+.RI "Label shown right before the spinbox\&. "
+.ti -1c
+.RI "QRadioButton * \fBabsolute_button_\fP"
+.br
+.RI "Radio button to indicate the length is absolute\&. "
+.ti -1c
+.RI "QRadioButton * \fBrelative_button_\fP"
+.br
+.RI "Radio button to indicate the length is relative to the total length\&. "
+.ti -1c
+.RI "QRadioButton * \fBremaining_button_\fP"
+.br
+.RI "Radio button to indicate the length is relative to the remaining length\&. "
+.ti -1c
+.RI "QButtonGroup * \fBdimension_type_\fP"
+.br
+.RI "QButtonGroup for the three radio buttons\&. "
+.ti -1c
+.RI "QDialogButtonBox * \fBbuttons_\fP"
+.br
+.RI "Buttons to validate the dialog\&. "
+.ti -1c
+.RI "bool \fBread_only_\fP"
+.br
+.RI "Whether or not this widget allow edition of the displayed dimension\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a dialog for the user to input a dimension: a row height, a column width, etc\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockDimensionWidget::TitleBlockDimensionWidget (bool complete, QWidget * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcomplete\fP True for this dialog to show the radio buttons that allow the user to specify whether the dimension is absolute, relative to the total width or relative to the remaining width\&. 
+.br
+\fIparent\fP Parent QWidget 
+.RE
+.PP
+
+.SS "TitleBlockDimensionWidget::~TitleBlockDimensionWidget ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockDimensionWidget::TitleBlockDimensionWidget (const \fBTitleBlockDimensionWidget\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void TitleBlockDimensionWidget::initLayouts ()\fC [private]\fP"
+Initialize the layout of the dialog\&. 
+.SS "void TitleBlockDimensionWidget::initWidgets ()\fC [private]\fP"
+Initialize the widgets composing the dialog\&. 
+.SS "bool TitleBlockDimensionWidget::isComplete () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true if this dialog shows the optional radio buttons 
+.RE
+.PP
+
+.SS "bool TitleBlockDimensionWidget::isReadOnly () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+Whether or not this widget should allow edition of the displayed dimension\&. 
+.RE
+.PP
+
+.SS "QLabel * TitleBlockDimensionWidget::label () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to the label displayed right before the spinbox\&. Useful to specify a custom text\&. 
+.RE
+.PP
+
+.SS "void TitleBlockDimensionWidget::setReadOnly (bool read_only)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIread_only\fP Whether or not this widget should allow edition of the displayed dimension\&. 
+.RE
+.PP
+
+.SS "void TitleBlockDimensionWidget::setValue (const \fBTitleBlockDimension\fP & dim)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdim\fP Dimension to be displayed and edited by this dialog 
+.RE
+.PP
+
+.SS "QSpinBox * TitleBlockDimensionWidget::spinbox () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+a pointer to the spinbox Useful to specify custom parameters, such as the minimum value 
+.RE
+.PP
+
+.SS "void TitleBlockDimensionWidget::updateSpinBoxSuffix ()\fC [private]\fP, \fC [slot]\fP"
+Ensure the suffix displayed by the spinbox matches the selected kind of length\&. 
+.SS "\fBTitleBlockDimension\fP TitleBlockDimensionWidget::value () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+The dimension as currently shown by the dialog 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QRadioButton* TitleBlockDimensionWidget::absolute_button_\fC [private]\fP"
+
+.PP
+Radio button to indicate the length is absolute\&. 
+.SS "QDialogButtonBox* TitleBlockDimensionWidget::buttons_\fC [private]\fP"
+
+.PP
+Buttons to validate the dialog\&. 
+.SS "bool TitleBlockDimensionWidget::complete_\fC [private]\fP"
+
+.PP
+Whether or not this dialog is required to be complete, i\&.e\&. displaying also\&. 
+.SS "QButtonGroup* TitleBlockDimensionWidget::dimension_type_\fC [private]\fP"
+
+.PP
+QButtonGroup for the three radio buttons\&. 
+.SS "bool TitleBlockDimensionWidget::read_only_\fC [private]\fP"
+
+.PP
+Whether or not this widget allow edition of the displayed dimension\&. 
+.SS "QRadioButton* TitleBlockDimensionWidget::relative_button_\fC [private]\fP"
+
+.PP
+Radio button to indicate the length is relative to the total length\&. 
+.SS "QRadioButton* TitleBlockDimensionWidget::remaining_button_\fC [private]\fP"
+
+.PP
+Radio button to indicate the length is relative to the remaining length\&. 
+.SS "QSpinBox* TitleBlockDimensionWidget::spinbox_\fC [private]\fP"
+
+.PP
+Spinbox displaying the length\&. 
+.SS "QLabel* TitleBlockDimensionWidget::spinbox_label_\fC [private]\fP"
+
+.PP
+Label shown right before the spinbox\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

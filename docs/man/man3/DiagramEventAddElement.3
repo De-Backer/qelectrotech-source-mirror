@@ -1,0 +1,192 @@
+.TH "DiagramEventAddElement" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramEventAddElement \- The \fBDiagramEventAddElement\fP class This diagram event add a new element, for each left click button at the position of click\&. Space key rotate current element by 90°, right click button finish this event\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagrameventaddelement\&.h>\fP
+.PP
+Inherits \fBDiagramEventInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramEventAddElement\fP (\fBElementsLocation\fP &location, \fBDiagram\fP *diagram, QPointF pos=QPointF(0, 0))"
+.br
+.RI "\fBDiagramEventAddElement::DiagramEventAddElement\fP Defaut constructor\&. "
+.ti -1c
+.RI "\fB~DiagramEventAddElement\fP () override"
+.br
+.RI "\fBDiagramEventAddElement::~DiagramEventAddElement\fP Destructor Enable context menu for each view of diagram\&. "
+.ti -1c
+.RI "void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddElement::mouseMoveEvent\fP Move the element to new pos of mouse the event is always accepted\&. "
+.ti -1c
+.RI "void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddElement::mousePressEvent\fP Do nothing, but return true for not transit the event to other thing in diagram\&. the event is always accepted\&. "
+.ti -1c
+.RI "void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddElement::mouseReleaseEvent\fP Right button finish this event (isRunning = false) and emit finish\&. Left button add an element to diagram the event is always accepted\&. "
+.ti -1c
+.RI "void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event) override"
+.br
+.RI "\fBDiagramEventAddElement::mouseDoubleClickEvent\fP If mouse left double clic, finish this event (isRunning = false) and emit finish the event is always accepted\&. "
+.ti -1c
+.RI "void \fBkeyPressEvent\fP (QKeyEvent *event) override"
+.br
+.RI "\fBDiagramEventAddElement::keyPressEvent\fP Press space key rotate the element to 90° (return true) else call DiagramEventInterface::keyPressEvent(event), and return the value\&. "
+.ti -1c
+.RI "void \fBinit\fP () override"
+.br
+.RI "\fBDiagramEventAddElement::init\fP Init this event\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBbuildElement\fP ()"
+.br
+.RI "\fBDiagramEventAddElement::buildElement\fP Build the element, if the element is build successfully, we return true, otherwise false\&. "
+.ti -1c
+.RI "void \fBaddElement\fP ()"
+.br
+.RI "\fBDiagramEventAddElement::addElement\fP Add an element at the current pos en current rotation, if project autoconductor option is enable, and the element can be wired, we do it\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsLocation\fP \fBm_location\fP"
+.br
+.ti -1c
+.RI "\fBElement\fP * \fBm_element\fP"
+.br
+.ti -1c
+.RI "QString \fBm_integrate_path\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBDiagramEventAddElement\fP class This diagram event add a new element, for each left click button at the position of click\&. Space key rotate current element by 90°, right click button finish this event\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramEventAddElement::DiagramEventAddElement (\fBElementsLocation\fP & location, \fBDiagram\fP * diagram, QPointF pos = \fCQPointF(0,0)\fP)"
+
+.PP
+\fBDiagramEventAddElement::DiagramEventAddElement\fP Defaut constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP :location of diagram 
+.br
+\fIdiagram\fP : diagram owner of this event 
+.br
+\fIpos\fP : first pos of item ( optional, by defaut QPointF(0,0) ) 
+.RE
+.PP
+
+.SS "DiagramEventAddElement::~DiagramEventAddElement ()\fC [override]\fP"
+
+.PP
+\fBDiagramEventAddElement::~DiagramEventAddElement\fP Destructor Enable context menu for each view of diagram\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramEventAddElement::addElement ()\fC [private]\fP"
+
+.PP
+\fBDiagramEventAddElement::addElement\fP Add an element at the current pos en current rotation, if project autoconductor option is enable, and the element can be wired, we do it\&. 
+.SS "bool DiagramEventAddElement::buildElement ()\fC [private]\fP"
+
+.PP
+\fBDiagramEventAddElement::buildElement\fP Build the element, if the element is build successfully, we return true, otherwise false\&. 
+.SS "void DiagramEventAddElement::init ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddElement::init\fP Init this event\&. 
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddElement::keyPressEvent (QKeyEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddElement::keyPressEvent\fP Press space key rotate the element to 90° (return true) else call DiagramEventInterface::keyPressEvent(event), and return the value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddElement::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddElement::mouseDoubleClickEvent\fP If mouse left double clic, finish this event (isRunning = false) and emit finish the event is always accepted\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddElement::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddElement::mouseMoveEvent\fP Move the element to new pos of mouse the event is always accepted\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddElement::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddElement::mousePressEvent\fP Do nothing, but return true for not transit the event to other thing in diagram\&. the event is always accepted\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SS "void DiagramEventAddElement::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBDiagramEventAddElement::mouseReleaseEvent\fP Right button finish this event (isRunning = false) and emit finish\&. Left button add an element to diagram the event is always accepted\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBDiagramEventInterface\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElement\fP* DiagramEventAddElement::m_element\fC [private]\fP"
+
+.SS "QString DiagramEventAddElement::m_integrate_path\fC [private]\fP"
+
+.SS "\fBElementsLocation\fP DiagramEventAddElement::m_location\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,90 @@
+.TH "RotateSelectionCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RotateSelectionCommand \- The \fBRotateSelectionCommand\fP class Rotate the selected items in the given diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rotateselectioncommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRotateSelectionCommand\fP (\fBDiagram\fP *diagram, qreal angle=90, QUndoCommand *parent=nullptr)"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBRotateSelectionCommand::undo\fP\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBRotateSelectionCommand::redo\fP\&. "
+.ti -1c
+.RI "bool \fBisValid\fP ()"
+.br
+.RI "\fBRotateSelectionCommand::isValid\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP =nullptr"
+.br
+.ti -1c
+.RI "QList< QPointer< \fBConductorTextItem\fP > > \fBm_cond_text\fP"
+.br
+.ti -1c
+.RI "QHash< \fBConductorTextItem\fP *, bool > \fBm_rotate_by_user\fP"
+.br
+.ti -1c
+.RI "QList< \fBQPropertyUndoCommand\fP * > \fBm_undo\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBRotateSelectionCommand\fP class Rotate the selected items in the given diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RotateSelectionCommand::RotateSelectionCommand (\fBDiagram\fP * diagram, qreal angle = \fC90\fP, QUndoCommand * parent = \fCnullptr\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool RotateSelectionCommand::isValid ()"
+
+.PP
+\fBRotateSelectionCommand::isValid\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if this command rotate a least one item\&. 
+.RE
+.PP
+
+.SS "void RotateSelectionCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBRotateSelectionCommand::redo\fP\&. 
+.SS "void RotateSelectionCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBRotateSelectionCommand::undo\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QPointer<\fBConductorTextItem\fP> > RotateSelectionCommand::m_cond_text\fC [private]\fP"
+
+.SS "\fBDiagram\fP* RotateSelectionCommand::m_diagram =nullptr\fC [private]\fP"
+
+.SS "QHash<\fBConductorTextItem\fP *, bool> RotateSelectionCommand::m_rotate_by_user\fC [private]\fP"
+
+.SS "QList<\fBQPropertyUndoCommand\fP*> RotateSelectionCommand::m_undo\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

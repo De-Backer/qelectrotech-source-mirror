@@ -1,0 +1,36 @@
+<map id="Diagram::snapToGrid" name="Diagram::snapToGrid">
+<area shape="rect" id="node1" title="Diagram::snapToGrid Return a nearest snap point of p." alt="" coords="1547,488,1692,515"/>
+<area shape="rect" id="node2" href="$d2/d1b/class_element_texts_mover.html#abdac1d64203a647f842ec5f6ae6f87ee" title=" " alt="" coords="1325,65,1470,106"/>
+<area shape="rect" id="node3" href="$dd/df7/class_element_text_item_group.html#ab17d52da273618772531618579ca7ea3" title="ElementTextItemGroup::mouseMoveEvent." alt="" coords="1071,20,1227,61"/>
+<area shape="rect" id="node4" href="$d0/d59/class_dynamic_element_text_item.html#a7bb3541e5de8add328cdd3e3fade8475" title="DynamicElementTextItem::mouseMoveEvent." alt="" coords="1062,110,1235,152"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="1333,182,1461,208"/>
+<area shape="rect" id="node6" href="$d7/d15/class_qet_graphics_table_item.html#aa3322cab65bd54f096bb2e82bf918068" title=" " alt="" coords="1310,233,1485,274"/>
+<area shape="rect" id="node8" href="$d1/d09/class_qet_shape_item.html#a0aaeb7f95ba84426d72d7623a46cde49" title="QetShapeItem::handlerMouseMoveEvent." alt="" coords="1300,298,1495,340"/>
+<area shape="rect" id="node10" href="$da/d7f/class_conductor.html#ad89a22b06b1849b5726e76541788744c" title="Conductor::handlerMouseMoveEvent." alt="" coords="1296,364,1499,405"/>
+<area shape="rect" id="node12" href="$d1/d09/class_qet_shape_item.html#aa3dd0413cf1198f79af6cf1a19c497d7" title=" " alt="" coords="1309,430,1486,456"/>
+<area shape="rect" id="node14" href="$dc/dbc/class_diagram_event_add_shape.html#a744cd375b1847c789c6ee84ee19498f6" title="DiagramEventAddShape::mouseMoveEvent Action when mouse move." alt="" coords="1067,510,1231,552"/>
+<area shape="rect" id="node15" href="$de/d1f/class_diagram_event_add_element.html#abe337d4f23112c7cea1b220fc5fbff0f" title="DiagramEventAddElement::mouseMoveEvent Move the element to new pos of mouse the event is always accep..." alt="" coords="1061,850,1236,892"/>
+<area shape="rect" id="node16" href="$de/d07/class_conductor_text_item.html#a9ebd55013ff8fb7eb77c800538258063" title="ConductorTextItem::mouseMoveEvent." alt="" coords="1327,598,1468,640"/>
+<area shape="rect" id="node17" href="$d4/dbd/class_diagram_text_item.html#afa79bcaa6cdc39275f26a3babe3752d4" title="DiagramTextItem::mouseMoveEvent." alt="" coords="1297,664,1497,705"/>
+<area shape="rect" id="node18" href="$dc/dbc/class_diagram_event_add_shape.html#a0282b185c26a1811fb40c25b40ec051c" title="DiagramEventAddShape::mousePressEvent Action when mouse is pressed." alt="" coords="1067,753,1231,794"/>
+<area shape="rect" id="node19" href="$dc/dbc/class_diagram_event_add_shape.html#a58cec422983629a275f2d975f73c15e6" title="DiagramEventAddShape::mouseReleaseEvent Action when mouse button is released." alt="" coords="1315,781,1479,822"/>
+<area shape="rect" id="node20" href="$d1/d09/class_qet_shape_item.html#aa5552bcd9e698b5bb023de562e3b7ac3" title="QetShapeItem::setNextPoint Add a new point to the curent polygon." alt="" coords="1302,847,1493,874"/>
+<area shape="rect" id="node21" href="$d7/db5/class_qet_graphics_item.html#ac29ccb4cc59876037bbb38f83b80eb39" title=" " alt="" coords="1312,988,1483,1015"/>
+<area shape="rect" id="node34" href="$dc/dbc/class_diagram_event_add_shape.html#a6763efdb3d5f0908caae8a711fe529df" title="DiagramEventAddShape::updateHelpCross Create and update the position of the cross to help user for dr..." alt="" coords="1315,481,1479,522"/>
+<area shape="rect" id="node7" href="$d7/d15/class_qet_graphics_table_item.html#af2b39e5d67e5a86bfa898d66376d62e1" title="QetGraphicsTableItem::sceneEventFilter Reimplemented from QetGraphicsItem." alt="" coords="1073,233,1225,274"/>
+<area shape="rect" id="node9" href="$d1/d09/class_qet_shape_item.html#a684a98e6542d6c1c92218f12534363d8" title="QetShapeItem::sceneEventFilter." alt="" coords="1057,298,1240,340"/>
+<area shape="rect" id="node11" href="$da/d7f/class_conductor.html#a0fcc485fbf5c2fd54c857ac2ea69ab56" title="Conductor::sceneEventFilter." alt="" coords="1055,371,1242,398"/>
+<area shape="rect" id="node13" href="$d1/d09/class_qet_shape_item.html#aecc5f46ed321f14cb6154571d3fd44b9" title="QetShapeItem::QetShapeItem Constructor of shape item. point 1 and 2 must be in scene coordinate." alt="" coords="1049,430,1248,456"/>
+<area shape="rect" id="node22" href="$d7/d15/class_qet_graphics_table_item.html#a672e30cecc83d7b109bfe2dd323e537e" title="QetGraphicsTableItem::adjustTableToFolio Adjust the table to fit at best the folio." alt="" coords="1073,1164,1225,1205"/>
+<area shape="rect" id="node29" href="$d7/d15/class_qet_graphics_table_item.html#a254ae1333bbbc1a4fe44e0693f4a01dc" title="QetGraphicsTableItem::fromXml Restore the table from xml. Make this item is already in a diagram to." alt="" coords="1073,916,1225,957"/>
+<area shape="rect" id="node30" href="$d7/dad/class_diagram_event_add_image.html#ab6eaa2802cb5298a116260246a93af6a" title="DiagramEventAddImage::mouseMoveEvent Action when mouse move." alt="" coords="1067,981,1230,1022"/>
+<area shape="rect" id="node31" href="$d7/db5/class_qet_graphics_item.html#ab9584bc0bc7cc0045bb5b5881e8db22d" title=" " alt="" coords="1049,1046,1248,1088"/>
+<area shape="rect" id="node33" href="$d7/db5/class_qet_graphics_item.html#a3319e2e40e4e133fa4a803883e82b279" title=" " alt="" coords="1063,1112,1234,1139"/>
+<area shape="rect" id="node23" href="$d8/dd0/class_qet_graphics_table_factory.html#aab7e64fed714f4bcdcb057955cd3fe03" title=" " alt="" coords="804,1134,975,1176"/>
+<area shape="rect" id="node28" href="$dc/d03/class_graphics_table_properties_editor.html#ab4aaeeab94df8c3c9ea8b5970f509b29" title="GraphicsTablePropertiesEditor::on_m_auto_geometry_pb_clicked." alt="" coords="777,1200,1001,1241"/>
+<area shape="rect" id="node24" href="$d8/dd0/class_qet_graphics_table_factory.html#a72611a4d6afbd026f5fd8595abefb9f6" title="QetGraphicsTableFactory::createAndAddNomenclature Open a dialog for ask user the config of the table,..." alt="" coords="536,1101,729,1142"/>
+<area shape="rect" id="node27" href="$d8/dd0/class_qet_graphics_table_factory.html#ac320c43f647e2e37f3d9d476d034db6e" title="QetGraphicsTableFactory::createAndAddSummary Open a dialog for ask user the config of the table,..." alt="" coords="547,1166,718,1208"/>
+<area shape="rect" id="node25" href="$d0/dcb/class_q_e_t_diagram_editor.html#a6448cdc59c55224bee47909e744d0277" title="QETDiagramEditor::setUpActions Set up all Qaction." alt="" coords="269,1142,488,1168"/>
+<area shape="rect" id="node26" href="$d0/dcb/class_q_e_t_diagram_editor.html#a5cdbfffca55038045ec0d040e047c429" title="QETDiagramEditor::QETDiagramEditor Constructor." alt="" coords="5,1134,221,1176"/>
+<area shape="rect" id="node32" href="$d5/d50/class_element.html#a67c6c058bdb295be250c71b039bc675b" title="Element::mouseMoveEvent." alt="" coords="799,1054,979,1080"/>
+</map>

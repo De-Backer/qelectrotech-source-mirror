@@ -1,0 +1,36 @@
+<map id="Diagram::Diagram" name="Diagram::Diagram">
+<area shape="rect" id="node1" title="Diagram::Diagram Constructor." alt="" coords="5,602,133,629"/>
+<area shape="rect" id="node2" href="$d3/d37/class_diagram.html#a5ce477a5197fdfc394d662f8f71dc977" title="Diagram::adjustSceneRect Recalcul and adjust the size of the scene." alt="" coords="196,141,375,167"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#a8c5e5c0996f65e27743d9b9084c3f582" title="Diagram::loadCndFolioSeq This class loads all conductor folio sequential variables related to the cur..." alt="" coords="196,319,375,346"/>
+<area shape="rect" id="node18" href="$d3/d37/class_diagram.html#a3c47d70020b2c9ba2802c6b8e28d031e" title="Diagram::loadElmtFolioSeq This class loads all folio sequential variables related to the current auto..." alt="" coords="195,547,376,574"/>
+<area shape="rect" id="node22" href="$d3/d37/class_diagram.html#af87e5123e10b006838a3eaed5c73c979" title="Diagram::setTitleBlockTemplate Set the template to use to render the title block of this diagram." alt="" coords="181,865,389,891"/>
+<area shape="rect" id="node31" href="$d3/d37/class_diagram.html#a4eb3622b674ca4b2220758211cabdb75" title="Diagram::titleChanged emit(diagramTitleChanged(this, title));." alt="" coords="209,686,361,713"/>
+<area shape="rect" id="node32" href="$d3/d37/class_diagram.html#a08afa7adea6c05c29c3694b766f680fb" title="Diagram::updateLabels Update elements and conductors that reference folio field in their labels." alt="" coords="207,1041,363,1067"/>
+<area shape="rect" id="node3" href="$df/d92/class_border_title_block.html#a8f493ea91d266e4f8219b45b83a01550" title="BorderTitleBlock::borderAndTitleBlockRect." alt="" coords="467,5,629,47"/>
+<area shape="rect" id="node4" href="$df/d92/class_border_title_block.html#adf35a4b1315de6d6efed2095a1f5ab60" title="BorderTitleBlock::titleBlockRect." alt="" coords="707,13,913,39"/>
+<area shape="rect" id="node6" href="$d6/dc5/class_q_e_t_project.html#aee782dd4898087e3e26e03466c889211" title="QETProject::addConductorAutoNum Add a new conductor numerotation context. If key already exist,..." alt="" coords="459,71,637,112"/>
+<area shape="rect" id="node7" href="$d6/dc5/class_q_e_t_project.html#a77506f0b161248e94dc3ddd68736e0d6" title="QETProject::conductorAutoNum." alt="" coords="443,137,653,163"/>
+<area shape="rect" id="node8" href="$d6/dc5/class_q_e_t_project.html#ae496c389282a8afba6b1fc4e125dff15" title="QETProject::conductorCurrentAutoNum." alt="" coords="449,188,647,229"/>
+<area shape="rect" id="node9" href="$d3/d37/class_diagram.html#a7608fde21b2501b184030d2752ae9930" title="Diagram::insertFolioSeqHash This class inserts a stringlist containing all sequential variables relat..." alt="" coords="451,319,645,346"/>
+<area shape="rect" id="node13" href="$d3/d37/class_diagram.html#aea7457d56b24e4f319000c89d4cb61dc" title="Diagram::title." alt="" coords="760,443,860,470"/>
+<area shape="rect" id="node15" href="$d3/d37/class_diagram.html#a03afc2727f07934756b660ba30e4dde5" title="Diagram::loadFolioSeqHash This class loads all folio sequential variables related to the current auto..." alt="" coords="455,370,641,397"/>
+<area shape="rect" id="node16" href="$d1/ddb/namespaceautonum.html#ac5013eb6df6a472f5b2676d51b579da8" title="numerotationContextToFormula" alt="" coords="447,253,649,295"/>
+<area shape="rect" id="node17" href="$d3/d37/class_diagram.html#a8a2a4a08dce92d0eed86f94077e9cc84" title="Diagram::project." alt="" coords="489,471,607,498"/>
+<area shape="rect" id="node10" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="737,312,883,353"/>
+<area shape="rect" id="node11" href="$d7/db7/class_numerotation_context.html#a406974f628b4f50a036de70804ab7cd4" title="NumerotationContext::replaceValue This class replaces the current NC field value with content." alt="" coords="737,377,883,419"/>
+<area shape="rect" id="node12" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="737,247,883,288"/>
+<area shape="rect" id="node14" href="$df/d92/class_border_title_block.html#ae83cb12cf27875a22b05492cbcbcd5f3" title=" " alt="" coords="978,443,1125,470"/>
+<area shape="rect" id="node19" href="$d6/dc5/class_q_e_t_project.html#a5f2695dde0cbf9679a55ad9a7954e14a" title="QETProject::addElementAutoNum Add a new element numerotation context. If key already exist,..." alt="" coords="437,573,659,599"/>
+<area shape="rect" id="node20" href="$d6/dc5/class_q_e_t_project.html#a25728f248bd542c6c4a909f049581a34" title="QETProject::elementAutoNum." alt="" coords="449,623,647,650"/>
+<area shape="rect" id="node21" href="$d6/dc5/class_q_e_t_project.html#ad9020cd9cd747e25149a052f9f42dee8" title="QETProject::elementCurrentAutoNum." alt="" coords="455,675,641,716"/>
+<area shape="rect" id="node23" href="$d6/dc5/class_q_e_t_project.html#a4daf9c5e852f1033bbc37eb5ed51a7cc" title=" " alt="" coords="457,792,639,833"/>
+<area shape="rect" id="node24" href="$d8/d31/class_title_block_templates_project_collection.html#a49f6eca82f733e56377541d17cfddd16" title=" " alt="" coords="457,857,639,899"/>
+<area shape="rect" id="node25" href="$df/d92/class_border_title_block.html#afbad2010fb9792d192f3d24ab6f7c51a" title="BorderTitleBlock::titleBlockTemplateName." alt="" coords="720,912,900,953"/>
+<area shape="rect" id="node27" href="$df/d92/class_border_title_block.html#ac78a89774dd652a8fa3bffa11da39c68" title="BorderTitleBlock::titleBlockTemplateRemoved This slot has to be used to inform this class that the gi..." alt="" coords="458,975,638,1016"/>
+<area shape="rect" id="node26" href="$df/d92/class_border_title_block.html#a2978f3132673c2586566c5ed8b66014d" title="BorderTitleBlock::titleBlockTemplate." alt="" coords="961,912,1141,953"/>
+<area shape="rect" id="node28" href="$d7/df8/class_q_e_t_app.html#a7202396d449b5a9fd18a3ce85f92b4c8" title="QETApp::defaultTitleBlockTemplate." alt="" coords="722,977,898,1019"/>
+<area shape="rect" id="node30" href="$df/d92/class_border_title_block.html#a5f64d9d0de8d67990f91e13d0eef635d" title="BorderTitleBlock::setTitleBlockTemplate." alt="" coords="725,1043,895,1084"/>
+<area shape="rect" id="node29" href="$d7/df8/class_q_e_t_app.html#a4122754c7d0aa3e11ee4a2bd91cb05ba" title="QETApp::instance." alt="" coords="987,985,1115,1011"/>
+<area shape="rect" id="node33" href="$d3/d37/class_diagram.html#a621803a73a27a27f5ca429cd7f3cae7b" title="Diagram::conductors." alt="" coords="477,1041,619,1067"/>
+<area shape="rect" id="node34" href="$d3/d37/class_diagram.html#a99324f8646b9806addde0a83b38225f7" title="Diagram::content." alt="" coords="487,1091,609,1118"/>
+</map>

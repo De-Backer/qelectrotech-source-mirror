@@ -1,0 +1,96 @@
+.TH "QETResult" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QETResult
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetresult\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQETResult\fP ()"
+.br
+.ti -1c
+.RI "\fBQETResult\fP (const QString &error_message, bool=false)"
+.br
+.ti -1c
+.RI "virtual \fB~QETResult\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisOk\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetResult\fP (bool)"
+.br
+.ti -1c
+.RI "QString \fBerrorMessage\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetErrorMessage\fP (const QString &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBresult_\fP"
+.br
+.RI "Embedded boolean value\&. "
+.ti -1c
+.RI "QString \fBerror_message_\fP"
+.br
+.RI "Embedded error message, typically used to explain what failed to users\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents the result of a lambda operation\&. Technically, it is a mere boolean+error message pair\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QETResult::QETResult ()"
+Construct a default 'true' \fBQET\fP result without an error message\&. 
+.SS "QETResult::QETResult (const QString & error_message, bool result = \fCfalse\fP)"
+Construct a \fBQET\fP result embedding \fIerror_message\fP and \fIresult\fP (defaults to false)\&. 
+.SS "QETResult::~QETResult ()\fC [virtual]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "QString QETResult::errorMessage () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the error message embedded within this result\&. 
+.RE
+.PP
+
+.SS "bool QETResult::isOk () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+the boolean value embedded within this result\&. 
+.RE
+.PP
+
+.SS "void QETResult::setErrorMessage (const QString & error_message)"
+Embed \fIerror_message\fP wihthin this result\&. 
+.SS "void QETResult::setResult (bool result)"
+Embed \fIresult\fP\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QString QETResult::error_message_\fC [private]\fP"
+
+.PP
+Embedded error message, typically used to explain what failed to users\&. 
+.SS "bool QETResult::result_\fC [private]\fP"
+
+.PP
+Embedded boolean value\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

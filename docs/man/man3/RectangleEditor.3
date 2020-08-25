@@ -1,0 +1,235 @@
+.TH "RectangleEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RectangleEditor \- The \fBRectangleEditor\fP class This class provides a widget to edit rectangles within the element editor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rectangleeditor\&.h>\fP
+.PP
+Inherits \fBElementItemEditor\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateForm\fP () override"
+.br
+.RI "\fBRectangleEditor::updateForm\fP\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRectangleEditor\fP (\fBQETElementEditor\fP *editor, \fBPartRectangle\fP *rect=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBRectangleEditor::RectangleEditor\fP\&. "
+.ti -1c
+.RI "\fB~RectangleEditor\fP () override"
+.br
+.RI "\fBRectangleEditor::~RectangleEditor\fP\&. "
+.ti -1c
+.RI "bool \fBsetPart\fP (\fBCustomElementPart\fP *part) override"
+.br
+.RI "\fBRectangleEditor::setPart\fP\&. "
+.ti -1c
+.RI "bool \fBsetParts\fP (QList< \fBCustomElementPart\fP * > parts) override"
+.br
+.ti -1c
+.RI "\fBCustomElementPart\fP * \fBcurrentPart\fP () const override"
+.br
+.RI "\fBRectangleEditor::currentPart\fP\&. "
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBcurrentParts\fP () const override"
+.br
+.ti -1c
+.RI "QPointF \fBeditedTopLeft\fP () const"
+.br
+.RI "RectangleEditor::topLeft\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBeditingFinished\fP ()"
+.br
+.RI "\fBRectangleEditor::editingFinished\fP Slot called when a editor widget is finish to be edited Update the geometry of the rectangle according to value of editing widget\&. "
+.ti -1c
+.RI "void \fBactiveConnections\fP (bool active)"
+.br
+.RI "\fBRectangleEditor::activeConnections\fP Enable/disable connection between editor widget and slot editingFinished True == enable | false == disable\&. "
+.ti -1c
+.RI "void \fBxPosChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fByPosChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBwidthChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBheightChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBxRadiusChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fByRadiusChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUpChangeConnections\fP ()"
+.br
+.RI "setUpChangeConnections Setup the connection from the rectangles(s) to the widget, to update it when the rectangles(s) are changed (moved \&.\&.\&.) "
+.ti -1c
+.RI "void \fBdisconnectChangeConnections\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBm_locked\fP = false"
+.br
+.ti -1c
+.RI "\fBStyleEditor\fP * \fBm_style\fP"
+.br
+.ti -1c
+.RI "\fBPartRectangle\fP * \fBm_part\fP"
+.br
+.ti -1c
+.RI "Ui::RectangleEditor * \fBui\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_change_connections\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBRectangleEditor\fP class This class provides a widget to edit rectangles within the element editor\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RectangleEditor::RectangleEditor (\fBQETElementEditor\fP * editor, \fBPartRectangle\fP * rect = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBRectangleEditor::RectangleEditor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP 
+.br
+\fIrect\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "RectangleEditor::~RectangleEditor ()\fC [override]\fP"
+
+.PP
+\fBRectangleEditor::~RectangleEditor\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void RectangleEditor::activeConnections (bool active)\fC [private]\fP"
+
+.PP
+\fBRectangleEditor::activeConnections\fP Enable/disable connection between editor widget and slot editingFinished True == enable | false == disable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIactive\fP 
+.RE
+.PP
+
+.SS "\fBCustomElementPart\fP * RectangleEditor::currentPart () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBRectangleEditor::currentPart\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "QList< \fBCustomElementPart\fP * > RectangleEditor::currentParts () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "void RectangleEditor::disconnectChangeConnections ()\fC [private]\fP"
+
+.SS "QPointF RectangleEditor::editedTopLeft () const"
+
+.PP
+RectangleEditor::topLeft\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The edited topLeft already mapped to part coordinate 
+.RE
+.PP
+
+.SS "void RectangleEditor::editingFinished ()\fC [private]\fP"
+
+.PP
+\fBRectangleEditor::editingFinished\fP Slot called when a editor widget is finish to be edited Update the geometry of the rectangle according to value of editing widget\&. 
+.SS "void RectangleEditor::heightChanged ()\fC [private]\fP"
+
+.SS "bool RectangleEditor::setPart (\fBCustomElementPart\fP * part)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBRectangleEditor::setPart\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "bool RectangleEditor::setParts (QList< \fBCustomElementPart\fP * > parts)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBElementItemEditor\fP\&.
+.SS "void RectangleEditor::setUpChangeConnections ()\fC [private]\fP"
+
+.PP
+setUpChangeConnections Setup the connection from the rectangles(s) to the widget, to update it when the rectangles(s) are changed (moved \&.\&.\&.) 
+.SS "void RectangleEditor::updateForm ()\fC [override]\fP, \fC [slot]\fP"
+
+.PP
+\fBRectangleEditor::updateForm\fP\&. 
+.SS "void RectangleEditor::widthChanged ()\fC [private]\fP"
+
+.SS "void RectangleEditor::xPosChanged ()\fC [private]\fP"
+
+.SS "void RectangleEditor::xRadiusChanged ()\fC [private]\fP"
+
+.SS "void RectangleEditor::yPosChanged ()\fC [private]\fP"
+
+.SS "void RectangleEditor::yRadiusChanged ()\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QMetaObject::Connection> RectangleEditor::m_change_connections\fC [private]\fP"
+
+.SS "bool RectangleEditor::m_locked = false\fC [private]\fP"
+
+.SS "\fBPartRectangle\fP* RectangleEditor::m_part\fC [private]\fP"
+
+.SS "\fBStyleEditor\fP* RectangleEditor::m_style\fC [private]\fP"
+
+.SS "Ui::RectangleEditor* RectangleEditor::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

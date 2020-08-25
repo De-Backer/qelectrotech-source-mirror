@@ -1,0 +1,135 @@
+.TH "DVEventInterface" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DVEventInterface \- The \fBDVEventInterface\fP class This class is the main interface for manage event of a \fBDiagram\fP View\&. This do nothing, for create new event behavior, we must to create new class from this\&. Each method return a bool: True if the methode do something else return false\&. Each method of \fBDVEventInterface\fP return false; \fBisRunning()\fP return true if action is started but not finish\&. By default return false\&. \fBisFinish()\fP return true when the action is finish, or not started\&. By default return true\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <dveventinterface\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBfinish\fP ()"
+.br
+.RI "finish emited when the interface finish is work "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDVEventInterface\fP (\fBDiagramView\fP *dv)"
+.br
+.ti -1c
+.RI "\fB~DVEventInterface\fP () override=0"
+.br
+.ti -1c
+.RI "virtual bool \fBmouseDoubleClickEvent\fP (QMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBmousePressEvent\fP (QMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBmouseMoveEvent\fP (QMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBmouseReleaseEvent\fP (QMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBwheelEvent\fP (QWheelEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBkeyPressEvent\fP (QKeyEvent *event)"
+.br
+.RI "\fBDVEventInterface::keyPressEvent\fP By default, press escape key abort the curent action\&. isFinish return true, and emit finish\&. "
+.ti -1c
+.RI "virtual bool \fBKeyReleaseEvent\fP (QKeyEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBisRunning\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBisFinish\fP () const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramView\fP * \fBm_dv\fP"
+.br
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP"
+.br
+.ti -1c
+.RI "bool \fBm_running\fP"
+.br
+.ti -1c
+.RI "bool \fBm_abort\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBDVEventInterface\fP class This class is the main interface for manage event of a \fBDiagram\fP View\&. This do nothing, for create new event behavior, we must to create new class from this\&. Each method return a bool: True if the methode do something else return false\&. Each method of \fBDVEventInterface\fP return false; \fBisRunning()\fP return true if action is started but not finish\&. By default return false\&. \fBisFinish()\fP return true when the action is finish, or not started\&. By default return true\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DVEventInterface::DVEventInterface (\fBDiagramView\fP * dv)"
+
+.SS "DVEventInterface::~DVEventInterface ()\fC [override]\fP, \fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DVEventInterface::finish ()\fC [signal]\fP"
+
+.PP
+finish emited when the interface finish is work 
+.SS "bool DVEventInterface::isFinish () const\fC [virtual]\fP"
+
+.SS "bool DVEventInterface::isRunning () const\fC [virtual]\fP"
+
+.SS "bool DVEventInterface::keyPressEvent (QKeyEvent * event)\fC [virtual]\fP"
+
+.PP
+\fBDVEventInterface::keyPressEvent\fP By default, press escape key abort the curent action\&. isFinish return true, and emit finish\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool DVEventInterface::KeyReleaseEvent (QKeyEvent * event)\fC [virtual]\fP"
+
+.SS "bool DVEventInterface::mouseDoubleClickEvent (QMouseEvent * event)\fC [virtual]\fP"
+
+.SS "bool DVEventInterface::mouseMoveEvent (QMouseEvent * event)\fC [virtual]\fP"
+
+.SS "bool DVEventInterface::mousePressEvent (QMouseEvent * event)\fC [virtual]\fP"
+
+.SS "bool DVEventInterface::mouseReleaseEvent (QMouseEvent * event)\fC [virtual]\fP"
+
+.SS "bool DVEventInterface::wheelEvent (QWheelEvent * event)\fC [virtual]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool DVEventInterface::m_abort\fC [protected]\fP"
+
+.SS "\fBDiagram\fP* DVEventInterface::m_diagram\fC [protected]\fP"
+
+.SS "\fBDiagramView\fP* DVEventInterface::m_dv\fC [protected]\fP"
+
+.SS "bool DVEventInterface::m_running\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

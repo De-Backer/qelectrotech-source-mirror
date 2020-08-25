@@ -1,0 +1,322 @@
+.TH "ProjectAutoNumConfigPage" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProjectAutoNumConfigPage
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <projectconfigpages\&.h>\fP
+.PP
+Inherits \fBProjectConfigPage\fP\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetAutoNum\fP (QString)"
+.br
+.ti -1c
+.RI "void \fBsetAutoNum\fP (int, int)"
+.br
+.ti -1c
+.RI "void \fBsaveCurrentTbp\fP ()"
+.br
+.ti -1c
+.RI "void \fBloadSavedTbp\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProjectAutoNumConfigPage\fP (\fBQETProject\fP *\fBproject\fP, QWidget *parent=nullptr)"
+.br
+.RI "\fBProjectAutoNumConfigPage::ProjectAutoNumConfigPage\fP Default constructor\&. "
+.ti -1c
+.RI "QString \fBtitle\fP () const override"
+.br
+.RI "\fBProjectAutoNumConfigPage::title\fP Title of this config page\&. "
+.ti -1c
+.RI "QIcon \fBicon\fP () const override"
+.br
+.RI "\fBProjectAutoNumConfigPage::icon\fP Icon of this config pafe\&. "
+.ti -1c
+.RI "void \fBapplyProjectConf\fP () override"
+.br
+.RI "\fBProjectAutoNumConfigPage::applyProjectConf\fP\&. "
+.ti -1c
+.RI "virtual void \fBchangeToTab\fP (int)"
+.br
+.RI "\fBProjectAutoNumConfigPage::changeToTab\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitWidgets\fP () override"
+.br
+.RI "\fBProjectAutoNumConfigPage::initWidgets\fP Init some widget of this page\&. "
+.ti -1c
+.RI "void \fBinitLayout\fP () override"
+.br
+.ti -1c
+.RI "void \fBreadValuesFromProject\fP () override"
+.br
+.RI "\fBProjectAutoNumConfigPage::readValuesFromProject\fP Read value stored on project, and update display\&. "
+.ti -1c
+.RI "void \fBadjustReadOnly\fP () override"
+.br
+.RI "\fBProjectAutoNumConfigPage::adjustReadOnly\fP set this config page disable if project is read only\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateContextConductor\fP (const QString &)"
+.br
+.RI "ProjectAutoNumConfigPage::updateContext_conductor Display the current selected context for conductor\&. "
+.ti -1c
+.RI "void \fBsaveContextConductor\fP ()"
+.br
+.RI "ProjectAutoNumConfigPage::saveContext_conductor Save the current displayed conductor context in project\&. "
+.ti -1c
+.RI "void \fBremoveContextConductor\fP ()"
+.br
+.RI "ProjectAutoNumConfigPage::removeContext Remove from project the current conductor numerotation context\&. "
+.ti -1c
+.RI "void \fBupdateContextFolio\fP (const QString &)"
+.br
+.RI "ProjectAutoNumConfigPage::updateContext_folio Display the current selected context for folio\&. "
+.ti -1c
+.RI "void \fBsaveContextFolio\fP ()"
+.br
+.RI "ProjectAutoNumConfigPage::saveContext_folio Save the current displayed folio context in project\&. "
+.ti -1c
+.RI "void \fBremoveContextFolio\fP ()"
+.br
+.RI "ProjectAutoNumConfigPage::removeContext_folio Remove from project the current folio numerotation context\&. "
+.ti -1c
+.RI "void \fBupdateContextElement\fP (const QString &)"
+.br
+.RI "\fBProjectAutoNumConfigPage::updateContextElement\fP Display the current selected context for element\&. "
+.ti -1c
+.RI "void \fBsaveContextElement\fP ()"
+.br
+.RI "\fBProjectAutoNumConfigPage::saveContextElement\fP Save the current displayed \fBElement\fP formula in project\&. "
+.ti -1c
+.RI "void \fBremoveContextElement\fP ()"
+.br
+.RI "\fBProjectAutoNumConfigPage::removeContextElement\fP Remove from project the current element numerotation context\&. "
+.ti -1c
+.RI "void \fBapplyAutoNum\fP ()"
+.br
+.RI "\fBProjectAutoNumConfigPage::applyAutoNum\fP Apply auto folio numbering, New Folios or Selected Folios\&. "
+.ti -1c
+.RI "void \fBapplyManagement\fP ()"
+.br
+.RI "ProjectAutoNumConfigPage::applyAutoManagement Apply Management Options in Selected Folios\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBbuildConnections\fP ()"
+.br
+.RI "\fBProjectAutoNumConfigPage::buildConnections\fP setup some connections\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSelectAutonumW\fP * \fBm_saw_conductor\fP"
+.br
+.ti -1c
+.RI "\fBSelectAutonumW\fP * \fBm_saw_folio\fP"
+.br
+.ti -1c
+.RI "\fBSelectAutonumW\fP * \fBm_saw_element\fP"
+.br
+.ti -1c
+.RI "\fBFolioAutonumberingW\fP * \fBm_faw\fP"
+.br
+.ti -1c
+.RI "\fBAutoNumberingManagementW\fP * \fBm_amw\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ProjectAutoNumConfigPage::ProjectAutoNumConfigPage (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBProjectAutoNumConfigPage::ProjectAutoNumConfigPage\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : project to edit 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ProjectAutoNumConfigPage::adjustReadOnly ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::adjustReadOnly\fP set this config page disable if project is read only\&. 
+.PP
+Implements \fBProjectConfigPage\fP\&.
+.SS "void ProjectAutoNumConfigPage::applyAutoNum ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::applyAutoNum\fP Apply auto folio numbering, New Folios or Selected Folios\&. 
+.SS "void ProjectAutoNumConfigPage::applyManagement ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+ProjectAutoNumConfigPage::applyAutoManagement Apply Management Options in Selected Folios\&. 
+.SS "void ProjectAutoNumConfigPage::applyProjectConf ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::applyProjectConf\fP\&. 
+.PP
+Implements \fBProjectConfigPage\fP\&.
+.SS "void ProjectAutoNumConfigPage::buildConnections ()\fC [private]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::buildConnections\fP setup some connections\&. 
+.SS "void ProjectAutoNumConfigPage::changeToTab (int i)\fC [virtual]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::changeToTab\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP index Change to Selected Tab 
+.RE
+.PP
+
+.SS "QIcon ProjectAutoNumConfigPage::icon () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::icon\fP Icon of this config pafe\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "void ProjectAutoNumConfigPage::initLayout ()\fC [inline]\fP, \fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+Use this pure virtual method to initialize your page layout\&. This method is always called after \fBinitWidgets()\fP\&. 
+.PP
+Implements \fBProjectConfigPage\fP\&.
+.SS "void ProjectAutoNumConfigPage::initWidgets ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::initWidgets\fP Init some widget of this page\&. 
+.PP
+Implements \fBProjectConfigPage\fP\&.
+.SS "void ProjectAutoNumConfigPage::loadSavedTbp ()\fC [signal]\fP"
+
+.SS "void ProjectAutoNumConfigPage::readValuesFromProject ()\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::readValuesFromProject\fP Read value stored on project, and update display\&. 
+.PP
+Implements \fBProjectConfigPage\fP\&.
+.SS "void ProjectAutoNumConfigPage::removeContextConductor ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+ProjectAutoNumConfigPage::removeContext Remove from project the current conductor numerotation context\&. 
+.SS "void ProjectAutoNumConfigPage::removeContextElement ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::removeContextElement\fP Remove from project the current element numerotation context\&. 
+.SS "void ProjectAutoNumConfigPage::removeContextFolio ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+ProjectAutoNumConfigPage::removeContext_folio Remove from project the current folio numerotation context\&. 
+.SS "void ProjectAutoNumConfigPage::saveContextConductor ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+ProjectAutoNumConfigPage::saveContext_conductor Save the current displayed conductor context in project\&. 
+.SS "void ProjectAutoNumConfigPage::saveContextElement ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::saveContextElement\fP Save the current displayed \fBElement\fP formula in project\&. 
+.SS "void ProjectAutoNumConfigPage::saveContextFolio ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+ProjectAutoNumConfigPage::saveContext_folio Save the current displayed folio context in project\&. 
+.SS "void ProjectAutoNumConfigPage::saveCurrentTbp ()\fC [signal]\fP"
+
+.SS "void ProjectAutoNumConfigPage::setAutoNum (int, int)\fC [signal]\fP"
+
+.SS "void ProjectAutoNumConfigPage::setAutoNum (QString)\fC [signal]\fP"
+
+.SS "QString ProjectAutoNumConfigPage::title () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::title\fP Title of this config page\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.PP
+Implements \fBConfigPage\fP\&.
+.SS "void ProjectAutoNumConfigPage::updateContextConductor (const QString & str)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+ProjectAutoNumConfigPage::updateContext_conductor Display the current selected context for conductor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP : key of context stored in project 
+.RE
+.PP
+
+.SS "void ProjectAutoNumConfigPage::updateContextElement (const QString & str)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBProjectAutoNumConfigPage::updateContextElement\fP Display the current selected context for element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP : key of context stored in project 
+.RE
+.PP
+
+.SS "void ProjectAutoNumConfigPage::updateContextFolio (const QString & str)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+ProjectAutoNumConfigPage::updateContext_folio Display the current selected context for folio\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP : key of context stored in project 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBAutoNumberingManagementW\fP* ProjectAutoNumConfigPage::m_amw\fC [private]\fP"
+
+.SS "\fBFolioAutonumberingW\fP* ProjectAutoNumConfigPage::m_faw\fC [private]\fP"
+
+.SS "\fBSelectAutonumW\fP* ProjectAutoNumConfigPage::m_saw_conductor\fC [private]\fP"
+
+.SS "\fBSelectAutonumW\fP* ProjectAutoNumConfigPage::m_saw_element\fC [private]\fP"
+
+.SS "\fBSelectAutonumW\fP* ProjectAutoNumConfigPage::m_saw_folio\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,137 @@
+.TH "DiagramContextWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramContextWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagramcontextwidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "\fBDiagramContextWidget::clear\fP Clear any values entered within this widget\&. "
+.ti -1c
+.RI "int \fBhighlightNonAcceptableKeys\fP ()"
+.br
+.RI "\fBDiagramContextWidget::highlightNonAcceptableKeys\fP Highlight keys that would not be accepted by a \fBDiagramContext\fP object\&. "
+.ti -1c
+.RI "void \fBrefreshFormatLabel\fP ()"
+.br
+.RI "\fBDiagramContextWidget::refreshFormatLabel\fP Sets the text describing the acceptable format for keys when adding extra key/value pairs\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramContextWidget\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~DiagramContextWidget\fP ()"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBcontext\fP () const"
+.br
+.RI "\fBDiagramContextWidget::context\fP\&. "
+.ti -1c
+.RI "void \fBsetContext\fP (const \fBDiagramContext\fP &\fBcontext\fP)"
+.br
+.RI "\fBDiagramContextWidget::setContext\fP Load the content from context into this widget\&. "
+.ti -1c
+.RI "int \fBnameLessRowsCount\fP () const"
+.br
+.RI "\fBDiagramContextWidget::nameLessRowsCount\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBcheckTableRows\fP ()"
+.br
+.RI "\fBDiagramContextWidget::checkTableRows\fP Adds a row in the additional fields table if needed\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::DiagramContextWidget * \fBui\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramContextWidget::DiagramContextWidget (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "DiagramContextWidget::~DiagramContextWidget ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramContextWidget::checkTableRows ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBDiagramContextWidget::checkTableRows\fP Adds a row in the additional fields table if needed\&. 
+.SS "void DiagramContextWidget::clear ()\fC [slot]\fP"
+
+.PP
+\fBDiagramContextWidget::clear\fP Clear any values entered within this widget\&. 
+.SS "\fBDiagramContext\fP DiagramContextWidget::context () const"
+
+.PP
+\fBDiagramContextWidget::context\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The diagram context object edited by this widget 
+.RE
+.PP
+
+.SS "int DiagramContextWidget::highlightNonAcceptableKeys ()\fC [slot]\fP"
+
+.PP
+\fBDiagramContextWidget::highlightNonAcceptableKeys\fP Highlight keys that would not be accepted by a \fBDiagramContext\fP object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the number of highlighted keys\&. 
+.RE
+.PP
+
+.SS "int DiagramContextWidget::nameLessRowsCount () const"
+
+.PP
+\fBDiagramContextWidget::nameLessRowsCount\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The count of name-less rows in the table 
+.RE
+.PP
+
+.SS "void DiagramContextWidget::refreshFormatLabel ()\fC [slot]\fP"
+
+.PP
+\fBDiagramContextWidget::refreshFormatLabel\fP Sets the text describing the acceptable format for keys when adding extra key/value pairs\&. 
+.SS "void DiagramContextWidget::setContext (const \fBDiagramContext\fP & context)"
+
+.PP
+\fBDiagramContextWidget::setContext\fP Load the content from context into this widget\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontext\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Ui::DiagramContextWidget* DiagramContextWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

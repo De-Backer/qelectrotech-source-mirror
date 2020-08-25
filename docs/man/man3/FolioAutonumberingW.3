@@ -1,0 +1,192 @@
+.TH "FolioAutonumberingW" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FolioAutonumberingW
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <folioautonumbering\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBapplyPressed\fP ()"
+.br
+.ti -1c
+.RI "void \fBm_autonumber_tabs_rb_clicked\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFolioAutonumberingW\fP (\fBQETProject\fP *project, QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~FolioAutonumberingW\fP () override"
+.br
+.ti -1c
+.RI "void \fBsetContext\fP (QList< QString > autonums)"
+.br
+.RI "\fBFolioAutonumberingW::setContext\fP construct autonums in the comboBox selected in the autonum_chooser QcomboBox\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBtoNumContext\fP () const"
+.br
+.ti -1c
+.RI "QString \fBautoNumSelected\fP ()"
+.br
+.RI "\fBFolioAutonumberingW::autoNumSelected\fP returns the current autonum selected\&. "
+.ti -1c
+.RI "int \fBnewFoliosNumber\fP ()"
+.br
+.RI "\fBFolioAutonumberingW::newFoliosNumber\fP returns the number of folios to create\&. "
+.ti -1c
+.RI "int \fBfromFolio\fP ()"
+.br
+.RI "\fBFolioAutonumberingW::fromFolio\fP returns the current 'From Folio' index\&. "
+.ti -1c
+.RI "int \fBtoFolio\fP ()"
+.br
+.RI "\fBFolioAutonumberingW::toFolio\fP returns the current 'To Folio' index\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBnewFolios\fP"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_create_new_tabs_rb_clicked\fP ()"
+.br
+.RI "\fBFolioAutonumberingW::on_m_create_new_tabs_rb_clicked\fP Enable New Tabs SpinBox\&. "
+.ti -1c
+.RI "void \fBon_m_autonumber_tabs_rb_clicked\fP ()"
+.br
+.RI "\fBFolioAutonumberingW::on_m_autonumber_tabs_rb_clicked\fP Enable From ComboBox, fill From ComboBox\&. "
+.ti -1c
+.RI "void \fBon_m_new_tabs_sb_valueChanged\fP (int)"
+.br
+.RI "\fBFolioAutonumberingW::on_m_new_tabs_sb_valueChanged\fP Enable Apply if any new folio is to be created\&. "
+.ti -1c
+.RI "void \fBon_buttonBox_clicked\fP (QAbstractButton *)"
+.br
+.RI "\fBSelectAutonumW::on_buttonBox_clicked\fP Action on buttonBox clicked\&. "
+.ti -1c
+.RI "void \fBon_m_from_cb_currentIndexChanged\fP (int)"
+.br
+.RI "\fBFolioAutonumberingW::on_m_from_cb_currentIndexChanged\fP Enable To ComboBox\&. "
+.ti -1c
+.RI "void \fBapplyEnable\fP (bool=true)"
+.br
+.RI "\fBSelectAutonumW::applyEnable\fP enable/disable the apply button\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateFolioList\fP ()"
+.br
+.RI "\fBFolioAutonumberingW::updateFolioList\fP update Folio List in From and To ComboBox\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject_\fP"
+.br
+.ti -1c
+.RI "Ui::FolioAutonumberingW * \fBui\fP"
+.br
+.ti -1c
+.RI "QList< \fBNumPartEditorW\fP * > \fBnum_part_list_\fP"
+.br
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBm_context\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "FolioAutonumberingW::FolioAutonumberingW (\fBQETProject\fP * project, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+Constructor 
+.SS "FolioAutonumberingW::~FolioAutonumberingW ()\fC [override]\fP"
+Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void FolioAutonumberingW::applyEnable (bool b = \fCtrue\fP)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSelectAutonumW::applyEnable\fP enable/disable the apply button\&. 
+.SS "void FolioAutonumberingW::applyPressed ()\fC [signal]\fP"
+
+.SS "QString FolioAutonumberingW::autoNumSelected ()"
+
+.PP
+\fBFolioAutonumberingW::autoNumSelected\fP returns the current autonum selected\&. 
+.SS "int FolioAutonumberingW::fromFolio ()"
+
+.PP
+\fBFolioAutonumberingW::fromFolio\fP returns the current 'From Folio' index\&. 
+.SS "void FolioAutonumberingW::m_autonumber_tabs_rb_clicked ()\fC [signal]\fP"
+
+.SS "int FolioAutonumberingW::newFoliosNumber ()"
+
+.PP
+\fBFolioAutonumberingW::newFoliosNumber\fP returns the number of folios to create\&. 
+.SS "void FolioAutonumberingW::on_buttonBox_clicked (QAbstractButton * button)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBSelectAutonumW::on_buttonBox_clicked\fP Action on buttonBox clicked\&. 
+.SS "void FolioAutonumberingW::on_m_autonumber_tabs_rb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBFolioAutonumberingW::on_m_autonumber_tabs_rb_clicked\fP Enable From ComboBox, fill From ComboBox\&. 
+.SS "void FolioAutonumberingW::on_m_create_new_tabs_rb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBFolioAutonumberingW::on_m_create_new_tabs_rb_clicked\fP Enable New Tabs SpinBox\&. 
+.SS "void FolioAutonumberingW::on_m_from_cb_currentIndexChanged (int)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBFolioAutonumberingW::on_m_from_cb_currentIndexChanged\fP Enable To ComboBox\&. 
+.SS "void FolioAutonumberingW::on_m_new_tabs_sb_valueChanged (int)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBFolioAutonumberingW::on_m_new_tabs_sb_valueChanged\fP Enable Apply if any new folio is to be created\&. 
+.SS "void FolioAutonumberingW::setContext (QList< QString > autonums)"
+
+.PP
+\fBFolioAutonumberingW::setContext\fP construct autonums in the comboBox selected in the autonum_chooser QcomboBox\&. 
+.SS "int FolioAutonumberingW::toFolio ()"
+
+.PP
+\fBFolioAutonumberingW::toFolio\fP returns the current 'To Folio' index\&. 
+.SS "\fBNumerotationContext\fP FolioAutonumberingW::toNumContext () const"
+
+.SS "void FolioAutonumberingW::updateFolioList ()\fC [private]\fP"
+
+.PP
+\fBFolioAutonumberingW::updateFolioList\fP update Folio List in From and To ComboBox\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBNumerotationContext\fP FolioAutonumberingW::m_context\fC [private]\fP"
+
+.SS "bool FolioAutonumberingW::newFolios"
+
+.SS "QList<\fBNumPartEditorW\fP *> FolioAutonumberingW::num_part_list_\fC [private]\fP"
+
+.SS "\fBQETProject\fP* FolioAutonumberingW::project_\fC [private]\fP"
+
+.SS "Ui::FolioAutonumberingW* FolioAutonumberingW::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

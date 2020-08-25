@@ -1,0 +1,188 @@
+.TH "TitleBlockTemplateVisualCell" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TitleBlockTemplateVisualCell
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <templatevisualcell\&.h>\fP
+.PP
+Inherits QGraphicsLayoutItem, and QGraphicsItem\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetTemplateCell\fP (\fBTitleBlockTemplate\fP *, \fBTitleBlockCell\fP *)"
+.br
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBtitleBlockTemplate\fP () const"
+.br
+.ti -1c
+.RI "\fBTitleBlockCell\fP * \fBcell\fP () const"
+.br
+.ti -1c
+.RI "QSet< \fBTitleBlockCell\fP * > \fBcells\fP () const"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateVisualCell\fP (QGraphicsItem *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~TitleBlockTemplateVisualCell\fP () override"
+.br
+.ti -1c
+.RI "void \fBsetGeometry\fP (const QRectF &) override"
+.br
+.ti -1c
+.RI "QSizeF \fBsizeHint\fP (Qt::SizeHint, const QSizeF &=QSizeF()) const override"
+.br
+.ti -1c
+.RI "QRectF \fBboundingRect\fP () const override"
+.br
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *, const QStyleOptionGraphicsItem *, QWidget *=nullptr) override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplateVisualCell\fP (const \fBTitleBlockTemplateVisualCell\fP &)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTitleBlockTemplate\fP * \fBtemplate_\fP"
+.br
+.RI "Title block template of the previewed cell\&. "
+.ti -1c
+.RI "\fBTitleBlockCell\fP * \fBcell_\fP"
+.br
+.RI "Previewed cell\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class implements a preview widget for cells that compose a title block template\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TitleBlockTemplateVisualCell::TitleBlockTemplateVisualCell (QGraphicsItem * parent = \fCnullptr\fP)"
+Constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP Parent QGraphicsItem 
+.RE
+.PP
+
+.SS "TitleBlockTemplateVisualCell::~TitleBlockTemplateVisualCell ()\fC [override]\fP"
+Destructor 
+.SS "TitleBlockTemplateVisualCell::TitleBlockTemplateVisualCell (const \fBTitleBlockTemplateVisualCell\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "QRectF TitleBlockTemplateVisualCell::boundingRect () const\fC [override]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the bounding rect of this helper cell 
+.RE
+.PP
+
+.SS "\fBTitleBlockCell\fP * TitleBlockTemplateVisualCell::cell () const\fC [slot]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the previewed title block cell 
+.RE
+.PP
+
+.SS "QSet< \fBTitleBlockCell\fP * > TitleBlockTemplateVisualCell::cells () const\fC [slot]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the title block cell previewed by this object, plus the cells it spans over, if any 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateVisualCell::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = \fCnullptr\fP)\fC [override]\fP"
+Handles the helper cell visual rendering 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP QPainter to be used for the rendering 
+.br
+\fIoption\fP Rendering options 
+.br
+\fIwidget\fP QWidget being painted, if any 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateVisualCell::setGeometry (const QRectF & g)\fC [override]\fP"
+Ensure geometry changes are handled for both QGraphicsObject and QGraphicsLayoutItem\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIg\fP New geometry 
+.RE
+.PP
+
+.SS "void TitleBlockTemplateVisualCell::setTemplateCell (\fBTitleBlockTemplate\fP * tbt, \fBTitleBlockCell\fP * cell)\fC [slot]\fP"
+Set the previewed title block cell\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItbt\fP Parent title block template of the previewed cell 
+.br
+\fIcell\fP Previewed cell 
+.RE
+.PP
+
+.SS "QSizeF TitleBlockTemplateVisualCell::sizeHint (Qt::SizeHint which, const QSizeF & constraint = \fCQSizeF()\fP) const\fC [override]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIwhich\fP Size hint to be modified 
+.br
+\fIconstraint\fP New value for the size hint 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the size hint for \fIwhich\fP using the width or height of \fIconstraint\fP 
+.RE
+.PP
+
+.SS "\fBTitleBlockTemplate\fP * TitleBlockTemplateVisualCell::titleBlockTemplate () const\fC [slot]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+the parent title block template of the previewed cell 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBTitleBlockCell\fP* TitleBlockTemplateVisualCell::cell_\fC [private]\fP"
+
+.PP
+Previewed cell\&. 
+.SS "\fBTitleBlockTemplate\fP* TitleBlockTemplateVisualCell::template_\fC [private]\fP"
+
+.PP
+Title block template of the previewed cell\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

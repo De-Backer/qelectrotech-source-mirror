@@ -1,0 +1,143 @@
+.TH "DiagramEventInterface" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DiagramEventInterface \- The \fBDiagramEventInterface\fP class \fBisRunning()\fP return true if action is running (do something)\&. By default return false\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <diagrameventinterface\&.h>\fP
+.PP
+Inherits QObject\&.
+.PP
+Inherited by \fBDiagramEventAddElement\fP, \fBDiagramEventAddImage\fP, \fBDiagramEventAddShape\fP, and \fBDiagramEventAddText\fP\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBfinish\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramEventInterface\fP (\fBDiagram\fP *diagram)"
+.br
+.ti -1c
+.RI "\fB~DiagramEventInterface\fP () override=0"
+.br
+.ti -1c
+.RI "virtual void \fBmouseDoubleClickEvent\fP (QGraphicsSceneMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual void \fBmousePressEvent\fP (QGraphicsSceneMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual void \fBmouseMoveEvent\fP (QGraphicsSceneMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual void \fBmouseReleaseEvent\fP (QGraphicsSceneMouseEvent *event)"
+.br
+.ti -1c
+.RI "virtual void \fBwheelEvent\fP (QGraphicsSceneWheelEvent *event)"
+.br
+.ti -1c
+.RI "virtual void \fBkeyPressEvent\fP (QKeyEvent *event)"
+.br
+.RI "\fBDiagramEventInterface::keyPressEvent\fP By default, press escape key abort the curent action\&. "
+.ti -1c
+.RI "virtual void \fBkeyReleaseEvent\fP (QKeyEvent *event)"
+.br
+.ti -1c
+.RI "virtual bool \fBisRunning\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBinit\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP"
+.br
+.ti -1c
+.RI "bool \fBm_running\fP"
+.br
+.ti -1c
+.RI "bool \fBm_abort\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBDiagramEventInterface\fP class \fBisRunning()\fP return true if action is running (do something)\&. By default return false\&. 
+
+
+.SS "USE DiagramEventInterface"
+This class is the basic interface for manage event on a diagram\&. To create a behavior for event diagram, we need to herite this class\&. This interface work like this : You need to create an interface and call diagram::setEventInterface(pointer_of_your_interface)\&. When a diagram get an event (mouse or key) if they have an event interface, they send the event (with the status accepted to false) to the interface (for exemple mousePressEvent)\&. If the interface do something with this event, you need to set to true the accepted status of the event, then diagram do nothing\&. When the interface job is done, we need to emit the signal \fBfinish()\fP, the diagram use this signal to delete the interface\&. Be carreful with the destructor, diagram can at any time (even if interface is still running) delete the interface, the bool m_abort is here for that at destruction time\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DiagramEventInterface::DiagramEventInterface (\fBDiagram\fP * diagram)"
+
+.SS "DiagramEventInterface::~DiagramEventInterface ()\fC [override]\fP, \fC [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DiagramEventInterface::finish ()\fC [signal]\fP"
+
+.SS "void DiagramEventInterface::init ()\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBDiagramEventAddElement\fP, and \fBDiagramEventAddShape\fP\&.
+.SS "bool DiagramEventInterface::isRunning () const\fC [virtual]\fP"
+
+.SS "void DiagramEventInterface::keyPressEvent (QKeyEvent * event)\fC [virtual]\fP"
+
+.PP
+\fBDiagramEventInterface::keyPressEvent\fP By default, press escape key abort the curent action\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBDiagramEventAddElement\fP\&.
+.SS "void DiagramEventInterface::keyReleaseEvent (QKeyEvent * event)\fC [virtual]\fP"
+
+.SS "void DiagramEventInterface::mouseDoubleClickEvent (QGraphicsSceneMouseEvent * event)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBDiagramEventAddElement\fP, \fBDiagramEventAddImage\fP, and \fBDiagramEventAddShape\fP\&.
+.SS "void DiagramEventInterface::mouseMoveEvent (QGraphicsSceneMouseEvent * event)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBDiagramEventAddElement\fP, \fBDiagramEventAddImage\fP, and \fBDiagramEventAddShape\fP\&.
+.SS "void DiagramEventInterface::mousePressEvent (QGraphicsSceneMouseEvent * event)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBDiagramEventAddElement\fP, \fBDiagramEventAddImage\fP, \fBDiagramEventAddText\fP, and \fBDiagramEventAddShape\fP\&.
+.SS "void DiagramEventInterface::mouseReleaseEvent (QGraphicsSceneMouseEvent * event)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBDiagramEventAddElement\fP, and \fBDiagramEventAddShape\fP\&.
+.SS "void DiagramEventInterface::wheelEvent (QGraphicsSceneWheelEvent * event)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBDiagramEventAddImage\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool DiagramEventInterface::m_abort\fC [protected]\fP"
+
+.SS "\fBDiagram\fP* DiagramEventInterface::m_diagram\fC [protected]\fP"
+
+.SS "bool DiagramEventInterface::m_running\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

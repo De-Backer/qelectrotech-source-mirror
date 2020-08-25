@@ -1,0 +1,18 @@
+<map id="DiagramContext::toXml" name="DiagramContext::toXml">
+<area shape="rect" id="node1" title=" " alt="" coords="919,166,1077,193"/>
+<area shape="rect" id="node2" href="$d3/d1a/class_title_block_properties.html#a26de002cbb991529ee15e620a4710720" title=" " alt="" coords="717,64,857,105"/>
+<area shape="rect" id="node10" href="$d2/d17/class_element_scene.html#a16f4183a62e96a3ea2988bb2e31e148f" title="ElementScene::toXml Export this element as a xml file." alt="" coords="713,195,862,222"/>
+<area shape="rect" id="node13" href="$d5/d50/class_element.html#aecd03cf7cdcb78f118fdd1e7c9209ecf" title="Element::toXml Allows to export the element in XML." alt="" coords="732,246,843,273"/>
+<area shape="rect" id="node16" href="$d6/dc5/class_q_e_t_project.html#aa3ae223899fb3360a89c3c18f432cda0" title=" " alt="" coords="704,129,871,171"/>
+<area shape="rect" id="node3" href="$df/d92/class_border_title_block.html#ab61cc41d6ee33d11428f481ee8ff9f5b" title="BorderTitleBlock::titleBlockToXml Exports the title block current values to XML." alt="" coords="476,5,656,47"/>
+<area shape="rect" id="node6" href="$d6/dc5/class_q_e_t_project.html#aa7f53150e9b18242287787f1b39684bd" title="QETProject::writeDefaultPropertiesXml Export all defaults properties used by a new diagram and his co..." alt="" coords="483,71,649,112"/>
+<area shape="rect" id="node4" href="$d3/d37/class_diagram.html#a504d4e59ccf7d02638606463462945a1" title="Diagram::toXml Exports all or part of the schema." alt="" coords="279,13,393,39"/>
+<area shape="rect" id="node5" href="$d5/dcc/class_multi_paste_dialog.html#a9f60c5bd510d7961de088f75f0eeb92d" title=" " alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node7" href="$d6/dc5/class_q_e_t_project.html#ae129e97abb00d4817218a3ee8d0345da" title="QETProject::toXml." alt="" coords="271,107,401,134"/>
+<area shape="rect" id="node8" href="$d6/dc5/class_q_e_t_project.html#a0fbf1fb78e6aefeb7f19421ce4941e39" title="QETProject::write Save the project in a file." alt="" coords="38,141,163,167"/>
+<area shape="rect" id="node9" href="$d6/dc5/class_q_e_t_project.html#a68eec4aacae1e1ab8526d6e191f6847d" title="QETProject::writeBackup Write a backup file of this project, in the case that QET crash." alt="" coords="16,90,185,117"/>
+<area shape="rect" id="node11" href="$d2/d17/class_element_scene.html#ad083a900013fae3aedece63d935caafd" title="ElementScene::copy Handles the fact of copying the selection = exporting it as XML to the clipboard." alt="" coords="495,191,637,218"/>
+<area shape="rect" id="node12" href="$d2/d17/class_element_scene.html#aff5ea8fe5be26e588ca8d601402fc56d" title="ElementScene::cut Handles the fact of cutting the selection = exporting it in XML to the clipboard th..." alt="" coords="269,191,403,218"/>
+<area shape="rect" id="node14" href="$d1/df8/class_export_element_text_pattern.html#a0c44110c35fd1caeeb60d03b8c6e3105" title=" " alt="" coords="478,243,654,284"/>
+<area shape="rect" id="node15" href="$d1/df8/class_export_element_text_pattern.html#ae5826375665c58c5e41d038e28c17f09" title="ExportElementTextPattern::ExportElementTextPattern Constructor." alt="" coords="244,243,428,284"/>
+</map>

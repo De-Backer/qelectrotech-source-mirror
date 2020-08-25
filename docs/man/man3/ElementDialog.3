@@ -1,0 +1,249 @@
+.TH "ElementDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementDialog
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementDialog\fP (uint=\fBElementDialog::OpenElement\fP, QWidget *parent=nullptr)"
+.br
+.RI "\fBElementDialog::ElementDialog\fP\&. "
+.ti -1c
+.RI "\fBElementsLocation\fP \fBlocation\fP () const"
+.br
+.RI "\fBElementDialog::location\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBElementsLocation\fP \fBgetOpenElementLocation\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBElementDialog::getOpenElementLocation\fP Display a dialog for open an element through her location\&. "
+.ti -1c
+.RI "static \fBElementsLocation\fP \fBgetSaveElementLocation\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBElementDialog::getSaveElementLocation\fP Display a dialog that allow to user to select an element (existing or not) who he want to save\&. "
+.in -1c
+.SS "Private Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBOpenElement\fP = 0, \fBSaveElement\fP = 1, \fBOpenCategory\fP = 2, \fBSaveCategory\fP = 3 }"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementDialog\fP (const \fBElementDialog\fP &)"
+.br
+.ti -1c
+.RI "void \fBsetUpWidget\fP ()"
+.br
+.RI "\fBElementDialog::setUpWidget\fP Build and setup the widgets of this dialog\&. "
+.ti -1c
+.RI "void \fBsetUpConnection\fP ()"
+.br
+.RI "\fBElementDialog::setUpConnection\fP Setup connection of this dialog\&. "
+.ti -1c
+.RI "void \fBindexClicked\fP (const QModelIndex &index)"
+.br
+.RI "\fBElementDialog::indexClicked\fP\&. "
+.ti -1c
+.RI "void \fBupdateWidget\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheckCurrentLocation\fP ()"
+.br
+.RI "\fBElementDialog::checkCurrentLocation\fP Update this dialog according to the current selected location and the current mode\&. "
+.ti -1c
+.RI "void \fBcheckAccept\fP ()"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBElementsLocation\fP \fBexecConfiguredDialog\fP (int, QWidget *parent=nullptr)"
+.br
+.RI "\fBElementDialog::execConfiguredDialog\fP launch a dialog with the chosen mode\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint \fBm_mode\fP"
+.br
+.ti -1c
+.RI "\fBElementsLocation\fP \fBm_location\fP"
+.br
+.ti -1c
+.RI "QDialogButtonBox * \fBm_buttons_box\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBQFileNameEdit\fP * \fBm_text_field\fP = nullptr"
+.br
+.ti -1c
+.RI "QTreeView * \fBm_tree_view\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBElementsCollectionModel\fP * \fBm_model\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides several dialogs to select an element or a category (e\&.g\&. new or existing, for opening or for saving\&.\&.\&.)\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum\fC [private]\fP"
+This enum represents the available configurations for the required dialog 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOpenElement \fP\fP
+The dialog should open an element\&. 
+.TP
+\fB\fISaveElement \fP\fP
+The dialog should select an element for saving\&. 
+.TP
+\fB\fIOpenCategory \fP\fP
+The dialog should open a category\&. 
+.TP
+\fB\fISaveCategory \fP\fP
+The dialog should select a category for saving\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementDialog::ElementDialog (uint mode = \fC\fBElementDialog::OpenElement\fP\fP, QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBElementDialog::ElementDialog\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImode\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SS "ElementDialog::ElementDialog (const \fBElementDialog\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementDialog::checkAccept ()\fC [private]\fP"
+
+.SS "void ElementDialog::checkCurrentLocation ()\fC [private]\fP"
+
+.PP
+\fBElementDialog::checkCurrentLocation\fP Update this dialog according to the current selected location and the current mode\&. 
+.SS "\fBElementsLocation\fP ElementDialog::execConfiguredDialog (int mode, QWidget * parentWidget = \fCnullptr\fP)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBElementDialog::execConfiguredDialog\fP launch a dialog with the chosen mode\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImode\fP : mode of the dialog 
+.br
+\fIparentWidget\fP : parent widget of the dialog 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the chosen location 
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP ElementDialog::getOpenElementLocation (QWidget * parentWidget = \fCnullptr\fP)\fC [static]\fP"
+
+.PP
+\fBElementDialog::getOpenElementLocation\fP Display a dialog for open an element through her location\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparentWidget\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The location of the selected element 
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP ElementDialog::getSaveElementLocation (QWidget * parentWidget = \fCnullptr\fP)\fC [static]\fP"
+
+.PP
+\fBElementDialog::getSaveElementLocation\fP Display a dialog that allow to user to select an element (existing or not) who he want to save\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparentWidget\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The location where the element must be save 
+.RE
+.PP
+
+.SS "void ElementDialog::indexClicked (const QModelIndex & index)\fC [private]\fP"
+
+.PP
+\fBElementDialog::indexClicked\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+
+.SS "\fBElementsLocation\fP ElementDialog::location () const"
+
+.PP
+\fBElementDialog::location\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The selected location or a null location if user has selected nothing or selection isn't compatible with the curent mode 
+.RE
+.PP
+
+.SS "void ElementDialog::setUpConnection ()\fC [private]\fP"
+
+.PP
+\fBElementDialog::setUpConnection\fP Setup connection of this dialog\&. 
+.SS "void ElementDialog::setUpWidget ()\fC [private]\fP"
+
+.PP
+\fBElementDialog::setUpWidget\fP Build and setup the widgets of this dialog\&. 
+.SS "void ElementDialog::updateWidget ()\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QDialogButtonBox* ElementDialog::m_buttons_box = nullptr\fC [private]\fP"
+
+.SS "\fBElementsLocation\fP ElementDialog::m_location\fC [private]\fP"
+
+.SS "uint ElementDialog::m_mode\fC [private]\fP"
+
+.SS "\fBElementsCollectionModel\fP* ElementDialog::m_model = nullptr\fC [private]\fP"
+
+.SS "\fBQFileNameEdit\fP* ElementDialog::m_text_field = nullptr\fC [private]\fP"
+
+.SS "QTreeView* ElementDialog::m_tree_view = nullptr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

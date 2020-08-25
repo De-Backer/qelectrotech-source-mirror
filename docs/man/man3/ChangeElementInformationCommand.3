@@ -1,0 +1,105 @@
+.TH "ChangeElementInformationCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChangeElementInformationCommand \- The \fBChangeElementInformationCommand\fP class This class manage undo/redo to change the element information\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <changeelementinformationcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChangeElementInformationCommand\fP (\fBElement\fP *elmt, \fBDiagramContext\fP &old_info, \fBDiagramContext\fP &new_info, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBChangeElementInformationCommand::ChangeElementInformationCommand\fP Default constructor\&. "
+.ti -1c
+.RI "int \fBid\fP () const override"
+.br
+.ti -1c
+.RI "bool \fBmergeWith\fP (const QUndoCommand *other) override"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBChangeElementInformationCommand::undo\fP\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBChangeElementInformationCommand::redo\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateProjectDB\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElement\fP * \fBm_element\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBm_old_info\fP"
+.br
+.ti -1c
+.RI "\fBDiagramContext\fP \fBm_new_info\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBChangeElementInformationCommand\fP class This class manage undo/redo to change the element information\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChangeElementInformationCommand::ChangeElementInformationCommand (\fBElement\fP * elmt, \fBDiagramContext\fP & old_info, \fBDiagramContext\fP & new_info, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBChangeElementInformationCommand::ChangeElementInformationCommand\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP : element to change information 
+.br
+\fIold_info\fP : old info of element 
+.br
+\fInew_info\fP : new info of element 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int ChangeElementInformationCommand::id () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "bool ChangeElementInformationCommand::mergeWith (const QUndoCommand * other)\fC [override]\fP"
+
+.SS "void ChangeElementInformationCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBChangeElementInformationCommand::redo\fP\&. 
+.SS "void ChangeElementInformationCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBChangeElementInformationCommand::undo\fP\&. 
+.SS "void ChangeElementInformationCommand::updateProjectDB ()\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBElement\fP* ChangeElementInformationCommand::m_element\fC [private]\fP"
+
+.SS "\fBDiagramContext\fP ChangeElementInformationCommand::m_new_info\fC [private]\fP"
+
+.SS "\fBDiagramContext\fP ChangeElementInformationCommand::m_old_info\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

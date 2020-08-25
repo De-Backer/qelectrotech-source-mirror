@@ -1,0 +1,297 @@
+.TH "LineEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LineEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <lineeditor\&.h>\fP
+.PP
+Inherits \fBElementItemEditor\fP\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateLineEndType1\fP ()"
+.br
+.RI "Met a jour le type de la premiere extremite\&. "
+.ti -1c
+.RI "void \fBupdateLineEndLength1\fP ()"
+.br
+.RI "Met a jour la longueur de la premiere extremite\&. "
+.ti -1c
+.RI "void \fBupdateLineEndType2\fP ()"
+.br
+.RI "Met a jour le type de la seconde extremite\&. "
+.ti -1c
+.RI "void \fBupdateLineEndLength2\fP ()"
+.br
+.RI "Met a jour la longueur de la seconde extremite\&. "
+.ti -1c
+.RI "void \fBlineEditingFinishedX1\fP ()"
+.br
+.ti -1c
+.RI "void \fBlineEditingFinishedY1\fP ()"
+.br
+.ti -1c
+.RI "void \fBlineEditingFinishedX2\fP ()"
+.br
+.ti -1c
+.RI "void \fBlineEditingFinishedY2\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateForm\fP () override"
+.br
+.RI "\fBLineEditor::updateForm\fP Update the value of the widgets\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLineEditor\fP (\fBQETElementEditor\fP *, \fBPartLine\fP *=nullptr, QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~LineEditor\fP () override"
+.br
+.RI "Destructeur\&. "
+.ti -1c
+.RI "bool \fBsetPart\fP (\fBCustomElementPart\fP *) override"
+.br
+.RI "\fBLineEditor::setPart\fP Specifie to this editor the part to edit\&. Note that an editor can accept or refuse to edit a part\&. This editor accept only \fBPartLine\fP\&. "
+.ti -1c
+.RI "bool \fBsetParts\fP (QList< \fBCustomElementPart\fP * > parts) override"
+.br
+.ti -1c
+.RI "\fBCustomElementPart\fP * \fBcurrentPart\fP () const override"
+.br
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBcurrentParts\fP () const override"
+.br
+.ti -1c
+.RI "QPointF \fBeditedP1\fP () const"
+.br
+.RI "\fBLineEditor::editedP1\fP\&. "
+.ti -1c
+.RI "QPointF \fBeditedP2\fP () const"
+.br
+.RI "\fBLineEditor::editedP2\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLineEditor\fP (const \fBLineEditor\fP &)"
+.br
+.ti -1c
+.RI "void \fBactiveConnections\fP (bool)"
+.br
+.RI "\fBLineEditor::activeConnections\fP Enable/disable connection between editor widget and slot editingFinished True == enable | false == disable\&. "
+.ti -1c
+.RI "void \fBsetUpChangeConnections\fP ()"
+.br
+.RI "setUpChangeConnections Setup the connection from the line(s) to the widget, to update it when the line(s) are changed (moved \&.\&.\&.) "
+.ti -1c
+.RI "void \fBdisconnectChangeConnections\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPartLine\fP * \fBpart\fP"
+.br
+.ti -1c
+.RI "\fBStyleEditor\fP * \fBstyle_\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBx1\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBy1\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBx2\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBy2\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBend1_type\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBend2_type\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBend1_length\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBend2_length\fP"
+.br
+.ti -1c
+.RI "bool \fBm_locked\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_change_connections\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a widget to edit lines within the element editor\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "LineEditor::LineEditor (\fBQETElementEditor\fP * editor, \fBPartLine\fP * line = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP L'editeur d'element concerne 
+.br
+\fIline\fP La ligne a editer 
+.br
+\fIparent\fP le Widget parent 
+.RE
+.PP
+
+.SS "LineEditor::~LineEditor ()\fC [override]\fP"
+
+.PP
+Destructeur\&. 
+.SS "LineEditor::LineEditor (const \fBLineEditor\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void LineEditor::activeConnections (bool active)\fC [private]\fP"
+
+.PP
+\fBLineEditor::activeConnections\fP Enable/disable connection between editor widget and slot editingFinished True == enable | false == disable\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIactive\fP 
+.RE
+.PP
+
+.SS "\fBCustomElementPart\fP * LineEditor::currentPart () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBReturns\fP
+.RS 4
+la primitive actuellement editee, ou 0 si ce widget n'en edite pas 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "QList< \fBCustomElementPart\fP * > LineEditor::currentParts () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "void LineEditor::disconnectChangeConnections ()\fC [private]\fP"
+
+.SS "QPointF LineEditor::editedP1 () const"
+
+.PP
+\fBLineEditor::editedP1\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The edited P1 in item coordinate 
+.RE
+.PP
+
+.SS "QPointF LineEditor::editedP2 () const"
+
+.PP
+\fBLineEditor::editedP2\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The edited P2 in item coordinate 
+.RE
+.PP
+
+.SS "void LineEditor::lineEditingFinishedX1 ()\fC [slot]\fP"
+
+.SS "void LineEditor::lineEditingFinishedX2 ()\fC [slot]\fP"
+
+.SS "void LineEditor::lineEditingFinishedY1 ()\fC [slot]\fP"
+
+.SS "void LineEditor::lineEditingFinishedY2 ()\fC [slot]\fP"
+
+.SS "bool LineEditor::setPart (\fBCustomElementPart\fP * new_part)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBLineEditor::setPart\fP Specifie to this editor the part to edit\&. Note that an editor can accept or refuse to edit a part\&. This editor accept only \fBPartLine\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_part\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "bool LineEditor::setParts (QList< \fBCustomElementPart\fP * > parts)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBElementItemEditor\fP\&.
+.SS "void LineEditor::setUpChangeConnections ()\fC [private]\fP"
+
+.PP
+setUpChangeConnections Setup the connection from the line(s) to the widget, to update it when the line(s) are changed (moved \&.\&.\&.) 
+.SS "void LineEditor::updateForm ()\fC [override]\fP, \fC [slot]\fP"
+
+.PP
+\fBLineEditor::updateForm\fP Update the value of the widgets\&. 
+.SS "void LineEditor::updateLineEndLength1 ()\fC [slot]\fP"
+
+.PP
+Met a jour la longueur de la premiere extremite\&. 
+.SS "void LineEditor::updateLineEndLength2 ()\fC [slot]\fP"
+
+.PP
+Met a jour la longueur de la seconde extremite\&. 
+.SS "void LineEditor::updateLineEndType1 ()\fC [slot]\fP"
+
+.PP
+Met a jour le type de la premiere extremite\&. 
+.SS "void LineEditor::updateLineEndType2 ()\fC [slot]\fP"
+
+.PP
+Met a jour le type de la seconde extremite\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QDoubleSpinBox* LineEditor::end1_length\fC [private]\fP"
+
+.SS "QComboBox* LineEditor::end1_type\fC [private]\fP"
+
+.SS "QDoubleSpinBox * LineEditor::end2_length\fC [private]\fP"
+
+.SS "QComboBox * LineEditor::end2_type\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> LineEditor::m_change_connections\fC [private]\fP"
+
+.SS "bool LineEditor::m_locked\fC [private]\fP"
+
+.SS "\fBPartLine\fP* LineEditor::part\fC [private]\fP"
+
+.SS "\fBStyleEditor\fP* LineEditor::style_\fC [private]\fP"
+
+.SS "QDoubleSpinBox* LineEditor::x1\fC [private]\fP"
+
+.SS "QDoubleSpinBox * LineEditor::x2\fC [private]\fP"
+
+.SS "QDoubleSpinBox * LineEditor::y1\fC [private]\fP"
+
+.SS "QDoubleSpinBox * LineEditor::y2\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,76 @@
+.TH "sources/qetgraphicsitem/element.cpp" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/qetgraphicsitem/element.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'element\&.h'\fP
+.br
+\fC#include 'diagram\&.h'\fP
+.br
+\fC#include 'conductor\&.h'\fP
+.br
+\fC#include 'diagramcommands\&.h'\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include 'elementprovider\&.h'\fP
+.br
+\fC#include 'diagramposition\&.h'\fP
+.br
+\fC#include 'terminal\&.h'\fP
+.br
+\fC#include 'terminaldata\&.h'\fP
+.br
+\fC#include 'PropertiesEditor/propertieseditordialog\&.h'\fP
+.br
+\fC#include 'elementpropertieswidget\&.h'\fP
+.br
+\fC#include 'numerotationcontextcommands\&.h'\fP
+.br
+\fC#include 'diagramcontext\&.h'\fP
+.br
+\fC#include 'changeelementinformationcommand\&.h'\fP
+.br
+\fC#include 'dynamicelementtextitem\&.h'\fP
+.br
+\fC#include 'elementtextitemgroup\&.h'\fP
+.br
+\fC#include 'elementpicturefactory\&.h'\fP
+.br
+\fC#include 'iostream'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBElementXmlRetroCompatibility\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBcomparPos\fP (const \fBElement\fP *elmt1, const \fBElement\fP *elmt2)"
+.br
+.RI "comparPos Compare position of the two elements\&. Compare 3 points: 1 folio - 2 row - 3 line returns a response when a comparison is found\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "bool comparPos (const \fBElement\fP * elmt1, const \fBElement\fP * elmt2)"
+
+.PP
+comparPos Compare position of the two elements\&. Compare 3 points: 1 folio - 2 row - 3 line returns a response when a comparison is found\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if elmt1 is at lower position than elmt 2, else false 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,46 @@
+<map id="QETDiagramEditor::subWindowActivated" name="QETDiagramEditor::subWindowActivated">
+<area shape="rect" id="node1" title="QETDiagramEditor::subWindowActivated Slot used to update menu and undo stack when subwindows of MDIar..." alt="" coords="5,305,213,347"/>
+<area shape="rect" id="node2" href="$d0/dcb/class_q_e_t_diagram_editor.html#a64ffde2786bbcc65ce6bce408fe6b52d" title="QETDiagramEditor::slot_updateActions Manage actions." alt="" coords="261,217,423,259"/>
+<area shape="rect" id="node43" href="$d0/dcb/class_q_e_t_diagram_editor.html#a90106ac6d660a74856982ca1e74d66fe" title=" " alt="" coords="261,364,423,405"/>
+<area shape="rect" id="node3" href="$d0/dcb/class_q_e_t_diagram_editor.html#a6b9a7510de88d3601de38bee2df32393" title=" " alt="" coords="712,247,892,288"/>
+<area shape="rect" id="node4" href="$d0/dcb/class_q_e_t_diagram_editor.html#abbfa920179fe7d449248664d5d2f6318" title=" " alt="" coords="958,188,1138,229"/>
+<area shape="rect" id="node5" href="$d0/dcb/class_q_e_t_diagram_editor.html#a0373a056f6c8f72d20e22d4b68baa085" title="QETDiagramEditor::slot_updateAutoNumDock Update Auto Num Dock Widget when changing Project." alt="" coords="481,305,643,347"/>
+<area shape="rect" id="node28" href="$d0/dcb/class_q_e_t_diagram_editor.html#a80ea63e3ecc120146769dbaa0424cd60" title="QETDiagramEditor::slot_updateComplexActions Manage the actions who need some conditions to be enable ..." alt="" coords="480,661,644,703"/>
+<area shape="rect" id="node39" href="$d0/dcb/class_q_e_t_diagram_editor.html#a3274df50981531c70f3968a1956578e6" title="QETDiagramEditor::slot_updateModeActions Manage action who need an opened diagram or project to be up..." alt="" coords="481,188,643,229"/>
+<area shape="rect" id="node40" href="$d0/dcb/class_q_e_t_diagram_editor.html#a775df9dc5a9cf502ce84cb4ebb15b539" title="QETDiagramEditor::slot_updatePasteAction Gere les actions ayant besoin du presse&#45;papier." alt="" coords="481,123,643,164"/>
+<area shape="rect" id="node42" href="$d0/dcb/class_q_e_t_diagram_editor.html#a7bb92eca1d24fcfa3501c13dfa2ef860" title="QETDiagramEditor::slot_updateUndoStack Update the undo stack view." alt="" coords="481,5,643,47"/>
+<area shape="rect" id="node6" href="$d5/d18/class_auto_numbering_dock_widget.html#a83986b60077988e3b60326eeb9c29bb1" title="AutoNumberingDockWidget::setProject." alt="" coords="710,421,894,463"/>
+<area shape="rect" id="node7" href="$d5/d18/class_auto_numbering_dock_widget.html#a5b33b9d524881a0591b810c391fa3a5c" title="AutoNumberingDockWidget::conductorAutoNumChanged Add new or remove conductor auto num from combobox." alt="" coords="951,356,1145,397"/>
+<area shape="rect" id="node9" href="$d5/d18/class_auto_numbering_dock_widget.html#a84b3643d763aa6fb4dae63a187ff8ffe" title="AutoNumberingDockWidget::setActive Set current used autonumberings." alt="" coords="1206,392,1390,433"/>
+<area shape="rect" id="node11" href="$d6/df6/class_project_view.html#a38e5277f4dea0f3024292806a4e67ae9" title="ProjectView::currentDiagram." alt="" coords="1472,265,1660,291"/>
+<area shape="rect" id="node13" href="$d7/d9c/class_diagram_view.html#a8c062e9be49d4f8f5c43322fceed60ca" title=" " alt="" coords="1489,711,1643,738"/>
+<area shape="rect" id="node20" href="$d5/d18/class_auto_numbering_dock_widget.html#a0bd37e44821da341e7d2d944b99d0f73" title="AutoNumberingDockWidget::elementAutoNumChanged Add new or remove element auto num from combobox." alt="" coords="956,421,1140,463"/>
+<area shape="rect" id="node22" href="$d5/d18/class_auto_numbering_dock_widget.html#a496dca678562c2d82457ba004a738307" title="AutoNumberingDockWidget::folioAutoNumChanged Add new or remove folio auto num from combobox." alt="" coords="956,487,1140,528"/>
+<area shape="rect" id="node24" href="$d5/d18/class_auto_numbering_dock_widget.html#a0faea3460478b3b81f2a559da63e3a97" title=" " alt="" coords="956,617,1140,659"/>
+<area shape="rect" id="node26" href="$d5/d18/class_auto_numbering_dock_widget.html#a100e693def2def0b14898bbe7d62b9ce" title="AutoNumberingDockWidget::setConductorActive." alt="" coords="1206,676,1390,717"/>
+<area shape="rect" id="node27" href="$d5/d18/class_auto_numbering_dock_widget.html#a61b66f21a400d2702266599ed8fe1474" title="AutoNumberingDockWidget::setContext Add all itens to comboboxes." alt="" coords="956,552,1140,593"/>
+<area shape="rect" id="node8" href="$d6/dc5/class_q_e_t_project.html#a77506f0b161248e94dc3ddd68736e0d6" title="QETProject::conductorAutoNum." alt="" coords="1193,458,1403,485"/>
+<area shape="rect" id="node10" href="$d3/d37/class_diagram.html#a7d9dac1371b6cde3a1929981e7dcf9a7" title="Diagram::conductorsAutonumName." alt="" coords="1451,657,1681,683"/>
+<area shape="rect" id="node12" href="$d6/dc5/class_q_e_t_project.html#a0ee151a44be349d43417695fcaa6a88c" title=" " alt="" coords="1485,457,1647,499"/>
+<area shape="rect" id="node14" href="$d6/dc5/class_q_e_t_project.html#adc4028be6b4416dc35cd3298f56d87bd" title="QETProject::elementAutoNumCurrentFormula." alt="" coords="1467,327,1665,368"/>
+<area shape="rect" id="node19" href="$d6/dc5/class_q_e_t_project.html#ad9020cd9cd747e25149a052f9f42dee8" title="QETProject::elementCurrentAutoNum." alt="" coords="1473,392,1659,433"/>
+<area shape="rect" id="node15" href="$d6/dc5/class_q_e_t_project.html#af5eefcb7abbbd1d60333bd76f810725c" title="QETProject::elementAutoNumFormula." alt="" coords="1729,327,1928,368"/>
+<area shape="rect" id="node16" href="$d1/ddb/namespaceautonum.html#ac5013eb6df6a472f5b2676d51b579da8" title="numerotationContextToFormula" alt="" coords="1976,327,2177,368"/>
+<area shape="rect" id="node17" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="2225,293,2372,335"/>
+<area shape="rect" id="node18" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="2225,359,2372,400"/>
+<area shape="rect" id="node21" href="$d6/dc5/class_q_e_t_project.html#a25728f248bd542c6c4a909f049581a34" title="QETProject::elementAutoNum." alt="" coords="1199,509,1397,535"/>
+<area shape="rect" id="node23" href="$d6/dc5/class_q_e_t_project.html#ab4d93c106722f84fe71e0492f76968e6" title="QETProject::folioAutoNum." alt="" coords="1210,559,1386,586"/>
+<area shape="rect" id="node25" href="$d5/d18/class_auto_numbering_dock_widget.html#afc7be5c6cec00d636c95c85652d4b3ca" title="AutoNumberingDockWidget::clear Remove all combo box values." alt="" coords="1206,611,1390,652"/>
+<area shape="rect" id="node29" href="$d3/d37/class_diagram.html#a3328159058b0dde27937f8fb5f382afc" title="Diagram::canRotateSelection." alt="" coords="705,851,899,878"/>
+<area shape="rect" id="node30" href="$d9/db9/class_diagram_content.html#a69545c3ec624bc931c6a0bcfca0f7fa6" title="DiagramContent::count." alt="" coords="724,902,880,929"/>
+<area shape="rect" id="node31" href="$d9/db9/class_diagram_content.html#ae7b1d44cef7432219ff99e1f37896480" title="DiagramContent::hasCopiableItems." alt="" coords="704,487,900,528"/>
+<area shape="rect" id="node32" href="$d9/db9/class_diagram_content.html#af18ab6d2c6cc94d9eca665e7b6d2d27e" title="DiagramContent::hasDeletableItems." alt="" coords="702,552,902,593"/>
+<area shape="rect" id="node33" href="$d3/d37/class_diagram.html#ab576e6398fe6d00cd92d6bbf9300f7b6" title="Diagram::isReadOnly." alt="" coords="729,618,875,645"/>
+<area shape="rect" id="node34" href="$d9/db9/class_diagram_content.html#a278da70e11e9a9db67db1bcdcf0f69f0" title="DiagramContent::items." alt="" coords="724,953,880,979"/>
+<area shape="rect" id="node36" href="$d3/d37/class_diagram.html#a1253bcb8fcf0fba76f07748664ecc38f" title="Diagram::selectedConductors." alt="" coords="705,669,899,695"/>
+<area shape="rect" id="node37" href="$d9/db9/class_diagram_content.html#a07b00c1d896f49e0a79774b299820e62" title="DiagramContent::selectedTexts." alt="" coords="715,720,889,761"/>
+<area shape="rect" id="node38" href="$d9/db9/class_diagram_content.html#a130a17e319c37be54f453613f75448cc" title="DiagramContent::selectedTextsGroup." alt="" coords="715,785,889,827"/>
+<area shape="rect" id="node35" href="$d9/db9/class_diagram_content.html#a469693789e1268cbfae9486b240da1a3" title="DiagramContent::conductors." alt="" coords="954,953,1142,979"/>
+<area shape="rect" id="node41" href="$d3/d37/class_diagram.html#a07ed1b9e4a3926cca739a2d1923df9ef" title="Diagram::clipboardMayContainDiagram." alt="" coords="701,123,903,164"/>
+<area shape="rect" id="node44" href="$d0/dcb/class_q_e_t_diagram_editor.html#adc43ab122f32c897d71f1711ff759685" title=" " alt="" coords="471,727,653,768"/>
+</map>

@@ -1,0 +1,197 @@
+.TH "ConductorProfile" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConductorProfile
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <conductorprofile\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConductorProfile\fP ()"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "\fBConductorProfile\fP (\fBConductor\fP *conductor)"
+.br
+.ti -1c
+.RI "\fBConductorProfile\fP (const \fBConductorProfile\fP &)"
+.br
+.ti -1c
+.RI "\fBConductorProfile\fP & \fBoperator=\fP (const \fBConductorProfile\fP &)"
+.br
+.ti -1c
+.RI "virtual \fB~ConductorProfile\fP ()"
+.br
+.RI "destructeur "
+.ti -1c
+.RI "bool \fBisNull\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetNull\fP ()"
+.br
+.RI "supprime les segments du profil de conducteur "
+.ti -1c
+.RI "qreal \fBwidth\fP () const"
+.br
+.ti -1c
+.RI "qreal \fBheight\fP () const"
+.br
+.ti -1c
+.RI "uint \fBsegmentsCount\fP (\fBQET::ConductorSegmentType\fP) const"
+.br
+.ti -1c
+.RI "QList< \fBConductorSegmentProfile\fP * > \fBhorizontalSegments\fP ()"
+.br
+.ti -1c
+.RI "QList< \fBConductorSegmentProfile\fP * > \fBverticalSegments\fP ()"
+.br
+.ti -1c
+.RI "void \fBfromConductor\fP (\fBConductor\fP *)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "QList< \fBConductorSegmentProfile\fP * > \fBsegments\fP"
+.br
+.RI "Segments composing the conductor\&. "
+.ti -1c
+.RI "\fBQet::Orientation\fP \fBbeginOrientation\fP"
+.br
+.RI "Orientation of the start terminal\&. "
+.ti -1c
+.RI "\fBQet::Orientation\fP \fBendOrientation\fP"
+.br
+.RI "Orientation of the end terminal\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents the profile of a conductor, i\&.e\&. its primary characteristics\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ConductorProfile::ConductorProfile ()"
+
+.PP
+Constructeur\&. 
+.SS "ConductorProfile::ConductorProfile (\fBConductor\fP * conductor)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconductor\fP conducteur dont il faut extraire le profil 
+.RE
+.PP
+
+.SS "ConductorProfile::ConductorProfile (const \fBConductorProfile\fP & c)"
+Constructeur de copie 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP autre conducteur 
+.RE
+.PP
+
+.SS "ConductorProfile::~ConductorProfile ()\fC [virtual]\fP"
+
+.PP
+destructeur 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ConductorProfile::fromConductor (\fBConductor\fP * conductor)"
+Reconstruit le profil a partir d'un conducteur existant 
+.SS "qreal ConductorProfile::height () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la hauteur occupee par le conducteur 
+.RE
+.PP
+
+.SS "QList< \fBConductorSegmentProfile\fP * > ConductorProfile::horizontalSegments ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+les segments horizontaux de ce profil 
+.RE
+.PP
+
+.SS "bool ConductorProfile::isNull () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le profil est nul 
+.RE
+.PP
+
+.SS "\fBConductorProfile\fP & ConductorProfile::operator= (const \fBConductorProfile\fP & c)"
+Operateur = 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP autre conducteur 
+.RE
+.PP
+
+.SS "uint ConductorProfile::segmentsCount (\fBQET::ConductorSegmentType\fP type) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP Type de Segments 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Le nombre de segments composant le conducteur\&. 
+.RE
+.PP
+
+.SS "void ConductorProfile::setNull ()"
+
+.PP
+supprime les segments du profil de conducteur 
+.SS "QList< \fBConductorSegmentProfile\fP * > ConductorProfile::verticalSegments ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+les segments verticaux de ce profil 
+.RE
+.PP
+
+.SS "qreal ConductorProfile::width () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+la largeur occupee par le conducteur 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQet::Orientation\fP ConductorProfile::beginOrientation"
+
+.PP
+Orientation of the start terminal\&. 
+.SS "\fBQet::Orientation\fP ConductorProfile::endOrientation"
+
+.PP
+Orientation of the end terminal\&. 
+.SS "QList<\fBConductorSegmentProfile\fP *> ConductorProfile::segments"
+
+.PP
+Segments composing the conductor\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

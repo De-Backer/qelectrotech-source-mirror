@@ -1,0 +1,345 @@
+.TH "QetGraphicsHeaderItem" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QetGraphicsHeaderItem \- The \fBQetGraphicsHeaderItem\fP class The header have a few parameters to edit her visual aspect\&. Margins, to edit the margin between the cell and the text\&. Text font\&. Text alignment in the cell These three parameters are not settable directly with the header but trough the model to be displayed by the header\&. Header search these parameters only in the section 0 for cell of header\&. By consequence, set data in other section is useless also these parameter can't be set individually for each cell\&. The margins is stored in the model in index Qt::UserRole+1 and for value a QString\&. See \fBQETUtils::marginsFromString\fP and \fBQETUtils::marginsToString\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetgraphicsheaderitem\&.h>\fP
+.PP
+Inherits QGraphicsObject\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBType\fP = UserType + 1301 }"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBsectionResized\fP (int logicalIndex, int size)"
+.br
+.ti -1c
+.RI "void \fBheightResized\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQetGraphicsHeaderItem\fP (QGraphicsItem *parent=nullptr)"
+.br
+.RI "\fBQetGraphicsHeaderItem::QetGraphicsHeaderItem\fP\&. "
+.ti -1c
+.RI "int \fBtype\fP () const override"
+.br
+.ti -1c
+.RI "void \fBsetModel\fP (QAbstractItemModel *\fBmodel\fP=nullptr)"
+.br
+.RI "\fBQetGraphicsHeaderItem::setModel\fP Set the model presented by this item Since \fBQetGraphicsHeaderItem\fP don't take ownership of model, if item already have a model, it's your responsability to delete it\&. "
+.ti -1c
+.RI "QAbstractItemModel * \fBmodel\fP () const"
+.br
+.RI "\fBQetGraphicsHeaderItem::model\fP\&. "
+.ti -1c
+.RI "virtual QRectF \fBboundingRect\fP () const override"
+.br
+.RI "\fBQetGraphicsHeaderItem::boundingRect\fP Reimplemented from QGraphicsObject::boundingRect() const;\&. "
+.ti -1c
+.RI "virtual void \fBpaint\fP (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override"
+.br
+.RI "\fBQetGraphicsHeaderItem::paint\fP Reimplemented from QGraphicsObject::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) const;\&. "
+.ti -1c
+.RI "QRect \fBrect\fP () const"
+.br
+.RI "\fBQetGraphicsHeaderItem::rect\fP\&. "
+.ti -1c
+.RI "void \fBresizeSection\fP (int logicalIndex, int size)"
+.br
+.RI "\fBQetGraphicsHeaderItem::resizeSection\fP\&. "
+.ti -1c
+.RI "int \fBsectionSize\fP (int logical_index) const"
+.br
+.RI "\fBQetGraphicsHeaderItem::sectionSize\fP\&. "
+.ti -1c
+.RI "QVector< int > \fBminimumSectionWidth\fP () const"
+.br
+.ti -1c
+.RI "int \fBminimumWidth\fP () const"
+.br
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &document) const"
+.br
+.RI "\fBQetGraphicsHeaderItem::toXml\fP save the header to xml\&. "
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &element)"
+.br
+.RI "\fBQetGraphicsHeaderItem::fromXml\fP Restore the header from xml\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QString \fBxmlTagName\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpMinimumSectionsSize\fP ()"
+.br
+.RI "\fBQetGraphicsHeaderItem::setUpMinimumSectionsSize\fP Setup the minimum section size and height of the item\&. Not that this function doesn't change the current size of this item\&. "
+.ti -1c
+.RI "void \fBsetUpBoundingRect\fP ()"
+.br
+.RI "\fBQetGraphicsHeaderItem::setUpBoundingRect\fP Setup the bounding rect of the item\&. "
+.ti -1c
+.RI "void \fBheaderDataChanged\fP (Qt::Orientations orientation, int first, int last)"
+.br
+.RI "\fBQetGraphicsHeaderItem::headerDataChanged\fP Update the header when data of displayed model change\&. "
+.ti -1c
+.RI "void \fBadjustSize\fP ()"
+.br
+.RI "\fBQetGraphicsHeaderItem::adjustSize\fP If needed, this function resize the current height and section according to there minimum\&. "
+.ti -1c
+.RI "void \fBmodelReseted\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QRectF \fBm_bounding_rect\fP"
+.br
+.ti -1c
+.RI "QAbstractItemModel * \fBm_model\fP = nullptr"
+.br
+.ti -1c
+.RI "QVector< int > \fBm_sections_minimum_width\fP"
+.br
+.ti -1c
+.RI "QVector< int > \fBm_current_sections_width\fP"
+.br
+.ti -1c
+.RI "int \fBm_section_height\fP =1"
+.br
+.ti -1c
+.RI "int \fBm_minimum_section_height\fP =1"
+.br
+.ti -1c
+.RI "int \fBm_minimum_width\fP =1"
+.br
+.ti -1c
+.RI "QRect \fBm_current_rect\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBQetGraphicsHeaderItem\fP class The header have a few parameters to edit her visual aspect\&. Margins, to edit the margin between the cell and the text\&. Text font\&. Text alignment in the cell These three parameters are not settable directly with the header but trough the model to be displayed by the header\&. Header search these parameters only in the section 0 for cell of header\&. By consequence, set data in other section is useless also these parameter can't be set individually for each cell\&. The margins is stored in the model in index Qt::UserRole+1 and for value a QString\&. See \fBQETUtils::marginsFromString\fP and \fBQETUtils::marginsToString\fP\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIType \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QetGraphicsHeaderItem::QetGraphicsHeaderItem (QGraphicsItem * parent = \fCnullptr\fP)"
+
+.PP
+\fBQetGraphicsHeaderItem::QetGraphicsHeaderItem\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QetGraphicsHeaderItem::adjustSize ()\fC [private]\fP"
+
+.PP
+\fBQetGraphicsHeaderItem::adjustSize\fP If needed, this function resize the current height and section according to there minimum\&. 
+.SS "QRectF QetGraphicsHeaderItem::boundingRect () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBQetGraphicsHeaderItem::boundingRect\fP Reimplemented from QGraphicsObject::boundingRect() const;\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void QetGraphicsHeaderItem::fromXml (const QDomElement & element)"
+
+.PP
+\fBQetGraphicsHeaderItem::fromXml\fP Restore the header from xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.SS "void QetGraphicsHeaderItem::headerDataChanged (Qt::Orientations orientation, int first, int last)\fC [private]\fP"
+
+.PP
+\fBQetGraphicsHeaderItem::headerDataChanged\fP Update the header when data of displayed model change\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIorientation\fP 
+.br
+\fIfirst\fP 
+.br
+\fIlast\fP 
+.RE
+.PP
+
+.SS "void QetGraphicsHeaderItem::heightResized ()\fC [signal]\fP"
+
+.SS "QVector<int> QetGraphicsHeaderItem::minimumSectionWidth () const\fC [inline]\fP"
+
+.SS "int QetGraphicsHeaderItem::minimumWidth () const\fC [inline]\fP"
+
+.SS "QAbstractItemModel * QetGraphicsHeaderItem::model () const"
+
+.PP
+\fBQetGraphicsHeaderItem::model\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the model that this item is presenting 
+.RE
+.PP
+
+.SS "void QetGraphicsHeaderItem::modelReseted ()\fC [private]\fP"
+
+.SS "void QetGraphicsHeaderItem::paint (QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBQetGraphicsHeaderItem::paint\fP Reimplemented from QGraphicsObject::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) const;\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP 
+.br
+\fIoption\fP 
+.br
+\fIwidget\fP 
+.RE
+.PP
+
+.SS "QRect QetGraphicsHeaderItem::rect () const"
+
+.PP
+\fBQetGraphicsHeaderItem::rect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the current rect of the item aka the size of rectangle painted\&. 
+.RE
+.PP
+
+.SS "void QetGraphicsHeaderItem::resizeSection (int logicalIndex, int size)"
+
+.PP
+\fBQetGraphicsHeaderItem::resizeSection\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogicalIndex\fP 
+.br
+\fIsize\fP 
+.RE
+.PP
+
+.SS "void QetGraphicsHeaderItem::sectionResized (int logicalIndex, int size)\fC [signal]\fP"
+
+.SS "int QetGraphicsHeaderItem::sectionSize (int logical_index) const"
+
+.PP
+\fBQetGraphicsHeaderItem::sectionSize\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogical_index\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the width (or height for vertical headers) of the given logicalIndex\&. 
+.RE
+.PP
+
+.SS "void QetGraphicsHeaderItem::setModel (QAbstractItemModel * model = \fCnullptr\fP)"
+
+.PP
+\fBQetGraphicsHeaderItem::setModel\fP Set the model presented by this item Since \fBQetGraphicsHeaderItem\fP don't take ownership of model, if item already have a model, it's your responsability to delete it\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodel\fP 
+.RE
+.PP
+
+.SS "void QetGraphicsHeaderItem::setUpBoundingRect ()\fC [private]\fP"
+
+.PP
+\fBQetGraphicsHeaderItem::setUpBoundingRect\fP Setup the bounding rect of the item\&. 
+.SS "void QetGraphicsHeaderItem::setUpMinimumSectionsSize ()\fC [private]\fP"
+
+.PP
+\fBQetGraphicsHeaderItem::setUpMinimumSectionsSize\fP Setup the minimum section size and height of the item\&. Not that this function doesn't change the current size of this item\&. 
+.SS "QDomElement QetGraphicsHeaderItem::toXml (QDomDocument & document) const"
+
+.PP
+\fBQetGraphicsHeaderItem::toXml\fP save the header to xml\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdocument\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "int QetGraphicsHeaderItem::type () const\fC [inline]\fP, \fC [override]\fP"
+
+.SS "static QString QetGraphicsHeaderItem::xmlTagName ()\fC [inline]\fP, \fC [static]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QRectF QetGraphicsHeaderItem::m_bounding_rect\fC [private]\fP"
+
+.SS "QRect QetGraphicsHeaderItem::m_current_rect\fC [private]\fP"
+
+.SS "QVector<int> QetGraphicsHeaderItem::m_current_sections_width\fC [private]\fP"
+
+.SS "int QetGraphicsHeaderItem::m_minimum_section_height =1\fC [private]\fP"
+
+.SS "int QetGraphicsHeaderItem::m_minimum_width =1\fC [private]\fP"
+
+.SS "QAbstractItemModel* QetGraphicsHeaderItem::m_model = nullptr\fC [private]\fP"
+
+.SS "int QetGraphicsHeaderItem::m_section_height =1\fC [private]\fP"
+
+.SS "QVector<int> QetGraphicsHeaderItem::m_sections_minimum_width\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

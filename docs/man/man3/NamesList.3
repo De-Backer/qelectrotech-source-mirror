@@ -1,0 +1,305 @@
+.TH "NamesList" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NamesList
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <nameslist\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNamesList\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~NamesList\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddName\fP (const QString &, const QString &)"
+.br
+.ti -1c
+.RI "void \fBremoveName\fP (const QString &)"
+.br
+.ti -1c
+.RI "void \fBclearNames\fP ()"
+.br
+.ti -1c
+.RI "QList< QString > \fBlangs\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisEmpty\fP () const"
+.br
+.ti -1c
+.RI "int \fBcount\fP () const"
+.br
+.ti -1c
+.RI "QString & \fBoperator[]\fP (const QString &)"
+.br
+.ti -1c
+.RI "const QString \fBoperator[]\fP (const QString &) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBNamesList\fP &) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBNamesList\fP &) const"
+.br
+.ti -1c
+.RI "QString \fBname\fP (const QString &=QString()) const"
+.br
+.ti -1c
+.RI "void \fBfromXml\fP (const QDomElement &, const QHash< QString, QString > &=QHash< QString, QString >())"
+.br
+.ti -1c
+.RI "void \fBfromXml\fP (const pugi::xml_node &xml_element, const QHash< QString, QString > &xml_options=QHash< QString, QString >())"
+.br
+.RI "\fBNamesList::fromXml\fP Load the list of lang <-> name from an xml description\&. xml_element must be the parent of a child element tagged 'names' If a couple lang <-> name already exist, they will overwrited, else they will be appened\&. "
+.ti -1c
+.RI "QDomElement \fBtoXml\fP (QDomDocument &, const QHash< QString, QString > &=QHash< QString, QString >()) const"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBMetaTypeId\fP = qRegisterMetaType<\fBNamesList\fP>('NamesList')"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QHash< QString, QString > \fBgetXmlOptions\fP (const QHash< QString, QString > &=QHash< QString, QString >()) const"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QHash< QString, QString > \fBhash_names\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Cette classe represente une liste de noms, utilisee par les elements et categories pour embarquer un meme nom en plusieurs langues\&. Les langues sont representees par deux lettres (typiquement : les deux premieres de la locale du systeme) ; exemples : en pour l'anglais, fr pour le francais\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NamesList::NamesList ()"
+Constructeur 
+.SS "NamesList::~NamesList ()\fC [virtual]\fP"
+Destructeur 
+.SH "Member Function Documentation"
+.PP 
+.SS "void NamesList::addName (const QString & lang, const QString & name)"
+Ajoute un nom a la liste 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlang\fP Sigle de deux lettres representant une langue\&. Si cela n'est pas respecte, l'insertion n'est pas effectuee\&. 
+.br
+\fIname\fP Nom lui-meme\&. Ce ne doit pas etre une chaine de caractere vide\&. Si cela n'est pas respecte, l'insertion n'est pas effectuee\&. 
+.RE
+.PP
+
+.SS "void NamesList::clearNames ()"
+Supprime tous les noms 
+.SS "int NamesList::count () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+Le nombre de noms dans la liste 
+.RE
+.PP
+
+.SS "void NamesList::fromXml (const pugi::xml_node & xml_element, const QHash< QString, QString > & xml_options = \fCQHash<QString, QString>()\fP)"
+
+.PP
+\fBNamesList::fromXml\fP Load the list of lang <-> name from an xml description\&. xml_element must be the parent of a child element tagged 'names' If a couple lang <-> name already exist, they will overwrited, else they will be appened\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP : xml element to analyze 
+.br
+\fIxml_options\fP : A set of options related to XML parsing\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBgetXmlOptions()\fP 
+.RE
+.PP
+
+.SS "void NamesList::fromXml (const QDomElement & xml_element, const QHash< QString, QString > & xml_options = \fCQHash<QString, QString>()\fP)"
+Charge la liste de noms depuis un element XML\&. Cet element est sense etre le parent d'un element 'names', qui contient lui meme les 'name'\&. Les noms precedemment contenus dans la liste ne sont pas effaces mais peuvent etre ecrases\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_element\fP L'element XML a analyser 
+.br
+\fIxml_options\fP A set of options related to XML parsing\&. 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBgetXmlOptions()\fP 
+.RE
+.PP
+
+.SS "QHash< QString, QString > NamesList::getXmlOptions (const QHash< QString, QString > & xml_options = \fCQHash<QString, QString>()\fP) const\fC [protected]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_options\fP A set of options related to XML parsing\&. Available keys: ParentTagName (falls back to 'names') TagName (falls back to 'name') LanguageAttribute (falls back to 'lang') 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the same set, with at least all the known options 
+.RE
+.PP
+
+.SS "bool NamesList::isEmpty () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si la liste de noms est vide, false sinon 
+.RE
+.PP
+
+.SS "QList< QString > NamesList::langs () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+La liste de toutes les langues disponibles 
+.RE
+.PP
+
+.SS "QString NamesList::name (const QString & fallback_name = \fCQString()\fP) const"
+Return the adequate name regarding the current system locale\&. By order of preference, this function chooses:
+.IP "\(bu" 2
+the name in the system language
+.IP "\(bu" 2
+the English name
+.IP "\(bu" 2
+the provided fallback name if non-empty
+.IP "\(bu" 2
+the first language encountered in the list
+.IP "\(bu" 2
+an empty string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfallback_name\fP name to be returned when no adequate name has been found 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The adequate name regarding the current system locale\&. 
+.RE
+.PP
+
+.PP
+
+.SS "bool NamesList::operator!= (const \fBNamesList\fP & nl) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fInl\fP une autre liste de noms 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si les listes de noms sont differentes, false sinon 
+.RE
+.PP
+
+.SS "bool NamesList::operator== (const \fBNamesList\fP & nl) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fInl\fP une autre liste de noms 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true si les listes de noms sont identiques, false sinon 
+.RE
+.PP
+
+.SS "QString & NamesList::operator[] (const QString & lang)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIlang\fP une langue 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Le nom dans la langue donnee ou QString() si ce nom n'est pas defini 
+.RE
+.PP
+
+.SS "const QString NamesList::operator[] (const QString & lang) const"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIlang\fP une langue 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Le nom dans la langue donnee ou QString() si ce nom n'est pas defini 
+.RE
+.PP
+
+.SS "void NamesList::removeName (const QString & lang)"
+Enleve le nom dont une langue donnee 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlang\fP la langue pour laquelle il faut supprimer le nom 
+.RE
+.PP
+
+.SS "QDomElement NamesList::toXml (QDomDocument & xml_document, const QHash< QString, QString > & xml_options = \fCQHash<QString, QString>()\fP) const"
+Exporte la liste des noms vers un element XML\&. Veillez a verifier que la liste de noms n'est pas vide avant de l'exporter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIxml_document\fP Le document XML dans lequel l'element XML sera insere 
+.br
+\fIxml_options\fP A set of options related to XML parsing\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+L'element XML correspondant a la section 'names' 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBcount()\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QHash<QString, QString> NamesList::hash_names\fC [private]\fP"
+
+.SS "int NamesList::MetaTypeId = qRegisterMetaType<\fBNamesList\fP>('NamesList')\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

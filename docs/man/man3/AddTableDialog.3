@@ -1,0 +1,288 @@
+.TH "AddTableDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AddTableDialog \- The \fBAddTableDialog\fP class Provide a dialog used to edit the properties of table befor adding to a diagram\&. The main difference betwen this dialog and the widget used to edit the properties of table is that the dialog have two extra check box\&. One for adjust the size of the table to diagram Second for add new tables on new folios if the table can't fit into diagram\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <addtabledialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAddTableDialog\fP (QWidget *content_widget, QWidget *parent=nullptr)"
+.br
+.RI "\fBAddTableDialog::AddTableDialog\fP\&. "
+.ti -1c
+.RI "\fB~AddTableDialog\fP ()"
+.br
+.RI "AddTableDialog::~AddNomenclatureDialog\&. "
+.ti -1c
+.RI "void \fBsetQueryWidget\fP (QWidget *widget)"
+.br
+.RI "\fBAddTableDialog::setQueryWidget\fP Not implemented yet\&. "
+.ti -1c
+.RI "bool \fBadjustTableToFolio\fP () const"
+.br
+.RI "\fBAddTableDialog::adjustTableToFolio\fP\&. "
+.ti -1c
+.RI "bool \fBaddNewTableToNewDiagram\fP () const"
+.br
+.RI "\fBAddTableDialog::addNewTableToNewDiagram\fP\&. "
+.ti -1c
+.RI "QString \fBtableName\fP () const"
+.br
+.RI "\fBAddTableDialog::tableName\fP\&. "
+.ti -1c
+.RI "QMargins \fBheaderMargins\fP () const"
+.br
+.RI "\fBAddTableDialog::headerMargins\fP\&. "
+.ti -1c
+.RI "Qt::Alignment \fBheaderAlignment\fP () const"
+.br
+.RI "\fBAddTableDialog::headerAlignment\fP\&. "
+.ti -1c
+.RI "QFont \fBheaderFont\fP () const"
+.br
+.RI "\fBAddTableDialog::headerFont\fP\&. "
+.ti -1c
+.RI "QMargins \fBtableMargins\fP () const"
+.br
+.RI "\fBAddTableDialog::tableMargins\fP\&. "
+.ti -1c
+.RI "Qt::Alignment \fBtableAlignment\fP () const"
+.br
+.RI "\fBAddTableDialog::tableAlignment\fP\&. "
+.ti -1c
+.RI "QFont \fBtableFont\fP () const"
+.br
+.RI "\fBAddTableDialog::tableFont\fP\&. "
+.ti -1c
+.RI "QWidget * \fBcontentWidget\fP () const"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_header_font_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_table_font_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_edit_header_margins_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_m_table_margins_pb_clicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBsaveConfig\fP ()"
+.br
+.ti -1c
+.RI "void \fBloadConfig\fP ()"
+.br
+.ti -1c
+.RI "void \fBfillSavedQuery\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::AddTableDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "QWidget * \fBm_content_widget\fP = nullptr"
+.br
+.ti -1c
+.RI "QMargins \fBm_header_margins\fP = QMargins(5,5,10,5)"
+.br
+.ti -1c
+.RI "QMargins \fBm_table_margins\fP = QMargins(5,5,10,5)"
+.br
+.ti -1c
+.RI "QFont \fBm_header_font\fP = \fBQETApp::diagramTextsFont\fP()"
+.br
+.ti -1c
+.RI "QFont \fBm_table_font\fP = \fBQETApp::diagramTextsFont\fP()"
+.br
+.ti -1c
+.RI "QString \fBm_identifier\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBAddTableDialog\fP class Provide a dialog used to edit the properties of table befor adding to a diagram\&. The main difference betwen this dialog and the widget used to edit the properties of table is that the dialog have two extra check box\&. One for adjust the size of the table to diagram Second for add new tables on new folios if the table can't fit into diagram\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AddTableDialog::AddTableDialog (QWidget * content_widget, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBAddTableDialog::AddTableDialog\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontent_widget\fP : the widget to display in the 'content' tab\&. This dialog take ownership of content_widget\&. 
+.br
+\fIparent\fP : parent widget\&. 
+.RE
+.PP
+
+.SS "AddTableDialog::~AddTableDialog ()"
+
+.PP
+AddTableDialog::~AddNomenclatureDialog\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool AddTableDialog::addNewTableToNewDiagram () const"
+
+.PP
+\fBAddTableDialog::addNewTableToNewDiagram\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "bool AddTableDialog::adjustTableToFolio () const"
+
+.PP
+\fBAddTableDialog::adjustTableToFolio\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QWidget * AddTableDialog::contentWidget () const"
+
+.SS "void AddTableDialog::fillSavedQuery ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "Qt::Alignment AddTableDialog::headerAlignment () const"
+
+.PP
+\fBAddTableDialog::headerAlignment\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QFont AddTableDialog::headerFont () const"
+
+.PP
+\fBAddTableDialog::headerFont\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QMargins AddTableDialog::headerMargins () const"
+
+.PP
+\fBAddTableDialog::headerMargins\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void AddTableDialog::loadConfig ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void AddTableDialog::on_m_edit_header_margins_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void AddTableDialog::on_m_header_font_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void AddTableDialog::on_m_table_font_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void AddTableDialog::on_m_table_margins_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void AddTableDialog::saveConfig ()\fC [private]\fP, \fC [slot]\fP"
+
+.SS "void AddTableDialog::setQueryWidget (QWidget * widget)"
+
+.PP
+\fBAddTableDialog::setQueryWidget\fP Not implemented yet\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidget\fP 
+.RE
+.PP
+
+.SS "Qt::Alignment AddTableDialog::tableAlignment () const"
+
+.PP
+\fBAddTableDialog::tableAlignment\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QFont AddTableDialog::tableFont () const"
+
+.PP
+\fBAddTableDialog::tableFont\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QMargins AddTableDialog::tableMargins () const"
+
+.PP
+\fBAddTableDialog::tableMargins\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "QString AddTableDialog::tableName () const"
+
+.PP
+\fBAddTableDialog::tableName\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QWidget* AddTableDialog::m_content_widget = nullptr\fC [private]\fP"
+
+.SS "QFont AddTableDialog::m_header_font = \fBQETApp::diagramTextsFont\fP()\fC [private]\fP"
+
+.SS "QMargins AddTableDialog::m_header_margins = QMargins(5,5,10,5)\fC [private]\fP"
+
+.SS "QString AddTableDialog::m_identifier\fC [private]\fP"
+
+.SS "QFont AddTableDialog::m_table_font = \fBQETApp::diagramTextsFont\fP()\fC [private]\fP"
+
+.SS "QMargins AddTableDialog::m_table_margins = QMargins(5,5,10,5)\fC [private]\fP"
+
+.SS "Ui::AddTableDialog* AddTableDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

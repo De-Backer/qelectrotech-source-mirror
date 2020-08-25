@@ -1,0 +1,214 @@
+.TH "QTextOrientationSpinBoxWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QTextOrientationSpinBoxWidget
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qtextorientationspinboxwidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetOrientation\fP (const double &)"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (const double &)"
+.br
+.ti -1c
+.RI "void \fBsetReadOnly\fP (bool)"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBeditingFinished\fP (double)"
+.br
+.ti -1c
+.RI "void \fBeditingFinished\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQTextOrientationSpinBoxWidget\fP (QWidget *=nullptr)"
+.br
+.ti -1c
+.RI "\fB~QTextOrientationSpinBoxWidget\fP () override"
+.br
+.ti -1c
+.RI "\fBQTextOrientationWidget\fP * \fBorientationWidget\fP () const"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBspinBox\fP () const"
+.br
+.ti -1c
+.RI "double \fBorientation\fP () const"
+.br
+.ti -1c
+.RI "double \fBvalue\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisReadOnly\fP () const"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBemitChangeSignals\fP ()"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQTextOrientationSpinBoxWidget\fP (const \fBQTextOrientationSpinBoxWidget\fP &)"
+.br
+.ti -1c
+.RI "void \fBbuild\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBQTextOrientationWidget\fP * \fBorientation_widget_\fP"
+.br
+.ti -1c
+.RI "QDoubleSpinBox * \fBspin_box_\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a widget grouping a \fBQTextOrientationWidget\fP and QSpinBox next to each other\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBQTextOrientationWidget\fP 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "QTextOrientationSpinBoxWidget::QTextOrientationSpinBoxWidget (QWidget * parent = \fCnullptr\fP)"
+Constructeur 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP QWidget parent de ce \fBQTextOrientationSpinBoxWidget\fP 
+.RE
+.PP
+
+.SS "QTextOrientationSpinBoxWidget::~QTextOrientationSpinBoxWidget ()\fC [override]\fP"
+Destructeur 
+.SS "QTextOrientationSpinBoxWidget::QTextOrientationSpinBoxWidget (const \fBQTextOrientationSpinBoxWidget\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void QTextOrientationSpinBoxWidget::build ()\fC [private]\fP"
+Construit le widget 
+.SS "void QTextOrientationSpinBoxWidget::editingFinished ()\fC [signal]\fP"
+
+.SS "void QTextOrientationSpinBoxWidget::editingFinished (double)\fC [signal]\fP"
+Signals emitted when users have finished editing the orientation\&. 
+.SS "void QTextOrientationSpinBoxWidget::emitChangeSignals ()\fC [private]\fP, \fC [slot]\fP"
+Emet le signal orientationEditingFinished avec la valeur de l'orientation en cours 
+.SS "bool QTextOrientationSpinBoxWidget::isReadOnly () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+true si le widget est en mode 'lecture seule', false sinon 
+.RE
+.PP
+
+.SS "double QTextOrientationSpinBoxWidget::orientation () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+l'orientation en cours 
+.RE
+.PP
+
+.SS "\fBQTextOrientationWidget\fP * QTextOrientationSpinBoxWidget::orientationWidget () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+un pointeur vers le \fBQTextOrientationWidget\fP 
+.RE
+.PP
+
+.SS "void QTextOrientationSpinBoxWidget::setOrientation (const double & value)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Nouvelle valeur de l'orientation a afficher 
+.RE
+.PP
+
+.SS "void QTextOrientationSpinBoxWidget::setReadOnly (bool ro)\fC [slot]\fP"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIro\fP true pour passer le widget en mode 'lecture seule', false sinon 
+.RE
+.PP
+
+.SS "void QTextOrientationSpinBoxWidget::setValue (const double & value)\fC [slot]\fP"
+Synonyme pour setOrientation(value) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Nouvelle valeur de l'orientation a afficher 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBsetOrientation\fP 
+.RE
+.PP
+
+.SS "QDoubleSpinBox * QTextOrientationSpinBoxWidget::spinBox () const"
+
+.PP
+\fBReturns\fP
+.RS 4
+un pointeur vers le QSpinBox 
+.RE
+.PP
+
+.SS "double QTextOrientationSpinBoxWidget::value () const"
+Synonyme pour \fBorientation()\fP 
+.PP
+\fBReturns\fP
+.RS 4
+l'orientation en cours 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBorientation()\fP 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBQTextOrientationWidget\fP* QTextOrientationSpinBoxWidget::orientation_widget_\fC [private]\fP"
+
+.SS "QDoubleSpinBox* QTextOrientationSpinBoxWidget::spin_box_\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

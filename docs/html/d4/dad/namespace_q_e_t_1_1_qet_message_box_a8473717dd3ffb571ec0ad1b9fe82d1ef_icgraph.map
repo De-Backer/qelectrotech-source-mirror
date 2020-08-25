@@ -1,0 +1,35 @@
+<map id="QET::QetMessageBox::question" name="QET::QetMessageBox::question">
+<area shape="rect" id="node1" title=" " alt="" coords="2327,289,2479,331"/>
+<area shape="rect" id="node2" href="$d1/d9a/class_q_e_t_title_block_template_editor.html#a533265abf5c38d8ea18c0f60ec09ab28" title=" " alt="" coords="2074,5,2269,47"/>
+<area shape="rect" id="node4" href="$d9/de5/class_q_e_t_element_editor.html#a492fe5c32ead5629837427e6760eb81e" title=" " alt="" coords="278,97,473,123"/>
+<area shape="rect" id="node6" href="$d4/d9f/class_element_dialog.html#a5c61a0b44ee18dd12d8c715fa96a954f" title=" " alt="" coords="2076,122,2267,149"/>
+<area shape="rect" id="node18" href="$d7/df8/class_q_e_t_app.html#a4b209f6de933a11e442f5e36960aac12" title="QETApp::checkBackupFiles Check for backup files. If backup was found, open a dialog and ask user what..." alt="" coords="2078,173,2265,199"/>
+<area shape="rect" id="node20" href="$d6/d54/class_elements_collection_widget.html#a7c879107e867d9379d762a358954fb04" title="ElementsCollectionWidget::deleteDirectory Delete directory represented by the current selected item." alt="" coords="2083,289,2259,331"/>
+<area shape="rect" id="node23" href="$d6/d54/class_elements_collection_widget.html#a05227112b7d8c3c76b4a3269742390f9" title="ElementsCollectionWidget::deleteElement Delete the element represented by the current selected item." alt="" coords="2083,224,2259,265"/>
+<area shape="rect" id="node24" href="$d3/da4/class_title_block_template_deleter.html#ae9ef8f2062a9307d06efd6ca12618975" title=" " alt="" coords="2084,355,2259,396"/>
+<area shape="rect" id="node27" href="$d1/df8/class_export_element_text_pattern.html#ae5826375665c58c5e41d038e28c17f09" title="ExportElementTextPattern::ExportElementTextPattern Constructor." alt="" coords="2079,420,2263,461"/>
+<area shape="rect" id="node28" href="$d6/df6/class_project_view.html#a05e419d3276d2e955b5dad2375ec4c9e" title="ProjectView::removeDiagram Remove a diagram (folio) of the project." alt="" coords="2076,486,2267,513"/>
+<area shape="rect" id="node30" href="$d9/de5/class_q_e_t_element_editor.html#ac51b5c2e9d40466152bbe46aa6247ebe" title="QETElementEditor::slot_reload Reload the element from the file or location." alt="" coords="1321,480,1481,521"/>
+<area shape="rect" id="node31" href="$d6/df6/class_project_view.html#a37b34840927b7c68f65e6abab73897a1" title="ProjectView::tryClosingDiagrams try to close this project, if diagram or project option are changed a..." alt="" coords="2064,587,2279,614"/>
+<area shape="rect" id="node3" href="$d1/d9a/class_q_e_t_title_block_template_editor.html#a196df1ee921375a7f3c501b235a2d71c" title=" " alt="" coords="1811,5,2005,47"/>
+<area shape="rect" id="node5" href="$d9/de5/class_q_e_t_element_editor.html#ac50871a302a0fccc664725cb47c62bd7" title=" " alt="" coords="11,97,214,123"/>
+<area shape="rect" id="node7" href="$d4/d9f/class_element_dialog.html#aef8b46325621e6729642ac7c50aeb86c" title="ElementDialog::setUpConnection Setup connection of this dialog." alt="" coords="1800,122,2016,149"/>
+<area shape="rect" id="node8" href="$d4/d9f/class_element_dialog.html#ab239b0d1b9d9a99332abe66554eeea81" title="ElementDialog::ElementDialog." alt="" coords="1552,126,1752,153"/>
+<area shape="rect" id="node9" href="$d4/d9f/class_element_dialog.html#adc31d4c10b7949c59976cbf852049b6d" title="ElementDialog::execConfiguredDialog launch a dialog with the chosen mode." alt="" coords="1299,140,1504,181"/>
+<area shape="rect" id="node10" href="$d4/d9f/class_element_dialog.html#a17ae2c182274d491caded3ecf2eb62af" title="ElementDialog::getOpenElementLocation Display a dialog for open an element through her location." alt="" coords="780,224,992,265"/>
+<area shape="rect" id="node15" href="$d4/d9f/class_element_dialog.html#ae0f316f7c49f42f28a1a4b2d08c27156" title="ElementDialog::getSaveElementLocation Display a dialog that allow to user to select an element (exist..." alt="" coords="1040,140,1251,181"/>
+<area shape="rect" id="node11" href="$d9/de5/class_q_e_t_element_editor.html#ad6ae1be64c9759c593e838837d2bb510" title="QETElementEditor::pasteFromElement Ask an element to user, copy the xml definition of the element to ..." alt="" coords="531,224,732,265"/>
+<area shape="rect" id="node14" href="$d9/de5/class_q_e_t_element_editor.html#a5dca1967a5849086fad2e1dcd08ad2d6" title=" " alt="" coords="534,290,729,317"/>
+<area shape="rect" id="node12" href="$d9/de5/class_q_e_t_element_editor.html#a189af314c90841b9fa405ee0fc7f0fb5" title="QETElementEditor::setupActions Create action used in Element editor." alt="" coords="268,231,483,258"/>
+<area shape="rect" id="node13" href="$d9/de5/class_q_e_t_element_editor.html#a33ea78f1cd92dd1074c339c36adb9349" title=" " alt="" coords="5,224,220,265"/>
+<area shape="rect" id="node16" href="$d9/de5/class_q_e_t_element_editor.html#adf97309e5d7de0e274ac602e7de0a619" title="QETElementEditor::slot_saveAs Ask a location to user and save the current edited element to this loca..." alt="" coords="806,140,966,181"/>
+<area shape="rect" id="node17" href="$d9/de5/class_q_e_t_element_editor.html#a8b9b36985a13464aae88c3926f75a9be" title="QETElementEditor::slot_save Save the current editing element. If the filepath or location is unknown,..." alt="" coords="534,122,729,149"/>
+<area shape="rect" id="node19" href="$d7/df8/class_q_e_t_app.html#afb6be0d7c2334375dce4ea9414bc029a" title="QETApp::QETApp." alt="" coords="1844,173,1972,199"/>
+<area shape="rect" id="node21" href="$d6/d54/class_elements_collection_widget.html#a7a53ef17cb9f2d00f177e0e055f6f74b" title="ElementsCollectionWidget::setUpConnection Setup the connection used in this widget." alt="" coords="1820,256,1996,297"/>
+<area shape="rect" id="node22" href="$d6/d54/class_elements_collection_widget.html#a11b713ea2c0f55de773228183475702c" title="ElementsCollectionWidget::ElementsCollectionWidget Default constructor." alt="" coords="1560,256,1744,297"/>
+<area shape="rect" id="node25" href="$db/d39/class_elements_panel_widget.html#a4e790da3ba0af777fad6ad00ffa2aa8e" title=" " alt="" coords="1817,355,1999,396"/>
+<area shape="rect" id="node26" href="$db/d39/class_elements_panel_widget.html#ae1a5784078f62f76b0e4f2caf07975e3" title=" " alt="" coords="1573,355,1731,396"/>
+<area shape="rect" id="node29" href="$d6/df6/class_project_view.html#a0b1154e63e636689947a26254be0f7b1" title=" " alt="" coords="1813,486,2003,513"/>
+<area shape="rect" id="node32" href="$d6/df6/class_project_view.html#a67d65a0a50708df02e0e27b514cba81e" title=" " alt="" coords="1829,587,1987,614"/>
+<area shape="rect" id="node33" href="$d6/df6/class_project_view.html#a11d3596f241190b7f93800d7bccacb51" title=" " alt="" coords="1571,587,1733,614"/>
+</map>

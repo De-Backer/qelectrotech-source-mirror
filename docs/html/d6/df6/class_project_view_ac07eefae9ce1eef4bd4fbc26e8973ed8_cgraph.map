@@ -1,0 +1,32 @@
+<map id="ProjectView::initWidgets" name="ProjectView::initWidgets">
+<area shape="rect" id="node1" title=" " alt="" coords="5,125,169,152"/>
+<area shape="rect" id="node2" href="$d6/df6/class_project_view.html#aba6b8fc2535e52fd0e8564e27855e877" title="ProjectView::tabChanged Manage the tab change. If tab_id == &#45;1 (there is no diagram opened),..." alt="" coords="233,68,403,95"/>
+<area shape="rect" id="node4" href="$d6/df6/class_project_view.html#abd28b0f6cf5f0691a46c65a3a37eac25" title=" " alt="" coords="217,125,419,152"/>
+<area shape="rect" id="node7" href="$d6/df6/class_project_view.html#aa578b9f4a0d2d3d7a919ebbb7e21c99e" title=" " alt="" coords="241,245,395,272"/>
+<area shape="rect" id="node3" href="$d6/df6/class_project_view.html#a2b5bf2b21107ed482d8cedbd85d373f4" title=" " alt="" coords="471,53,681,94"/>
+<area shape="rect" id="node5" href="$d6/df6/class_project_view.html#aa6c4ad7487bbcae94c499a2f938db0c2" title=" " alt="" coords="491,118,661,159"/>
+<area shape="rect" id="node6" href="$d6/df6/class_project_view.html#a72a4237986e7c7545fc177c91e4f4112" title=" " alt="" coords="740,112,919,139"/>
+<area shape="rect" id="node8" href="$d6/dc5/class_q_e_t_project.html#a4950a2fd7df57591c523f9c596d859a0" title=" " alt="" coords="489,209,663,250"/>
+<area shape="rect" id="node23" href="$d6/df6/class_project_view.html#a1ab51411d9ca67448b8a826e24e2b4a5" title=" " alt="" coords="467,275,685,301"/>
+<area shape="rect" id="node24" href="$d6/df6/class_project_view.html#a049b4128fa32a5f18c06a0f39526af2c" title="ProjectView::updateTabTitle Update the title of the tab which display the diagram view." alt="" coords="484,372,668,399"/>
+<area shape="rect" id="node9" href="$d6/dc5/class_q_e_t_project.html#a0f838d02c0c6747371ddb9262cb2f67d" title=" " alt="" coords="747,229,911,256"/>
+<area shape="rect" id="node10" href="$d6/dc5/class_q_e_t_project.html#a113392389e518c47bd1a5bd797b9f109" title=" " alt="" coords="733,163,925,205"/>
+<area shape="rect" id="node11" href="$db/dfb/class_diagram_context.html#a523b81ff2dfbcf73e304a55ccdc58c1b" title=" " alt="" coords="991,7,1169,33"/>
+<area shape="rect" id="node15" href="$d6/dc5/class_q_e_t_project.html#a5bd24c3f623183ebf6f8f964118d2e6b" title=" " alt="" coords="1009,175,1151,201"/>
+<area shape="rect" id="node16" href="$d6/dc5/class_q_e_t_project.html#ab4d93c106722f84fe71e0492f76968e6" title="QETProject::folioAutoNum." alt="" coords="992,225,1168,252"/>
+<area shape="rect" id="node17" href="$dc/dcb/class_numerotation_context_commands.html#aad44e5c7dfc1989f5651e3e09b285b90" title="NumerotationContextCommands::next." alt="" coords="973,277,1187,318"/>
+<area shape="rect" id="node21" href="$d6/dc5/class_q_e_t_project.html#a04d0472582317a07aa88ded1f75e0499" title=" " alt="" coords="1021,57,1139,84"/>
+<area shape="rect" id="node22" href="$dc/dcb/class_numerotation_context_commands.html#a5b432c0f06a0fcee7c33cf3855c9df77" title="NumerotationContextCommands::toFinalString." alt="" coords="973,109,1187,150"/>
+<area shape="rect" id="node12" href="$db/dfb/class_diagram_context.html#a880beb69f231ec60e992f8407354043f" title=" " alt="" coords="1235,56,1455,83"/>
+<area shape="rect" id="node14" href="$db/dfb/class_diagram_context.html#aaae71410c57f72e74fbbd76af8a80a0f" title=" " alt="" coords="1267,5,1422,32"/>
+<area shape="rect" id="node13" href="$db/dfb/class_diagram_context.html#a07d55b945f3a45b467c1751339426d14" title=" " alt="" coords="1503,49,1675,90"/>
+<area shape="rect" id="node18" href="$d7/db7/class_numerotation_context.html#a89bafdd3ec788b03615a35132f3724fe" title="NumerotationContext::itemAt." alt="" coords="1271,111,1418,153"/>
+<area shape="rect" id="node19" href="$dc/dcb/class_numerotation_context_commands.html#a8d31e00e3c510c67a59f5de6964ef54a" title="NumerotationContextCommands::setNumStrategy apply the good strategy relative to str." alt="" coords="1238,186,1451,227"/>
+<area shape="rect" id="node20" href="$d7/db7/class_numerotation_context.html#ae56849be14a92c5b38f9963fbbc7e8a8" title="NumerotationContext::size." alt="" coords="1271,270,1418,311"/>
+<area shape="rect" id="node25" href="$d7/d9c/class_diagram_view.html#a8c062e9be49d4f8f5c43322fceed60ca" title=" " alt="" coords="753,397,906,424"/>
+<area shape="rect" id="node26" href="$df/d92/class_border_title_block.html#af3ad97fdae613bac5d29b7c5750fd6ec" title=" " alt="" coords="754,448,905,475"/>
+<area shape="rect" id="node27" href="$d3/d37/class_diagram.html#a6fa7b30a9b91175f316ce8212c32afd6" title="Diagram::folioIndex." alt="" coords="762,499,897,525"/>
+<area shape="rect" id="node28" href="$d3/df5/classautonum_1_1_assign_variables.html#abf8fecd78bdaa59e34a2f7da7af6ebcf" title="AssignVariables::formulaToLabel Return the formula with variable assigned (ready to be displayed)" alt="" coords="743,281,916,322"/>
+<area shape="rect" id="node29" href="$d3/d37/class_diagram.html#aea7457d56b24e4f319000c89d4cb61dc" title="Diagram::title." alt="" coords="779,347,879,373"/>
+<area shape="rect" id="node30" href="$df/d92/class_border_title_block.html#ae83cb12cf27875a22b05492cbcbcd5f3" title=" " alt="" coords="1007,347,1153,373"/>
+</map>

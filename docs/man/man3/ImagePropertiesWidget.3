@@ -1,0 +1,195 @@
+.TH "ImagePropertiesWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ImagePropertiesWidget \- The \fBImagePropertiesWidget\fP class This class provide a widget to edit the propertie of a \fBDiagramImageItem\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <imagepropertieswidget\&.h>\fP
+.PP
+Inherits \fBPropertiesEditorWidget\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBImagePropertiesWidget\fP (\fBDiagramImageItem\fP *image=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBImagePropertiesWidget::ImagePropertiesWidget\fP Constructor\&. "
+.ti -1c
+.RI "\fB~ImagePropertiesWidget\fP () override"
+.br
+.RI "\fBImagePropertiesWidget::~ImagePropertiesWidget\fP Destructor\&. "
+.ti -1c
+.RI "void \fBsetImageItem\fP (\fBDiagramImageItem\fP *image)"
+.br
+.RI "\fBImagePropertiesWidget::setImageItem\fP Set the image to edit properties\&. "
+.ti -1c
+.RI "void \fBapply\fP () override"
+.br
+.RI "\fBImagePropertiesWidget::apply\fP Apply the change\&. "
+.ti -1c
+.RI "void \fBreset\fP () override"
+.br
+.RI "\fBImagePropertiesWidget::reset\fP Reset the change\&. "
+.ti -1c
+.RI "bool \fBsetLiveEdit\fP (bool live_edit) override"
+.br
+.RI "\fBImagePropertiesWidget::setLiveEdit\fP\&. "
+.ti -1c
+.RI "QUndoCommand * \fBassociatedUndo\fP () const override"
+.br
+.RI "\fBImagePropertiesWidget::associatedUndo\fP\&. "
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_scale_slider_valueChanged\fP (int value)"
+.br
+.RI "\fBImagePropertiesWidget::on_m_scale_slider_valueChanged\fP Update the size of image when move slider\&. "
+.ti -1c
+.RI "void \fBon_m_lock_pos_cb_clicked\fP ()"
+.br
+.RI "\fBImagePropertiesWidget::on_m_lock_pos_cb_clicked\fP Set movable or not the image according to corresponding check box\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdateUi\fP () override"
+.br
+.RI "\fBImagePropertiesWidget::updateUi\fP Udpdate the ui, notably when the image to edit change\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::ImagePropertiesWidget * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBDiagramImageItem\fP * \fBm_image\fP"
+.br
+.ti -1c
+.RI "bool \fBm_movable\fP"
+.br
+.ti -1c
+.RI "qreal \fBm_scale\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBImagePropertiesWidget\fP class This class provide a widget to edit the propertie of a \fBDiagramImageItem\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ImagePropertiesWidget::ImagePropertiesWidget (\fBDiagramImageItem\fP * image = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBImagePropertiesWidget::ImagePropertiesWidget\fP Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimage\fP : image to edit properties 
+.br
+\fIparent\fP : parent widget 
+.RE
+.PP
+
+.SS "ImagePropertiesWidget::~ImagePropertiesWidget ()\fC [override]\fP"
+
+.PP
+\fBImagePropertiesWidget::~ImagePropertiesWidget\fP Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ImagePropertiesWidget::apply ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBImagePropertiesWidget::apply\fP Apply the change\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "QUndoCommand * ImagePropertiesWidget::associatedUndo () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBImagePropertiesWidget::associatedUndo\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the change in an undo command (ItemResizerCommand)\&. If there is no change return nullptr 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ImagePropertiesWidget::on_m_lock_pos_cb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBImagePropertiesWidget::on_m_lock_pos_cb_clicked\fP Set movable or not the image according to corresponding check box\&. 
+.SS "void ImagePropertiesWidget::on_m_scale_slider_valueChanged (int value)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBImagePropertiesWidget::on_m_scale_slider_valueChanged\fP Update the size of image when move slider\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP 
+.RE
+.PP
+
+.SS "void ImagePropertiesWidget::reset ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBImagePropertiesWidget::reset\fP Reset the change\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ImagePropertiesWidget::setImageItem (\fBDiagramImageItem\fP * image)"
+
+.PP
+\fBImagePropertiesWidget::setImageItem\fP Set the image to edit properties\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIimage\fP : image to edit 
+.RE
+.PP
+
+.SS "bool ImagePropertiesWidget::setLiveEdit (bool live_edit)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBImagePropertiesWidget::setLiveEdit\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlive_edit\fP true -> enable live edit false -> disable live edit 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+always true 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SS "void ImagePropertiesWidget::updateUi ()\fC [override]\fP, \fC [private]\fP, \fC [virtual]\fP"
+
+.PP
+\fBImagePropertiesWidget::updateUi\fP Udpdate the ui, notably when the image to edit change\&. 
+.PP
+Reimplemented from \fBPropertiesEditorWidget\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagramImageItem\fP* ImagePropertiesWidget::m_image\fC [private]\fP"
+
+.SS "bool ImagePropertiesWidget::m_movable\fC [private]\fP"
+
+.SS "qreal ImagePropertiesWidget::m_scale\fC [private]\fP"
+
+.SS "Ui::ImagePropertiesWidget* ImagePropertiesWidget::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,81 @@
+.TH "IdFolioNum" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IdFolioNum
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <numerotationcontextcommands\&.h>\fP
+.PP
+Inherits \fBNumStrategy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIdFolioNum\fP (\fBDiagram\fP *)"
+.br
+.ti -1c
+.RI "QString \fBtoRepresentedString\fP (const QString) const override"
+.br
+.RI "\fBIdFolioNum::toRepresentedString\fP\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBnext\fP (const \fBNumerotationContext\fP &, const int) const override"
+.br
+.RI "\fBIdFolioNum::next\fP\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBprevious\fP (const \fBNumerotationContext\fP &, const int) const override"
+.br
+.RI "\fBIdFolioNum::previous\fP\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IdFolioNum::IdFolioNum (\fBDiagram\fP * d)"
+Constructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBNumerotationContext\fP IdFolioNum::next (const \fBNumerotationContext\fP & nc, const int i) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBIdFolioNum::next\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the next \fBNumerotationContext\fP nc at position i 
+.RE
+.PP
+
+.PP
+Implements \fBNumStrategy\fP\&.
+.SS "\fBNumerotationContext\fP IdFolioNum::previous (const \fBNumerotationContext\fP & nc, const int i) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBIdFolioNum::previous\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the previous \fBNumerotationContext\fP nc at posiiton i 
+.RE
+.PP
+
+.PP
+Implements \fBNumStrategy\fP\&.
+.SS "QString IdFolioNum::toRepresentedString (const QString str) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBIdFolioNum::toRepresentedString\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the represented string of num 
+.RE
+.PP
+
+.PP
+Implements \fBNumStrategy\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

@@ -1,0 +1,115 @@
+.TH "NumStrategy" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NumStrategy
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <numerotationcontextcommands\&.h>\fP
+.PP
+Inherited by \fBElementColumnNum\fP, \fBElementLineNum\fP, \fBElementPrefixNum\fP, \fBFolioNum\fP, \fBHundredFNum\fP, \fBHundredNum\fP, \fBIdFolioNum\fP, \fBLocmachNum\fP, \fBPlantNum\fP, \fBStringNum\fP, \fBTenFNum\fP, \fBTenNum\fP, \fBUnitFNum\fP, and \fBUnitNum\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNumStrategy\fP (\fBDiagram\fP *=nullptr)"
+.br
+.ti -1c
+.RI "virtual \fB~NumStrategy\fP ()"
+.br
+.ti -1c
+.RI "virtual QString \fBtoRepresentedString\fP (const QString) const =0"
+.br
+.ti -1c
+.RI "virtual \fBNumerotationContext\fP \fBnext\fP (const \fBNumerotationContext\fP &, const int) const =0"
+.br
+.ti -1c
+.RI "virtual \fBNumerotationContext\fP \fBprevious\fP (const \fBNumerotationContext\fP &, const int) const =0"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBnextString\fP (const \fBNumerotationContext\fP &, const int) const"
+.br
+.RI "\fBNumStrategy::nextString\fP\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBnextNumber\fP (const \fBNumerotationContext\fP &, const int) const"
+.br
+.RI "\fBNumStrategy::nextNumber\fP\&. "
+.ti -1c
+.RI "\fBNumerotationContext\fP \fBpreviousNumber\fP (const \fBNumerotationContext\fP &, const int) const"
+.br
+.RI "\fBNumStrategy::previousNumber\fP\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagram\fP * \fBdiagram_\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NumStrategy::NumStrategy (\fBDiagram\fP * d = \fCnullptr\fP)"
+Constructor 
+.SS "NumStrategy::~NumStrategy ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBNumerotationContext\fP NumStrategy::next (const \fBNumerotationContext\fP &, const int) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBElementPrefixNum\fP, \fBElementColumnNum\fP, \fBElementLineNum\fP, \fBLocmachNum\fP, \fBPlantNum\fP, \fBFolioNum\fP, \fBIdFolioNum\fP, \fBStringNum\fP, \fBHundredFNum\fP, \fBHundredNum\fP, \fBTenFNum\fP, \fBTenNum\fP, \fBUnitFNum\fP, and \fBUnitNum\fP\&.
+.SS "\fBNumerotationContext\fP NumStrategy::nextNumber (const \fBNumerotationContext\fP & nc, const int i) const\fC [protected]\fP"
+
+.PP
+\fBNumStrategy::nextNumber\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the next value of nc at position i 
+.RE
+.PP
+
+.SS "\fBNumerotationContext\fP NumStrategy::nextString (const \fBNumerotationContext\fP & nc, const int i) const\fC [protected]\fP"
+
+.PP
+\fBNumStrategy::nextString\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the next value of nc at position i 
+.RE
+.PP
+
+.SS "virtual \fBNumerotationContext\fP NumStrategy::previous (const \fBNumerotationContext\fP &, const int) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBElementPrefixNum\fP, \fBElementColumnNum\fP, \fBElementLineNum\fP, \fBLocmachNum\fP, \fBPlantNum\fP, \fBFolioNum\fP, \fBIdFolioNum\fP, \fBStringNum\fP, \fBHundredFNum\fP, \fBHundredNum\fP, \fBTenFNum\fP, \fBTenNum\fP, \fBUnitFNum\fP, and \fBUnitNum\fP\&.
+.SS "\fBNumerotationContext\fP NumStrategy::previousNumber (const \fBNumerotationContext\fP & nc, const int i) const\fC [protected]\fP"
+
+.PP
+\fBNumStrategy::previousNumber\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the previous value of nc at position i 
+.RE
+.PP
+
+.SS "virtual QString NumStrategy::toRepresentedString (const QString) const\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBElementPrefixNum\fP, \fBElementColumnNum\fP, \fBElementLineNum\fP, \fBLocmachNum\fP, \fBPlantNum\fP, \fBFolioNum\fP, \fBIdFolioNum\fP, \fBStringNum\fP, \fBHundredFNum\fP, \fBHundredNum\fP, \fBTenFNum\fP, \fBTenNum\fP, \fBUnitFNum\fP, and \fBUnitNum\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBDiagram\fP* NumStrategy::diagram_\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

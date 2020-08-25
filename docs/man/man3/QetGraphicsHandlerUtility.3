@@ -1,0 +1,246 @@
+.TH "QetGraphicsHandlerUtility" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+QetGraphicsHandlerUtility \- The \fBQetGraphicsHandlerUtility\fP class This class provide some methods to create and use handler for modify graphics shape like line rectangle etc\&.\&.\&. They also provide some conveniance static method\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <qetgraphicshandlerutility\&.h>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QVector< QPointF > \fBpointsForRect\fP (const QRectF &rect)"
+.br
+.RI "\fBQetGraphicsHandlerUtility::pointsForRect\fP Return the keys points of the rectangle, stored in a vector\&. The points in the vector are stored like this : "
+.ti -1c
+.RI "static QVector< QPointF > \fBpointsForLine\fP (const QLineF &line)"
+.br
+.RI "\fBQetGraphicsHandlerUtility::pointsForLine\fP The point that define a line in a QVector\&. there is two points\&. "
+.ti -1c
+.RI "static QVector< QPointF > \fBpointsForArc\fP (const QRectF &rect, qreal start_angle, qreal span_angle)"
+.br
+.RI "\fBQetGraphicsHandlerUtility::pointsForArc\fP Return the points for the given arc\&. The first value in the vector is the start point, the second the end point\&. "
+.ti -1c
+.RI "static QRectF \fBrectForPosAtIndex\fP (const QRectF &old_rect, const QPointF &pos, int index)"
+.br
+.RI "\fBQetGraphicsHandlerUtility::rectForPosAtIndex\fP Return a rectangle after modification of the point 'pos' at index 'index' of original rectangle 'old_rect'\&. "
+.ti -1c
+.RI "static QRectF \fBmirrorRectForPosAtIndex\fP (const QRectF &old_rect, const QPointF &pos, int index)"
+.br
+.RI "\fBQetGraphicsHandlerUtility::mirrorRectForPosAtIndex\fP Return a rectangle after modification of the point 'pos' at index 'index' of original rectangle 'old_rect'\&. the opposite edge is modified inversely (like a mirror) "
+.ti -1c
+.RI "static QLineF \fBlineForPosAtIndex\fP (const QLineF &old_line, const QPointF &pos, int index)"
+.br
+.RI "\fBQetGraphicsHandlerUtility::lineForPosAtIndex\fP Return a line after modification of pos at index index of old_line\&. "
+.ti -1c
+.RI "static QPolygonF \fBpolygonForInsertPoint\fP (const QPolygonF &old_polygon, bool closed, const QPointF &pos)"
+.br
+.RI "\fBQetGraphicsHandlerUtility::polygonForInsertPoint\fP\&. "
+.ti -1c
+.RI "static QVector< QPointF > \fBpointForRadiusRect\fP (const QRectF &rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode=Qt::AbsoluteSize)"
+.br
+.RI "\fBQetGraphicsHandlerUtility::pointForRadiusRect\fP\&. "
+.ti -1c
+.RI "static qreal \fBradiusForPosAtIndex\fP (const QRectF &rect, const QPointF &pos, int index, Qt::SizeMode mode=Qt::AbsoluteSize)"
+.br
+.RI "\fBQetGraphicsHandlerUtility::radiusForPosAtIndex\fP\&. "
+.ti -1c
+.RI "static qreal \fBpercentageInRange\fP (qreal min, qreal max, qreal value)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBQetGraphicsHandlerUtility\fP class This class provide some methods to create and use handler for modify graphics shape like line rectangle etc\&.\&.\&. They also provide some conveniance static method\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "QLineF QetGraphicsHandlerUtility::lineForPosAtIndex (const QLineF & old_line, const QPointF & pos, int index)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsHandlerUtility::lineForPosAtIndex\fP Return a line after modification of pos at index index of old_line\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIold_line\fP 
+.br
+\fIpos\fP 
+.br
+\fIindex\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QRectF QetGraphicsHandlerUtility::mirrorRectForPosAtIndex (const QRectF & old_rect, const QPointF & pos, int index)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsHandlerUtility::mirrorRectForPosAtIndex\fP Return a rectangle after modification of the point 'pos' at index 'index' of original rectangle 'old_rect'\&. the opposite edge is modified inversely (like a mirror) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIold_rect\fP : the rectangle befor modification 
+.br
+\fIpos\fP : the new position of a key point 
+.br
+\fIindex\fP : the index of the key point to modifie 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBQetGraphicsHandlerUtility::pointsForRect\fP to know the index of each keys points of a rectangle) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+: the rectangle with modification\&. If index is lower than 0 or higher than 7, this method return old_rect\&. 
+.RE
+.PP
+
+.SS "qreal QetGraphicsHandlerUtility::percentageInRange (qreal min, qreal max, qreal value)\fC [static]\fP"
+
+.SS "QVector< QPointF > QetGraphicsHandlerUtility::pointForRadiusRect (const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = \fCQt::AbsoluteSize\fP)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsHandlerUtility::pointForRadiusRect\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrect\fP the rectangle\&. 
+.br
+\fIxRadius\fP : x radius 
+.br
+\fIyRadius\fP : y radius 
+.br
+\fImode\fP : absolute or relative size: NOTE this argument is not used, this function always compute with relative size\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the points of x and y radius of a rounded rect\&. The points are always based on the top right corner of the rect\&. the first point of vector is X the second Y 
+.RE
+.PP
+
+.SS "QVector< QPointF > QetGraphicsHandlerUtility::pointsForArc (const QRectF & rect, qreal start_angle, qreal span_angle)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsHandlerUtility::pointsForArc\fP Return the points for the given arc\&. The first value in the vector is the start point, the second the end point\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrect\fP 
+.br
+\fIstart_angle\fP : start angle in degree 
+.br
+\fIspan_angle\fP : span angle in degree; 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QVector< QPointF > QetGraphicsHandlerUtility::pointsForLine (const QLineF & line)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsHandlerUtility::pointsForLine\fP The point that define a line in a QVector\&. there is two points\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIline\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QVector< QPointF > QetGraphicsHandlerUtility::pointsForRect (const QRectF & rect)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsHandlerUtility::pointsForRect\fP Return the keys points of the rectangle, stored in a vector\&. The points in the vector are stored like this : 0---1---2 | | 3 4 | | 5---6---7
+.PP
+\fBParameters\fP
+.RS 4
+\fIrect\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QPolygonF QetGraphicsHandlerUtility::polygonForInsertPoint (const QPolygonF & old_polygon, bool closed, const QPointF & pos)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsHandlerUtility::polygonForInsertPoint\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIold_polygon\fP : the polygon which we insert a new point\&. 
+.br
+\fIclosed\fP : polygon is closed or not 
+.br
+\fIpos\fP : the pos where the new point must be added 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the new polygon 
+.RE
+.PP
+
+.SS "qreal QetGraphicsHandlerUtility::radiusForPosAtIndex (const QRectF & rect, const QPointF & pos, int index, Qt::SizeMode mode = \fCQt::AbsoluteSize\fP)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsHandlerUtility::radiusForPosAtIndex\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrect\fP the rectangle 
+.br
+\fIpos\fP : the pos of the new radius 
+.br
+\fIindex\fP : index of radius 0=X 1=Y 
+.br
+\fImode\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "QRectF QetGraphicsHandlerUtility::rectForPosAtIndex (const QRectF & old_rect, const QPointF & pos, int index)\fC [static]\fP"
+
+.PP
+\fBQetGraphicsHandlerUtility::rectForPosAtIndex\fP Return a rectangle after modification of the point 'pos' at index 'index' of original rectangle 'old_rect'\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIold_rect\fP - the rectangle befor modification 
+.br
+\fIpos\fP - the new position of a key point 
+.br
+\fIindex\fP - the index of the key point to modifie 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBQetGraphicsHandlerUtility::pointsForRect\fP to know the index of each keys points of a rectangle) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+: the rectangle with modification\&. If index is lower than 0 or higher than 7, this method return old_rect\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

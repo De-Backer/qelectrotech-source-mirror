@@ -1,0 +1,335 @@
+.TH "projectDataBase" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+projectDataBase \- The \fBprojectDataBase\fP class This class wrap a sqlite data base where you can find several thing about the content of a project\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <projectdatabase\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBdataBaseUpdated\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBprojectDataBase\fP (\fBQETProject\fP *\fBproject\fP, QObject *parent=nullptr)"
+.br
+.RI "\fBprojectDataBase::projectDataBase\fP Default constructor "
+.ti -1c
+.RI "virtual \fB~projectDataBase\fP () override"
+.br
+.RI "\fBprojectDataBase::~projectDataBase\fP Destructor "
+.ti -1c
+.RI "void \fBupdateDB\fP ()"
+.br
+.RI "\fBprojectDataBase::updateDB\fP Up to date the content of the data base\&. Emit the signal dataBaseUpdated "
+.ti -1c
+.RI "\fBQETProject\fP * \fBproject\fP () const"
+.br
+.RI "\fBprojectDataBase::project\fP "
+.ti -1c
+.RI "QSqlQuery \fBnewQuery\fP (const QString &query=QString())"
+.br
+.RI "\fBprojectDataBase::newQuery\fP "
+.ti -1c
+.RI "void \fBaddElement\fP (\fBElement\fP *element)"
+.br
+.RI "\fBprojectDataBase::addElement\fP "
+.ti -1c
+.RI "void \fBremoveElement\fP (\fBElement\fP *element)"
+.br
+.RI "\fBprojectDataBase::removeElement\fP "
+.ti -1c
+.RI "void \fBelementInfoChanged\fP (\fBElement\fP *element)"
+.br
+.RI "\fBprojectDataBase::elementInfoChanged\fP "
+.ti -1c
+.RI "void \fBaddDiagram\fP (\fBDiagram\fP *diagram)"
+.br
+.ti -1c
+.RI "void \fBremoveDiagram\fP (\fBDiagram\fP *diagram)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBexportDb\fP (\fBprojectDataBase\fP *db, QWidget *parent=nullptr, const QString &caption=QString(), const QString &dir=QString())"
+.br
+.RI "\fBprojectDataBase::exportDb\fP "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBprojectDataBase\fP (\fBQETProject\fP *\fBproject\fP, const QString &connection_name, const QString &path, QObject *parent=nullptr)"
+.br
+.ti -1c
+.RI "bool \fBcreateDataBase\fP (const QString &connection_name=QString(), const QString &name=QString())"
+.br
+.RI "\fBprojectDataBase::createDataBase\fP Create the data base "
+.ti -1c
+.RI "void \fBcreateElementNomenclatureView\fP ()"
+.br
+.RI "\fBprojectDataBase::createElementNomenclatureView\fP "
+.ti -1c
+.RI "void \fBcreateSummaryView\fP ()"
+.br
+.RI "\fBprojectDataBase::createSummaryView\fP "
+.ti -1c
+.RI "void \fBpopulateDiagramTable\fP ()"
+.br
+.ti -1c
+.RI "void \fBpopulateElementTable\fP ()"
+.br
+.RI "\fBprojectDataBase::populateElementTable\fP Populate the element table "
+.ti -1c
+.RI "void \fBpopulateElementInfoTable\fP ()"
+.br
+.RI "projectDataBase::populateElementsTable Populate the elements table "
+.ti -1c
+.RI "void \fBpopulateDiagramInfoTable\fP ()"
+.br
+.ti -1c
+.RI "void \fBprepareQuery\fP ()"
+.br
+.in -1c
+.SS "Static Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static QHash< QString, QString > \fBelementInfoToString\fP (\fBElement\fP *elmt)"
+.br
+.RI "\fBprojectDataBase::elementInfoToString\fP "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< \fBQETProject\fP > \fBm_project\fP"
+.br
+.ti -1c
+.RI "QSqlDatabase \fBm_data_base\fP"
+.br
+.ti -1c
+.RI "QSqlQuery \fBm_insert_elements_query\fP"
+.br
+.ti -1c
+.RI "QSqlQuery \fBm_insert_element_info_query\fP"
+.br
+.ti -1c
+.RI "QSqlQuery \fBm_remove_element_query\fP"
+.br
+.ti -1c
+.RI "QSqlQuery \fBm_update_element_query\fP"
+.br
+.ti -1c
+.RI "QSqlQuery \fBm_insert_diagram_query\fP"
+.br
+.ti -1c
+.RI "QSqlQuery \fBm_remove_diagram_query\fP"
+.br
+.ti -1c
+.RI "QSqlQuery \fBm_insert_diagram_info_query\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBprojectDataBase\fP class This class wrap a sqlite data base where you can find several thing about the content of a project\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+this class is still in developement\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "projectDataBase::projectDataBase (\fBQETProject\fP * project, QObject * parent = \fCnullptr\fP)"
+
+.PP
+\fBprojectDataBase::projectDataBase\fP Default constructor 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP : project from the database work 
+.br
+\fIparent\fP : parent QObject 
+.RE
+.PP
+
+.SS "projectDataBase::projectDataBase (\fBQETProject\fP * project, const QString & connection_name, const QString & path, QObject * parent = \fCnullptr\fP)\fC [private]\fP"
+
+.SS "projectDataBase::~projectDataBase ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBprojectDataBase::~projectDataBase\fP Destructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void projectDataBase::addDiagram (\fBDiagram\fP * diagram)"
+
+.SS "void projectDataBase::addElement (\fBElement\fP * element)"
+
+.PP
+\fBprojectDataBase::addElement\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.SS "bool projectDataBase::createDataBase (const QString & connection_name = \fCQString()\fP, const QString & name = \fCQString()\fP)\fC [private]\fP"
+
+.PP
+\fBprojectDataBase::createDataBase\fP Create the data base 
+.PP
+\fBReturns\fP
+.RS 4
+: true if the data base was successfully created\&. 
+.RE
+.PP
+
+.SS "void projectDataBase::createElementNomenclatureView ()\fC [private]\fP"
+
+.PP
+\fBprojectDataBase::createElementNomenclatureView\fP 
+.SS "void projectDataBase::createSummaryView ()\fC [private]\fP"
+
+.PP
+\fBprojectDataBase::createSummaryView\fP 
+.SS "void projectDataBase::dataBaseUpdated ()\fC [signal]\fP"
+
+.SS "void projectDataBase::elementInfoChanged (\fBElement\fP * element)"
+
+.PP
+\fBprojectDataBase::elementInfoChanged\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.SS "QHash< QString, QString > projectDataBase::elementInfoToString (\fBElement\fP * elmt)\fC [static]\fP, \fC [private]\fP"
+
+.PP
+\fBprojectDataBase::elementInfoToString\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the element information in hash as key for the info name and value as the information value\&. 
+.RE
+.PP
+
+.SS "void projectDataBase::exportDb (\fBprojectDataBase\fP * db, QWidget * parent = \fCnullptr\fP, const QString & caption = \fCQString()\fP, const QString & dir = \fCQString()\fP)\fC [static]\fP"
+
+.PP
+\fBprojectDataBase::exportDb\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdb\fP 
+.br
+\fIparent\fP 
+.br
+\fIcaption\fP 
+.br
+\fIdir\fP 
+.RE
+.PP
+
+.SS "QSqlQuery projectDataBase::newQuery (const QString & query = \fCQString()\fP)"
+
+.PP
+\fBprojectDataBase::newQuery\fP 
+.PP
+\fBReturns\fP
+.RS 4
+a QSqlquery with query as query and the internal database of this class as database to use\&. 
+.RE
+.PP
+
+.SS "void projectDataBase::populateDiagramInfoTable ()\fC [private]\fP"
+
+.SS "void projectDataBase::populateDiagramTable ()\fC [private]\fP"
+
+.SS "void projectDataBase::populateElementInfoTable ()\fC [private]\fP"
+
+.PP
+projectDataBase::populateElementsTable Populate the elements table 
+.SS "void projectDataBase::populateElementTable ()\fC [private]\fP"
+
+.PP
+\fBprojectDataBase::populateElementTable\fP Populate the element table 
+.SS "void projectDataBase::prepareQuery ()\fC [private]\fP"
+
+.SS "\fBQETProject\fP * projectDataBase::project () const"
+
+.PP
+\fBprojectDataBase::project\fP 
+.PP
+\fBReturns\fP
+.RS 4
+the project of this database 
+.RE
+.PP
+
+.SS "void projectDataBase::removeDiagram (\fBDiagram\fP * diagram)"
+
+.SS "void projectDataBase::removeElement (\fBElement\fP * element)"
+
+.PP
+\fBprojectDataBase::removeElement\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement\fP 
+.RE
+.PP
+
+.SS "void projectDataBase::updateDB ()"
+
+.PP
+\fBprojectDataBase::updateDB\fP Up to date the content of the data base\&. Emit the signal dataBaseUpdated 
+.SH "Member Data Documentation"
+.PP 
+.SS "QSqlDatabase projectDataBase::m_data_base\fC [private]\fP"
+
+.SS "QSqlQuery projectDataBase::m_insert_diagram_info_query\fC [private]\fP"
+
+.SS "QSqlQuery projectDataBase::m_insert_diagram_query\fC [private]\fP"
+
+.SS "QSqlQuery projectDataBase::m_insert_element_info_query\fC [private]\fP"
+
+.SS "QSqlQuery projectDataBase::m_insert_elements_query\fC [private]\fP"
+
+.SS "QPointer<\fBQETProject\fP> projectDataBase::m_project\fC [private]\fP"
+
+.SS "QSqlQuery projectDataBase::m_remove_diagram_query\fC [private]\fP"
+
+.SS "QSqlQuery projectDataBase::m_remove_element_query\fC [private]\fP"
+
+.SS "QSqlQuery projectDataBase::m_update_element_query\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

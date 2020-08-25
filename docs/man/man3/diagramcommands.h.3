@@ -1,0 +1,89 @@
+.TH "sources/diagramcommands.h" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sources/diagramcommands.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'borderproperties\&.h'\fP
+.br
+\fC#include 'qetgraphicsitem/conductor\&.h'\fP
+.br
+\fC#include 'diagramcontent\&.h'\fP
+.br
+\fC#include 'qet\&.h'\fP
+.br
+\fC#include 'qetgraphicsitem/qetshapeitem\&.h'\fP
+.br
+\fC#include 'conductorprofile\&.h'\fP
+.br
+\fC#include 'diagram\&.h'\fP
+.br
+\fC#include 'undocommand/deleteqgraphicsitemcommand\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBAddItemCommand< QGI >\fP"
+.br
+.RI "The \fBAddItemCommand\fP class This command add an item in a diagram The item to add is template, but must be QGraphicsItem or derived\&. "
+.ti -1c
+.RI "class \fBPasteDiagramCommand\fP"
+.br
+.RI "The \fBPasteDiagramCommand\fP class This command pastes some content onto a particular diagram\&. "
+.ti -1c
+.RI "class \fBCutDiagramCommand\fP"
+.br
+.RI "The \fBCutDiagramCommand\fP class This command cuts content from a particular diagram\&. "
+.ti -1c
+.RI "class \fBMoveElementsCommand\fP"
+.br
+.RI "The \fBMoveElementsCommand\fP class This command moves some content on a particular diagram\&. "
+.ti -1c
+.RI "class \fBMoveConductorsTextsCommand\fP"
+.br
+.RI "The \fBMoveConductorsTextsCommand\fP class This command moves text items related to conductors on a particular diagram\&. "
+.ti -1c
+.RI "class \fBChangeDiagramTextCommand\fP"
+.br
+.RI "The \fBChangeDiagramTextCommand\fP class This commad modifies a text item\&. "
+.ti -1c
+.RI "class \fBChangeConductorCommand\fP"
+.br
+.RI "The \fBChangeConductorCommand\fP class This command changes a particular conductor\&. "
+.ti -1c
+.RI "class \fBResetConductorCommand\fP"
+.br
+.RI "The \fBResetConductorCommand\fP class This command resets conductor paths\&. "
+.ti -1c
+.RI "class \fBChangeBorderCommand\fP"
+.br
+.RI "The \fBChangeBorderCommand\fP class This command changes the border properties of a particular diagram\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "QString \fBitemText\fP (const \fBQetGraphicsItem\fP *item)"
+.br
+.ti -1c
+.RI "QString \fBitemText\fP (const \fBIndependentTextItem\fP *item)"
+.br
+.ti -1c
+.RI "QString \fBitemText\fP (const \fBConductor\fP *item)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "QString itemText (const \fBConductor\fP * item)"
+
+.SS "QString itemText (const \fBIndependentTextItem\fP * item)"
+
+.SS "QString itemText (const \fBQetGraphicsItem\fP * item)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

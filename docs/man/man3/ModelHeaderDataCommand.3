@@ -1,0 +1,118 @@
+.TH "ModelHeaderDataCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ModelHeaderDataCommand \- The \fBModelHeaderDataCommand\fP class Change the data of a header\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <itemmodelcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModelHeaderDataCommand\fP (QAbstractItemModel *model, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBModelHeaderDataCommand::ModelHeaderDataCommand\fP\&. "
+.ti -1c
+.RI "void \fBsetData\fP (int section, Qt::Orientation orientation, const QVariant &value, int role=Qt::DisplayRole)"
+.br
+.RI "\fBModelHeaderDataCommand::setData\fP See QAbstractItemModel::setHeaderData\&. "
+.ti -1c
+.RI "virtual void \fBredo\fP () override"
+.br
+.RI "\fBModelHeaderDataCommand::redo\fP Reimplemented from QUndoCommand\&. "
+.ti -1c
+.RI "virtual void \fBundo\fP () override"
+.br
+.RI "\fBModelHeaderDataCommand::undo\fP Reimplemented from QUndoCommand\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "QPointer< QAbstractItemModel > \fBm_model\fP"
+.br
+.ti -1c
+.RI "Qt::Orientation \fBm_orientation\fP"
+.br
+.ti -1c
+.RI "QVariant \fBm_old_value\fP"
+.br
+.ti -1c
+.RI "QVariant \fBm_new_value\fP"
+.br
+.ti -1c
+.RI "int \fBm_section\fP"
+.br
+.ti -1c
+.RI "int \fBm_role\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBModelHeaderDataCommand\fP class Change the data of a header\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ModelHeaderDataCommand::ModelHeaderDataCommand (QAbstractItemModel * model, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBModelHeaderDataCommand::ModelHeaderDataCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodel\fP 
+.br
+\fIparent\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ModelHeaderDataCommand::redo ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBModelHeaderDataCommand::redo\fP Reimplemented from QUndoCommand\&. 
+.SS "void ModelHeaderDataCommand::setData (int section, Qt::Orientation orientation, const QVariant & value, int role = \fCQt::DisplayRole\fP)"
+
+.PP
+\fBModelHeaderDataCommand::setData\fP See QAbstractItemModel::setHeaderData\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsection\fP 
+.br
+\fIorientation\fP 
+.br
+\fIvalue\fP 
+.br
+\fIrole\fP 
+.RE
+.PP
+
+.SS "void ModelHeaderDataCommand::undo ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBModelHeaderDataCommand::undo\fP Reimplemented from QUndoCommand\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QPointer<QAbstractItemModel> ModelHeaderDataCommand::m_model\fC [private]\fP"
+
+.SS "QVariant ModelHeaderDataCommand::m_new_value\fC [private]\fP"
+
+.SS "QVariant ModelHeaderDataCommand::m_old_value\fC [private]\fP"
+
+.SS "Qt::Orientation ModelHeaderDataCommand::m_orientation\fC [private]\fP"
+
+.SS "int ModelHeaderDataCommand::m_role\fC [private]\fP"
+
+.SS "int ModelHeaderDataCommand::m_section\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

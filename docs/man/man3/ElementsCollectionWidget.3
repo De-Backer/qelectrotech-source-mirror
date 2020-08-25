@@ -1,0 +1,467 @@
+.TH "ElementsCollectionWidget" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElementsCollectionWidget \- The \fBElementsCollectionWidget\fP class This widget embedd a tree view that display the element collection (common, custom, embedded) and all action needed to use this widget\&. This is the element collection widget used in the diagram editor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elementscollectionwidget\&.h>\fP
+.PP
+Inherits QWidget\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBreload\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::reload\fP, the displayed collections\&. "
+.ti -1c
+.RI "void \fBloadingFinished\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::loadingFinished\fP Process when collection finished to be loaded\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsCollectionWidget\fP (QWidget *parent=nullptr)"
+.br
+.RI "\fBElementsCollectionWidget::ElementsCollectionWidget\fP Default constructor\&. "
+.ti -1c
+.RI "void \fBexpandFirstItems\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::expandFirstItems\fP Expand each first item in the tree view\&. "
+.ti -1c
+.RI "void \fBaddProject\fP (\fBQETProject\fP *project)"
+.br
+.RI "\fBElementsCollectionWidget::addProject\fP Add project to be displayed\&. "
+.ti -1c
+.RI "void \fBremoveProject\fP (\fBQETProject\fP *project)"
+.br
+.ti -1c
+.RI "void \fBhighlightUnusedElement\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::highlightUnusedElement\fP highlight the unused element\&. "
+.ti -1c
+.RI "void \fBsetCurrentLocation\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "\fBElementsCollectionWidget::setCurrentLocation\fP Set the current item to be the item for location\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBleaveEvent\fP (QEvent *event) override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpAction\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUpWidget\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::setUpWidget\fP Setup this widget\&. "
+.ti -1c
+.RI "void \fBsetUpConnection\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::setUpConnection\fP Setup the connection used in this widget\&. "
+.ti -1c
+.RI "void \fBcustomContextMenu\fP (const QPoint &point)"
+.br
+.RI "\fBElementsCollectionWidget::customContextMenu\fP Display the context menu of this widget at point\&. "
+.ti -1c
+.RI "void \fBopenDir\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::openDir\fP Open the directory represented by the current selected item\&. "
+.ti -1c
+.RI "void \fBeditElement\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::editElement\fP Edit the element represented by the current selected item\&. "
+.ti -1c
+.RI "void \fBdeleteElement\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::deleteElement\fP Delete the element represented by the current selected item\&. "
+.ti -1c
+.RI "void \fBdeleteDirectory\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::deleteDirectory\fP Delete directory represented by the current selected item\&. "
+.ti -1c
+.RI "void \fBeditDirectory\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::editDirectory\fP Edit the directory represented by the current selected item\&. "
+.ti -1c
+.RI "void \fBnewDirectory\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::newDirectory\fP Create a new directory\&. "
+.ti -1c
+.RI "void \fBnewElement\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::newElement\fP Create a new element\&. "
+.ti -1c
+.RI "void \fBshowThisDir\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::showThisDir\fP Hide all directories except the pointed dir;\&. "
+.ti -1c
+.RI "void \fBresetShowThisDir\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::resetShowThisDir\fP reset show this dir, all collection are show\&. If search field isn't empty, apply the search after show all collection\&. "
+.ti -1c
+.RI "void \fBdirProperties\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::dirProperties\fP Open an informative dialog about the curent index\&. "
+.ti -1c
+.RI "void \fBsearch\fP ()"
+.br
+.RI "\fBElementsCollectionWidget::search\fP Search every item (directory or element) that match the text of m_search_field and display it, other item who does not match text is hidden\&. "
+.ti -1c
+.RI "void \fBhideCollection\fP (bool hide=true)"
+.br
+.RI "\fBElementsCollectionWidget::hideCollection\fP Hide all collection displayed in this tree\&. "
+.ti -1c
+.RI "void \fBhideItem\fP (bool hide, const QModelIndex &index=QModelIndex(), bool recursive=true)"
+.br
+.RI "\fBElementsCollectionWidget::hideItem\fP Hide the item index\&. If recursive is true, hide all subchilds of index\&. "
+.ti -1c
+.RI "void \fBshowAndExpandItem\fP (const QModelIndex &index, bool parent=true, bool child=false)"
+.br
+.RI "\fBElementsCollectionWidget::showAndExpandItem\fP Show the item index and expand it\&. If parent is true, ensure parents of index is show and expanded If child is true, ensure all childs of index is show and expended\&. "
+.ti -1c
+.RI "\fBElementCollectionItem\fP * \fBelementCollectionItemForIndex\fP (const QModelIndex &index)"
+.br
+.RI "\fBElementsCollectionWidget::elementCollectionItemForIndex\fP\&. "
+.ti -1c
+.RI "void \fBlocationWasSaved\fP (const \fBElementsLocation\fP &location)"
+.br
+.RI "\fBElementsCollectionWidget::locationWasSaved\fP This method is connected with the signal savedToLocation of \fBElement\fP editor (see \fBElementsCollectionWidget::editElement()\fP) Update or add the item represented by location to m_model\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBElementsCollectionModel\fP * \fBm_model\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBElementsCollectionModel\fP * \fBm_new_model\fP = nullptr"
+.br
+.ti -1c
+.RI "QLineEdit * \fBm_search_field\fP"
+.br
+.ti -1c
+.RI "QTimer \fBm_search_timer\fP"
+.br
+.ti -1c
+.RI "\fBElementsTreeView\fP * \fBm_tree_view\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBm_main_vlayout\fP"
+.br
+.ti -1c
+.RI "QMenu * \fBm_context_menu\fP"
+.br
+.ti -1c
+.RI "QModelIndex \fBm_index_at_context_menu\fP"
+.br
+.ti -1c
+.RI "QModelIndex \fBm_showed_index\fP"
+.br
+.ti -1c
+.RI "QProgressBar * \fBm_progress_bar\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_open_dir\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_edit_element\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_delete_element\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_delete_dir\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_reload\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_edit_dir\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_new_directory\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_new_element\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_show_this_dir\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_show_all_dir\fP"
+.br
+.ti -1c
+.RI "QAction * \fBm_dir_propertie\fP"
+.br
+.ti -1c
+.RI "bool \fBm_first_show\fP = true"
+.br
+.ti -1c
+.RI "QList< \fBQETProject\fP * > \fBm_waiting_project\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBElementsCollectionWidget\fP class This widget embedd a tree view that display the element collection (common, custom, embedded) and all action needed to use this widget\&. This is the element collection widget used in the diagram editor\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ElementsCollectionWidget::ElementsCollectionWidget (QWidget * parent = \fCnullptr\fP)"
+
+.PP
+\fBElementsCollectionWidget::ElementsCollectionWidget\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP : parent widget of this widget\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ElementsCollectionWidget::addProject (\fBQETProject\fP * project)"
+
+.PP
+\fBElementsCollectionWidget::addProject\fP Add project to be displayed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP 
+.RE
+.PP
+
+.SS "void ElementsCollectionWidget::customContextMenu (const QPoint & point)\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::customContextMenu\fP Display the context menu of this widget at point\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpoint\fP 
+.RE
+.PP
+
+.SS "void ElementsCollectionWidget::deleteDirectory ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::deleteDirectory\fP Delete directory represented by the current selected item\&. 
+.SS "void ElementsCollectionWidget::deleteElement ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::deleteElement\fP Delete the element represented by the current selected item\&. 
+.SS "void ElementsCollectionWidget::dirProperties ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::dirProperties\fP Open an informative dialog about the curent index\&. 
+.SS "void ElementsCollectionWidget::editDirectory ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::editDirectory\fP Edit the directory represented by the current selected item\&. 
+.SS "void ElementsCollectionWidget::editElement ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::editElement\fP Edit the element represented by the current selected item\&. 
+.SS "\fBElementCollectionItem\fP * ElementsCollectionWidget::elementCollectionItemForIndex (const QModelIndex & index)\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::elementCollectionItemForIndex\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The internal pointer of index casted to \fBElementCollectionItem\fP; 
+.RE
+.PP
+
+.SS "void ElementsCollectionWidget::expandFirstItems ()"
+
+.PP
+\fBElementsCollectionWidget::expandFirstItems\fP Expand each first item in the tree view\&. 
+.SS "void ElementsCollectionWidget::hideCollection (bool hide = \fCtrue\fP)\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::hideCollection\fP Hide all collection displayed in this tree\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhide-\fP true = hide , false = visible 
+.RE
+.PP
+
+.SS "void ElementsCollectionWidget::hideItem (bool hide, const QModelIndex & index = \fCQModelIndex()\fP, bool recursive = \fCtrue\fP)\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::hideItem\fP Hide the item index\&. If recursive is true, hide all subchilds of index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhide\fP : - true = hide , false = visible 
+.br
+\fIindex\fP : - index to hide 
+.br
+\fIrecursive\fP : - true = apply to child , false = only for index 
+.RE
+.PP
+
+.SS "void ElementsCollectionWidget::highlightUnusedElement ()"
+
+.PP
+\fBElementsCollectionWidget::highlightUnusedElement\fP highlight the unused element\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBElementsCollectionModel::highlightUnusedElement()\fP 
+.RE
+.PP
+
+.SS "void ElementsCollectionWidget::leaveEvent (QEvent * event)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void ElementsCollectionWidget::loadingFinished ()\fC [slot]\fP"
+
+.PP
+\fBElementsCollectionWidget::loadingFinished\fP Process when collection finished to be loaded\&. 
+.SS "void ElementsCollectionWidget::locationWasSaved (const \fBElementsLocation\fP & location)\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::locationWasSaved\fP This method is connected with the signal savedToLocation of \fBElement\fP editor (see \fBElementsCollectionWidget::editElement()\fP) Update or add the item represented by location to m_model\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+
+.SS "void ElementsCollectionWidget::newDirectory ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::newDirectory\fP Create a new directory\&. 
+.SS "void ElementsCollectionWidget::newElement ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::newElement\fP Create a new element\&. 
+.SS "void ElementsCollectionWidget::openDir ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::openDir\fP Open the directory represented by the current selected item\&. 
+.SS "void ElementsCollectionWidget::reload ()\fC [slot]\fP"
+
+.PP
+\fBElementsCollectionWidget::reload\fP, the displayed collections\&. 
+.SS "void ElementsCollectionWidget::removeProject (\fBQETProject\fP * project)"
+
+.SS "void ElementsCollectionWidget::resetShowThisDir ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::resetShowThisDir\fP reset show this dir, all collection are show\&. If search field isn't empty, apply the search after show all collection\&. 
+.SS "void ElementsCollectionWidget::search ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::search\fP Search every item (directory or element) that match the text of m_search_field and display it, other item who does not match text is hidden\&. 
+.SS "void ElementsCollectionWidget::setCurrentLocation (const \fBElementsLocation\fP & location)"
+
+.PP
+\fBElementsCollectionWidget::setCurrentLocation\fP Set the current item to be the item for location\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP 
+.RE
+.PP
+
+.SS "void ElementsCollectionWidget::setUpAction ()\fC [private]\fP"
+
+.SS "void ElementsCollectionWidget::setUpConnection ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::setUpConnection\fP Setup the connection used in this widget\&. 
+.SS "void ElementsCollectionWidget::setUpWidget ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::setUpWidget\fP Setup this widget\&. 
+.SS "void ElementsCollectionWidget::showAndExpandItem (const QModelIndex & index, bool parent = \fCtrue\fP, bool child = \fCfalse\fP)\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::showAndExpandItem\fP Show the item index and expand it\&. If parent is true, ensure parents of index is show and expanded If child is true, ensure all childs of index is show and expended\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex-\fP index to show 
+.br
+\fIparent-\fP Apply to parent 
+.br
+\fIchild-\fP Apply to all childs 
+.RE
+.PP
+
+.SS "void ElementsCollectionWidget::showThisDir ()\fC [private]\fP"
+
+.PP
+\fBElementsCollectionWidget::showThisDir\fP Hide all directories except the pointed dir;\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QMenu* ElementsCollectionWidget::m_context_menu\fC [private]\fP"
+
+.SS "QAction * ElementsCollectionWidget::m_delete_dir\fC [private]\fP"
+
+.SS "QAction * ElementsCollectionWidget::m_delete_element\fC [private]\fP"
+
+.SS "QAction * ElementsCollectionWidget::m_dir_propertie\fC [private]\fP"
+
+.SS "QAction * ElementsCollectionWidget::m_edit_dir\fC [private]\fP"
+
+.SS "QAction * ElementsCollectionWidget::m_edit_element\fC [private]\fP"
+
+.SS "bool ElementsCollectionWidget::m_first_show = true\fC [private]\fP"
+
+.SS "QModelIndex ElementsCollectionWidget::m_index_at_context_menu\fC [private]\fP"
+
+.SS "QVBoxLayout* ElementsCollectionWidget::m_main_vlayout\fC [private]\fP"
+
+.SS "\fBElementsCollectionModel\fP* ElementsCollectionWidget::m_model = nullptr\fC [private]\fP"
+
+.SS "QAction * ElementsCollectionWidget::m_new_directory\fC [private]\fP"
+
+.SS "QAction * ElementsCollectionWidget::m_new_element\fC [private]\fP"
+
+.SS "\fBElementsCollectionModel\fP* ElementsCollectionWidget::m_new_model = nullptr\fC [private]\fP"
+
+.SS "QAction* ElementsCollectionWidget::m_open_dir\fC [private]\fP"
+
+.SS "QProgressBar* ElementsCollectionWidget::m_progress_bar\fC [private]\fP"
+
+.SS "QAction * ElementsCollectionWidget::m_reload\fC [private]\fP"
+
+.SS "QLineEdit* ElementsCollectionWidget::m_search_field\fC [private]\fP"
+
+.SS "QTimer ElementsCollectionWidget::m_search_timer\fC [private]\fP"
+
+.SS "QAction * ElementsCollectionWidget::m_show_all_dir\fC [private]\fP"
+
+.SS "QAction * ElementsCollectionWidget::m_show_this_dir\fC [private]\fP"
+
+.SS "QModelIndex ElementsCollectionWidget::m_showed_index\fC [private]\fP"
+
+.SS "\fBElementsTreeView\fP* ElementsCollectionWidget::m_tree_view\fC [private]\fP"
+
+.SS "QList<\fBQETProject\fP *> ElementsCollectionWidget::m_waiting_project\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

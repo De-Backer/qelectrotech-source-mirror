@@ -1,0 +1,89 @@
+.TH "NameListDialog" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NameListDialog \- The \fBNameListDialog\fP class Provide a dialog for let user define localized string;\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <namelistdialog\&.h>\fP
+.PP
+Inherits QDialog\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNameListDialog\fP (QWidget *parent=nullptr)"
+.br
+.ti -1c
+.RI "\fB~NameListDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetInformationText\fP (const QString &text)"
+.br
+.ti -1c
+.RI "\fBNameListWidget\fP * \fBnamelistWidget\fP () const"
+.br
+.RI "\fBNameListDialog::namelistWidget\fP\&. "
+.ti -1c
+.RI "void \fBsetHelpText\fP (const QString &text)"
+.br
+.ti -1c
+.RI "void \fBshowHelpDialog\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::NameListDialog * \fBui\fP"
+.br
+.ti -1c
+.RI "\fBNameListWidget\fP * \fBm_namelist_widget\fP = nullptr"
+.br
+.ti -1c
+.RI "QString \fBm_help_text\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBNameListDialog\fP class Provide a dialog for let user define localized string;\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "NameListDialog::NameListDialog (QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.SS "NameListDialog::~NameListDialog ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBNameListWidget\fP * NameListDialog::namelistWidget () const"
+
+.PP
+\fBNameListDialog::namelistWidget\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the name list widget used by this dialog\&. The ownership of the namelistwidget stay to this dialog 
+.RE
+.PP
+
+.SS "void NameListDialog::setHelpText (const QString & text)"
+
+.SS "void NameListDialog::setInformationText (const QString & text)"
+
+.SS "void NameListDialog::showHelpDialog ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "QString NameListDialog::m_help_text\fC [private]\fP"
+
+.SS "\fBNameListWidget\fP* NameListDialog::m_namelist_widget = nullptr\fC [private]\fP"
+
+.SS "Ui::NameListDialog* NameListDialog::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

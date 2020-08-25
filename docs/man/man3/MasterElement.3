@@ -1,0 +1,181 @@
+.TH "MasterElement" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MasterElement \- The \fBMasterElement\fP class This class is a custom element, with extended behavior to be a master element\&. Master element can be linked with slave element and display a cross ref item for know with what other element he is linked\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <masterelement\&.h>\fP
+.PP
+Inherits \fBElement\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMasterElement\fP (const \fBElementsLocation\fP &, QGraphicsItem *=nullptr, int *=nullptr)"
+.br
+.RI "\fBMasterElement::MasterElement\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~MasterElement\fP () override"
+.br
+.RI "\fBMasterElement::~MasterElement\fP default destructor\&. "
+.ti -1c
+.RI "void \fBlinkToElement\fP (\fBElement\fP *elmt) override"
+.br
+.RI "\fBMasterElement::linkToElement\fP Link this master to another element For this class element must be a slave\&. "
+.ti -1c
+.RI "void \fBunlinkAllElements\fP () override"
+.br
+.RI "\fBMasterElement::unlinkAllElements\fP Unlink all of the element in the QList connected_elements\&. "
+.ti -1c
+.RI "void \fBunlinkElement\fP (\fBElement\fP *elmt) override"
+.br
+.RI "\fBMasterElement::unlinkElement\fP Unlink the given elmt in parametre\&. "
+.ti -1c
+.RI "void \fBinitLink\fP (\fBQETProject\fP *project) override"
+.br
+.RI "\fBMasterElement::initLink\fP\&. "
+.ti -1c
+.RI "QRectF \fBXrefBoundingRect\fP () const"
+.br
+.RI "\fBMasterElement::XrefBoundingRect\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "QVariant \fBitemChange\fP (GraphicsItemChange change, const QVariant &value) override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBxrefPropertiesChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBaboutDeleteXref\fP ()"
+.br
+.RI "\fBMasterElement::aboutDeleteXref\fP Check if Xref item must be displayed, if not, delete it\&. If Xref item is deleted or already not used (nullptr) return true; Else return false if Xref item is used NOTICE : Xref can display nothing but not be deleted so far\&. For exemple, if Xref is display has cross, only power contact are linked and option show power contact is disable, the cross isn't draw\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCrossRefItem\fP * \fBm_Xref_item\fP = nullptr"
+.br
+.ti -1c
+.RI "bool \fBm_first_scene_change\fP = true"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBMasterElement\fP class This class is a custom element, with extended behavior to be a master element\&. Master element can be linked with slave element and display a cross ref item for know with what other element he is linked\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MasterElement::MasterElement (const \fBElementsLocation\fP & location, QGraphicsItem * qgi = \fCnullptr\fP, int * state = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBMasterElement::MasterElement\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlocation\fP : location of xml definition 
+.br
+\fIqgi\fP : parent QGraphicItem 
+.br
+\fIstate\fP : int used to know if the creation of element have error 
+.RE
+.PP
+
+.SS "MasterElement::~MasterElement ()\fC [override]\fP"
+
+.PP
+\fBMasterElement::~MasterElement\fP default destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void MasterElement::aboutDeleteXref ()\fC [private]\fP"
+
+.PP
+\fBMasterElement::aboutDeleteXref\fP Check if Xref item must be displayed, if not, delete it\&. If Xref item is deleted or already not used (nullptr) return true; Else return false if Xref item is used NOTICE : Xref can display nothing but not be deleted so far\&. For exemple, if Xref is display has cross, only power contact are linked and option show power contact is disable, the cross isn't draw\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void MasterElement::initLink (\fBQETProject\fP * project)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBMasterElement::initLink\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIproject\fP Call init Link from custom element and after call update label for setup it\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBElement\fP\&.
+.SS "QVariant MasterElement::itemChange (GraphicsItemChange change, const QVariant & value)\fC [override]\fP, \fC [protected]\fP"
+
+.SS "void MasterElement::linkToElement (\fBElement\fP * elmt)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBMasterElement::linkToElement\fP Link this master to another element For this class element must be a slave\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBElement\fP\&.
+.SS "void MasterElement::unlinkAllElements ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBMasterElement::unlinkAllElements\fP Unlink all of the element in the QList connected_elements\&. 
+.PP
+Reimplemented from \fBElement\fP\&.
+.SS "void MasterElement::unlinkElement (\fBElement\fP * elmt)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBMasterElement::unlinkElement\fP Unlink the given elmt in parametre\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelmt\fP element to unlink from this 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBElement\fP\&.
+.SS "QRectF MasterElement::XrefBoundingRect () const"
+
+.PP
+\fBMasterElement::XrefBoundingRect\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The bounding rect of the Xref, if this element haven't got a xref, return a default QRectF 
+.RE
+.PP
+
+.SS "void MasterElement::xrefPropertiesChanged ()\fC [private]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "bool MasterElement::m_first_scene_change = true\fC [private]\fP"
+
+.SS "\fBCrossRefItem\fP* MasterElement::m_Xref_item = nullptr\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

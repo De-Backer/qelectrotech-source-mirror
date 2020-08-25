@@ -1,0 +1,159 @@
+.TH "DeleteQGraphicsItemCommand" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DeleteQGraphicsItemCommand
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <deleteqgraphicsitemcommand\&.h>\fP
+.PP
+Inherits QUndoCommand\&.
+.PP
+Inherited by \fBCutDiagramCommand\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDeleteQGraphicsItemCommand\fP (\fBDiagram\fP *diagram, const \fBDiagramContent\fP &content, QUndoCommand *parent=nullptr)"
+.br
+.RI "\fBDeleteQGraphicsItemCommand::DeleteQGraphicsItemCommand\fP\&. "
+.ti -1c
+.RI "\fB~DeleteQGraphicsItemCommand\fP () override"
+.br
+.ti -1c
+.RI "void \fBundo\fP () override"
+.br
+.RI "\fBDeleteQGraphicsItemCommand::undo\fP Undo this command\&. "
+.ti -1c
+.RI "void \fBredo\fP () override"
+.br
+.RI "\fBDeleteQGraphicsItemCommand::redo\fP Redo the delete command\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDeleteQGraphicsItemCommand\fP (const \fBDeleteQGraphicsItemCommand\fP &)"
+.br
+.ti -1c
+.RI "void \fBsetPotentialsOfRemovedElements\fP ()"
+.br
+.RI "\fBDeleteQGraphicsItemCommand::setPotentialsOfRemovedElements\fP This function creates new conductors (if needed) for conserve the electrical potentials present at the terminals of each removed elements\&. "
+.ti -1c
+.RI "\fBTerminal\fP * \fBterminalInSamePotential\fP (\fBTerminal\fP *terminal, \fBConductor\fP *conductor_to_exclude)"
+.br
+.RI "\fBDeleteQGraphicsItemCommand::terminalInSamePotential\fP Return a terminal at the same potential of terminal, by traveling through the conductors connected to terminal only if the owner element of the terminal is not delete by this undo command\&. Return nullptr if a terminal can't be found\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBDiagramContent\fP \fBm_removed_contents\fP"
+.br
+.ti -1c
+.RI "\fBDiagram\fP * \fBm_diagram\fP"
+.br
+.ti -1c
+.RI "QHash< \fBElement\fP *, QList< \fBElement\fP * > > \fBm_link_hash\fP"
+.br
+.ti -1c
+.RI "QHash< \fBDynamicElementTextItem\fP *, \fBElement\fP * > \fBm_elmt_text_hash\fP"
+.br
+.RI "keep linked element for each removed element linked to other element\&. "
+.ti -1c
+.RI "QHash< \fBDynamicElementTextItem\fP *, \fBElementTextItemGroup\fP * > \fBm_grp_texts_hash\fP"
+.br
+.RI "Keep the parent element of each deleted dynamic element text item\&. "
+.ti -1c
+.RI "QList< QPair< \fBTerminal\fP *, \fBTerminal\fP * > > \fBm_connected_terminals\fP"
+.br
+.RI "Keep the parent group of each deleted element text item\&. "
+.ti -1c
+.RI "QHash< \fBQetGraphicsTableItem\fP *, QPointer< QGraphicsScene > > \fBm_table_scene_hash\fP"
+.br
+.ti -1c
+.RI "bool \fBm_remove_linked_table\fP = false"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DeleteQGraphicsItemCommand::DeleteQGraphicsItemCommand (\fBDiagram\fP * diagram, const \fBDiagramContent\fP & content, QUndoCommand * parent = \fCnullptr\fP)"
+
+.PP
+\fBDeleteQGraphicsItemCommand::DeleteQGraphicsItemCommand\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdiagram\fP : deigram where this undo work 
+.br
+\fIcontent\fP : content to remove 
+.br
+\fIparent\fP : parent undo 
+.RE
+.PP
+
+.SS "DeleteQGraphicsItemCommand::~DeleteQGraphicsItemCommand ()\fC [override]\fP"
+
+.SS "DeleteQGraphicsItemCommand::DeleteQGraphicsItemCommand (const \fBDeleteQGraphicsItemCommand\fP &)\fC [private]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DeleteQGraphicsItemCommand::redo ()\fC [override]\fP"
+
+.PP
+\fBDeleteQGraphicsItemCommand::redo\fP Redo the delete command\&. 
+.SS "void DeleteQGraphicsItemCommand::setPotentialsOfRemovedElements ()\fC [private]\fP"
+
+.PP
+\fBDeleteQGraphicsItemCommand::setPotentialsOfRemovedElements\fP This function creates new conductors (if needed) for conserve the electrical potentials present at the terminals of each removed elements\&. 
+.SS "\fBTerminal\fP * DeleteQGraphicsItemCommand::terminalInSamePotential (\fBTerminal\fP * terminal, \fBConductor\fP * conductor_to_exclude)\fC [private]\fP"
+
+.PP
+\fBDeleteQGraphicsItemCommand::terminalInSamePotential\fP Return a terminal at the same potential of terminal, by traveling through the conductors connected to terminal only if the owner element of the terminal is not delete by this undo command\&. Return nullptr if a terminal can't be found\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIterminal\fP - terminal from search 
+.br
+\fIconductor_to_exclude\fP - a conductor to exlcude from search\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void DeleteQGraphicsItemCommand::undo ()\fC [override]\fP"
+
+.PP
+\fBDeleteQGraphicsItemCommand::undo\fP Undo this command\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QPair<\fBTerminal\fP *, \fBTerminal\fP *> > DeleteQGraphicsItemCommand::m_connected_terminals\fC [private]\fP"
+
+.PP
+Keep the parent group of each deleted element text item\&. 
+.SS "\fBDiagram\fP* DeleteQGraphicsItemCommand::m_diagram\fC [private]\fP"
+
+.SS "QHash<\fBDynamicElementTextItem\fP *, \fBElement\fP *> DeleteQGraphicsItemCommand::m_elmt_text_hash\fC [private]\fP"
+
+.PP
+keep linked element for each removed element linked to other element\&. 
+.SS "QHash<\fBDynamicElementTextItem\fP *, \fBElementTextItemGroup\fP *> DeleteQGraphicsItemCommand::m_grp_texts_hash\fC [private]\fP"
+
+.PP
+Keep the parent element of each deleted dynamic element text item\&. 
+.SS "QHash<\fBElement\fP *, QList<\fBElement\fP *> > DeleteQGraphicsItemCommand::m_link_hash\fC [private]\fP"
+
+.SS "bool DeleteQGraphicsItemCommand::m_remove_linked_table = false\fC [private]\fP"
+
+.SS "\fBDiagramContent\fP DeleteQGraphicsItemCommand::m_removed_contents\fC [private]\fP"
+
+.SS "QHash<\fBQetGraphicsTableItem\fP *, QPointer<QGraphicsScene> > DeleteQGraphicsItemCommand::m_table_scene_hash\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

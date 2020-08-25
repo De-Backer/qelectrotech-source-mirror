@@ -1,0 +1,199 @@
+.TH "TextEditor" 3 "Thu Aug 27 2020" "Version 0.8-dev" "QElectroTech" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TextEditor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <texteditor\&.h>\fP
+.PP
+Inherits \fBElementItemEditor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTextEditor\fP (\fBQETElementEditor\fP *editor, \fBPartText\fP *text=nullptr, QWidget *parent=nullptr)"
+.br
+.RI "\fBTextEditor::TextEditor\fP Default constructor\&. "
+.ti -1c
+.RI "\fB~TextEditor\fP () override"
+.br
+.RI "\fBTextEditor::~TextEditor\fP\&. "
+.ti -1c
+.RI "void \fBupdateForm\fP () override"
+.br
+.RI "\fBTextEditor::updateForm\fP Update the gui\&. "
+.ti -1c
+.RI "bool \fBsetPart\fP (\fBCustomElementPart\fP *part) override"
+.br
+.RI "\fBTextEditor::setPart\fP Set the current text to edit\&. Set part to nullptr to clear the current text\&. "
+.ti -1c
+.RI "bool \fBsetParts\fP (QList< \fBCustomElementPart\fP * >) override"
+.br
+.ti -1c
+.RI "\fBCustomElementPart\fP * \fBcurrentPart\fP () const override"
+.br
+.RI "\fBTextEditor::currentPart\fP\&. "
+.ti -1c
+.RI "QList< \fBCustomElementPart\fP * > \fBcurrentParts\fP () const override"
+.br
+.in -1c
+.SS "Private Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBon_m_font_pb_clicked\fP ()"
+.br
+.RI "\fBTextEditor::on_m_font_pb_clicked\fP\&. "
+.ti -1c
+.RI "void \fBon_m_color_pb_changed\fP (const QColor &newColor)"
+.br
+.RI "\fBTextEditor::on_m_color_pb_changed\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetUpEditConnection\fP ()"
+.br
+.RI "\fBTextEditor::setUpEditConnection\fP Setup the connection between the widgets of this editor and the undo command use to apply the change to the edited text\&. "
+.ti -1c
+.RI "void \fBsetUpChangeConnection\fP (QPointer< \fBPartText\fP > part)"
+.br
+.ti -1c
+.RI "void \fBdisconnectChangeConnection\fP ()"
+.br
+.ti -1c
+.RI "void \fBdisconnectEditConnection\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Ui::TextEditor * \fBui\fP"
+.br
+.ti -1c
+.RI "QPointer< \fBPartText\fP > \fBm_text\fP"
+.br
+.ti -1c
+.RI "QList< \fBPartText\fP * > \fBm_parts\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_edit_connection\fP"
+.br
+.ti -1c
+.RI "QList< QMetaObject::Connection > \fBm_change_connection\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TextEditor::TextEditor (\fBQETElementEditor\fP * editor, \fBPartText\fP * text = \fCnullptr\fP, QWidget * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+\fBTextEditor::TextEditor\fP Default constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIeditor\fP : the element editor who use this editor 
+.br
+\fItext\fP : the text to edit 
+.br
+\fIparent\fP : the parent widget 
+.RE
+.PP
+
+.SS "TextEditor::~TextEditor ()\fC [override]\fP"
+
+.PP
+\fBTextEditor::~TextEditor\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBCustomElementPart\fP * TextEditor::currentPart () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBTextEditor::currentPart\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current part 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "QList< \fBCustomElementPart\fP * > TextEditor::currentParts () const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "void TextEditor::disconnectChangeConnection ()\fC [private]\fP"
+
+.SS "void TextEditor::disconnectEditConnection ()\fC [private]\fP"
+
+.SS "void TextEditor::on_m_color_pb_changed (const QColor & newColor)\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBTextEditor::on_m_color_pb_changed\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewColor\fP 
+.RE
+.PP
+
+.SS "void TextEditor::on_m_font_pb_clicked ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+\fBTextEditor::on_m_font_pb_clicked\fP\&. 
+.SS "bool TextEditor::setPart (\fBCustomElementPart\fP * part)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBTextEditor::setPart\fP Set the current text to edit\&. Set part to nullptr to clear the current text\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpart\fP : part to edit 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+if part is a partext or nullptr, else return false 
+.RE
+.PP
+
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SS "bool TextEditor::setParts (QList< \fBCustomElementPart\fP * > parts)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBElementItemEditor\fP\&.
+.SS "void TextEditor::setUpChangeConnection (QPointer< \fBPartText\fP > part)\fC [private]\fP"
+
+.SS "void TextEditor::setUpEditConnection ()\fC [private]\fP"
+
+.PP
+\fBTextEditor::setUpEditConnection\fP Setup the connection between the widgets of this editor and the undo command use to apply the change to the edited text\&. 
+.SS "void TextEditor::updateForm ()\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+\fBTextEditor::updateForm\fP Update the gui\&. 
+.PP
+Implements \fBElementItemEditor\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "QList<QMetaObject::Connection> TextEditor::m_change_connection\fC [private]\fP"
+
+.SS "QList<QMetaObject::Connection> TextEditor::m_edit_connection\fC [private]\fP"
+
+.SS "QList<\fBPartText\fP*> TextEditor::m_parts\fC [private]\fP"
+
+.SS "QPointer<\fBPartText\fP> TextEditor::m_text\fC [private]\fP"
+
+.SS "Ui::TextEditor* TextEditor::ui\fC [private]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for QElectroTech from the source code\&.

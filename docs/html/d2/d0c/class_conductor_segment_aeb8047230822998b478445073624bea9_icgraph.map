@@ -1,0 +1,52 @@
+<map id="ConductorSegment::previousSegment" name="ConductorSegment::previousSegment">
+<area shape="rect" id="node1" title=" " alt="" coords="2048,1157,2239,1198"/>
+<area shape="rect" id="node2" href="$da/d7f/class_conductor.html#ab32bd11b8874c7b45d1127c640477218" title="Conductor::posForText Calculate and return the better pos for text." alt="" coords="1829,728,1984,755"/>
+<area shape="rect" id="node45" href="$d2/d0c/class_conductor_segment.html#a979ff4f24d7f3ec6b5e767f8241655d7" title=" " alt="" coords="1813,1186,2000,1227"/>
+<area shape="rect" id="node49" href="$d2/d0c/class_conductor_segment.html#aba60e174e159d0dd74c5dbfdad0e905a" title=" " alt="" coords="1555,1127,1765,1169"/>
+<area shape="rect" id="node50" href="$d2/d0c/class_conductor_segment.html#a611881642b3b9b64affddb67693d0fa1" title=" " alt="" coords="1334,1245,1477,1286"/>
+<area shape="rect" id="node3" href="$da/d7f/class_conductor.html#ab352e0bd0e048b8897ad67684d00b01a" title="Conductor::calculateTextItemPosition Move the text at middle of conductor (if is vertical or horizont..." alt="" coords="1577,331,1743,373"/>
+<area shape="rect" id="node4" href="$d3/d37/class_diagram.html#ac808ccc853ae12b34660417d98354b9b" title="Diagram::addItem Réimplemented from QGraphicsScene::addItem(QGraphicsItem *item) Do some specific ope..." alt="" coords="1342,912,1469,939"/>
+<area shape="rect" id="node16" href="$da/d7f/class_conductor.html#ad89a22b06b1849b5726e76541788744c" title="Conductor::handlerMouseMoveEvent." alt="" coords="1304,73,1507,114"/>
+<area shape="rect" id="node18" href="$da/d7f/class_conductor.html#a5a61e13a2d1cb44526277798884a0b8b" title="Conductor::itemChange." alt="" coords="1325,212,1485,239"/>
+<area shape="rect" id="node19" href="$da/d7f/class_conductor.html#aa7dd52ce69db4424acb6511676c88821" title=" " alt="" coords="1333,263,1478,289"/>
+<area shape="rect" id="node20" href="$da/d7f/class_conductor.html#a7ece2eac7ad3deec235c64cc98a9c43a" title="Conductor::setProfiles." alt="" coords="1329,313,1481,340"/>
+<area shape="rect" id="node21" href="$da/d7f/class_conductor.html#a23f980cf7a29cfe55378b504ecfecde1" title="Conductor::setProperties Set property as current property of conductor." alt="" coords="1321,364,1489,391"/>
+<area shape="rect" id="node38" href="$da/d7f/class_conductor.html#af2f106ce228e9dff58d4002bf6c946e8" title=" " alt="" coords="1327,615,1483,641"/>
+<area shape="rect" id="node5" href="$d3/d37/class_diagram.html#acb6d9086bee85070ef70e6135c567237" title="Diagram::fromXml Imports the described schema in an XML element. If a position is specified,..." alt="" coords="1077,1004,1205,1031"/>
+<area shape="rect" id="node6" href="$d7/dad/class_diagram_event_add_image.html#ab6eaa2802cb5298a116260246a93af6a" title="DiagramEventAddImage::mouseMoveEvent Action when mouse move." alt="" coords="1060,1055,1223,1097"/>
+<area shape="rect" id="node7" href="$dc/dbc/class_diagram_event_add_shape.html#a0282b185c26a1811fb40c25b40ec051c" title="DiagramEventAddShape::mousePressEvent Action when mouse is pressed." alt="" coords="1059,1121,1223,1162"/>
+<area shape="rect" id="node8" href="$d8/dd0/class_qet_graphics_table_factory.html#aa256211e335e8df1baab6ec719d4d478" title="QetGraphicsTableFactory::newTable Create a new table ." alt="" coords="1056,742,1227,783"/>
+<area shape="rect" id="node12" href="$d1/db0/class_paste_diagram_command.html#a06aef4edcc1e56439edd1a3b40c66831" title="PasteDiagramCommand::redo Redo this commnand." alt="" coords="1059,807,1224,849"/>
+<area shape="rect" id="node13" href="$d8/db3/class_delete_q_graphics_item_command.html#ac13b979cda0f15470e800f356200953c" title="DeleteQGraphicsItemCommand::undo Undo this command." alt="" coords="1037,873,1245,914"/>
+<area shape="rect" id="node14" href="$dc/dbc/class_diagram_event_add_shape.html#a6763efdb3d5f0908caae8a711fe529df" title="DiagramEventAddShape::updateHelpCross Create and update the position of the cross to help user for dr..." alt="" coords="1059,938,1223,979"/>
+<area shape="rect" id="node9" href="$d8/dd0/class_qet_graphics_table_factory.html#aab7e64fed714f4bcdcb057955cd3fe03" title=" " alt="" coords="785,781,956,822"/>
+<area shape="rect" id="node10" href="$d8/dd0/class_qet_graphics_table_factory.html#a72611a4d6afbd026f5fd8595abefb9f6" title="QetGraphicsTableFactory::createAndAddNomenclature Open a dialog for ask user the config of the table,..." alt="" coords="517,749,711,790"/>
+<area shape="rect" id="node11" href="$d8/dd0/class_qet_graphics_table_factory.html#ac320c43f647e2e37f3d9d476d034db6e" title="QetGraphicsTableFactory::createAndAddSummary Open a dialog for ask user the config of the table,..." alt="" coords="529,814,699,855"/>
+<area shape="rect" id="node15" href="$dc/dbc/class_diagram_event_add_shape.html#a744cd375b1847c789c6ee84ee19498f6" title="DiagramEventAddShape::mouseMoveEvent Action when mouse move." alt="" coords="789,938,953,979"/>
+<area shape="rect" id="node17" href="$da/d7f/class_conductor.html#a0fcc485fbf5c2fd54c857ac2ea69ab56" title="Conductor::sceneEventFilter." alt="" coords="1048,5,1235,32"/>
+<area shape="rect" id="node22" href="$da/d7f/class_conductor.html#a76859ff778f0d9af3ca6d7bc84c26e6d" title="Conductor::Conductor Default constructor." alt="" coords="1066,188,1217,215"/>
+<area shape="rect" id="node23" href="$d0/d37/class_conductor_creator.html#a4aa5d2cbe62a6859c9ab61e1692e9b34" title="ConductorCreator::ConductorCreator Create an electrical potential between all terminals of terminals_..." alt="" coords="1045,239,1238,281"/>
+<area shape="rect" id="node24" href="$d9/d75/class_elements_mover.html#a4bb22e4688e765c78053bf25855d6159" title="ElementsMover::endMovement Ended the current movement by creating an undo added to the undostack of t..." alt="" coords="513,323,715,349"/>
+<area shape="rect" id="node29" href="$da/d7f/class_conductor.html#a74db48e53dcea4e31d4b16b8c6bc7ce7" title="Conductor::fromXml Load the conductor and her information from xml element." alt="" coords="1072,539,1211,565"/>
+<area shape="rect" id="node30" href="$dc/d46/class_terminal.html#ab63e726d6df8b96acf0c427e7f8f1fd9" title="Terminal::mouseReleaseEvent." alt="" coords="515,480,713,507"/>
+<area shape="rect" id="node31" href="$de/d1d/class_conductor_auto_numerotation.html#aec981865ae357c33c7aaf72f18922239" title="ConductorAutoNumerotation::numerateNewConductor create and apply a new numerotation to m_conductor." alt="" coords="1048,422,1235,463"/>
+<area shape="rect" id="node34" href="$de/d1d/class_conductor_auto_numerotation.html#a42ef087c8e73f62a579b57358fa36f6a" title="ConductorAutoNumerotation::numeratePotential Numerate a conductor on an existing potential." alt="" coords="1048,357,1235,398"/>
+<area shape="rect" id="node35" href="$d8/db3/class_delete_q_graphics_item_command.html#a0412a1c778fa2488cc5dca37c63bda93" title="DeleteQGraphicsItemCommand::setPotentialsOfRemovedElements This function creates new conductors (if n..." alt="" coords="1027,57,1256,98"/>
+<area shape="rect" id="node37" href="$da/d7f/class_conductor.html#aa1955dfad47e46a874d83fa606269e8a" title="Conductor::setPropertiesToPotential." alt="" coords="1055,122,1227,163"/>
+<area shape="rect" id="node25" href="$d3/d37/class_diagram.html#a1866d6dd7f4ea039f0c134f2b4c54576" title="Diagram::keyReleaseEvent This event is managed by diagram event interface if any. Else move selected ..." alt="" coords="268,264,447,291"/>
+<area shape="rect" id="node26" href="$d7/db5/class_qet_graphics_item.html#a0fa30ec87bac9208747d0f9cafb37f0f" title="QetGraphicsItem::mouseReleaseEvent handle mouse release click." alt="" coords="250,315,465,357"/>
+<area shape="rect" id="node28" href="$d4/dbd/class_diagram_text_item.html#a0e364e18f1103e62eafbcd43c675f36c" title="DiagramTextItem::mouseReleaseEvent." alt="" coords="249,381,465,422"/>
+<area shape="rect" id="node27" href="$d5/d50/class_element.html#a8dd07f73b39bcd0f76dcc212339838ae" title="Element::mouseReleaseEvent." alt="" coords="5,323,201,349"/>
+<area shape="rect" id="node32" href="$de/d1d/class_conductor_auto_numerotation.html#a16e41eafdceb149b65e164cbe91d5c9a" title="ConductorAutoNumerotation::numerate execute the automatic numerotation." alt="" coords="777,406,964,447"/>
+<area shape="rect" id="node33" href="$de/d1f/class_diagram_event_add_element.html#af36a8f0e0220dfe7ba3430e99bb257b9" title="DiagramEventAddElement::addElement Add an element at the current pos en current rotation,..." alt="" coords="527,406,701,447"/>
+<area shape="rect" id="node36" href="$d8/db3/class_delete_q_graphics_item_command.html#a2aad9ad3ae508a9d1f662845607123c2" title="DeleteQGraphicsItemCommand::DeleteQGraphicsItemCommand." alt="" coords="763,57,979,98"/>
+<area shape="rect" id="node39" href="$d9/d75/class_elements_mover.html#a555b0fd1a1c0e76b7db333948c58e3be" title="ElementsMover::continueMovement Add a move to the current movement." alt="" coords="1027,691,1256,717"/>
+<area shape="rect" id="node43" href="$dc/d46/class_terminal.html#ab8197933268886ffffd2b24baf7164a0" title="Terminal::updateConductor Update the path of conductor docked to this terminal." alt="" coords="1052,589,1231,616"/>
+<area shape="rect" id="node44" href="$da/d7f/class_conductor.html#a3fbf07e3690cc310336af98129cbe278" title=" " alt="" coords="1039,640,1243,667"/>
+<area shape="rect" id="node40" href="$d3/d37/class_diagram.html#a1304d75039e5950b8de9900f6bc476c1" title="Diagram::keyPressEvent This event is managed by diagram event interface if any. Else move selected el..." alt="" coords="787,599,954,625"/>
+<area shape="rect" id="node41" href="$d7/db5/class_qet_graphics_item.html#ab9584bc0bc7cc0045bb5b5881e8db22d" title=" " alt="" coords="771,650,970,691"/>
+<area shape="rect" id="node42" href="$d4/dbd/class_diagram_text_item.html#afa79bcaa6cdc39275f26a3babe3752d4" title="DiagramTextItem::mouseMoveEvent." alt="" coords="771,715,971,757"/>
+<area shape="rect" id="node46" href="$d2/d0c/class_conductor_segment.html#a13874f8bbb785e73cac86ad68a442aad" title=" " alt="" coords="1305,1179,1506,1221"/>
+<area shape="rect" id="node47" href="$d2/d0c/class_conductor_segment.html#a517c75830fae007de9daf49173d1c2cf" title=" " alt="" coords="1051,1187,1232,1213"/>
+<area shape="rect" id="node48" href="$d2/d0c/class_conductor_segment.html#a3a5498ebd7037e66cce8f8f0d2deabb5" title=" " alt="" coords="1051,1237,1232,1264"/>
+</map>
