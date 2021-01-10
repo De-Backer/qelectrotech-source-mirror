@@ -1,26 +1,29 @@
-<definition hotspot_x="34" height="40" type="element" hotspot_y="19" version="0.80" link_type="simple" width="70">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="40" hotspot_x="34" hotspot_y="19" link_type="simple" type="element" version="0.80" width="70">
     <uuid uuid="{db812afb-19c4-4c73-8e8a-5608375d6436}"/>
     <names>
         <name lang="en">Vacuum gauge with analog measured-value display</name>
         <name lang="fr">Jauge de vide avec affichage analogique</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: Eudes Grosjean, S.Deffaux
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-3" end1="none" length2="1.5" y1="0" x1="-23" antialias="false" length1="1.5" end2="none" y2="0"/>
-        <dynamic_text y="12" Valignment="AlignTop" z="2" frame="false" text_from="ElementInfo" Halignment="AlignLeft" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" x="19">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-23" x2="-3" y1="0" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="-11" y2="11"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="4" x2="27" y1="5" y2="10"/>
+        <rect antialias="false" height="22" style="line-style:normal;line-weight:normal;filling:none;color:black" width="54" x="-27" y="-11"/>
+        <polygon antialias="false" closed="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-23" x2="-13" x3="-3" y1="-9" y2="10" y3="-9"/>
+        <polygon antialias="false" closed="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="4" x10="27" x2="5" x3="7" x4="11" x5="14" x6="17" x7="20" x8="24" x9="26" y1="5" y10="-8" y2="2" y3="0" y4="-3" y5="-5" y6="-6" y7="-7" y8="-8" y9="-8"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" x="19" y="12" z="2">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <polygon x3="-3" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-13" y1="-9" x1="-23" y3="-9" antialias="false" closed="false" y2="10"/>
-        <rect y="-11" height="22" style="line-style:normal;line-weight:normal;filling:none;color:black" ry="0" rx="0" antialias="false" width="54" x="-27"/>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="0" end1="none" length2="1.5" y1="-11" x1="0" antialias="false" length1="1.5" end2="none" y2="11"/>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="27" end1="none" length2="1.5" y1="5" x1="4" antialias="false" length1="1.5" end2="none" y2="10"/>
-        <polygon y1="5" x7="20" x6="17" y7="-7" y8="-8" x4="11" y6="-6" y5="-5" style="line-style:normal;line-weight:normal;filling:none;color:black" x9="26" x5="14" x1="4" x10="27" x8="24" y10="-8" x3="7" antialias="false" y3="0" y4="-3" y2="2" x2="5" closed="false" y9="-8"/>
-        <terminal y="0" orientation="w" x="-27"/>
-        <terminal y="0" orientation="e" x="27"/>
-        <terminal y="-11" orientation="n" x="0"/>
-        <terminal y="11" orientation="s" x="0"/>
+        <terminal name="" orientation="w" uuid="{572e88a3-be91-446d-b2e3-216f937dff40}" x="-27" y="0"/>
+        <terminal name="" orientation="e" uuid="{4f105ec1-7262-40cf-aaf6-e98b1fc0a479}" x="27" y="0"/>
+        <terminal name="" orientation="n" uuid="{dda0a822-a55c-4336-a1b7-ce1d8bf0e5fc}" x="0" y="-11"/>
+        <terminal name="" orientation="s" uuid="{48a9f908-f7da-4009-902a-be72a897e72f}" x="0" y="11"/>
     </description>
 </definition>

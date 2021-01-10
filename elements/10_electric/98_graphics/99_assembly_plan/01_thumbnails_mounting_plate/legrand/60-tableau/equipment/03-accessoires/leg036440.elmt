@@ -1,24 +1,27 @@
-<definition version="0.80" link_type="simple" height="50" hotspot_y="25" width="40" type="element" hotspot_x="20">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="50" hotspot_x="20" hotspot_y="25" link_type="simple" type="element" version="0.80" width="40">
     <uuid uuid="{5559d349-00c1-4112-ae2c-95d6003fc4df}"/>
     <names>
         <name lang="fr">Clips écrou M4</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="machine_manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="description">Clips-écrous M4</elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Legrand</elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="designation">LEG036440</elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1">Clips-écrous M4</elementInformation>
+        <elementInformation name="designation" show="1">LEG036440</elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations>S.DEFFAUX</informations>
     <description>
-        <rect ry="2" y="-20" height="40" antialias="false" x="-15" width="30" style="line-style:normal;line-weight:normal;filling:HTMLGrayGainsboro;color:black" rx="2"/>
-        <circle diameter="20" y="-10" antialias="false" x="-10" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
+        <rect antialias="false" height="40" style="line-style:normal;line-weight:normal;filling:HTMLGrayGainsboro;color:black" width="30" x="-15" y="-20"/>
+        <circle antialias="false" diameter="20" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-10" y="-10"/>
     </description>
 </definition>

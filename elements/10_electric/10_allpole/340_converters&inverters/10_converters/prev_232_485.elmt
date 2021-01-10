@@ -1,52 +1,46 @@
-<definition link_type="simple" height="110" width="90" version="0.80" type="element" hotspot_y="54" hotspot_x="45">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="110" hotspot_x="45" hotspot_y="54" link_type="simple" type="element" version="0.80" width="90">
     <uuid uuid="{80191a66-3b5f-465e-99b1-3479764a0b30}"/>
     <names>
         <name lang="cs">Převodník RS232/485 </name>
         <name lang="fr">Convertiseur RS232/RS485</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation name="machine-manufacturer-reference" show="1"></elementInformation>
-        <elementInformation name="label" show="1">A</elementInformation>
-        <elementInformation name="designation" show="1"></elementInformation>
-        <elementInformation name="unity" show="1"></elementInformation>
-        <elementInformation name="manufacturer" show="1"></elementInformation>
-        <elementInformation name="plant" show="1"></elementInformation>
         <elementInformation name="comment" show="1"></elementInformation>
         <elementInformation name="description" show="1"></elementInformation>
+        <elementInformation name="designation" show="1"></elementInformation>
+        <elementInformation name="label" show="1">A</elementInformation>
+        <elementInformation name="machine-manufacturer-reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1"></elementInformation>
+        <elementInformation name="manufacturer-reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
         <elementInformation name="quantity" show="1"></elementInformation>
         <elementInformation name="supplier" show="1"></elementInformation>
-        <elementInformation name="manufacturer-reference" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations></informations>
     <description>
-        <rect ry="0" y="-45" rx="0" height="90" style="line-style:normal;line-weight:normal;filling:white;color:black" width="80" antialias="false" x="-40"/>
-        <line x2="40" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-40" y1="45" length2="1.5" y2="-45" antialias="false" length1="1.5" end2="none"/>
-        <text y="-30" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="RX" color="#000000" rotation="270" x="-26.75"/>
-        <text y="-22" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="GND" color="#000000" rotation="270" x="-13.5"/>
-        <text y="-30" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="TX" color="#000000" rotation="270" x="-3.75"/>
-        <text y="-22.5" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="+Ub" color="#000000" rotation="270" x="16"/>
-        <text y="-26.75" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="-Ub" color="#000000" rotation="270" x="25.25"/>
-        <text y="43" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="DATA+" color="#000000" rotation="270" x="16.25"/>
-        <text y="42.75" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="DATA-" color="#000000" rotation="270" x="23.5"/>
-        <text y="-5" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="RS232" color="#000000" rotation="0" x="-35"/>
-        <text y="6.75" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="RS485" color="#000000" rotation="0" x="2.25"/>
-        <line x2="-30" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-30" y1="-50" length2="1.5" y2="-45" antialias="false" length1="1.5" end2="none"/>
-        <line x2="-20" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-20" y1="-50" length2="1.5" y2="-45" antialias="false" length1="1.5" end2="none"/>
-        <line x2="-10" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-10" y1="-50" length2="1.5" y2="-45" antialias="false" length1="1.5" end2="none"/>
-        <line x2="10" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="10" y1="-50" length2="1.5" y2="-45" antialias="false" length1="1.5" end2="none"/>
-        <line x2="20" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="20" y1="-50" length2="1.5" y2="-45" antialias="false" length1="1.5" end2="none"/>
-        <line x2="10" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="10" y1="50" length2="1.5" y2="45" antialias="false" length1="1.5" end2="none"/>
-        <line x2="20" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="20" y1="50" length2="1.5" y2="45" antialias="false" length1="1.5" end2="none"/>
-        <dynamic_text text_width="-1" y="-50" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" text_from="ElementInfo" Halignment="AlignLeft" Valignment="AlignTop" uuid="{ef5d8163-a0af-4a7a-86ea-0f5ef18f6e7e}" frame="false" rotation="0" x="-60" z="19">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-40" x2="40" y1="45" y2="-45"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-30" x2="-30" y1="-50" y2="-45"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-20" x2="-20" y1="-50" y2="-45"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-10" x2="-10" y1="-50" y2="-45"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="10" x2="10" y1="-50" y2="-45"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="20" x2="20" y1="-50" y2="-45"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="10" x2="10" y1="50" y2="45"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="20" x2="20" y1="50" y2="45"/>
+        <rect antialias="false" height="90" style="line-style:normal;line-weight:normal;filling:white;color:black" width="80" x="-40" y="-45"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{ef5d8163-a0af-4a7a-86ea-0f5ef18f6e7e}" x="-60" y="-50" z="19">
             <text>A</text>
             <info_name>label</info_name>
         </dynamic_text>
-        <terminal y="50" orientation="s" x="20"/>
-        <terminal y="-50" orientation="n" x="-30"/>
-        <terminal y="-50" orientation="n" x="-20"/>
-        <terminal y="-50" orientation="n" x="20"/>
-        <terminal y="50" orientation="s" x="10"/>
-        <terminal y="-50" orientation="n" x="-10"/>
-        <terminal y="-50" orientation="n" x="10"/>
+        <terminal name="" orientation="s" uuid="{5da57edb-b9dc-4bb9-b456-1a0d30e52a70}" x="20" y="50"/>
+        <terminal name="" orientation="n" uuid="{83d8f98c-ccca-4d61-b198-8f597e41fc80}" x="-30" y="-50"/>
+        <terminal name="" orientation="n" uuid="{77c06ffa-c8e4-40ce-9089-c0bf862d1ffd}" x="-20" y="-50"/>
+        <terminal name="" orientation="n" uuid="{e5e4ea6a-e6a6-47f1-9bec-9efc609975de}" x="20" y="-50"/>
+        <terminal name="" orientation="s" uuid="{894a8701-04e4-4e35-b97c-56ca737711de}" x="10" y="50"/>
+        <terminal name="" orientation="n" uuid="{f16aa589-baf9-439b-b7d5-895ecd2019c3}" x="-10" y="-50"/>
+        <terminal name="" orientation="n" uuid="{53554d57-db07-42e3-9328-da5a64a4cac3}" x="10" y="-50"/>
     </description>
 </definition>

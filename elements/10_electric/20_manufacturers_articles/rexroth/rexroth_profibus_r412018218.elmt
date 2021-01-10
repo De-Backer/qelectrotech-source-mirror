@@ -1,82 +1,82 @@
-<definition hotspot_x="33" link_type="simple" width="90" height="170" version="0.80" type="element" hotspot_y="84">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="170" hotspot_x="33" hotspot_y="84" link_type="simple" type="element" version="0.80" width="90">
     <uuid uuid="{73f9fc50-b0f3-4d64-98d9-d4581f32432e}"/>
     <names>
-        <name lang="en">REXROTH R412018218</name>
-        <name lang="pl">REXROTH R412018218</name>
         <name lang="cs">REXROTH R412018218</name>
-        <name lang="nl">REXROTH R412018218</name>
-        <name lang="fr">REXROTH R412018218</name>
-        <name lang="es">REXROTH R412018218</name>
         <name lang="el">REXROTH R412018218</name>
+        <name lang="en">REXROTH R412018218</name>
+        <name lang="es">REXROTH R412018218</name>
+        <name lang="fr">REXROTH R412018218</name>
         <name lang="it">REXROTH R412018218</name>
+        <name lang="nl">REXROTH R412018218</name>
+        <name lang="pl">REXROTH R412018218</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: The QElectroTech team
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <circle x="36" diameter="8" antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" y="-34"/>
-        <dynamic_text z="1" font="Sans Serif,6,-1,5,50,0,0,0,0,0" uuid="{462c2d9f-3f73-4cb9-ac5e-3b17a47cb8c5}" x="-15" Valignment="AlignTop" text_from="ElementInfo" text_width="-1" Halignment="AlignLeft" frame="false" rotation="270" y="-70">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="42" x2="48" y1="57" y2="60"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="42" x2="48" y1="58" y2="61"/>
+        <rect antialias="false" height="10" style="line-style:normal;line-weight:normal;filling:none;color:black" width="10" x="40" y="54"/>
+        <rect antialias="false" height="160" style="line-style:normal;line-weight:normal;filling:none;color:black" width="80" x="-30" y="-80"/>
+        <rect antialias="false" height="28" style="line-style:normal;line-weight:normal;filling:none;color:black" width="15" x="-25" y="25"/>
+        <rect antialias="false" height="10" style="line-style:normal;line-weight:normal;filling:none;color:black" width="10" x="25" y="0"/>
+        <rect antialias="false" height="10" style="line-style:normal;line-weight:normal;filling:none;color:black" width="10" x="25" y="20"/>
+        <rect antialias="false" height="40" style="line-style:normal;line-weight:normal;filling:none;color:black" width="20" x="20" y="-5"/>
+        <rect antialias="false" height="10" style="line-style:normal;line-weight:normal;filling:none;color:black" width="10" x="-25" y="70"/>
+        <rect antialias="false" height="10" style="line-style:normal;line-weight:normal;filling:none;color:black" width="10" x="-5" y="70"/>
+        <rect antialias="false" height="10" style="line-style:normal;line-weight:normal;filling:none;color:black" width="10" x="15" y="70"/>
+        <circle antialias="false" diameter="8" style="line-style:normal;line-weight:normal;filling:none;color:black" x="36" y="-34"/>
+        <circle antialias="false" diameter="8" style="line-style:normal;line-weight:normal;filling:none;color:black" x="26" y="-44"/>
+        <circle antialias="false" diameter="8" style="line-style:normal;line-weight:normal;filling:none;color:black" x="36" y="-54"/>
+        <circle antialias="false" diameter="8" style="line-style:normal;line-weight:normal;filling:none;color:black" x="26" y="-64"/>
+        <circle antialias="false" diameter="8" style="line-style:normal;line-weight:normal;filling:none;color:black" x="26" y="-24"/>
+        <circle antialias="false" diameter="8" style="line-style:normal;line-weight:normal;filling:none;color:black" x="36" y="-74"/>
+        <circle antialias="false" diameter="8" style="line-style:normal;line-weight:normal;filling:none;color:black" x="41" y="55"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:normal;filling:none;color:black" x="27" y="2"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:normal;filling:none;color:black" x="27" y="22"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,6,-1,5,50,0,0,0,0,0" frame="false" rotation="270" text_from="ElementInfo" text_width="-1" uuid="{462c2d9f-3f73-4cb9-ac5e-3b17a47cb8c5}" x="-15" y="-70" z="1">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <line y1="57" y2="60" end1="none" x2="48" antialias="false" x1="42" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" length1="1.5" end2="none"/>
-        <circle x="26" diameter="8" antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" y="-44"/>
-        <circle x="36" diameter="8" antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" y="-54"/>
-        <text font="Sans Serif,5,-1,5,50,0,0,0,0,0" x="-20" text="AES-DBC-PDP" color="#000000" rotation="270" y="20"/>
-        <circle x="26" diameter="8" antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" y="-64"/>
-        <circle x="26" diameter="8" antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" y="-24"/>
-        <rect x="40" width="10" height="10" ry="0" antialias="false" rx="0" style="line-style:normal;line-weight:normal;filling:none;color:black" y="54"/>
-        <circle x="36" diameter="8" antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" y="-74"/>
-        <circle x="41" diameter="8" antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" y="55"/>
-        <text font="Sans Serif,5,-1,5,50,0,0,0,0,0" x="-10" text="R422102430" color="#000000" rotation="270" y="20"/>
-        <line y1="58" y2="61" end1="none" x2="48" antialias="false" x1="42" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" length1="1.5" end2="none"/>
-        <dynamic_text z="14" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="5" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="0" y="-2">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="5" y="-2" z="14">
             <text>S1</text>
         </dynamic_text>
-        <dynamic_text z="14" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="3" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="0" y="-46">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="3" y="-46" z="14">
             <text>RUN/BF</text>
         </dynamic_text>
-        <dynamic_text z="14" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="13" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="0" y="-68">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="13" y="-68" z="14">
             <text>UA</text>
         </dynamic_text>
-        <dynamic_text z="14" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="14" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="0" y="-78">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="14" y="-78" z="14">
             <text>UL</text>
         </dynamic_text>
-        <dynamic_text z="14" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="6" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="0" y="17">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="6" y="17" z="14">
             <text>S2</text>
         </dynamic_text>
-        <rect x="-30" width="80" height="160" ry="0" antialias="false" rx="0" style="line-style:normal;line-weight:normal;filling:none;color:black" y="-80"/>
-        <dynamic_text z="14" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="0" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="0" y="-57">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{03894eef-e439-46ac-9942-2df366b63843}" x="0" y="-57" z="14">
             <text>IO/DIAG</text>
         </dynamic_text>
-        <text font="Sans Serif,6,-1,5,50,0,0,0,0,0" x="-20" text="REXROTH" color="#000000" rotation="270" y="-40"/>
-        <rect x="-25" width="15" height="28" ry="0" antialias="false" rx="0" style="line-style:normal;line-weight:normal;filling:none;color:black" y="25"/>
-        <dynamic_text z="20" font="Sans Serif,5,-1,5,0,0,0,0,0,0,normal" uuid="{9ee9fd53-f3da-4b34-bcc4-cab85660dde3}" x="38" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="0" y="15">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,5,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{9ee9fd53-f3da-4b34-bcc4-cab85660dde3}" x="38" y="15" z="20">
             <text>_</text>
         </dynamic_text>
-        <dynamic_text z="20" font="Sans Serif,5,-1,5,0,0,0,0,0,0,normal" uuid="{9ee9fd53-f3da-4b34-bcc4-cab85660dde3}" x="38" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="0" y="-5">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,5,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{9ee9fd53-f3da-4b34-bcc4-cab85660dde3}" x="38" y="-5" z="20">
             <text>_</text>
         </dynamic_text>
-        <rect x="25" width="10" height="10" ry="0" antialias="false" rx="0" style="line-style:normal;line-weight:normal;filling:none;color:black" y="0"/>
-        <dynamic_text z="24" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" uuid="{9e4f9120-d716-4032-8123-00e77ebafc68}" x="13" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="270" y="71">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="270" text_from="UserText" text_width="-1" uuid="{9e4f9120-d716-4032-8123-00e77ebafc68}" x="13" y="71" z="24">
             <text>X1S</text>
         </dynamic_text>
-        <dynamic_text z="24" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" uuid="{9e4f9120-d716-4032-8123-00e77ebafc68}" x="-8" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="270" y="71">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="270" text_from="UserText" text_width="-1" uuid="{9e4f9120-d716-4032-8123-00e77ebafc68}" x="-8" y="71" z="24">
             <text>X7P1</text>
         </dynamic_text>
-        <dynamic_text z="24" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" uuid="{9e4f9120-d716-4032-8123-00e77ebafc68}" x="-27" Valignment="AlignTop" text_from="UserText" text_width="-1" Halignment="AlignLeft" frame="false" rotation="270" y="71">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="270" text_from="UserText" text_width="-1" uuid="{9e4f9120-d716-4032-8123-00e77ebafc68}" x="-27" y="71" z="24">
             <text>X7P2</text>
         </dynamic_text>
-        <rect x="25" width="10" height="10" ry="0" antialias="false" rx="0" style="line-style:normal;line-weight:normal;filling:none;color:black" y="20"/>
-        <rect x="20" width="20" height="40" ry="5" antialias="false" rx="5" style="line-style:normal;line-weight:normal;filling:none;color:black" y="-5"/>
-        <circle x="27" diameter="6" antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" y="2"/>
-        <circle x="27" diameter="6" antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" y="22"/>
-        <rect x="-25" width="10" height="10" ry="0" antialias="false" rx="0" style="line-style:normal;line-weight:normal;filling:none;color:black" y="70"/>
-        <rect x="-5" width="10" height="10" ry="0" antialias="false" rx="0" style="line-style:normal;line-weight:normal;filling:none;color:black" y="70"/>
-        <rect x="15" width="10" height="10" ry="0" antialias="false" rx="0" style="line-style:normal;line-weight:normal;filling:none;color:black" y="70"/>
-        <terminal x="0" orientation="s" y="80"/>
-        <terminal x="-20" orientation="s" y="80"/>
-        <terminal x="20" orientation="s" y="80"/>
-        <terminal x="50" orientation="e" y="59"/>
+        <terminal name="" orientation="s" uuid="{b9eb4bf9-c642-4a87-bf7d-b50e75b07744}" x="0" y="80"/>
+        <terminal name="" orientation="s" uuid="{82db452d-ff39-4061-94e3-e2ecbcff9057}" x="-20" y="80"/>
+        <terminal name="" orientation="s" uuid="{f8751d8d-e091-42a5-92d8-2bc51a479233}" x="20" y="80"/>
+        <terminal name="" orientation="e" uuid="{a9cc92b1-0401-4e8f-9920-9a652e7bc3f7}" x="50" y="59"/>
     </description>
 </definition>

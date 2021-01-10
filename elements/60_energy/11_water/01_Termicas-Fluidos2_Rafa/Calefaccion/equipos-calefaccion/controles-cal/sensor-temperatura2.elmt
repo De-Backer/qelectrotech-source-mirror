@@ -1,24 +1,27 @@
-<definition hotspot_y="16" link_type="simple" hotspot_x="23" width="40" type="element" version="0.80" height="60">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="60" hotspot_x="23" hotspot_y="16" link_type="simple" type="element" version="0.80" width="40">
     <uuid uuid="{332b180e-b3ae-4eba-a75c-164dd354fee3}"/>
     <names>
-        <name lang="es">Sensor temperatura 2</name>
         <name lang="ca">Sensor temperatura 2</name>
         <name lang="en">Temperature sensor 2</name>
+        <name lang="es">Sensor temperatura 2</name>
         <name lang="fr">Sonde temperature 2</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Rafael Ferrando.
 Mantenimiento de Instalaciones Térmicas</informations>
     <description>
-        <line length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" y1="18.1791" y2="16.797" end2="none" x1="-2.65" length1="1.5" antialias="false" x2="2.3" end1="none"/>
-        <line length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" y1="15.4149" y2="14.0328" end2="none" x1="-3.2" length1="1.5" antialias="false" x2="1.75" end1="none"/>
-        <rect style="line-style:normal;line-weight:normal;filling:none;color:black" width="5.5" ry="0" y="12.9993" antialias="false" x="-3" rx="0" height="7"/>
-        <rect style="line-style:normal;line-weight:normal;filling:none;color:black" width="9" ry="0" y="6" antialias="false" x="-5" rx="0" height="6"/>
-        <rect style="line-style:normal;line-weight:normal;filling:none;color:black" width="5" ry="0" y="-2.5" antialias="false" x="-15" rx="0" height="5"/>
-        <rect style="line-style:normal;line-weight:normal;filling:none;color:black" width="2" ry="0" y="20" antialias="false" x="-1" rx="0" height="20"/>
-        <polygon style="line-style:normal;line-weight:normal;filling:none;color:black" y1="-2" x5="8" x3="-10" y2="-8" x1="8" y4="6" antialias="false" y3="6" y5="-2" x2="-10" x4="8" closed="false"/>
-        <arc style="line-style:normal;line-weight:normal;filling:none;color:black" start="90" width="20" angle="90" y="-12" antialias="true" x="-10" height="10"/>
-        <arc style="line-style:normal;line-weight:normal;filling:none;color:black" start="0" width="16" angle="90" y="-12" antialias="true" x="-8" height="20"/>
-        <terminal orientation="w" y="0" x="-15"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <rect antialias="false" height="7" style="line-style:normal;line-weight:normal;filling:none;color:black" width="5.5" x="-3" y="12.9993"/>
+        <rect antialias="false" height="6" style="line-style:normal;line-weight:normal;filling:none;color:black" width="9" x="-5" y="6"/>
+        <rect antialias="false" height="5" style="line-style:normal;line-weight:normal;filling:none;color:black" width="5" x="-15" y="-2.5"/>
+        <rect antialias="false" height="20" style="line-style:normal;line-weight:normal;filling:none;color:black" width="2" x="-1" y="20"/>
+        <polygon antialias="false" closed="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="8" x2="-10" x3="-10" x4="8" x5="8" y1="-2" y2="-8" y3="6" y4="6" y5="-2"/>
+        <arc angle="90" antialias="true" height="10" start="90" style="line-style:normal;line-weight:normal;filling:none;color:black" width="20" x="-10" y="-12"/>
+        <arc angle="90" antialias="true" height="20" start="0" style="line-style:normal;line-weight:normal;filling:none;color:black" width="16" x="-8" y="-12"/>
+        <terminal name="" orientation="w" uuid="{adb5dc7b-f506-4e47-b807-006ef0c5a8ff}" x="-15" y="0"/>
     </description>
 </definition>

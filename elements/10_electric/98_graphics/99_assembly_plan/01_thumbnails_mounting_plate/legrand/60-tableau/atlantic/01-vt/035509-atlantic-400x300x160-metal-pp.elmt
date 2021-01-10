@@ -1,29 +1,31 @@
-
-<definition width="680" type="element" hotspot_y="5" version="0.80" height="910" hotspot_x="2" link_type="simple">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="910" hotspot_x="2" hotspot_y="5" link_type="simple" type="element" version="0.80" width="680">
     <uuid uuid="{18842c11-c4ae-5051-940c-fddcdbd9ac2d}"/>
     <names>
         <name lang="fr">035509 - Coffret Atlantic 400x300x160 Métal IP66 IK10 RAL7035</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Legrand</elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="designation">035509</elementInformation>
-        <elementInformation show="1" name="description">Coffret métal vertical Atlantic métal IP66 IK10 - 400x300x160mm - RAL7035</elementInformation>
-        <elementInformation show="1" name="manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="machine_manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1">Coffret métal vertical Atlantic métal IP66 IK10 - 400x300x160mm - RAL7035</elementInformation>
+        <elementInformation name="designation" show="1">035509</elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations>Arnaud VALMARY</informations>
     <description>
-        <rect x="0" rx="0" style="line-style:normal;line-weight:normal;filling:white;color:black" y="0" width="675" antialias="false" height="900" ry="0"/>
-        <circle diameter="19.1" x="583.55" style="line-style:dashdotted;line-weight:thin;filling:none;color:black" y="805.45" antialias="true"/>
-        <circle diameter="19.1" x="583.55" style="line-style:dashdotted;line-weight:thin;filling:none;color:black" y="75.45" antialias="true"/>
-        <circle diameter="19.1" x="72.55" style="line-style:dashdotted;line-weight:thin;filling:none;color:black" y="805.45" antialias="true"/>
-        <circle diameter="19.1" x="72.55" style="line-style:dashdotted;line-weight:thin;filling:none;color:black" y="75.45" antialias="true"/>
-        <rect x="50" rx="0" style="line-style:dashdotted;line-weight:thin;filling:none;color:black" y="50" width="575" antialias="false" height="800" ry="0"/>
+        <rect antialias="false" height="900" style="line-style:normal;line-weight:normal;filling:white;color:black" width="675" x="0" y="0"/>
+        <rect antialias="false" height="800" style="line-style:dashdotted;line-weight:thin;filling:none;color:black" width="575" x="50" y="50"/>
+        <circle antialias="true" diameter="19.1" style="line-style:dashdotted;line-weight:thin;filling:none;color:black" x="583.55" y="805.45"/>
+        <circle antialias="true" diameter="19.1" style="line-style:dashdotted;line-weight:thin;filling:none;color:black" x="583.55" y="75.45"/>
+        <circle antialias="true" diameter="19.1" style="line-style:dashdotted;line-weight:thin;filling:none;color:black" x="72.55" y="805.45"/>
+        <circle antialias="true" diameter="19.1" style="line-style:dashdotted;line-weight:thin;filling:none;color:black" x="72.55" y="75.45"/>
     </description>
 </definition>

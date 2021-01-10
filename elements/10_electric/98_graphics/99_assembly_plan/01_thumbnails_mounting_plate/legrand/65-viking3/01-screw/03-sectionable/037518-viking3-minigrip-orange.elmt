@@ -1,21 +1,24 @@
-<definition version="0.80" link_type="simple" hotspot_x="3" hotspot_y="55" type="element" width="20" height="110">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="110" hotspot_x="3" hotspot_y="55" link_type="simple" type="element" version="0.80" width="20">
     <uuid uuid="{9acdc0f4-841d-4efa-8587-ad28277ae5bc}"/>
     <names>
         <name lang="fr">037518 - Viking3 - Mini préhenseur Orange</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="description">Mini préhenseur pour bloc de jonction sectionnable à vis ou ressort Viking 3</elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Legrand</elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="designation">037518</elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1">Mini préhenseur pour bloc de jonction sectionnable à vis ou ressort Viking 3</elementInformation>
+        <elementInformation name="designation" show="1">037518</elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations>Arnaud VALMARY</informations>
     <description>
-        <rect ry="0" x="2.77556e-17" rx="0" style="line-style:normal;line-weight:thin;filling:orange;color:black" antialias="false" width="13" height="100" y="-50"/>
+        <rect antialias="false" height="100" style="line-style:normal;line-weight:thin;filling:orange;color:black" width="13" x="2.77556e-17" y="-50"/>
     </description>
 </definition>

@@ -1,19 +1,22 @@
-<definition hotspot_x="20" link_type="simple" type="element" width="100" hotspot_y="10" version="0.80" height="20">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="20" hotspot_x="20" hotspot_y="10" link_type="simple" type="element" version="0.80" width="100">
+    <uuid uuid="{00000000-0000-0000-0000-000000000000}"/>
     <names>
+        <name lang="de">2000-407</name>
         <name lang="en">2000-407</name>
         <name lang="fr">2000-407</name>
-        <name lang="de">2000-407</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer">WAGO</elementInformation>
-        <elementInformation show="1" name="designation">2000-407</elementInformation>
+        <elementInformation name="designation" show="1">2000-407</elementInformation>
+        <elementInformation name="manufacturer" show="1">WAGO</elementInformation>
     </elementInformations>
     <informations>
         Author: plc-user for QElectroTech
         License:see https://qelectrotech.org/wiki_new/doc/elements_license
     </informations>
     <description>
-        <polygon y4="6.66" antialias="false" y3="-6.77" style="line-style:normal;line-weight:thin;filling:white;color:black" x3="73.6" x1="-14.49" y2="-6.77" x2="-14.49" x4="73.6" y1="6.66"/>
-        <text font="Sans Serif,4,-1,5,50,0,0,0,0,0" y="2.4" text="2000-407" color="#000000" x="15.9563" rotation="0"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:white;color:black" x1="-14.49" x2="-14.49" x3="73.6" x4="73.6" y1="6.66" y2="-6.77" y3="-6.77" y4="6.66"/>
     </description>
 </definition>

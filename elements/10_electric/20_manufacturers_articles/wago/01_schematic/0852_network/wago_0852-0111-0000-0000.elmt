@@ -1,53 +1,46 @@
-<definition type="element" version="0.80" hotspot_x="66" height="180" hotspot_y="106" link_type="simple" width="130">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="180" hotspot_x="66" hotspot_y="106" link_type="simple" type="element" version="0.80" width="130">
+    <uuid uuid="{00000000-0000-0000-0000-000000000000}"/>
     <names>
-        <name lang="fr">852-111</name>
-        <name lang="en">852-111</name>
         <name lang="de">852-111</name>
+        <name lang="en">852-111</name>
+        <name lang="fr">852-111</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer">WAGO</elementInformation>
-        <elementInformation show="1" name="designation">852-111</elementInformation>
+        <elementInformation name="designation" show="1">852-111</elementInformation>
+        <elementInformation name="manufacturer" show="1">WAGO</elementInformation>
     </elementInformations>
     <informations>
         Author: plc-user for QElectroTech
         License:see https://qelectrotech.org/wiki_new/doc/elements_license
     </informations>
     <description>
-        <line end1="none" x2="1" end2="none" style="line-style:normal;line-weight:normal;filling:none;color:black" y2="-83" y1="-83" x1="-1" antialias="false" length1="1.5" length2="1.5"/>
-        <rect ry="0" rx="0" style="line-style:normal;line-weight:normal;filling:none;color:black" height="170" y="-100" x="-60" antialias="false" width="120"/>
-        <circle diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" y="-102.5" x="-2.5" antialias="true"/>
-        <circle diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" y="27.5" x="-62.5" antialias="true"/>
-        <text font="Sans Serif,5,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="28" x="-54" text="5"/>
-        <text font="Sans Serif,5,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="-90" x="-20.9844" text="-"/>
-        <text font="Sans Serif,7,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="66" x="-49" text="Industrial ECO-Switch"/>
-        <circle diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" y="-52.5" x="-62.5" antialias="true"/>
-        <text font="Sans Serif,5,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="-32" x="-54.1875" text="2"/>
-        <text font="Sans Serif,5,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="-90" x="-42.5" text="+"/>
-        <circle diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" y="7.5" x="-62.5" antialias="true"/>
-        <text font="Sans Serif,5,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="-52" x="-54.1875" text="1"/>
-        <text font="Sans Serif,5,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="8" x="-53.8125" text="4"/>
-        <circle diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" y="-12.5" x="-62.5" antialias="true"/>
-        <circle diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" y="-32.5" x="-62.5" antialias="true"/>
-        <text font="Sans Serif,5,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="-12" x="-53.8125" text="3"/>
-        <circle diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" y="-102.5" x="-22.5" antialias="true"/>
-        <circle diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" y="-102.5" x="-42.5" antialias="true"/>
-        <text font="Sans Serif,7,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="54" x="-43" text="5-Port 100BASE-TX"/>
-        <text font="Sans Serif,5,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="-84" x="-36.6" text="PWR"/>
-        <text font="Sans Serif,9,-1,5,50,0,0,0,0,0" rotation="0" color="#000000" y="-64" x="-45" text="WAGO 852-111"/>
-        <dynamic_text z="20" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" Halignment="AlignLeft" Valignment="AlignTop" y="-20" frame="false" x="10" text_from="ElementInfo">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-1" x2="1" y1="-83" y2="-83"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="-92" y2="-87"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-5" x2="5" y1="-87" y2="-87"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-3" x2="3" y1="-85" y2="-85"/>
+        <rect antialias="false" height="170" style="line-style:normal;line-weight:normal;filling:none;color:black" width="120" x="-60" y="-100"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-2.5" y="-102.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-62.5" y="27.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-62.5" y="-52.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-62.5" y="7.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-62.5" y="-12.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-62.5" y="-32.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-22.5" y="-102.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-42.5" y="-102.5"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" x="10" y="-20" z="20">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <line end1="none" x2="0" end2="none" style="line-style:normal;line-weight:normal;filling:none;color:black" y2="-87" y1="-92" x1="0" antialias="false" length1="1.5" length2="1.5"/>
-        <line end1="none" x2="5" end2="none" style="line-style:normal;line-weight:normal;filling:none;color:black" y2="-87" y1="-87" x1="-5" antialias="false" length1="1.5" length2="1.5"/>
-        <line end1="none" x2="3" end2="none" style="line-style:normal;line-weight:normal;filling:none;color:black" y2="-85" y1="-85" x1="-3" antialias="false" length1="1.5" length2="1.5"/>
-        <terminal name="EZH3" orientation="w" y="-10" x="-60"/>
-        <terminal name="PWR+" orientation="n" y="-100" x="-40"/>
-        <terminal name="ETH5" orientation="w" y="30" x="-60"/>
-        <terminal name="ETH2" orientation="w" y="-30" x="-60"/>
-        <terminal name="ETH4" orientation="w" y="10" x="-60"/>
-        <terminal name="PWR-" orientation="n" y="-100" x="-20"/>
-        <terminal name="ETH1" orientation="w" y="-50" x="-60"/>
-        <terminal name="PWR-" orientation="n" y="-100" x="0"/>
+        <terminal name="EZH3" orientation="w" uuid="{7df6e06c-d8d5-44ff-81bd-5c470b07bc60}" x="-60" y="-10"/>
+        <terminal name="PWR+" orientation="n" uuid="{0c901557-a7b9-481e-a72e-87765cd34300}" x="-40" y="-100"/>
+        <terminal name="ETH5" orientation="w" uuid="{3e61160d-bc3e-425a-939d-a90ced9e64b8}" x="-60" y="30"/>
+        <terminal name="ETH2" orientation="w" uuid="{7ab06883-8889-4f40-b075-8425fbc5bc40}" x="-60" y="-30"/>
+        <terminal name="ETH4" orientation="w" uuid="{47cd768a-c3e4-4870-b584-b5c1c0794c63}" x="-60" y="10"/>
+        <terminal name="PWR-" orientation="n" uuid="{7b6241a7-1569-4c2a-994b-9233a4648264}" x="-20" y="-100"/>
+        <terminal name="ETH1" orientation="w" uuid="{1d584751-3480-462f-8eec-8b220c1b0a33}" x="-60" y="-50"/>
+        <terminal name="PWR-" orientation="n" uuid="{198f783c-b0fb-4603-9869-8c53c881b19a}" x="0" y="-100"/>
     </description>
 </definition>

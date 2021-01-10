@@ -1,24 +1,27 @@
-<definition hotspot_x="23" height="50" type="element" hotspot_y="21" version="0.80" link_type="simple" width="40">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="50" hotspot_x="23" hotspot_y="21" link_type="simple" type="element" version="0.80" width="40">
     <uuid uuid="{f6bea3a9-79d5-47ba-94ae-2652ca28f7fb}"/>
     <names>
         <name lang="en">Vacuum chamber</name>
         <name lang="fr">Enceinte sous vide</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: Eudes Grosjean, S.Deffaux
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <arc y="3" height="12" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="true" start="180" angle="179.5" width="20" x="-10"/>
-        <dynamic_text y="12" Valignment="AlignTop" z="2" frame="false" text_from="ElementInfo" Halignment="AlignLeft" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" x="19">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="20" y2="15"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-10" x2="-10" y1="-9" y2="9"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="10" x2="10" y1="-9" y2="9"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-15" x2="-10" y1="-8" y2="-8"/>
+        <arc angle="179.5" antialias="true" height="12" start="180" style="line-style:normal;line-weight:normal;filling:none;color:black" width="20" x="-10" y="3"/>
+        <arc angle="179.688" antialias="true" height="12" start="0.6875" style="line-style:normal;line-weight:normal;filling:none;color:black" width="20" x="-10" y="-15"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" x="19" y="12" z="2">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="0" end1="none" length2="1.5" y1="20" x1="0" antialias="false" length1="1.5" end2="none" y2="15"/>
-        <arc y="-15" height="12" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="true" start="0.6875" angle="179.688" width="20" x="-10"/>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-10" end1="none" length2="1.5" y1="-9" x1="-10" antialias="false" length1="1.5" end2="none" y2="9"/>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="10" end1="none" length2="1.5" y1="-9" x1="10" antialias="false" length1="1.5" end2="none" y2="9"/>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-10" end1="none" length2="1.5" y1="-8" x1="-15" antialias="false" length1="1.5" end2="none" y2="-8"/>
-        <terminal y="-8" orientation="w" x="-15"/>
-        <terminal y="20" orientation="s" x="0"/>
+        <terminal name="" orientation="w" uuid="{7e14fb8d-95e9-4114-81ab-4a782879a2f2}" x="-15" y="-8"/>
+        <terminal name="" orientation="s" uuid="{210c3e35-2611-4bc4-914d-8077d00a7fe3}" x="0" y="20"/>
     </description>
 </definition>

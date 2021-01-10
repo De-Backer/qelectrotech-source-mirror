@@ -1,69 +1,58 @@
-<definition type="element" height="160" hotspot_x="7" version="0.80" width="400" hotspot_y="4" link_type="simple">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="160" hotspot_x="7" hotspot_y="4" link_type="simple" type="element" version="0.80" width="400">
     <uuid uuid="{2677c55c-7688-4031-bac8-a41e32e33157}"/>
     <names>
         <name lang="en">Board 8DI</name>
-        <name lang="it">Scheda 8Di</name>
-        <name lang="fr">Carte 8 DI</name>
         <name lang="es">Tarjeta 8DI</name>
+        <name lang="fr">Carte 8 DI</name>
+        <name lang="it">Scheda 8Di</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="description">Carte d'entrées digitale</elementInformation>
-        <elementInformation show="1" name="manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="designation">8-DI</elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="machine_manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Sofrel</elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1">Carte d'entrées digitale</elementInformation>
+        <elementInformation name="designation" show="1">8-DI</elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Sofrel</elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
-    <informations>Author: The QElectroTech team&#xd;
+    <informations>Author: The QElectroTech team
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <dynamic_text text_from="ElementInfo" uuid="{a1ebbbc9-7cf5-454a-b0fa-22d962a1561a}" rotation="0" Valignment="AlignTop" frame="false" y="14.55" x="380.5" text_width="-1" z="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Halignment="AlignLeft">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="20" x2="20" y1="150" y2="120"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="115" x2="115" y1="150" y2="120"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="207" x2="207" y1="150" y2="120"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="385" x2="385" y1="150" y2="120"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="296" x2="296" y1="150" y2="120"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="270" x2="270" y1="20" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="370" x2="370" y1="0" y2="20"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="20" x2="386" y1="120" y2="120"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="-1" x2="385" y1="20" y2="20"/>
+        <rect antialias="false" height="150" style="line-style:normal;line-weight:normal;filling:none;color:black" width="385" x="0" y="0"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{a1ebbbc9-7cf5-454a-b0fa-22d962a1561a}" x="380.5" y="14.55" z="1">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <text color="#000000" rotation="0" y="140" x="246" text="5" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <text color="#000000" rotation="0" y="140" x="278" text="6" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <text color="#000000" rotation="0" y="140" x="185" text="4" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <text color="#000000" rotation="0" y="140" x="366" text="8" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <text color="#000000" rotation="0" y="140" x="338" text="7" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <text color="#000000" rotation="0" y="140" x="125" text="C" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <text color="#000000" rotation="0" y="140" x="215" text="C" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <text color="#000000" rotation="0" y="140" x="306" text="C" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <text color="#000000" rotation="0" y="140" x="67" text="1" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <text color="#000000" rotation="0" y="140" x="157" text="3" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <text color="#000000" rotation="0" y="140" x="96" text="2" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <rect rx="0" height="150" ry="0" antialias="false" width="385" y="0" x="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <text color="#000000" rotation="0" y="15" x="280" text="EMPLACEMENT" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
-        <line end2="none" antialias="false" end1="none" y2="120" length2="1.5" x2="20" x1="20" y1="150" length1="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black"/>
-        <line end2="none" antialias="false" end1="none" y2="120" length2="1.5" x2="115" x1="115" y1="150" length1="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black"/>
-        <line end2="none" antialias="false" end1="none" y2="120" length2="1.5" x2="207" x1="207" y1="150" length1="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black"/>
-        <text color="#000000" rotation="0" y="140" x="35" text="C" font="Sans Serif,10,-1,5,50,0,0,0,0,0"/>
-        <line end2="none" antialias="false" end1="none" y2="120" length2="1.5" x2="385" x1="385" y1="150" length1="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black"/>
-        <line end2="none" antialias="false" end1="none" y2="120" length2="1.5" x2="296" x1="296" y1="150" length1="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black"/>
-        <text color="#000000" rotation="0" y="80" x="118" text="CARTE 8 DI" font="Sans Serif,25,-1,5,50,0,0,0,0,0"/>
-        <line end2="none" antialias="false" end1="none" y2="0" length2="1.5" x2="270" x1="270" y1="20" length1="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black"/>
-        <line end2="none" antialias="false" end1="none" y2="20" length2="1.5" x2="370" x1="370" y1="0" length1="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black"/>
-        <line end2="none" antialias="false" end1="none" y2="120" length2="1.5" x2="386" x1="20" y1="120" length1="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black"/>
-        <line end2="none" antialias="false" end1="none" y2="20" length2="1.5" x2="385" x1="-1" y1="20" length1="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black"/>
-        <dynamic_text text_from="UserText" uuid="{03c9655f-539b-46ab-8f40-b86905aa1ec8}" rotation="0" Valignment="AlignTop" frame="false" y="0" x="370" text_width="-1" z="27" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" Halignment="AlignLeft">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{03c9655f-539b-46ab-8f40-b86905aa1ec8}" x="370" y="0" z="27">
             <text>_</text>
         </dynamic_text>
-        <terminal orientation="s" y="150" x="190"/>
-        <terminal orientation="s" y="150" x="40"/>
-        <terminal orientation="s" y="150" x="310"/>
-        <terminal orientation="s" y="150" x="220"/>
-        <terminal orientation="s" y="150" x="160"/>
-        <terminal orientation="s" y="150" x="340"/>
-        <terminal orientation="s" y="150" x="100"/>
-        <terminal orientation="s" y="150" x="250"/>
-        <terminal orientation="s" y="150" x="70"/>
-        <terminal orientation="s" y="150" x="280"/>
-        <terminal orientation="s" y="150" x="370"/>
-        <terminal orientation="s" y="150" x="130"/>
+        <terminal name="" orientation="s" uuid="{12e3d07a-ce34-4517-84b8-9a5684736d92}" x="190" y="150"/>
+        <terminal name="" orientation="s" uuid="{b0e9d7b0-bac5-430d-a059-186c235fc713}" x="40" y="150"/>
+        <terminal name="" orientation="s" uuid="{21afb32c-0360-41c8-b419-9a418af26bb0}" x="310" y="150"/>
+        <terminal name="" orientation="s" uuid="{8bdd3fd3-9ee5-4fbc-b50f-06151882f3ca}" x="220" y="150"/>
+        <terminal name="" orientation="s" uuid="{ffb6fd30-6153-4a39-8bdf-6cf3c9559e4b}" x="160" y="150"/>
+        <terminal name="" orientation="s" uuid="{e780e085-a937-494f-a00f-255f6159e2cd}" x="340" y="150"/>
+        <terminal name="" orientation="s" uuid="{1840e069-5789-4bac-9bba-8dd9033d73da}" x="100" y="150"/>
+        <terminal name="" orientation="s" uuid="{fca16cca-f8d4-472e-a768-6ac60ec22c4f}" x="250" y="150"/>
+        <terminal name="" orientation="s" uuid="{dfa6d2f4-3d80-4a04-963c-a8ed42a00912}" x="70" y="150"/>
+        <terminal name="" orientation="s" uuid="{785b7e90-5f34-4cd7-a9a6-8ddf1943c62f}" x="280" y="150"/>
+        <terminal name="" orientation="s" uuid="{95e99060-55e6-40ab-8c72-3866285ba2cd}" x="370" y="150"/>
+        <terminal name="" orientation="s" uuid="{6fa0ef99-2f95-4896-a1ee-02ed36074b00}" x="130" y="150"/>
     </description>
 </definition>

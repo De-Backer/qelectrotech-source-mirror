@@ -1,51 +1,54 @@
-<definition height="360" link_type="simple" hotspot_y="65" version="0.80" type="element" width="50" hotspot_x="7">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="360" hotspot_x="7" hotspot_y="65" link_type="simple" type="element" version="0.80" width="50">
     <uuid uuid="{c75e3f33-4e70-40d4-b7d4-eccea16bbc6d}"/>
     <names>
         <name lang="fr">405000 - Peigne P+N VX³ - 2 rangées</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Legrand</elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="machine_manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="description">Peigne d'alimentation verticale VX³ optimisée monophasée - pour coffret 2 rangées entraxe 125mm</elementInformation>
-        <elementInformation show="1" name="designation">4050 00</elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1">Peigne d'alimentation verticale VX³ optimisée monophasée - pour coffret 2 rangées entraxe 125mm</elementInformation>
+        <elementInformation name="designation" show="1">4050 00</elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations>Arnaud Valmary</informations>
     <description>
-        <rect height="330" ry="0" rx="0" style="line-style:normal;line-weight:thin;filling:gray;color:black" y="-40" x="-5" antialias="false" width="5"/>
-        <polygon x1="30" x5="30" style="line-style:normal;line-weight:thin;filling:blue;color:black" x2="0" y2="270" x3="0" y5="230" y4="220" antialias="false" y1="240" x4="20" y3="240"/>
-        <dynamic_text Halignment="AlignLeft" y="-28" rotation="0" z="3" x="0" font="Sans Serif,6,-1,5,50,0,0,0,0,0" uuid="{58b7ce38-810c-4865-8f14-ee41cd829a36}" text_width="-1" frame="false" text_from="ElementInfo" Valignment="AlignTop">
+        <rect antialias="false" height="330" style="line-style:normal;line-weight:thin;filling:gray;color:black" width="5" x="-5" y="-40"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:blue;color:black" x1="30" x2="0" x3="0" x4="20" x5="30" y1="240" y2="270" y3="240" y4="220" y5="230"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:black;color:black" x1="30" x2="40" x3="40" x4="0" x5="0" x6="30" y1="240" y2="250" y3="280" y4="280" y5="270" y6="240"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:blue;color:black" x1="30" x2="0" x3="0" x4="20" x5="30" y1="-40" y2="-10" y3="-40" y4="-60" y5="-50"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:black;color:black" x1="30" x2="40" x3="40" x4="0" x5="0" x6="30" y1="-40" y2="-30" y3="0" y4="0" y5="-10" y6="-40"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,6,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{58b7ce38-810c-4865-8f14-ee41cd829a36}" x="0" y="-28" z="3">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <polygon x1="30" x5="0" y6="240" style="line-style:normal;line-weight:thin;filling:black;color:black" x2="40" y2="250" x3="40" y5="270" y4="280" antialias="false" x6="30" y1="240" x4="0" y3="280"/>
-        <dynamic_text Halignment="AlignLeft" y="252" rotation="0" z="3" x="0" font="Sans Serif,6,-1,5,50,0,0,0,0,0" uuid="{58b7ce38-810c-4865-8f14-ee41cd829a36}" text_width="-1" frame="false" text_from="ElementInfo" Valignment="AlignTop">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,6,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{58b7ce38-810c-4865-8f14-ee41cd829a36}" x="0" y="252" z="3">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <dynamic_text Halignment="AlignLeft" y="3" rotation="270" z="4" x="-9" font="DejaVu Sans,3,-1,5,50,0,0,0,0,0" uuid="{e4a56c36-b376-4dc5-954e-049d43f23ce2}" text_width="-1" frame="false" text_from="ElementInfo" Valignment="AlignTop">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="DejaVu Sans,3,-1,5,50,0,0,0,0,0" frame="false" rotation="270" text_from="ElementInfo" text_width="-1" uuid="{e4a56c36-b376-4dc5-954e-049d43f23ce2}" x="-9" y="3" z="4">
             <text>4050 00</text>
             <info_name>designation</info_name>
         </dynamic_text>
-        <dynamic_text Halignment="AlignLeft" y="-18" rotation="270" z="5" x="-9" font="DejaVu Sans,3,-1,5,50,0,0,0,0,0" uuid="{2cd5e253-a1e3-4469-8a78-30128ccd7d74}" text_width="-1" frame="false" text_from="ElementInfo" Valignment="AlignTop">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="DejaVu Sans,3,-1,5,50,0,0,0,0,0" frame="false" rotation="270" text_from="ElementInfo" text_width="-1" uuid="{2cd5e253-a1e3-4469-8a78-30128ccd7d74}" x="-9" y="-18" z="5">
             <text>Legrand</text>
             <info_name>manufacturer</info_name>
         </dynamic_text>
-        <polygon x1="30" x5="30" style="line-style:normal;line-weight:thin;filling:blue;color:black" x2="0" y2="-10" x3="0" y5="-50" y4="-60" antialias="false" y1="-40" x4="20" y3="-40"/>
-        <polygon x1="30" x5="0" y6="-40" style="line-style:normal;line-weight:thin;filling:black;color:black" x2="40" y2="-30" x3="40" y5="-10" y4="0" antialias="false" x6="30" y1="-40" x4="0" y3="0"/>
-        <terminal orientation="s" y="0" x="10"/>
-        <terminal orientation="s" y="280" x="30"/>
-        <terminal orientation="e" y="225" x="25"/>
-        <terminal orientation="e" y="-34" x="36"/>
-        <terminal orientation="s" y="0" x="30"/>
-        <terminal orientation="e" y="-55" x="25"/>
-        <terminal orientation="e" y="246" x="36"/>
-        <terminal orientation="s" y="280" x="10"/>
+        <terminal name="" orientation="s" uuid="{8f7dad8d-72a6-4e5e-8117-d1beb8566a93}" x="10" y="0"/>
+        <terminal name="" orientation="s" uuid="{1cec182e-1ff9-4237-a9b2-20b2b34be0b8}" x="30" y="280"/>
+        <terminal name="" orientation="e" uuid="{96ee7b4c-9fb4-459d-91a3-d72a2d8f0b72}" x="25" y="225"/>
+        <terminal name="" orientation="e" uuid="{2b2b9c33-5ad7-4bbc-8bc3-8b25a4589e45}" x="36" y="-34"/>
+        <terminal name="" orientation="s" uuid="{368fcf20-ab53-46fa-8351-08506d09f8cf}" x="30" y="0"/>
+        <terminal name="" orientation="e" uuid="{fc15d733-f1cc-4651-a8e5-03ee165447ba}" x="25" y="-55"/>
+        <terminal name="" orientation="e" uuid="{9159546c-437f-41bd-acbd-b080584b891d}" x="36" y="246"/>
+        <terminal name="" orientation="s" uuid="{eae248ce-5c4b-47b1-b9cf-59293b2669d2}" x="10" y="280"/>
     </description>
 </definition>

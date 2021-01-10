@@ -1,49 +1,52 @@
-<definition height="30" hotspot_y="14" link_type="terminal" version="0.80" type="element" width="490" hotspot_x="34">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="30" hotspot_x="34" hotspot_y="14" link_type="terminal" type="element" version="0.80" width="490">
     <uuid uuid="{598108e7-7424-4baa-aaa7-e4eecc05b322}"/>
     <names>
         <name lang="fr">404926 - Peigne P+N HX³ - 13 modules</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
-        <elementInformation name="quantity" show="1"></elementInformation>
-        <elementInformation name="description" show="1">Peigne d'alimentation universel Phase + Neutre HX³ horizontale 1P - longueur 13 modules</elementInformation>
-        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
         <elementInformation name="comment" show="1"></elementInformation>
-        <elementInformation name="label" show="1"></elementInformation>
-        <elementInformation name="unity" show="1"></elementInformation>
+        <elementInformation name="description" show="1">Peigne d'alimentation universel Phase + Neutre HX³ horizontale 1P - longueur 13 modules</elementInformation>
         <elementInformation name="designation" show="1">4049 26</elementInformation>
-        <elementInformation name="supplier" show="1"></elementInformation>
-        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
         <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations>Arnaud Valmary</informations>
     <description>
-        <rect height="20" style="line-style:normal;line-weight:thin;filling:gray;color:black" antialias="false" ry="0" rx="0" y="-10" width="482" x="-31"/>
-        <polygon style="line-style:normal;line-weight:normal;filling:none;color:black" y1="4" x3="450" antialias="false" y2="-8" closed="false" x2="-30" y3="-8" x1="-30"/>
-        <dynamic_text text_from="ElementInfo" uuid="{58b7ce38-810c-4865-8f14-ee41cd829a36}" Halignment="AlignLeft" Valignment="AlignTop" text_width="-1" font="Sans Serif,6,-1,5,50,0,0,0,0,0" y="-28" frame="false" rotation="0" x="-35" z="4">
+        <rect antialias="false" height="20" style="line-style:normal;line-weight:thin;filling:gray;color:black" width="482" x="-31" y="-10"/>
+        <polygon antialias="false" closed="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-30" x2="-30" x3="450" y1="4" y2="-8" y3="-8"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,6,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{58b7ce38-810c-4865-8f14-ee41cd829a36}" x="-35" y="-28" z="4">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <dynamic_text text_from="ElementInfo" uuid="{e4a56c36-b376-4dc5-954e-049d43f23ce2}" Halignment="AlignLeft" Valignment="AlignTop" text_width="-1" font="DejaVu Sans,4,-1,5,50,0,0,0,0,0" y="-9.5" frame="false" rotation="0" x="-30.7266" z="5">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="DejaVu Sans,4,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{e4a56c36-b376-4dc5-954e-049d43f23ce2}" x="-30.7266" y="-9.5" z="5">
             <text>4049 26</text>
             <info_name>designation</info_name>
         </dynamic_text>
-        <dynamic_text text_from="ElementInfo" uuid="{2cd5e253-a1e3-4469-8a78-30128ccd7d74}" Halignment="AlignLeft" Valignment="AlignTop" text_width="-1" font="DejaVu Sans,4,-1,5,50,0,0,0,0,0" y="-9.5" frame="false" rotation="0" x="-3.72656" z="6">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="DejaVu Sans,4,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{2cd5e253-a1e3-4469-8a78-30128ccd7d74}" x="-3.72656" y="-9.5" z="6">
             <text>Legrand</text>
             <info_name>manufacturer</info_name>
         </dynamic_text>
-        <terminal orientation="s" y="10" x="290"/>
-        <terminal orientation="s" y="10" x="10"/>
-        <terminal orientation="s" y="10" x="330"/>
-        <terminal orientation="s" y="10" x="-30"/>
-        <terminal orientation="s" y="10" x="410"/>
-        <terminal orientation="s" y="10" x="210"/>
-        <terminal orientation="s" y="10" x="90"/>
-        <terminal orientation="s" y="10" x="250"/>
-        <terminal orientation="s" y="10" x="170"/>
-        <terminal orientation="s" y="10" x="130"/>
-        <terminal orientation="s" y="10" x="450"/>
-        <terminal orientation="s" y="10" x="370"/>
-        <terminal orientation="s" y="10" x="50"/>
+        <terminal name="" orientation="s" uuid="{3f370c16-c12e-45a6-84c3-7983b83dbf24}" x="290" y="10"/>
+        <terminal name="" orientation="s" uuid="{5c74413b-26c4-416b-b9e2-2683cea44d70}" x="10" y="10"/>
+        <terminal name="" orientation="s" uuid="{6be0e57e-e48d-4c47-b1bf-3b307014e91b}" x="330" y="10"/>
+        <terminal name="" orientation="s" uuid="{ce3a8579-26dd-4472-a044-613836c3a331}" x="-30" y="10"/>
+        <terminal name="" orientation="s" uuid="{a6d79695-3001-4153-bae5-a97ef83cde96}" x="410" y="10"/>
+        <terminal name="" orientation="s" uuid="{8e53049d-b969-43eb-bf15-571035f57054}" x="210" y="10"/>
+        <terminal name="" orientation="s" uuid="{0e6d4387-0e17-495a-9ea4-ed1b9dceaf85}" x="90" y="10"/>
+        <terminal name="" orientation="s" uuid="{769f8721-8708-4c1d-8e99-e10bd7babda6}" x="250" y="10"/>
+        <terminal name="" orientation="s" uuid="{bfdeffb3-c653-4848-827a-0e0414fd4a89}" x="170" y="10"/>
+        <terminal name="" orientation="s" uuid="{9d400734-d6cb-49ab-9d75-a2d3af09b0fd}" x="130" y="10"/>
+        <terminal name="" orientation="s" uuid="{2e9db6e8-0755-401e-a0fd-5d6cf2013d98}" x="450" y="10"/>
+        <terminal name="" orientation="s" uuid="{217fb306-5fd9-48d8-95d0-1212aaccdbea}" x="370" y="10"/>
+        <terminal name="" orientation="s" uuid="{ffd913a0-c8aa-4b85-856f-5f92f70b380e}" x="50" y="10"/>
     </description>
 </definition>

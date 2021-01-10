@@ -1,42 +1,45 @@
-<definition hotspot_y="19" link_type="simple" hotspot_x="13" version="0.80" width="20" height="40" type="element">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="40" hotspot_x="13" hotspot_y="19" link_type="simple" type="element" version="0.80" width="20">
     <uuid uuid="{db0d94b0-30de-4477-b693-49af4da70f3e}"/>
     <names>
-        <name lang="fr">Porte fusible</name>
         <name lang="cs">Pojistkový odpínač</name>
+        <name lang="fr">Porte fusible</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="description"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="designation"></elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1"></elementInformation>
+        <elementInformation name="designation" show="1"></elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations></informations>
     <description>
-        <dynamic_text text_width="-1" text_from="UserText" y="-22" x="-3" z="1" Valignment="AlignTop" font="Sans Serif,5,-1,5,25,0,0,0,0,0" rotation="0" frame="false" uuid="{d3f026c2-4718-4cf6-b783-49b6080d3ec3}" Halignment="AlignLeft">
+        <line antialias="true" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-3" x2="3" y1="-10" y2="-10"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="-10" y2="-15"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="10" y2="15"/>
+        <polygon antialias="true" closed="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="2.82578" x2="-2.92493" x3="-8.77479" x4="-3.13713" x5="2.8423" y1="8.87394" y2="10.8817" y3="-6.81657" y4="-8.81219" y5="8.89046"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,5,-1,5,25,0,0,0,0,0" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{d3f026c2-4718-4cf6-b783-49b6080d3ec3}" x="-3" y="-22" z="1">
             <text>1</text>
         </dynamic_text>
-        <dynamic_text text_width="-1" text_from="UserText" y="4" x="-2" z="2" Valignment="AlignTop" font="Sans Serif,5,-1,5,25,0,0,0,0,0" rotation="0" frame="false" uuid="{f3c9c54f-bc4f-44b6-a691-e28a08f857d2}" Halignment="AlignLeft">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,5,-1,5,25,0,0,0,0,0" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{f3c9c54f-bc4f-44b6-a691-e28a08f857d2}" x="-2" y="4" z="2">
             <text>2</text>
         </dynamic_text>
-        <dynamic_text text_width="-1" text_from="ElementInfo" y="-15" x="-28" z="3" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" rotation="0" frame="false" uuid="{0e5e65df-6f92-4dc2-a46e-040c5e3e1d6c}" Halignment="AlignLeft">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{0e5e65df-6f92-4dc2-a46e-040c5e3e1d6c}" x="-28" y="-15" z="3">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <polygon x3="-8.77479" y2="10.8817" y3="-6.81657" y1="8.87394" y4="-8.81219" x5="2.8423" x1="2.82578" x4="-3.13713" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-2.92493" closed="false" y5="8.89046" antialias="true"/>
-        <line y2="10.0885" length2="1.5" y1="-7.79981" x1="-5.91596" end2="none" end1="none" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="0.01823" antialias="true"/>
-        <line y2="-10" length2="1.5" y1="-10" x1="-3" end2="none" end1="none" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="3" antialias="false"/>
-        <dynamic_text text_width="-1" text_from="ElementInfo" y="2" x="-34" z="7" Valignment="AlignTop" font="Sans Serif,7,-1,5,0,0,0,0,0,0,normal" rotation="0" frame="false" uuid="{f61998ec-d878-4737-9e74-8679a306af5a}" Halignment="AlignLeft">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,7,-1,5,0,0,0,0,0,0,normal" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{f61998ec-d878-4737-9e74-8679a306af5a}" x="-34" y="2" z="7">
             <text></text>
             <info_name>comment</info_name>
         </dynamic_text>
-        <line y2="-15" length2="1.5" y1="-10" x1="0" end2="none" end1="none" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="0" antialias="false"/>
-        <line y2="15" length2="1.5" y1="10" x1="0" end2="none" end1="none" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="0" antialias="false"/>
-        <terminal y="15" orientation="s" x="0"/>
-        <terminal y="-15" orientation="n" x="0"/>
+        <terminal name="" orientation="s" uuid="{eabdefd8-7508-457a-ad6e-87e5ed7444f4}" x="0" y="15"/>
+        <terminal name="" orientation="n" uuid="{a2e825d7-5759-4b0f-8815-47d0094b8d05}" x="0" y="-15"/>
     </description>
 </definition>

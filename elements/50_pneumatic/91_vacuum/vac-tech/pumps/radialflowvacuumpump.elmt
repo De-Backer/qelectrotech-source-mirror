@@ -1,29 +1,32 @@
-<definition hotspot_x="24" version="0.80" width="50" height="50" link_type="simple" type="element" hotspot_y="24">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="50" hotspot_x="24" hotspot_y="24" link_type="simple" type="element" version="0.80" width="50">
     <uuid uuid="{fd16ac03-ea0e-4b26-bc6b-ff15e9c0211f}"/>
     <names>
         <name lang="en">Radial flow vacuum pump</name>
         <name lang="fr">Pompe à flux radial</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: Eudes Grosjean, S.Deffaux
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <circle style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="30" x="-15" y="-15"/>
-        <dynamic_text rotation="0" Valignment="AlignTop" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" text_width="-1" frame="false" x="-7" z="2" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Halignment="AlignLeft" y="5.55" text_from="ElementInfo">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="16" x2="15" y1="0" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-16" x2="-15" y1="0" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="13" x2="7" y1="-7" y2="13"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-7" x2="-13" y1="13" y2="-7"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="-16" y2="-15"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="16" y2="15"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <circle antialias="true" diameter="30" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-15" y="-15"/>
+        <circle antialias="false" diameter="14" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-7" y="-7"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" x="-7" y="5.55" z="2">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <line length1="1.5" x2="15" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" end1="none" y1="0" y2="0" x1="16" end2="none" length2="1.5"/>
-        <line length1="1.5" x2="-15" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" end1="none" y1="0" y2="0" x1="-16" end2="none" length2="1.5"/>
-        <line length1="1.5" x2="7" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" end1="none" y1="-7" y2="13" x1="13" end2="none" length2="1.5"/>
-        <line length1="1.5" x2="-13" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" end1="none" y1="13" y2="-7" x1="-7" end2="none" length2="1.5"/>
-        <line length1="1.5" x2="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" end1="none" y1="-16" y2="-15" x1="0" end2="none" length2="1.5"/>
-        <line length1="1.5" x2="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" end1="none" y1="16" y2="15" x1="0" end2="none" length2="1.5"/>
-        <circle style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" diameter="14" x="-7" y="-7"/>
-        <line length1="1.5" x2="6.5" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" end1="none" y1="0" y2="0" x1="-6.5" end2="none" length2="1.5"/>
-        <terminal x="0" y="16" orientation="s"/>
-        <terminal x="-16" y="0" orientation="w"/>
-        <terminal x="16" y="0" orientation="e"/>
-        <terminal x="0" y="-16" orientation="n"/>
+        <terminal name="" orientation="s" uuid="{21a36997-2345-4fac-a450-521c1d2dd2c4}" x="0" y="16"/>
+        <terminal name="" orientation="w" uuid="{cd67211e-0df4-4ca2-b082-9433a050b78f}" x="-16" y="0"/>
+        <terminal name="" orientation="e" uuid="{fe6438c0-9f5a-4a0c-bcad-345003328e64}" x="16" y="0"/>
+        <terminal name="" orientation="n" uuid="{edc45d49-ec1a-4f4c-b366-ec2b8e6a7ec8}" x="0" y="-16"/>
     </description>
 </definition>

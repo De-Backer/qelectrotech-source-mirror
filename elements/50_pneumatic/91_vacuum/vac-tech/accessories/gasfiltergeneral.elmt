@@ -1,24 +1,27 @@
-<definition hotspot_x="20" height="60" type="element" hotspot_y="29" version="0.80" link_type="simple" width="40">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="60" hotspot_x="20" hotspot_y="29" link_type="simple" type="element" version="0.80" width="40">
     <uuid uuid="{b2bcaf2d-9525-4ac1-9c5d-cebe8d56058c}"/>
     <names>
         <name lang="en">Gas filter, general</name>
         <name lang="fr">Filtre à gaz, symbole général</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: Eudes Grosjean, S.Deffaux
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="0" end1="none" length2="1.5" y1="-18" x1="0" antialias="false" length1="1.5" end2="none" y2="-22"/>
-        <dynamic_text y="12" Valignment="AlignTop" z="2" frame="false" text_from="ElementInfo" Halignment="AlignLeft" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" x="19">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="-18" y2="-22"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="18" y2="22"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="17" y2="7"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="17" y2="7"/>
+        <rect antialias="false" height="40" style="line-style:normal;line-weight:normal;filling:none;color:black" width="28" x="-14" y="-20"/>
+        <rect antialias="false" height="34" style="line-style:normal;line-weight:normal;filling:none;color:black" width="18" x="-9" y="-17"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" x="19" y="12" z="2">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="0" end1="none" length2="1.5" y1="18" x1="0" antialias="false" length1="1.5" end2="none" y2="22"/>
-        <rect y="-20" height="40" style="line-style:normal;line-weight:normal;filling:none;color:black" ry="0" rx="0" antialias="false" width="28" x="-14"/>
-        <rect y="-17" height="34" style="line-style:normal;line-weight:normal;filling:none;color:black" ry="0" rx="0" antialias="false" width="18" x="-9"/>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="8.75" end1="none" length2="1.5" y1="17" x1="0" antialias="false" length1="1.5" end2="none" y2="7"/>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-8.75" end1="none" length2="1.5" y1="17" x1="0" antialias="false" length1="1.5" end2="none" y2="7"/>
-        <terminal y="-22" orientation="n" x="0"/>
-        <terminal y="22" orientation="s" x="0"/>
+        <terminal name="" orientation="n" uuid="{fc47bd76-d2e6-416a-aeb3-b432d7cac737}" x="0" y="-22"/>
+        <terminal name="" orientation="s" uuid="{42f12576-6b61-46c3-932e-4dce4034a316}" x="0" y="22"/>
     </description>
 </definition>

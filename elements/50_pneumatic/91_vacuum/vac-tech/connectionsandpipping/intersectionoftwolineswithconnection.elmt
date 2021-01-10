@@ -1,21 +1,24 @@
-<definition hotspot_x="24" height="30" type="element" hotspot_y="15" version="0.80" link_type="simple" width="50">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="30" hotspot_x="24" hotspot_y="15" link_type="simple" type="element" version="0.80" width="50">
     <uuid uuid="{80b29f96-a7e8-4bb6-8f0d-e6789bbc7d4b}"/>
     <names>
         <name lang="en">Intersection of two lines with connection</name>
         <name lang="fr">Intersection de deux lignes avec connexion</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: Eudes Grosjean, S.Deffaux
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <dynamic_text y="12" Valignment="AlignTop" z="2" frame="false" text_from="ElementInfo" Halignment="AlignLeft" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" x="19">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-20" x2="20" y1="0" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-14" x2="-14" y1="-10" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="14" x2="14" y1="10" y2="0"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" x="19" y="12" z="2">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="20" end1="none" length2="1.5" y1="0" x1="-20" antialias="false" length1="1.5" end2="none" y2="0"/>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-14" end1="none" length2="1.5" y1="-10" x1="-14" antialias="false" length1="1.5" end2="none" y2="0"/>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="14" end1="none" length2="1.5" y1="10" x1="14" antialias="false" length1="1.5" end2="none" y2="0"/>
-        <terminal y="0" orientation="w" x="-20"/>
-        <terminal y="0" orientation="e" x="20"/>
+        <terminal name="" orientation="w" uuid="{7752ca0c-d346-448d-a319-9af6daee3cf4}" x="-20" y="0"/>
+        <terminal name="" orientation="e" uuid="{db38b05a-b630-4da4-a1fa-af5ecaf3fb4d}" x="20" y="0"/>
     </description>
 </definition>

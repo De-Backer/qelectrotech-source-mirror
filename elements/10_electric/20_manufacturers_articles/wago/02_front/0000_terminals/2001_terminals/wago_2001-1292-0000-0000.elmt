@@ -1,18 +1,22 @@
-<definition version="0.80" type="element" hotspot_y="119" hotspot_x="4" height="180" width="10" link_type="simple">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="180" hotspot_x="4" hotspot_y="119" link_type="simple" type="element" version="0.80" width="10">
+    <uuid uuid="{00000000-0000-0000-0000-000000000000}"/>
     <names>
         <name lang="de">2001-1292</name>
         <name lang="en">2001-1292</name>
         <name lang="fr">2001-1292</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer">WAGO</elementInformation>
-        <elementInformation show="1" name="designation">2001-1292</elementInformation>
+        <elementInformation name="designation" show="1">2001-1292</elementInformation>
+        <elementInformation name="manufacturer" show="1">WAGO</elementInformation>
     </elementInformations>
     <informations>
         Author: plc-user for QElectroTech
         License:see https://qelectrotech.org/wiki_new/doc/elements_license
     </informations>
     <description>
-        <polygon x2="2.42" y3="55.24" x3="2.42" y4="55.24" y2="-114.49" antialias="false" x4="-1" x1="-1" y1="-114.49" style="line-style:normal;line-weight:thin;filling:orange;color:orange"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:orange;color:orange" x1="-1" x2="2.42" x3="2.42" x4="-1" y1="-114.49" y2="-114.49" y3="55.24" y4="55.24"/>
     </description>
 </definition>

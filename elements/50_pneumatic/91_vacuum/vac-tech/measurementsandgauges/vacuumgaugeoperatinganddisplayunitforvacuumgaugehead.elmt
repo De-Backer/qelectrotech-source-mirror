@@ -1,24 +1,27 @@
-<definition hotspot_x="24" height="50" type="element" hotspot_y="24" version="0.80" link_type="simple" width="50">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="50" hotspot_x="24" hotspot_y="24" link_type="simple" type="element" version="0.80" width="50">
     <uuid uuid="{7d686b7b-fa4c-40a5-8f4b-faf10b369710}"/>
     <names>
         <name lang="en">Vacuum gauge, operating and display unit for vacuum
 gauge head</name>
         <name lang="fr">Jauge de vide avec moniteur</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: Eudes Grosjean, S.Deffaux
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <line style="line-style:normal;line-weight:normal;filling:none;color:black" x2="10" end1="none" length2="1.5" y1="0" x1="-10" antialias="false" length1="1.5" end2="none" y2="0"/>
-        <dynamic_text y="12" Valignment="AlignTop" z="2" frame="false" text_from="ElementInfo" Halignment="AlignLeft" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" x="19">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-10" x2="10" y1="0" y2="0"/>
+        <rect antialias="false" height="40" style="line-style:normal;line-weight:normal;filling:none;color:black" width="40" x="-20" y="-20"/>
+        <polygon antialias="false" closed="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-10" x2="0" x3="10" y1="-10" y2="10" y3="-10"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" x="19" y="12" z="2">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <polygon x3="10" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="0" y1="-10" x1="-10" y3="-10" antialias="false" closed="false" y2="10"/>
-        <rect y="-20" height="40" style="line-style:normal;line-weight:normal;filling:none;color:black" ry="0" rx="0" antialias="false" width="40" x="-20"/>
-        <terminal y="-20" orientation="n" x="0"/>
-        <terminal y="0" orientation="e" x="20"/>
-        <terminal y="0" orientation="w" x="-20"/>
-        <terminal y="20" orientation="s" x="0"/>
+        <terminal name="" orientation="n" uuid="{20f98c04-0db0-4a5b-a2a5-011e65c1a44a}" x="0" y="-20"/>
+        <terminal name="" orientation="e" uuid="{e7da7a67-4dcd-4129-bf60-d4531b98a00b}" x="20" y="0"/>
+        <terminal name="" orientation="w" uuid="{81ba32c8-6665-4ae1-8935-d4b28799cd7f}" x="-20" y="0"/>
+        <terminal name="" orientation="s" uuid="{c7ccf101-f795-41cd-b700-65244803341b}" x="0" y="20"/>
     </description>
 </definition>

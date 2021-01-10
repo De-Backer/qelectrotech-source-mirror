@@ -1,19 +1,22 @@
-<definition version="0.80" type="element" width="390" height="20" hotspot_x="12" link_type="simple" hotspot_y="10">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="20" hotspot_x="12" hotspot_y="10" link_type="simple" type="element" version="0.80" width="390">
+    <uuid uuid="{00000000-0000-0000-0000-000000000000}"/>
     <names>
+        <name lang="de">2016-409</name>
         <name lang="en">2016-409</name>
         <name lang="fr">2016-409</name>
-        <name lang="de">2016-409</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer">WAGO</elementInformation>
-        <elementInformation show="1" name="designation">2016-409</elementInformation>
+        <elementInformation name="designation" show="1">2016-409</elementInformation>
+        <elementInformation name="manufacturer" show="1">WAGO</elementInformation>
     </elementInformations>
     <informations>
         Author: plc-user for QElectroTech
         License:see https://qelectrotech.org/wiki_new/doc/elements_license
     </informations>
     <description>
-        <polygon x4="-8.2" x3="373.15" antialias="false" y4="7.31" y1="-6.87" x1="-8.2" x2="373.15" y2="-6.87" y3="7.31" style="line-style:normal;line-weight:thin;filling:white;color:black"/>
-        <text rotation="0" x="169" y="2.9" text="2016-409" color="#000000" font="Sans Serif,4,-1,5,50,0,0,0,0,0"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:white;color:black" x1="-8.2" x2="373.15" x3="373.15" x4="-8.2" y1="-6.87" y2="-6.87" y3="7.31" y4="7.31"/>
     </description>
 </definition>

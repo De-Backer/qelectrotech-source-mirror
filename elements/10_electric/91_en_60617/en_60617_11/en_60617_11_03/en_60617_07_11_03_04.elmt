@@ -1,23 +1,26 @@
-<definition link_type="simple" height="40" hotspot_x="144" version="0.80" hotspot_y="34" type="element" width="150">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="40" hotspot_x="144" hotspot_y="34" link_type="simple" type="element" version="0.80" width="150">
     <uuid uuid="{64f28af5-53e6-473f-9886-6177e07d33b4}"/>
     <names>
         <name lang="be">Elektrische leiding in een buis</name>
-        <name lang="fr">Ligne dans un conduit,
-Ligne dans un fourreau</name>
         <name lang="de">Leiter in einem Kabelkanal,
 Leiter in einer Trasse</name>
+        <name lang="fr">Ligne dans un conduit,
+Ligne dans un fourreau</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: The QElectroTech team
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <dynamic_text text_from="ElementInfo" text_width="-1" uuid="{4226ce6b-4f90-4f66-a5ee-e4a9a84b62d2}" frame="false" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignTop" Halignment="AlignLeft" x="5" z="1" y="13.5">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="-140" y1="0" y2="0"/>
+        <circle antialias="false" diameter="20" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-80" y="-30"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{4226ce6b-4f90-4f66-a5ee-e4a9a84b62d2}" x="5" y="13.5" z="1">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <line end2="none" y2="0" length2="1.5" length1="1.5" y1="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" x2="-140" end1="none" x1="0"/>
-        <circle diameter="20" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" x="-80" y="-30"/>
-        <terminal x="-140" orientation="w" y="0"/>
-        <terminal x="0" orientation="e" y="0"/>
+        <terminal name="" orientation="w" uuid="{7d927606-8ee5-47e5-a313-5db4dcf83d52}" x="-140" y="0"/>
+        <terminal name="" orientation="e" uuid="{d0f14483-23dc-4fb5-a765-2073b2effb68}" x="0" y="0"/>
     </description>
 </definition>

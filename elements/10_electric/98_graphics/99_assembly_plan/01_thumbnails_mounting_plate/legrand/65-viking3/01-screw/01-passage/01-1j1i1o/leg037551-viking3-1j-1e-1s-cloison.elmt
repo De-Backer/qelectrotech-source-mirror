@@ -1,25 +1,28 @@
-<definition hotspot_x="7" width="10" type="element" height="130" version="0.80" link_type="simple" hotspot_y="6">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="130" hotspot_x="7" hotspot_y="6" link_type="simple" type="element" version="0.80" width="10">
     <uuid uuid="{9f804e22-f4d7-4fed-9173-cae1be6c080b}"/>
     <names>
         <name lang="fr">037551-Cloison terminale bloc jonction Viking3 à vis - 1 entrée/1 sortie - pas 12 et 15</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="designation">LEG037551</elementInformation>
-        <elementInformation show="1" name="description">Cloison terminale bloc jonction Viking3 à vis - 1 entrée/1 sortie - pas 12 et 15</elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Legrand</elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="machine_manufacturer_reference"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1">Cloison terminale bloc jonction Viking3 à vis - 1 entrée/1 sortie - pas 12 et 15</elementInformation>
+        <elementInformation name="designation" show="1">LEG037551</elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations>Arnaud VALMARY</informations>
     <description>
-        <rect ry="0" y="0" rx="0" width="5" style="line-style:normal;line-weight:thin;filling:HTMLGrayLightSlateGray;color:black" antialias="false" x="-5" height="117"/>
-        <rect ry="0" y="5" rx="0" width="5" style="line-style:normal;line-weight:thin;filling:HTMLGrayLightSlateGray;color:black" antialias="false" x="-5" height="103"/>
-        <rect ry="0" y="52" rx="0" width="5" style="line-style:normal;line-weight:thin;filling:HTMLGrayLightSlateGray;color:black" antialias="false" x="-5" height="13"/>
+        <rect antialias="false" height="117" style="line-style:normal;line-weight:thin;filling:HTMLGrayLightSlateGray;color:black" width="5" x="-5" y="0"/>
+        <rect antialias="false" height="103" style="line-style:normal;line-weight:thin;filling:HTMLGrayLightSlateGray;color:black" width="5" x="-5" y="5"/>
+        <rect antialias="false" height="13" style="line-style:normal;line-weight:thin;filling:HTMLGrayLightSlateGray;color:black" width="5" x="-5" y="52"/>
     </description>
 </definition>

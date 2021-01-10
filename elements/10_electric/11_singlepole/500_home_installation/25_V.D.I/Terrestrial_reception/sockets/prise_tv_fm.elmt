@@ -1,21 +1,24 @@
-<definition type="element" width="30" hotspot_y="6" hotspot_x="15" height="30" link_type="simple" version="0.80">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="30" hotspot_x="15" hotspot_y="6" link_type="simple" type="element" version="0.80" width="30">
     <uuid uuid="{a755a740-0b10-4aad-877b-9c111f5471ca}"/>
     <names>
-        <name lang="fr">Prise TV-FM</name>
         <name lang="cs">Dvojzásuvka TV+FM</name>
+        <name lang="fr">Prise TV-FM</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Baboune41</informations>
     <description>
-        <dynamic_text y="22" text_from="ElementInfo" x="-15" uuid="{e6e4e792-aa91-4a2e-802c-4961f39682f9}" Valignment="AlignTop" Halignment="AlignLeft" z="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" rotation="0" frame="false">
+        <rect antialias="false" height="20" style="line-style:normal;line-weight:thin;filling:none;color:black" width="20" x="-10" y="0"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-8" y="7"/>
+        <circle antialias="false" diameter="1" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-5.5" y="9.5"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:normal;filling:none;color:black" x="3" y="7"/>
+        <circle antialias="false" diameter="2" style="line-style:normal;line-weight:thin;filling:none;color:black" x="5" y="9"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{e6e4e792-aa91-4a2e-802c-4961f39682f9}" x="-15" y="22" z="1">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <circle y="7" antialias="false" x="-8" style="line-style:normal;line-weight:normal;filling:none;color:black" diameter="6"/>
-        <circle y="9.5" antialias="false" x="-5.5" style="line-style:normal;line-weight:normal;filling:none;color:black" diameter="1"/>
-        <circle y="7" antialias="false" x="3" style="line-style:normal;line-weight:normal;filling:none;color:black" diameter="6"/>
-        <circle y="9" antialias="false" x="5" style="line-style:normal;line-weight:thin;filling:none;color:black" diameter="2"/>
-        <rect y="0" antialias="false" x="-10" width="20" style="line-style:normal;line-weight:thin;filling:none;color:black" rx="2" height="20" ry="2"/>
-        <terminal orientation="n" y="0" x="0"/>
+        <terminal name="" orientation="n" uuid="{d073dc87-1528-4524-ac79-a646bc0d9f8e}" x="0" y="0"/>
     </description>
 </definition>

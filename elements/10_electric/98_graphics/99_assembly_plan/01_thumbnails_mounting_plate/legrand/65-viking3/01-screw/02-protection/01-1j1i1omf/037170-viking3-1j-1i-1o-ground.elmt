@@ -1,31 +1,34 @@
-<definition version="0.80" link_type="simple" hotspot_x="4" hotspot_y="6" type="element" width="20" height="130">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="130" hotspot_x="4" hotspot_y="6" link_type="simple" type="element" version="0.80" width="20">
     <uuid uuid="{0940624c-a761-4654-992d-8475a7d1b562}"/>
     <names>
         <name lang="fr">037170 - Viking3 - 1 jonction 1 entrée 1 sortie 2,5mm² pas 5mm Vert/jaune</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="description">Bloc de jonction pour conducteur de protection à vis Viking3 avec 1 jonction 1 entrée 1 sortie section 2,5mm² - pas 5mm</elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Legrand</elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="designation">037170</elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1">Bloc de jonction pour conducteur de protection à vis Viking3 avec 1 jonction 1 entrée 1 sortie section 2,5mm² - pas 5mm</elementInformation>
+        <elementInformation name="designation" show="1">037170</elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations>Arnaud VALMARY</informations>
     <description>
-        <rect ry="0" x="0" rx="0" style="line-style:normal;line-weight:thin;filling:yellow;color:black" antialias="false" width="11" height="117" y="0"/>
-        <rect ry="0" x="0" rx="0" style="line-style:normal;line-weight:thin;filling:HTMLGreenLimeGreen;color:black" antialias="false" width="11" height="103" y="7"/>
-        <rect ry="0" x="0" rx="0" style="line-style:normal;line-weight:thin;filling:yellow;color:black" antialias="false" width="11" height="13" y="52"/>
-        <circle x="3.5" style="line-style:normal;line-weight:thin;filling:lightgray;color:black" antialias="false" diameter="4" y="54"/>
-        <circle x="3.5" style="line-style:normal;line-weight:thin;filling:lightgray;color:black" antialias="false" diameter="4" y="59"/>
-        <circle x="2.5" style="line-style:normal;line-weight:thin;filling:gray;color:black" antialias="false" diameter="6" y="67"/>
-        <polygon y3="68.3" x1="3.3" style="line-style:normal;line-weight:thin;filling:gray;color:black" antialias="false" x2="7.3" y2="67.8" x4="3.8" y4="72.3" y1="71.8" x3="7.8"/>
-        <circle x="2.5" style="line-style:normal;line-weight:thin;filling:gray;color:black" antialias="false" diameter="6" y="44"/>
-        <polygon y3="45.3" x1="3.3" style="line-style:normal;line-weight:thin;filling:gray;color:black" antialias="false" x2="7.3" y2="44.8" x4="3.8" y4="49.3" y1="48.8" x3="7.8"/>
-        <terminal x="5.5" orientation="n" y="0"/>
-        <terminal x="5.5" orientation="s" y="117"/>
+        <rect antialias="false" height="117" style="line-style:normal;line-weight:thin;filling:yellow;color:black" width="11" x="0" y="0"/>
+        <rect antialias="false" height="103" style="line-style:normal;line-weight:thin;filling:HTMLGreenLimeGreen;color:black" width="11" x="0" y="7"/>
+        <rect antialias="false" height="13" style="line-style:normal;line-weight:thin;filling:yellow;color:black" width="11" x="0" y="52"/>
+        <circle antialias="false" diameter="4" style="line-style:normal;line-weight:thin;filling:lightgray;color:black" x="3.5" y="54"/>
+        <circle antialias="false" diameter="4" style="line-style:normal;line-weight:thin;filling:lightgray;color:black" x="3.5" y="59"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:thin;filling:gray;color:black" x="2.5" y="67"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:thin;filling:gray;color:black" x="2.5" y="44"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:gray;color:black" x1="3.3" x2="7.3" x3="7.8" x4="3.8" y1="71.8" y2="67.8" y3="68.3" y4="72.3"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:gray;color:black" x1="3.3" x2="7.3" x3="7.8" x4="3.8" y1="48.8" y2="44.8" y3="45.3" y4="49.3"/>
+        <terminal name="" orientation="n" uuid="{c7e4e982-91c4-4141-9416-8d01884414da}" x="5.5" y="0"/>
+        <terminal name="" orientation="s" uuid="{da44fb03-30ce-4175-9dec-fb39715a3991}" x="5.5" y="117"/>
     </description>
 </definition>

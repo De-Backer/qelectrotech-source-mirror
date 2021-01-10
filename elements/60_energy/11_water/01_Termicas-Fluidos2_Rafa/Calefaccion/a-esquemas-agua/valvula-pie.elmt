@@ -1,4 +1,6 @@
-<definition hotspot_x="10" link_type="simple" type="element" version="0.80" width="20" height="30" hotspot_y="14">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="30" hotspot_x="10" hotspot_y="14" link_type="simple" type="element" version="0.80" width="20">
     <uuid uuid="{a20e4a38-5e08-4aed-8a2e-073380e992d5}"/>
     <names>
         <name lang="ca">Vàlvula de peu</name>
@@ -6,32 +8,33 @@
         <name lang="es">Válvula de pie</name>
         <name lang="fr">clapet anti-retour</name>
     </names>
+    <kindInformations/>
     <elementInformations>
         <elementInformation name="comment" show="1"></elementInformation>
-        <elementInformation name="supplier" show="1"></elementInformation>
-        <elementInformation name="unity" show="1"></elementInformation>
-        <elementInformation name="label" show="1"></elementInformation>
-        <elementInformation name="quantity" show="1"></elementInformation>
-        <elementInformation name="manufacturer" show="1"></elementInformation>
-        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
-        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
-        <elementInformation name="plant" show="1"></elementInformation>
         <elementInformation name="description" show="1"></elementInformation>
         <elementInformation name="designation" show="1"></elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1"></elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
-    <informations>Rafael Ferrando.&#xd;
+    <informations>Rafael Ferrando.
 Mantenimiento de Instalaciones Térmicas</informations>
     <description>
-        <circle y="-4" diameter="8" antialias="true" x="-4" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <line x2="0" end2="none" end1="none" length1="1.5" y2="6" antialias="false" x1="-8" y1="0" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <line x2="0" end2="none" end1="none" length1="1.5" y2="6" antialias="false" x1="7" y1="0" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <line x2="0" end2="none" end1="none" length1="1.5" y2="-10" antialias="false" x1="0" y1="-4" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <line x2="0" end2="none" end1="none" length1="1.5" y2="6.21818" antialias="false" x1="0" y1="9.76364" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <dynamic_text y="8.5" Halignment="AlignLeft" z="6" font="Sans Serif,4,-1,5,25,0,0,0,0,0" uuid="{d9f21c2d-8312-42bc-8847-b7c6360c26c5}" text_width="-1" frame="false" x="-6" rotation="0" text_from="ElementInfo" Valignment="AlignTop">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-8" x2="0" y1="0" y2="6"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="7" x2="0" y1="0" y2="6"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="-4" y2="-10"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <circle antialias="true" diameter="8" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-4" y="-4"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,25,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{d9f21c2d-8312-42bc-8847-b7c6360c26c5}" x="-6" y="8.5" z="6">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <terminal y="-10" orientation="n" x="0"/>
-        <terminal y="10" orientation="s" x="0"/>
+        <terminal name="" orientation="n" uuid="{f94ccff0-db80-4947-a3a2-a4f1e9c15c66}" x="0" y="-10"/>
+        <terminal name="" orientation="s" uuid="{e9ffd0cf-a38a-42fa-8ffe-bd4b6df48e1f}" x="0" y="10"/>
     </description>
 </definition>

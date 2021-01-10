@@ -1,23 +1,26 @@
-<definition hotspot_x="24" height="50" type="element" hotspot_y="24" version="0.80" link_type="simple" width="50">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="50" hotspot_x="24" hotspot_y="24" link_type="simple" type="element" version="0.80" width="50">
     <uuid uuid="{62001ef9-a95a-4f78-81ad-2aeb441b8323}"/>
     <names>
         <name lang="en">Measurement of throughput</name>
         <name lang="fr">Measurement de flux</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: Eudes Grosjean, S.Deffaux
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <dynamic_text y="12" Valignment="AlignTop" z="2" frame="false" text_from="ElementInfo" Halignment="AlignLeft" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" x="19">
+        <circle antialias="false" diameter="40" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-20" y="-20"/>
+        <polygon antialias="false" closed="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-16" x2="-7" x3="7" x4="16" y1="-11" y2="-3" y3="-3" y4="-11"/>
+        <polygon antialias="false" closed="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="16" x2="7" x3="-7" x4="-16" y1="11" y2="3" y3="3" y4="11"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" x="19" y="12" z="2">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <circle y="-20" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" diameter="40" x="-20"/>
-        <polygon x3="7" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="-7" y1="-11" x1="-16" y3="-3" antialias="false" x4="16" y4="-11" closed="false" y2="-3"/>
-        <polygon x3="-7" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="7" y1="11" x1="16" y3="3" antialias="false" x4="-16" y4="11" closed="false" y2="3"/>
-        <terminal y="-20" orientation="n" x="0"/>
-        <terminal y="0" orientation="e" x="20"/>
-        <terminal y="20" orientation="s" x="0"/>
-        <terminal y="0" orientation="w" x="-20"/>
+        <terminal name="" orientation="n" uuid="{46c8c16e-36a5-47e0-9543-b759d7a0ebe2}" x="0" y="-20"/>
+        <terminal name="" orientation="e" uuid="{c9db392d-37d4-495f-b8b4-dea41f4c279b}" x="20" y="0"/>
+        <terminal name="" orientation="s" uuid="{a67e1f46-6870-4c52-87f1-f266f8e6dbdb}" x="0" y="20"/>
+        <terminal name="" orientation="w" uuid="{20034789-9bdb-4141-8264-d27b3ef94ba6}" x="-20" y="0"/>
     </description>
 </definition>

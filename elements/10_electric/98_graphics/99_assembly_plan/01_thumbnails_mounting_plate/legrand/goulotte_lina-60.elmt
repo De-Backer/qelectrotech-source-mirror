@@ -1,26 +1,29 @@
-<definition version="0.80" hotspot_y="4" link_type="simple" hotspot_x="5" height="140" width="210" type="element">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="140" hotspot_x="5" hotspot_y="4" link_type="simple" type="element" version="0.80" width="210">
     <uuid uuid="{21c6f995-0271-43cb-8bc1-f70cbe54fcae}"/>
     <names>
-        <name lang="en">Wiring duct 60mm</name>
-        <name lang="fr">Goulotte de câblage 60mm</name>
         <name lang="cs">Potrubí elektrického vedení 60 mm</name>
         <name lang="de">Verdrahtungskanal 60mm</name>
+        <name lang="en">Wiring duct 60mm</name>
+        <name lang="fr">Goulotte de câblage 60mm</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="machine-manufacturer-reference"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Legrand</elementInformation>
-        <elementInformation show="1" name="manufacturer-reference"></elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="description"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="designation"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1"></elementInformation>
+        <elementInformation name="designation" show="1"></elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine-manufacturer-reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
+        <elementInformation name="manufacturer-reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations></informations>
     <description>
-        <rect x="0" style="line-style:normal;line-weight:normal;filling:blue;color:none" height="132" rx="0" y="0" ry="0" width="200" antialias="false"/>
+        <rect antialias="false" height="132" style="line-style:normal;line-weight:normal;filling:blue;color:none" width="200" x="0" y="0"/>
     </description>
 </definition>

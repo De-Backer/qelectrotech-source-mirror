@@ -1,21 +1,24 @@
-<definition link_type="simple" height="30" hotspot_x="56" version="0.80" hotspot_y="25" type="element" width="60">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="30" hotspot_x="56" hotspot_y="25" link_type="simple" type="element" version="0.80" width="60">
     <uuid uuid="{2dfac5a4-3698-4622-b9ac-9c8d15a0d88b}"/>
     <names>
         <name lang="be">Aansluitpunt voor een verlichtingstoestel</name>
-        <name lang="fr">Point d'attente d'appareil d'éclairage</name>
         <name lang="de">Leuchtenauslaß </name>
+        <name lang="fr">Point d'attente d'appareil d'éclairage</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: The QElectroTech team
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <dynamic_text text_from="ElementInfo" text_width="-1" uuid="{1f9e84fe-3bb7-435e-8268-f0580299d132}" frame="false" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" Valignment="AlignTop" Halignment="AlignLeft" x="5" z="1" y="13.5">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-20" x2="0" y1="-20" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-20" x2="0" y1="0" y2="-20"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-50" x2="-10" y1="-10" y2="-10"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{1f9e84fe-3bb7-435e-8268-f0580299d132}" x="5" y="13.5" z="1">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <line end2="none" y2="0" length2="1.5" length1="1.5" y1="-20" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" x2="0" end1="none" x1="-20"/>
-        <line end2="none" y2="-20" length2="1.5" length1="1.5" y1="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" x2="0" end1="none" x1="-20"/>
-        <line end2="none" y2="-10" length2="1.5" length1="1.5" y1="-10" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" x2="-10" end1="none" x1="-50"/>
-        <terminal x="-50" orientation="w" y="-10"/>
+        <terminal name="" orientation="w" uuid="{8f878b2f-6434-4899-942a-3b0fecf9f121}" x="-50" y="-10"/>
     </description>
 </definition>

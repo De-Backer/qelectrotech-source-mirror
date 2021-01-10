@@ -1,19 +1,22 @@
-<definition hotspot_x="24" height="30" type="element" hotspot_y="15" version="0.80" link_type="simple" width="50">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="30" hotspot_x="24" hotspot_y="15" link_type="simple" type="element" version="0.80" width="50">
     <uuid uuid="{ca9ca25a-960c-4619-a445-74c86e7fbb71}"/>
     <names>
         <name lang="en">Shut-off device, general</name>
         <name lang="fr">Vanne d'arrêt, symbole général</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: Eudes Grosjean, S.Deffaux
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <polygon x3="20" style="line-style:normal;line-weight:normal;filling:none;color:black" x2="20" y1="10" x1="-20" y3="10" antialias="false" x4="-20" y4="-10" y2="-10"/>
-        <dynamic_text y="12" Valignment="AlignTop" z="2" frame="false" text_from="ElementInfo" Halignment="AlignLeft" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" x="19">
+        <polygon antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-20" x2="20" x3="20" x4="-20" y1="10" y2="-10" y3="10" y4="-10"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{dd55bb10-a3fa-47b6-9eea-fc0ccfc2493b}" x="19" y="12" z="2">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <terminal y="0" orientation="e" x="20"/>
-        <terminal y="0" orientation="w" x="-20"/>
+        <terminal name="" orientation="e" uuid="{c9c6f7bc-d670-490c-82d3-3c0cb48d44d1}" x="20" y="0"/>
+        <terminal name="" orientation="w" uuid="{ca6350fd-4fd9-4f31-98a1-a9b6911f1806}" x="-20" y="0"/>
     </description>
 </definition>

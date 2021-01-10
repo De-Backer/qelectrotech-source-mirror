@@ -1,54 +1,49 @@
-<definition hotspot_x="366" hotspot_y="46" type="element" height="100" link_type="simple" version="0.80" width="730">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="100" hotspot_x="366" hotspot_y="46" link_type="simple" type="element" version="0.80" width="730">
+    <uuid uuid="{00000000-0000-0000-0000-000000000000}"/>
     <names>
+        <name lang="ar">750-862</name>
         <name lang="cs">750-862</name>
         <name lang="de">750-862</name>
-        <name lang="pt">750-862</name>
         <name lang="el">750-862</name>
+        <name lang="en">750-862</name>
         <name lang="es">750-862</name>
-        <name lang="pl">750-862</name>
+        <name lang="fr">750-862</name>
         <name lang="it">750-862</name>
         <name lang="nl">750-862</name>
-        <name lang="ar">750-862</name>
-        <name lang="fr">750-862</name>
-        <name lang="en">750-862</name>
+        <name lang="pl">750-862</name>
+        <name lang="pt">750-862</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer">WAGO</elementInformation>
-        <elementInformation show="1" name="designation">750-862</elementInformation>
+        <elementInformation name="designation" show="1">750-862</elementInformation>
+        <elementInformation name="manufacturer" show="1">WAGO</elementInformation>
     </elementInformations>
     <informations>
         Author: plc-user for QElectroTech
         License:see https://qelectrotech.org/wiki_new/doc/elements_license
     </informations>
     <description>
-        <rect style="line-style:normal;line-weight:normal;filling:none;color:black" height="90" rx="0" y="-40" ry="0" width="720" antialias="false" x="-360"/>
-        <text text="0V" rotation="0" color="#000000" y="-22" x="-39" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
-        <circle style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" y="17.5" antialias="true" x="-362.5"/>
-        <dynamic_text Halignment="AlignLeft" z="4" rotation="0" Valignment="AlignTop" text_width="-1" y="29.5" frame="false" x="220" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_from="ElementInfo">
+        <rect antialias="false" height="90" style="line-style:normal;line-weight:normal;filling:none;color:black" width="720" x="-360" y="-40"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-362.5" y="17.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-362.5" y="-2.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-42.5" y="-42.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-122.5" y="-42.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-202.5" y="-42.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-282.5" y="-42.5"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" x="220" y="29.5" z="4">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <text text="Eth2" rotation="0" color="#000000" y="24" x="-355" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
-        <text text="0V" rotation="0" color="#000000" y="-22" x="-119" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
-        <circle style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" y="-2.5" antialias="true" x="-362.5"/>
-        <circle style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" y="-42.5" antialias="true" x="-42.5"/>
-        <circle style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" y="-42.5" antialias="true" x="-122.5"/>
-        <circle style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" y="-42.5" antialias="true" x="-202.5"/>
-        <circle style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" y="-42.5" antialias="true" x="-282.5"/>
-        <text text="WAGO 750-862" rotation="0" color="#000000" y="45" x="-330" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
-        <text text="IP Adr.:" rotation="0" color="#000000" y="4" x="-317" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
-        <dynamic_text Halignment="AlignLeft" z="23" rotation="0" Valignment="AlignTop" text_width="-1" y="-11.5" frame="false" x="-270" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_from="UserText">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="UserText" text_width="-1" x="-270" y="-11.5" z="23">
             <text>192.168.1.1</text>
         </dynamic_text>
-        <text text="24V" rotation="0" color="#000000" y="-22" x="-199" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
-        <text text="24V" rotation="0" color="#000000" y="-22" x="-279" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
-        <text text="Eth1" rotation="0" color="#000000" y="4" x="-355" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
-        <text text="Ethernet ECO Controller" rotation="0" color="#000000" y="45" x="-138" font="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
-        <terminal orientation="w" name="Eth1" y="0" x="-360"/>
-        <terminal orientation="w" name="Eth2" y="20" x="-360"/>
-        <terminal orientation="n" name="24V.1" y="-40" x="-280"/>
-        <terminal orientation="n" name="24V.2" y="-40" x="-200"/>
-        <terminal orientation="n" name="0V.3" y="-40" x="-120"/>
-        <terminal orientation="n" name="0V.4" y="-40" x="-40"/>
+        <terminal name="Eth1" orientation="w" uuid="{ed7ffb06-7683-44e5-8c89-6efb59cc3970}" x="-360" y="0"/>
+        <terminal name="Eth2" orientation="w" uuid="{a56ef14f-a242-4147-b921-c1851ee31c5e}" x="-360" y="20"/>
+        <terminal name="24V.1" orientation="n" uuid="{7818cf57-47a6-4668-966b-5b9161118aa7}" x="-280" y="-40"/>
+        <terminal name="24V.2" orientation="n" uuid="{f42e70b1-d2ea-448c-9c9c-4f290ca85aec}" x="-200" y="-40"/>
+        <terminal name="0V.3" orientation="n" uuid="{802bd27c-49b2-4ce4-a5bb-ea82fbe11e7e}" x="-120" y="-40"/>
+        <terminal name="0V.4" orientation="n" uuid="{85af9234-c3f4-4504-a791-56f4dbadd91c}" x="-40" y="-40"/>
     </description>
 </definition>

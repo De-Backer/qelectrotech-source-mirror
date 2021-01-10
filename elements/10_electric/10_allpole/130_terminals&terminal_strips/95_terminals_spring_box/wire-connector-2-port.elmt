@@ -1,21 +1,24 @@
-<definition link_type="terminal" type="element" width="30" hotspot_x="10" hotspot_y="26" height="50" version="0.80">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="50" hotspot_x="10" hotspot_y="26" link_type="terminal" type="element" version="0.80" width="30">
     <uuid uuid="{b7a446f5-e2db-4144-86ee-4b15b6f95431}"/>
     <names>
-        <name lang="en">Wire Connector 2-Port</name>
         <name lang="cs">Svorka 2 vodiče</name>
+        <name lang="en">Wire Connector 2-Port</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer"></elementInformation>
-        <elementInformation show="1" name="designation"></elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="description"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="machine_manufacturer_reference"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1"></elementInformation>
+        <elementInformation name="designation" show="1"></elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1"></elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations>
       Author convertor: Mario Luongo
@@ -23,14 +26,14 @@
 
    </informations>
     <description>
-        <rect antialias="false" rx="1" x="-7.8" y="-22.5" width="25.6" height="42" style="line-style:normal;line-weight:normal;filling:lightgray;color:gray" ry="1"/>
-        <rect antialias="false" rx="0" x="1" y="-17" width="8" height="3" style="line-style:normal;line-weight:thin;filling:HTMLGrayGainsboro;color:white" ry="0"/>
-        <rect antialias="false" rx="1" x="-4" y="-10" width="8" height="30" style="line-style:normal;line-weight:thin;filling:HTMLOrangeTomato;color:white" ry="1"/>
-        <rect antialias="false" rx="1" x="6" y="-10" width="8" height="30" style="line-style:normal;line-weight:thin;filling:HTMLOrangeTomato;color:white" ry="1"/>
-        <line y1="5" length1="1.5" x1="0" antialias="false" x2="0" end2="none" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" y2="-5" end1="none"/>
-        <line y1="-5" length1="1.5" x1="10" antialias="false" x2="0" end2="none" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" y2="-5" end1="none"/>
-        <line y1="-5" length1="1.5" x1="10" antialias="false" x2="10" end2="none" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" y2="5" end1="none"/>
-        <terminal uuid="{5bc3f241-865f-4fce-a096-cc053e70df2c}" x="10" y="5" orientation="s" name=""/>
-        <terminal uuid="{3f89f462-c81c-47dd-a912-2d2c8fc73c30}" x="0" y="5" orientation="s" name=""/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="5" y2="-5"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="10" x2="0" y1="-5" y2="-5"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="10" x2="10" y1="-5" y2="5"/>
+        <rect antialias="false" height="42" style="line-style:normal;line-weight:normal;filling:lightgray;color:gray" width="25.6" x="-7.8" y="-22.5"/>
+        <rect antialias="false" height="3" style="line-style:normal;line-weight:thin;filling:HTMLGrayGainsboro;color:white" width="8" x="1" y="-17"/>
+        <rect antialias="false" height="30" style="line-style:normal;line-weight:thin;filling:HTMLOrangeTomato;color:white" width="8" x="-4" y="-10"/>
+        <rect antialias="false" height="30" style="line-style:normal;line-weight:thin;filling:HTMLOrangeTomato;color:white" width="8" x="6" y="-10"/>
+        <terminal name="" orientation="s" uuid="{5bc3f241-865f-4fce-a096-cc053e70df2c}" x="10" y="5"/>
+        <terminal name="" orientation="s" uuid="{3f89f462-c81c-47dd-a912-2d2c8fc73c30}" x="0" y="5"/>
     </description>
 </definition>

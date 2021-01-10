@@ -1,42 +1,39 @@
-<definition hotspot_x="35" link_type="simple" height="80" type="element" width="70" version="0.80" hotspot_y="38">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="80" hotspot_x="35" hotspot_y="38" link_type="simple" type="element" version="0.80" width="70">
     <uuid uuid="{9b6d7261-76a5-46a0-90a4-243589f7ff6d}"/>
     <names>
         <name lang="cs">RFI filtr TSK 6741</name>
         <name lang="fr">TSK 6741</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="description"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="designation">TSK 6741</elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Almeto</elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1"></elementInformation>
+        <elementInformation name="designation" show="1">TSK 6741</elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Almeto</elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations></informations>
     <description>
-        <rect antialias="false" y="-28" ry="0" height="58" style="line-style:normal;line-weight:normal;filling:white;color:black" width="60" x="-30" rx="0"/>
-        <text y="26" font="Sans Serif,7,-1,5,50,0,0,0,0,0" x="-22" rotation="0" text="L" color="#000000"/>
-        <text y="26" font="Sans Serif,7,-1,5,50,0,0,0,0,0" x="-4" rotation="0" text="N" color="#000000"/>
-        <text y="26" font="Sans Serif,7,-1,5,50,0,0,0,0,0" x="14" rotation="0" text="PE" color="#000000"/>
-        <text y="-18" font="Sans Serif,7,-1,5,50,0,0,0,0,0" x="-22" rotation="0" text="L'" color="#000000"/>
-        <text y="-18" font="Sans Serif,7,-1,5,50,0,0,0,0,0" x="-4" rotation="0" text="N'" color="#000000"/>
-        <text y="-2" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-24" rotation="0" text="RFI Filter&#xa;TSK6741" color="#000000"/>
-        <dynamic_text y="-33" z="8" Valignment="AlignTop" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0" uuid="{2ad88ce9-f1f1-425d-a05f-1a50118ebbc9}" frame="false" x="-48" Halignment="AlignLeft" rotation="0" text_width="-1">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-20" x2="-20" y1="-28" y2="-32"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="-28" y2="-32"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-20" x2="-20" y1="30" y2="34"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="30" y2="34"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="20" x2="20" y1="30" y2="34"/>
+        <rect antialias="false" height="58" style="line-style:normal;line-weight:normal;filling:white;color:black" width="60" x="-30" y="-28"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{2ad88ce9-f1f1-425d-a05f-1a50118ebbc9}" x="-48" y="-33" z="8">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <line antialias="false" x2="-20" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" end1="none" x1="-20" y1="-28" y2="-32" end2="none" length2="1.5"/>
-        <line antialias="false" x2="0" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" end1="none" x1="0" y1="-28" y2="-32" end2="none" length2="1.5"/>
-        <line antialias="false" x2="-20" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" end1="none" x1="-20" y1="30" y2="34" end2="none" length2="1.5"/>
-        <line antialias="false" x2="0" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" end1="none" x1="0" y1="30" y2="34" end2="none" length2="1.5"/>
-        <line antialias="false" x2="20" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" end1="none" x1="20" y1="30" y2="34" end2="none" length2="1.5"/>
-        <terminal y="34" orientation="s" x="0"/>
-        <terminal y="-32" orientation="n" x="0"/>
-        <terminal y="34" orientation="s" x="20"/>
-        <terminal y="-32" orientation="n" x="-20"/>
-        <terminal y="34" orientation="s" x="-20"/>
+        <terminal name="" orientation="s" uuid="{589eea00-999e-4282-afbd-909a5099f447}" x="0" y="34"/>
+        <terminal name="" orientation="n" uuid="{2302b2b3-12d5-4777-84cc-a7f6924a24de}" x="0" y="-32"/>
+        <terminal name="" orientation="s" uuid="{f069fae9-4284-47ba-98ba-d439c35756ce}" x="20" y="34"/>
+        <terminal name="" orientation="n" uuid="{795a95ce-acf8-4978-8707-dfc4fd9248ca}" x="-20" y="-32"/>
+        <terminal name="" orientation="s" uuid="{4f02a2ba-5048-4bca-971d-6d6b17680e33}" x="-20" y="34"/>
     </description>
 </definition>

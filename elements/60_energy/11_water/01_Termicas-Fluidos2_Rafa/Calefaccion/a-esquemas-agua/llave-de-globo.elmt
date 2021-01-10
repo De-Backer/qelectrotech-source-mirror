@@ -1,4 +1,6 @@
-<definition hotspot_x="19" link_type="simple" type="element" version="0.80" width="40" height="20" hotspot_y="10">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="20" hotspot_x="19" hotspot_y="10" link_type="simple" type="element" version="0.80" width="40">
     <uuid uuid="{251e441e-fe60-4f51-9a8e-13ac9eaa6199}"/>
     <names>
         <name lang="ca">Clau de globus</name>
@@ -6,22 +8,23 @@
         <name lang="es">Llave de globo</name>
         <name lang="fr">Vanne a boisseau</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
-    <informations>Rafael Ferrando.&#xd;
+    <informations>Rafael Ferrando.
 Mantenimiento de Instalaciones Térmicas</informations>
     <description>
-        <line x2="10.7828" end2="none" end1="none" length1="1.5" y2="0" antialias="false" x1="16.0481" y1="0" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <line x2="-8.8275" end2="none" end1="none" length1="1.5" y2="-4.89732" antialias="false" x1="-8.8275" y1="4.9727" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <line x2="10.2993" end2="none" end1="none" length1="1.5" y2="-4.89732" antialias="false" x1="10.2993" y1="4.9727" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <line x2="10.0725" end2="none" end1="none" length1="1.5" y2="5" antialias="false" x1="-8.8275" y1="-4.9225" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <line x2="10.0725" end2="none" end1="none" length1="1.5" y2="-4.9225" antialias="false" x1="-8.8275" y1="5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <line x2="-14.9858" end2="none" end1="none" length1="1.5" y2="0" antialias="false" x1="-9.18334" y1="0" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <dynamic_text y="5" Halignment="AlignLeft" z="7" font="Sans Serif,4,-1,5,25,0,0,0,0,0" uuid="{83389664-3f13-40cd-b2fd-91fbe1af3f1b}" text_width="-1" frame="false" x="-6" rotation="0" text_from="ElementInfo" Valignment="AlignTop">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="0" y2="5"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="5" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <ellipse antialias="false" height="4" style="line-style:normal;line-weight:normal;filling:black;color:black" width="5" x="-2" y="-2"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,4,-1,5,25,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{83389664-3f13-40cd-b2fd-91fbe1af3f1b}" x="-6" y="5" z="7">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <ellipse y="-2" width="5" height="4" antialias="false" x="-2" style="line-style:normal;line-weight:normal;filling:black;color:black"/>
-        <terminal y="0" orientation="w" x="-15"/>
-        <terminal y="0" orientation="e" x="16"/>
+        <terminal name="" orientation="w" uuid="{f6e626ce-1ac9-49fa-9461-535b7bdb85ee}" x="-15" y="0"/>
+        <terminal name="" orientation="e" uuid="{f7dc15d4-3732-4d57-962c-f7d1cd7465b7}" x="16" y="0"/>
     </description>
 </definition>

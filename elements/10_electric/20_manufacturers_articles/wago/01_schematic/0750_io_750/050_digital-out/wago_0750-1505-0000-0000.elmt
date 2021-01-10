@@ -1,100 +1,68 @@
-<definition hotspot_x="364" hotspot_y="45" version="0.80" width="730" link_type="simple" height="110" type="element">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="110" hotspot_x="364" hotspot_y="45" link_type="simple" type="element" version="0.80" width="730">
+    <uuid uuid="{00000000-0000-0000-0000-000000000000}"/>
     <names>
+        <name lang="de">750-1505</name>
         <name lang="en">750-1505</name>
         <name lang="fr">750-1505</name>
-        <name lang="de">750-1505</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer">WAGO</elementInformation>
-        <elementInformation show="1" name="designation">750-1505</elementInformation>
+        <elementInformation name="designation" show="1">750-1505</elementInformation>
+        <elementInformation name="manufacturer" show="1">WAGO</elementInformation>
     </elementInformations>
     <informations>
         Author: plc-user for QElectroTech
         License:see https://qelectrotech.org/wiki_new/doc/elements_license
     </informations>
     <description>
-        <rect ry="0" y="-40" antialias="false" width="720" style="line-style:normal;line-weight:normal;filling:none;color:black" height="90" rx="0" x="-360"/>
-        <text y="-12" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="24V" color="#000000" x="-355" rotation="0"/>
-        <line y1="10" length2="1.5" y2="10" end1="none" end2="none" antialias="false" style="line-style:normal;line-weight:thin;filling:none;color:black" length1="1.5" x1="-360" x2="360"/>
-        <text y="8" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="0V" color="#000000" x="-355" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="11" color="#000000" x="93" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO11" color="#000000" x="93" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO14" color="#000000" x="214" rotation="0"/>
-        <dynamic_text y="-42.5" font="Sans Serif,9,-1,5,50,0,0,0,0,0" uuid="{ab301271-9da1-4878-b38f-002c35d8abdd}" Valignment="AlignTop" text_from="ElementInfo" frame="false" z="16" Halignment="AlignLeft" x="209" rotation="0" text_width="-1">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="-360" x2="360" y1="10" y2="10"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="-360" x2="360" y1="-10" y2="-10"/>
+        <rect antialias="false" height="90" style="line-style:normal;line-weight:normal;filling:none;color:black" width="720" x="-360" y="-40"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="207.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="87.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="247.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-112.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="47.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="287.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-232.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="7.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="167.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-72.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="127.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-272.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-32.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-312.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-152.5" y="47.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-192.5" y="47.5"/>
+        <polygon antialias="false" closed="false" style="line-style:normal;line-weight:hight;filling:none;color:black" x1="-362" x2="-356" y1="-10" y2="-10"/>
+        <polygon antialias="false" closed="false" style="line-style:normal;line-weight:hight;filling:none;color:black" x1="-362" x2="-356" y1="10" y2="10"/>
+        <arc angle="180" antialias="true" height="5" start="90" style="line-style:normal;line-weight:normal;filling:none;color:black" width="5" x="360" y="-12.5"/>
+        <arc angle="180" antialias="true" height="5" start="90" style="line-style:normal;line-weight:normal;filling:none;color:black" width="5" x="360" y="7.5"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{ab301271-9da1-4878-b38f-002c35d8abdd}" x="209" y="-42.5" z="16">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="14" color="#000000" x="213" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="10" color="#000000" x="53" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO10" color="#000000" x="53" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO15" color="#000000" x="253" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="15" color="#000000" x="253" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="9" color="#000000" x="13" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO9" color="#000000" x="13" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO16" color="#000000" x="293" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="16" color="#000000" x="293" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="12" color="#000000" x="133" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO12" color="#000000" x="133" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO13" color="#000000" x="174" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="13" color="#000000" x="173" rotation="0"/>
-        <line y1="-10" length2="1.5" y2="-10" end1="none" end2="none" antialias="false" style="line-style:normal;line-weight:thin;filling:none;color:black" length1="1.5" x1="-360" x2="360"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="3" color="#000000" x="-227" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO3" color="#000000" x="-227" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO6" color="#000000" x="-106" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="6" color="#000000" x="-107" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="2" color="#000000" x="-267" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO2" color="#000000" x="-267" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO7" color="#000000" x="-67" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="7" color="#000000" x="-67" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="1" color="#000000" x="-307" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO1" color="#000000" x="-307" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO8" color="#000000" x="-27" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="8" color="#000000" x="-27" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="4" color="#000000" x="-187" rotation="0"/>
-        <text y="-27" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="WAGO 750-1505" color="#000000" x="-341" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO4" color="#000000" x="-187" rotation="0"/>
-        <text y="46" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="DO5" color="#000000" x="-146" rotation="0"/>
-        <text y="58" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="5" color="#000000" x="-147" rotation="0"/>
-        <text y="-27" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="16-Channel DO, DC 24V (low-side)" color="#000000" x="-127" rotation="0"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="207.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="87.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="247.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-112.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="47.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="287.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-232.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="7.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="167.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-72.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="127.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-272.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-32.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-312.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-152.5"/>
-        <circle y="47.5" diameter="5" antialias="true" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-192.5"/>
-        <polygon y1="-10" y2="-10" style="line-style:normal;line-weight:hight;filling:none;color:black" x1="-362" antialias="false" x2="-356" closed="false"/>
-        <arc y="-12.5" angle="180" style="line-style:normal;line-weight:normal;filling:none;color:black" x="360" width="5" antialias="true" height="5" start="90"/>
-        <polygon y1="10" y2="10" style="line-style:normal;line-weight:hight;filling:none;color:black" x1="-362" antialias="false" x2="-356" closed="false"/>
-        <arc y="7.5" angle="180" style="line-style:normal;line-weight:normal;filling:none;color:black" x="360" width="5" antialias="true" height="5" start="90"/>
-        <terminal orientation="s" y="50" x="-270"/>
-        <terminal orientation="w" y="10" x="-360"/>
-        <terminal orientation="e" y="10" x="360"/>
-        <terminal orientation="e" y="-10" x="360"/>
-        <terminal orientation="w" y="-10" x="-360"/>
-        <terminal orientation="s" y="50" x="-310"/>
-        <terminal orientation="s" y="50" x="-190"/>
-        <terminal orientation="s" y="50" x="-230"/>
-        <terminal orientation="s" y="50" x="-110"/>
-        <terminal orientation="s" y="50" x="-150"/>
-        <terminal orientation="s" y="50" x="-30"/>
-        <terminal orientation="s" y="50" x="-70"/>
-        <terminal orientation="s" y="50" x="50"/>
-        <terminal orientation="s" y="50" x="10"/>
-        <terminal orientation="s" y="50" x="130"/>
-        <terminal orientation="s" y="50" x="90"/>
-        <terminal orientation="s" y="50" x="210"/>
-        <terminal orientation="s" y="50" x="170"/>
-        <terminal orientation="s" y="50" x="290"/>
-        <terminal orientation="s" y="50" x="250"/>
+        <terminal name="" orientation="s" uuid="{a897f502-fd02-40c1-a7ef-a60ffb0ddb06}" x="-270" y="50"/>
+        <terminal name="" orientation="w" uuid="{ed25c6af-2a09-4a6a-9693-55ccea63d28c}" x="-360" y="10"/>
+        <terminal name="" orientation="e" uuid="{2f2dcdf4-1bb9-4f14-b174-bbae7b1cdd5f}" x="360" y="10"/>
+        <terminal name="" orientation="e" uuid="{1b967238-be00-42f8-a75d-57b18bcf8988}" x="360" y="-10"/>
+        <terminal name="" orientation="w" uuid="{690f61de-781f-417d-832a-1b70ea3c6507}" x="-360" y="-10"/>
+        <terminal name="" orientation="s" uuid="{b0ca4697-6a9f-4d16-8f6d-fe63e0909866}" x="-310" y="50"/>
+        <terminal name="" orientation="s" uuid="{bf3d1d04-307e-416b-b605-83f30dc171e7}" x="-190" y="50"/>
+        <terminal name="" orientation="s" uuid="{d2f53bcd-6872-40e4-9954-d67a93340de0}" x="-230" y="50"/>
+        <terminal name="" orientation="s" uuid="{3b04a311-641b-41df-bca1-a6f04e3396c3}" x="-110" y="50"/>
+        <terminal name="" orientation="s" uuid="{4fade27c-0e4c-43c4-85bc-3bca3645c83c}" x="-150" y="50"/>
+        <terminal name="" orientation="s" uuid="{0a71d316-4ba8-4a9e-8a90-e132e4071003}" x="-30" y="50"/>
+        <terminal name="" orientation="s" uuid="{c6ec41d1-1b89-4f91-923e-4edf34953d58}" x="-70" y="50"/>
+        <terminal name="" orientation="s" uuid="{e1eddaa4-d4f1-41c1-9614-a1b9955c5113}" x="50" y="50"/>
+        <terminal name="" orientation="s" uuid="{f7d42af6-766f-4fec-96a9-3f932201f206}" x="10" y="50"/>
+        <terminal name="" orientation="s" uuid="{fb30faa5-d2b3-4193-b4aa-24120037ca39}" x="130" y="50"/>
+        <terminal name="" orientation="s" uuid="{b6eab8b1-b0a0-4b29-9f76-2068d2e5d883}" x="90" y="50"/>
+        <terminal name="" orientation="s" uuid="{f99fe993-44ab-460d-b3a8-4cea20fe526d}" x="210" y="50"/>
+        <terminal name="" orientation="s" uuid="{198b0bab-e6f9-420e-8c25-62d7a1ebd6ec}" x="170" y="50"/>
+        <terminal name="" orientation="s" uuid="{29d840a9-04d7-474f-8bfc-39e2bd77db7f}" x="290" y="50"/>
+        <terminal name="" orientation="s" uuid="{0cd67e66-36a0-40ee-b0c8-630b5d917264}" x="250" y="50"/>
     </description>
 </definition>

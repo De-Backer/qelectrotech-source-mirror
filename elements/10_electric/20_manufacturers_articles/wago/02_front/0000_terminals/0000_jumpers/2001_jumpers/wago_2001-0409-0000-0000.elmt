@@ -1,19 +1,22 @@
-<definition type="element" width="140" version="0.80" height="20" link_type="simple" hotspot_y="10" hotspot_x="14">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="20" hotspot_x="14" hotspot_y="10" link_type="simple" type="element" version="0.80" width="140">
+    <uuid uuid="{00000000-0000-0000-0000-000000000000}"/>
     <names>
         <name lang="de">2001-409</name>
-        <name lang="fr">2001-409</name>
         <name lang="en">2001-409</name>
+        <name lang="fr">2001-409</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer">WAGO</elementInformation>
-        <elementInformation show="1" name="designation">2001-409</elementInformation>
+        <elementInformation name="designation" show="1">2001-409</elementInformation>
+        <elementInformation name="manufacturer" show="1">WAGO</elementInformation>
     </elementInformations>
     <informations>
         Author: plc-user for QElectroTech
         License:see https://qelectrotech.org/wiki_new/doc/elements_license
     </informations>
     <description>
-        <rect y="-6" width="132" rx="0" ry="0" x="-5.7" height="12" antialias="false" style="line-style:normal;line-weight:thin;filling:white;color:black"/>
-        <text font="Sans Serif,4,-1,5,50,0,0,0,0,0" y="2" text="2001-409" x="47" rotation="0" color="#000000"/>
+        <rect antialias="false" height="12" style="line-style:normal;line-weight:thin;filling:white;color:black" width="132" x="-5.7" y="-6"/>
     </description>
 </definition>

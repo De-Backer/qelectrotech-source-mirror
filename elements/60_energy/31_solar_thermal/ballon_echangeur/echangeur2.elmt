@@ -1,37 +1,38 @@
-<definition link_type="simple" height="130" hotspot_x="14" width="90" version="0.80" type="element" hotspot_y="85">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="130" hotspot_x="14" hotspot_y="85" link_type="simple" type="element" version="0.80" width="90">
     <uuid uuid="{dcad4fd0-c990-4071-a0e9-65ab80d59fca}"/>
     <names>
-        <name lang="es">Intercambiador de placas</name>
-        <name lang="cs">Deskový výměník tepla</name>
         <name lang="ar">لوحة مبادل حراري</name>
+        <name lang="cs">Deskový výměník tepla</name>
         <name lang="en">Plate heat exchanger</name>
-        <name lang="it">Scambiatore a piastre</name>
-        <name lang="pl">Płytowy wymiennik ciepła</name>
-        <name lang="nl">plaat warmtewisselaar</name>
+        <name lang="es">Intercambiador de placas</name>
         <name lang="fr">Echangeur à Plaques2</name>
+        <name lang="it">Scambiatore a piastre</name>
+        <name lang="nl">plaat warmtewisselaar</name>
+        <name lang="pl">Płytowy wymiennik ciepła</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations>Author: The QElectroTech team
 License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
     <description>
-        <rect height="120" rx="0" style="line-style:normal;line-weight:normal;filling:none;color:black" y="-80" width="60" antialias="false" ry="0" x="0"/>
-        <polygon y6="-5" y9="30" y7="10" x6="55" y1="-70" x9="60" y4="-40" x10="55" y10="30" x5="20" y8="30" x4="50" x8="55" y3="-50" y2="-70" x1="60" x3="20" y5="-20" style="line-style:normal;line-weight:normal;filling:none;color:black" closed="false" x2="55" antialias="true" x7="20"/>
-        <polygon y6="-6" y9="30" y7="10" x6="42" y1="-70" x9="3" y4="-40" x10="0" y10="30" x5="9" y8="30" x4="40" x8="43" y3="-50" y2="-70" x1="0" x3="10" y5="-20" style="line-style:normal;line-weight:normal;filling:none;color:black" closed="false" x2="43" antialias="true" x7="8"/>
-        <line y1="-47.7439" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="56.2777" antialias="false" y2="-15.2953" end1="simple" length1="1.5" end2="none" length2="1.5" x2="56.2777"/>
-        <line y1="-34.7645" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="5.44275" antialias="false" y2="-2.3159" end1="none" length1="1.5" end2="simple" length2="1.5" x2="5.44275"/>
-        <dynamic_text Halignment="AlignLeft" frame="false" y="50" z="6" text_width="-1" rotation="0" font="Sans Serif,7,-1,5,50,0,0,0,0,0" uuid="{d09759b9-9615-4373-9464-4fff06d75f3a}" text_from="ElementInfo" x="10" Valignment="AlignTop">
+        <line antialias="false" end1="simple" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <line antialias="false" end1="none" end2="simple" length1="1.5" length2="1.5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="0" x2="0" y1="0" y2="0"/>
+        <rect antialias="false" height="120" style="line-style:normal;line-weight:normal;filling:none;color:black" width="60" x="0" y="-80"/>
+        <circle antialias="true" diameter="4" style="line-style:normal;line-weight:normal;filling:none;color:black" x="58" y="28"/>
+        <circle antialias="true" diameter="4" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-2" y="28"/>
+        <circle antialias="true" diameter="4" style="line-style:normal;line-weight:normal;filling:none;color:black" x="58" y="-72"/>
+        <circle antialias="true" diameter="4" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-1.58" y="-72.46"/>
+        <polygon antialias="true" closed="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="60" x10="55" x2="55" x3="20" x4="50" x5="20" x6="55" x7="20" x8="55" x9="60" y1="-70" y10="30" y2="-70" y3="-50" y4="-40" y5="-20" y6="-5" y7="10" y8="30" y9="30"/>
+        <polygon antialias="true" closed="false" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x10="0" x2="43" x3="10" x4="40" x5="9" x6="42" x7="8" x8="43" x9="3" y1="-70" y10="30" y2="-70" y3="-50" y4="-40" y5="-20" y6="-6" y7="10" y8="30" y9="30"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,7,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{d09759b9-9615-4373-9464-4fff06d75f3a}" x="10" y="50" z="6">
             <text></text>
             <info_name>description</info_name>
         </dynamic_text>
-        <text y="-5" text="Secondaire" rotation="-90" font="Sans Serif,4,-1,5,50,0,0,0,0,0" color="#000000" x="70"/>
-        <text y="-7.18319" text="Primaire" rotation="-90" font="Sans Serif,4,-1,5,50,0,0,0,0,0" color="#000000" x="-4.266"/>
-        <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="28" diameter="4" antialias="true" x="58"/>
-        <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="28" diameter="4" antialias="true" x="-2"/>
-        <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="-72" diameter="4" antialias="true" x="58"/>
-        <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="-72.46" diameter="4" antialias="true" x="-1.58"/>
-        <terminal y="30" orientation="e" x="60"/>
-        <terminal y="-70" orientation="e" x="60"/>
-        <terminal y="-70" orientation="w" x="0"/>
-        <terminal y="30" orientation="w" x="-4"/>
+        <terminal name="" orientation="e" uuid="{e2de414a-1c53-46f2-a9ba-1853ac4fbda4}" x="60" y="30"/>
+        <terminal name="" orientation="e" uuid="{e8523532-0b73-4c06-bb33-e82c023b592e}" x="60" y="-70"/>
+        <terminal name="" orientation="w" uuid="{0cd46f03-d790-4c00-9352-62c5cd224b32}" x="0" y="-70"/>
+        <terminal name="" orientation="w" uuid="{39901f29-0f08-4fde-8476-b93c7070dbc4}" x="-4" y="30"/>
     </description>
 </definition>

@@ -1,19 +1,22 @@
-<definition height="20" hotspot_x="23" hotspot_y="10" version="0.80" link_type="simple" type="element" width="50">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="20" hotspot_x="23" hotspot_y="10" link_type="simple" type="element" version="0.80" width="50">
+    <uuid uuid="{00000000-0000-0000-0000-000000000000}"/>
     <names>
         <name lang="de">2004-402</name>
         <name lang="en">2004-402</name>
         <name lang="fr">2004-402</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer">WAGO</elementInformation>
-        <elementInformation show="1" name="designation">2004-402</elementInformation>
+        <elementInformation name="designation" show="1">2004-402</elementInformation>
+        <elementInformation name="manufacturer" show="1">WAGO</elementInformation>
     </elementInformations>
     <informations>
         Author: plc-user for QElectroTech
         License:see https://qelectrotech.org/wiki_new/doc/elements_license
     </informations>
     <description>
-        <polygon y1="-7.06" x3="22.03" x4="-18.85" antialias="false" y2="-7.06" x1="-18.85" x2="22.03" y4="7.12" style="line-style:normal;line-weight:thin;filling:white;color:black" y3="7.12"/>
-        <text color="#000000" font="Sans Serif,3,-1,5,50,0,0,0,0,0" text="2004-402" y="1.9" rotation="0" x="-8.5"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:white;color:black" x1="-18.85" x2="22.03" x3="22.03" x4="-18.85" y1="-7.06" y2="-7.06" y3="7.12" y4="7.12"/>
     </description>
 </definition>

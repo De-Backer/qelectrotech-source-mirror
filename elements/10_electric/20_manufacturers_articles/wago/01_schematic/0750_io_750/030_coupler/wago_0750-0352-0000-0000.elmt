@@ -1,17 +1,21 @@
-<definition type="element" width="730" link_type="simple" height="100" hotspot_y="46" hotspot_x="366" version="0.80">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="100" hotspot_x="366" hotspot_y="46" link_type="simple" type="element" version="0.80" width="730">
+    <uuid uuid="{00000000-0000-0000-0000-000000000000}"/>
     <names>
         <name lang="ar">750-352</name>
-        <name lang="it">750-352</name>
-        <name lang="fr">750-352</name>
+        <name lang="cs">750-352</name>
+        <name lang="de">750-352</name>
+        <name lang="el">750-352</name>
         <name lang="en">750-352</name>
-        <name lang="nl">750-352</name>
         <name lang="es">750-352</name>
+        <name lang="fr">750-352</name>
+        <name lang="it">750-352</name>
+        <name lang="nl">750-352</name>
         <name lang="pl">750-352</name>
         <name lang="pt">750-352</name>
-        <name lang="el">750-352</name>
-        <name lang="de">750-352</name>
-        <name lang="cs">750-352</name>
     </names>
+    <kindInformations/>
     <elementInformations>
         <elementInformation name="designation" show="1">750-352</elementInformation>
         <elementInformation name="manufacturer" show="1">WAGO</elementInformation>
@@ -21,34 +25,25 @@
         License:see https://qelectrotech.org/wiki_new/doc/elements_license
     </informations>
     <description>
-        <rect rx="0" width="720" antialias="false" y="-40" style="line-style:normal;line-weight:normal;filling:white;color:black" height="90" ry="0" x="-360"/>
-        <text rotation="0" color="#000000" y="-22" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-39" text="0V"/>
-        <text rotation="0" color="#000000" y="24" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-355" text="Eth2"/>
-        <text rotation="0" color="#000000" y="-22" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-119" text="0V"/>
-        <dynamic_text rotation="0" Valignment="AlignTop" y="29.5" frame="false" text_from="ElementInfo" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" uuid="{f1606b59-bc7a-4998-bb76-37468b3f68bd}" x="220" z="5" Halignment="AlignLeft">
+        <rect antialias="false" height="90" style="line-style:normal;line-weight:normal;filling:white;color:black" width="720" x="-360" y="-40"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-362.5" y="17.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-362.5" y="-2.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-42.5" y="-42.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-122.5" y="-42.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-202.5" y="-42.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-282.5" y="-42.5"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{f1606b59-bc7a-4998-bb76-37468b3f68bd}" x="220" y="29.5" z="5">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <text rotation="0" color="#000000" y="45" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-330" text="WAGO 750-352"/>
-        <text rotation="0" color="#000000" y="4" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-317" text="IP Adr.:"/>
-        <dynamic_text rotation="0" Valignment="AlignTop" y="-11.5" frame="false" text_from="UserText" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" uuid="{2a4edf8b-b990-41e3-8e67-5e2dea578790}" x="-270" z="8" Halignment="AlignLeft">
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="UserText" text_width="-1" uuid="{2a4edf8b-b990-41e3-8e67-5e2dea578790}" x="-270" y="-11.5" z="8">
             <text>192.168.1.1</text>
         </dynamic_text>
-        <text rotation="0" color="#000000" y="-22" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-199" text="24V"/>
-        <text rotation="0" color="#000000" y="-22" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-279" text="24V"/>
-        <text rotation="0" color="#000000" y="4" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-355" text="Eth1"/>
-        <text rotation="0" color="#000000" y="45" font="Sans Serif,9,-1,5,50,0,0,0,0,0" x="-138" text="Ethernet ECO Coupler"/>
-        <circle antialias="true" y="17.5" style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" x="-362.5"/>
-        <circle antialias="true" y="-2.5" style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" x="-362.5"/>
-        <circle antialias="true" y="-42.5" style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" x="-42.5"/>
-        <circle antialias="true" y="-42.5" style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" x="-122.5"/>
-        <circle antialias="true" y="-42.5" style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" x="-202.5"/>
-        <circle antialias="true" y="-42.5" style="line-style:normal;line-weight:normal;filling:white;color:black" diameter="5" x="-282.5"/>
-        <terminal y="0" name="" orientation="w" x="-360"/>
-        <terminal y="-40" name="" orientation="n" x="-200"/>
-        <terminal y="-40" name="" orientation="n" x="-120"/>
-        <terminal y="-40" name="" orientation="n" x="-40"/>
-        <terminal y="20" name="" orientation="w" x="-360"/>
-        <terminal y="-40" name="" orientation="n" x="-280"/>
+        <terminal name="" orientation="w" uuid="{a94b572b-45a3-4330-a104-692dab691a47}" x="-360" y="0"/>
+        <terminal name="" orientation="n" uuid="{545457ae-38b7-4f19-b06b-472dd7bec8c1}" x="-200" y="-40"/>
+        <terminal name="" orientation="n" uuid="{b5da07f2-38fb-42d0-87ac-94038c7a7b35}" x="-120" y="-40"/>
+        <terminal name="" orientation="n" uuid="{eaa09ea4-56d3-44af-b702-7752a4dbe6b7}" x="-40" y="-40"/>
+        <terminal name="" orientation="w" uuid="{121f4eb2-aae3-4496-9193-6a062dffb879}" x="-360" y="20"/>
+        <terminal name="" orientation="n" uuid="{7ccd11a2-9853-461f-97b5-fb5818f44110}" x="-280" y="-40"/>
     </description>
 </definition>

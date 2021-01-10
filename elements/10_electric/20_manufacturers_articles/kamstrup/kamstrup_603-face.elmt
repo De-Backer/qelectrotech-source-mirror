@@ -1,55 +1,54 @@
-<definition hotspot_y="5" height="90" type="element" version="0.80" link_type="simple" width="140" hotspot_x="10">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="90" hotspot_x="10" hotspot_y="5" link_type="simple" type="element" version="0.80" width="140">
     <uuid uuid="{71f2c69d-b854-4e8e-8a19-60c5c24e0d67}"/>
     <names>
         <name lang="fr">Kamstrup 603</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="machine_manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="designation">603</elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="description"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Kamstrup</elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1"></elementInformation>
+        <elementInformation name="designation" show="1">603</elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Kamstrup</elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations>S.DEFFAUX</informations>
     <description>
-        <rect rx="0" y="0" height="80" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="false" x="0" width="120" ry="0"/>
-        <circle diameter="5" y="47.5" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="85.5"/>
-        <circle diameter="10" y="45" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="43"/>
-        <circle diameter="10" y="45" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="77"/>
-        <rect rx="0" y="43" height="10" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" x="10" width="10" ry="0"/>
-        <rect rx="0" y="47" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="11" width="1" ry="0"/>
-        <rect rx="0" y="47" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="14" width="1" ry="0"/>
-        <rect rx="0" y="44" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="17" width="1" ry="0"/>
-        <rect rx="0" y="51" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="18" width="1" ry="0"/>
-        <rect rx="0" y="51" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="15" width="1" ry="0"/>
-        <rect rx="0" y="46" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="18" width="1" ry="0"/>
-        <rect rx="0" y="48" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="18" width="1" ry="0"/>
-        <rect rx="0" y="49" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="13" width="1" ry="0"/>
-        <rect rx="0" y="44" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="11" width="1" ry="0"/>
-        <rect rx="0" y="44" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="14" width="1" ry="0"/>
-        <rect rx="0" y="49" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="16" width="1" ry="0"/>
-        <rect rx="0" y="10" height="60" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="-5" width="5" ry="0"/>
-        <rect rx="0" y="10" height="60" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="120" width="5" ry="0"/>
-        <text text="kamstrup" font="Sans Serif,5,-1,5,50,0,0,0,0,0" color="#000000" y="76" x="88" rotation="0"/>
-        <rect rx="0" y="10" height="30" style="line-style:normal;line-weight:normal;filling:gray;color:black" antialias="false" x="40" width="50" ry="0"/>
-        <rect rx="0" y="51" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="11" width="1" ry="0"/>
-        <rect rx="0" y="5" height="3" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="60" width="10" ry="0"/>
-        <text text="HEAT METER (E1) " font="MS Shell Dlg 2,2,-1,5,50,0,0,0,0,0,Normal" color="#000000" y="15" x="5" rotation="0"/>
-        <dynamic_text font="MS Shell Dlg 2,4,-1,5,50,0,0,0,0,0,Normal" y="60" uuid="{2828ddcb-2723-48c7-8952-7ed460e28a65}" frame="false" Halignment="AlignLeft" text_from="ElementInfo" x="50" z="24" text_width="-1" Valignment="AlignTop" rotation="0">
+        <rect antialias="false" height="80" style="line-style:normal;line-weight:normal;filling:white;color:black" width="120" x="0" y="0"/>
+        <rect antialias="false" height="10" style="line-style:normal;line-weight:normal;filling:none;color:black" width="10" x="10" y="43"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="11" y="47"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="14" y="47"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="17" y="44"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="18" y="51"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="15" y="51"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="18" y="46"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="18" y="48"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="13" y="49"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="11" y="44"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="14" y="44"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="16" y="49"/>
+        <rect antialias="false" height="60" style="line-style:normal;line-weight:normal;filling:black;color:black" width="5" x="-5" y="10"/>
+        <rect antialias="false" height="60" style="line-style:normal;line-weight:normal;filling:black;color:black" width="5" x="120" y="10"/>
+        <rect antialias="false" height="30" style="line-style:normal;line-weight:normal;filling:gray;color:black" width="50" x="40" y="10"/>
+        <rect antialias="false" height="1" style="line-style:normal;line-weight:normal;filling:black;color:black" width="1" x="11" y="51"/>
+        <rect antialias="false" height="3" style="line-style:normal;line-weight:normal;filling:black;color:black" width="10" x="60" y="5"/>
+        <rect antialias="false" height="10" style="line-style:normal;line-weight:normal;filling:black;color:black" width="20" x="55" y="45"/>
+        <circle antialias="false" diameter="5" style="line-style:normal;line-weight:normal;filling:black;color:black" x="85.5" y="47.5"/>
+        <circle antialias="false" diameter="10" style="line-style:normal;line-weight:normal;filling:black;color:black" x="43" y="45"/>
+        <circle antialias="false" diameter="10" style="line-style:normal;line-weight:normal;filling:black;color:black" x="77" y="45"/>
+        <circle antialias="false" diameter="5" style="line-style:normal;line-weight:normal;filling:black;color:black" x="38.5" y="47.5"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:none;filling:black;color:black" x1="80" x2="82" x3="86" x4="89" x5="89" x6="83" y1="48" y2="55" y3="54" y4="53" y5="47" y6="45"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:normal;filling:black;color:black" x1="48" x2="48" x3="40" x4="40" x5="47" y1="50" y2="45" y3="48" y4="52" y5="55"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="MS Shell Dlg 2,4,-1,5,50,0,0,0,0,0,Normal" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{2828ddcb-2723-48c7-8952-7ed460e28a65}" x="50" y="60" z="24">
             <text></text>
             <info_name>machine_manufacturer_reference</info_name>
         </dynamic_text>
-        <text text="CE" font="Sans Serif,7,-1,5,50,0,0,0,0,0" color="#000000" y="30" x="5" rotation="0"/>
-        <text text="Battery.2xA cell" font="Sans Serif,1,-1,5,50,0,0,0,0,0" color="#000000" y="75" x="5" rotation="0"/>
-        <polygon x2="82" x1="80" y2="55" x3="86" style="line-style:normal;line-weight:none;filling:black;color:black" antialias="false" y6="45" x4="89" y4="53" y3="54" x5="89" y1="48" y5="47" x6="83"/>
-        <polygon x2="48" x1="48" y2="45" x3="40" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x4="40" y4="52" y3="48" x5="47" y1="50" y5="55"/>
-        <rect rx="5" y="45" height="10" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="55" width="20" ry="5"/>
-        <circle diameter="5" y="47.5" style="line-style:normal;line-weight:normal;filling:black;color:black" antialias="false" x="38.5"/>
     </description>
 </definition>

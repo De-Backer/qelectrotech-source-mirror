@@ -1,68 +1,52 @@
-<definition height="180" hotspot_x="64" link_type="simple" version="0.80" type="element" hotspot_y="106" width="130">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="180" hotspot_x="64" hotspot_y="106" link_type="simple" type="element" version="0.80" width="130">
+    <uuid uuid="{00000000-0000-0000-0000-000000000000}"/>
     <names>
         <name lang="de">852-1328</name>
-        <name lang="fr">852-1328</name>
         <name lang="en">852-1328</name>
+        <name lang="fr">852-1328</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="manufacturer">WAGO</elementInformation>
-        <elementInformation show="1" name="designation">852-1328</elementInformation>
+        <elementInformation name="designation" show="1">852-1328</elementInformation>
+        <elementInformation name="manufacturer" show="1">WAGO</elementInformation>
     </elementInformations>
     <informations>
         Author: plc-user for QElectroTech
         License:see https://qelectrotech.org/wiki_new/doc/elements_license
     </informations>
     <description>
-        <text x="30.4531" y="26" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="MACsec" color="#000000"/>
-        <text x="-55" y="26" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="MACsec" color="#000000"/>
-        <rect x="-60" y="-100" height="170" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" rx="0" width="120" ry="0"/>
-        <text x="36.0343" y="-84" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="FG" color="#000000"/>
-        <circle x="57.5" y="-52.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <text x="49.25" y="-32" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="4" color="#000000"/>
-        <circle x="37.5" y="-102.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <text x="49.25" y="-52" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="2" color="#000000"/>
-        <circle x="57.5" y="17.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <text x="-20.9844" y="-90" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="-" color="#000000"/>
-        <text x="34.625" y="18" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="SFP  8" color="#000000"/>
-        <circle x="57.5" y="-12.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <circle x="57.5" y="-32.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <text x="48.625" y="-12" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="6" color="#000000"/>
-        <text x="-56" y="61" rotation="0" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="MACsec Managed Switch" color="#000000"/>
-        <circle x="-62.5" y="-52.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <text x="19.0875" y="-90" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="-" color="#000000"/>
-        <text x="-2.4282" y="-90" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="+" color="#000000"/>
-        <text x="3.4718" y="-84" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="RPS" color="#000000"/>
-        <text x="-54.1875" y="-32" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="3" color="#000000"/>
-        <text x="-42.5" y="-90" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="+" color="#000000"/>
-        <circle x="-62.5" y="17.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <text x="-54.1875" y="-52" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="1" color="#000000"/>
-        <text x="-53.8125" y="18" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="7  SFP" color="#000000"/>
-        <circle x="-62.5" y="-12.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <circle x="17.5" y="-102.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <circle x="-62.5" y="-32.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <text x="-53.8125" y="-12" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="5" color="#000000"/>
-        <circle x="-2.5" y="-102.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <circle x="-22.5" y="-102.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <circle x="-42.5" y="-102.5" style="line-style:normal;line-weight:normal;filling:white;color:black" antialias="true" diameter="5"/>
-        <text x="-39" y="49" rotation="0" font="Sans Serif,7,-1,5,50,0,0,0,0,0" text="6 Port Gb + 2FOC" color="#000000"/>
-        <text x="-36.6" y="-84" rotation="0" font="Sans Serif,5,-1,5,50,0,0,0,0,0" text="PWR" color="#000000"/>
-        <text x="-49" y="-64" rotation="0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text="WAGO 852-1328" color="#000000"/>
-        <dynamic_text x="10" y="-20" rotation="0" z="38" font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" frame="false" text_from="ElementInfo" Valignment="AlignTop" Halignment="AlignLeft">
+        <rect antialias="false" height="170" style="line-style:normal;line-weight:normal;filling:none;color:black" width="120" x="-60" y="-100"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="57.5" y="-52.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="37.5" y="-102.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="57.5" y="17.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="57.5" y="-12.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="57.5" y="-32.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-62.5" y="-52.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-62.5" y="17.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-62.5" y="-12.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="17.5" y="-102.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-62.5" y="-32.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-2.5" y="-102.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-22.5" y="-102.5"/>
+        <circle antialias="true" diameter="5" style="line-style:normal;line-weight:normal;filling:white;color:black" x="-42.5" y="-102.5"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" x="10" y="-20" z="38">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <terminal x="0" orientation="n" y="-100" name="RPS+"/>
-        <terminal x="-40" orientation="n" y="-100" name="PWR+"/>
-        <terminal x="20" orientation="n" y="-100" name="RPS-"/>
-        <terminal x="-60" orientation="w" y="-30" name="ETH3"/>
-        <terminal x="-60" orientation="w" y="20" name="ETH7"/>
-        <terminal x="60" orientation="e" y="-50" name="ETH2"/>
-        <terminal x="60" orientation="e" y="-10" name="EZH6"/>
-        <terminal x="60" orientation="e" y="-30" name="ETH4"/>
-        <terminal x="-60" orientation="w" y="-50" name="ETH1"/>
-        <terminal x="-60" orientation="w" y="-10" name="EZH5"/>
-        <terminal x="-20" orientation="n" y="-100" name="PWR-"/>
-        <terminal x="60" orientation="e" y="20" name="ETH8"/>
-        <terminal x="40" orientation="n" y="-100" name="FG"/>
+        <terminal name="RPS+" orientation="n" uuid="{fa2a5fc5-cfa4-41c5-9f6d-c76519bf6277}" x="0" y="-100"/>
+        <terminal name="PWR+" orientation="n" uuid="{b83b7769-f1e8-4b5a-b3dc-3a0b8e25c1fd}" x="-40" y="-100"/>
+        <terminal name="RPS-" orientation="n" uuid="{7d905a45-1f36-459d-957c-24adfbc3a0a2}" x="20" y="-100"/>
+        <terminal name="ETH3" orientation="w" uuid="{b24b4a16-b55e-43eb-baa5-d1fe035bc6e0}" x="-60" y="-30"/>
+        <terminal name="ETH7" orientation="w" uuid="{4b139ab0-cab6-4e94-ad0c-49c3b4f86a9a}" x="-60" y="20"/>
+        <terminal name="ETH2" orientation="e" uuid="{02f3ab23-05c7-48ab-ba97-fd476fdf7fa4}" x="60" y="-50"/>
+        <terminal name="EZH6" orientation="e" uuid="{cbf2fa51-7211-4af0-bf98-fdf029949fc9}" x="60" y="-10"/>
+        <terminal name="ETH4" orientation="e" uuid="{f21d8e4c-f166-4c78-8a61-0c14bdbea563}" x="60" y="-30"/>
+        <terminal name="ETH1" orientation="w" uuid="{c61d10d9-6dc1-4aaf-8f67-52deb9139c22}" x="-60" y="-50"/>
+        <terminal name="EZH5" orientation="w" uuid="{26291cab-8a79-41e8-b87a-199f32c79805}" x="-60" y="-10"/>
+        <terminal name="PWR-" orientation="n" uuid="{72da7413-fb0c-459a-b47c-04a6750e84c5}" x="-20" y="-100"/>
+        <terminal name="ETH8" orientation="e" uuid="{eebfa337-5261-467e-980a-988330e4a07d}" x="60" y="20"/>
+        <terminal name="FG" orientation="n" uuid="{fff34162-3d27-4180-8ec7-ad0bfc067c08}" x="40" y="-100"/>
     </description>
 </definition>

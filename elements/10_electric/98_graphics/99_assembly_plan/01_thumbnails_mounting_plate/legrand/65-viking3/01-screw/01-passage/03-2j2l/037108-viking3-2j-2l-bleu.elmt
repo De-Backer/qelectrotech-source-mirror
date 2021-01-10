@@ -1,38 +1,41 @@
-<definition hotspot_y="5" hotspot_x="3" height="180" version="0.80" link_type="simple" type="element" width="20">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="180" hotspot_x="3" hotspot_y="5" link_type="simple" type="element" version="0.80" width="20">
     <uuid uuid="{84b6faae-e483-4d28-b827-2eca8d085ef5}"/>
     <names>
         <name lang="fr">037108 - Viking3 - 2 jonctions 2 étages 4mm² pas 6mm Bleu</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation name="quantity" show="1"></elementInformation>
-        <elementInformation name="description" show="1">Bloc de jonction de passage à vis Viking3 avec 2 jonctions 2 étages section 4mm² - pas 6mm - bleu</elementInformation>
-        <elementInformation name="label" show="1"></elementInformation>
         <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1">Bloc de jonction de passage à vis Viking3 avec 2 jonctions 2 étages section 4mm² - pas 6mm - bleu</elementInformation>
+        <elementInformation name="designation" show="1">037108</elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
         <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
         <elementInformation name="supplier" show="1"></elementInformation>
         <elementInformation name="unity" show="1"></elementInformation>
-        <elementInformation name="manufacturer" show="1">Legrand</elementInformation>
-        <elementInformation name="designation" show="1">037108</elementInformation>
     </elementInformations>
     <informations>Arnaud VALMARY</informations>
     <description>
-        <rect ry="0" y="0" style="line-style:normal;line-weight:thin;filling:blue;color:black" height="168" x="0" antialias="false" rx="0" width="13"/>
-        <rect ry="0" y="7" style="line-style:normal;line-weight:thin;filling:blue;color:black" height="153" x="0" antialias="false" rx="0" width="13"/>
-        <rect ry="0" y="76" style="line-style:normal;line-weight:thin;filling:blue;color:black" height="13" x="0" antialias="false" rx="0" width="13"/>
-        <circle y="78" style="line-style:normal;line-weight:thin;filling:lightgray;color:black" diameter="4" x="4.5" antialias="false"/>
-        <circle y="83" style="line-style:normal;line-weight:thin;filling:lightgray;color:black" diameter="4" x="4.5" antialias="false"/>
-        <circle y="91" style="line-style:normal;line-weight:thin;filling:gray;color:black" diameter="6" x="3.5" antialias="false"/>
-        <polygon x1="4.3" y4="96.3" style="line-style:normal;line-weight:thin;filling:gray;color:black" y2="91.8" antialias="false" y1="95.8" x2="8.3" x4="4.8" x3="8.8" y3="92.3"/>
-        <circle y="68" style="line-style:normal;line-weight:thin;filling:gray;color:black" diameter="6" x="3.5" antialias="false"/>
-        <polygon x1="4.3" y4="73.3" style="line-style:normal;line-weight:thin;filling:gray;color:black" y2="68.8" antialias="false" y1="72.8" x2="8.3" x4="4.8" x3="8.8" y3="69.3"/>
-        <circle y="137" style="line-style:normal;line-weight:thin;filling:gray;color:black" diameter="6" x="3.5" antialias="false"/>
-        <polygon x1="4.3" y4="142.3" style="line-style:normal;line-weight:thin;filling:gray;color:black" y2="137.8" antialias="false" y1="141.8" x2="8.3" x4="4.8" x3="8.8" y3="138.3"/>
-        <circle y="22" style="line-style:normal;line-weight:thin;filling:gray;color:black" diameter="6" x="3.5" antialias="false"/>
-        <polygon x1="4.3" y4="27.3" style="line-style:normal;line-weight:thin;filling:gray;color:black" y2="22.8" antialias="false" y1="26.8" x2="8.3" x4="4.8" x3="8.8" y3="23.3"/>
-        <circle y="117" style="line-style:normal;line-weight:thin;filling:lightgray;color:black" diameter="4" x="4.5" antialias="false"/>
-        <terminal orientation="s" y="168" x="6.5"/>
-        <terminal orientation="s" y="102" x="6.5"/>
-        <terminal orientation="n" y="0" x="6.5"/>
-        <terminal orientation="s" y="63" x="6.5"/>
+        <rect antialias="false" height="168" style="line-style:normal;line-weight:thin;filling:blue;color:black" width="13" x="0" y="0"/>
+        <rect antialias="false" height="153" style="line-style:normal;line-weight:thin;filling:blue;color:black" width="13" x="0" y="7"/>
+        <rect antialias="false" height="13" style="line-style:normal;line-weight:thin;filling:blue;color:black" width="13" x="0" y="76"/>
+        <circle antialias="false" diameter="4" style="line-style:normal;line-weight:thin;filling:lightgray;color:black" x="4.5" y="78"/>
+        <circle antialias="false" diameter="4" style="line-style:normal;line-weight:thin;filling:lightgray;color:black" x="4.5" y="83"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:thin;filling:gray;color:black" x="3.5" y="91"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:thin;filling:gray;color:black" x="3.5" y="68"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:thin;filling:gray;color:black" x="3.5" y="137"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:thin;filling:gray;color:black" x="3.5" y="22"/>
+        <circle antialias="false" diameter="4" style="line-style:normal;line-weight:thin;filling:lightgray;color:black" x="4.5" y="117"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:gray;color:black" x1="4.3" x2="8.3" x3="8.8" x4="4.8" y1="95.8" y2="91.8" y3="92.3" y4="96.3"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:gray;color:black" x1="4.3" x2="8.3" x3="8.8" x4="4.8" y1="72.8" y2="68.8" y3="69.3" y4="73.3"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:gray;color:black" x1="4.3" x2="8.3" x3="8.8" x4="4.8" y1="141.8" y2="137.8" y3="138.3" y4="142.3"/>
+        <polygon antialias="false" style="line-style:normal;line-weight:thin;filling:gray;color:black" x1="4.3" x2="8.3" x3="8.8" x4="4.8" y1="26.8" y2="22.8" y3="23.3" y4="27.3"/>
+        <terminal name="" orientation="s" uuid="{222d748e-606e-4aab-a201-da485ff398b0}" x="6.5" y="168"/>
+        <terminal name="" orientation="s" uuid="{956ad8a3-c576-4cdd-a7ef-3c82932804c8}" x="6.5" y="102"/>
+        <terminal name="" orientation="n" uuid="{c8b4d680-36c4-4508-92f4-292c2ab6c7cd}" x="6.5" y="0"/>
+        <terminal name="" orientation="s" uuid="{03e85232-ea20-4bf2-8d26-3fd889db93e9}" x="6.5" y="63"/>
     </description>
 </definition>

@@ -1,64 +1,49 @@
-<definition height="130" version="0.80" width="100" hotspot_x="50" type="element" hotspot_y="75" link_type="simple">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="130" hotspot_x="50" hotspot_y="75" link_type="simple" type="element" version="0.80" width="100">
     <uuid uuid="{ed13c43c-b6c4-4317-9545-47ac8386778e}"/>
     <names>
         <name lang="fr">Wemos D1 Mini</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation name="label" show="1"></elementInformation>
         <elementInformation name="comment" show="1"></elementInformation>
-        <elementInformation name="manufacturer" show="1">Arduino</elementInformation>
-        <elementInformation name="designation" show="1"></elementInformation>
-        <elementInformation name="quantity" show="1"></elementInformation>
         <elementInformation name="description" show="1"></elementInformation>
-        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
-        <elementInformation name="unity" show="1"></elementInformation>
-        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="designation" show="1"></elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
         <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Arduino</elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
         <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations></informations>
     <description>
-        <text x="-34" text="D2" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="14" rotation="0" color="#000000"/>
-        <text x="-34" text="D3" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="4" rotation="0" color="#000000"/>
-        <text x="-34" text="D1" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="24" rotation="0" color="#000000"/>
-        <text x="-34" text="Tx" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="44" rotation="0" color="#000000"/>
-        <text x="-34" text="Rx" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="34" rotation="0" color="#000000"/>
-        <text x="21" text="D6" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="4" rotation="0" color="#000000"/>
-        <rect antialias="false" x="-16" height="30" rx="0" y="-70" width="32" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <text x="-34" text="D4" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="-6" rotation="0" color="#000000"/>
-        <text x="-34" text="GND" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="-16" rotation="0" color="#000000"/>
-        <text x="-13" text="USB" font="Sans Serif,9,-1,5,50,0,0,0,0,0" y="-47" rotation="0" color="#000000"/>
-        <text x="16" text="RST" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="44" rotation="0" color="#000000"/>
-        <text x="21" text="D5" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="14" rotation="0" color="#000000"/>
-        <dynamic_text x="-28" font="Sans Serif,9,-1,5,50,0,0,0,0,0" z="13" y="52" frame="false" text_from="ElementInfo" Valignment="AlignTop" rotation="0" text_width="-1" uuid="{3e7530d6-656b-4fa3-a498-4ed000369dcc}" Halignment="AlignLeft">
+        <rect antialias="false" height="30" style="line-style:normal;line-weight:normal;filling:none;color:black" width="32" x="-16" y="-70"/>
+        <rect antialias="false" height="40" style="line-style:normal;line-weight:thin;filling:none;color:black" width="40" x="-20" y="-10"/>
+        <rect antialias="false" height="110" style="line-style:normal;line-weight:normal;filling:none;color:black" width="90" x="-45" y="-60"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{3e7530d6-656b-4fa3-a498-4ed000369dcc}" x="-28" y="52" z="13">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <text x="22" text="A0" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="34" rotation="0" color="#000000"/>
-        <text x="-34" text="+5V" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="-26" rotation="0" color="#000000"/>
-        <text x="21" text="D0" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="24" rotation="0" color="#000000"/>
-        <text x="21" text="D7" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="-6" rotation="0" color="#000000"/>
-        <text x="21" text="D8" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="-16" rotation="0" color="#000000"/>
-        <text x="5" text="+3.3V" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="-26" rotation="0" color="#000000"/>
-        <rect antialias="false" x="-20" height="40" rx="0" y="-10" width="40" ry="0" style="line-style:normal;line-weight:thin;filling:none;color:black"/>
-        <text x="-7" text="ESP&#xa;12F" font="Sans Serif,5,-1,5,50,0,0,0,0,0" y="8" rotation="0" color="#000000"/>
-        <rect antialias="false" x="-45" height="110" rx="0" y="-60" width="90" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black"/>
-        <terminal x="-1" orientation="n" y="-65"/>
-        <terminal x="-40" orientation="w" y="-30"/>
-        <terminal x="-40" orientation="w" y="-20"/>
-        <terminal x="-40" orientation="w" y="-10"/>
-        <terminal x="-40" orientation="w" y="0"/>
-        <terminal x="-40" orientation="w" y="10"/>
-        <terminal x="-40" orientation="w" y="20"/>
-        <terminal x="-40" orientation="w" y="30"/>
-        <terminal x="-40" orientation="w" y="40"/>
-        <terminal x="40" orientation="e" y="-30"/>
-        <terminal x="40" orientation="e" y="-20"/>
-        <terminal x="40" orientation="e" y="-10"/>
-        <terminal x="40" orientation="e" y="0"/>
-        <terminal x="40" orientation="e" y="10"/>
-        <terminal x="40" orientation="e" y="20"/>
-        <terminal x="40" orientation="e" y="30"/>
-        <terminal x="40" orientation="e" y="40"/>
+        <terminal name="" orientation="n" uuid="{769e7b48-0040-4067-9f37-166db06cc4e6}" x="-1" y="-65"/>
+        <terminal name="" orientation="w" uuid="{d00bd081-b9a1-4746-868a-e87df344fad0}" x="-40" y="-30"/>
+        <terminal name="" orientation="w" uuid="{46b79998-7c7e-4af0-9ca3-457bf7dda670}" x="-40" y="-20"/>
+        <terminal name="" orientation="w" uuid="{13748759-a4a0-448a-a183-0091f7ddc786}" x="-40" y="-10"/>
+        <terminal name="" orientation="w" uuid="{5941b614-4f0a-434a-bcb1-5b14a0a1f7cb}" x="-40" y="0"/>
+        <terminal name="" orientation="w" uuid="{46f206e5-ea25-4fe0-884c-b37df18948d9}" x="-40" y="10"/>
+        <terminal name="" orientation="w" uuid="{7d61b52b-0915-4e76-ae98-ae26601bf048}" x="-40" y="20"/>
+        <terminal name="" orientation="w" uuid="{5d53f885-9dc1-4683-8a4c-2b494381a430}" x="-40" y="30"/>
+        <terminal name="" orientation="w" uuid="{a54e0064-41b3-48cf-89fb-110f1ed2fbca}" x="-40" y="40"/>
+        <terminal name="" orientation="e" uuid="{a23747bd-a15f-448a-a0cf-594c04d71eb5}" x="40" y="-30"/>
+        <terminal name="" orientation="e" uuid="{d705c719-f667-47ed-b396-06822670b7cc}" x="40" y="-20"/>
+        <terminal name="" orientation="e" uuid="{19fbc4b8-3518-47cb-9a0e-3a7a02eff332}" x="40" y="-10"/>
+        <terminal name="" orientation="e" uuid="{d705913b-bf6b-4ee5-a449-53a498d281ba}" x="40" y="0"/>
+        <terminal name="" orientation="e" uuid="{e4751ade-3fef-4fa1-b393-72355f3368f9}" x="40" y="10"/>
+        <terminal name="" orientation="e" uuid="{c765aae0-79c0-4832-b7f8-fc5b3617d7a1}" x="40" y="20"/>
+        <terminal name="" orientation="e" uuid="{7ea8835f-31f7-4ef2-b3d6-a8c2c2b8ee18}" x="40" y="30"/>
+        <terminal name="" orientation="e" uuid="{90ccb02c-166b-4bbd-915d-7b79f17fa443}" x="40" y="40"/>
     </description>
 </definition>

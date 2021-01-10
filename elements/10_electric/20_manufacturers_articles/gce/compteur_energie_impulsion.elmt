@@ -1,43 +1,45 @@
-<definition version="0.80" type="element" height="110" hotspot_x="10" link_type="simple" width="40" hotspot_y="34">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="110" hotspot_x="10" hotspot_y="34" link_type="simple" type="element" version="0.80" width="40">
     <uuid uuid="{2b41375d-7a44-41f4-85d4-da0d493cd4b8}"/>
     <names>
-        <name lang="el">Μετρητής ενέργειας, Κιλοβατώρες (KWh)</name>
-        <name lang="be">Energie meter met pulse contact</name>
-        <name lang="en">Energy meter with pulse output</name>
-        <name lang="cs">Počítadlo energie</name>
         <name lang="ar">عدّاد طاقة</name>
+        <name lang="be">Energie meter met pulse contact</name>
+        <name lang="cs">Počítadlo energie</name>
+        <name lang="el">Μετρητής ενέργειας, Κιλοβατώρες (KWh)</name>
+        <name lang="en">Energy meter with pulse output</name>
+        <name lang="fr">Compteur d’énergie à Impulsion</name>
         <name lang="it">Misuratore di Kwh</name>
         <name lang="pl">Licznik energii</name>
-        <name lang="fr">Compteur d’énergie à Impulsion</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="description"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="designation"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="machine_manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="manufacturer"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="label"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1"></elementInformation>
+        <elementInformation name="designation" show="1"></elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1"></elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations></informations>
     <description>
-        <rect y="-30" x="-6" height="101" style="line-style:normal;line-weight:normal;filling:white;color:black" width="32" rx="0" antialias="false" ry="0"/>
-        <rect y="-14" x="-6" height="68" style="line-style:normal;line-weight:normal;filling:none;color:black" width="32" rx="0" antialias="false" ry="0"/>
-        <text y="33" x="15" rotation="270" font="Sans Serif,10,-1,5,50,0,0,0,0,0" color="#000000" text="kWh"/>
-        <rect y="-5" x="2" height="48" style="line-style:normal;line-weight:thin;filling:none;color:black" width="16" rx="0" antialias="false" ry="0"/>
-        <dynamic_text y="-1" Halignment="AlignLeft" text_width="-1" x="-30" rotation="0" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" z="5" uuid="{5803d198-0097-4cde-a613-1704170111ba}" frame="false" text_from="ElementInfo">
+        <rect antialias="false" height="101" style="line-style:normal;line-weight:normal;filling:white;color:black" width="32" x="-6" y="-30"/>
+        <rect antialias="false" height="68" style="line-style:normal;line-weight:normal;filling:none;color:black" width="32" x="-6" y="-14"/>
+        <rect antialias="false" height="48" style="line-style:normal;line-weight:thin;filling:none;color:black" width="16" x="2" y="-5"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{5803d198-0097-4cde-a613-1704170111ba}" x="-30" y="-1" z="5">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <terminal y="-29" x="0" orientation="n"/>
-        <terminal y="53" x="20" orientation="s"/>
-        <terminal y="53" x="0" orientation="s"/>
-        <terminal y="70" x="0" orientation="s"/>
-        <terminal y="-29" x="20" orientation="n"/>
-        <terminal y="70" x="20" orientation="s"/>
+        <terminal name="" orientation="n" uuid="{389e37f3-60f6-49d3-81a5-77a9100dcd90}" x="0" y="-29"/>
+        <terminal name="" orientation="s" uuid="{3e7d4683-5458-4765-8d4e-5128b86d7203}" x="20" y="53"/>
+        <terminal name="" orientation="s" uuid="{14c7cb1d-f06f-41b2-a924-f9a112f35078}" x="0" y="53"/>
+        <terminal name="" orientation="s" uuid="{03a7decd-8825-4430-bae2-44608c441eb0}" x="0" y="70"/>
+        <terminal name="" orientation="n" uuid="{bbc743ea-b3b3-4dc3-b180-cd8e067cfa7c}" x="20" y="-29"/>
+        <terminal name="" orientation="s" uuid="{e86fcbfb-8cec-4a62-a9e8-6343ede74606}" x="20" y="70"/>
     </description>
 </definition>

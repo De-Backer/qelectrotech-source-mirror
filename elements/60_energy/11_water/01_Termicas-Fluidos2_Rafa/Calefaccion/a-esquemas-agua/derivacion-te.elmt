@@ -1,22 +1,25 @@
-<definition hotspot_y="14" link_type="simple" height="20" width="30" type="element" version="0.80" hotspot_x="14">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="20" hotspot_x="14" hotspot_y="14" link_type="simple" type="element" version="0.80" width="30">
     <uuid uuid="{f167c82e-714b-494e-9df0-56a1bc3e43d6}"/>
     <names>
-        <name lang="fr">Té-dérivation</name>
         <name lang="ca">Derivació-Te</name>
         <name lang="es">Derivación-Te</name>
+        <name lang="fr">Té-dérivation</name>
     </names>
+    <kindInformations/>
     <elementInformations/>
     <informations></informations>
     <description>
-        <dynamic_text x="-1" z="1" frame="false" text_from="ElementInfo" y="-1" font="Sans Serif,6,-1,5,50,0,0,0,0,0" Valignment="AlignTop" rotation="0" Halignment="AlignLeft" text_width="-1" uuid="{f73d3a2e-27bd-4158-857e-5d8ada4fcf2b}">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" y1="-10" y2="0"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-10" x2="10" y1="0" y2="0"/>
+        <circle antialias="false" diameter="6" style="line-style:normal;line-weight:normal;filling:black;color:black" x="-3" y="-3"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,6,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{f73d3a2e-27bd-4158-857e-5d8ada4fcf2b}" x="-1" y="-1" z="1">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <circle diameter="6" x="-3" y="-3" antialias="false" style="line-style:normal;line-weight:normal;filling:black;color:black"/>
-        <line end2="none" x1="0" antialias="false" y1="-10" end1="none" x2="0" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" y2="0" length2="1.5"/>
-        <line end2="none" x1="-10" antialias="false" y1="0" end1="none" x2="10" length1="1.5" style="line-style:normal;line-weight:normal;filling:none;color:black" y2="0" length2="1.5"/>
-        <terminal x="0" y="-10" orientation="n"/>
-        <terminal x="10" y="0" orientation="e"/>
-        <terminal x="-10" y="0" orientation="w"/>
+        <terminal name="" orientation="n" uuid="{71b07755-2282-4fc3-8157-2ffad1aa603f}" x="0" y="-10"/>
+        <terminal name="" orientation="e" uuid="{d7cb1a8a-729e-40ef-b3bc-ee2e95194542}" x="10" y="0"/>
+        <terminal name="" orientation="w" uuid="{9b29d338-e513-400b-9c67-6a3871387345}" x="-10" y="0"/>
     </description>
 </definition>

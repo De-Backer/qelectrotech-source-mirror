@@ -1,42 +1,45 @@
-<definition height="50" width="30" link_type="terminal" hotspot_x="16" version="0.80" type="element" hotspot_y="29">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="50" hotspot_x="16" hotspot_y="29" link_type="terminal" type="element" version="0.80" width="30">
     <uuid uuid="{a98ac40d-9055-4b9b-88ab-cffe6b08ed37}"/>
     <names>
-        <name lang="ro">Masă</name>
-        <name lang="pt">Massa</name>
+        <name lang="ar">هيكل معدني</name>
         <name lang="cs">Kostra</name>
+        <name lang="de">Masse</name>
+        <name lang="el">Γείωση</name>
+        <name lang="en">Ground</name>
+        <name lang="es">Masa</name>
+        <name lang="fr">Masse</name>
         <name lang="it">Massa</name>
         <name lang="nl">Massa</name>
-        <name lang="el">Γείωση</name>
-        <name lang="ru">Шасси</name>
-        <name lang="de">Masse</name>
-        <name lang="en">Ground</name>
         <name lang="pl">Masa</name>
-        <name lang="es">Masa</name>
-        <name lang="ar">هيكل معدني</name>
-        <name lang="fr">Masse</name>
+        <name lang="pt">Massa</name>
+        <name lang="ro">Masă</name>
+        <name lang="ru">Шасси</name>
     </names>
+    <kindInformations/>
     <elementInformations>
         <elementInformation name="comment" show="1"></elementInformation>
-        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
-        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
         <elementInformation name="description" show="1"></elementInformation>
-        <elementInformation name="manufacturer" show="1"></elementInformation>
         <elementInformation name="designation" show="1"></elementInformation>
-        <elementInformation name="quantity" show="1"></elementInformation>
-        <elementInformation name="unity" show="1"></elementInformation>
-        <elementInformation name="supplier" show="1"></elementInformation>
-        <elementInformation name="plant" show="1"></elementInformation>
         <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1"></elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
-    <informations>titus&#xd;
+    <informations>titus
 titus0818@yahoo.com</informations>
     <description>
-        <line y1="-16" x1="0" style="line-style:normal;line-weight:hight;filling:none;color:black" end2="none" y2="13" length2="1.5" length1="1.5" x2="0" end1="none" antialias="false"/>
-        <line y1="14" x1="-13.6493" style="line-style:normal;line-weight:hight;filling:none;color:black" end2="none" y2="14" length2="1.5" length1="1.5" x2="12.62" end1="none" antialias="false"/>
-        <dynamic_text uuid="{7f02ce13-533d-4501-980d-6cb67bd1110d}" Halignment="AlignLeft" frame="false" x="8" Valignment="AlignTop" text_from="ElementInfo" y="-9" font="Sans Serif,9,-1,5,50,0,0,0,0,0" z="3" rotation="0" text_width="-1">
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:hight;filling:none;color:black" x1="0" x2="0" y1="-16" y2="13"/>
+        <line antialias="false" end1="none" end2="none" length1="1.5" length2="1.5" style="line-style:normal;line-weight:hight;filling:none;color:black" x1="0" x2="0" y1="14" y2="14"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="0" text_from="ElementInfo" text_width="-1" uuid="{7f02ce13-533d-4501-980d-6cb67bd1110d}" x="8" y="-9" z="3">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <terminal x="0" y="-20" orientation="n"/>
+        <terminal name="" orientation="n" uuid="{60bbda6e-9475-41c3-aa98-1f231e5d07e7}" x="0" y="-20"/>
     </description>
 </definition>

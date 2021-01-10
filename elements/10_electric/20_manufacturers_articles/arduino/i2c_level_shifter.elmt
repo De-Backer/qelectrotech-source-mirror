@@ -1,44 +1,38 @@
-<definition height="50" width="110" type="element" hotspot_x="49" version="0.80" link_type="simple" hotspot_y="30">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--note: this is written by QElectroTech Element Updater version: 0.0.0-->
+<definition height="50" hotspot_x="49" hotspot_y="30" link_type="simple" type="element" version="0.80" width="110">
     <uuid uuid="{6ca0178d-d766-44a5-aeb0-f4f42a98bf4f}"/>
     <names>
         <name lang="en">I2C Level Shifter</name>
     </names>
+    <kindInformations/>
     <elementInformations>
-        <elementInformation show="1" name="label"></elementInformation>
-        <elementInformation show="1" name="comment"></elementInformation>
-        <elementInformation show="1" name="designation"></elementInformation>
-        <elementInformation show="1" name="unity"></elementInformation>
-        <elementInformation show="1" name="plant"></elementInformation>
-        <elementInformation show="1" name="manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="description"></elementInformation>
-        <elementInformation show="1" name="manufacturer">Arduino</elementInformation>
-        <elementInformation show="1" name="machine_manufacturer_reference"></elementInformation>
-        <elementInformation show="1" name="supplier"></elementInformation>
-        <elementInformation show="1" name="quantity"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="description" show="1"></elementInformation>
+        <elementInformation name="designation" show="1"></elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="machine_manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="manufacturer" show="1">Arduino</elementInformation>
+        <elementInformation name="manufacturer_reference" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
     </elementInformations>
     <informations></informations>
     <description>
-        <text x="-34" rotation="0" text="BVCC" color="#000000" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="-16"/>
-        <text x="-34" rotation="0" text="BSCL" color="#000000" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="-6"/>
-        <text x="-34" rotation="0" text="BSDA" color="#000000" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="4"/>
-        <text x="-34" rotation="0" text="BGND" color="#000000" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="14"/>
-        <text x="19" rotation="0" text="AVCC" color="#000000" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="-16"/>
-        <text x="19" rotation="0" text="ASCL" color="#000000" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="-6"/>
-        <text x="18" rotation="0" text="ASDA" color="#000000" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="4"/>
-        <text x="17" rotation="0" text="AGND" color="#000000" font="Sans Serif,7,-1,5,50,0,0,0,0,0" y="14"/>
-        <dynamic_text text_width="-1" uuid="{e8e5ef34-1584-4062-a83a-d8e6abc9700a}" Valignment="AlignTop" x="-24.192" rotation="-1" text_from="ElementInfo" z="9" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" Halignment="AlignLeft" y="31.0017">
+        <rect antialias="false" height="41" style="line-style:normal;line-weight:normal;filling:none;color:black" width="101" x="-45" y="-25"/>
+        <dynamic_text Halignment="AlignLeft" Valignment="AlignTop" font="Sans Serif,9,-1,5,50,0,0,0,0,0" frame="false" rotation="-1" text_from="ElementInfo" text_width="-1" uuid="{e8e5ef34-1584-4062-a83a-d8e6abc9700a}" x="-24.192" y="31.0017" z="9">
             <text></text>
             <info_name>label</info_name>
         </dynamic_text>
-        <rect antialias="false" height="41" width="101" x="-45" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" y="-25" rx="0"/>
-        <text x="7" rotation="90" text="I2C Level&#xa;shifter" color="#000000" font="Sans Serif,5,-1,5,50,0,0,0,0,0" y="-20"/>
-        <terminal x="-40" orientation="w" y="10"/>
-        <terminal x="-40" orientation="w" y="0"/>
-        <terminal x="-40" orientation="w" y="-10"/>
-        <terminal x="-40" orientation="w" y="-20"/>
-        <terminal x="50" orientation="e" y="10"/>
-        <terminal x="50" orientation="e" y="-20"/>
-        <terminal x="50" orientation="e" y="-10"/>
-        <terminal x="50" orientation="e" y="0"/>
+        <terminal name="" orientation="w" uuid="{58f7368c-b826-4c85-83e1-9365e35b2211}" x="-40" y="10"/>
+        <terminal name="" orientation="w" uuid="{bc59494a-9a7d-4f76-8a5d-5779607591a6}" x="-40" y="0"/>
+        <terminal name="" orientation="w" uuid="{48a565ea-9629-4999-8de7-aefa9208c944}" x="-40" y="-10"/>
+        <terminal name="" orientation="w" uuid="{5cf16f8b-8cf2-49f6-a2e5-d7bf5f3530fe}" x="-40" y="-20"/>
+        <terminal name="" orientation="e" uuid="{7e4eca95-3faf-4d5f-b76a-ac7f0d6aef8b}" x="50" y="10"/>
+        <terminal name="" orientation="e" uuid="{0428713c-3fe1-4c0e-8dd0-6bcbb8e39c49}" x="50" y="-20"/>
+        <terminal name="" orientation="e" uuid="{14b7ba32-9510-4449-8e75-31d155c4e879}" x="50" y="-10"/>
+        <terminal name="" orientation="e" uuid="{608c0a0d-7dfe-4b42-b90c-0742b462fee6}" x="50" y="0"/>
     </description>
 </definition>
